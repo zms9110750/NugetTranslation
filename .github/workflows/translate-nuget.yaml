@@ -36,5 +36,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull origin master --rebase || true
           git add -A
-          git commit -m "Translate ${{ inputs.packageId }} @ ${{ inputs.version }}" || true
+          git commit -m "#:package:[${{ inputs.language }}] ${{ inputs.packageId }} @ ${{ inputs.version }}" || true
           git push origin master
