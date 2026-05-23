@@ -34,6 +34,25 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 诊断：看看当前状态
+          echo "=== 当前仓库状态 ==="
+          git status
+          echo ""
+          
+          echo "=== 被忽略的文件 ==="
+          git status --ignored
+          echo ""
+          
+          echo "=== packages/ 是否被忽略 ==="
+          git check-ignore -v packages/ || echo "没有被忽略"
+          echo ""
+          
+          echo "=== 尝试添加 ==="
           git add -A
-          git diff --cached --quiet || git commit -m "Translate ${{ inputs.packageId }} @ ${{ inputs.version }}"
+          git status
+          echo ""
+          
+          echo "=== 尝试提交 ==="
+          git diff --cached --quiet || git commit -m "Translate Polly.RateLimiting @ *"
           git push
