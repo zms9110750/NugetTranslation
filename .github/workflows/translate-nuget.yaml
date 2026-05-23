@@ -6,7 +6,6 @@ on:
       packageId:
         description: 'NuGet package ID'
         required: true
-        default: 'zms9110750.TreeCollection'
       version:
         description: 'Package version'
         default: '*'

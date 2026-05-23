@@ -33,12 +33,12 @@ if (packageId == null)
 {
     throw new ArgumentNullException(nameof(packageId), "请提供包ID");
 }
-var packageVersion = parseResult.GetValue(ver)??"";
+var packageVersion = parseResult.GetValue(ver) ?? "*";
 var language = parseResult.GetValue(lange) ?? "zh-Hans";
 
 var build = new ServiceCollection();
 build.AddChatClient();
-build.AddFusionCacheAndSqliteCache(Path.Combine(packageId.ToLower(), language + "cache.sqlite.db"));
+build.AddFusionCacheAndSqliteCache(Path.Combine(packageId.ToLower(), language + ".cache.sqlite.db"));
 build.AddSourceRepository();
 build.AddSingleton<SourceCacheContext>();
 build.AddSingleton(NullLogger.Instance);
@@ -49,7 +49,7 @@ var serviceProvider = build.BuildServiceProvider();
 Log.Logger = new LoggerConfiguration()
            .Enrich.FromLogContext()
            .WriteTo.Console()
-           .MinimumLevel.Information()
+           .MinimumLevel.Debug()
            .CreateLogger();
 
 
@@ -63,10 +63,8 @@ using var cacheContext = serviceProvider.GetRequiredService<SourceCacheContext>(
 var findResource = await repository.GetResourceAsync<FindPackageByIdResource>();
 var allVersions = await findResource.GetAllVersionsAsync(packageId, cacheContext, logger, CancellationToken.None);
 
-var versionRange = VersionRange.Parse(parseResult.GetValue(ver) ?? "*");
-var targetVersion = allVersions
-           .Where(v => versionRange.Satisfies(v))
-           .MinBy(v => (v.IsPrerelease, v));
+var versionRange = VersionRange.Parse(packageVersion);
+var targetVersion = versionRange.FindBestMatch(allVersions);
 
 if (targetVersion == null)
 {
