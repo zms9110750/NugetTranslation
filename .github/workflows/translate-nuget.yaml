@@ -21,7 +21,7 @@ jobs:
       - name: Download and translate
         env:
           API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: dotnet run  --packageId "${{ inputs.packageId }}"  --packageVersion "${{ inputs.version }}"
+        run: dotnet run  --configuration Release --packageId "${{ inputs.packageId }}"  --packageVersion "${{ inputs.version }}"
       
       - name: Commit and push
         run: |
