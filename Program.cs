@@ -38,7 +38,7 @@ var language = parseResult.GetValue(lange) ?? "zh-Hans";
 
 var build = new ServiceCollection();
 build.AddChatClient();
-build.AddFusionCacheAndSqliteCache(Path.Combine(packageId.ToLower(), language + ".cache.sqlite.db"));
+build.AddFusionCacheAndSqliteCache(Path.Combine("..","cache",packageId.ToLower(), language + ".sqlite.db"));
 build.AddSourceRepository();
 build.AddSingleton<SourceCacheContext>();
 build.AddSingleton(NullLogger.Instance);

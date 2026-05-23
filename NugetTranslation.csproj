@@ -20,8 +20,4 @@
 	  <None Include=".github/workflows/*.yml" Link="workflows/%(Filename)%(Extension)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="packages\" />
-  </ItemGroup>
-
 </Project>
