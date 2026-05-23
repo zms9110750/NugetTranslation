@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Polly.RateLimiting</name>
+    </assembly>
+    <members><member name="T:Polly.RateLimiting.OnRateLimiterRejectedArguments"><summary>
+            由 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.OnRejected" /> 使用的参数。
+            </summary><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.RateLimiting.OnRateLimiterRejectedArguments.#ctor(Polly.ResilienceContext,System.Threading.RateLimiting.RateLimitLease)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.OnRateLimiterRejectedArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行相关联的上下文。</param><param name="lease">没有许可且被速率限制器拒绝的租约。</param></member><member name="P:Polly.RateLimiting.OnRateLimiterRejectedArguments.Context"><summary>
+            获取与用户提供的回调的执行相关联的上下文。
+            </summary></member><member name="P:Polly.RateLimiting.OnRateLimiterRejectedArguments.Lease"><summary>
+            获取没有许可证且被速率限制器拒绝的租约。
+            </summary></member><member name="T:Polly.RateLimiting.RateLimiterArguments"><summary>
+            由 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter" /> 委托使用的参数。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行上下文相关联的上下文。</param></member><member name="P:Polly.RateLimiting.RateLimiterArguments.Context"><summary>
+            获取与用户提供的回调执行相关的上下文。
+            </summary></member><member name="T:Polly.RateLimiting.RateLimiterRejectedException"><summary>
+    当速率限制器拒绝执行时引发的异常。
+    </summary></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="retryAfter">重试时间值。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="retryAfter">重试等待时间。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.Exception)"><summary>
+    初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+    </summary><param name="message">描述错误的消息。</param><param name="inner">内部异常。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.TimeSpan,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="retryAfter">重试等待时间。</param><param name="inner">内部异常。</param></member><member name="P:Polly.RateLimiting.RateLimiterRejectedException.RetryAfter"><summary>
+            获取再次重试前需要等待的时间。
+            </summary><remarks>
+            此值通过读取 <see cref="P:System.Threading.RateLimiting.MetadataName.RetryAfter" /> 从 <see cref="T:System.Threading.RateLimiting.RateLimitLease" /> 中获取。默认为 <c>null</c>。
+            </remarks></member><member name="T:Polly.RateLimiting.RateLimiterStrategyOptions"><summary>
+            速率限制策略的选项。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterStrategyOptions" /> 类的新实例。
+            </summary></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter"><summary>
+             获取或设置一个生成 <see cref="T:System.Threading.RateLimiting.RateLimitLease" /> 的速率限制器委托。
+            </summary><value>
+             默认值为 <see langword="null" />。如果此属性为 <see langword="null" />，则策略将使用通过 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions" /> 创建的 <see cref="T:System.Threading.RateLimiting.ConcurrencyLimiter" />。
+            </value></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions"><summary>
+            获取或设置默认速率限制器选项。
+            </summary><remarks>
+            当 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter" /> 为 <see langword="null" /> 时将使用的默认限制器的选项。
+            <para><see cref="P:System.Threading.RateLimiting.ConcurrencyLimiterOptions.PermitLimit" /> 默认为 1000。
+            <see cref="P:System.Threading.RateLimiting.ConcurrencyLimiterOptions.QueueLimit" /> 默认为 0。
+            </para></remarks></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.OnRejected"><summary>
+            获取或设置一个事件，当用户提供的回调的执行被速率限制器拒绝时触发。
+            </summary><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="T:Polly.RateLimiterResiliencePipelineBuilderExtensions"><summary>
+            用于向 <see cref="T:Polly.ResiliencePipelineBuilder" /> 添加速率限制的扩展方法。
+            </summary></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddConcurrencyLimiter``1(``0,System.Threading.RateLimiting.ConcurrencyLimiterOptions)"><summary>
+            添加并发限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="options">并发限制器选项。</param><returns>添加了并发限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />或<paramref name="options" />为<see langword="null" />时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数构造的选项无效时抛出。</exception><exception cref="T:System.ArgumentException">当<paramref name="options" />无效时抛出。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddConcurrencyLimiter``1(``0,System.Int32,System.Int32)"><summary>
+            添加并发限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="permitLimit">可同时租用的最大许可数。</param><param name="queueLimit">可同时排队的最大许可数。</param><returns>已添加并发限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />为<see langword="null" />时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当根据参数构造的选项无效时抛出。</exception><exception cref="T:System.ArgumentException">当<paramref name="permitLimit" />或<paramref name="queueLimit" />无效时抛出。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddRateLimiter``1(``0,System.Threading.RateLimiting.RateLimiter)"><summary>
+            添加速率限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="limiter">要使用的速率限制器。</param><returns>已添加速率限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="limiter" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数构造的选项无效时抛出。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddRateLimiter``1(``0,Polly.RateLimiting.RateLimiterStrategyOptions)"><summary>
+            添加速率限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="options">速率限制器选项。</param><returns>已添加速率限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />或<paramref name="options" />为<see langword="null" />时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当<paramref name="options" />无效时引发。</exception><exception cref="T:System.ArgumentException">当<paramref name="options" />的<see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions" />无效时引发。</exception></member></members>
+</doc>
