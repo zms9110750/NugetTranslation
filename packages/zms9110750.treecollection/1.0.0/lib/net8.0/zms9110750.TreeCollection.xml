@@ -1,0 +1,730 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>zms9110750.TreeCollection</name>
+    </assembly>
+    <members>
+        <member name="T:zms9110750.TreeCollection.Abstract.INode`1">
+            <summary>
+            树节点接口
+            </summary>
+            <typeparam name="TNode">自我约束</typeparam>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.INode`1.Parent">
+            <summary>
+            父节点
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.INode`1.Root">
+            <summary>
+            根节点
+            </summary>
+            <remarks>
+            根节点的这个属性为自己
+            </remarks>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.INode`1.Depth">
+            <summary>
+            节点深度
+            </summary>
+            <remarks>
+            根节点的深度为0
+            </remarks>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Abstract.IValue`1">
+            <summary>
+            包含值属性的接口
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.IValue`1.Value">
+            <summary>
+            值属性
+            </summary>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Abstract.NodeExtensions">
+            <summary>
+            提供<see cref="T:zms9110750.TreeCollection.Abstract.INode`1"/>的扩展方法。并为实现类提供对接口默认实现的调用。
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)">
+            <inheritdoc cref="P:zms9110750.TreeCollection.Abstract.INode`1.Parent" path="/summary"/>
+            <typeparam name="T">节点类型</typeparam>
+            <param name="node">扩展方法依附的实例</param>
+            <remarks>当接口具有默认实现时，此方法以扩展方法提供成员调用</remarks>
+            <seealso cref="P:zms9110750.TreeCollection.Abstract.INode`1.Parent"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetRequiredParent``1(``0)">
+            <remarks>父节点为null时，抛出异常</remarks>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)"/> 
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetRoot``1(``0)">
+            <inheritdoc cref="P:zms9110750.TreeCollection.Abstract.INode`1.Root" path="/summary"/>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)"/> 
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetDepth``1(``0)">
+            <inheritdoc cref="P:zms9110750.TreeCollection.Abstract.INode`1.Depth" path="/summary"/>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)"/> 
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.CommonParent``1(``0,``0)">
+            <summary>
+            查找两个节点的最近公共祖先节点
+            </summary>
+            <param name="node"><inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)" path="/param[@name='node']"/></param>
+            <param name="node2">进行比较的另一个节点</param>
+            <returns>公共祖先节点</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <remarks>没有公共节点或任意一方为null时，返回null。<br/>两个节点有父子关系时，返回父节点</remarks>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)"/> 
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.NodeExtensions.IterateToRoot``1(``0)">
+            <summary>
+            迭代到根节点
+            </summary>
+            <remarks>包含自身</remarks>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Abstract.NodeExtensions.GetParent``1(``0)"/> 
+        </member>
+        <member name="T:zms9110750.TreeCollection.Abstract.RootNode`2">
+            <summary>
+            实现了基本属性的抽象类
+            </summary>
+            <typeparam name="TValue">节点储存值的类型</typeparam>
+            <typeparam name="TNode">自我约束</typeparam>
+            <param name="value">初始值</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Abstract.RootNode`2.#ctor(`0)">
+            <summary>
+            实现了基本属性的抽象类
+            </summary>
+            <typeparam name="TValue">节点储存值的类型</typeparam>
+            <typeparam name="TNode">自我约束</typeparam>
+            <param name="value">初始值</param>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.RootNode`2.Value">
+            <summary>
+            结点值
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.RootNode`2.Root">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.RootNode`2.Depth">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.RootNode`2.ChildrenNode">
+            <summary>
+            子结点集合
+            </summary>
+            <remarks><see cref="P:zms9110750.TreeCollection.Abstract.RootNode`2.Parent"/>的set会自动递归子节点。需要引用这个属性进行遍历</remarks>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Abstract.RootNode`2.Parent">
+            <summary>
+            父结点
+            </summary>
+            <remarks>派生类进行set时，会自动重置
+            <list type="bullet">
+            <item><see cref="P:zms9110750.TreeCollection.Abstract.RootNode`2.Root"/></item>
+            <item><see cref="P:zms9110750.TreeCollection.Abstract.RootNode`2.Depth"/></item>
+            <item><see cref="P:zms9110750.TreeCollection.Abstract.RootNode`2.ChildrenNode"/>的<see cref="P:zms9110750.TreeCollection.Abstract.RootNode`2.Parent"/></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2">
+            <summary>
+            有序节点接口
+            </summary>
+            <typeparam name="TValue">值类型</typeparam>
+            <typeparam name="TNode">自我约束</typeparam>
+            <remarks>节点提供<see cref="P:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Index"/>属性，并允许<see cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.MoveChild(System.Int32,System.Int32)"/>改变索引</remarks>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Comparer">
+            <summary>
+            默认相等比较器s
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Index">
+            <summary>
+            节点在父节点中的索引
+            </summary>
+            <remarks>派生类实现时，根节点应该为-1</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.MoveChild(System.Int32,System.Int32)">
+            <summary>
+            移动子节点的位置
+            </summary>
+            <param name="fromIndex">要移动的子节点的索引</param>
+            <param name="toIndex">要放到的位置的索引</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`1)">
+            <summary>
+            添加节点到指定位置
+            </summary>
+            <param name="index">位置索引</param>
+            <param name="node">要添加的节点</param>
+            <returns>被添加的节点，提供链式调用</returns>
+            <remarks>实现类应当自动把节点从所在树解除<br/>应当检查添加节点是否是当前节点的祖先<br/>所有节点合法时再添加</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.Collections.Generic.IEnumerable{`1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`1)" />
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.ReadOnlySpan{`1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`1)" />
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`0)">
+            <remarks>添加值时应当跳过检查步骤。</remarks>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`1)" />
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.Collections.Generic.IEnumerable{`0})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`0)" />
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Replace(`1,`1)">
+            <summary>
+            替换节点
+            </summary>
+            <param name="oldNode">原节点</param>
+            <param name="newNode">新节点</param>
+            <returns>旧节点是子节点。</returns>
+            <remarks>等效于移除旧节点，再添加新节点。</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`0)">
+            <summary>
+            查找并移除具有指定值的节点
+            </summary>
+            <param name="value">查找值</param>
+            <returns>被移除的节点以提供链式调用</returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`1)">
+            <summary>
+            移除节点
+            </summary>
+            <param name="value">子节点</param>
+            <returns><inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`0)" path="/returns" /></returns>
+            <remarks>如果参数不是子节点，则返回null。</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAt(System.Int32)">
+            <summary>
+            移除指定索引处的节点
+            </summary>
+            <param name="index">索引</param>
+            <returns><inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`0)" path="/returns" /></returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Slice(System.Int32,System.Int32)">
+            <summary>
+            获取子节点的切片
+            </summary>
+            <param name="start">开始位置</param>
+            <param name="length">切片长度</param>
+            <returns>切片</returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAll(System.Predicate{`1})">
+            <summary>
+            移除所有符合条件的节点
+            </summary>
+            <param name="match">若为null则视为总是true</param>
+            <returns>成功移除的节点数量</returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Contains(`0)">
+            <summary>
+            查询是否具有包含指定值的子节点
+            </summary>
+            <param name="value">查找值</param>
+            <returns>若存在则返回true，否则返回false</returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.IndexOf(`0)">
+            <summary>
+            查询包含指定值的子节点索引
+            </summary>
+            <returns>找到的第一个节点的索引，找不到则返回-1</returns>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Contains(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.LastIndexOf(`0)">
+            <summary>
+            查询包含指定值的子节点索引
+            </summary>
+            <returns>找到的最后一个节点的索引，找不到则返回-1</returns>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Contains(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.IncrementVersion">
+            <summary>
+            改变版本
+            </summary>
+            <remarks>切片改变集合时应当调用此方法。<br/>版本改变后切片应当失效。</remarks>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice">
+            <summary>
+            切片接口
+            </summary>
+            <remarks>对于一些遍历节点查找值的方法，此接口提供相同功能并仅在范围内遍历。</remarks>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.IsValid">
+            <summary>
+            是否有效
+            </summary>
+            <remarks>在切片生成后，若集合改变，切片应当失效。</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.Remove(`0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.RemoveAll(System.Predicate{`1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAll(System.Predicate{`1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.Contains(`0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Contains(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.IndexOf(`0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.IndexOf(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.LastIndexOf(`0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.LastIndexOf(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.RotateForward">
+            <summary>
+            将集合的第一个元素移动到末尾，其余元素向前移动一位
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.RotateBackward">
+            <summary>
+            将集合的最后一个元素移动到首位，其余元素向后移动一位
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.UpdateIndex">
+            <summary>
+            更新索引
+            </summary>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions">
+            <summary>
+            为<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2"/>提供扩展方法。并为实现类提供对接口默认实现的调用。
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})">
+            <typeparam name="TValue">节点值的类型</typeparam>
+            <typeparam name="TNode">节点类型</typeparam>
+            <param name="tree">扩展方法依附的实例</param> 
+            <remarks>当接口具有默认实现时，此方法以扩展方法提供成员调用</remarks>
+            <inheritdoc cref="P:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Index"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetFirstChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})">
+            <summary>
+            获得第一个子节点
+            </summary>
+            <remarks>没有合法节点时返回null</remarks>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetLastChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})">
+            <summary>
+            获得最后一个子节点
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetFirstChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetPreviousSibling``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})">
+            <summary>
+            获得前一个兄弟节点
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetFirstChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetNextSibling``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})">
+            <summary>
+            获得后一个兄弟节点
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetFirstChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,``1)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,System.Collections.Generic.IEnumerable{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.Collections.Generic.IEnumerable{`1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,System.ReadOnlySpan{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.ReadOnlySpan{`1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,``0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,System.Collections.Generic.IEnumerable{``0})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.AddAt(System.Int32,System.Collections.Generic.IEnumerable{`0})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)">
+            <summary>
+            将节点添加到最后
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Collections.Generic.IEnumerable{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.ReadOnlySpan{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)">
+            <summary>
+            将值添加到最后
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Add``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)">
+            <summary>
+            将节点添加到开头
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Collections.Generic.IEnumerable{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.ReadOnlySpan{``1})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)">
+            <summary>
+            将值添加到开头
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddFirst``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddBefore``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)">
+            <summary>
+            将节点添加到自己的前面
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.GetIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddBefore``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddBefore``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAfter``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)">
+            <summary>
+            将节点添加到自己的后面
+            </summary>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddBefore``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAfter``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.AddAfter``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Remove``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Remove``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0,System.Nullable{System.Range})">
+            <param name="range">如果具有范围则转由<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>执行</param>
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Remove(`0)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.RemoveAt``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAt(System.Int32)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.RemoveAll``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Predicate{``1},System.Nullable{System.Range})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAll(System.Predicate{`1})"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.RemoveAll``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Predicate{``0},System.Nullable{System.Range})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAll(System.Predicate{`1})"/>
+            <remarks>会转为对<see cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.RemoveAll(System.Predicate{`1})"/>的调用和对<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>的调用</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Replace``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``1,``1)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Replace(`1,`1)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.MoveChild``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Index,System.Index)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.MoveChild(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Slice``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Int32,System.Int32)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Slice(System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.Contains``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0,System.Nullable{System.Range})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Contains(`0)"/>
+            <remarks>如果具有范围则转由<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>执行</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.IndexOf``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0,System.Nullable{System.Range})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.IndexOf(`0)"/>
+            <remarks>如果具有范围则转由<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>执行</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.LastIndexOf``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},``0,System.Nullable{System.Range})">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.LastIndexOf(`0)"/>
+            <remarks>如果具有范围则转由<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>执行</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.OrderedTreeExtensions.UpdateIndex``2(zms9110750.TreeCollection.Ordered.IOrderedTree{``0,``1},System.Range)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice.UpdateIndex"/>
+            <remarks>由<see cref="T:zms9110750.TreeCollection.Ordered.IOrderedTree`2.ISlice"/>执行</remarks>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Ordered.TreeNode`1">
+            <summary>
+            有序树节点
+            </summary>
+            <typeparam name="T">储存值类型</typeparam>
+            <param name="value">初始值</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.#ctor(`0)">
+            <summary>
+            有序树节点
+            </summary>
+            <typeparam name="T">储存值类型</typeparam>
+            <param name="value">初始值</param>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.ChildrenNode">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.Index">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.Count">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.IsReadOnly">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.Version">
+            <summary>
+            在修改集合时的版本。用于令<see cref="T:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice"/>失效
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+            <param name="index">索引</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">索引非法</exception>
+            <remarks>
+            <list type="bullet">
+            <item>如果有值且索引为Count，则添加到末尾</item>
+            <item>如果有值且索引合法，调用<see cref="M:zms9110750.TreeCollection.Ordered.TreeNode`1.Replace(zms9110750.TreeCollection.Ordered.TreeNode{`0},zms9110750.TreeCollection.Ordered.TreeNode{`0})"/></item>
+            <item>如果为null且索引合法，调用<see cref="M:zms9110750.TreeCollection.Ordered.TreeNode`1.RemoveAt(System.Int32)"/></item>
+            <item>如果值为子节点，则调用<see cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.MoveChild(System.Int32,System.Int32)"/></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.AddAt(System.Int32,zms9110750.TreeCollection.Ordered.TreeNode{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.AddAt(System.Int32,System.Collections.Generic.IEnumerable{zms9110750.TreeCollection.Ordered.TreeNode{`0}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.AddAt(System.Int32,System.ReadOnlySpan{zms9110750.TreeCollection.Ordered.TreeNode{`0}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.AddAt(System.Int32,`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.AddAt(System.Int32,System.Collections.Generic.IEnumerable{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.Replace(zms9110750.TreeCollection.Ordered.TreeNode{`0},zms9110750.TreeCollection.Ordered.TreeNode{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.Remove(zms9110750.TreeCollection.Ordered.TreeNode{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.CopyTo(zms9110750.TreeCollection.Ordered.TreeNode{`0}[],System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.RemoveAt(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.RemoveAll(System.Predicate{zms9110750.TreeCollection.Ordered.TreeNode{`0}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.EnumTree">
+            <summary>
+            遍历树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.Slice(System.Int32,System.Int32)">
+            <inheritdoc cref="M:zms9110750.TreeCollection.Ordered.IOrderedTree`2.Slice(System.Int32,System.Int32)"/>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice">
+            <summary>
+            节点列表切片
+            </summary>
+            <param name="listNode">切片的节点</param>
+            <param name="start">开始位置</param>
+            <param name="length">长度</param>
+            <remarks>调用任何修改集合的方法都会使切片失效</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.#ctor(zms9110750.TreeCollection.Ordered.TreeNode{`0},System.Int32,System.Int32)">
+            <summary>
+            节点列表切片
+            </summary>
+            <param name="listNode">切片的节点</param>
+            <param name="start">开始位置</param>
+            <param name="length">长度</param>
+            <remarks>调用任何修改集合的方法都会使切片失效</remarks>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.Count">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.IsValid">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.Contains(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.IndexOf(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.LastIndexOf(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.Remove(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.RemoveAll(System.Predicate{zms9110750.TreeCollection.Ordered.TreeNode{`0}})">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.RotateForward">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.RotateBackward">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Ordered.TreeNode`1.NodeListSlice.UpdateIndex">
+            <inheritdoc/>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Trie.Trie">
+            <summary>
+            字典树根节点
+            </summary>
+            <param name="separator">分隔符集合</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.Trie.#ctor(System.Collections.Generic.HashSet{System.Char})">
+            <summary>
+            字典树根节点
+            </summary>
+            <param name="separator">分隔符集合</param>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.Trie.Item(System.Int32)">
+            <summary>
+            获取<see cref="F:zms9110750.TreeCollection.Trie.Trie._token"/>指定bit位的值
+            </summary>
+            <param name="index">索引</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.Trie.Add(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.Trie.Search(System.String)">
+            <summary>
+            搜索字典树中是否存在指定前缀的单词
+            </summary>
+            <param name="prefix">前缀</param>
+            <remarks>分隔符会把文本拆分为多个串。分隔符本身也是一个串。<br/>参数里的分隔符后的字符会查询之后的串的前缀。<br/>
+            <code>
+            a b匹配:
+            ac b
+            ac cb b
+            不匹配
+            ab
+            ac cb
+            </code>
+            </remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.Trie.AllocateTokenIndex">
+            <summary>
+            分配一个未被占用的token索引
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <remarks>用来传入<seealso cref="M:zms9110750.TreeCollection.Trie.TrieNode.Search(System.String,System.Int32,System.Int32)"/></remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.Trie.ReleaseToken(System.Int32)">
+            <summary>
+            释放token索引
+            </summary>
+            <param name="tokenIndex"></param>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Trie.TrieBase">
+            <summary>
+            字典树的节点抽象
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Item(System.Char)">
+            <summary>
+            获取指定字符对应的子节点，如果不存在则创建
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Depth">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Root">
+            <inheritdoc/>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Children">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieBase.Separator">
+            <summary>
+            分隔符集合
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieBase.#ctor(zms9110750.TreeCollection.Trie.TrieBase)">
+            <summary>
+            传入一个父节点。初始化自身的深度、父节点、根节点
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieBase.#ctor">
+            <summary>
+            构造一个根节点。只允许<see cref="T:zms9110750.TreeCollection.Trie.Trie"/>的派生调用
+            </summary>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieBase.Add(System.String)">
+            <summary>
+            添加单词到字典树中
+            </summary>
+            <param name="word">单词</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieBase.ReleaseToken(System.Int32)">
+            <summary>
+            释放指定索引的Token
+            </summary>
+            <param name="tokenIndex"></param>
+        </member>
+        <member name="T:zms9110750.TreeCollection.Trie.TrieNode">
+            <summary>
+            负责储存字符的字典树子节点
+            </summary>
+            <param name="parent">父节点</param>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieNode.#ctor(zms9110750.TreeCollection.Trie.Trie)">
+            <summary>
+            负责储存字符的字典树子节点
+            </summary>
+            <param name="parent">父节点</param>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieNode.Word">
+            <summary>
+            储存的字符。若字典树尚未添加此节点应该存在的文本。则为null。
+            </summary>
+        </member>
+        <member name="P:zms9110750.TreeCollection.Trie.TrieNode.Separator">
+            <inheritdoc/>
+            <remarks>获取根节点的分隔符</remarks>
+        </member>
+        <member name="M:zms9110750.TreeCollection.Trie.TrieNode.Add(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
