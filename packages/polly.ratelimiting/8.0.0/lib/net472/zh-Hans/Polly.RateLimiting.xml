@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Polly.RateLimiting</name>
+    </assembly>
+    <members><member name="M:Polly.RateLimiting.OnRateLimiterRejectedArguments.#ctor(Polly.ResilienceContext,System.Threading.RateLimiting.RateLimitLease)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.OnRateLimiterRejectedArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行相关联的上下文。</param><param name="lease">没有许可且被速率限制器拒绝的租约。</param></member><member name="P:Polly.RateLimiting.OnRateLimiterRejectedArguments.Context"><summary>
+            获取与用户提供的回调的执行关联的上下文。
+            </summary></member><member name="P:Polly.RateLimiting.OnRateLimiterRejectedArguments.Lease"><summary>
+            获取没有许可且被速率限制器拒绝的租约。
+            </summary></member><member name="T:Polly.RateLimiting.RateLimiterArguments"><summary>
+            由 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter" /> 委托使用的参数。
+            </summary></member><member name="T:Polly.RateLimiting.OnRateLimiterRejectedArguments"><summary><see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.OnRejected" /> 使用的参数。
+            </summary><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.RateLimiting.RateLimiterArguments.#ctor(Polly.ResilienceContext)"><summary>
+    初始化 <see cref="T:Polly.RateLimiting.RateLimiterArguments" /> 结构的新实例。
+    </summary><param name="context">与用户提供的回调的执行相关联的上下文。</param></member><member name="P:Polly.RateLimiting.RateLimiterArguments.Context"><summary>
+            获取与用户提供的回调执行相关联的上下文。
+            </summary></member><member name="T:Polly.RateLimiting.RateLimiterRejectedException"><summary>
+            当速率限制器拒绝执行时抛出的异常。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="retryAfter">重试间隔值。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="retryAfter">重试间隔值。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="inner">内部异常。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.String,System.TimeSpan,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="retryAfter">重试时间间隔。</param><param name="inner">内部异常。</param></member><member name="P:Polly.RateLimiting.RateLimiterRejectedException.RetryAfter"><summary>
+            获取重试前需要等待的时间量。
+            </summary><remarks>
+            此值通过读取<see cref="P:System.Threading.RateLimiting.MetadataName.RetryAfter" />从<see cref="T:System.Threading.RateLimiting.RateLimitLease" />中获取。默认为<c>null</c>。
+            </remarks></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary><param name="info">信息。</param><param name="context">上下文。</param></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><inheritdoc /></member><member name="T:Polly.RateLimiting.RateLimiterStrategyOptions"><summary>
+            速率限制器策略的选项。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterStrategyOptions" /> 类的新实例。
+            </summary></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter"><summary>
+             获取或设置一个速率限制器委托，该委托生成 <see cref="T:System.Threading.RateLimiting.RateLimitLease" />。
+            </summary><value>
+             默认值为 <see langword="null" />。如果此属性为 <see langword="null" />，则策略将使用通过 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions" /> 创建的 <see cref="T:System.Threading.RateLimiting.ConcurrencyLimiter" />。
+            </value></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions"><summary>
+            获取或设置默认速率限制器选项。
+            </summary><remarks>
+            当 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.RateLimiter" /> 为 <see langword="null" /> 时将使用的默认限制器的选项。
+            <para><see cref="P:System.Threading.RateLimiting.ConcurrencyLimiterOptions.PermitLimit" /> 默认为 1000。
+            <see cref="P:System.Threading.RateLimiting.ConcurrencyLimiterOptions.QueueLimit" /> 默认为 0。
+            </para></remarks></member><member name="P:Polly.RateLimiting.RateLimiterStrategyOptions.OnRejected"><summary>
+            获取或设置一个事件，当限速器拒绝执行用户提供的回调时触发。
+            </summary><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="T:Polly.RateLimiterResiliencePipelineBuilderExtensions"><summary>
+            用于向<see cref="T:Polly.ResiliencePipelineBuilder" />添加速率限制的扩展。
+            </summary></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddConcurrencyLimiter``1(``0,System.Int32,System.Int32)"><summary>
+            添加并发限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="permitLimit">可以同时租用的最大许可数量。</param><param name="queueLimit">可以同时排队的最大许可数量。</param><returns>添加了并发限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />为<see langword="null" />时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数构造的选项无效时抛出。</exception><exception cref="T:System.ArgumentException">当<paramref name="permitLimit" />或<paramref name="queueLimit" />无效时抛出。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddConcurrencyLimiter``1(``0,System.Threading.RateLimiting.ConcurrencyLimiterOptions)"><summary>
+            添加并发限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="options">并发限制器选项。</param><returns>已添加并发限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当根据参数构造的选项无效时引发。</exception><exception cref="T:System.ArgumentException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddRateLimiter``1(``0,System.Threading.RateLimiting.RateLimiter)"><summary>
+            添加速率限制器。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="limiter">要使用的速率限制器。</param><returns>已添加速率限制器的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="limiter" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数构建的选项无效时抛出。</exception></member><member name="M:Polly.RateLimiterResiliencePipelineBuilderExtensions.AddRateLimiter``1(``0,Polly.RateLimiting.RateLimiterStrategyOptions)"><summary>
+            添加速率限制器。
+            </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="options">速率限制器选项。</param><returns>已添加速率限制器的构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception><exception cref="T:System.ArgumentException">当 <paramref name="options" /> 的 <see cref="P:Polly.RateLimiting.RateLimiterStrategyOptions.DefaultRateLimiterOptions" /> 无效时引发。</exception></member><member name="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute"><summary>
+            标记参数，该参数应填充特定调用方名称。
+            </summary></member><member name="M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute" /> 类的新实例。
+            </summary><param name="parameterName">要获取名称的函数参数。</param></member><member name="P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName"><summary>
+            获取应从其中获取名称的函数参数的名称。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"><summary>
+             指示指定 <see cref="T:System.Type" /> 上的某些成员会被动态访问，例如通过 <see cref="N:System.Reflection" />。
+             </summary><remarks>
+             这允许工具了解程序执行期间正在访问哪些成员。
+            
+             此属性适用于其类型为 <see cref="T:System.Type" /> 或 <see cref="T:System.String" /> 的成员。
+            
+             当此属性应用于类型为 <see cref="T:System.String" /> 的位置时，假定该字符串表示完全限定的类型名称。
+            
+             当此属性应用于类、接口或结构时，可以在对该类、接口或结构的实例调用 <see cref="M:System.Object.GetType" /> 返回的 <see cref="T:System.Type" /> 实例上动态访问指定的成员。
+            
+             如果该属性应用于方法，则将其视为特殊情况，并且意味着该属性应应用于该方法的“this”参数。因此，该属性应仅用于可分配给 System.Type 的类型（或字符串，但字符串上没有方法会使用该属性）的实例方法。
+             </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)"><summary>
+            使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">动态访问的成员类型。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes"><summary>
+            获取指定动态访问成员类型的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"><summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有 <see cref="T:System.FlagsAttribute" /> 特性，允许对其成员值进行按位组合。
+             </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None"><summary>
+            指定没有任何成员。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor"><summary>
+            指定默认的无参数公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors"><summary>
+            指定所有公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors"><summary>
+            指定所有非公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods"><summary>
+            指定所有公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods"><summary>
+            指定所有非公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields"><summary>
+            指定所有公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields"><summary>
+            指定所有非公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes"><summary>
+            指定所有公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes"><summary>
+            指定所有非公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties"><summary>
+            指定所有公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties"><summary>
+            指定所有非公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents"><summary>
+            指定所有公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents"><summary>
+            指定所有非公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces"><summary>
+            指定由该类型实现的所有接口。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All"><summary>
+            指定所有成员。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute"><summary>
+            陈述一个成员对另一个成员的依赖关系。
+            </summary><remarks>
+            这可用于通知工具链一个依赖关系，该依赖关系并非单纯从元数据和IL中就能明显看出的，例如通过反射依赖的成员。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)"><summary>
+            使用与使用者相同类型上成员的指定签名初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">所依赖成员的签名。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)"><summary>
+            使用指定成员在<see cref="T:System.Type" />上的签名初始化<see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" />类的新实例。
+            </summary><param name="memberSignature">所依赖成员的签名。</param><param name="type">包含<paramref name="memberSignature" />的<see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)"><summary>
+            使用程序集中某个类型上成员的指定签名初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">所依赖的成员的签名。</param><param name="typeName">包含指定成员的类型的完整名称。</param><param name="assemblyName">包含指定成员的类型的程序集名称。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)"><summary>
+            使用指定的成员类型在 <see cref="T:System.Type" /> 上初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">所依赖的成员类型。</param><param name="type">包含指定成员的 <see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)"><summary>
+            使用程序集中类型的指定成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">依赖的成员类型。</param><param name="typeName">包含指定成员的类型的完整名称。</param><param name="assemblyName">包含指定成员的类型的程序集名称。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature"><summary>
+            获取所依赖成员的签名。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效的字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不能等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但两者不能同时成立。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes"><summary>
+            获取指定所依赖的成员类型的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效的字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不能等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但两者不能同时满足。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type"><summary>
+            获取包含指定成员的<see cref="T:System.Type" />。
+            </summary><remarks>
+            如果既未指定<see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" />也未指定<see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定使用者的类型。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName"><summary>
+            获取包含指定成员的类型的完整名称。
+            </summary><remarks>
+            如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定使用者的类型。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName"><summary>
+            获取指定类型的程序集名称。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" /> 仅当指定了 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" /> 时才有效。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition"><summary>
+            获取或设置依赖项适用的条件，例如"DEBUG"。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应类型不允许，也允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应的类型允许 null，也不允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定即使相应的类型不允许，输出也可能为空。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使相应类型允许为空，输出也不会为 null。指定调用返回时输入参数不为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回<see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" />时，即使相应的类型允许，参数也不会为null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化该属性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数为非 null，则输出也将为非 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化属性。</summary><param name="parameterName">关联的参数名称。如果指定参数的参数值为非空，则输出为非空。</param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递了指定的值，则该方法将不会返回。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定参数值初始化特性。</summary><param name="parameterValue">
+            条件参数值。如果关联参数的参数与此值匹配，则诊断工具会将方法后的代码视为不可达。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定方法或属性将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化特性。</summary><param name="member">
+            保证不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员的列表初始化特性。</summary><param name="members">
+            承诺不为 null 的字段和属性成员的列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定当方法或属性以指定的返回值条件返回时，会确保所列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化该属性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param><param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段与属性成员列表初始化特性。</summary><param name="returnValue">
+            返回值条件。如果该方法返回此值，则关联的参数将不为 null。
+            </param><param name="members">
+            承诺不为 null 的字段和属性成员列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute"><summary>
+            /// 指示指定的方法需要对未在静态引用的代码进行动态访问，例如通过 <see cref="N:System.Reflection" />。
+            </summary><remarks>
+            /// 这使得工具能够了解在从应用程序中移除未引用代码时，哪些方法是不安全的调用。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)"><summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+            </summary><param name="message">
+            包含有关未引用代码使用情况的信息的消息。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message"><summary>
+            获取包含有关未引用代码使用情况的消息。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url"><summary>
+            获取或设置一个可选的URL，其中包含关于该方法、为什么它需要未引用的代码，以及使用者有哪些选项来处理它的更多信息。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"><summary>
+            /// 禁止报告特定规则违规，允许在单个代码工件上进行多次禁止。
+            </summary><remarks><see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不同于
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />，因为它没有
+            <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的新实例，
+            指定工具的类别和分析规则的标识符。
+            </summary><param name="category">该属性的类别。</param><param name="checkId">该属性适用的分析规则的标识符。</param></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"><summary>
+            获取标识属性分类的类别。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述了消息抑制属性所适用的工具或工具分析类别。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId"><summary>
+            获取要抑制的分析工具规则的标识符。
+            </summary><remarks>
+            将 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" />
+            属性连接在一起，形成一个唯一的检查标识符。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope"><summary>
+            获取或设置与此特性相关的代码的作用域。
+            </summary><remarks>
+            Scope 属性是一个可选参数，指定了该特性所适用的元数据作用域。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target"><summary>
+            获取或设置表示特性目标的全限定路径。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是一个可选参数，用于标识属性的分析目标。示例值为 "System.IO.Stream.ctor():System.Void"。由于它是全限定的，因此可能会很长，尤其是针对参数等目标。分析工具用户界面应能够自动格式化该参数。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId"><summary>
+    获取或设置一个可选参数，用于扩展排除条件。
+  </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定额外的排除条件，
+    当字面元数据目标不够精确时使用。例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，
+    而可能需要抑制方法中某个语句的违规行为（该语句会导致规则违规），但并非抑制方法中的所有语句。
+  </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification"><summary>
+            获取或设置禁止代码分析消息的理由。
+            </summary></member><member name="M:Polly.RateLimiting.RateLimiterRejectedException.#ctor"><summary>
+            初始化 <see cref="T:Polly.RateLimiting.RateLimiterRejectedException" /> 类的新实例。
+            </summary></member></members>
+</doc>
