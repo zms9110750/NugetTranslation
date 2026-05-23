@@ -33,7 +33,7 @@ if (packageId == null)
 {
     throw new ArgumentNullException(nameof(packageId), "请提供包ID");
 }
-var packageVersion = parseResult.GetValue(ver);
+var packageVersion = parseResult.GetValue(ver)??"*";
 var language = parseResult.GetValue(lange) ?? "zh-Hans";
 
 var build = new ServiceCollection();
