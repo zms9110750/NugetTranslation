@@ -19,6 +19,7 @@ using ZiggyCreatures.Caching.Fusion;
 #if DEBUG
 Environment.CurrentDirectory = "X:\\MyPackages";
 #else 
+Directory.CreateDirectory("packages");
 Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "packages");
 #endif 
 return;
