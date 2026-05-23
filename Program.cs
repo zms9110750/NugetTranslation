@@ -33,7 +33,7 @@ if (packageId == null)
 {
     throw new ArgumentNullException(nameof(packageId), "请提供包ID");
 }
-var packageVersion = parseResult.GetValue(ver)??"*";
+var packageVersion = parseResult.GetValue(ver)??"";
 var language = parseResult.GetValue(lange) ?? "zh-Hans";
 
 var build = new ServiceCollection();
@@ -49,7 +49,7 @@ var serviceProvider = build.BuildServiceProvider();
 Log.Logger = new LoggerConfiguration()
            .Enrich.FromLogContext()
            .WriteTo.Console()
-           .MinimumLevel.Verbose()
+           .MinimumLevel.Information()
            .CreateLogger();
 
 
@@ -167,4 +167,5 @@ foreach (var item in xmlFiles.Keys)
     members.ReplaceWith(membersTranslate);
     var langDir = item.Directory.CreateSubdirectory(language);
     xdoc.Save(Path.Combine(langDir.FullName, item.Name));
+    Log.Logger.Information("完成文件: {File}", Path.Combine(langDir.FullName, item.Name));
 }

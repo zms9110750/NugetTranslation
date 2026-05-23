@@ -6,10 +6,13 @@ on:
       packageId:
         description: 'NuGet package ID'
         required: true
+        default: 'zms9110750.TreeCollection'
       version:
         description: 'Package version'
+        default: '*'
       language:
-        description: 'Target language (e.g., zh-Hans)'
+        description: 'Target language code'
+        default: 'zh-Hans'
 
 jobs:
   translate:
@@ -26,7 +29,7 @@ jobs:
           APIKEY: ${{ secrets.APIKEY }}
           ENDPOINT: ${{ vars.ENDPOINT }}
           MODEL: ${{ vars.MODEL }}
-        run: dotnet run  --configuration Release --packageId "${{ inputs.packageId }}"  --packageVersion "${{ inputs.version }}"
+        run: dotnet run  --configuration Release --packageId "${{ inputs.packageId }}"  --packageVersion "${{ inputs.version }}" ----language "${{ inputs.language }}"
       
       - name: Commit and push
         run: |
