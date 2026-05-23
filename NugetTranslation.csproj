@@ -16,8 +16,12 @@
 	  <PackageReference Include="NeoSmart.Caching.Sqlite.AspNetCore" Version="9.0.1" />
 	  <PackageReference Include="ZiggyCreatures.FusionCache.Serialization.SystemTextJson" Version="2.6.0" />
 	  <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
-	  <None  Include=".github/workflows/*.yaml" Link="workflows/%(Filename)%(Extension)" />
-	  <None  Include=".github/workflows/*.yml" Link="workflows/%(Filename)%(Extension)" />
+	  <None Include=".github/workflows/*.yaml" Link="workflows/%(Filename)%(Extension)" />
+	  <None Include=".github/workflows/*.yml" Link="workflows/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="packages\" />
   </ItemGroup>
 
 </Project>
