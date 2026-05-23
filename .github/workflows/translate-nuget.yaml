@@ -8,7 +8,8 @@ on:
         required: true
       version:
         description: 'Package version'
-        default: '*'
+      language:
+        description: 'Target language (e.g., zh-Hans)'
 
 jobs:
   translate:

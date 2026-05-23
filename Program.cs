@@ -22,7 +22,6 @@ Environment.CurrentDirectory = "X:\\MyPackages";
 Directory.CreateDirectory("packages");
 Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "packages");
 #endif 
-return;
 
 var pack = new Option<string>("--packageId", "package", "-Package", "-p", "-pack", "Include");
 var ver = new Option<string>("--packageVersion", "--version", "-v", "-Version", "Version");
