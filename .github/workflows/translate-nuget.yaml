@@ -23,7 +23,7 @@ jobs:
       
       - name: Download and translate
         env:
-          API_KEY: ${{ secrets.API_KEY }}
+          APIKEY: ${{ secrets.API_KEY }}
           ENDPOINT: ${{ vars.ENDPOINT }}
           MODEL: ${{ vars.MODEL }}
         run: dotnet run  --configuration Release --packageId "${{ inputs.packageId }}"  --packageVersion "${{ inputs.version }}"
