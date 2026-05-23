@@ -43,9 +43,9 @@ internal static class Startup
     /// <remarks>如果未提供参数，则从环境变量中获取，检查的key和参数名完全相同</remarks>
     public static IServiceCollection AddChatClient(this IServiceCollection services, string? model = null, string? apiKey = null, string? endpoint = null)
     {
-        model ??= Environment.GetEnvironmentVariable(nameof(model));
-        apiKey ??= Environment.GetEnvironmentVariable(nameof(apiKey));
-        endpoint ??= Environment.GetEnvironmentVariable(nameof(endpoint));
+        model ??= Environment.GetEnvironmentVariable(nameof(model).ToUpper());
+        apiKey ??= Environment.GetEnvironmentVariable(nameof(apiKey).ToUpper());
+        endpoint ??= Environment.GetEnvironmentVariable(nameof(endpoint).ToUpper());
 
         ArgumentNullException.ThrowIfNull(model, nameof(model));
         ArgumentNullException.ThrowIfNull(apiKey, nameof(apiKey));

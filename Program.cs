@@ -18,6 +18,8 @@ using ZiggyCreatures.Caching.Fusion;
 
 #if DEBUG
 Environment.CurrentDirectory = "X:\\MyPackages";
+# else
+Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "packages");
 #endif
 
 var pack = new Option<string>("--packageId", "package", "-Package", "-p", "-pack", "Include");
@@ -35,7 +37,7 @@ var language = parseResult.GetValue(lange) ?? "zh-Hans";
 
 var build = new ServiceCollection();
 build.AddChatClient();
-build.AddFusionCacheAndSqliteCache(Path.Combine(packageId.ToLower(), "cache.sqlite.db"));
+build.AddFusionCacheAndSqliteCache(Path.Combine(packageId.ToLower(), language + "cache.sqlite.db"));
 build.AddSourceRepository();
 build.AddSingleton<SourceCacheContext>();
 build.AddSingleton(NullLogger.Instance);
