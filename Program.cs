@@ -108,11 +108,13 @@ var chatClient = serviceProvider.GetRequiredService<ChatClient>();
 var cache = serviceProvider.GetRequiredService<IFusionCache>();
 var pipeline = serviceProvider.GetRequiredService<ResiliencePipeline<string>>();
 var sysmsg = ChatMessage.CreateSystemMessage($"""
-    你被用于API调用进行翻译工作。除了要求你的输出以外不要输出任何对话内容，这里没有上下文。
     你会收到一个c#的xml文档注释。
-    地区/语言代码为："{language}"，你需要将内容翻译为此代码使用的语言，并且保持XML格式不变。
+    你需要翻译为地区/语言代码为："{language}" 所使用的语言，并且保持XML格式不变。
     你的输出必须是可以XElement.Parse(resert)的字符串。
+    你被用于API调用进行翻译工作。除了要求你的输出以外不要输出任何对话内容，你的对话内容不会被展示。
     """);
+var chatOptions = new ChatCompletionOptions { TopP = 0.6f };
+
 Regex regex = new Regex(@"```xml\s*(.*?)\s*```", RegexOptions.Singleline);
 foreach (var item in xmlFiles.Keys)
 {
@@ -128,7 +130,7 @@ foreach (var item in xmlFiles.Keys)
         var resert = await cache.GetOrSetAsync(member.ToString(), ct => pipeline.ExecuteAsync(async (CancellationToken cance) =>
           {
               Log.Logger.Verbose("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
-              var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()])
+              var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions)
               .WaitAsync(TimeSpan.FromSeconds(60), cance);
 
               var text = completion.Value.Content[0].Text;
