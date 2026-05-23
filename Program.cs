@@ -129,7 +129,7 @@ foreach (var item in xmlFiles.Keys)
     {
         var resert = await cache.GetOrSetAsync(member.ToString(), ct => pipeline.ExecuteAsync(async (CancellationToken cance) =>
           {
-              Log.Logger.Verbose("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
+              Log.Logger.Debug("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
               var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions)
               .WaitAsync(TimeSpan.FromSeconds(60), cance);
 
