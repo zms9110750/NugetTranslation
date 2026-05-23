@@ -18,9 +18,10 @@ using ZiggyCreatures.Caching.Fusion;
 
 #if DEBUG
 Environment.CurrentDirectory = "X:\\MyPackages";
-# else
+#else
 Environment.CurrentDirectory = Path.Combine(Environment.CurrentDirectory, "packages");
 #endif
+Console.WriteLine(Environment.CurrentDirectory);
 
 var pack = new Option<string>("--packageId", "package", "-Package", "-p", "-pack", "Include");
 var ver = new Option<string>("--packageVersion", "--version", "-v", "-Version", "Version");
