@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>NuGet.Versioning</name>
+    </assembly>
+    <members><member name="T:NuGet.Versioning.FloatRange"><summary>
+            版本范围的浮动子集。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.#ctor(NuGet.Versioning.NuGetVersionFloatBehavior,NuGet.Versioning.NuGetVersion)"><summary>
+            创建一个浮动范围。
+            </summary><param name="floatBehavior">要浮动的部分。</param><param name="minVersion">范围的最小版本。</param></member><member name="M:NuGet.Versioning.FloatRange.#ctor(NuGet.Versioning.NuGetVersionFloatBehavior)"><summary>
+            创建一个浮动范围。
+            </summary><param name="floatBehavior">要浮动的部分。</param></member><member name="P:NuGet.Versioning.FloatRange.HasMinVersion"><summary>
+            如果存在最小范围，则为True。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.#ctor(NuGet.Versioning.NuGetVersionFloatBehavior,NuGet.Versioning.NuGetVersion,System.String)"><summary>
+            FloatRange
+            </summary><param name="floatBehavior">要浮动的部分。</param><param name="minVersion">范围的最小版本。</param><param name="releasePrefix">原始发布标签。此处允许无效标签。</param></member><member name="P:NuGet.Versioning.FloatRange.MinVersion"><summary>
+            浮动范围的最小版本。对于诸如 * 的情况，此值为 null。
+            </summary></member><member name="P:NuGet.Versioning.FloatRange.FloatBehavior"><summary>
+            定义的浮动行为
+            </summary></member><member name="P:NuGet.Versioning.FloatRange.OriginalReleasePrefix"><summary>
+            原始发布标签。此处允许无效标签。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.Satisfies(NuGet.Versioning.NuGetVersion)"><summary>
+            如果给定的版本属于浮动范围，则为True。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.Parse(System.String)"><summary>
+            将浮动版本解析为FloatRange
+            </summary></member><member name="P:NuGet.Versioning.FloatRange.IncludePrerelease"><summary>
+            指示 <see cref="P:NuGet.Versioning.FloatRange.FloatBehavior" /> 是否包含预发布版本。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.TryParse(System.String,NuGet.Versioning.FloatRange@)"><summary>
+            将浮动版本解析为 FloatRange
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.ToString"><summary>
+            创建一个格式为 1.0.0-alpha-* 的浮动版本字符串
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.ToString(System.Text.StringBuilder)"><summary>
+            创建一个格式为：1.0.0-alpha-* 的浮动版本字符串。
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.GetHashCode"><summary>
+            哈希代码
+            </summary></member><member name="T:NuGet.Versioning.INuGetVersionable"><summary>
+            公开 NuGetVersion 的项
+            </summary></member><member name="M:NuGet.Versioning.FloatRange.Equals(System.Object)"><summary>
+            重写 Object.Equals
+            </summary><param name="obj"></param><returns></returns></member><member name="M:NuGet.Versioning.FloatRange.Equals(NuGet.Versioning.FloatRange)"><summary>
+            相等
+            </summary></member><member name="T:NuGet.Versioning.IVersionComparer"><summary>
+            IVersionComparer 表示一个版本比较器，能够对 SemanticVersion 对象进行排序并确定其相等性。
+            </summary></member><member name="P:NuGet.Versioning.INuGetVersionable.Version"><summary>
+            NuGet 语义版本
+            </summary></member><member name="T:NuGet.Versioning.IVersionRangeComparer"><summary>
+            版本范围比较器
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.String)"><summary>
+    使用 NuGetVersion.Parse(string) 创建一个 NuGetVersion
+    </summary><param name="version">版本字符串</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(NuGet.Versioning.NuGetVersion)"><summary>
+            从现有的 NuGetVersion 创建 NuGetVersion
+            </summary></member><member name="T:NuGet.Versioning.NuGetVersion"><summary>
+            一个混合实现的 SemVer，支持 http://semver.org 中描述的语义化版本控制，同时不严格强制执行，以允许旧的 4 位数字版本控制方案继续工作。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Version,System.String,System.String)"><summary>
+            从 .NET 版本创建 NuGetVersion
+            </summary><param name="version">版本号</param><param name="releaseLabel">预发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha#build01
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="releaseLabel">预发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha.1.2#build01
+            </summary><param name="major">主要版本号 X.y.z</param><param name="minor">次要版本号 x.Y.z</param><param name="patch">修补版本号 x.y.Z</param><param name="releaseLabels">预发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="releaseLabel">预发布标签</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32)"><summary>
+            创建一个 NuGetVersion X.Y.Z
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)"><summary>
+            创建一个 NuGetVersion W.X.Y.Z-alpha#build01
+            </summary><param name="major">W.x.y.z</param><param name="minor">w.X.y.z</param><param name="patch">w.x.Y.z</param><param name="revision">w.x.y.Z</param><param name="releaseLabel">预发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Version,System.Collections.Generic.IEnumerable{System.String},System.String,System.String)"><summary>
+            根据 .NET 版本、附加发行标签、生成元数据以及非规范化的版本字符串创建一个 NuGetVersion。
+            </summary><param name="version">版本号</param><param name="releaseLabels">预发行标签</param><param name="metadata">生成元数据</param><param name="originalVersion">非规范化的原始版本字符串</param></member><member name="M:NuGet.Versioning.NuGetVersion.ToString"><summary>
+            返回版本字符串。
+            </summary><remarks>此方法包含旧行为。请改用 ToNormalizedString()。</remarks><remarks>具有 SemVer 2.0.0 组件的版本会自动规范化。</remarks></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            创建一个 NuGetVersion W.X.Y.Z-alpha.1#build01
+            </summary><param name="major">W.x.y.z</param><param name="minor">w.X.y.z</param><param name="patch">w.x.Y.z</param><param name="revision">w.x.y.Z</param><param name="releaseLabels">预发布标签</param><param name="metadata">生成元数据</param></member><member name="P:NuGet.Versioning.NuGetVersion.Version"><summary>
+            版本的系统表示，不包含元数据或发行标签。
+            </summary></member><member name="P:NuGet.Versioning.NuGetVersion.IsLegacyVersion"><summary>
+            如果 NuGetVersion 使用旧版行为，则为 true。
+            </summary></member><member name="P:NuGet.Versioning.NuGetVersion.Revision"><summary>
+            修订版本号 R (x.y.z.R)
+            </summary></member><member name="P:NuGet.Versioning.NuGetVersion.IsSemVer2"><summary>
+            如果版本是 SemVer 2.0.0 版本，则返回 true。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.TryParse(System.String,NuGet.Versioning.NuGetVersion@)"><summary>
+            使用宽松的语义化版本控制规则解析版本字符串，该规则允许2到4个版本组件，后跟一个可选的特殊版本。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.Parse(System.String)"><summary>
+            从表示语义版本的字符串创建一个 NuGetVersion。
+            </summary></member><member name="P:NuGet.Versioning.NuGetVersion.OriginalVersion"><summary>
+            返回原始的非规范化版本字符串。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+    创建一个 NuGetVersion W.X.Y.Z
+  </summary><param name="major">W.x.y.z</param><param name="minor">w.X.y.z</param><param name="patch">w.x.Y.z</param><param name="revision">w.x.y.Z</param></member><member name="T:NuGet.Versioning.NuGetVersionFloatBehavior"><summary>
+            指定浮动行为类型。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.TryParseStrict(System.String,NuGet.Versioning.NuGetVersion@)"><summary>
+            使用严格 SemVer 规则解析版本字符串。
+            </summary></member><member name="M:NuGet.Versioning.NuGetVersion.GetLegacyString(System.Version,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            使用 System.Version 创建旧版本字符串
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.None"><summary>
+    最低版本，无浮动
+    </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.Prerelease"><summary>
+            最高匹配的预发布标签
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.Revision"><summary>
+            x.y.z.*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.Minor"><summary>
+            x.*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.AbsoluteLatest"><summary>
+            浮动主版本号和预发布版本，*-*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.Major"><summary>
+            *
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.PrereleaseRevision"><summary>
+            浮动修订版和预发布版本 x.y.z.*-*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.Patch"><summary>
+            x.y.*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.PrereleasePatch"><summary>
+            浮动补丁和预发行版本 x.y.*-*
+            </summary></member><member name="T:NuGet.Versioning.Resources"><summary>
+              一个强类型的资源类，用于查找本地化字符串等。
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.PrereleaseMinor"><summary>
+            浮动次要版本和预发布版本 x.*-*
+            </summary></member><member name="F:NuGet.Versioning.NuGetVersionFloatBehavior.PrereleaseMajor"><summary>
+            浮动主版本和预发布版本，但仅限于部分预发布版本 *-rc.*。*-* 由 <see cref="F:NuGet.Versioning.NuGetVersionFloatBehavior.AbsoluteLatest" /> 捕获。
+            </summary></member><member name="P:NuGet.Versioning.Resources.ResourceManager"><summary>
+              返回此类使用的缓存ResourceManager实例。
+            </summary></member><member name="P:NuGet.Versioning.Resources.Argument_Cannot_Be_Null_Or_Empty"><summary>
+              查找类似于“值不能为 null 或空字符串”的本地化字符串。
+            </summary></member><member name="P:NuGet.Versioning.Resources.Culture"><summary>
+      覆盖当前线程的CurrentUICulture属性，用于通过这个强类型资源类进行所有资源查找。
+    </summary></member><member name="P:NuGet.Versioning.Resources.CannotBeNullWhenParameterIsNotNull"><summary>
+              查找本地化字符串，类似于当参数“{1}”不为空时，参数“{0}”不能为空。
+            </summary></member><member name="P:NuGet.Versioning.Resources.InvalidFloatRangeValue"><summary>
+              查找类似于“'{0}' 不是有效的浮点范围字符串。”的本地化字符串。
+            </summary></member><member name="P:NuGet.Versioning.Resources.Invalidvalue"><summary>
+              查找与“{0} 不是有效的版本字符串。”类似的本地化字符串。
+            </summary></member><member name="T:NuGet.Versioning.ResourcesFormatter"><summary>包含{x}参数的字符串可能会在string.Format中引发异常，当参数数量发生变化时，但传递给string.Format的参数却没有随之改变。通过将对特定资源的所有调用集中到一个C#类中，我们可以利用编译器检查所有引用是否传递了正确数量的参数。</summary></member><member name="T:NuGet.Versioning.SemanticVersion"><summary>
+            严格的SemVer实现
+            </summary><summary>
+            基础版本操作
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(NuGet.Versioning.SemanticVersion)"><summary>
+            从现有SemanticVersion创建一个SemanticVersion
+            </summary><param name="version">要克隆的版本。</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32)"><summary>
+            创建一个语义版本 X.Y.Z
+            </summary><param name="major">主版本号 X.y.z</param><param name="minor">次版本号 x.Y.z</param><param name="patch">修订号 x.y.Z</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="releaseLabel">预发布标签</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha#build01
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="releaseLabel">预发行标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Version,System.String,System.String)"><summary>
+            内部构造函数。
+            </summary><param name="version">版本</param><param name="releaseLabel">完整发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            创建一个 NuGetVersion X.Y.Z-alpha.1.2#build01
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="releaseLabels">已由点分隔符拆分的发布标签</param><param name="metadata">生成元数据</param></member><member name="P:NuGet.Versioning.Resources.TypeNotSupported"><summary>
+      查找与“类型“{0}”不受支持。”类似的本地化字符串。
+    </summary></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)"><summary>
+            内部构造函数。
+            </summary><param name="major">X.y.z</param><param name="minor">x.Y.z</param><param name="patch">x.y.Z</param><param name="revision">x.y.z.R</param><param name="releaseLabel">预发布标签</param><param name="metadata">生成元数据</param></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            内部构造函数。
+            </summary><param name="major"></param><param name="minor"></param><param name="patch"></param><param name="revision"></param><param name="releaseLabels"></param><param name="metadata"></param></member><member name="P:NuGet.Versioning.SemanticVersion.Major"><summary>
+            主版本号 X (X.y.z)
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.#ctor(System.Version,System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            内部构造函数。
+            </summary><param name="version">版本</param><param name="releaseLabels">发布标签</param><param name="metadata">构建元数据</param></member><member name="P:NuGet.Versioning.SemanticVersion.Patch"><summary>
+            补丁版本 Z (x.y.Z)
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.Minor"><summary>
+            次版本号 Y (x.Y.z)
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.Release"><summary>
+            版本的完整预发布标签。
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.IsPrerelease"><summary>
+            如果版本存在预发布标签，则为 true。
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.ReleaseLabels"><summary>
+            附加到版本上的预发布标签集合。
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.HasMetadata"><summary>
+            如果版本存在元数据，则为 true。
+            </summary></member><member name="P:NuGet.Versioning.SemanticVersion.Metadata"><summary>
+            附加到版本的生成元数据。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.ToNormalizedString"><summary>
+            提供版本的规范化表示。
+            此字符串对于版本的标识是唯一的，并且不包含元数据。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.ToFullString"><summary>
+            提供包含元数据的版本的完整表示。
+            此字符串对于版本的标识不是唯一的。其他在元数据上不同的版本将具有不同的完整字符串表示。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.ToString"><summary>
+            获取规范化字符串。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.TryFormatter(System.String,System.IFormatProvider,System.String@)"><summary>
+            内部字符串格式化程序。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.GetHashCode"><summary>
+            哈希码
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.ToString(System.String,System.IFormatProvider)"><summary>
+            自定义字符串格式。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.CompareTo(System.Object)"><summary>
+            对象比较。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.Equals(NuGet.Versioning.SemanticVersion)"><summary>
+            相等
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.CompareTo(NuGet.Versioning.SemanticVersion)"><summary>
+            与另一个SemanticVersion进行比较。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.Equals(System.Object)"><summary>
+            相等
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.Equals(NuGet.Versioning.SemanticVersion,NuGet.Versioning.VersionComparison)"><summary>
+            如果基于给定的比较模式，VersionBase 对象相等，则为 True。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_Inequality(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            不等于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_Equality(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            等于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.CompareTo(NuGet.Versioning.SemanticVersion,NuGet.Versioning.VersionComparison)"><summary>
+            使用给定的比较模式比较NuGetVersion对象。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_GreaterThan(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            大于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_LessThanOrEqual(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            小于或等于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_LessThan(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            小于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.op_GreaterThanOrEqual(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            大于或等于
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.TryParse(System.String,NuGet.Versioning.SemanticVersion@)"><summary>
+            解析版本字符串
+            </summary><returns>如果版本不是严格的语义化版本，则返回 false</returns></member><member name="M:NuGet.Versioning.SemanticVersion.Parse(System.String)"><summary>
+            使用严格 SemVer 规则解析 SemVer 字符串。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersion.ParseSections(System.String,System.String@,System.String[]@,System.String@)"><summary>
+            将版本字符串解析为版本/发行/构建
+            这段代码的目标是采用最直接和优化的路径来解析和验证语义版本。使用正则表达式会更简洁，但由于NuGet中创建的版本数量太多，正则表达式太慢。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersionConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)"><summary>
+            使用指定的上下文和区域性信息将给定的对象转换为此转换器的类型。
+            </summary><param name="context">一个提供格式化上下文的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param><param name="culture">要用作当前区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param><param name="value">要转换的 <see cref="T:System.Object" />。</param><returns>一个表示转换后的值的 <see cref="T:System.Object" />。</returns><exception cref="T:System.ArgumentException"><c>value</c> 对于目标类型不是有效值。</exception><exception cref="T:System.NotSupportedException">无法执行转换。</exception></member><member name="M:NuGet.Versioning.SemanticVersionConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)"><summary>
+            获取一个值，指示此转换器是否可以使用指定的上下文将给定源类型的对象转换为 <see cref="T:NuGet.Versioning.SemanticVersion" />。
+            </summary><param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param><param name="sourceType">一个 <see cref="T:System.Type" />，表示您希望从其转换的类型。</param><returns>如果此对象可以执行转换，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:NuGet.Versioning.SemanticVersionConverter"><summary>
+            提供一种类型转换器，用于将 <see cref="T:NuGet.Versioning.SemanticVersion" /> 对象与其他各种表示形式相互转换。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersionConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)"><summary>
+            获取一个值，指示此转换器是否可以使用上下文将对象转换为给定的目标类型。
+            </summary><param name="context">一个提供格式上下文的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param><param name="destinationType">一个表示你要转换到的类型的 <see cref="T:System.Type" />。</param><returns>如果此对象可以执行转换，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:NuGet.Versioning.VersionComparer"><summary>
+            用于NuGetVersion和NuGetVersion类型的IVersionComparer。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.Get(NuGet.Versioning.VersionComparison)"><summary>
+            根据指定的 VersionComparison 模式获取一个 IVersionComparer。
+            </summary><param name="versionComparison">要使用的版本比较模式。</param><returns>一个 IVersionComparer 实例。</returns></member><member name="M:NuGet.Versioning.VersionComparer.#ctor"><summary>
+            使用默认模式创建一个 VersionComparer。
+            </summary></member><member name="M:NuGet.Versioning.SemanticVersionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)"><summary>
+            使用参数将给定的值对象转换为 <see cref="T:NuGet.Versioning.SemanticVersion" /> 对象。
+            </summary><param name="context">一个提供格式上下文的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param><param name="culture">要用作当前区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param><param name="value">要转换的 <see cref="T:System.Object" />。</param><param name="destinationType">要将值转换到的 <see cref="T:System.Type" />。</param><returns>一个表示转换后值的 <see cref="T:System.Object" />。</returns><exception cref="T:System.NotSupportedException">无法执行转换。</exception></member><member name="M:NuGet.Versioning.VersionComparer.#ctor(NuGet.Versioning.VersionComparison)"><summary>
+            创建遵循给定比较模式的VersionComparer。
+            </summary><param name="versionComparison">比较模式</param></member><member name="M:NuGet.Versioning.VersionComparer.Equals(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            确定两个版本是否相等。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.Compare(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion,NuGet.Versioning.VersionComparison)"><summary>
+            使用VersionComparison模式比较给定的版本。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.GetHashCode(NuGet.Versioning.SemanticVersion)"><summary>
+            基于规范化版本字符串提供哈希代码。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.Compare(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            比较版本。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.CompareLegacyVersion(NuGet.Versioning.NuGetVersion,NuGet.Versioning.NuGetVersion)"><summary>
+            比较版本号的第4位数字。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparer.Version"><summary>
+            一个仅使用版本号的比较器。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparer.VersionRelease"><summary>
+            比较版本时不比较元数据。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparer.Default"><summary>
+    一个默认的比较器，将元数据作为字符串进行比较。
+    </summary></member><member name="F:NuGet.Versioning.VersionComparer.VersionReleaseMetadata"><summary>
+            一个遵循 SemVer 2.0.0 规则的版本比较器。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.CompareRelease(System.String,System.String)"><summary>
+            发布标签如果是数字则按数字比较，否则按字符串比较。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.AreReleaseLabelsEqual(NuGet.Versioning.SemanticVersion,NuGet.Versioning.SemanticVersion)"><summary>
+            比较发布标签
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.GetReleaseLabelsOrNull(NuGet.Versioning.SemanticVersion)"><summary>
+            返回版本中的发行标签数组，或 null。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.CompareReleaseLabels(System.String[],System.String[])"><summary>
+            比较发布标签集。
+            </summary></member><member name="M:NuGet.Versioning.VersionComparer.GetRevisionOrZero(NuGet.Versioning.SemanticVersion)"><summary>
+            返回第四版本号或零。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparison.Default"><summary>
+            语义版本 2.0.1-rc 比较，以及额外的 NuGetVersion 字段的比较。
+            </summary></member><member name="T:NuGet.Versioning.VersionComparison"><summary>
+            版本比较模式。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparison.Version"><summary>
+            仅比较版本号。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparison.VersionRelease"><summary>
+            在比较中包含版本号和发布标签。
+            </summary></member><member name="T:NuGet.Versioning.VersionExtensions"><summary>
+            版本扩展方法。
+            </summary></member><member name="M:NuGet.Versioning.VersionExtensions.FindBestMatch``1(System.Collections.Generic.IEnumerable{``0},NuGet.Versioning.VersionRange,System.Func{``0,NuGet.Versioning.NuGetVersion})"><summary>
+            查找与版本范围(VersionRange)和浮动行为最匹配的版本。
+            </summary></member><member name="F:NuGet.Versioning.VersionComparison.VersionReleaseMetadata"><summary>
+            在比较期间包含所有元数据。
+            </summary></member><member name="T:NuGet.Versioning.VersionFormatter"><summary>
+    NuGet版本的自定义格式化程序。
+    </summary></member><member name="F:NuGet.Versioning.VersionFormatter.Instance"><summary>
+            VersionFormatter 类的静态实例。
+            </summary></member><member name="M:NuGet.Versioning.VersionExtensions.FindBestMatch(System.Collections.Generic.IEnumerable{NuGet.Versioning.INuGetVersionable},NuGet.Versioning.VersionRange)"><summary>
+            查找与版本范围和浮动行为最匹配的版本。
+            </summary></member><member name="M:NuGet.Versioning.VersionFormatter.Format(System.String,System.Object,System.IFormatProvider)"><summary>
+            格式化版本字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionFormatter.GetFormat(System.Type)"><summary>
+            获取版本格式类型。
+            </summary></member><member name="M:NuGet.Versioning.VersionFormatter.AppendFull(System.Text.StringBuilder,NuGet.Versioning.SemanticVersion)"><summary>
+            追加包括元数据的完整版本字符串。这主要用于显示目的。
+            </summary></member><member name="M:NuGet.Versioning.VersionFormatter.AppendNormalized(System.Text.StringBuilder,NuGet.Versioning.SemanticVersion)"><summary>
+            附加标准化版本字符串。此字符串对于每个版本“标识”是唯一的，并且不包含前导零或元数据。
+            </summary></member><member name="T:NuGet.Versioning.VersionRange"><summary>
+    表示一个版本范围及首选顺序。
+    </summary><remarks>
+    不可变，但子类可能会引入可变状态。
+    </remarks></member><member name="M:NuGet.Versioning.VersionRange.#ctor(NuGet.Versioning.NuGetVersion)"><summary>
+            创建一个大于或等于最小版本的版本范围。
+            </summary><param name="minVersion">版本范围的下限。</param></member><member name="M:NuGet.Versioning.VersionRange.#ctor(NuGet.Versioning.VersionRange,NuGet.Versioning.FloatRange)"><summary>
+            克隆一个版本范围并应用一个新的浮动范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.#ctor(NuGet.Versioning.NuGetVersion,NuGet.Versioning.FloatRange)"><summary>
+            创建一个范围，该范围大于或等于给定的最小版本，并具有指定的浮动行为。
+            </summary><param name="minVersion">版本范围的下限。</param><param name="floatRange">浮动行为。</param></member><member name="P:NuGet.Versioning.VersionRange.MinVersion"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.MinVersion" /></member><member name="P:NuGet.Versioning.VersionRange.IsFloating"><summary>
+            如果该范围在最小版本之上有一个浮动版本，则为true。
+            </summary></member><member name="P:NuGet.Versioning.VersionRange.MaxVersion"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.MaxVersion" /></member><member name="P:NuGet.Versioning.VersionRange.HasUpperBound"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.HasUpperBound" /></member><member name="M:NuGet.Versioning.VersionRange.#ctor(NuGet.Versioning.NuGetVersion,System.Boolean,NuGet.Versioning.NuGetVersion,System.Boolean,NuGet.Versioning.FloatRange,System.String)"><summary>
+            使用给定的最小和最大版本创建一个VersionRange。
+            </summary><param name="minVersion">版本范围的下限。</param><param name="includeMinVersion">如果minVersion满足条件，则为true。</param><param name="maxVersion">版本范围的上限。</param><param name="includeMaxVersion">如果maxVersion满足条件，则为true。</param><param name="floatRange">用于查找最佳版本匹配的浮动范围子集。</param><param name="originalString">被解析为此对象的原始字符串。</param></member><member name="P:NuGet.Versioning.VersionRange.IsMinInclusive"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.IsMinInclusive" /></member><member name="P:NuGet.Versioning.VersionRange.HasLowerBound"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.HasLowerBound" /></member><member name="P:NuGet.Versioning.VersionRange.HasLowerAndUpperBounds"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.HasLowerAndUpperBounds" /></member><member name="P:NuGet.Versioning.VersionRange.Float"><summary>
+            用于确定最佳版本匹配的可选浮动范围。
+            </summary></member><member name="P:NuGet.Versioning.VersionRange.IsMaxInclusive"><inheritdoc cref="P:NuGet.Versioning.VersionRangeBase.IsMaxInclusive" /></member><member name="P:NuGet.Versioning.VersionRange.OriginalString"><summary>
+            正在解析为此对象的原始字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToString"><summary>
+            规范化的范围字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToNormalizedString"><summary>
+            规范化的范围字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToLegacyString"><summary>
+            与 NuGet 2.8.3 兼容的旧版版本范围
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToLegacyShortString"><summary>
+            一个简短的遗留版本范围，兼容 NuGet 2.8.3。
+            例如：1.0.0
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToString(System.String,System.IFormatProvider)"><summary>
+            使用 IFormatProvider 格式化版本范围
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.TryFormatter(System.String,System.IFormatProvider,System.String@)"><summary>
+            格式化范围
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.PrettyPrint"><summary>
+            以Pretty Print格式格式化版本范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.FindBestMatch(System.Collections.Generic.IEnumerable{NuGet.Versioning.NuGetVersion})"><summary>
+            返回与范围最匹配的版本。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.GetNonSnapshotVersion(NuGet.Versioning.NuGetVersion)"><summary>
+            移除版本的快照版本部分
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToNonSnapshotRange"><summary>
+            如果存在，则移除最小版本的浮动快照部分。
+            例如：1.0.0-* -&gt; 1.0.0
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.IsBetter(NuGet.Versioning.NuGetVersion,NuGet.Versioning.NuGetVersion)"><summary>
+            确定给定版本是否比当前版本更适合该范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.ToShortString"><summary>
+            包括浮动范围的ToLegacyShortString
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Equals(NuGet.Versioning.VersionRange)"><summary>
+            VersionRange 的 Equals 实现。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Equals(System.Object)"><summary>
+            将obj作为VersionRange进行比较。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.GetHashCode"><summary>
+            返回 VersionRangeBase 的哈希码
+            </summary></member><member name="F:NuGet.Versioning.VersionRange.All"><summary>
+            一个接受所有版本（预发布版和稳定版）的范围。
+            </summary></member><member name="F:NuGet.Versioning.VersionRange.AllStable"><summary>
+            接受所有稳定版本的版本范围
+            </summary></member><member name="F:NuGet.Versioning.VersionRange.AllFloating"><summary>
+            一个接受所有版本（预发布和稳定版）并浮动到最高版本的范围。
+            </summary></member><member name="F:NuGet.Versioning.VersionRange.AllStableFloating"><summary>
+            该范围接受所有版本，包括预发布版和稳定版，并浮动到最高版本。
+            </summary></member><member name="F:NuGet.Versioning.VersionRange.None"><summary>
+            拒绝所有版本的版本范围
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Parse(System.String,System.Boolean)"><summary>
+            直接解析
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.TryParse(System.String,NuGet.Versioning.VersionRange@)"><summary>
+            从字符串表示形式解析VersionRange。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.TryParse(System.String,System.Boolean,NuGet.Versioning.VersionRange@)"><summary>
+            从字符串表示形式解析VersionRange。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Combine(System.Collections.Generic.IEnumerable{NuGet.Versioning.NuGetVersion})"><summary>
+            返回包含所有给定版本的最小范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Combine(System.Collections.Generic.IEnumerable{NuGet.Versioning.NuGetVersion},NuGet.Versioning.IVersionComparer)"><summary>
+            返回包含所有给定版本的最小范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Combine(System.Collections.Generic.IEnumerable{NuGet.Versioning.VersionRange})"><summary>
+            返回包含所有给定范围的最小范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.CommonSubSet(System.Collections.Generic.IEnumerable{NuGet.Versioning.VersionRange})"><summary>
+            返回满足所有给定范围的最大公共范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Combine(System.Collections.Generic.IEnumerable{NuGet.Versioning.VersionRange},NuGet.Versioning.IVersionComparer)"><summary>
+            返回包含所有给定范围的最小范围。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.HasValidRange(NuGet.Versioning.VersionRange)"><summary>
+            验证该范围是否有实际宽度。例如：没有版本可以满足 (3.0.0, 3.0.0)
+            </summary></member><member name="T:NuGet.Versioning.VersionRangeBase"><summary>
+            一个基础版本范围，仅处理范围，不处理任何首选版本逻辑。
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.CommonSubSet(System.Collections.Generic.IEnumerable{NuGet.Versioning.VersionRange},NuGet.Versioning.IVersionComparer)"><summary>
+            返回满足所有给定范围的最大公共范围。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.HasLowerBound"><summary>
+            如果 MinVersion 存在，则为 True；
+            </summary></member><member name="M:NuGet.Versioning.VersionRange.Parse(System.String)"><summary>
+            版本字符串要么是一个简单的版本号，要么是一个算术范围。
+            例如：
+            1.0         --&gt; 1.0 ≤ x
+            (,1.0]      --&gt; x ≤ 1.0
+            (,1.0)      --&gt; x &lt; 1.0
+            [1.0]       --&gt; x == 1.0
+            (1.0,)      --&gt; 1.0 &lt; x
+            (1.0, 2.0)   --&gt; 1.0 &lt; x &lt; 2.0
+            [1.0, 2.0]   --&gt; 1.0 ≤ x ≤ 2.0
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.#ctor(NuGet.Versioning.NuGetVersion,System.Boolean,NuGet.Versioning.NuGetVersion,System.Boolean)"><summary>
+            使用给定的最小版本和最大版本创建一个版本范围。
+            </summary><param name="minVersion">版本范围的下限。</param><param name="includeMinVersion">如果 minVersion 满足条件，则为 true。</param><param name="maxVersion">版本范围的上限。</param><param name="includeMaxVersion">如果 maxVersion 满足条件，则为 true。</param></member><member name="P:NuGet.Versioning.VersionRangeBase.HasUpperBound"><summary>
+            如果 MaxVersion 存在，则为 True。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.HasLowerAndUpperBounds"><summary>
+            如果 MinVersion 和 MaxVersion 都存在，则为 true。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.IsMinInclusive"><summary>
+            如果 MinVersion 存在且包含在范围内，则为 True。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.MaxVersion"><summary>
+            此范围允许的最大版本。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.IsMaxInclusive"><summary>
+            如果MaxVersion存在并且包含在范围内，则为True。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.MinVersion"><summary>
+            此范围允许的最低版本。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.Satisfies(NuGet.Versioning.NuGetVersion)"><summary>
+            确定 NuGetVersion 是否满足要求。
+            </summary><param name="version">要比较的 SemVer</param><returns>如果给定的版本满足版本要求，则为 true。</returns></member><member name="M:NuGet.Versioning.VersionRangeBase.Satisfies(NuGet.Versioning.NuGetVersion,NuGet.Versioning.VersionComparison)"><summary>
+            确定一个NuGetVersion是否满足给定模式的要求。
+            </summary><param name="version">要比较的SemVer</param><param name="versionComparison">用于确定版本范围的VersionComparison模式</param><returns>如果给定的版本满足版本要求，则为True。</returns></member><member name="M:NuGet.Versioning.VersionRangeBase.Equals(System.Object)"><summary>
+            将对象作为VersionRange与默认比较器进行比较
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.Satisfies(NuGet.Versioning.NuGetVersion,NuGet.Versioning.IVersionComparer)"><summary>
+            使用版本比较器确定NuGetVersion是否满足要求。
+            </summary><param name="version">要比较的SemVer。</param><param name="comparer">用于确定版本标准是否满足的比较器。</param><returns>如果给定版本满足版本要求，则为True。</returns></member><member name="M:NuGet.Versioning.VersionRangeBase.Equals(NuGet.Versioning.VersionRangeBase)"><summary>
+            默认比较
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.GetHashCode"><summary>
+            使用默认比较器返回哈希代码。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.Equals(NuGet.Versioning.VersionRangeBase,NuGet.Versioning.IVersionRangeComparer)"><summary>
+            使用VersionRangeComparer进行相等性检查
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.IsSubSetOrEqualTo(NuGet.Versioning.VersionRangeBase)"><summary>
+            子集检查
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.Equals(NuGet.Versioning.VersionRangeBase,NuGet.Versioning.IVersionComparer)"><summary>
+            使用特定的 IVersionComparer 进行比较
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.Equals(NuGet.Versioning.VersionRangeBase,NuGet.Versioning.VersionComparison)"><summary>
+            使用特定的VersionComparison进行比较
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeBase.IsSubSetOrEqualTo(NuGet.Versioning.VersionRangeBase,NuGet.Versioning.IVersionComparer)"><summary>
+            子集检查
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.#ctor"><summary>
+            默认版本范围比较器。
+            </summary></member><member name="T:NuGet.Versioning.VersionRangeComparer"><summary>
+            一个版本范围比较器，能够使用不同的 VersionComparer 来检查范围是否等效。
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeBase.HasPrereleaseBounds"><summary>
+            推断范围是否应允许预发布版本，基于下限或上限是否包含预发布标签。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.#ctor(NuGet.Versioning.IVersionComparer)"><summary>
+            使用特定的IVersionComparer比较版本
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.#ctor(NuGet.Versioning.VersionComparison)"><summary>
+    使用特定的VersionComparison比较版本
+    </summary></member><member name="P:NuGet.Versioning.VersionRangeComparer.VersionRelease"><summary>
+            使用版本和发行版比较版本
+            </summary></member><member name="P:NuGet.Versioning.VersionRangeComparer.Default"><summary>
+            默认版本比较器
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.Equals(NuGet.Versioning.VersionRangeBase,NuGet.Versioning.VersionRangeBase)"><summary>
+            检查两个版本范围是否等效。在检查边界时遵循版本比较器的规则。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.GetHashCode(NuGet.Versioning.VersionRangeBase)"><summary>
+            基于范围的所有属性创建哈希代码。在比较版本边界时，遵循版本比较器的规则。
+            </summary></member><member name="T:NuGet.Versioning.VersionRangeFormatter"><summary>
+            NuGet <see cref="T:NuGet.Versioning.VersionRange" /> 的自定义格式化程序。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.Format(System.String,System.Object,System.IFormatProvider)"><summary>
+            格式化版本范围字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeComparer.Get(NuGet.Versioning.VersionComparison)"><summary>
+            根据指定的版本比较获取适当的版本范围比较器。
+            </summary><param name="versionComparison">要使用的版本比较。</param><returns>一个<see cref="T:NuGet.Versioning.IVersionRangeComparer" />的实例。</returns></member><member name="M:NuGet.Versioning.VersionRangeFormatter.GetFormat(System.Type)"><summary>
+            格式类型。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.GetNormalizedString(System.Text.StringBuilder,NuGet.Versioning.VersionRange)"><summary>
+            生成一个没有简写形式的规范化字符串
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.GetToString(System.Text.StringBuilder,NuGet.Versioning.VersionRange)"><summary>
+            生成一个表示 VersionRange 的字符串。该字符串可以包含简写表示法。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.GetLegacyShortString(System.Text.StringBuilder,NuGet.Versioning.VersionRangeBase)"><summary>
+            创建一个与NuGet 2.8.3兼容的旧版短字符串。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.PrettyPrint(System.Text.StringBuilder,NuGet.Versioning.VersionRange,System.Boolean)"><summary>
+            VersionRange 的漂亮打印表示。
+            </summary></member><member name="M:NuGet.Versioning.VersionRangeFormatter.GetLegacyString(System.Text.StringBuilder,NuGet.Versioning.VersionRangeBase)"><summary>
+            创建一个与 NuGet 2.8.3 兼容的旧格式字符串。
+            </summary></member><member name="F:NuGet.Versioning.VersionRangeFormatter.Instance"><summary><see cref="T:NuGet.Versioning.VersionRangeFormatter" /> 类的静态实例。
+            </summary></member><member name="T:NuGet.SharedStringBuilder"><summary>
+            提供一个资源池，允许重用 <see cref="T:System.Text.StringBuilder" /> 实例。
+            </summary><remarks><para>
+            通过 <see cref="T:NuGet.StringBuilderPool" /> 租借和归还缓冲区可以提高在频繁创建和销毁 <see cref="T:System.Text.StringBuilder" /> 实例的情况下的性能，这会导致垃圾回收器产生显著的内存压力。
+            </para><para>
+            此类是线程安全的。所有成员可以被多个线程同时使用。即使在使用的过程中抛出异常，也必须归还字符串生成器。如果不能归还，将导致其他调用者无法租借字符串生成器。
+            </para></remarks></member><member name="M:NuGet.SharedStringBuilder.Rent(System.Int32)"><summary>
+            获取一个长度至少为指定长度的 <see cref="T:System.Text.StringBuilder" />。
+            </summary><param name="minimumCapacity">所需 <see cref="T:System.Text.StringBuilder" /> 的最小容量。</param><returns>
+            一个长度至少为 <paramref name="minimumCapacity" /> 的 <see cref="T:System.Text.StringBuilder" />。
+            </returns><remarks>
+            此缓冲区是被借给调用方的，应通过 <see cref="M:NuGet.SharedStringBuilder.ToStringAndReturn(System.Text.StringBuilder)" /> 返回给同一池，以便能在后续使用 <see cref="M:NuGet.SharedStringBuilder.Rent(System.Int32)" /> 时重用。
+            不归还所借出的字符串生成器并非严重错误，但若不这样做，可能会导致应用程序性能下降，因为池可能需要创建新实例来替换丢失的那个。
+            </remarks></member><member name="M:NuGet.Shared.EqualityUtility.OrderedEquals``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            根据指定的键和可选比较器对两个可枚举对象进行有序比较，以判断它们是否相等。优雅地处理空值。
+            </summary><typeparam name="TSource">列表的类型</typeparam><typeparam name="TKey">排序键的类型</typeparam><param name="self">此列表</param><param name="other">另一个列表</param><param name="keySelector">从列表中的每个项提取键的函数</param><param name="orderComparer">用于比较键的可选比较器</param><param name="sequenceComparer">用于序列的可选比较器</param></member><member name="M:NuGet.Shared.EqualityUtility.OrderedEquals``2(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            按指定键和可选比较器对两个集合进行排序比较，以确定它们是否相等。优雅地处理空值。
+            </summary><typeparam name="TSource">列表的类型</typeparam><typeparam name="TKey">排序键的类型</typeparam><param name="self">此列表</param><param name="other">另一个列表</param><param name="keySelector">从列表中的每个项提取键的函数</param><param name="orderComparer">用于比较键的可选比较器</param><param name="sequenceComparer">用于序列的可选比较器</param></member><member name="M:NuGet.Shared.EqualityUtility.SequenceEqualWithNullCheck``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            比较两个序列是否相等，允许任一序列为空。如果一个为空，那么两个都必须为空才能相等。
+            </summary></member><member name="M:NuGet.Shared.EqualityUtility.SequenceEqualWithNullCheck``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            比较两个集合是否相等，允许其中一个集合为 null。如果一个为 null，则要求两个都为 null 才视为相等。
+            </summary></member><member name="M:NuGet.SharedStringBuilder.ToStringAndReturn(System.Text.StringBuilder)"><summary>
+            将先前通过同一<see cref="T:NuGet.StringBuilderPool" />实例上的<see cref="M:NuGet.SharedStringBuilder.Rent(System.Int32)" />获取的<see cref="T:System.Text.StringBuilder" />返回到池中，并返回构建的字符串。
+            </summary><param name="builder">
+            先前从<see cref="M:NuGet.SharedStringBuilder.Rent(System.Int32)" />获取的要返回到池中的<see cref="T:System.Text.StringBuilder" />。
+            </param><remarks>
+            一旦<see cref="T:System.Text.StringBuilder" />被返回到池中，调用方将放弃对实例的所有权，并且不得再使用它。从给定<see cref="M:NuGet.SharedStringBuilder.Rent(System.Int32)" />调用返回的引用只能通过<see cref="M:NuGet.SharedStringBuilder.ToStringAndReturn(System.Text.StringBuilder)" />返回一次。默认的<see cref="T:NuGet.StringBuilderPool" />可能会保留返回的实例以便再次租用，或者如果确定池中已有足够实例，则可能会释放返回的实例。
+            </remarks><returns>由<paramref name="builder" />构建的字符串。</returns></member><member name="M:NuGet.Shared.EqualityUtility.OrderedEquals``2(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            按指定的键和可选比较器对两个列表进行排序比较，以确定它们是否相等。优雅地处理 null 值。
+            </summary><typeparam name="TSource">列表的类型</typeparam><typeparam name="TKey">排序键的类型</typeparam><param name="self">此列表</param><param name="other">另一个列表</param><param name="keySelector">从列表中的每个项提取键的函数</param><param name="orderComparer">用于比较键的可选比较器</param><param name="sequenceComparer">用于序列的可选比较器</param></member><member name="M:NuGet.Shared.EqualityUtility.SetEqualsWithNullCheck``1(System.Collections.Generic.ISet{``0},System.Collections.Generic.ISet{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            比较两个集合是否相等，允许任一序列为null。
+            如果其中一个为null，则两者都必须为null才视为相等。
+            </summary></member><member name="M:NuGet.Shared.EqualityUtility.SequenceEqualWithNullCheck``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            比较两个列表是否相等，允许任一列表为null。如果其中一个为null，则两个都必须为null才相等。
+            </summary></member><member name="T:NuGet.Shared.HashCodeCombiner"><summary>
+    哈希码创建器，基于原始的NuGet哈希码组合器/ASP哈希码组合器实现
+    </summary></member><member name="M:NuGet.Shared.HashCodeCombiner.GetHashCode``2(``0,``1)"><summary>
+            为给定的一组项创建唯一的哈希码
+            </summary></member><member name="M:NuGet.Shared.HashCodeCombiner.GetHashCode``3(``0,``1,``2)"><summary>
+            为给定的项目集合创建唯一的哈希码
+            </summary></member><member name="M:NuGet.Shared.EqualityUtility.EqualsFalse(System.String)"><summary>
+            确定当前字符串是否包含等于"false"的值。将修剪前导和尾随空格，并且比较不区分大小写。
+            </summary><param name="value">要比较的字符串。</param><returns><see langword="true" /> 如果当前字符串等于"false"的值，否则 <see langword="false" />。</returns></member><member name="M:NuGet.Shared.Extensions.AsHashSet``1(System.Collections.Generic.ISet{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            将 ISet 作为 HashSet&lt;T&gt; 返回，如果需要则进行复制。针对常见情况（即它是 HashSet&lt;T&gt;）进行了优化。避免修改返回值。
+            </summary></member><member name="M:NuGet.Shared.Extensions.AsList``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            将可枚举对象作为 T 的列表返回，如果需要则进行复制。针对常见情况（即它是一个 T 的列表）进行了优化。避免改变返回值。
+            </summary><remarks>https://aspnetwebstack.codeplex.com/SourceControl/latest#src/Common/CollectionExtensions.cs</remarks></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingListEnumerable`1"><summary>
+            提供基于结构的枚举器，用于 <see cref="T:System.Collections.Generic.IList`1" />。请勿直接使用此类型。请改用 <see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IList{``0})" />。
+            </summary></member><member name="M:NuGet.Shared.Extensions.AppendInt(System.Text.StringBuilder,System.Int32)"><summary>
+             将一个 <see cref="T:System.Int32" /> 追加到 <see cref="T:System.Text.StringBuilder" /> 的辅助函数。直接调用
+             <see cref="M:System.Text.StringBuilder.Append(System.Int32)" /> 会导致分配，因为它首先将
+             <see cref="T:System.Int32" /> 转换为字符串，然后追加结果：
+             <code>
+             public StringBuilder Append(int value)
+             {
+                 return Append(value.ToString(CultureInfo.CurrentCulture));
+             }
+             </code>
+            
+             请注意，这使用当前区域性进行转换，而 <see cref="M:NuGet.Shared.Extensions.AppendInt(System.Text.StringBuilder,System.Int32)" /> 不执行任何区域性敏感的转换。
+             </summary><param name="sb">要追加到的 <see cref="T:System.Text.StringBuilder" />。</param><param name="value">要追加的 <see cref="T:System.Int32" />。</param></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingListEnumerable`1.Enumerator"><summary>
+            一个基于结构的枚举器，用于与<see cref="T:System.Collections.Generic.IList`1" />一起使用。不要直接使用此类型。请改用<see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IList{``0})" />。
+            </summary></member><member name="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IList{``0})"><summary>
+             避免在枚举<see cref="T:System.Collections.Generic.IList`1" />时分配枚举器。
+             </summary><remarks><para>
+             返回一个基于结构的枚举器，避免在枚举期间进行堆分配。如果基础类型是<see cref="T:System.Collections.Generic.List`1" />，则此方法将委托给<see cref="T:System.Collections.Generic.List`1.Enumerator" />；否则，直接通过<see cref="T:System.Collections.Generic.IList`1" />的索引器按索引访问集合项。
+             </para><para>
+             当使用基于结构的枚举器时，通过<see langword="foreach" />进行枚举不会发生堆分配。这与基于接口的枚举器<see cref="T:System.Collections.Generic.IEnumerator`1" />形成对比，后者将始终在堆上分配。
+             </para></remarks><example><code><![CDATA[IList<string> list = ...;
+            
+             foreach (string item in list.NoAllocEnumerate())
+             {
+                 // ...
+             }]]></code></example></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingEnumerable`1"><summary>
+            提供一个基于结构的枚举器，用于与 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 一起使用。
+            不要直接使用此类型。请改用 <see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IEnumerable{``0})" />。
+            </summary></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingEnumerable`1.Enumerator"><summary>
+    用于与 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 一起使用的基于结构的枚举器。
+    不要直接使用此类型。请改用 <see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IEnumerable{``0})" />。
+    </summary></member><member name="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+             避免在枚举 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 时分配枚举器，当具体类型具有已知的结构体枚举器（如 <see cref="T:System.Collections.Generic.List`1" />），或通过 <see cref="T:System.Collections.Generic.IList`1" /> 进行基于索引的访问时。
+             </summary><remarks><para>
+             几种集合类型（例如 <see cref="T:System.Collections.Generic.List`1" />）提供基于结构体的枚举器类型（例如 <see cref="T:System.Collections.Generic.List`1.Enumerator" />），编译器可以在 <see langword="foreach" /> 语句中使用。使用基于结构体的枚举器时，在此枚举期间不会发生堆分配。这与基于接口的枚举器 <see cref="T:System.Collections.Generic.IEnumerator`1" /> 形成对比，后者始终在堆上分配。
+             </para><para>
+             此方法返回一个自定义结构体枚举器，如果 <paramref name="source" />（通过接口 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 声明）实际上是已知的具体类型并且提供了自己的结构体枚举器，则避免任何堆分配。如果是这样，它将委托给该类型的枚举器，无需装箱或其他堆分配。
+             </para><para>
+             如果 <paramref name="source" /> 不是已知的具体类型，则返回的枚举器回退到基于接口的枚举器，该枚举器将在堆上分配。基准测试表明，在这种情况下开销低至测量误差范围内，这意味着这是一种廉价的优化，不会回归行为，并且在无法应用优化的情况下缺点很小。
+             </para></remarks><example><code><![CDATA[IEnumerable<string> source = ...;
+            
+             foreach (string item in source.NoAllocEnumerate())
+             {
+                 // ...
+             }]]></code></example></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingDictionaryEnumerable`2.Enumerator"><summary>
+            一个基于结构的枚举器，用于 <see cref="T:System.Collections.Generic.IEnumerable`1" />。
+            不要直接使用此类型。请改用 <see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``2(System.Collections.Generic.IDictionary{``0,``1})" />。
+            </summary></member><member name="T:NuGet.StringBuilderPool"><summary>
+            提供资源池，允许重用 <see cref="T:System.Text.StringBuilder" /> 实例。
+            </summary><remarks><para>
+            使用 <see cref="T:NuGet.StringBuilderPool" /> 租借和返回缓冲区可以在 <see cref="T:System.Text.StringBuilder" /> 实例频繁创建和销毁、导致垃圾回收器产生大量内存压力的情况下提高性能。
+            </para><para>
+            此类是线程安全的。所有成员都可以被多个线程并发使用。
+            </para></remarks></member><member name="T:NuGet.NoAllocEnumerateExtensions.OptimisticallyNonAllocatingDictionaryEnumerable`2"><summary>
+            提供一种基于结构的枚举器，用于与 <see cref="T:System.Collections.Generic.IDictionary`2" /> 配合使用。
+            请勿直接使用此类型。请改用 <see cref="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``2(System.Collections.Generic.IDictionary{``0,``1})" />。
+            </summary></member><member name="F:NuGet.StringBuilderPool.Shared"><summary>
+            获取一个共享的<see cref="T:NuGet.StringBuilderPool" />实例。
+            </summary></member><member name="M:NuGet.NoAllocEnumerateExtensions.NoAllocEnumerate``2(System.Collections.Generic.IDictionary{``0,``1})"><summary>
+             避免在对具体类型具有已知结构枚举器的 <see cref="T:System.Collections.Generic.IDictionary`2" /> 进行枚举时分配枚举器，例如 <see cref="T:System.Collections.Generic.Dictionary`2" />。
+             </summary><remarks><para>
+             多种集合类型（例如 <see cref="T:System.Collections.Generic.Dictionary`2" />）提供基于结构的枚举器类型（例如 <see cref="T:System.Collections.Generic.Dictionary`2.Enumerator" />），编译器可以在 <see langword="foreach" /> 语句中使用该类型。当使用基于结构的枚举器时，此类枚举过程中不会发生堆分配。这与基于接口的枚举器 <see cref="T:System.Collections.Generic.IEnumerator`1" /> 形成对比，后者将始终在堆上分配。
+             </para><para>
+             此方法返回一个自定义结构枚举器，如果 <paramref name="dictionary" />（通过接口 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 声明）实际上是已知的具体类型，且该类型提供了自己的结构枚举器，则此方法将避免任何堆分配。如果是这种情况，它将委托给该类型的枚举器，而无需任何装箱或其他堆分配。
+             </para><para>
+             如果 <paramref name="dictionary" /> 不是已知的具体类型，则返回的枚举器回退到基于接口的枚举器，该枚举器将在堆上分配。基准测试表明，在这种情况下，开销低到足以在测量误差之内，这意味着这是一种廉价的优化，不会导致行为回归，并且对于无法应用优化的场景，其负面影响也很低。
+             </para></remarks><example><code><![CDATA[IDictionary<string, string> dictionary = ...;
+            
+             foreach ((string key, string value) in dictionary.NoAllocEnumerate())
+             {
+                 // ...
+             }]]></code></example></member><member name="M:NuGet.StringBuilderPool.ToStringAndReturn(System.Text.StringBuilder)"><summary>
+            返回之前通过同一<see cref="T:NuGet.StringBuilderPool" />实例上的<see cref="M:NuGet.StringBuilderPool.Rent(System.Int32)" />获取的数组到池中，并返回生成的字符串。
+            </summary><param name="builder">
+            之前从<see cref="M:NuGet.StringBuilderPool.Rent(System.Int32)" />获取的<see cref="T:System.Text.StringBuilder" />，现在返回到池中。
+            </param><remarks>
+            一旦<see cref="T:System.Text.StringBuilder" />被返回到池中，调用者将放弃对该实例的所有所有权，并且不得再使用它。从给定的<see cref="M:NuGet.StringBuilderPool.Rent(System.Int32)" />调用返回的引用只能通过<see cref="M:NuGet.StringBuilderPool.ToStringAndReturn(System.Text.StringBuilder)" />返回一次。默认的<see cref="T:NuGet.StringBuilderPool" />可能会保留返回的实例以便再次租用，或者如果确定池中已有足够的实例存储，则可能会释放返回的实例。
+            </remarks><returns>由<paramref name="builder" />生成的字符串。</returns></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应类型不允许，也允许 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应类型允许，也禁止将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使对应的类型允许 null，输出也不会为 null。指定调用返回时输入参数不为 null。</summary></member><member name="M:NuGet.StringBuilderPool.Rent(System.Int32)"><summary>
+            检索一个至少具有请求长度的<see cref="T:System.Text.StringBuilder" />。
+            </summary><param name="minimumCapacity">所需<see cref="T:System.Text.StringBuilder" />的最小容量。</param><returns>
+            一个长度至少为<paramref name="minimumCapacity" />的<see cref="T:System.Text.StringBuilder" />。
+            </returns><remarks>
+            此缓冲区借给调用方，应通过<see cref="M:NuGet.StringBuilderPool.ToStringAndReturn(System.Text.StringBuilder)" />返回到同一池，以便在后续使用<see cref="M:NuGet.StringBuilderPool.Rent(System.Int32)" />时重用。不返回租用的字符串生成器不是致命错误，但如果不这样做，可能会导致应用程序性能下降，因为池可能需要创建新实例来替换丢失的实例。
+            </remarks></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定即使对应的类型不允许，输出也可能为 null。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化属性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为 null。
+            </param></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使相应类型不允许，参数也可能为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回<see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" />时，即使参数对应的类型允许为空，该参数也不应为null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化该特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数为非null，则输出也将为非null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>初始化具有关联参数名称的特性。</summary><param name="parameterName">
+            关联的参数名称。如果指定参数的自变量不为 null，则输出将为非 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递了指定值，则该方法将不会返回。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定该方法或属性将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+            条件参数值。如果关联参数的参数匹配此值，则该方法之后的代码将被诊断视为不可达。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化特性。</summary><param name="member">
+            被保证不为空的字段或属性成员。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定当方法或属性以指定的返回值条件返回时，它将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段及属性成员列表初始化该属性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param><param name="members">
+            保证不为 null 的字段和属性成员列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为null。
+            </param><param name="member">
+            承诺不为null的字段或属性成员。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员的列表初始化该特性。</summary><param name="members">
+            保证不为空的字段和属性成员的列表。
+            </param></member></members>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>GOKt64lxwFg7i/hh3LPLQ3jdRBXT9a2lJFCU9+gve6o=</DigestValue></Reference></SignedInfo><SignatureValue>bPWRlVyppceJnt9zeOTiLGfO6tVDsq+57IB5yFzo4OpNpSzGggYbj9MqDqmSA7Rzhao+AgvS4P7bfdIQBitIlcaxWfuGikOS86KNBWuNwGS4xT5dBiasw2CEHUXCuuI1Ca29eZ/uQV7froAPCpvE6cvMTCWmu6hwM46Phf58Nvc6zRA4f8ZJAXnhoIwDhvjMc1Q5eSqe4cPtkrEEPVnw7bPNzWQBKrNoMxJm9aPvqOF7wXHaQk6Qnqy7IO9XRHKY/pGmvCApFjQcDKXUKG4ziXpmJZ41egsads25pn2Uqx7Pu70l8Skfj9QvxLCIDyDQOIxMat1pdYj+vvmsaOgfjA==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wEpIdXKb7lKn26sXpXuywkhxGplTQXxROLmNRZBrAHVBf7546RNXZwA/bzDqsuWTuPSC4T+I4j/z9j5/WqPuUw7SpnEPqWXc2xu7eN8kVyQt5170xkK6KHT4vVEkIvayPtIMLl0SgSCOy/pN5DJCi5ha7FlI84F1Qi2GumR+wQgCwHCVmU8Fj6Ik+B6akISXGCwe6X3rQFQngRFWQ/IrSkOkAOfy0EfvV+nZUo+FcbWuCZ6cb4Eq5I1ws/rZSeuwAWeedZcNt0VlNbsn4AnxBYQX4sj0dlko7JD5fWqeqq3/HzUNbBmLp9qeCXV8XlACn9YVWv900F47z04kVwpyTw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data></KeyInfo><Object Id="ts-countersig"><X509Data><X509Certificate>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</X509Certificate><X509Certificate>MIIHcTCCBVmgAwIBAgITMwAAABXF52ueAptJmQAAAAAAFTANBgkqhkiG9w0BAQsFADCBiDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEyMDAGA1UEAxMpTWljcm9zb2Z0IFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIwMTAwHhcNMjEwOTMwMTgyMjI1WhcNMzAwOTMwMTgzMjI1WjB8MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSYwJAYDVQQDEx1NaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0EgMjAxMDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAOThpkzntHIhC3miy9ckeb0O1YLT/e6cBwfSqWxOdcjKNVf2AX9sSuDivbk+F2Az/1xPx2b3lVNxWuJ+Slr+uDZnhUYjDLWNE893MsAQGOhgfWpSg0S3po5GawcU88V29YZQ3MFEyHFcUTE3oAo4bo3t1w/YJlN8OWECesSq/XJprx2rrPY2vjUmZNqYO7oaezOtgFt+jBAcnVL+tuhiJdxqD89d9P6OU8/W7IVWTe/dvI2k45GPsjksUZzpcGkNyjYtcI4xyDUoveO0hyTD4MmPfrVUj9z6BVWYbWg7mka97aSueik3rMvrg0XnRm7KMtXAhjBcTyziYrLNueKNiOSWrAFKu75xqRdbZ2De+JKRHh09/SDPc31BmkZ1zcRfNN0Sidb9pSB9fvzZnkXftnIv231fgLrbqn427DZM9ituqBJR6L8FA6PRc6ZNN3SUHDSCD/AQ8rdHGO2n6Jl8P0zbr17C89XYcz1DTsEzOUyOArxCaC4Q6oRRRuLRvWoYWmEBc8pnol7XKHYC4jMYctenIPDC+hIK12NvDMk2ZItboKaDIV1fMHSRlJTYuVD5C4lh8zYGNRiER9vcG9H9stQcxWv2XFJRXRLbJbqvUAV6bMURHXLvjflSxIUXk8A8FdsaN8cIFRg/eKtFtvUeh17aj54WcmnGrnu3tz5q4i6tAgMBAAGjggHdMIIB2TASBgkrBgEEAYI3FQEEBQIDAQABMCMGCSsGAQQBgjcVAgQWBBQqp1L+ZMSavoKRPEY1Kc8Q/y8E7jAdBgNVHQ4EFgQUn6cVXQBeYl2D9OXSZacbUzUZ6XIwXAYDVR0gBFUwUzBRBgwrBgEEAYI3TIN9AQEwQTA/BggrBgEFBQcCARYzaHR0cDovL3d3dy5taWNyb3NvZnQuY29tL3BraW9wcy9Eb2NzL1JlcG9zaXRvcnkuaHRtMBMGA1UdJQQMMAoGCCsGAQUFBwMIMBkGCSsGAQQBgjcUAgQMHgoAUwB1AGIAQwBBMAsGA1UdDwQEAwIBhjAPBgNVHRMBAf8EBTADAQH/MB8GA1UdIwQYMBaAFNX2VsuP6KJcYmjRPZSQW9fOmhjEMFYGA1UdHwRPME0wS6BJoEeGRWh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2kvY3JsL3Byb2R1Y3RzL01pY1Jvb0NlckF1dF8yMDEwLTA2LTIzLmNybDBaBggrBgEFBQcBAQROMEwwSgYIKwYBBQUHMAKGPmh0dHA6Ly93d3cubWljcm9zb2Z0LmNvbS9wa2kvY2VydHMvTWljUm9vQ2VyQXV0XzIwMTAtMDYtMjMuY3J0MA0GCSqGSIb3DQEBCwUAA4ICAQCdVX38Kq3hLB9nATEkW+Geckv8qW/qXBS2Pk5HZHixBpOXPTEztTnXwnE2P9pkbHzQdTltuw8x5MKP+2zRoZQYIu7pZmc6U03dmLq2HnjYNi6cqYJWAAOwBb6J6Gngugnue99qb74py27YP0h1AdkY3m2CDPVtI1TkeFN1JFe53Z/zjj3G82jfZfakVqr3lbYoVSfQJL1AoL8ZthISEV09J+BAljis9/kpicO8F7BUhUKz/AyeixmJ5/ALaoHCgRlCGVJ1ijbCHcNhcy4sa3tuPywJeBTpkbKpW99Jo3QMvOyRgNI95ko+ZjtPu4b6MhrZlvSP9pEB9s7GdP32THJvEKt1MMU0sHrYUP4KWN1APMdUbZ1jdEgssU5HLcEUBHG/ZPkkvnNtyo4JvbMBV0lUZNlz138eW0QBjloZkWsNn6Qo3GcZKCS6OEuabvshVGtqRRFHqfG3rsjoiV5PndLQTHa1V1QJsWkBRH58oWFsc/4Ku+xBZj1p/cvBQUl+fpO+y/g75LcVv7TOPqUxUYS8vwLBgqJ7Fx0ViY1w/ue10CgaiQuPNtq6TPmb/wrpNPgkNWcr4A245oyZ1uEi6vAnQj0llOZ0dFtq0Z4+7X6gMTN9vMvpe784cETRkPHIqzqKOghif9lwY1NNje6CbaUFEMFxBmoQtB1VM1izoXBm8g==</X509Certificate></X509Data><CounterSignature ts-format="cms-timestamp-message" xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003">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</CounterSignature></Object></Signature></doc>
