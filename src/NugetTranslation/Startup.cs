@@ -88,8 +88,8 @@ internal static class Startup
         });
         rpb.AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
         {
-            PermitLimit = 2000,
-            QueueLimit = 2000
+            PermitLimit = 200,
+            QueueLimit = 200
         }));
         services.AddSingleton(rpb.Build());
         return services;

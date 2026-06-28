@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.Json</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Configuration.JsonConfigurationExtensions"><summary>
+            添加 <see cref="T:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)"><summary>
+            将位于 <paramref name="path" /> 的 JSON 配置提供程序添加到 <paramref name="builder" />。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><returns>该 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean)"><summary>
+    将位于 <paramref name="path" /> 的 JSON 配置提供程序添加到 <paramref name="builder" />。
+    </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><param name="optional">文件是否为可选的。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean,System.Boolean)"><summary>
+    将位于 <paramref name="path" /> 的 JSON 配置提供程序添加到 <paramref name="builder" />。
+    </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中存储的基路径的路径。</param><param name="optional">文件是否为可选的。</param><param name="reloadOnChange">是否应在文件更改时重新加载配置。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.Json.JsonConfigurationSource})"><summary>
+    向 <paramref name="builder" /> 添加一个 JSON 配置源。
+    </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="configureSource">配置源。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonStream(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.IO.Stream)"><summary>
+            向<paramref name="builder" />添加一个JSON配置源。
+            </summary><param name="builder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="stream">从其中读取json配置数据的<see cref="T:System.IO.Stream" />。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider"><summary>
+            提供从 JSON 文件中获取的配置键值对。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Json.JsonConfigurationSource)"><summary>
+            使用指定的源初始化一个新实例。
+            </summary><param name="source">源设置。</param></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(System.IO.Stream)"><summary>
+            从流中加载JSON数据。
+            </summary><param name="stream">要读取的流。</param></member><member name="T:Microsoft.Extensions.Configuration.Json.JsonConfigurationSource"><summary>
+            表示一个 JSON 文件作为 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源生成<see cref="T:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个<see cref="T:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider" />实例。</returns></member><member name="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider"><summary>
+            提供从 JSON 流中获取的配置键值对。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider" /> 类的新实例。
+            </summary><param name="source">一个 <see cref="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource" />。</param></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider.Load(System.IO.Stream)"><summary>
+    从流中加载JSON配置键值对到提供程序。
+  </summary><param name="stream">用于加载配置数据的 JSON <see cref="T:System.IO.Stream" />。</param></member><member name="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource"><summary>
+    将 JSON 文件表示为 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+    为此源生成 <see cref="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider" /></returns></member><member name="P:System.SR.Error_InvalidFilePath"><summary>文件路径必须是非空字符串。</summary></member><member name="P:System.SR.Error_InvalidTopLevelJSONElement"><summary>顶层 JSON 元素必须是一个对象。但发现的是 '{0}'。</summary></member><member name="P:System.SR.Error_JSONParseError"><summary>无法解析JSON文件。</summary></member><member name="P:System.SR.Error_KeyIsDuplicated"><summary>发现重复的键 '{0}'。</summary></member><member name="P:System.SR.Error_UnsupportedJSONToken"><summary>发现不支持的 JSON 令牌 '{0}'。</summary></member><member name="M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.FileProviders.IFileProvider,System.String,System.Boolean,System.Boolean)"><summary>
+            将一个 JSON 配置源添加到 <paramref name="builder" />。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="provider">用于访问文件的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><param name="optional">文件是否可选。</param><param name="reloadOnChange">如果文件更改，是否应重新加载配置。</param><returns>该 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member></members>
+</doc>

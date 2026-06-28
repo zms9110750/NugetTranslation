@@ -1,0 +1,2410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.CommandLine</name>
+    </assembly>
+    <members>
+        <member name="T:System.CommandLine.Argument">
+            <summary>
+            A symbol defining a value that can be passed on the command line to a <see cref="T:System.CommandLine.Command">command</see> or <see cref="T:System.CommandLine.Option">option</see>.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Argument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Argument class.
+            </summary>
+            <param name="name">The name of the argument. This can be used to look up the parsed value and is displayed in help</param>
+        </member>
+        <member name="P:System.CommandLine.Argument.Arity">
+            <summary>
+            Gets or sets the arity of the argument.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Argument.HelpName">
+            <summary>
+            The name used in help output to describe the argument. 
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Argument.CompletionSources">
+            <summary>
+            Gets the list of completion sources for the argument.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Argument.ValueType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type" /> that the argument's parsed tokens will be converted to.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Argument.Validators">
+            <summary>
+            Provides a list of argument validators. Validators can be used
+            to provide custom errors based on user input.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Argument.GetDefaultValue">
+            <summary>
+            Gets the default value for the argument.
+            </summary>
+            <returns>Returns the default value for the argument, if defined. Null otherwise.</returns>
+        </member>
+        <member name="P:System.CommandLine.Argument.HasDefaultValue">
+            <summary>
+            Specifies if a default value is defined for the argument.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Argument.GetCompletions(System.CommandLine.Completions.CompletionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Argument.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.ArgumentArity">
+            <summary>
+            Defines the arity of an option or argument.
+            </summary>
+            <remarks>The arity refers to the number of values that can be passed on the command line.
+            </remarks>
+        </member>
+        <member name="M:System.CommandLine.ArgumentArity.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the ArgumentArity class.
+            </summary>
+            <param name="minimumNumberOfValues">The minimum number of values required for the argument.</param>
+            <param name="maximumNumberOfValues">The maximum number of values allowed for the argument.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="minimumNumberOfValues"/> is negative.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the maximum number is less than the minimum number or the maximum number is greater than MaximumArity.</exception>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.MinimumNumberOfValues">
+            <summary>
+            Gets the minimum number of values required for an <see cref="T:System.CommandLine.Argument">argument</see>.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.MaximumNumberOfValues">
+            <summary>
+            Gets the maximum number of values allowed for an <see cref="T:System.CommandLine.Argument">argument</see>.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.ArgumentArity.Equals(System.CommandLine.ArgumentArity)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.ArgumentArity.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.ArgumentArity.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.Zero">
+            <summary>
+            An arity that does not allow any values.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.ZeroOrOne">
+            <summary>
+            An arity that may have one value, but no more than one.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.ExactlyOne">
+            <summary>
+            An arity that must have exactly one value.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.ZeroOrMore">
+            <summary>
+            An arity that may have multiple values.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ArgumentArity.OneOrMore">
+            <summary>
+            An arity that must have at least one value.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.ArgumentValidation">
+            <summary>
+            Provides extension methods for <see cref="T:System.CommandLine.Argument" />.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.FileInfo})">
+            <summary>
+            Configures an argument to accept only values corresponding to an existing file.
+            </summary>
+            <param name="argument">The argument to configure.</param>
+            <returns>The configured argument.</returns>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.DirectoryInfo})">
+            <summary>
+            Configures an argument to accept only values corresponding to an existing directory.
+            </summary>
+            <param name="argument">The argument to configure.</param>
+            <returns>The configured argument.</returns>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.FileSystemInfo})">
+            <summary>
+            Configures an argument to accept only values corresponding to an existing file or directory.
+            </summary>
+            <param name="argument">The argument to configure.</param>
+            <returns>The configured argument.</returns>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly``1(System.CommandLine.Argument{``0})">
+            <summary>
+            Configures an argument to accept only values corresponding to a existing files or directories.
+            </summary>
+            <param name="argument">The argument to configure.</param>
+            <returns>The configured argument.</returns>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptLegalFileNamesOnly``1(System.CommandLine.Argument{``0})">
+            <summary>
+            Configures the argument to accept only values representing legal file names.
+            </summary>
+            <remarks>A parse error will result, for example, if file path separators are found in the parsed value.</remarks>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptLegalFilePathsOnly``1(System.CommandLine.Argument{``0})">
+            <summary>
+            Configures the argument to accept only values representing legal file paths.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.ArgumentValidation.AcceptOnlyFromAmong``1(System.CommandLine.Argument{``0},System.String[])">
+            <summary>
+            Configures the argument to accept only the specified values, and to suggest them as command line completions.
+            </summary>
+            <param name="argument">The argument to configure.</param>
+            <param name="values">The values that are allowed for the argument.</param>
+        </member>
+        <member name="T:System.CommandLine.Argument`1">
+            <inheritdoc cref="T:System.CommandLine.Argument" />
+        </member>
+        <member name="M:System.CommandLine.Argument`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Argument class.
+            </summary>
+            <param name="name">The name of the argument. This can be used to look up the parsed value and is displayed in help</param>
+        </member>
+        <member name="P:System.CommandLine.Argument`1.DefaultValueFactory">
+            <summary>
+            The delegate to invoke to create the default value.
+            </summary>
+            <remarks>
+            It's invoked when there was no parse input provided for given Argument.
+            The same instance can be set as <see cref="P:System.CommandLine.Argument`1.CustomParser"/>, in such case
+            the delegate is also invoked when an input was provided.
+            </remarks>
+        </member>
+        <member name="P:System.CommandLine.Argument`1.CustomParser">
+            <summary>
+            A custom argument parser.
+            </summary>
+            <remarks>
+            It's invoked when there was parse input provided for given Argument.
+            The same instance can be set as <see cref="P:System.CommandLine.Argument`1.DefaultValueFactory"/>, in such case
+            the delegate is also invoked when no input was provided.
+            </remarks>
+        </member>
+        <member name="P:System.CommandLine.Argument`1.ValueType">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.Argument`1.HasDefaultValue">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.ChildSymbolList`1">
+            <summary>
+            a wrapper of List<typeparamref name="T"/> that sets parent for every added element
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Command">
+            <summary>
+            Represents a specific action that the application performs.
+            </summary>
+            <remarks>
+            Use the Command object for actions that correspond to a specific string (the command name). See
+            <see cref="T:System.CommandLine.RootCommand"/> for simple applications that only have one action. For example, <c>dotnet run</c>
+            uses <c>run</c> as the command.
+            </remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Command class.
+            </summary>
+            <param name="name">The name of the command.</param>
+            <param name="description">The description of the command, shown in help.</param>
+        </member>
+        <member name="P:System.CommandLine.Command.Children">
+            <summary>
+            Gets the child symbols.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Command.Arguments">
+            <summary>
+            Represents all of the arguments for the command.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Command.Options">
+            <summary>
+            Represents all of the options for the command, inherited options that have been applied to any of the command's ancestors.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Command.Subcommands">
+            <summary>
+            Represents all of the subcommands for the command.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Command.Validators">
+            <summary>
+            Validators to the command. Validators can be used
+            to create custom validation logic.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Command.Aliases">
+            <summary>
+            Gets the unique set of strings that can be used on the command line to specify the command.
+            </summary>
+            <remarks>The collection does not contain the <see cref="P:System.CommandLine.Symbol.Name"/> of the Command.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Command.Action">
+            <summary>
+            Gets or sets the <see cref="T:System.CommandLine.Invocation.CommandLineAction"/> for the Command. The handler represents the action
+            that will be performed when the Command is invoked.
+            </summary>
+            <remarks>
+            <para>Use one of the <see cref="M:System.CommandLine.Command.SetAction(System.Action{System.CommandLine.ParseResult})" /> overloads to construct a handler.</para>
+            <para>If the handler is not specified, parser errors will be generated for command line input that
+            invokes this Command.</para></remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Action{System.CommandLine.ParseResult})">
+            <summary>
+            Sets a synchronous action to be run when the command is invoked.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Int32})">
+            <summary>
+            Sets a synchronous action to be run when the command is invoked.
+            </summary>
+            <remarks>The value returned from the <paramref name="action"/> delegate can be used to set the process exit code.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+            <summary>
+            Sets an asynchronous action to be run when the command is invoked.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.Tasks.Task})">
+            <summary>
+            Sets an asynchronous action to be run when the command is invoked.
+            </summary>
+            <remarks>
+            When possible, prefer using the <see cref="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task})"/> overload
+            and passing the <see cref="T:System.Threading.CancellationToken"/> parameter to the async method(s) called by the action.
+            </remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.Tasks.Task{System.Int32}})">
+            <summary>
+            Sets an asynchronous action to be run when the command is invoked.
+            </summary>
+            <remarks>
+            When possible, prefer using the <see cref="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Int32}})"/> overload
+            and passing the <see cref="T:System.Threading.CancellationToken"/> parameter to the async method(s) called by the action.
+            </remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Int32}})">
+            <summary>
+            Sets an asynchronous action when the command is invoked.
+            </summary>
+            <remarks>The value returned from the <paramref name="action"/> delegate can be used to set the process exit code.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Command.Add(System.CommandLine.Argument)">
+            <summary>
+            Adds a <see cref="T:System.CommandLine.Argument"/> to the command.
+            </summary>
+            <param name="argument">The option to add to the command.</param>
+        </member>
+        <member name="M:System.CommandLine.Command.Add(System.CommandLine.Option)">
+            <summary>
+            Adds a <see cref="T:System.CommandLine.Option"/> to the command.
+            </summary>
+            <param name="option">The option to add to the command.</param>
+        </member>
+        <member name="M:System.CommandLine.Command.Add(System.CommandLine.Command)">
+            <summary>
+            Adds a <see cref="T:System.CommandLine.Command"/> to the command.
+            </summary>
+            <param name="command">The Command to add to the command.</param>
+        </member>
+        <member name="P:System.CommandLine.Command.TreatUnmatchedTokensAsErrors">
+            <summary>
+            Gets or sets a value that indicates whether unmatched tokens should be treated as errors. For example,
+            if set to <see langword="true"/> and an extra command or argument is provided, validation will fail.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Command.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Command.Parse(System.Collections.Generic.IReadOnlyList{System.String},System.CommandLine.ParserConfiguration)">
+            <summary>
+            Parses an array strings using the command.
+            </summary>
+            <param name="args">The string arguments to parse.</param>
+            <param name="configuration">The configuration on which the parser's grammar and behaviors are based.</param>
+            <returns>A parse result describing the outcome of the parse operation.</returns>
+        </member>
+        <member name="M:System.CommandLine.Command.Parse(System.String,System.CommandLine.ParserConfiguration)">
+            <summary>
+            Parses a command line string value using the command.
+            </summary>
+            <remarks>The command line string input will be split into tokens as if it had been passed on the command line.</remarks>
+            <param name="commandLine">A command line string to parse, which can include spaces and quotes equivalent to what can be entered into a terminal.</param>
+            <param name="configuration">The configuration on which the parser's grammar and behaviors are based.</param>
+            <returns>A parse result describing the outcome of the parse operation.</returns>
+        </member>
+        <member name="M:System.CommandLine.Command.GetCompletions(System.CommandLine.Completions.CompletionContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.CompletionSourceExtensions">
+            <summary>
+            Provides extension methods for working with completion sources.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.CompletionSourceExtensions.Add(System.Collections.Generic.List{System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.CommandLine.Completions.CompletionItem}}},System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.String}})">
+            <summary>
+            Adds a completion source using a delegate.
+            </summary>
+            <param name="completionSources">The list of completion sources to add to.</param>
+            <param name="completionsDelegate">The delegate to be called when calculating completions.</param>
+        </member>
+        <member name="M:System.CommandLine.CompletionSourceExtensions.Add(System.Collections.Generic.List{System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.CommandLine.Completions.CompletionItem}}},System.String[])">
+            <summary>
+            Adds a completion source using a delegate.
+            </summary>
+            <param name="completionSources">The list of completion sources to add to.</param>
+            <param name="completions">A list of strings to be suggested for command line completions.</param>
+        </member>
+        <member name="T:System.CommandLine.Completions.CompletionAction">
+            <summary>
+            Implements the action for the <c>[suggest]</c> directive, which when specified on the command line will short circuit normal command handling and display a diagram explaining the parse result for the command line input.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionAction.Invoke(System.CommandLine.ParseResult)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Completions.CompletionContext">
+            <summary>
+            Supports command line completion operations.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionContext.WordToComplete">
+            The text of the word to be completed, if any.
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionContext.ParseResult">
+            The parse result for which completions are being requested.
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionContext.Empty">
+            <summary>
+            Gets an empty CompletionContext.
+            </summary>
+            <remarks>Can be used for testing purposes.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionContext.GetWordToComplete(System.CommandLine.ParseResult,System.Nullable{System.Int32})">
+            <summary>
+            Gets the text to be matched for completion, which can be used to filter a list of completions.
+            </summary>
+            <param name="parseResult">A parse result.</param>
+            <param name="position">The position within the raw input, if available, at which to provide completions.</param>
+            <returns>A string containing the user-entered text to be matched for completions.</returns>
+        </member>
+        <member name="T:System.CommandLine.Completions.CompletionItem">
+            <summary>
+            Provides details about a command line completion item.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionItem.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <param name="label">The label value, which is the text displayed to users and, unless <paramref name="insertText"/> is set, is also used to populate the <see cref="P:System.CommandLine.Completions.CompletionItem.InsertText"/> property.</param>
+            <param name="kind">The kind of completion item.</param>
+            <param name="sortText">The value used to sort the completion item in a list. If this is not provided, then <paramref name="label"/>  is used.</param>
+            <param name="insertText">The text to be inserted by this completion item. If this is not provided, then <paramref name="label"/>  is used.</param>
+            <param name="documentation">Documentation about the completion item.</param>
+            <param name="detail">Additional details regarding the completion item.</param>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.Label">
+            <summary>
+            The label value, which is the text displayed to users.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.Kind">
+            <summary>
+            The kind of completion item.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.SortText">
+            <summary>
+            The value used to sort the completion item in a list.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.InsertText">
+            <summary>
+            The text to be inserted by this completion item.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.Documentation">
+            <summary>
+            Documentation about the completion item.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.CompletionItem.Detail">
+            <summary>
+            Additional details regarding the completion item.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionItem.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionItem.Equals(System.CommandLine.Completions.CompletionItem)">
+            <summary>
+            Determines whether two completion items are equal.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionItem.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Completions.CompletionItem.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Completions.SuggestDirective">
+            <summary>
+            Enables the use of the <c>[suggest]</c> directive which when specified in command line input short circuits normal command handling and writes a newline-delimited list of suggestions suitable for use by most shells to provide command line completions.
+            </summary>
+            <remarks>The <c>dotnet-suggest</c> tool requires the suggest directive to be enabled for an application to provide completions.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Completions.SuggestDirective.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.Completions.SuggestDirective.Action">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Completions.TextCompletionContext">
+            <summary>
+            Provides details for calculating completions in the context of complete, unsplit command line text.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.TextCompletionContext.CursorPosition">
+            <summary>
+            The position of the cursor within the command line. 
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Completions.TextCompletionContext.CommandLineText">
+            <summary>
+            The complete text of the command line prior to splitting, including any additional whitespace.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Completions.TextCompletionContext.AtCursorPosition(System.Int32)">
+            <summary>
+            Creates a new instance of <see cref="T:System.CommandLine.Completions.TextCompletionContext"/> at the specified cursor position.
+            </summary>
+            <param name="position">The cursor position at which completions are calculated.</param>
+        </member>
+        <member name="T:System.CommandLine.Directive">
+            <summary>
+            The purpose of directives is to provide cross-cutting functionality that can apply across command-line apps.
+            Because directives are syntactically distinct from the app's own syntax, they can provide functionality that applies across apps.
+            
+            A directive must conform to the following syntax rules:
+            * It's a token on the command line that comes after the app's name but before any subcommands or options.
+            * It's enclosed in square brackets.
+            * It doesn't contain spaces.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Directive.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Directive class.
+            </summary>
+            <param name="name">The name of the directive. It can't contain whitespaces.</param>
+        </member>
+        <member name="P:System.CommandLine.Directive.Action">
+            <summary>
+            Gets or sets the <see cref="T:System.CommandLine.Invocation.CommandLineAction"/> for the Directive. The handler represents the action
+            that will be performed when the Directive is invoked.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Directive.GetCompletions(System.CommandLine.Completions.CompletionContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.EnumerableExtensions">
+            <summary>
+            Provides a set of <see langword="static"/> methods for querying objects that implement <see cref="T:System.Collections.IEnumerable"/>.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.EnvironmentVariablesDirective">
+            <summary>
+            Enables the use of the <c>[env:key=value]</c> directive, allowing environment variables to be set from the command line during invocation.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.EnvironmentVariablesDirective.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.EnvironmentVariablesDirective.Action">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Help.HelpAction">
+            <summary>
+            Provides command line help.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpAction.MaxWidth">
+            <summary>
+            The maximum width in characters after which help output is wrapped.
+            </summary>
+            <remarks>It defaults to <see cref="P:System.Console.WindowWidth"/>.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpAction.Builder">
+            <summary>
+            Specifies an <see cref="P:System.CommandLine.Help.HelpAction.Builder"/> to be used to format help output when help is requested.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpAction.Invoke(System.CommandLine.ParseResult)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Help.HelpBuilder">
+            <summary>
+            Formats output to be shown to users to describe how to use a command line tool.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.#ctor(System.Int32)">
+            <param name="maxWidth">The maximum width in characters after which help output is wrapped.</param>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpBuilder.MaxWidth">
+            <summary>
+            The maximum width for which to format help output.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Write(System.CommandLine.Help.HelpContext)">
+            <summary>
+            Writes help output for the specified command.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.CustomizeSymbol(System.CommandLine.Symbol,System.Func{System.CommandLine.Help.HelpContext,System.String},System.Func{System.CommandLine.Help.HelpContext,System.String},System.Func{System.CommandLine.Help.HelpContext,System.String})">
+            <summary>
+            Specifies custom help details for a specific symbol.
+            </summary>
+            <param name="symbol">The symbol to specify custom help details for.</param>
+            <param name="firstColumnText">A delegate to display the first help column (typically name and usage information).</param>
+            <param name="secondColumnText">A delegate to display second help column (typically the description).</param>
+            <param name="defaultValue">A delegate to display the default value for the symbol.</param>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.CustomizeLayout(System.Func{System.CommandLine.Help.HelpContext,System.Collections.Generic.IEnumerable{System.Func{System.CommandLine.Help.HelpContext,System.Boolean}}})">
+            <summary>
+            Customizes the help sections that will be displayed.
+            </summary>
+            <param name="getLayout">
+            A delegate that returns the sections in the order in which they should be written.<br/>
+            The section delegate should return false if the section is empty, true otherwise.
+            </param>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.CustomizeSymbol(System.CommandLine.Symbol,System.String,System.String,System.String)">
+            <summary>
+            Specifies custom help details for a specific symbol.
+            </summary>
+            <param name="symbol">The symbol to customize the help details for.</param>
+            <param name="firstColumnText">A delegate to display the first help column (typically name and usage information).</param>
+            <param name="secondColumnText">A delegate to display second help column (typically the description).</param>
+            <param name="defaultValue">The displayed default value for the symbol.</param>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Write(System.CommandLine.Command,System.IO.TextWriter)">
+            <summary>
+            Writes help output for the specified command.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.WriteColumns(System.Collections.Generic.IReadOnlyList{System.CommandLine.Help.TwoColumnHelpRow},System.CommandLine.Help.HelpContext)">
+            <summary>
+            Writes the specified help rows, aligning output in columns.
+            </summary>
+            <param name="items">The help items to write out in columns.</param>
+            <param name="context">The help context.</param>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.GetTwoColumnRow(System.CommandLine.Symbol,System.CommandLine.Help.HelpContext)">
+            <summary>
+            Gets a help item for the specified symbol.
+            </summary>
+            <param name="symbol">The symbol to get a help item for.</param>
+            <param name="context">The help context.</param>
+        </member>
+        <member name="T:System.CommandLine.Help.HelpBuilder.Default">
+            <summary>
+            Provides default formatting for help output.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentDefaultValue(System.CommandLine.Symbol)">
+            <summary>
+            Gets an argument's default value to be displayed in help.
+            </summary>
+            <param name="symbol">The argument or option to get the default value for.</param>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentDescription(System.CommandLine.Argument)">
+            <summary>
+            Gets the description for an argument (typically used in the second column text in the arguments section).
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentUsageLabel(System.CommandLine.Symbol)">
+            <summary>
+            Gets the usage title for an argument (for example: <c>&lt;value&gt;</c>, typically used in the first column text in the arguments usage section, or within the synopsis.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetCommandUsageLabel(System.CommandLine.Command)">
+            <summary>
+            Gets the usage label for the specified symbol (typically used as the first column text in help output).
+            </summary>
+            <param name="symbol">The symbol to get a help item for.</param>
+            <returns>Text to display.</returns>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetOptionUsageLabel(System.CommandLine.Option)">
+            <inheritdoc cref="M:System.CommandLine.Help.HelpBuilder.Default.GetCommandUsageLabel(System.CommandLine.Command)"/>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.GetLayout">
+            <summary>
+            Gets the default sections to be written for command line help.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.SynopsisSection">
+            <summary>
+            Writes a help section describing a command's synopsis.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.CommandUsageSection">
+            <summary>
+            Writes a help section describing a command's usage.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.CommandArgumentsSection">
+             <summary>
+            Writes a help section describing a command's arguments.
+             </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.SubcommandsSection">
+             <summary>
+            Writes a help section describing a command's subcommands.
+             </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.OptionsSection">
+             <summary>
+            Writes a help section describing a command's options.
+             </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpBuilder.Default.AdditionalArgumentsSection">
+             <summary>
+            Writes a help section describing a command's additional arguments, typically shown only when <see cref="P:System.CommandLine.Command.TreatUnmatchedTokensAsErrors"/> is set to <see langword="true"/>.
+             </summary>
+        </member>
+        <member name="T:System.CommandLine.Help.HelpContext">
+            <summary>
+            Supports formatting command line help.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpContext.#ctor(System.CommandLine.Help.HelpBuilder,System.CommandLine.Command,System.IO.TextWriter)">
+            <param name="helpBuilder">The current help builder.</param>
+            <param name="command">The command for which help is being formatted.</param>
+            <param name="output">A text writer to write output to.</param>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpContext.HelpBuilder">
+            <summary>
+            The help builder for the current operation.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpContext.Command">
+            <summary>
+            The command for which help is being formatted.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpContext.Output">
+            <summary>
+            A text writer to write output to.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Help.HelpOption">
+            <summary>
+            A standard option that indicates that command line help should be displayed.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpOption.#ctor">
+            <summary>
+            When added to a <see cref="T:System.CommandLine.Command"/>, it configures the application to show help when one of the following options are specified on the command line:
+            <code>
+               -h
+               /h
+               --help
+               -?
+               /?
+            </code>
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.HelpOption.#ctor(System.String,System.String[])">
+            <summary>
+            When added to a <see cref="T:System.CommandLine.Command"/>, it configures the application to show help when given name or one of the aliases are specified on the command line.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Help.HelpOption.Action">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Help.TwoColumnHelpRow">
+            <summary>
+            Provides details about an item to be formatted to output in order to display two-column command line help.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.TwoColumnHelpRow.#ctor(System.String,System.String)">
+            <param name="firstColumnText">The name and invocation details, typically displayed in the first help column.</param>
+            <param name="secondColumnText">The description of a symbol, typically displayed in the second help column.</param>
+        </member>
+        <member name="P:System.CommandLine.Help.TwoColumnHelpRow.FirstColumnText">
+            <summary>
+            The first column for a help entry, typically containing the name and other usage details about an option or argument.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Help.TwoColumnHelpRow.SecondColumnText">
+            <summary>
+            The second column for a help entry, typically containing the name and other usage details about an option or argument.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Help.TwoColumnHelpRow.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Help.TwoColumnHelpRow.Equals(System.CommandLine.Help.TwoColumnHelpRow)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Help.TwoColumnHelpRow.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.InvocationConfiguration.EnableDefaultExceptionHandler">
+            <summary>
+            Enables a default exception handler to catch any unhandled exceptions thrown during invocation. Enabled by default.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.InvocationConfiguration.ProcessTerminationTimeout">
+            <summary>
+            Enables signaling and handling of process termination (Ctrl+C, SIGINT, SIGTERM) via a <see cref="T:System.Threading.CancellationToken"/> 
+            that can be passed to a <see cref="T:System.CommandLine.Invocation.CommandLineAction"/> during invocation.
+            If not provided, a default timeout of 2 seconds is enforced.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.InvocationConfiguration.Output">
+            <summary>
+            The standard output. Used by Help and other facilities that write non-error information.
+            By default it's set to <see cref="P:System.Console.Out"/>.
+            For testing purposes, it can be set to a new instance of <see cref="T:System.IO.StringWriter"/>.
+            If you want to disable the output, please set it to <see cref="F:System.IO.TextWriter.Null"/>.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.InvocationConfiguration.Error">
+            <summary>
+            The standard error. Used for printing error information like parse errors.
+            By default it's set to <see cref="P:System.Console.Error"/>.
+            For testing purposes, it can be set to a new instance of <see cref="T:System.IO.StringWriter"/>.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Invocation.AnonymousAsynchronousCommandLineAction.InvokeAsync(System.CommandLine.ParseResult,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Invocation.AnonymousSynchronousCommandLineAction.Invoke(System.CommandLine.ParseResult)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Invocation.AsynchronousCommandLineAction">
+            Defines an asynchronous behavior associated with a command line symbol.
+        </member>
+        <member name="M:System.CommandLine.Invocation.AsynchronousCommandLineAction.InvokeAsync(System.CommandLine.ParseResult,System.Threading.CancellationToken)">
+            <summary>
+            Performs an action when the associated symbol is invoked on the command line.
+            </summary>
+            <param name="parseResult">Provides the parse results.</param>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+            <returns>A value that can be used as the exit code for the process.</returns>
+        </member>
+        <member name="T:System.CommandLine.Invocation.CommandLineAction">
+            <summary>
+            Defines a behavior associated with a command line symbol.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Invocation.CommandLineAction.Terminating">
+            <summary>
+            Indicates that the action terminates a command line invocation, and later actions are skipped.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Invocation.CommandLineAction.ClearsParseErrors">
+            <summary>
+            Indicates that the action clears any parse errors associated with symbols other than one that owns the <see cref="T:System.CommandLine.Invocation.CommandLineAction"/>.
+            </summary>
+            <remarks>This property is ignored when <see cref="P:System.CommandLine.Invocation.CommandLineAction.Terminating"/> is set to <see langword="false"/>.</remarks>
+        </member>
+        <member name="T:System.CommandLine.Invocation.ParseErrorAction">
+            <summary>
+            Provides command line output with error details in the case of a parsing error.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Invocation.ParseErrorAction.ShowHelp">
+            <summary>
+            Indicates whether to show help along with error details when an error is found during parsing.
+            </summary>
+            <remarks>When set to <see langword="true" />, indicates that help will be shown along with parse error details. When set to false, help will not be shown.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Invocation.ParseErrorAction.ShowTypoCorrections">
+            <summary>
+            Indicates whether to show typo suggestions along with error details when an error is found during parsing.
+            </summary>
+            <remarks>When set to <see langword="true" />, indicates that suggestions will be shown along with parse error details. When set to false, suggestions will not be shown.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Invocation.ParseErrorAction.Invoke(System.CommandLine.ParseResult)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Invocation.SynchronousCommandLineAction">
+            <summary>
+            Defines a synchronous behavior associated with a command line symbol.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Invocation.SynchronousCommandLineAction.Invoke(System.CommandLine.ParseResult)">
+            <summary>
+            Performs an action when the associated symbol is invoked on the command line.
+            </summary>
+            <param name="parseResult">Provides the parse results.</param>
+            <returns>A value that can be used as the exit code for the process.</returns>
+        </member>
+        <member name="T:System.CommandLine.LocalizationResources">
+            <summary>
+            Provides localizable strings for help and error messages.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ExpectsOneArgument(System.CommandLine.Parsing.OptionResult)">
+            <summary>
+              Interpolates values into a localized string similar to Command &apos;{0}&apos; expects a single argument but {1} were provided.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.DirectoryDoesNotExist(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to Directory does not exist: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.FileDoesNotExist(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to File does not exist: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.FileOrDirectoryDoesNotExist(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to File or directory does not exist: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.InvalidCharactersInPath(System.Char)">
+            <summary>
+              Interpolates values into a localized string similar to Character not allowed in a path: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.InvalidCharactersInFileName(System.Char)">
+            <summary>
+              Interpolates values into a localized string similar to Character not allowed in a file name: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.RequiredArgumentMissing(System.CommandLine.Parsing.ArgumentResult)">
+            <summary>
+              Interpolates values into a localized string similar to Required argument missing for command: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.RequiredArgumentMissing(System.CommandLine.Parsing.OptionResult)">
+            <summary>
+              Interpolates values into a localized string similar to Required argument missing for option: {0}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.RequiredCommandWasNotProvided">
+            <summary>
+              Interpolates values into a localized string similar to Required command was not provided.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.RequiredOptionWasNotProvided(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to Option '{0}' is required.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.UnrecognizedArgument(System.String,System.Collections.Generic.IReadOnlyCollection{System.String})">
+            <summary>
+              Interpolates values into a localized string similar to Argument &apos;{0}&apos; not recognized. Must be one of:{1}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.UnrecognizedCommandOrArgument(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to Unrecognized command or argument &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ResponseFileNotFound(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to Response file not found &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ErrorReadingResponseFile(System.String,System.IO.IOException)">
+            <summary>
+              Interpolates values into a localized string similar to Error reading response file &apos;{0}&apos;: {1}.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpOptionDescription">
+            <summary>
+              Interpolates values into a localized string similar to Show help and usage information.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpUsageTitle">
+            <summary>
+              Interpolates values into a localized string similar to Usage:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpDescriptionTitle">
+            <summary>
+              Interpolates values into a localized string similar to Description:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpUsageOptions">
+            <summary>
+              Interpolates values into a localized string similar to [options].
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpUsageCommand">
+            <summary>
+              Interpolates values into a localized string similar to [command].
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpUsageAdditionalArguments">
+            <summary>
+              Interpolates values into a localized string similar to [[--] &lt;additional arguments&gt;...]].
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpArgumentsTitle">
+            <summary>
+              Interpolates values into a localized string similar to Arguments:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpOptionsTitle">
+            <summary>
+              Interpolates values into a localized string similar to Options:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpOptionsRequiredLabel">
+            <summary>
+              Interpolates values into a localized string similar to (REQUIRED).
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpArgumentDefaultValueLabel">
+            <summary>
+              Interpolates values into a localized string similar to default.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpCommandsTitle">
+            <summary>
+              Interpolates values into a localized string similar to Commands:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpAdditionalArgumentsTitle">
+            <summary>
+              Interpolates values into a localized string similar to Additional Arguments:.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.HelpAdditionalArgumentsDescription">
+            <summary>
+              Interpolates values into a localized string similar to Arguments passed to the application that is being run..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.SuggestionsTokenNotMatched(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to &apos;{0}&apos; was not matched. Did you mean one of the following?.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.VersionOptionDescription">
+            <summary>
+              Interpolates values into a localized string similar to Show version information.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.VersionOptionCannotBeCombinedWithOtherArguments(System.String)">
+            <summary>
+              Interpolates values into a localized string similar to {0} option cannot be combined with other arguments..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ExceptionHandlerHeader">
+            <summary>
+              Interpolates values into a localized string similar to Unhandled exception: .
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParse(System.String,System.Type)">
+            <summary>
+              Interpolates values into a localized string similar to Cannot parse argument &apos;{0}&apos; as expected type {1}..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForCommand(System.String,System.String,System.Type)">
+            <summary>
+              Interpolates values into a localized string similar to Cannot parse argument &apos;{0}&apos; for command &apos;{1}&apos; as expected type {2}..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForCommand(System.String,System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+              Interpolates values into a localized string similar to Cannot parse argument &apos;{0}&apos; for command &apos;{1}&apos; as expected type {2}..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForOption(System.String,System.String,System.Type)">
+            <summary>
+              Interpolates values into a localized string similar to Cannot parse argument &apos;{0}&apos; for option &apos;{1}&apos; as expected type {2}..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForOption(System.String,System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+              Interpolates values into a localized string similar to Cannot parse argument &apos;{0}&apos; for option &apos;{1}&apos; as expected type {2}..
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.LocalizationResources.GetResourceString(System.String,System.Object[])">
+            <summary>
+            Interpolates values into a localized string.
+            </summary>
+            <param name="resourceString">The string template into which values will be interpolated.</param>
+            <param name="formatArguments">The values to interpolate.</param>
+            <returns>The final string after interpolation.</returns>
+        </member>
+        <member name="T:System.CommandLine.Option">
+            <summary>
+            A symbol defining a named parameter and a value for that parameter. 
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Option.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.CommandLine.Option"/> class.
+            </summary>
+            <param name="name">The name of the option. This is used during parsing and is displayed in help.</param>
+            <param name="aliases">Optional aliases by which the option can be specified on the command line.</param>
+        </member>
+        <member name="P:System.CommandLine.Option.Argument">
+            <summary>
+            Gets the <see cref="P:System.CommandLine.Option.Argument">argument</see> for the option.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.HasDefaultValue">
+            <summary>
+            Specifies if a default value is defined for the option.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.HelpName">
+            <summary>
+            Gets or sets the name of the Option when displayed in help.
+            </summary>
+            <value>
+            The name of the option when displayed in help.
+            </value>
+            <remarks>Useful for localization, as it's not used for actual parsing.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Option.Arity">
+            <summary>
+            Gets or sets the arity of the option.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.Recursive">
+            <summary>
+            When set to true, this option will be applied to its immediate parent command or commands and recursively to their subcommands.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.ValueType">
+            <summary>
+            Gets the <see cref="T:System.Type" /> that the option's parsed tokens will be converted to.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.Validators">
+            <summary>
+            Validators that will be called when the option is matched by the parser.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.CompletionSources">
+            <summary>
+            Gets the list of completion sources for the option.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Option.AllowMultipleArgumentsPerToken">
+            <summary>
+            Gets a value that indicates whether multiple argument tokens are allowed for each option identifier token.
+            </summary>
+            <example>
+            If set to <see langword="true"/>, the following command line is valid for passing multiple arguments:
+            <code>
+            > --opt 1 2 3
+            </code>
+            The following is equivalent and is always valid:
+            <code>
+            > --opt 1 --opt 2 --opt 3
+            </code>
+            </example>
+        </member>
+        <member name="P:System.CommandLine.Option.Required">
+            <summary>
+            Indicates whether the option is required when its parent command is invoked.
+            </summary>
+            <remarks>When an option is required and its parent command is invoked without it, an error results.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Option.Aliases">
+            <summary>
+            Gets the unique set of strings that can be used on the command line to specify the Option.
+            </summary>
+            <remarks>The collection does not contain the <see cref="P:System.CommandLine.Symbol.Name"/> of the Option.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Option.Action">
+            <summary>
+            Gets or sets the <see cref="T:System.CommandLine.Invocation.CommandLineAction"/> for the Option. The handler represents the action
+            that will be performed when the Option is invoked.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Option.GetCompletions(System.CommandLine.Completions.CompletionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Option.GetDefaultValue">
+            <summary>
+            Gets the default value for the option.
+            </summary>
+            <returns>Returns the default value for the option, if defined. Null otherwise.</returns>
+        </member>
+        <member name="T:System.CommandLine.OptionValidation">
+            <summary>
+            Provides extension methods for <see cref="T:System.CommandLine.Option" />.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.FileInfo})">
+            <summary>
+            Configures an option to accept only values corresponding to an existing file.
+            </summary>
+            <param name="option">The option to configure.</param>
+            <returns>The option being extended.</returns>
+        </member>
+        <member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.DirectoryInfo})">
+            <summary>
+            Configures an option to accept only values corresponding to an existing directory.
+            </summary>
+            <param name="option">The option to configure.</param>
+            <returns>The option being extended.</returns>
+        </member>
+        <member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.FileSystemInfo})">
+            <summary>
+            Configures an option to accept only values corresponding to an existing file or directory.
+            </summary>
+            <param name="option">The option to configure.</param>
+            <returns>The option being extended.</returns>
+        </member>
+        <member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly``1(System.CommandLine.Option{``0})">
+            <summary>
+            Configures an option to accept only values corresponding to a existing files or directories.
+            </summary>
+            <param name="option">The option to configure.</param>
+            <returns>The option being extended.</returns>
+        </member>
+        <member name="T:System.CommandLine.Option`1">
+            <inheritdoc cref="T:System.CommandLine.Option" />
+            <typeparam name="T">The <see cref="T:System.Type"/> that the option's arguments are expected to be parsed as.</typeparam>
+        </member>
+        <member name="M:System.CommandLine.Option`1.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.CommandLine.Option"/> class.
+            </summary>
+            <param name="name">The name of the option. This is used during parsing and is displayed in help.</param>
+            <param name="aliases">Optional aliases by which the option can be specified on the command line.</param>
+        </member>
+        <member name="P:System.CommandLine.Option`1.DefaultValueFactory">
+            <inheritdoc cref="P:System.CommandLine.Argument`1.DefaultValueFactory" />
+        </member>
+        <member name="P:System.CommandLine.Option`1.CustomParser">
+            <inheritdoc cref="P:System.CommandLine.Argument`1.CustomParser" />
+        </member>
+        <member name="P:System.CommandLine.Option`1.ValueType">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Option`1.AcceptOnlyFromAmong(System.String[])">
+            <summary>
+            Configures the option to accept only the specified values, and to suggest them as command line completions.
+            </summary>
+            <param name="values">The values that are allowed for the option.</param>
+        </member>
+        <member name="M:System.CommandLine.Option`1.AcceptLegalFilePathsOnly">
+            <summary>
+            Configures the option to accept only values representing legal file paths.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Option`1.AcceptLegalFileNamesOnly">
+            <summary>
+            Configures the option to accept only values representing legal file names.
+            </summary>
+            <remarks>A parse error will result, for example, if file path separators are found in the parsed value.</remarks>
+        </member>
+        <member name="T:System.CommandLine.DiagramDirective">
+            <summary>
+            Enables the use of the <c>[diagram]</c> directive, which when specified on the command line will short 
+            circuit normal command handling and display a diagram explaining the parse result for the command line input.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.DiagramDirective.#ctor">
+            <summary>
+            Writes a diagram of the parse result to the output.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.DiagramDirective.Action">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.DiagramDirective.ParseErrorReturnValue">
+            <summary>
+            Gets or sets the return value, which can be used as an exit code, when parsing encounters an error.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.ParserConfiguration">
+            <summary>
+            Represents the configuration used by the <see cref="T:System.CommandLine.Parsing.CommandLineParser"/>.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParserConfiguration.EnablePosixBundling">
+             <summary>
+             Enables the parser to recognize and expand POSIX-style bundled options.
+             </summary>
+             <param name="value"><see langword="true"/> to parse POSIX bundles; otherwise, <see langword="false"/>.</param>
+             <remarks>
+             POSIX conventions recommend that single-character options be allowed to be specified together after a single <c>-</c> prefix. When <see cref="P:System.CommandLine.ParserConfiguration.EnablePosixBundling"/> is set to <see langword="true"/>, the following command lines are equivalent:
+             
+             <code>
+                 &gt; myapp -a -b -c
+                 &gt; myapp -abc
+             </code>
+             
+             If an argument is provided after an option bundle, it applies to the last option in the bundle. When <see cref="P:System.CommandLine.ParserConfiguration.EnablePosixBundling"/> is set to <see langword="true"/>, all of the following command lines are equivalent:
+             <code>
+                 &gt; myapp -a -b -c arg
+                 &gt; myapp -abc arg
+                 &gt; myapp -abcarg
+             </code>
+            
+             </remarks>
+        </member>
+        <member name="P:System.CommandLine.ParserConfiguration.ResponseFileTokenReplacer">
+            <summary>
+            Response file token replacer, enabled by default.
+            To disable response files support, this property needs to be set to null.
+            </summary>
+            <remarks>
+            When enabled, any token prefixed with <code>@</code> can be replaced with zero or more other tokens. This is mostly commonly used to expand tokens from response files and interpolate them into a command line prior to parsing.
+            </remarks>
+        </member>
+        <member name="T:System.CommandLine.ParseResult">
+            <summary>
+            Describes the results of parsing a command line input based on a specific parser configuration.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.CommandResult">
+            <summary>
+            A result indicating the command specified in the command line input.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.Configuration">
+            <summary>
+            The configuration used to produce the parse result.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.InvocationConfiguration">
+            <summary>
+            The configuration used to specify command line runtime behavior.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.RootCommandResult">
+            <summary>
+            Gets the root command result.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.Errors">
+            <summary>
+            Gets the parse errors found while parsing command line input.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.Tokens">
+            <summary>
+            Gets the tokens identified while parsing command line input.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.CommandLineText">
+            <summary>
+            Holds the value of a complete command line input prior to splitting and tokenization, when provided.
+            </summary>
+            <remarks>This will not be set when the parser is called from <c>Program.Main</c>. It is primarily used when calculating suggestions via the <c>dotnet-suggest</c> tool.</remarks>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.UnmatchedTokens">
+            <summary>
+            Gets the list of tokens used on the command line that were not matched by the parser.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetCompletionContext">
+            <summary>
+            Gets the completion context for the parse result.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Argument{``0})">
+            <summary>
+            Gets the parsed or default value for the specified argument.
+            </summary>
+            <param name="argument">The argument for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Option{``0})">
+            <summary>
+            Gets the parsed or default value for the specified option.
+            </summary>
+            <param name="option">The option for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetValue``1(System.String)">
+            <summary>
+            Gets the parsed or default value for the specified symbol name, in the context of parsed command (not entire symbol tree).
+            </summary>
+            <param name="name">The name of the Symbol for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when parsing resulted in parse error(s).</exception>
+            <exception cref="T:System.ArgumentException">Thrown when there was no symbol defined for given name for the parsed command.</exception>
+            <exception cref="T:System.InvalidCastException">Thrown when parsed result can not be cast to <typeparamref name="T"/>.</exception>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Argument{``0})">
+            <summary>
+            Gets the parsed or default value for the specified required argument or throws.
+            </summary>
+            <param name="argument">The argument for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when required argument was not parsed or has no default value configured.</exception>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Option{``0})">
+            <summary>
+            Gets the parsed or default value for the specified required option or throws.
+            </summary>
+            <param name="option">The option for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when required option was not parsed or has no default value configured.</exception>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.String)">
+            <summary>
+            Gets the parsed or default value for the specified required symbol name, in the context of parsed command (not entire symbol tree).
+            </summary>
+            <param name="name">The name of the required Symbol for which to get a value.</param>
+            <returns>The parsed value or a configured default.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when parsing resulted in parse error(s) or required symbol was not parsed or has no default value configured.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when there was no symbol defined for given name for the parsed command.</exception>
+            <exception cref="T:System.InvalidCastException">Thrown when parsed result can not be cast to <typeparamref name="T"/>.</exception>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Argument)">
+            <summary>
+            Gets the result, if any, for the specified argument.
+            </summary>
+            <param name="argument">The argument for which to find a result.</param>
+            <returns>A result for the specified argument, or <see langword="null"/> if it was not provided and no default was configured.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Command)">
+            <summary>
+            Gets the result, if any, for the specified command.
+            </summary>
+            <param name="command">The command for which to find a result.</param>
+            <returns>A result for the specified command, or <see langword="null"/> if it was not provided.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Option)">
+            <summary>
+            Gets the result, if any, for the specified option.
+            </summary>
+            <param name="option">The option for which to find a result.</param>
+            <returns>A result for the specified option, or <see langword="null"/> if it was not provided and no default was configured.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Directive)">
+            <summary>
+            Gets the result, if any, for the specified directive.
+            </summary>
+            <param name="directive">The directive for which to find a result.</param>
+            <returns>A result for the specified directive, or <see langword="null"/> if it was not provided.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Symbol)">
+            <summary>
+            Gets the result, if any, for the specified symbol.
+            </summary>
+            <param name="symbol">The symbol for which to find a result.</param>
+            <returns>A result for the specified symbol, or <see langword="null"/> if it was not provided and no default was configured.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetResult(System.String)">
+            <summary>
+            Finds a result for a symbol having the specified name anywhere in the parse tree.
+            </summary>
+            <param name="name">The name of the symbol for which to find a result.</param>
+            <returns>An symbol result if the argument was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.GetCompletions(System.Nullable{System.Int32})">
+            <summary>
+            Gets completions based on a given parse result.
+            </summary>
+            <param name="position">The position at which completions are requested.</param>
+            <returns>A set of completions for completion.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.InvokeAsync(System.CommandLine.InvocationConfiguration,System.Threading.CancellationToken)">
+            <summary>
+            Invokes the appropriate command handler for a parsed command line input.
+            </summary>
+            <param name="configuration">The configuration used to define invocation behaviors.</param>
+            <param name="cancellationToken">A token that can be used to cancel an invocation.</param>
+            <returns>A task whose result can be used as a process exit code.</returns>
+        </member>
+        <member name="M:System.CommandLine.ParseResult.Invoke(System.CommandLine.InvocationConfiguration)">
+            <summary>
+            Invokes the appropriate command handler for a parsed command line input.
+            </summary>
+            <param name="configuration">The configuration used to define invocation behaviors.</param>
+            <returns>A value that can be used as a process exit code.</returns>
+        </member>
+        <member name="P:System.CommandLine.ParseResult.Action">
+            <summary>
+            Gets the <see cref="T:System.CommandLine.Invocation.CommandLineAction"/> for parsed result. The handler represents the action
+            that will be performed when the parse result is invoked.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Parsing.ArgumentResult">
+            <summary>
+            A result produced when parsing an <see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument"/>.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.ArgumentResult.Argument">
+            <summary>
+            The argument to which the result applies.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ArgumentResult.GetValueOrDefault``1">
+            <summary>
+            Gets the parsed value or the default value for <see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument"/>.
+            </summary>
+            <returns>The parsed value or the default value for <see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument"/></returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ArgumentResult.OnlyTake(System.Int32)">
+            <summary>
+            Specifies the maximum number of tokens to consume for the argument. Remaining tokens are passed on and can be consumed by later arguments, or will otherwise be added to <see cref="P:System.CommandLine.ParseResult.UnmatchedTokens"/>
+            </summary>
+            <param name="numberOfTokens">The number of tokens to take. The rest are passed on.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">numberOfTokens - Value must be at least 1.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if this method is called more than once.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown if this method is called by Option-owned ArgumentResult.</exception>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ArgumentResult.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ArgumentResult.AddError(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.CommandLine.Parsing.ArgumentResult.AppliesToPublicSymbolResult">
+            <summary>
+            Since Option.Argument is an internal implementation detail, this ArgumentResult applies to the OptionResult in public API if the parent is an OptionResult.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Parsing.CommandLineParser">
+            <summary>
+            Parses command line input.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.CommandLineParser.Parse(System.CommandLine.Command,System.Collections.Generic.IReadOnlyList{System.String},System.CommandLine.ParserConfiguration)">
+            <summary>
+            Parses a list of arguments.
+            </summary>
+            <param name="command">The command to use to parse the command line input.</param>
+            <param name="args">The string array typically passed to a program's <c>Main</c> method.</param>
+            <param name="configuration">The configuration on which the parser's grammar and behaviors are based.</param>
+            <returns>A <see cref="T:System.CommandLine.ParseResult"/> providing details about the parse operation.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.CommandLineParser.Parse(System.CommandLine.Command,System.String,System.CommandLine.ParserConfiguration)">
+            <summary>
+            Parses a command line string.
+            </summary>
+            <param name="command">The command to use to parse the command line input.</param>
+            <param name="commandLine">The complete command line input prior to splitting and tokenization. This input is not typically available when the parser is called from <c>Program.Main</c>. It is primarily used when calculating completions via the <c>dotnet-suggest</c> tool.</param>
+            <param name="configuration">The configuration on which the parser's grammar and behaviors are based.</param>
+            <remarks>The command line string input will be split into tokens as if it had been passed on the command line.</remarks>
+            <returns>A <see cref="T:System.CommandLine.ParseResult"/> providing details about the parse operation.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.CommandLineParser.SplitCommandLine(System.String)">
+            <summary>
+            Splits a string into a sequence of strings based on whitespace and quotation marks.
+            </summary>
+            <param name="commandLine">A command line input string.</param>
+            <returns>A sequence of strings.</returns>
+        </member>
+        <member name="T:System.CommandLine.Parsing.CommandResult">
+            <summary>
+            A result produced when parsing a <see cref="P:System.CommandLine.Parsing.CommandResult.Command" />.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.CommandResult.Command">
+            <summary>
+            The command to which the result applies.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.CommandResult.IdentifierToken">
+            <summary>
+            The token that was parsed to specify the command.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.CommandResult.Children">
+            <summary>
+            Child symbol results in the parse tree.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.CommandResult.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:System.CommandLine.Parsing.DirectiveResult">
+            <summary>
+            A result produced when parsing an <see cref="P:System.CommandLine.Parsing.DirectiveResult.Directive"/>.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.DirectiveResult.Values">
+            <summary>
+            Parsed values of [name:value] directive(s).
+            </summary>
+            <remarks>Can be empty for [name] directives.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Parsing.DirectiveResult.Directive">
+            <summary>
+            The directive to which the result applies.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.DirectiveResult.Token">
+            <summary>
+            The token that was parsed to specify the directive.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Parsing.OptionResult">
+            <summary>
+            A result produced when parsing an <see cref="P:System.CommandLine.Parsing.OptionResult.Option" />.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.OptionResult.Option">
+            <summary>
+            The option to which the result applies.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.OptionResult.Implicit">
+            <summary>
+            Indicates whether the result was created implicitly and not due to the option being specified on the command line.
+            </summary>
+            <remarks>Implicit results commonly result from options having a default value.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Parsing.OptionResult.IdentifierToken">
+            <summary>
+            The token that was parsed to specify the option.
+            </summary>
+            <remarks>An identifier token is a token that matches either the option's name or one of its aliases.</remarks>
+        </member>
+        <member name="P:System.CommandLine.Parsing.OptionResult.IdentifierTokenCount">
+            <summary>
+            The number of occurrences of an identifier token matching the option.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.OptionResult.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.OptionResult.GetValueOrDefault``1">
+            <summary>
+            Gets the parsed value or the default value for <see cref="P:System.CommandLine.Parsing.OptionResult.Option"/>.
+            </summary>
+            <returns>The parsed value or the default value for <see cref="P:System.CommandLine.Parsing.OptionResult.Option"/></returns>
+        </member>
+        <member name="T:System.CommandLine.Parsing.ParseDiagramAction">
+            <summary>
+            Implements the <c>[diagram]</c> directive action, which when specified on the command line will short circuit normal command handling and display a diagram explaining the parse result for the command line input.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ParseDiagramAction.Diagram(System.CommandLine.ParseResult)">
+            <summary>
+            Formats a string explaining a parse result.
+            </summary>
+            <param name="parseResult">The parse result to be diagrammed.</param>
+            <returns>A string containing a diagram of the parse result.</returns>
+        </member>
+        <member name="T:System.CommandLine.Parsing.ParseError">
+            <summary>
+            Describes an error that occurs while parsing command line input.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.ParseError.Message">
+            <summary>
+            A message to explain the error to a user.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.ParseError.SymbolResult">
+            <summary>
+            The symbol result detailing the symbol that failed to parse and the tokens involved.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.ParseError.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:System.CommandLine.Parsing.SymbolResult">
+            <summary>
+            A result produced during parsing for a specific symbol.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.SymbolResult.Errors">
+            <summary>
+            The parse errors associated with this symbol result.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.SymbolResult.Parent">
+            <summary>
+            The parent symbol result in the parse tree.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.SymbolResult.Tokens">
+            <summary>
+            The list of tokens associated with this symbol result during parsing.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.AddError(System.String)">
+            <summary>
+            Adds an error message for this symbol result to it's parse tree.
+            </summary>
+            <remarks>Setting an error will cause the parser to indicate an error for the user and prevent invocation of the command line.</remarks>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Argument)">
+            <summary>
+            Finds a result for the specific argument anywhere in the parse tree, including parent and child symbol results.
+            </summary>
+            <param name="argument">The argument for which to find a result.</param>
+            <returns>An argument result if the argument was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Command)">
+            <summary>
+            Finds a result for the specific command anywhere in the parse tree, including parent and child symbol results.
+            </summary>
+            <param name="command">The command for which to find a result.</param>
+            <returns>An command result if the command was matched by the parser; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Option)">
+            <summary>
+            Finds a result for the specific option anywhere in the parse tree, including parent and child symbol results.
+            </summary>
+            <param name="option">The option for which to find a result.</param>
+            <returns>An option result if the option was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Directive)">
+            <summary>
+            Finds a result for the specific directive anywhere in the parse tree.
+            </summary>
+            <param name="directive">The directive for which to find a result.</param>
+            <returns>A directive result if the directive was matched by the parser, <c>null</c> otherwise.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.String)">
+            <summary>
+            Finds a result for a symbol having the specified name anywhere in the parse tree.
+            </summary>
+            <param name="name">The name of the symbol for which to find a result.</param>
+            <returns>An argument result if the argument was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.CommandLine.Argument{``0})">
+            <inheritdoc cref="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Argument{``0})"/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.CommandLine.Option{``0})">
+            <inheritdoc cref="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Option{``0})"/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.CommandLine.Argument{``0})">
+            <inheritdoc cref="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Argument{``0})"/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.CommandLine.Option{``0})">
+            <inheritdoc cref="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Option{``0})"/>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.String)">
+            <summary>
+            Gets the value for a symbol having the specified name anywhere in the parse tree.
+            </summary>
+            <param name="name">The name of the symbol for which to find a result.</param>
+            <returns>An argument result if the argument was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.String)">
+            <summary>
+            Gets the value for a symbol having the specified name anywhere in the parse tree.
+            </summary>
+            <param name="name">The name of the symbol for which to find a result.</param>
+            <returns>An argument result if the argument was matched by the parser or has a default value; otherwise, <c>null</c>.</returns>
+        </member>
+        <member name="T:System.CommandLine.Parsing.Token">
+            <summary>
+            A unit of significant text on the command line.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.#ctor(System.String,System.CommandLine.Parsing.TokenType,System.CommandLine.Symbol)">
+            <param name="value">The string value of the token.</param>
+            <param name="type">The type of the token.</param>
+            <param name="symbol">The symbol represented by the token</param>
+        </member>
+        <member name="P:System.CommandLine.Parsing.Token.Value">
+            <summary>
+            The string value of the token.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.Token.Type">
+            <summary>
+            The type of the token.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Parsing.Token.Symbol">
+            <summary>
+            The Symbol represented by the token (if any).
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.Equals(System.CommandLine.Parsing.Token)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.op_Equality(System.CommandLine.Parsing.Token,System.CommandLine.Parsing.Token)">
+            <summary>
+            Checks if two specified <see cref="T:System.CommandLine.Parsing.Token"/> instances have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:System.CommandLine.Parsing.Token"/>.</param>
+            <param name="right">The second <see cref="T:System.CommandLine.Parsing.Token"/>.</param>
+            <returns><see langword="true" /> if the objects are equal.</returns>
+        </member>
+        <member name="M:System.CommandLine.Parsing.Token.op_Inequality(System.CommandLine.Parsing.Token,System.CommandLine.Parsing.Token)">
+            <summary>
+            Checks if two specified <see cref="T:System.CommandLine.Parsing.Token"/> instances have different values.
+            </summary>
+            <param name="left">The first <see cref="T:System.CommandLine.Parsing.Token"/>.</param>
+            <param name="right">The second <see cref="T:System.CommandLine.Parsing.Token"/>.</param>
+            <returns><see langword="true" /> if the objects are not equal.</returns>
+        </member>
+        <member name="T:System.CommandLine.Parsing.TokenType">
+            <summary>
+            Identifies the type of a <see cref="T:System.CommandLine.Parsing.Token"/>.
+            </summary>
+        </member>
+        <member name="F:System.CommandLine.Parsing.TokenType.Argument">
+            <summary>
+            An argument token.
+            </summary>
+            <see cref="T:System.CommandLine.Argument"/>
+        </member>
+        <member name="F:System.CommandLine.Parsing.TokenType.Command">
+            <summary>
+            A command token.
+            </summary>
+            <see cref="T:System.CommandLine.Command"/>
+        </member>
+        <member name="F:System.CommandLine.Parsing.TokenType.Option">
+            <summary>
+            An option token.
+            </summary>
+            <see cref="T:System.CommandLine.Option"/>
+        </member>
+        <member name="F:System.CommandLine.Parsing.TokenType.DoubleDash">
+            <summary>
+            A double dash (<c>--</c>) token, which changes the meaning of subsequent tokens.
+            </summary>
+        </member>
+        <member name="F:System.CommandLine.Parsing.TokenType.Directive">
+            <summary>
+            A directive token.
+            </summary>
+            <see cref="T:System.CommandLine.Directive"/>
+        </member>
+        <member name="T:System.CommandLine.Parsing.TryReplaceToken">
+            <summary>
+            Replaces a token with one or more other tokens prior to parsing.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParse">
+            <summary>
+              Looks up a localized string similar to Cannot parse argument &apos;{0}&apos; as expected type &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForCommand">
+            <summary>
+              Looks up a localized string similar to Cannot parse argument &apos;{0}&apos; for command &apos;{1}&apos; as expected type &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForCommand_Completions">
+            <summary>
+              Looks up a localized string similar to Cannot parse argument &apos;{0}&apos; for command &apos;{1}&apos; as expected type &apos;{2}&apos;. Did you mean one of the following?{3}.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForOption">
+            <summary>
+              Looks up a localized string similar to Cannot parse argument &apos;{0}&apos; for option &apos;{1}&apos; as expected type &apos;{2}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForOption_Completions">
+            <summary>
+              Looks up a localized string similar to Cannot parse argument &apos;{0}&apos; for option &apos;{1}&apos; as expected type &apos;{2}&apos;. Did you mean one of the following?{3}.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.CommandRequiredArgumentMissing">
+            <summary>
+              Looks up a localized string similar to Required argument missing for command: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.DirectoryDoesNotExist">
+            <summary>
+              Looks up a localized string similar to Directory does not exist: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ErrorReadingResponseFile">
+            <summary>
+              Looks up a localized string similar to Error reading response file &apos;{0}&apos;: {1}.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ExceptionHandlerHeader">
+            <summary>
+              Looks up a localized string similar to Unhandled exception: .
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.FileDoesNotExist">
+            <summary>
+              Looks up a localized string similar to File does not exist: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.FileOrDirectoryDoesNotExist">
+            <summary>
+              Looks up a localized string similar to File or directory does not exist: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpAdditionalArgumentsDescription">
+            <summary>
+              Looks up a localized string similar to Arguments passed to the application that is being run..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpAdditionalArgumentsTitle">
+            <summary>
+              Looks up a localized string similar to Additional Arguments:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpArgumentDefaultValueLabel">
+            <summary>
+              Looks up a localized string similar to default.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpArgumentsTitle">
+            <summary>
+              Looks up a localized string similar to Arguments:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpCommandsTitle">
+            <summary>
+              Looks up a localized string similar to Commands:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpDescriptionTitle">
+            <summary>
+              Looks up a localized string similar to Description:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpOptionDescription">
+            <summary>
+              Looks up a localized string similar to Show help and usage information.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpOptionsRequiredLabel">
+            <summary>
+              Looks up a localized string similar to (REQUIRED).
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpOptionsTitle">
+            <summary>
+              Looks up a localized string similar to Options:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpUsageAdditionalArguments">
+            <summary>
+              Looks up a localized string similar to [[--] &lt;additional arguments&gt;...]].
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpUsageCommand">
+            <summary>
+              Looks up a localized string similar to [command].
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpUsageOptions">
+            <summary>
+              Looks up a localized string similar to [options].
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.HelpUsageTitle">
+            <summary>
+              Looks up a localized string similar to Usage:.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.InvalidCharactersInFileName">
+            <summary>
+              Looks up a localized string similar to Character not allowed in a file name: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.InvalidCharactersInPath">
+            <summary>
+              Looks up a localized string similar to Character not allowed in a path: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.OptionExpectsOneArgument">
+            <summary>
+              Looks up a localized string similar to Option &apos;{0}&apos; expects a single argument but {1} were provided..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.OptionRequiredArgumentMissing">
+            <summary>
+              Looks up a localized string similar to Required argument missing for option: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.RequiredCommandWasNotProvided">
+            <summary>
+              Looks up a localized string similar to Required command was not provided..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.RequiredOptionWasNotProvided">
+            <summary>
+              Looks up a localized string similar to Option &apos;{0}&apos; is required..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.ResponseFileNotFound">
+            <summary>
+              Looks up a localized string similar to Response file not found &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.SuggestionsTokenNotMatched">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; was not matched. Did you mean one of the following?.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.UnrecognizedArgument">
+            <summary>
+              Looks up a localized string similar to Argument &apos;{0}&apos; not recognized. Must be one of:{1}.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.UnrecognizedCommandOrArgument">
+            <summary>
+              Looks up a localized string similar to Unrecognized command or argument &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.VersionOptionCannotBeCombinedWithOtherArguments">
+            <summary>
+              Looks up a localized string similar to {0} option cannot be combined with other arguments..
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Properties.Resources.VersionOptionDescription">
+            <summary>
+              Looks up a localized string similar to Show version information.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.RootCommand">
+            <summary>
+            Represents the main action that the application performs.
+            </summary>
+            <remarks>
+            Use the RootCommand object without any subcommands for applications that perform one action. Add subcommands 
+            to the root for applications that require actions identified by specific strings. For example, `dir` does not 
+            use any subcommands. See <see cref="T:System.CommandLine.Command"/> for applications with multiple actions.
+            </remarks>
+        </member>
+        <member name="M:System.CommandLine.RootCommand.#ctor(System.String)">
+            <param name="description">The description of the command, shown in help.</param>
+        </member>
+        <member name="P:System.CommandLine.RootCommand.Directives">
+            <summary>
+            Represents all of the directives that are valid under the root command.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.RootCommand.Add(System.CommandLine.Directive)">
+            <summary>
+            Adds a <see cref="T:System.CommandLine.Directive"/> to the command.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.RootCommand.ExecutableName">
+            <summary>
+            The name of the currently running executable.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.RootCommand.ExecutablePath">
+            <summary>
+            The path to the currently running executable.
+            </summary>
+        </member>
+        <member name="T:System.CommandLine.Symbol">
+            <summary>
+            Defines a named symbol that resides in a hierarchy with parent and child symbols.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Symbol.Description">
+            <summary>
+            Gets or sets the description of the symbol.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Symbol.Name">
+            <summary>
+            Gets the name of the symbol.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Symbol.FirstParent">
+            <summary>
+            Represents the first parent node.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Symbol.Hidden">
+            <summary>
+            Gets or sets a value indicating whether the symbol is hidden.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.Symbol.Parents">
+            <summary>
+            Gets the parent symbols.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Symbol.GetCompletions(System.CommandLine.Completions.CompletionContext)">
+            <summary>
+            Gets completions for the symbol.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.Symbol.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:System.CommandLine.VersionOption">
+            <summary>
+            A standard option that indicates that version information should be displayed for the app.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.VersionOption.#ctor">
+            <summary>
+            When added to a <see cref="T:System.CommandLine.Command"/>, it enables the use of a <c>--version</c> option, which when specified in command line input will short circuit normal command handling and instead write out version information before exiting.
+            </summary>
+        </member>
+        <member name="M:System.CommandLine.VersionOption.#ctor(System.String,System.String[])">
+            <summary>
+            When added to a <see cref="T:System.CommandLine.Command"/>, it enables the use of a provided option name and aliases, which when specified in command line input will short circuit normal command handling and instead write out version information before exiting.
+            </summary>
+        </member>
+        <member name="P:System.CommandLine.VersionOption.Action">
+            <inheritdoc />
+        </member>
+        <member name="P:System.CommandLine.VersionOption.ValueType">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute">
+             <summary>
+             Indicates that certain members on a specified <see cref="T:System.Type"/> are accessed dynamically,
+             for example through <see cref="N:System.Reflection"/>.
+             </summary>
+             <remarks>
+             This allows tools to understand which members are being accessed during the execution
+             of a program.
+            
+             This attribute is valid on members whose type is <see cref="T:System.Type"/> or <see cref="T:System.String"/>.
+            
+             When this attribute is applied to a location of type <see cref="T:System.String"/>, the assumption is
+             that the string represents a fully qualified type name.
+            
+             If the attribute is applied to a method it's treated as a special case and it implies
+             the attribute should be applied to the "this" parameter of the method. As such the attribute
+             should only be used on instance methods of types assignable to System.Type (or string, but no methods
+             will use it there).
+             </remarks>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"/> class
+            with the specified member types.
+            </summary>
+            <param name="memberTypes">The types of members dynamically accessed.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes">
+            <summary>
+            Gets the <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"/> which specifies the type
+            of members dynamically accessed.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes">
+             <summary>
+             Specifies the types of members that are dynamically accessed.
+            
+             This enumeration has a <see cref="T:System.FlagsAttribute"/> attribute that allows a
+             bitwise combination of its member values.
+             </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None">
+            <summary>
+            Specifies no members.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor">
+            <summary>
+            Specifies the default, parameterless public constructor.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors">
+            <summary>
+            Specifies all public constructors.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors">
+            <summary>
+            Specifies all non-public constructors.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods">
+            <summary>
+            Specifies all public methods.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods">
+            <summary>
+            Specifies all non-public methods.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields">
+            <summary>
+            Specifies all public fields.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields">
+            <summary>
+            Specifies all non-public fields.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes">
+            <summary>
+            Specifies all public nested types.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes">
+            <summary>
+            Specifies all non-public nested types.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties">
+            <summary>
+            Specifies all public properties.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties">
+            <summary>
+            Specifies all non-public properties.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents">
+            <summary>
+            Specifies all public events.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents">
+            <summary>
+            Specifies all non-public events.
+            </summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All">
+            <summary>
+            Specifies all members.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute">
+            <summary>
+            Suppresses reporting of a specific rule violation, allowing multiple suppressions on a
+            single code artifact.
+            </summary>
+            <remarks>
+            <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"/> is different than
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute"/> in that it doesn't have a
+            <see cref="T:System.Diagnostics.ConditionalAttribute"/>. So it is always preserved in the compiled assembly.
+            </remarks>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"/>
+            class, specifying the category of the tool and the identifier for an analysis rule.
+            </summary>
+            <param name="category">The category for the attribute.</param>
+            <param name="checkId">The identifier of the analysis rule the attribute applies to.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category">
+            <summary>
+            Gets the category identifying the classification of the attribute.
+            </summary>
+            <remarks>
+            The <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"/> property describes the tool or tool analysis category
+            for which a message suppression attribute applies.
+            </remarks>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId">
+            <summary>
+            Gets the identifier of the analysis tool rule to be suppressed.
+            </summary>
+            <remarks>
+            Concatenated together, the <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"/> and <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId"/>
+            properties form a unique check identifier.
+            </remarks>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope">
+            <summary>
+            Gets or sets the scope of the code that is relevant for the attribute.
+            </summary>
+            <remarks>
+            The Scope property is an optional argument that specifies the metadata scope for which
+            the attribute is relevant.
+            </remarks>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target">
+            <summary>
+            Gets or sets a fully qualified path that represents the target of the attribute.
+            </summary>
+            <remarks>
+            The <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target"/> property is an optional argument identifying the analysis target
+            of the attribute. An example value is "System.IO.Stream.ctor():System.Void".
+            Because it is fully qualified, it can be long, particularly for targets such as parameters.
+            The analysis tool user interface should be capable of automatically formatting the parameter.
+            </remarks>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId">
+            <summary>
+            Gets or sets an optional argument expanding on exclusion criteria.
+            </summary>
+            <remarks>
+            The <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId"/> property is an optional argument that specifies additional
+            exclusion where the literal metadata target is not sufficiently precise. For example,
+            the <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"/> cannot be applied within a method,
+            and it may be desirable to suppress a violation against a statement in the method that will
+            give a rule violation, but not against all statements in the method.
+            </remarks>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification">
+            <summary>
+            Gets or sets the justification for suppressing the code analysis message.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray``1(``0[],System.Range)">
+            <summary>
+            Slices the specified array using the specified range.
+            </summary>
+        </member>
+        <member name="T:System.Index">
+            <summary>Represent a type can be used to index a collection either from the start or the end.</summary>
+            <remarks>
+            Index is used by the C# compiler to support the new index syntax
+            <code>
+            int[] someArray = new int[5] { 1, 2, 3, 4, 5 } ;
+            int lastElement = someArray[^1]; // lastElement = 5
+            </code>
+            </remarks>
+        </member>
+        <member name="M:System.Index.#ctor(System.Int32,System.Boolean)">
+            <summary>Construct an Index using a value and indicating if the index is from the start or from the end.</summary>
+            <param name="value">The index value. it has to be zero or positive number.</param>
+            <param name="fromEnd">Indicating if the index is from the start or from the end.</param>
+            <remarks>
+            If the Index constructed from the end, index value 1 means pointing at the last element and index value 0 means pointing at beyond last element.
+            </remarks>
+        </member>
+        <member name="P:System.Index.Start">
+            <summary>Create an Index pointing at first element.</summary>
+        </member>
+        <member name="P:System.Index.End">
+            <summary>Create an Index pointing at beyond last element.</summary>
+        </member>
+        <member name="M:System.Index.FromStart(System.Int32)">
+            <summary>Create an Index from the start at the position indicated by the value.</summary>
+            <param name="value">The index value from the start.</param>
+        </member>
+        <member name="M:System.Index.FromEnd(System.Int32)">
+            <summary>Create an Index from the end at the position indicated by the value.</summary>
+            <param name="value">The index value from the end.</param>
+        </member>
+        <member name="P:System.Index.Value">
+            <summary>Returns the index value.</summary>
+        </member>
+        <member name="P:System.Index.IsFromEnd">
+            <summary>Indicates whether the index is from the start or the end.</summary>
+        </member>
+        <member name="M:System.Index.GetOffset(System.Int32)">
+            <summary>Calculate the offset from the start using the giving collection length.</summary>
+            <param name="length">The length of the collection that the Index will be used with. length has to be a positive value</param>
+            <remarks>
+            For performance reason, we don't validate the input length parameter and the returned offset value against negative values.
+            we don't validate either the returned offset is greater than the input length.
+            It is expected Index will be used with collections which always have non negative length/count. If the returned offset is negative and
+            then used to index a collection will get out of range exception which will be same affect as the validation.
+            </remarks>
+        </member>
+        <member name="M:System.Index.Equals(System.Object)">
+            <summary>Indicates whether the current Index object is equal to another object of the same type.</summary>
+            <param name="value">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Index.Equals(System.Index)">
+            <summary>Indicates whether the current Index object is equal to another Index object.</summary>
+            <param name="other">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Index.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+        </member>
+        <member name="M:System.Index.op_Implicit(System.Int32)~System.Index">
+            <summary>Converts integer number to an Index.</summary>
+        </member>
+        <member name="M:System.Index.ToString">
+            <summary>Converts the value of the current Index object to its equivalent string representation.</summary>
+        </member>
+        <member name="T:System.Range">
+            <summary>Represent a range has start and end indexes.</summary>
+            <remarks>
+            Range is used by the C# compiler to support the range syntax.
+            <code>
+            int[] someArray = new int[5] { 1, 2, 3, 4, 5 };
+            int[] subArray1 = someArray[0..2]; // { 1, 2 }
+            int[] subArray2 = someArray[1..^0]; // { 2, 3, 4, 5 }
+            </code>
+            </remarks>
+        </member>
+        <member name="P:System.Range.Start">
+            <summary>Represent the inclusive start index of the Range.</summary>
+        </member>
+        <member name="P:System.Range.End">
+            <summary>Represent the exclusive end index of the Range.</summary>
+        </member>
+        <member name="M:System.Range.#ctor(System.Index,System.Index)">
+            <summary>Construct a Range object using the start and end indexes.</summary>
+            <param name="start">Represent the inclusive start index of the range.</param>
+            <param name="end">Represent the exclusive end index of the range.</param>
+        </member>
+        <member name="M:System.Range.Equals(System.Object)">
+            <summary>Indicates whether the current Range object is equal to another object of the same type.</summary>
+            <param name="value">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Range.Equals(System.Range)">
+            <summary>Indicates whether the current Range object is equal to another Range object.</summary>
+            <param name="other">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Range.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+        </member>
+        <member name="M:System.Range.ToString">
+            <summary>Converts the value of the current Range object to its equivalent string representation.</summary>
+        </member>
+        <member name="M:System.Range.StartAt(System.Index)">
+            <summary>Create a Range object starting from start index to the end of the collection.</summary>
+        </member>
+        <member name="M:System.Range.EndAt(System.Index)">
+            <summary>Create a Range object starting from first element in the collection to the end Index.</summary>
+        </member>
+        <member name="P:System.Range.All">
+            <summary>Create a Range object starting from first element to the end.</summary>
+        </member>
+        <member name="M:System.Range.GetOffsetAndLength(System.Int32)">
+            <summary>Calculate the start offset and length of range object using a collection length.</summary>
+            <param name="length">The length of the collection that the range will be used with. length has to be a positive value.</param>
+            <remarks>
+            For performance reason, we don't validate the input length parameter against negative values.
+            It is expected Range will be used with collections which always have non negative length/count.
+            We validate the range is inside the length scope though.
+            </remarks>
+        </member>
+    </members>
+</doc>

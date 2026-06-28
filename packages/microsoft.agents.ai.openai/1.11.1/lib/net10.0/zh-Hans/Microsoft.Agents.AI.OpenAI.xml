@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Agents.AI.OpenAI</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+            定义用于抛出异常的静态方法。
+            </summary><remarks>
+            主要目的是减少代码大小，提高性能，并标准化异常消息。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />。
+            </summary><typeparam name="T">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的对象。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+    如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+    如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+  </summary><typeparam name="TParameter">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">要检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+    </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+        如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查 <see langword="null" /> 的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查 <see langword="null" /> 的对象成员。</param><param name="paramName">被检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfMemberNull(myObject, myObject.MyProperty)
+        </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+            如果指定的字符串为 <see langword="null" /> 或空白，则分别引发 <see cref="T:System.ArgumentNullException" /> 或 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为 <see langword="null" /> 或空白的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            如果字符串为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查 <see langword="null" /> 或空值的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>如果参数的缓冲区大小小于所需缓冲区大小，则抛出<see cref="T:System.ArgumentException" />。</summary><param name="bufferSize">实际缓冲区大小。</param><param name="requiredSize">所需缓冲区大小。</param><param name="paramName">要检查的参数名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+            如果枚举值无效，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要计算的参数。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">枚举的类型。</typeparam><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果该集合为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果该集合为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要评估的集合。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" /> 参数的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>引发一个 <see cref="T:System.ArgumentNullException" />。</summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致此异常的参数名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致此异常的参数的名称。</param><param name="actualValue">导致此异常的实参的值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+            抛出一个 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+            如果 <paramref name="innerException" /> 不为 <see langword="null" />，则在处理内部异常的 catch
+            块中引发当前异常。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            抛出<see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            抛出 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数值大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数值。</param><param name="max">必须大于参数的数值。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期待大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于0，则抛出一个 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于或等于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望小于或等于 min 的数字。</param><param name="min">必须小于或等于 argument 的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期要大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数值不在指定范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期该数值大于或等于最大值。</param><param name="min">允许参数值范围的下限。</param><param name="max">允许参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>如果指定的数字小于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">应小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+        如果指定的数字大于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望其小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要被检查是否大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数值小于或等于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">期望小于或等于 min 的数值。</param><param name="min">必须小于或等于 argument 的数值。</param><param name="paramName">正在检查的参数名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">期望大于或等于最大值的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+            如果指定数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+            如果指定数字大于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要预期的数字大于或等于最大值。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">被检查参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+        如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期不等于零的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+    此存储库报告的各种诊断ID。
+    </summary></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+             此存储库支持的实验。
+            </summary></member><member name="P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Status"><summary>
+            获取 HTTP 状态码。对于流式响应，通常为 200。
+            </summary></member><member name="P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.ReasonPhrase"><summary>
+            获取原因短语。对于流式响应，通常为 "OK"。
+            </summary></member><member name="P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.ContentStream"><summary>
+    流式响应不支持直接访问内容流。
+    </summary></member><member name="P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Content"><summary>
+    流式响应不支持直接内容访问。
+    </summary></member><member name="P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.HeadersCore"><summary>
+    流式响应没有标头。
+    </summary></member><member name="M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.BufferContent(System.Threading.CancellationToken)"><summary>
+    流式响应不支持缓冲内容。
+    </summary></member><member name="M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.BufferContentAsync(System.Threading.CancellationToken)"><summary>
+            流式响应不支持异步缓冲内容。
+            </summary></member><member name="M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Dispose"><summary>
+    释放资源。流式响应无需释放资源。
+    </summary></member><member name="T:Microsoft.Agents.AI.AgentResponseExtensions"><summary>
+        为 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 和 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例提供扩展方法，以便
+        从 Microsoft Agent Framework 响应中创建或提取原生的 OpenAI 响应对象。
+    </summary></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIChatCompletion(Microsoft.Agents.AI.AgentResponse)"><summary>
+    从 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 创建或提取本机 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 对象。
+    </summary><param name="response">代理响应。</param><returns>OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 对象。</returns><exception cref="T:System.ArgumentNullException"><paramref name="response" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIResponse(Microsoft.Agents.AI.AgentResponse)"><summary>
+            从 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 创建或提取原生 OpenAI <see cref="T:OpenAI.Responses.ResponseResult" /> 对象。
+            </summary><param name="response">代理响应。</param><returns>OpenAI <see cref="T:OpenAI.Responses.ResponseResult" /> 对象。</returns><exception cref="T:System.ArgumentNullException"><paramref name="response" /> 为 <see langword="null" />。</exception></member><member name="T:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions"><summary>
+    提供用于 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 的扩展方法，以简化与 OpenAI 聊天消息的交互，并返回原生 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 响应。
+    </summary><remarks>
+    这些扩展弥合了 Microsoft Extensions AI 框架与 OpenAI SDK 之间的差距，使开发人员能够利用 AI Agent 框架的同时使用原生 OpenAI 类型。这些方法处理 OpenAI 聊天消息类型与 Microsoft Extensions AI 类型之间的转换，并直接从 AI Agent 的 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 返回 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 对象。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+    使用 OpenAI 聊天消息集合运行 AI 代理，并将响应作为原生 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 返回。
+    </summary><param name="agent">要运行的 AI 代理。</param><param name="messages">要发送给代理的 OpenAI 聊天消息集合。</param><param name="session">要继续此调用的会话。如果未提供，则创建新会话。会话将根据提供的消息和代理响应进行更改。</param><param name="options">代理调用的可选参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task`1" />，表示返回原生 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 响应的异步操作。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="agent" /> 或 <paramref name="messages" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ArgumentException">当代理的响应无法转换为 <see cref="T:OpenAI.Chat.ChatCompletion" /> 时引发，通常当底层表示不是 OpenAI 响应时。</exception><exception cref="T:System.NotSupportedException">当 <paramref name="messages" /> 中的任何消息包含消息转换方法不支持的类型时引发。</exception><remarks>
+    此方法使用适当的转换方法将 OpenAI 聊天消息转换为 Microsoft Extensions AI 格式，使用转换后的消息集合运行代理，然后使用 <see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIChatCompletion(Microsoft.Agents.AI.AgentResponse)" /> 从响应中提取原生 OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" />。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Responses.ResponseItem},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用OpenAI响应项集合运行AI代理，并将响应作为原生OpenAI <see cref="T:OpenAI.Responses.ResponseResult" />返回。
+            </summary><param name="agent">要运行的AI代理。</param><param name="messages">要发送给代理的OpenAI响应项集合。</param><param name="session">要在本次调用中继续使用的对话会话。如果未提供，则创建一个新会话。会话将使用提供的消息和代理响应进行修改。</param><param name="options">代理调用的可选参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个<see cref="T:System.Threading.Tasks.Task`1" />，表示返回原生OpenAI <see cref="T:OpenAI.Responses.ResponseResult" />响应的异步操作。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="agent" />或<paramref name="messages" />为<see langword="null" />时抛出。</exception><exception cref="T:System.ArgumentException">当代理的响应无法转换为<see cref="T:OpenAI.Responses.ResponseResult" />时抛出，通常当底层表示不是OpenAI响应时。</exception><exception cref="T:System.NotSupportedException">当<paramref name="messages" />中的任何消息具有消息转换方法不支持的类型时抛出。</exception><remarks>
+            此方法使用适当的转换方法将OpenAI响应项转换为Microsoft Extensions AI格式，使用转换后的消息集合运行代理，然后使用<see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIResponse(Microsoft.Agents.AI.AgentResponse)" />从响应中提取原生OpenAI <see cref="T:OpenAI.Responses.ResponseResult" />。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Responses.ResponseItem},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用一组 OpenAI 响应项以流式模式运行 AI 代理，并返回作为原生 OpenAI <see cref="T:OpenAI.Responses.StreamingResponseUpdate" /> 集合的响应。
+            </summary><param name="agent">要运行的 AI 代理。</param><param name="messages">要发送给代理的 OpenAI 响应项集合。</param><param name="session">要在此次调用中继续的对话会话。如果未提供，则创建新会话。该会话将使用所提供的消息和代理响应更新进行修改。</param><param name="options">代理调用的可选参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个 <see cref="T:System.ClientModel.AsyncCollectionResult`1" />，表示异步可枚举对象，该对象在流式传输时生成本机 OpenAI <see cref="T:OpenAI.Responses.StreamingResponseUpdate" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="agent" /> 或 <paramref name="messages" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ArgumentException">当代理的响应无法转换为 <see cref="T:OpenAI.Responses.StreamingResponseUpdate" /> 实例时抛出，通常当底层表示不是 OpenAI 响应时。</exception><exception cref="T:System.NotSupportedException">当 <paramref name="messages" /> 中的任何消息类型不被消息转换方法支持时抛出。</exception><remarks>
+            此方法使用适当的转换方法将 OpenAI 响应项转换为 Microsoft Extensions AI 格式，
+            以流式模式运行代理，然后在生成本机 OpenAI <see cref="T:OpenAI.Responses.StreamingResponseUpdate" /> 实例时生成它们。
+            该方法尝试从底层响应表示中提取 <see cref="T:OpenAI.Responses.StreamingResponseUpdate" />。如果原始更新不可用，
+            则跳过它，因为 OpenAI 库当前未公开用于创建此类实例的模型工厂方法。
+            </remarks></member><member name="T:OpenAI.Chat.OpenAIChatClientExtensions"><summary>
+            提供 <see cref="T:OpenAI.Chat.ChatClient" /> 的扩展方法，以简化使用 OpenAI 服务创建 AI 代理的过程。
+            </summary><remarks>
+            这些扩展弥合了 OpenAI SDK 客户端对象与 Microsoft Agent 框架之间的差距，使开发者能够轻松创建利用 OpenAI 聊天补全和响应服务的 AI 代理。这些方法处理从 OpenAI 客户端到 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 实例的转换，然后将它们包装在实现 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 接口的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 对象中。
+            </remarks></member><member name="M:OpenAI.Chat.OpenAIChatClientExtensions.AsAIAgent(OpenAI.Chat.ChatClient,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Extensions.AI.AITool},System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)"><summary>
+    使用 OpenAI 聊天补全 API 从 <see cref="T:OpenAI.Chat.ChatClient" /> 创建一个 AI 代理。
+    </summary><param name="client">用于此代理的 OpenAI <see cref="T:OpenAI.Chat.ChatClient" />。</param><param name="instructions">可选的系统指令，定义代理的行为和个性。</param><param name="name">代理的可选名称，用于标识。</param><param name="description">代理的可选描述，说明其能力和用途。</param><param name="tools">可选的 AI 工具集合，代理在对话期间可以使用。</param><param name="clientFactory">提供一种自定义代理使用的底层 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 创建方式的方法。</param><param name="loggerFactory">可选的记录器工厂，用于在代理中启用日志记录。</param><param name="services">一个可选的 <see cref="T:System.IServiceProvider" />，用于解析被调用的 <see cref="T:Microsoft.Extensions.AI.AIFunction" /> 实例所需的服务。</param><returns>一个由 OpenAI 聊天补全服务支持的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="client" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:OpenAI.Chat.OpenAIChatClientExtensions.AsAIAgent(OpenAI.Chat.ChatClient,Microsoft.Agents.AI.ChatClientAgentOptions,System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)"><summary>
+    使用 OpenAI 聊天完成 API 从 <see cref="T:OpenAI.Chat.ChatClient" /> 创建 AI 代理。
+    </summary><param name="client">用于代理的 OpenAI <see cref="T:OpenAI.Chat.ChatClient" />。</param><param name="options">用于配置代理的完整选项集。</param><param name="clientFactory">提供一种自定义代理所使用的底层 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 创建方式的方法。</param><param name="loggerFactory">可选的日志记录器工厂，用于在代理中启用日志记录。</param><param name="services">一个可选的 <see cref="T:System.IServiceProvider" />，用于解析所调用的 <see cref="T:Microsoft.Extensions.AI.AIFunction" /> 实例所需的服务。</param><returns>一个由 OpenAI 聊天完成服务支持的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="client" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception></member><member name="T:OpenAI.Responses.OpenAIResponseClientExtensions"><summary>
+            为 <see cref="T:OpenAI.Responses.ResponsesClient" /> 提供扩展方法，以简化与 OpenAI 服务配合使用的 AI 代理的创建。
+            </summary><remarks>
+            这些扩展方法填补了 OpenAI SDK 客户端对象与 Microsoft Agent 框架之间的差距，使开发人员能够轻松创建利用 OpenAI 聊天完成和响应服务的 AI 代理。
+            这些方法处理从 OpenAI 客户端到 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 实例的转换，然后将它们包装在实现 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 接口的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 对象中。
+            </remarks></member><member name="M:OpenAI.Responses.OpenAIResponseClientExtensions.AsAIAgent(OpenAI.Responses.ResponsesClient,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Extensions.AI.AITool},System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)"><summary>
+    使用 OpenAI 响应 API 从 <see cref="T:OpenAI.Responses.ResponsesClient" /> 创建 AI 代理。
+    </summary><param name="client">用于代理的 <see cref="T:OpenAI.Responses.ResponsesClient" />。</param><param name="model">可选的请求默认模型 ID。当使用普通的 <see cref="T:OpenAI.Responses.ResponsesClient" />（而非通过 Azure OpenAI）时必需。</param><param name="instructions">可选的系统指令，用于定义代理的行为和个性。</param><param name="name">可选的代理标识名称。</param><param name="description">可选的代理能力和用途描述。</param><param name="tools">可选的代理在对话过程中可以使用的 AI 工具集合。</param><param name="clientFactory">提供一种自定义代理使用的底层 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 创建方式。</param><param name="loggerFactory">可选的日志记录器工厂，用于在代理中启用日志记录。</param><param name="services">一个可选的 <see cref="T:System.IServiceProvider" />，用于解析所调用的 <see cref="T:Microsoft.Extensions.AI.AIFunction" /> 实例所需的服务。</param><returns>由 OpenAI 响应服务支持的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="client" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:OpenAI.Responses.OpenAIResponseClientExtensions.AsAIAgent(OpenAI.Responses.ResponsesClient,Microsoft.Agents.AI.ChatClientAgentOptions,System.String,System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)"><summary>
+            使用 OpenAI Response API 从 <see cref="T:OpenAI.Responses.ResponsesClient" /> 创建一个 AI 代理。
+            </summary><param name="client">用于此代理的 <see cref="T:OpenAI.Responses.ResponsesClient" />。</param><param name="options">用于配置代理的完整选项集。</param><param name="model">可选的默认模型ID，用于请求。当使用普通 <see cref="T:OpenAI.Responses.ResponsesClient" />（而非通过Azure OpenAI）时必需。</param><param name="clientFactory">提供一种自定义代理使用的底层 <see cref="T:Microsoft.Extensions.AI.IChatClient" /> 创建方式。</param><param name="loggerFactory">可选的日志工厂，用于在代理中启用日志记录。</param><param name="services">一个可选的 <see cref="T:System.IServiceProvider" />，用于解析被调用的 <see cref="T:Microsoft.Extensions.AI.AIFunction" /> 实例所需的服务。</param><returns>一个由 OpenAI Response 服务支持的 <see cref="T:Microsoft.Agents.AI.ChatClientAgent" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="client" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:OpenAI.Responses.OpenAIResponseClientExtensions.AsIChatClientWithStoredOutputDisabled(OpenAI.Responses.ResponsesClient,System.String,System.Boolean)"><summary>
+        获取一个用于此 <see cref="T:OpenAI.Responses.ResponsesClient" /> 的 <see cref="T:Microsoft.Extensions.AI.IChatClient" />，该客户端不会存储响应以供后续检索。
+    </summary><remarks>
+        这相当于将 JSON 表示中的 "store" 属性设置为 false。
+    </remarks><param name="responseClient">客户端。</param><param name="model">用于请求的可选默认模型 ID。</param><param name="includeReasoningEncryptedContent">
+        在推理项输出中包含推理令牌的加密版本。
+        这使得在无状态使用 Responses API 时（例如当存储参数设置为 false，或组织已注册零数据保留计划时），
+        可以在多轮对话中使用推理项。
+        默认值为 <see langword="true" />。
+    </param><returns>
+        一个 <see cref="T:Microsoft.Extensions.AI.IChatClient" />，可通过 <see cref="T:OpenAI.Responses.ResponsesClient" /> 进行对话，
+        且不会存储响应以供后续检索。
+    </returns><exception cref="T:System.ArgumentNullException"><paramref name="responseClient" /> 为 <see langword="null" />。
+    </exception></member><member name="M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            运行AI代理，使用单个OpenAI聊天消息，并以原生OpenAI <see cref="T:OpenAI.Chat.StreamingChatCompletionUpdate" /> 集合的形式返回响应。
+            </summary><param name="agent">要运行的AI代理。</param><param name="messages">要发送给代理的OpenAI聊天消息集合。</param><param name="session">要继续此调用的对话会话。如果未提供，则创建新会话。该会话将使用提供的消息和代理响应进行更新。</param><param name="options">代理调用的可选参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个<see cref="T:System.Threading.Tasks.Task`1" />，表示返回原生OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" /> 响应的异步操作。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="agent" />或<paramref name="messages" />为<see langword="null" />时抛出。</exception><exception cref="T:System.ArgumentException">当代理的响应无法转换为<see cref="T:OpenAI.Chat.ChatCompletion" />时抛出，通常当底层表示不是OpenAI响应时。</exception><exception cref="T:System.NotSupportedException">当消息转换方法不支持<paramref name="messages" />类型时抛出。</exception><remarks>
+            此方法使用适当的转换方法将OpenAI聊天消息转换为Microsoft Extensions AI格式，运行代理，然后使用<see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIChatCompletion(Microsoft.Agents.AI.AgentResponse)" />从响应中提取原生OpenAI <see cref="T:OpenAI.Chat.ChatCompletion" />。
+            </remarks></member></members>
+</doc>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.CommandLine</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions"><summary>
+            用于将 <see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider" /> 注册到 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String[],System.Collections.Generic.IDictionary{System.String,System.String})"><summary>
+      添加一个<see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider" /><see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，该提供程序使用指定的开关映射从命令行读取配置值。
+    </summary><param name="configurationBuilder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="args">命令行参数。</param><param name="switchMappings">
+      开关映射。一个字典，包含短键（前缀为“-”）和别名键（前缀为“--”），映射到配置键（无前缀）。
+    </param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns><remarks><para><c>switchMappings</c>允许为命令行中使用其他格式的短键和别名键。另请参阅基本版本的<c>AddCommandLine</c>以了解支持的标准格式。
+      </para><para>
+        短键以单个短划线（“-”）开头，并映射到主键名（不带前缀），可以使用等号或空格。单短划线映射旨在用于较短的替代开关。
+      </para><para>
+        请注意，单短划线开关不能直接访问，必须定义开关映射并使用完整键访问。传递未定义的单短划线参数将引发<c>FormatException</c>。
+      </para><para>
+        短参数有两种格式：
+        <c>-k1=value1 -k2 value2</c>。
+      </para><para>
+        别名键定义以两个短划线（“--”）开头，并映射到主键名（不带前缀），可以代替普通键使用。当命令行中使用正斜杠前缀时，它们也有效（但不适用于无前缀等号格式）。
+      </para><para>
+        别名参数只有四种格式：
+        <c>--alt3=value3 /alt4=value4 --alt5 value5 /alt6 value6</c>。
+      </para></remarks><example>
+      一个简单的控制台应用程序，定义了两个短开关映射和四个别名开关映射。
+      <code>
+        // dotnet run -k1=value1 -k2 value2 --alt3=value2 /alt4=value3 --alt5 value5 /alt6 value6
+
+        using Microsoft.Extensions.Configuration;
+        using System;
+        using System.Collections.Generic;
+
+        namespace CommandLineSample
+        {
+            public class Program
+            {
+                public static void Main(string[] args)
+                {
+                    var switchMappings = new Dictionary&lt;string, string&gt;()
+                    {
+                        { "-k1", "key1" },
+                        { "-k2", "key2" },
+                        { "--alt3", "key3" },
+                        { "--alt4", "key4" },
+                        { "--alt5", "key5" },
+                        { "--alt6", "key6" },
+                    };
+                    var builder = new ConfigurationBuilder();
+                    builder.AddCommandLine(args, switchMappings);
+
+                    var config = builder.Build();
+
+                    Console.WriteLine($"Key1: '{config["Key1"]}'");
+                    Console.WriteLine($"Key2: '{config["Key2"]}'");
+                    Console.WriteLine($"Key3: '{config["Key3"]}'");
+                    Console.WriteLine($"Key4: '{config["Key4"]}'");
+                    Console.WriteLine($"Key5: '{config["Key5"]}'");
+                    Console.WriteLine($"Key6: '{config["Key6"]}'");
+                }
+            }
+        }
+      </code></example></member><member name="M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})"><summary>
+            添加一个<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，它从命令行读取配置值。
+            </summary><param name="builder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="configureSource">配置源。</param><returns>该<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider"><summary>
+            提供从命令行获取的配置键值对。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IDictionary{System.String,System.String})"><summary>
+            初始化一个新实例。
+            </summary><param name="args">命令行参数。</param><param name="switchMappings">开关映射。</param></member><member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Args"><summary>
+    获取命令行参数。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Load"><summary>
+            从命令行参数加载配置数据。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource"><summary>
+            将命令行参数表示为一个 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.SwitchMappings"><summary>
+            获取或设置开关映射。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Args"><summary>
+            获取或设置命令行参数。
+            </summary></member><member name="P:System.SR.Error_DuplicatedKeyInSwitchMappings"><summary>开关映射中的键不区分大小写。发现重复的键“{0}”。</summary></member><member name="P:System.SR.Error_InvalidSwitchMapping"><summary>开关映射包含无效的开关“{0}”。</summary></member><member name="P:System.SR.Error_ShortSwitchNotDefined"><summary>短开关 '{0}' 未在开关映射中定义。</summary></member><member name="M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源构建<see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个<see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String[])"><summary>
+               添加一个 <see cref="T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider" /><see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，
+               用于从命令行读取配置值。
+             </summary><param name="configurationBuilder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="args">命令行参数。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns><remarks><para>
+                  在命令行中通过 <c>args</c> 字符串数组传递的值应该是一组以两个破折号（"--"）作为前缀的键，后跟值，键和值之间用等号（"="）或空格（" "）分隔。
+                </para><para>
+                  正斜杠（"/"）可以用作替代前缀，可与等号或空格一起使用；当使用等号时，前缀可以完全省略。
+                </para><para>
+                  参数有五种基本替代格式：
+                  <c>key1=value1 --key2=value2 /key3=value3 --key4 value4 /key5 value5</c>。
+                </para></remarks><example>
+               一个简单的控制台应用程序，包含五个值。
+               <code>
+                 // dotnet run key1=value1 --key2=value2 /key3=value3 --key4 value4 /key5 value5
+            
+                 using Microsoft.Extensions.Configuration;
+                 using System;
+            
+                 namespace CommandLineSample
+                 {
+                    public class Program
+                    {
+                        public static void Main(string[] args)
+                        {
+                            var builder = new ConfigurationBuilder();
+                            builder.AddCommandLine(args);
+            
+                            var config = builder.Build();
+            
+                            Console.WriteLine($"Key1: '{config["Key1"]}'");
+                            Console.WriteLine($"Key2: '{config["Key2"]}'");
+                            Console.WriteLine($"Key3: '{config["Key3"]}'");
+                            Console.WriteLine($"Key4: '{config["Key4"]}'");
+                            Console.WriteLine($"Key5: '{config["Key5"]}'");
+                        }
+                    }
+                 }
+               </code></example></member></members>
+</doc>

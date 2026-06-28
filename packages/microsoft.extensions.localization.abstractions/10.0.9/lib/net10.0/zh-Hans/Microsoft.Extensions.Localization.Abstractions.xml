@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Localization.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Localization.StringLocalizer`1"><summary>
+            为 <typeparamref name="TResourceSource" /> 提供字符串。
+            </summary><typeparam name="TResourceSource">要提供字符串的 <see cref="T:System.Type" />。</typeparam></member><member name="T:Microsoft.Extensions.Localization.LocalizedString"><summary>
+    一个特定于区域设置的字符串。
+    </summary></member><member name="P:Microsoft.Extensions.Localization.LocalizedString.Value"><summary>
+            实际的字符串。
+            </summary></member><member name="P:Microsoft.Extensions.Localization.LocalizedString.ResourceNotFound"><summary>
+            指示字符串是否在资源中未找到。如果<c>true</c>，则使用了备用字符串值。
+            </summary></member><member name="T:Microsoft.Extensions.Localization.IStringLocalizer"><summary>
+    表示一个提供本地化字符串的服务。
+    </summary></member><member name="P:Microsoft.Extensions.Localization.StringLocalizer`1.Item(System.String,System.Object[])"><inheritdoc /></member><member name="M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String,System.Boolean,System.String)"><summary>
+    创建一个新的 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" />。
+    </summary><param name="name">字符串在资源中加载时的名称。</param><param name="value">实际的字符串。</param><param name="resourceNotFound">是否在资源中未找到该字符串。设置为 <c>true</c> 表示使用了备用字符串值。</param><param name="searchedLocation">搜索本地化值的位置。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果<paramref name="argument" />为null或空，则引发<see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证为非null且非空的<see cref="T:System.String" />参数。</param><param name="paramName">与<paramref name="argument" />对应的参数名称。</param></member><member name="M:Microsoft.Extensions.Localization.StringLocalizer`1.GetAllStrings(System.Boolean)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Localization.StringLocalizer`1.#ctor(Microsoft.Extensions.Localization.IStringLocalizerFactory)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Localization.StringLocalizer`1" />。
+            </summary><param name="factory">要使用的 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizerFactory" />。</param></member><member name="P:Microsoft.Extensions.Localization.IStringLocalizer.Item(System.String,System.Object[])"><summary>
+            获取具有给定名称并使用提供的参数格式化的字符串资源。
+            </summary><param name="name">字符串资源的名称。</param><param name="arguments">用于格式化字符串的值。</param><returns>格式化后的字符串资源作为 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" />。</returns></member><member name="P:Microsoft.Extensions.Localization.IStringLocalizer.Item(System.String)"><summary>
+            获取具有给定名称的字符串资源。
+            </summary><param name="name">字符串资源的名称。</param><returns>该字符串资源作为 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" />。</returns></member><member name="M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String)"><summary>
+    创建一个新的<see cref="T:Microsoft.Extensions.Localization.LocalizedString" />。
+    </summary><param name="name">字符串在加载时所来自的资源中的名称。</param><param name="value">实际的字符串。</param></member><member name="P:Microsoft.Extensions.Localization.StringLocalizer`1.Item(System.String)"><inheritdoc /></member><member name="P:Microsoft.Extensions.Localization.LocalizedString.SearchedLocation"><summary>
+            已搜索本地化值的位置。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetString(Microsoft.Extensions.Localization.IStringLocalizer,System.String,System.Object[])"><summary>
+    获取具有给定名称并使用提供的参数格式化的字符串资源。
+  </summary><param name="stringLocalizer">
+    用于本地化字符串的 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。
+  </param><param name="name">
+    字符串资源的名称。
+  </param><param name="arguments">
+    用于格式化字符串的值。
+  </param><returns>
+    作为 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" /> 的格式化后的字符串资源。
+  </returns></member><member name="M:Microsoft.Extensions.Localization.LocalizedString.op_Implicit(Microsoft.Extensions.Localization.LocalizedString)~System.String"><summary>
+    将 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" /> 隐式转换为 <see cref="T:System.String" />。
+    </summary><param name="localizedString">要隐式转换的字符串。</param></member><member name="M:Microsoft.Extensions.Localization.IStringLocalizerFactory.Create(System.String,System.String)"><summary>
+    创建一个<see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。
+    </summary><param name="baseName">要从中加载字符串的资源的基名称。</param><param name="location">要从中加载资源的位置。</param><returns><see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。</returns></member><member name="M:Microsoft.Extensions.Localization.IStringLocalizerFactory.Create(System.Type)"><summary>
+            使用指定类型的<see cref="T:System.Reflection.Assembly" />和<see cref="P:System.Type.FullName" />创建一个<see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。
+            </summary><param name="resourceSource">该<see cref="T:System.Type" />。</param><returns>该<see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。</returns></member><member name="T:Microsoft.Extensions.Localization.StringLocalizerExtensions"><summary>
+            用于操作 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" /> 实例的扩展方法。
+            </summary></member><member name="P:Microsoft.Extensions.Localization.LocalizedString.Name"><summary>
+            从资源中加载的字符串的名称。
+            </summary></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)"><summary>当<paramref name="argument" />为 null 时，引发<see cref="T:System.ArgumentNullException" />。</summary><param name="argument">要验证为非空的引用类型参数。</param><param name="paramName">与<paramref name="argument" />对应的参数名称。</param></member><member name="M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetString(Microsoft.Extensions.Localization.IStringLocalizer,System.String)"><summary>
+            获取具有给定名称的字符串资源。
+            </summary><param name="stringLocalizer"><see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。</param><param name="name">字符串资源的名称。</param><returns>以 <see cref="T:Microsoft.Extensions.Localization.LocalizedString" /> 表示的字符串资源。</returns></member><member name="T:Microsoft.Extensions.Localization.IStringLocalizer`1"><summary>
+            表示一个为 <typeparamref name="T" /> 提供字符串的 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。
+            </summary><typeparam name="T">要为其提供字符串的 <see cref="T:System.Type" />。</typeparam></member><member name="T:Microsoft.Extensions.Localization.IStringLocalizerFactory"><summary>
+            表示创建 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" /> 实例的工厂。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.IStringLocalizer.GetAllStrings(System.Boolean)"><summary>
+            获取所有字符串资源。
+            </summary><param name="includeParentCultures">
+            一个<see cref="T:System.Boolean" />，指示是否包含来自父级区域性的字符串。
+            </param><returns>字符串。</returns></member><member name="M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetAllStrings(Microsoft.Extensions.Localization.IStringLocalizer)"><summary>获取所有字符串资源，包括父文化的字符串资源。</summary><param name="stringLocalizer"><see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />。</param><returns>字符串资源。</returns></member><member name="M:Microsoft.Extensions.Localization.LocalizedString.ToString"><summary>
+            返回实际的字符串。
+            </summary><returns>返回实际的字符串。</returns></member><member name="M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String,System.Boolean)"><summary>创建一个新的<see cref="T:Microsoft.Extensions.Localization.LocalizedString" />。</summary><param name="name">字符串在从中加载的资源中的名称。</param><param name="value">实际字符串。</param><param name="resourceNotFound">是否在资源中未找到该字符串。将此设置为<c>true</c>表示使用了备用字符串值。</param></member></members>
+</doc>

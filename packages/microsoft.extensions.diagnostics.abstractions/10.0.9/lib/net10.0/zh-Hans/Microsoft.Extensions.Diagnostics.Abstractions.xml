@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Diagnostics.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder"><summary>
+    通过注册 IMetricsListeners 并使用规则确定已启用的指标，来配置指标系统。
+    </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder.Services"><summary>
+            获取扩展方法用于注册服务的应用程序服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener"><summary>
+            侦听系统发出的指标。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name"><summary>
+            获取侦听器的名称。这用于在规则配置中标识侦听器。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Initialize(Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource)"><summary>
+            由运行时调用一次，以提供一个 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource" />，用于拉取最新的指标数据。
+            </summary><param name="source">一个 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource" />，可用于请求当前指标。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.InstrumentPublished(System.Diagnostics.Metrics.Instrument,System.Object@)"><summary>
+            当创建一个新的仪器并通过匹配规则启用时调用。
+            </summary><param name="instrument">新的<see cref="T:System.Diagnostics.Metrics.Instrument" />。</param><param name="userState">与此仪器关联的侦听器状态。此状态将被返回到<see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />
+            和<see cref="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.MeasurementsCompleted(System.Diagnostics.Metrics.Instrument,System.Object)" />。</param><returns>如果侦听器想要订阅此仪器，则为<see langword="true" />，否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.MeasurementsCompleted(System.Diagnostics.Metrics.Instrument,System.Object)"><summary>
+            当生产者或规则更改禁用某个仪器时调用。
+            </summary><param name="instrument">被禁用的 <see cref="T:System.Diagnostics.Metrics.Instrument" />。</param><param name="userState">由 <see cref="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.InstrumentPublished(System.Diagnostics.Metrics.Instrument,System.Object@)" /> 返回的原始侦听器状态。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.GetMeasurementHandlers"><summary>
+            调用一次以获取将用于处理测量的 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers" />。
+            </summary><returns>用于处理测量的 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers" />。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule"><summary>
+    包含一组用于确定哪些仪器被哪些监听器启用的参数。未指定的参数匹配任何内容。
+    </summary><remarks><para>将使用匹配给定仪器的最具体的规则。参数的优先级如下：</para><para>- MeterName，完全匹配或最长前缀匹配。请参阅 <see cref="P:System.Diagnostics.Metrics.Meter.Name">Meter.Name</see>。</para><para>- InstrumentName，完全匹配。<see cref="P:System.Diagnostics.Metrics.Instrument.Name">Instrument.Name</see>。</para><para>- ListenerName，完全匹配。<see cref="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name">IMetricsListener.Name</see>。</para><para>- 范围</para></remarks><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name">Meter.Name</see> 或前缀。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name">Instrument.Name</see>。</param><param name="listenerName"><see cref="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name">IMetricsListener.Name</see>。</param><param name="scopes">指定要考虑的范围的枚举值的按位组合。</param><param name="enable"><see langword="true" /> 表示为该监听器启用匹配的仪器；否则为 <see langword="false" />。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope,System.Boolean)"><summary>
+            包含一组参数，用于确定哪些仪器为哪些侦听器启用。未指定的参数则匹配所有内容。
+            </summary><remarks><para>将使用与给定仪器匹配的最具体的规则。参数的优先级如下：</para><para>- MeterName，可以是完全匹配或最长前缀匹配。请参阅 <see cref="P:System.Diagnostics.Metrics.Meter.Name">Meter.Name</see>。</para><para>- InstrumentName，完全匹配。 <see cref="P:System.Diagnostics.Metrics.Instrument.Name">Instrument.Name</see>。</para><para>- ListenerName，完全匹配。 <see cref="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name">IMetricsListener.Name</see>。</para><para>- 范围</para></remarks><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name">Meter.Name</see> 或前缀。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name">Instrument.Name</see>。</param><param name="listenerName"><see cref="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name">IMetricsListener.Name</see>。</param><param name="scopes">一个指定要考虑的作用域的枚举值的按位组合。</param><param name="enable"><see langword="true" /> 表示为此侦听器启用匹配的仪器；否则为 <see langword="false" />。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.MeterName"><summary>
+    获取 <see cref="P:System.Diagnostics.Metrics.Meter.Name">Meter.Name</see>，可以是精确匹配或最长前缀匹配。仅考虑完整的段匹配。
+    </summary><value>
+    仪表名称。如果为 <see langword="null" />，则匹配所有仪表。
+    </value></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.InstrumentName"><summary>
+    获取 <see cref="P:System.Diagnostics.Metrics.Instrument.Name">Instrument.Name</see>，精确匹配。
+    </summary><value>
+    仪器名称。如果 <see langword="null" />，则匹配该计量器的所有仪器。
+    </value></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.ListenerName"><summary>
+            获取 <see cref="P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name">IMetricsListener.Name</see>（精确匹配）。
+            </summary><value>
+            侦听器名称。如果 <see langword="null" />，则匹配所有侦听器。
+            </value></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.Scopes"><summary>
+            获取 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MeterScope" />。
+            </summary><remarks>
+            此属性用于区分通过 <see cref="T:System.Diagnostics.Metrics.Meter" /> 构造函数创建的仪表（<see cref="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Global" />）
+            和通过依赖注入使用 <see cref="M:System.Diagnostics.Metrics.IMeterFactory.Create(System.Diagnostics.Metrics.MeterOptions)" /> 创建的仪表（<see cref="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Local" />）。
+            </remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.Enable"><summary>
+            获取一个值，该值指示是否应为侦听器启用该检测工具。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource"><summary>
+            使用 <see cref="M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Initialize(Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource)" /> 在每个 IMetricsListener 上注册的接口。
+            </summary><remarks>
+            侦听器可以调用 <see cref="M:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource.RecordObservableInstruments" /> 来接收已启用的可观测仪器的当前测量值集。
+            </remarks></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource.RecordObservableInstruments"><summary>
+            请求将当前启用的仪器的指标集发送到监听器的 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" /> 对象。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers"><summary>
+    表示一组支持的测量类型。如果侦听器不支持给定的类型，则跳过该测量。
+    </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.ShortHandler"><summary>
+            获取或设置一个用于 <see cref="T:System.Int16" /> 的 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />。如果为 <see langword="null" />，则将跳过 short 度量。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.IntHandler"><summary>
+            获取或设置一个用于 <see cref="T:System.Int32" /> 的 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />。如果为 <see langword="null" />，则跳过 int 度量。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.LongHandler"><summary>
+            获取或设置一个用于 <see cref="T:System.Int64" /> 的 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />。如果为 <see langword="null" />，则跳过 long 类型的测量。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.FloatHandler"><summary>
+            获取或设置一个 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />，用于 <see cref="T:System.Single" />。如果 <see langword="null" />，则跳过浮点测量。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.DoubleHandler"><summary>
+            获取或设置一个 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" /> 用于 <see cref="T:System.Double" />。如果为 <see langword="null" />，则跳过双精度浮点数测量。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.DecimalHandler"><summary>
+            获取或设置一个 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" /> 用于 <see cref="T:System.Decimal" />。如果为 <see langword="null" />，则跳过十进制测量。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.MeterScope"><summary>
+            表示由<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule" />使用的作用域，用于区分通过<see cref="T:System.Diagnostics.Metrics.Meter" />构造函数创建的仪表（<see cref="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Global" />）和通过依赖注入使用<see cref="M:System.Diagnostics.Metrics.IMeterFactory.Create(System.Diagnostics.Metrics.MeterOptions)" />创建的仪表（<see cref="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Local" />）。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.None"><summary>
+            未指定作用域。不应使用此字段。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Global"><summary>
+            指示通过 <see cref="T:System.Diagnostics.Metrics.Meter" /> 构造函数创建的 <see cref="T:System.Diagnostics.Metrics.Meter" /> 实例。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Local"><summary>
+            指示 <see cref="T:System.Diagnostics.Metrics.Meter" /> 实例是通过依赖注入使用 <see cref="M:System.Diagnostics.Metrics.IMeterFactory.Create(System.Diagnostics.Metrics.MeterOptions)" /> 创建的。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions"><summary>
+            用于 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" /> 的扩展方法，用于添加或清除 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 注册，以及启用或禁用指标。
+            </summary><summary>
+            用于 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" /> 的扩展方法，用于添加或清除 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 注册，以及启用或禁用指标。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener``1(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder)"><summary>
+            注册一个类型为<typeparamref name="T" />的新<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />。
+            </summary><typeparam name="T">侦听器的实现类型。</typeparam><param name="builder">一个<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><returns>返回原始的<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />以进行链式调用。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener)"><summary>
+            注册一个新的 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 实例。
+            </summary><param name="listener">侦听器的实现类型。</param><param name="builder"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><returns>返回原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" /> 以便链式调用。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.ClearListeners(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder)"><summary>
+            从依赖关系注入容器中移除所有<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />注册。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><returns>返回原始的<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />以用于链式调用。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)"><summary>
+            为给定的 <see cref="T:System.Diagnostics.Metrics.Meter" /> 和 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 启用指定的 <see cref="T:System.Diagnostics.Metrics.Instrument" />。
+            </summary><param name="builder">适用于 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有仪表。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name" />。null 值匹配所有仪器。</param><param name="listenerName"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />.Name。null 值匹配所有侦听器。</param><param name="scopes">指示要考虑的仪表范围。默认为所有范围。</param><returns>返回原始的 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" /> 以实现链接。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String)"><summary>
+            为给定的仪表启用所有仪器，适用于所有已注册的侦听器。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有仪表。</param><returns>原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" /> 用于链式操作。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)"><summary>
+            为给定的 <see cref="T:System.Diagnostics.Metrics.Meter" /> 和 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 启用指定的 <see cref="T:System.Diagnostics.Metrics.Instrument" />。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。如果为 null，则匹配所有仪表。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name" />。如果为 null，则匹配所有仪器。</param><param name="listenerName"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> 的名称。如果为 null，则匹配所有侦听器。</param><param name="scopes">指示要考虑的仪表范围。默认为所有范围。</param><returns>返回用于链接的原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String)"><summary>
+    对于所有已注册的侦听器，为给定的计量器禁用所有检测器。
+    </summary><param name="options"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有计量器。</param><returns>用于链式调用的原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions"><summary>
+            表示用于配置指标系统的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions.Rules"><summary>
+            获取一个仪器规则列表，该列表标识哪些指标、仪器和侦听器已启用。
+            </summary></member><member name="M:Microsoft.Extensions.Internal.TypeNameHelper.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)"><summary>
+            美化打印类型名称。
+            </summary><param name="type"><see cref="T:System.Type" /> 类型。</param><param name="fullName"><c>true</c> 表示打印完全限定名称。</param><param name="includeGenericParameterNames"><c>true</c> 表示包含泛型参数名称。</param><param name="includeGenericParameters"><c>true</c> 表示包含泛型参数。</param><param name="nestedTypeDelimiter">用作嵌套类型名称中的分隔符的字符。</param><returns>美化打印的类型名称。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)"><summary>
+            禁用指定仪表的所有检测器，对所有已注册的侦听器生效。
+            </summary><param name="builder">该<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><param name="meterName">该<see cref="P:System.Diagnostics.Metrics.Meter.Name" />或前缀。null值表示匹配所有仪表。</param><returns>返回原始<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />以便链式调用。</returns></member><member name="P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.ByteHandler"><summary>
+            获取或设置一个用于 <see cref="T:System.Byte" /> 的 <see cref="T:System.Diagnostics.Metrics.MeasurementCallback`1" />。如果为 <see langword="null" />，则跳过字节度量。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)"><summary>
+            禁用指定的 <see cref="T:System.Diagnostics.Metrics.Instrument" />（针对给定的 <see cref="T:System.Diagnostics.Metrics.Meter" /> 和 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />）。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有计量器。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name" />。null 值匹配所有检测工具。</param><param name="listenerName"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />.Name。null 值匹配所有侦听器。</param><param name="scopes">指示要考虑的计量器范围。默认为所有范围。</param><returns>用于链式调用的原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)"><summary>
+            为所有已注册的侦听器启用指定计量器的所有检测仪器。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有计量器。</param><returns>用于链式调用的原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)"><summary>
+            针对给定的 <see cref="T:System.Diagnostics.Metrics.Meter" /> 和 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />，禁用指定的 <see cref="T:System.Diagnostics.Metrics.Instrument" />。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</param><param name="meterName"><see cref="P:System.Diagnostics.Metrics.Meter.Name" /> 或前缀。null 值匹配所有仪表。</param><param name="instrumentName"><see cref="P:System.Diagnostics.Metrics.Instrument.Name" />。null 值匹配所有仪器。</param><param name="listenerName"><see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" />.Name。null 值匹配所有侦听器。</param><param name="scopes">指示要考虑哪些仪表范围。默认为所有范围。</param><returns>用于链式调用的原始 <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions" />。</returns></member></members>
+</doc>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.EnvironmentVariables</name>
+    </assembly>
+    <members><member name="P:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource.Prefix"><summary>
+            用于筛选环境变量的前缀。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.Load"><summary>
+            加载环境变量。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.ToString"><summary>
+            生成表示此提供程序名称和相关详细信息的字符串。
+            </summary><returns>配置名称。</returns></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.#ctor(System.String)"><summary>
+    使用指定的前缀初始化新实例。
+    </summary><param name="prefix">用于筛选环境变量的前缀。</param></member><member name="T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource"><summary>
+    将环境变量表示为 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.#ctor"><summary>
+            初始化一个新实例。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions"><summary>
+    提供用于将<see cref="T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider" />注册到<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+    添加一个<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，该提供程序从环境变量读取配置值。
+    </summary><param name="configurationBuilder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>返回<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源生成 <see cref="T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider" />。
+            </summary><param name="builder">用于配置的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider"><summary>
+            提供从环境变量中获取的配置键值对。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource})"><summary>
+            添加一个 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，它从环境变量中读取配置值。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="configureSource">配置源的操作。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)"><summary>
+    添加一个 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />，用于从具有指定前缀的环境变量中读取配置值。
+    </summary><param name="configurationBuilder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="prefix">环境变量名称必须以此开头的前缀。该前缀将从环境变量名称中移除。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member></members>
+</doc>

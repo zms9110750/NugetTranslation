@@ -1,0 +1,1525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Polly.Core</name>
+    </assembly>
+    <members><member name="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute"><summary>
+            标记应使用特定调用方名称填充的参数。
+            </summary></member><member name="M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute" /> 类的新实例。
+            </summary><param name="parameterName">要从中获取名称的函数参数。</param></member><member name="P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName"><summary>
+            获取应从中获取名称的函数参数的名称。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"><summary>
+        指示在指定的 <see cref="T:System.Type" /> 上的某些成员是动态访问的，例如通过 <see cref="N:System.Reflection" />。
+    </summary><remarks>
+        这使得工具能够了解在程序执行期间正在访问哪些成员。
+
+        此属性在其类型为 <see cref="T:System.Type" /> 或 <see cref="T:System.String" /> 的成员上有效。
+
+        当此属性应用于类型为 <see cref="T:System.String" /> 的位置时，假定该字符串表示完全限定的类型名称。
+
+        当此属性应用于类、接口或结构时，指定的成员可以在从该类、接口或结构的实例调用 <see cref="M:System.Object.GetType" /> 返回的 <see cref="T:System.Type" /> 实例上动态访问。
+
+        如果该属性应用于方法，则将其视为特殊情况，并意味着该属性应应用于方法的 "this" 参数。因此，该属性应仅用于可分配给 System.Type（或 string，但那里没有方法会使用它）的类型的实例方法。
+    </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)"><summary>
+        使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+    </summary><param name="memberTypes">动态访问的成员类型。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes"><summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定了动态访问的成员类型。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"><summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有一个 <see cref="T:System.FlagsAttribute" /> 属性，该属性允许其成员值进行按位组合。
+             </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None"><summary>
+            指定无成员。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor"><summary>
+            指定默认的无参数公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors"><summary>
+    指定所有公共构造函数。
+    </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors"><summary>
+            指定所有非公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods"><summary>
+            指定所有公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods"><summary>
+            指定所有非公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields"><summary>
+            指定所有公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields"><summary>
+            指定所有非公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes"><summary>
+            指定所有公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes"><summary>
+            指定所有非公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties"><summary>
+            指定所有公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties"><summary>
+            指定所有非公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents"><summary>
+            指定所有公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents"><summary>
+            指定所有非公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces"><summary>
+            指定由该类型实现的所有接口。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All"><summary>
+            指定所有成员。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute"><summary>
+            表示一个成员对另一个成员的依赖。
+            </summary><remarks>
+            这可用于告知工具某个依赖关系，该依赖关系无法从元数据和IL中直接明显看出，例如通过反射依赖的成员。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)"><summary>
+            使用使用者同一类型上指定成员签名初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">所依赖成员的签名。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)"><summary>
+            使用指定 <see cref="T:System.Type" /> 上的成员签名初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">被依赖的成员的签名。</param><param name="type">包含 <paramref name="memberSignature" /> 的 <see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)"><summary>
+            使用程序集中类型成员的指定签名初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">依赖的成员的签名。</param><param name="typeName">包含指定成员的类型的完整名称。</param><param name="assemblyName">包含指定成员的类型的程序集名称。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)"><summary>
+    使用 <see cref="T:System.Type" /> 上指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+    </summary><param name="memberTypes">所依赖的成员类型。</param><param name="type">包含指定成员的 <see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)"><summary>
+            使用程序集中类型上的指定成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">依赖的成员类型。</param><param name="typeName">包含指定成员的类型的完整名称。</param><param name="assemblyName">包含指定成员的类型的程序集名称。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature"><summary>
+            获取所依赖成员的签名。
+            </summary><remarks>
+            要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效字符串，要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" />
+            不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但两者不能同时满足。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes"><summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定所依赖的成员类型。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是一个有效的字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" />
+            必须不等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能两者都不满足。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type"><summary>
+            获取包含指定成员的 <see cref="T:System.Type" />。
+            </summary><remarks>
+            如果既没有指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也没有指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定为使用者的类型。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName"><summary>
+            获取包含指定成员的类型的完整名称。
+            </summary><remarks>
+            如果既未指定<see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" />也未指定<see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定为使用者的类型。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName"><summary>
+            获取指定类型的程序集名称。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" /> 仅在指定了 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" /> 时有效。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition"><summary>
+        获取或设置依赖项适用的条件，例如 "DEBUG"。
+    </summary></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应类型不允许，也允许 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应类型允许 null，也不允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定输出可能为 null，即使相应类型不允许也是如此。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使相应类型允许为空，输出也不会为 null。指定在调用返回时输入参数不为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数可能为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许为 null，该参数也不会为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>初始化具有指定返回值条件的特性。</summary><param name="returnValue">
+    返回值条件。如果该方法返回此值，则关联的参数将不为 null。
+    </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数不为 null，则输出不为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化属性。</summary><param name="parameterName">
+            关联的参数名称。如果指定参数的自变量不为 null，则输出将为非 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用到在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递指定值，则方法不会返回。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+            条件参数值。如果关联参数的参数与此值匹配，则诊断会将方法后的代码视为不可达。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定方法或属性将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化特性。</summary><param name="member">
+            承诺非 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员列表初始化特性。</summary><param name="members">
+            承诺不为空的字段和属性成员列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定当方法或属性返回指定的返回值条件时，将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回该值，则关联参数将不会为 null。
+            </param><param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段和属性成员列表初始化此特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为null。
+            </param><param name="members">
+            保证不为null的字段和属性成员列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值的条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute"><summary>
+            指示指定的方法需要动态访问未静态引用的代码，例如通过 <see cref="N:System.Reflection" />。
+            </summary><remarks>
+            这使工具能够在从应用程序中删除未引用的代码时，了解哪些方法是不安全调用的。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)"><summary>
+    使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+    </summary><param name="message">
+    包含关于未引用代码使用情况的消息。
+    </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message"><summary>
+            获取一条消息，其中包含有关未引用代码使用情况的信息。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url"><summary>
+            获取或设置一个可选的 URL，该 URL 包含有关该方法、
+            为何需要未引用的代码以及使用者有哪些选项可以处理它的详细信息。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"><summary>
+    /// 禁止报告特定的规则违规，允许在单个代码项目上多次禁止。
+    </summary><remarks><see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 与
+    <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" /> 的不同之处在于它没有
+    <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+    </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的一个新实例，指定工具类别和分析规则的标识符。
+            </summary><param name="category">属性的类别。</param><param name="checkId">特性应用的分析规则的标识符。</param></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"><summary>
+            获取标识属性分类的类别。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述了消息抑制属性所适用的工具或工具分析类别。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId"><summary>
+            获取要抑制的分析工具规则的标识符。
+            </summary><remarks>
+            结合在一起，<see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" />
+            属性构成一个唯一的检查标识符。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope"><summary>
+            获取或设置对于特性相关的代码范围。
+            </summary><remarks>
+            Scope 属性是一个可选参数，指定特性相关的元数据范围。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target"><summary>
+    获取或设置一个完全限定的路径，该路径表示属性的目标。
+    </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是一个可选参数，用于标识属性的分析目标。示例值是 "System.IO.Stream.ctor():System.Void"。因为它是完全限定的，所以可能很长，特别是对于参数等目标。分析工具用户界面应能够自动格式化该参数。
+    </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId"><summary>
+    获取或设置一个可选参数，用于详细说明排除条件。
+  </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定当字面元数据目标不够精确时的额外排除条件。例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，并且可能希望抑制方法中针对某个会导致规则冲突的语句的冲突，而不是针对方法中的所有语句。
+  </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification"><summary>
+            获取或设置禁止显示代码分析消息的理由。
+            </summary></member><member name="T:System.Diagnostics.DebuggerDisableUserUnhandledExceptionsAttribute"><summary>
+            如果附加的 .NET 调试器支持 Debugger.BreakForUserUnhandledException(Exception) API，则此特性将阻止调试器在由具有此特性的方法捕获到用户未处理的异常时中断，除非调用了 BreakForUserUnhandledException。
+            </summary></member><member name="T:Polly.CircuitBreaker.BreakDurationGeneratorArguments"><summary>
+    表示用于生成断路器动态中断持续时间的参数。
+    </summary></member><member name="M:Polly.CircuitBreaker.BreakDurationGeneratorArguments.#ctor(System.Double,System.Int32,Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BreakDurationGeneratorArguments" /> 结构的新实例。
+            </summary><param name="failureRate">断路器应触发的故障率。它表示失败操作与总执行操作的比率。</param><param name="failureCount">已发生的故障次数。此计数用于确定是否已达到故障阈值。</param><param name="context">提供有关执行状态和故障的额外信息的韧性上下文。</param></member><member name="M:Polly.CircuitBreaker.BreakDurationGeneratorArguments.#ctor(System.Double,System.Int32,Polly.ResilienceContext,System.Int32)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BreakDurationGeneratorArguments" /> 结构的新实例。
+            </summary><param name="failureRate">断路器应跳闸的故障率。
+            它表示失败操作与总执行操作的比率。</param><param name="failureCount">已发生的失败次数。
+            此计数用于确定是否已达到失败阈值。</param><param name="context">提供有关执行状态和失败的额外信息的弹性上下文。</param><param name="halfOpenAttempts">半开尝试次数。</param></member><member name="P:Polly.CircuitBreaker.BreakDurationGeneratorArguments.FailureRate"><summary>
+            获取失败率，该比率表示失败操作数与总操作数的比值。
+            </summary></member><member name="P:Polly.CircuitBreaker.BreakDurationGeneratorArguments.FailureCount"><summary>
+            获取已发生的失败次数。
+            </summary></member><member name="P:Polly.CircuitBreaker.BreakDurationGeneratorArguments.Context"><summary>
+            获取提供有关弹性操作的附加信息的上下文。
+            </summary></member><member name="P:Polly.CircuitBreaker.BreakDurationGeneratorArguments.HalfOpenAttempts"><summary>
+            获取半开尝试的次数。
+            </summary></member><member name="T:Polly.CircuitBreaker.BrokenCircuitException"><summary>
+        当电路中断时引发的异常。
+    </summary></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor"><summary>
+    初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+    </summary></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+            </summary><param name="retryAfter">电路将关闭后的时间段。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.String,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="retryAfter">电路关闭的等待时间。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.String,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="inner">内部异常。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.String,System.TimeSpan,System.Exception)"><summary>
+        初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+    </summary><param name="message">描述错误的消息。</param><param name="retryAfter">断路器闭合后的时间段。</param><param name="inner">内部异常。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 类的新实例。
+            </summary><param name="info">包含有关所引发异常的序列化对象数据的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</param><param name="context">包含有关源或目标的上下文信息的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。</param></member><member name="M:Polly.CircuitBreaker.BrokenCircuitException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><inheritdoc /></member><member name="P:Polly.CircuitBreaker.BrokenCircuitException.RetryAfter"><summary>
+    获取电路变为闭合状态之前的时间量（如果已知）。
+  </summary><remarks>
+    该值在实例构造时指定，如果在后续时间使用，可能会有不准确的情况。如果未提供或电路被手动隔离，可以为 <see langword="null" />。
+  </remarks></member><member name="T:Polly.CircuitBreaker.CircuitBreakerManualControl"><summary>
+            允许手动控制断路器。
+            </summary><remarks>
+            此类的实例可以跨多个断路器重复使用。
+            </remarks></member><member name="M:Polly.CircuitBreaker.CircuitBreakerManualControl.#ctor"><summary>
+        初始化 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 类的新实例。
+    </summary></member><member name="M:Polly.CircuitBreaker.CircuitBreakerManualControl.#ctor(System.Boolean)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 类的新实例。
+            </summary><param name="isIsolated">确定是否在构造后立即隔离断路器。</param></member><member name="M:Polly.CircuitBreaker.CircuitBreakerManualControl.IsolateAsync(System.Threading.CancellationToken)"><summary>
+    手动隔离（打开）电路，并保持此状态，直到调用<see cref="M:Polly.CircuitBreaker.CircuitBreakerManualControl.CloseAsync(System.Threading.CancellationToken)" />为止。
+    </summary><param name="cancellationToken">取消令牌。</param><returns><see cref="T:System.Threading.Tasks.Task" />的实例，表示异步执行。</returns><exception cref="T:System.ObjectDisposedException">在释放此对象后调用此方法时引发。</exception></member><member name="M:Polly.CircuitBreaker.CircuitBreakerManualControl.CloseAsync(System.Threading.CancellationToken)"><summary>
+            关闭电路，并重置控制自动断路器的任何统计信息。
+            </summary><param name="cancellationToken">取消令牌。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.Task" /> 实例。</returns><exception cref="T:System.ObjectDisposedException">在对象已释放后调用此方法时引发。</exception></member><member name="T:Polly.CircuitBreaker.CircuitBreakerPredicateArguments`1"><summary>
+            由 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.ShouldHandle" /> 谓词使用的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.CircuitBreaker.CircuitBreakerPredicateArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.CircuitBreakerPredicateArguments`1" /> 结构的新实例。
+            </summary><param name="outcome">发生弹性操作或事件的上下文。</param><param name="context">弹性操作或事件的结果。</param></member><member name="P:Polly.CircuitBreaker.CircuitBreakerPredicateArguments`1.Outcome"><summary>获取用户指定回调的结果。</summary></member><member name="P:Polly.CircuitBreaker.CircuitBreakerPredicateArguments`1.Context"><summary>
+    获取此事件的上下文。
+  </summary></member><member name="T:Polly.CircuitBreaker.CircuitBreakerStateProvider"><summary>
+            允许检索断路器状态。
+            </summary></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStateProvider.IsInitialized"><summary>
+    获取一个值，该值指示状态提供程序是否已初始化。
+    </summary><remarks>
+    初始化发生在断路器策略附加到此类时。当通过<see cref="M:Polly.ResiliencePipelineBuilder.Build" />调用创建最终策略时，会发生这种情况。
+    </remarks></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStateProvider.CircuitState"><summary>
+            获取底层电路的状态。
+            </summary></member><member name="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions"><inheritdoc /></member><member name="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1"><summary>
+            断路器弹性策略的选项。
+            </summary><typeparam name="TResult">断路器策略处理的结果类型。</typeparam><remarks>
+            如果在任意时长（<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.SamplingDuration" />）的时间片内，导致处理异常的操作比例超过<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.FailureRatio" />，并且在该时间片内通过断路器的操作数量至少达到<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.MinimumThroughput" />，则断路器会断开。
+            <para>
+            断路器将在<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.BreakDuration" />期间保持断开状态。
+            在断路器断开期间，任何尝试执行的操作都将立即引发<see cref="T:Polly.CircuitBreaker.BrokenCircuitException" />异常，该异常包含导致断路器断开的异常。
+            </para><para>
+            如果在断开时长结束后首次执行的操作导致处理异常，则断路器将再次断开，持续另一个<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.BreakDuration" />；如果没有引发异常，则断路器将重置。
+            </para></remarks></member><member name="M:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1" /> 类的新实例。
+            </summary></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.FailureRatio"><summary>
+            获取或设置电路将断路时的故障与成功比率。
+            </summary><remarks>
+            介于 0 和 1（含）之间的数字。例如，0.5 表示如果 50% 或更多操作导致已处理的故障，则断开电路。
+            </remarks><value>一个大于 0 且不超过 1 的比率数字。默认值为 0.1（即 10%）。</value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.MinimumThroughput"><summary>
+    获取或设置最小吞吐量：在时间片内，至少必须有这么多操作通过断路器，统计才被视为显著，断路器才开始动作。
+    </summary><value>
+    默认值为 100。该值必须大于或等于 2。
+    </value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.SamplingDuration"><summary>
+            获取或设置评估失败率所依据的采样持续时间。
+            </summary><value>
+            默认值为30秒。值必须大于0.5秒。
+            </value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.BreakDuration"><summary>
+            获取或设置断路器在复位前保持开路的中断持续时间。
+            </summary><value>
+            默认值为5秒。值必须大于0.5秒。
+            </value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.BreakDurationGenerator"><summary>
+            获取或设置一个可选委托，用于动态生成中断持续时间。
+            </summary><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.ShouldHandle"><summary>
+    获取或设置一个谓词，该谓词确定是否应由断路器处理结果。
+    </summary><value>
+    默认值是一个谓词，该谓词处理除了<see cref="T:System.OperationCanceledException" />以外的任何异常时都会触发断路器。此属性是必需的。
+    </value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnClosed"><summary>
+            获取或设置当电路重置到 <see cref="F:Polly.CircuitBreaker.CircuitState.Closed" /> 状态时引发的事件。
+            </summary><remarks>
+            注册到此事件的回调是以最终一致性方式调用的。无法保证断路器在回调完成之前不会改变状态。如果需要了解断路器的最新状态，请使用 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStateProvider.CircuitState" /> 属性。
+            <para>
+            请注意，这些事件可能会在稍后异步执行，此时电路状态可能已不同于事件调用时的状态。但是，<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnOpened" />、<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnClosed" /> 和 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnHalfOpened" /> 事件的调用顺序始终得以维持，以确保状态转换的正确顺序。
+            </para></remarks><value>默认值是 <see langword="null" />。</value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnOpened"><summary>
+            获取或设置当电路转换为打开状态时引发的事件。
+            </summary><remarks>
+            注册到此事件的回调以最终一致性方式调用。无法保证断路器在回调完成之前不会更改状态。如果需要了解断路器的最新状态，请使用 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStateProvider.CircuitState" /> 属性。
+            <para>
+            请注意，这些事件可能会在日后异步执行，此时电路状态可能与事件调用时不同。但是，始终维护 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnOpened" />、<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnClosed" /> 和 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnHalfOpened" /> 事件的调用顺序，以确保正确的状态转换顺序。
+            </para></remarks><value>默认值为 <see langword="null" />。</value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnHalfOpened"><summary>
+        获取或设置电路转换为<see cref="F:Polly.CircuitBreaker.CircuitState.HalfOpen" />状态时引发的事件。
+    </summary><remarks>
+        注册到此事件的回调以最终一致性方式调用。不能保证在回调完成之前断路器不会更改状态。如果需要了解断路器的最新状态，请使用<see cref="P:Polly.CircuitBreaker.CircuitBreakerStateProvider.CircuitState" />属性。
+        <para>
+            请注意，这些事件可能会在稍后异步执行，此时电路状态可能已不再与事件调用时的状态相同。但是，<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnOpened" />、<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnClosed" />和<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnHalfOpened" />事件的调用顺序始终得到保持，以确保状态转换的顺序正确。
+        </para></remarks><value>默认值为<see langword="null" />。</value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.ManualControl"><summary>
+            获取或设置断路器的手动控制。
+            </summary><value>默认值为 <see langword="null" />。</value></member><member name="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.StateProvider"><summary>
+            获取或设置断路器状态提供程序。
+            </summary><value>默认值为 <see langword="null" />。</value></member><member name="T:Polly.CircuitBreaker.CircuitState"><summary>
+            描述断路器电路可能处于的状态。
+            </summary></member><member name="F:Polly.CircuitBreaker.CircuitState.Closed"><summary>
+            关闭 - 当电路关闭时。允许执行操作。
+            </summary></member><member name="F:Polly.CircuitBreaker.CircuitState.Open"><summary>
+            打开 - 当自动控制器打开电路时（通常是由于最近的动作超过了某个故障阈值）。操作执行被阻止。
+            </summary></member><member name="F:Polly.CircuitBreaker.CircuitState.HalfOpen"><summary>
+            半开 - 当电路处于半开状态时，它正在从断开状态中恢复。
+            前一个断开状态的断开持续时间通常已经过去。
+            在半开状态下，可以执行操作，但这些操作的结果可能会以不同于正常操作的标准来处理，
+            以决定电路是否已充分恢复，可以重新置于闭合状态，
+            或者如果持续失败意味着电路应比正常操作更快地恢复到断开状态。
+            </summary></member><member name="F:Polly.CircuitBreaker.CircuitState.Isolated"><summary>
+            隔离（Isolated）- 当电路通过隔离调用进入固定打开状态时。
+            这手动隔离电路，阻止所有操作的执行，直到进行重置调用。
+            </summary></member><member name="T:Polly.CircuitBreaker.CircuitBehavior"><summary>
+            定义断路器行为。该类上的所有方法都在锁下执行。
+            </summary></member><member name="T:Polly.CircuitBreaker.CircuitStateController`1"><summary>
+            线程安全的控制器，用于保存和管理断路器状态转换。
+            </summary></member><member name="T:Polly.CircuitBreaker.ScheduledTaskExecutor"><summary>
+    计划任务执行器确保任务按照其计划顺序执行，而不是并发执行。
+    </summary></member><member name="T:Polly.CircuitBreaker.Health.HealthMetrics"><summary>
+            高级熔断器的健康指标。
+            这里的所有操作都是在锁下从<see cref="T:Polly.CircuitBreaker.CircuitStateController`1" />执行的，并且是线程安全的。
+            </summary></member><member name="T:Polly.CircuitBreaker.Health.RollingHealthMetrics"><inheritdoc /></member><member name="T:Polly.CircuitBreaker.Health.SingleHealthMetrics"><inheritdoc /></member><member name="T:Polly.CircuitBreaker.IsolatedCircuitException"><summary>
+            当电路被手动覆盖隔离（保持断开）时引发的异常。
+            </summary></member><member name="M:Polly.CircuitBreaker.IsolatedCircuitException.#ctor"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.IsolatedCircuitException" /> 类的新实例。
+            </summary></member><member name="M:Polly.CircuitBreaker.IsolatedCircuitException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.IsolatedCircuitException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Polly.CircuitBreaker.IsolatedCircuitException.#ctor(System.String,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.IsolatedCircuitException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">内部异常。</param></member><member name="M:Polly.CircuitBreaker.IsolatedCircuitException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.IsolatedCircuitException" /> 类的新实例。
+            </summary><param name="info">包含有关所引发异常的序列化对象数据的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</param><param name="context">包含有关源或目标的上下文信息的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。</param></member><member name="T:Polly.CircuitBreaker.OnCircuitClosedArguments`1"><summary>
+            由<see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnClosed" />事件使用的参数。
+            </summary><typeparam name="TResult">结果类型。</typeparam><remarks>
+            创建此结构时请始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.CircuitBreaker.OnCircuitClosedArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.Boolean)"><summary>
+    初始化 <see cref="T:Polly.CircuitBreaker.OnCircuitClosedArguments`1" /> 结构的新实例。
+    </summary><param name="outcome">弹性操作或事件发生的上下文。</param><param name="context">弹性操作或事件的结果。</param><param name="isManual">指示是否通过使用 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 手动关闭了断路器。</param></member><member name="P:Polly.CircuitBreaker.OnCircuitClosedArguments`1.Outcome"><summary>
+    获取导致断路器闭合的结果。
+    </summary></member><member name="P:Polly.CircuitBreaker.OnCircuitClosedArguments`1.Context"><summary>
+        获取此事件的上下文。
+    </summary></member><member name="P:Polly.CircuitBreaker.OnCircuitClosedArguments`1.IsManual"><summary>
+    获取一个值，该值指示是否通过使用 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 手动关闭了电路。
+    </summary></member><member name="T:Polly.CircuitBreaker.OnCircuitHalfOpenedArguments"><summary>
+            由 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnHalfOpened" /> 事件使用的参数。
+            </summary><remarks>
+            创建此结构时请始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.CircuitBreaker.OnCircuitHalfOpenedArguments.#ctor(Polly.ResilienceContext)"><summary>
+        初始化 <see cref="T:Polly.CircuitBreaker.OnCircuitHalfOpenedArguments" /> 结构的新实例。
+    </summary><param name="context">上下文实例。</param></member><member name="P:Polly.CircuitBreaker.OnCircuitHalfOpenedArguments.Context"><summary>
+        获取与用户提供的回调的执行相关联的上下文。
+    </summary></member><member name="T:Polly.CircuitBreaker.OnCircuitOpenedArguments`1"><summary>
+    由 <see cref="P:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1.OnOpened" /> 事件使用的参数。
+    </summary><typeparam name="TResult">结果类型。</typeparam><remarks>
+    在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.CircuitBreaker.OnCircuitOpenedArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.TimeSpan,System.Boolean)"><summary>
+            初始化 <see cref="T:Polly.CircuitBreaker.OnCircuitOpenedArguments`1" /> 结构的新实例。
+            </summary><param name="outcome">发生弹性操作或事件的上下文。</param><param name="context">弹性操作或事件的结果。</param><param name="breakDuration">中断的持续时间。</param><param name="isManual">指示是否通过使用 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 手动打开了断路器。</param></member><member name="P:Polly.CircuitBreaker.OnCircuitOpenedArguments`1.Outcome"><summary>
+            获取导致电路打开的结果。
+            </summary></member><member name="P:Polly.CircuitBreaker.OnCircuitOpenedArguments`1.Context"><summary>
+            获取此事件的上下文。
+            </summary></member><member name="P:Polly.CircuitBreaker.OnCircuitOpenedArguments`1.BreakDuration"><summary>
+            获取中断持续时间。
+            </summary></member><member name="P:Polly.CircuitBreaker.OnCircuitOpenedArguments`1.IsManual"><summary>
+            获取一个值，指示是否通过使用<see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" />手动打开了断路器。
+            </summary></member><member name="T:Polly.CircuitBreakerResiliencePipelineBuilderExtensions"><summary>
+            针对 <see cref="T:Polly.ResiliencePipelineBuilder" /> 的断路器扩展。
+            </summary></member><member name="M:Polly.CircuitBreakerResiliencePipelineBuilderExtensions.AddCircuitBreaker(Polly.ResiliencePipelineBuilder,Polly.CircuitBreaker.CircuitBreakerStrategyOptions)"><summary>
+            向生成器添加断路器。
+            </summary><param name="builder">生成器实例。</param><param name="options">选项实例。</param><returns>一个已添加了断路器的生成器。</returns><remarks>
+            有关断路器的更多详细信息，请参阅 <see cref="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1" />。
+            <para>
+            如果通过此调用丢弃断路器，请确保使用 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" />，
+            并在不再使用断路器时释放手动控制实例。
+            </para></remarks><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.CircuitBreakerResiliencePipelineBuilderExtensions.AddCircuitBreaker``1(Polly.ResiliencePipelineBuilder{``0},Polly.CircuitBreaker.CircuitBreakerStrategyOptions{``0})"><summary>
+            向生成器添加断路器。
+            </summary><typeparam name="TResult">断路器处理的结果类型。</typeparam><param name="builder">生成器实例。</param><param name="options">选项实例。</param><returns>已添加断路器的生成器。</returns><remarks>
+            有关断路器的更多详细信息，请参阅 <see cref="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1" />。
+            <para>
+            如果通过此调用丢弃断路器，请确保使用 <see cref="T:Polly.CircuitBreaker.CircuitBreakerManualControl" /> 并在不再使用断路器时释放手动控制实例。
+            </para></remarks><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时抛出。</exception></member><member name="T:Polly.DelayBackoffType"><summary>
+            策略使用的退避类型。
+            </summary></member><member name="F:Polly.DelayBackoffType.Constant"><summary>
+            恒定回退类型。
+            </summary><example>
+            200毫秒、200毫秒、200毫秒，等等。
+            </example><remarks>
+            确保每次尝试都有恒定的回退。
+            </remarks></member><member name="F:Polly.DelayBackoffType.Linear"><summary>
+    线性退避类型。
+    </summary><example>
+    100毫秒，200毫秒，300毫秒，400毫秒等。
+    </example><remarks>
+    以线性方式生成退避。在抖动和指数增长引入的随机化不适当的情况下，线性增长允许对退避间隔进行更精确的控制。
+    </remarks></member><member name="F:Polly.DelayBackoffType.Exponential"><summary>
+            使用2的幂次的指数退避类型。
+            </summary><example>
+            200毫秒, 400毫秒, 800毫秒.
+            </example></member><member name="T:Polly.ExecutionRejectedException"><summary>
+            当策略拒绝执行委托时引发的异常。
+            <remarks>通常引发派生自该类型的更具体的异常。</remarks></summary></member><member name="M:Polly.ExecutionRejectedException.#ctor"><summary>
+            初始化 <see cref="T:Polly.ExecutionRejectedException" /> 类的新实例。
+            </summary></member><member name="M:Polly.ExecutionRejectedException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.ExecutionRejectedException" /> 类的新实例。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Polly.ExecutionRejectedException.#ctor(System.String,System.Exception)"><summary>
+    初始化 <see cref="T:Polly.ExecutionRejectedException" /> 类的新实例。
+    </summary><param name="message">描述错误的消息。</param><param name="inner">内部异常。</param></member><member name="M:Polly.ExecutionRejectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><summary>
+            初始化 <see cref="T:Polly.ExecutionRejectedException" /> 类的新实例。
+            </summary><param name="info">包含有关所引发异常的序列化对象数据的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。</param><param name="context">包含有关源或目标的上下文信息的 <see cref="T:System.Runtime.Serialization.StreamingContext" />。</param></member><member name="P:Polly.ExecutionRejectedException.TelemetrySource"><summary>
+    获取引发异常的策略的源（如果已知）。
+    </summary></member><member name="T:Polly.Fallback.FallbackActionArguments`1"><summary>
+            由 <see cref="P:Polly.Fallback.FallbackStrategyOptions`1.FallbackAction" /> 使用的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+            在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Fallback.FallbackActionArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+        初始化 <see cref="T:Polly.Fallback.FallbackActionArguments`1" /> 结构的新实例。
+    </summary><param name="outcome">弹性操作或事件发生的上下文。</param><param name="context">弹性操作或事件的结果。</param></member><member name="P:Polly.Fallback.FallbackActionArguments`1.Outcome"><summary>
+            获取应由回退处理的结果。
+            </summary></member><member name="P:Polly.Fallback.FallbackActionArguments`1.Context"><summary>
+    获取此事件的上下文。
+    </summary></member><member name="T:Polly.Fallback.FallbackPredicateArguments`1"><summary>
+    表示在回退处理场景中使用的参数。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+    创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Fallback.FallbackPredicateArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+            初始化 <see cref="T:Polly.Fallback.FallbackPredicateArguments`1" /> 结构的新实例。
+            </summary><param name="outcome">弹性操作或事件发生的上下文。</param><param name="context">弹性操作或事件的结果。</param></member><member name="P:Polly.Fallback.FallbackPredicateArguments`1.Outcome"><summary>
+            获取用户指定的回调的结果。
+            </summary></member><member name="P:Polly.Fallback.FallbackPredicateArguments`1.Context"><summary>
+            获取此事件的上下文。
+            </summary></member><member name="T:Polly.Fallback.FallbackStrategyOptions`1"><summary>
+            表示用于配置具有特定结果类型的回退弹性策略的选项。
+            </summary><typeparam name="TResult">结果类型。</typeparam></member><member name="M:Polly.Fallback.FallbackStrategyOptions`1.#ctor"><summary>
+        初始化 <see cref="T:Polly.Fallback.FallbackStrategyOptions`1" /> 类的新实例。
+    </summary></member><member name="P:Polly.Fallback.FallbackStrategyOptions`1.ShouldHandle"><summary>
+        获取或设置一个谓词，该谓词确定是否应针对给定结果执行回退。
+    </summary><value>
+        默认值是一个谓词，该谓词在除<see cref="T:System.OperationCanceledException" />之外的任何异常上进行回退。此属性是必需的。
+    </value></member><member name="P:Polly.Fallback.FallbackStrategyOptions`1.FallbackAction"><summary>
+    获取或设置当 <see cref="P:Polly.Fallback.FallbackStrategyOptions`1.ShouldHandle" /> 谓词评估为 true 时要执行的回退操作。
+    </summary><value>
+    默认值为 <see langword="null" />。此属性是必需的。
+    </value></member><member name="P:Polly.Fallback.FallbackStrategyOptions`1.OnFallback"><summary>
+            获取或设置在回退发生时所引发的事件委托。
+            </summary><value>
+            默认值为 <see langword="null" /> 实例。
+            </value></member><member name="T:Polly.Fallback.OnFallbackArguments`1"><summary>
+    表示在回退处理场景中使用的参数。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+    在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Fallback.OnFallbackArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+            初始化 <see cref="T:Polly.Fallback.OnFallbackArguments`1" /> 结构的新实例。
+            </summary><param name="context">弹性操作或事件的结果。</param><param name="outcome">弹性操作或事件发生的上下文。</param></member><member name="P:Polly.Fallback.OnFallbackArguments`1.Outcome"><summary>
+            获取导致执行回退的结果。
+            </summary></member><member name="P:Polly.Fallback.OnFallbackArguments`1.Context"><summary>
+            获取此事件的上下文。
+            </summary></member><member name="T:Polly.FallbackResiliencePipelineBuilderExtensions"><summary>
+            用于向 <see cref="T:Polly.ResiliencePipelineBuilder" /> 添加回退的扩展方法。
+            </summary></member><member name="M:Polly.FallbackResiliencePipelineBuilderExtensions.AddFallback``1(Polly.ResiliencePipelineBuilder{``0},Polly.Fallback.FallbackStrategyOptions{``0})"><summary>
+            向生成器添加具有指定选项的回退弹性策略。
+            </summary><typeparam name="TResult">结果类型。</typeparam><param name="builder">弹性管道生成器。</param><param name="options">用于配置回退弹性策略的选项。</param><returns>已添加回退策略的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时抛出。</exception></member><member name="T:Polly.Hedging.Utils.HedgingExecutionContext`1"><summary>
+            与对冲弹性策略的执行相关联的上下文。
+            它持有所有已执行的对冲任务（主要和次要）的资源，并负责资源的释放。
+            </summary></member><member name="T:Polly.Hedging.Controller.TaskExecution`1"><summary>
+             表示单个对冲尝试执行及其所有必要资源。这些资源包括：
+            
+             <list type="bullet"><item>
+             与此执行关联的独立 <see cref="T:Polly.ResilienceContext" /> 实例。
+             一个例外是主任务，其中主上下文被重用。
+             </item><item>
+             与执行关联的取消令牌。
+             </item></list></summary></member><member name="P:Polly.Hedging.Controller.TaskExecution`1.ExecutionTaskSafe"><summary>
+            获取表示对冲任务执行的任务。
+            </summary><remarks>
+            此属性在<see cref="T:Polly.Hedging.Controller.TaskExecution`1" />初始化后非空。
+            等待此任务永远不会抛出异常，因为所有异常都被捕获并存储到<see cref="P:Polly.Hedging.Controller.TaskExecution`1.Outcome" />属性中。
+            </remarks></member><member name="T:Polly.Hedging.HedgingActionGeneratorArguments`1"><summary>
+            表示在回退弹性策略中使用的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks><see cref="P:Polly.Hedging.HedgingActionGeneratorArguments`1.PrimaryContext" /> 表示由回退策略接收并用于执行主要操作的上下文。
+            为防止争用条件，回退策略将主要上下文克隆到 <see cref="P:Polly.Hedging.HedgingActionGeneratorArguments`1.ActionContext" /> 中，并使用它来执行回退操作。
+            每个回退操作都会获得从主要上下文克隆的自身上下文。
+            <para>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </para></remarks></member><member name="M:Polly.Hedging.HedgingActionGeneratorArguments`1.#ctor(Polly.ResilienceContext,Polly.ResilienceContext,System.Int32,System.Func{Polly.ResilienceContext,System.Threading.Tasks.ValueTask{Polly.Outcome{`0}}})"><summary>
+            初始化 <see cref="T:Polly.Hedging.HedgingActionGeneratorArguments`1" /> 结构的新实例。
+            </summary><param name="primaryContext">对冲策略接收到的主上下文。</param><param name="actionContext">从主上下文克隆的操作上下文。</param><param name="attemptNumber">从零开始的对冲尝试次数。</param><param name="callback">传递给对冲策略的回调。</param></member><member name="P:Polly.Hedging.HedgingActionGeneratorArguments`1.PrimaryContext"><summary>
+            获取对冲策略接收的主要弹性上下文。
+            </summary></member><member name="P:Polly.Hedging.HedgingActionGeneratorArguments`1.ActionContext"><summary>
+            获取将用于备用操作的操作上下文。
+            </summary><remarks>
+            此上下文是从<see cref="P:Polly.Hedging.HedgingActionGeneratorArguments`1.PrimaryContext" />克隆的。
+            </remarks></member><member name="P:Polly.Hedging.HedgingActionGeneratorArguments`1.AttemptNumber"><summary>
+    获取从零开始的对冲尝试编号。
+    </summary></member><member name="P:Polly.Hedging.HedgingActionGeneratorArguments`1.Callback"><summary>
+    获取传递给对冲策略的回调。
+    </summary></member><member name="T:Polly.Hedging.HedgingDelayGeneratorArguments"><summary>
+            由对冲延迟生成器使用的参数。
+            </summary><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Hedging.HedgingDelayGeneratorArguments.#ctor(Polly.ResilienceContext,System.Int32)"><summary>
+            初始化 <see cref="T:Polly.Hedging.HedgingDelayGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行关联的上下文。</param><param name="attemptNumber">从零开始的对冲尝试次数。</param></member><member name="P:Polly.Hedging.HedgingDelayGeneratorArguments.Context"><summary>
+            获取与用户提供的回调执行相关联的上下文。
+            </summary></member><member name="P:Polly.Hedging.HedgingDelayGeneratorArguments.AttemptNumber"><summary>
+            获取从零开始的对冲尝试编号。
+            </summary></member><member name="T:Polly.Hedging.HedgingPredicateArguments`1"><summary>
+    表示在 Hedging 处理场景中使用的参数。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+    创建此结构时请始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Hedging.HedgingPredicateArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+        初始化 <see cref="T:Polly.Hedging.HedgingPredicateArguments`1" /> 结构的新实例。
+    </summary><param name="outcome">弹性操作或事件发生的上下文。</param><param name="context">弹性操作或事件的结果。</param></member><member name="M:Polly.Hedging.HedgingPredicateArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.Int32)"><summary>
+    初始化 <see cref="T:Polly.Hedging.HedgingPredicateArguments`1" /> 结构的新实例。
+    </summary><param name="outcome">弹性操作或事件发生的上下文。</param><param name="context">弹性操作或事件的结果。</param><param name="attemptNumber">从零开始的尝试次数。</param></member><member name="P:Polly.Hedging.HedgingPredicateArguments`1.Outcome"><summary>
+            获取用户指定回调的结果。
+            </summary></member><member name="P:Polly.Hedging.HedgingPredicateArguments`1.Context"><summary>
+            获取此事件的上下文。
+            </summary></member><member name="P:Polly.Hedging.HedgingPredicateArguments`1.AttemptNumber"><summary>
+            获取从零开始的尝试次数。
+            </summary></member><member name="T:Polly.Hedging.HedgingStrategyOptions`1"><summary>
+    对冲策略选项。
+    </summary><typeparam name="TResult">这些对冲选项处理的结果类型。</typeparam></member><member name="M:Polly.Hedging.HedgingStrategyOptions`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.Hedging.HedgingStrategyOptions`1" /> 类的新实例。
+            </summary></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.Delay"><summary>
+            获取或设置生成新的对冲操作前的最大等待时间。
+            </summary><remarks>
+            您可以使用 <see cref="F:System.TimeSpan.Zero" /> 立即创建所有对冲操作（<see cref="P:Polly.Hedging.HedgingStrategyOptions`1.MaxHedgedAttempts" /> 的值）
+            或使用 <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" /> 强制对冲策略在旧操作完成之前永不创建新操作。
+            <para> 如果您希望对对冲延迟定制有更大的控制，请使用 <see cref="P:Polly.Hedging.HedgingStrategyOptions`1.DelayGenerator" />。</para></remarks><value>
+            默认值为 2 秒。
+            </value></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.MaxHedgedAttempts"><summary>
+            获取或设置除了原始操作之外要使用的对冲操作的最大数量。
+            </summary><value>
+            默认值为1。该值必须大于或等于1，并且小于或等于10。
+            </value></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.ShouldHandle"><summary>
+            获取或设置一个谓词，该谓词确定是否应针对给定结果执行对冲。
+            </summary><value>
+            默认值是一个谓词，该谓词对除 <see cref="T:System.OperationCanceledException" /> 之外的任何异常进行对冲。此属性是必需的。
+            </value></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.ActionGenerator"><summary>
+            获取或设置一个生成对冲操作的生成器。
+            </summary><value>
+            默认生成器执行传递给对冲弹性策略的原始回调。此属性是必需的。
+            </value></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.DelayGenerator"><summary>
+        获取或设置一个生成器，用于为每个对冲操作生成对冲延迟。
+    </summary><remarks><see cref="P:Polly.Hedging.HedgingStrategyOptions`1.DelayGenerator" /> 优先于 <see cref="P:Polly.Hedging.HedgingStrategyOptions`1.Delay" />。如果指定了前者，则忽略 <see cref="P:Polly.Hedging.HedgingStrategyOptions`1.Delay" />。
+    </remarks><value>
+        默认值为 <see langword="null" />。
+    </value></member><member name="P:Polly.Hedging.HedgingStrategyOptions`1.OnHedging"><summary>
+    获取或设置执行对冲时引发的事件。
+    </summary><remarks>
+    当当前尝试结果不成功且 <see cref="P:Polly.Hedging.HedgingStrategyOptions`1.ShouldHandle" /> 谓词返回 <see langword="true" />，或者当前尝试未在 <see cref="P:Polly.Hedging.HedgingStrategyOptions`1.Delay" /> 内完成时，将执行对冲。
+    </remarks><value>
+    默认值为 <see langword="null" />。
+    </value></member><member name="T:Polly.Hedging.OnHedgingArguments`1"><summary>
+            表示由对冲事件使用的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks><see cref="P:Polly.Hedging.OnHedgingArguments`1.PrimaryContext" /> 表示由对冲策略接收并用于执行主要操作的上下文。
+            为了避免竞争条件，对冲策略然后将主要上下文克隆到 <see cref="P:Polly.Hedging.OnHedgingArguments`1.ActionContext" /> 中，并使用它来执行对冲操作。
+            每个对冲操作都有自己的上下文，该上下文是从主要上下文克隆而来的。
+            <para>
+            始终使用构造函数创建此结构体，否则我们不保证二进制兼容性。
+            </para></remarks></member><member name="M:Polly.Hedging.OnHedgingArguments`1.#ctor(Polly.ResilienceContext,Polly.ResilienceContext,System.Int32)"><summary>
+            初始化 <see cref="T:Polly.Hedging.OnHedgingArguments`1" /> 结构的新实例。
+            </summary><param name="primaryContext">对冲策略收到的主上下文。</param><param name="actionContext">操作上下文。从主上下文克隆而来。</param><param name="attemptNumber">从零开始的对冲尝试次数。</param></member><member name="P:Polly.Hedging.OnHedgingArguments`1.PrimaryContext"><summary>
+            获取对冲策略接收的主要弹性上下文。
+            </summary></member><member name="P:Polly.Hedging.OnHedgingArguments`1.ActionContext"><summary>
+    获取将用于备用操作的操作上下文。
+    </summary><remarks>
+    此上下文是从 <see cref="P:Polly.Hedging.OnHedgingArguments`1.PrimaryContext" /> 克隆的。
+    </remarks></member><member name="P:Polly.Hedging.OnHedgingArguments`1.AttemptNumber"><summary>
+            获取从零开始的对冲尝试次数。
+            </summary></member><member name="T:Polly.HedgingResiliencePipelineBuilderExtensions"><summary>
+            用于向<see cref="T:Polly.ResiliencePipelineBuilder" />添加hedging的扩展方法。
+            </summary></member><member name="M:Polly.HedgingResiliencePipelineBuilderExtensions.AddHedging``1(Polly.ResiliencePipelineBuilder{``0},Polly.Hedging.HedgingStrategyOptions{``0})"><summary>
+            使用提供的选项向构建器添加对冲策略。
+            </summary><typeparam name="TResult">结果类型。</typeparam><param name="builder">复原管道构建器。</param><param name="options">用于配置对冲策略的选项。</param><returns>已添加对冲策略的构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="T:Polly.LegacySupport"><summary>
+    对旧版Polly的旧式支持。
+    </summary><remarks>
+    此类由旧版Polly基础设施使用，不应由用户代码直接使用。
+    </remarks></member><member name="M:Polly.LegacySupport.SetProperties(Polly.ResilienceProperties,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object}@)"><summary>
+    更改 <see cref="T:Polly.ResilienceProperties" /> 实例的基础属性。
+    </summary><param name="resilienceProperties">弹性属性。</param><param name="properties">要使用的属性。</param><param name="oldProperties">由 <paramref name="resilienceProperties" /> 使用的旧属性。</param><remarks>
+    此方法由旧版 Polly 基础结构使用，不应由用户代码直接使用。
+    </remarks></member><member name="T:Polly.Outcome"><summary>
+            生成 <see cref="T:Polly.Outcome`1" /> 的实例。
+            </summary></member><member name="M:Polly.Outcome.FromResult``1(``0)"><summary>
+            返回一个包含给定 <paramref name="value" /> 的 <see cref="T:Polly.Outcome`1" />。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><param name="value">结果值。</param><returns>一个 <see cref="T:Polly.Outcome`1" /> 的实例。</returns></member><member name="M:Polly.Outcome.FromResultAsValueTask``1(``0)"><summary>
+            返回一个 <see cref="T:Polly.Outcome`1" />，其给定的 <paramref name="value" /> 包装为 <see cref="T:System.Threading.Tasks.ValueTask`1" />。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><param name="value">结果值。</param><returns>一个已完成的 <see cref="T:System.Threading.Tasks.ValueTask`1" />，该任务生成 <see cref="T:Polly.Outcome`1" />。</returns></member><member name="M:Polly.Outcome.FromException``1(System.Exception)"><summary>
+            返回包含给定异常的<see cref="T:Polly.Outcome`1" />。
+            </summary><typeparam name="TResult">结果类型。</typeparam><param name="exception">异常。</param><returns>一个<see cref="T:Polly.Outcome`1" />的实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="exception" />为<see langword="null" />时引发。</exception></member><member name="M:Polly.Outcome.FromExceptionAsValueTask``1(System.Exception)"><summary>
+            返回一个 <see cref="T:Polly.Outcome`1" />，其中给定的 <paramref name="exception" /> 被包装为 <see cref="T:System.Threading.Tasks.ValueTask`1" />。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><param name="exception">异常。</param><returns>一个已完成的 <see cref="T:System.Threading.Tasks.ValueTask`1" />，它生成 <see cref="T:Polly.Outcome`1" />。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="exception" /> 为 <see langword="null" /> 时引发。</exception></member><member name="T:Polly.Outcome`1"><summary>
+    表示操作的结果，该结果可以是类型 <typeparamref name="TResult" /> 的结果或异常。
+    </summary><typeparam name="TResult">操作的结果类型。</typeparam><remarks>
+    在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="P:Polly.Outcome`1.Exception"><summary>
+            获取操作期间发生的异常（如果有的话）。
+            </summary></member><member name="P:Polly.Outcome`1.ExceptionDispatchInfo"><summary>
+            获取与异常关联的 <see cref="P:Polly.Outcome`1.ExceptionDispatchInfo" />（如果有的话）。
+            </summary></member><member name="P:Polly.Outcome`1.Result"><summary>
+            获取操作的结果（如果有）。
+            </summary></member><member name="P:Polly.Outcome`1.HasResult"><summary>
+        获取一个值，指示操作是否产生了结果。
+    </summary><remarks>
+        即使结果是 void，也返回 <see langword="true" />。请使用 <see cref="P:Polly.Outcome`1.IsVoidResult" /> 检查 void 结果。
+    </remarks></member><member name="P:Polly.Outcome`1.IsVoidResult"><summary>
+            获取一个值，该值指示操作是否生成了 void 结果。
+            </summary></member><member name="M:Polly.Outcome`1.ThrowIfException"><summary>
+            如果操作引发了异常，则抛出该异常。
+            </summary><remarks>
+            如果操作产生了结果，此方法不执行任何操作。抛出的异常将保留其原始堆栈跟踪。
+            </remarks></member><member name="M:Polly.Outcome`1.TryGetResult(`0@)"><summary>
+    尝试获取结果（如果可用）。
+    </summary><param name="result">结果的输出参数。</param><returns><see langword="true" /> 如果结果可用；否则为 <see langword="false" />。</returns></member><member name="M:Polly.Outcome`1.ToString"><summary>
+            返回结果的字符串表示形式。
+            </summary><returns>
+            如果结果是异常，则返回异常消息；否则返回结果的字符串表示形式。
+            </returns></member><member name="T:Polly.PredicateBuilder"><summary>
+            定义用于创建异常谓词的生成器。
+            </summary></member><member name="T:Polly.PredicateBuilder`1"><summary>
+            定义用于创建 <typeparamref name="TResult" /> 和 <see cref="T:System.Exception" /> 组合的谓词的生成器。
+            </summary><typeparam name="TResult">结果的类型。</typeparam></member><member name="M:Polly.PredicateBuilder`1.op_Implicit(Polly.PredicateBuilder{`0})~System.Func{Polly.Retry.RetryPredicateArguments{`0},System.Threading.Tasks.ValueTask{System.Boolean}}"><summary>
+            将 <paramref name="builder" /> 转换为 <see cref="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle" /> 委托的运算符。
+            </summary><param name="builder">生成器实例。</param></member><member name="M:Polly.PredicateBuilder`1.op_Implicit(Polly.PredicateBuilder{`0})~System.Func{Polly.Hedging.HedgingPredicateArguments{`0},System.Threading.Tasks.ValueTask{System.Boolean}}"><summary>
+            将<paramref name="builder" />转换为<see cref="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle" />委托的运算符。
+            </summary><param name="builder">生成器实例。</param></member><member name="M:Polly.PredicateBuilder`1.op_Implicit(Polly.PredicateBuilder{`0})~System.Func{Polly.Fallback.FallbackPredicateArguments{`0},System.Threading.Tasks.ValueTask{System.Boolean}}"><summary>
+            将<paramref name="builder" />转换为<see cref="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle" />委托的运算符。
+            </summary><param name="builder">该生成器实例。</param></member><member name="M:Polly.PredicateBuilder`1.op_Implicit(Polly.PredicateBuilder{`0})~System.Func{Polly.CircuitBreaker.CircuitBreakerPredicateArguments{`0},System.Threading.Tasks.ValueTask{System.Boolean}}"><summary>
+    将<paramref name="builder" />转换为<see cref="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle" />委托的操作符。
+    </summary><param name="builder">生成器实例。</param></member><member name="M:Polly.PredicateBuilder`1.Handle``1"><summary>
+            添加用于处理指定类型异常的谓词。
+            </summary><typeparam name="TException">要处理的异常类型。</typeparam><returns>返回相同的 <see cref="T:Polly.PredicateBuilder`1" /> 实例以进行链式调用。</returns></member><member name="M:Polly.PredicateBuilder`1.Handle``1(System.Func{``0,System.Boolean})"><summary>
+    为处理指定类型的异常添加谓词。
+    </summary><typeparam name="TException">要处理的异常类型。</typeparam><param name="predicate">用于处理异常的谓词函数。</param><returns>返回相同的 <see cref="T:Polly.PredicateBuilder`1" /> 实例以便链式调用。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="predicate" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.PredicateBuilder`1.HandleInner``1"><summary>
+            添加用于处理指定类型的内部异常的谓词。
+            </summary><typeparam name="TException">要处理的内部异常的类型。</typeparam><returns>返回同一个 <see cref="T:Polly.PredicateBuilder`1" /> 实例，以便链式调用。</returns><remarks>
+            此方法还将处理在 <see cref="T:System.Exception" /> 的 <see cref="P:System.Exception.InnerException" /> 中找到的任何异常，或处理在 <see cref="T:System.AggregateException" /> 中任何嵌套级别的异常。
+            </remarks></member><member name="M:Polly.PredicateBuilder`1.HandleInner``1(System.Func{``0,System.Boolean})"><summary>
+            添加一个谓词，用于处理指定类型的内部异常。
+            </summary><typeparam name="TException">要处理的内部异常的类型。</typeparam><param name="predicate">用于处理内部异常的谓词函数。</param><returns>返回相同的 <see cref="T:Polly.PredicateBuilder`1" /> 实例，以便进行链式调用。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="predicate" /> 为 <see langword="null" /> 时抛出。</exception><remarks>
+            此方法还将处理在 <see cref="T:System.Exception" /> 的 <see cref="P:System.Exception.InnerException" /> 中找到的任何异常，或者在 <see cref="T:System.AggregateException" /> 内的任意嵌套级别中找到的异常。
+            </remarks></member><member name="M:Polly.PredicateBuilder`1.HandleResult(System.Func{`0,System.Boolean})"><summary>
+            添加用于处理结果的谓词。
+            </summary><param name="predicate">用于处理结果的谓词函数。</param><returns>返回相同的 <see cref="T:Polly.PredicateBuilder`1" /> 实例，用于链式调用。</returns></member><member name="M:Polly.PredicateBuilder`1.HandleResult(`0,System.Collections.Generic.IEqualityComparer{`0})"><summary>
+            添加一个用于处理具有特定值的结果的谓词。
+    </summary><param name="result">要处理的结果值。</param><param name="comparer">用于比较结果的比较器。如果 <see langword="null" />，则使用默认比较器。</param><returns>返回 <see cref="T:Polly.PredicateBuilder`1" /> 的同一实例以进行链式调用。</returns></member><member name="M:Polly.PredicateBuilder`1.Build"><summary>
+            构建谓词。
+            </summary><returns>谓词委托的一个实例。</returns><exception cref="T:System.InvalidOperationException">当使用此生成器未配置任何谓词时引发。</exception><remarks>
+            如果任何配置的谓词返回<see langword="true" />，则返回的谓词将返回<see langword="true" />。
+            请注意，如果在此生成器中注册太多谓词，则会产生性能损失。在这种情况下，最好手动创建自己的谓词作为委托。
+            </remarks></member><member name="T:Polly.PredicateResult"><summary>
+            表示可以在谓词中使用的结果的类。
+            </summary></member><member name="M:Polly.PredicateResult.True"><summary>
+            返回一个已完成的 <see cref="T:System.Threading.Tasks.ValueTask`1" />，该对象返回 <see langword="true" /> 值。
+            </summary><returns>已完成 <see cref="T:System.Threading.Tasks.ValueTask`1" /> 的新实例。</returns></member><member name="M:Polly.PredicateResult.False"><summary>
+            返回一个完成的 <see cref="T:System.Threading.Tasks.ValueTask`1" />，该任务返回 <see langword="false" /> 值。
+            </summary><returns>一个完成的 <see cref="T:System.Threading.Tasks.ValueTask`1" /> 的新实例。</returns></member><member name="T:Polly.Registry.ConfigureBuilderContext`1"><summary>
+            由 <see cref="T:Polly.Registry.ResiliencePipelineRegistry`1" /> 使用的上下文。
+            </summary><typeparam name="TKey">键的类型。</typeparam></member><member name="P:Polly.Registry.ConfigureBuilderContext`1.PipelineKey"><summary>
+            获取正在创建的管道的管道键。
+            </summary></member><member name="P:Polly.Registry.ConfigureBuilderContext`1.BuilderName"><summary>
+    获取用于创建策略的构建器的名称。
+    </summary></member><member name="P:Polly.Registry.ConfigureBuilderContext`1.BuilderInstanceName"><summary>
+    获取用于创建策略的构建器的实例名称。
+    </summary></member><member name="M:Polly.Registry.ConfigureBuilderContext`1.AddReloadToken(System.Threading.CancellationToken)"><summary>
+            当 <paramref name="cancellationToken" /> 被取消时，重新加载管道。
+            </summary><param name="cancellationToken">当被取消时触发管道重新加载的取消令牌。</param><remarks>
+            你可以向此上下文添加多个重新加载令牌。不可取消或已取消的令牌将被忽略。
+            </remarks></member><member name="M:Polly.Registry.ConfigureBuilderContext`1.OnPipelineDisposed(System.Action)"><summary>
+            注册一个回调，当正在配置的管道实例被释放时调用。
+            </summary><param name="callback">回调委托。</param></member><member name="T:Polly.Registry.RegistryPipelineComponentBuilder`2"><summary>
+            构建注册表使用的 <see cref="T:Polly.Utils.Pipeline.PipelineComponent" />。
+            </summary></member><member name="M:Polly.Registry.RegistryPipelineComponentBuilder`2.#ctor(System.Func{`0},`1,System.String,System.String,System.Action{`0,Polly.Registry.ConfigureBuilderContext{`1}})"><summary>
+            生成供注册表使用的 <see cref="T:Polly.Utils.Pipeline.PipelineComponent" />。
+            </summary></member><member name="T:Polly.Registry.ResiliencePipelineProvider`1"><summary>
+            表示一个可通过 <typeparamref name="TKey" /> 访问的弹性管道的提供程序。
+            </summary><typeparam name="TKey">键的类型。</typeparam></member><member name="M:Polly.Registry.ResiliencePipelineProvider`1.GetPipeline(`0)"><summary>
+    使用指定的键从提供程序中检索弹性管道。
+    </summary><param name="key">用于标识弹性管道的键。</param><returns>与指定键关联的弹性管道。</returns><exception cref="T:System.Collections.Generic.KeyNotFoundException">当未找到指定键的弹性管道时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineProvider`1.GetPipeline``1(`0)"><summary>
+    使用指定键从提供程序中检索泛型复原管道。
+    </summary><typeparam name="TResult">复原管道处理的结果类型。</typeparam><param name="key">用于标识复原管道的键。</param><returns>与指定键关联的复原管道。</returns><exception cref="T:System.Collections.Generic.KeyNotFoundException">当未找到指定键的复原管道时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineProvider`1.TryGetPipeline(`0,Polly.ResiliencePipeline@)"><summary>
+    尝试使用指定的键从提供程序中获取弹性管道。
+    </summary><param name="key">用于标识弹性管道的键。</param><param name="pipeline">如果找到，则为输出弹性管道；否则为 <see langword="null" />。</param><returns>如果找到管道，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Polly.Registry.ResiliencePipelineProvider`1.TryGetPipeline``1(`0,Polly.ResiliencePipeline{``0}@)"><summary>
+    尝试使用指定的键从提供程序中获取泛型弹性管道。
+    </summary><typeparam name="TResult">弹性管道处理的结果类型。</typeparam><param name="key">用于标识弹性管道的键。</param><param name="pipeline">如果找到，则为输出弹性管道；否则为 <see langword="null" />。</param><returns>如果找到管道，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Polly.Registry.ResiliencePipelineRegistry`1"><summary>
+            表示一个可通过 <typeparamref name="TKey" /> 访问的弹性管道和构建器的注册表。
+            </summary><typeparam name="TKey">键的类型。</typeparam><remarks>
+            此类提供了一种使用 <typeparamref name="TKey" /> 类型的键来组织和管理多个弹性管道的方法。
+            <para>
+            此外，它还允许注册使用 <see cref="T:Polly.ResiliencePipelineBuilder" /> 配置管道的回调。这些回调在弹性管道尚未缓存且首次检索时被调用。
+            </para></remarks></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.#ctor"><summary>
+    使用默认比较器初始化 <see cref="T:Polly.Registry.ResiliencePipelineRegistry`1" /> 类的新实例。
+    </summary></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.#ctor(Polly.Registry.ResiliencePipelineRegistryOptions{`0})"><summary>
+            使用自定义生成器工厂和比较器初始化<see cref="T:Polly.Registry.ResiliencePipelineRegistry`1" />类的新实例。
+            </summary><param name="options">注册表选项。</param><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当<paramref name="options" />无效时引发。</exception><exception cref="T:System.ArgumentNullException">当<paramref name="options" />为<see langword="null" />时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.TryGetPipeline``1(`0,Polly.ResiliencePipeline{``0}@)"><inheritdoc /></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.TryGetPipeline(`0,Polly.ResiliencePipeline@)"><inheritdoc /></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.GetOrAddPipeline(`0,System.Action{Polly.ResiliencePipelineBuilder})"><summary>
+    获取现有管道或使用<paramref name="configure" />回调创建一个新管道。
+    </summary><param name="key">用于标识弹性管道的键。</param><param name="configure">配置管道生成器的回调。</param><returns>管道的实例。</returns><exception cref="T:System.ObjectDisposedException">当注册表已被释放时抛出。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.GetOrAddPipeline(`0,System.Action{Polly.ResiliencePipelineBuilder,Polly.Registry.ConfigureBuilderContext{`0}})"><summary>
+            获取现有管道或使用<paramref name="configure" />回调创建新管道。
+            </summary><param name="key">用于标识韧性管道的键。</param><param name="configure">用于配置管道生成器的回调。</param><returns>管道的实例。</returns><exception cref="T:System.ObjectDisposedException">当注册表已被释放时抛出。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.GetOrAddPipeline``1(`0,System.Action{Polly.ResiliencePipelineBuilder{``0}})"><summary>
+            获取现有管道或使用<paramref name="configure" />回调创建新管道。
+            </summary><typeparam name="TResult">弹性管道处理的结果类型。</typeparam><param name="key">用于标识弹性管道的键。</param><param name="configure">配置管道生成器的回调。</param><returns>管道的实例。</returns><exception cref="T:System.ObjectDisposedException">当注册表已释放时抛出。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.GetOrAddPipeline``1(`0,System.Action{Polly.ResiliencePipelineBuilder{``0},Polly.Registry.ConfigureBuilderContext{`0}})"><summary>
+            使用 <paramref name="configure" /> 回调获取现有管道或创建新管道。
+            </summary><typeparam name="TResult">弹性管道处理的结果类型。</typeparam><param name="key">用于标识弹性管道的键。</param><param name="configure">配置管道生成器的回调。</param><returns>管道的实例。</returns><exception cref="T:System.ObjectDisposedException">当注册表已释放时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.TryAddBuilder(`0,System.Action{Polly.ResiliencePipelineBuilder,Polly.Registry.ConfigureBuilderContext{`0}})"><summary>
+            尝试向注册表中添加弹性管道构建器。
+            </summary><param name="key">用于标识管道构建器的键。</param><param name="configure">配置弹性管道构建器的操作。</param><returns>如果构建器成功添加，则为<see langword="true" />，否则为<see langword="false" />。</returns><remarks>
+            当你想在首次访问时按需创建管道时，请使用此方法。
+            </remarks><exception cref="T:System.ArgumentNullException">当<paramref name="configure" />为<see langword="null" />时引发。</exception><exception cref="T:System.ObjectDisposedException">当注册表已被释放时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.TryAddBuilder``1(`0,System.Action{Polly.ResiliencePipelineBuilder{``0},Polly.Registry.ConfigureBuilderContext{`0}})"><summary>
+            尝试向注册表添加通用复原管道生成器。
+            </summary><typeparam name="TResult">复原管道处理的结果类型。</typeparam><param name="key">用于标识管道生成器的键。</param><param name="configure">配置复原管道生成器的操作。</param><returns>如果生成器成功添加则为<see langword="true" />，否则为<see langword="false" />。</returns><remarks>
+            在希望首次访问时按需创建管道时使用此方法。
+            </remarks><exception cref="T:System.ArgumentNullException">当<paramref name="configure" />为<see langword="null" />时引发。</exception><exception cref="T:System.ObjectDisposedException">当注册表已被释放时引发。</exception></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.Dispose"><summary>
+    释放由该生成器创建的所有弹性管道所持有的资源。
+    </summary><remarks>
+    在释放之后，仍然在生成器外部使用的所有弹性管道都会被释放，并且不能再被使用。
+    </remarks></member><member name="M:Polly.Registry.ResiliencePipelineRegistry`1.DisposeAsync"><summary>
+            释放由此生成器创建的所有复原管道所持有的资源。
+            </summary><returns>
+            返回表示异步释放操作的任务。
+            </returns><remarks>
+            释放后，所有仍在生成器外部使用的复原管道都将被释放，并且无法再使用。
+            </remarks></member><member name="T:Polly.Registry.ResiliencePipelineRegistryOptions`1"><summary>
+            由 <see cref="T:Polly.Registry.ResiliencePipelineRegistry`1" /> 使用的选项类。
+            </summary><typeparam name="TKey">注册表使用的键的类型。</typeparam></member><member name="P:Polly.Registry.ResiliencePipelineRegistryOptions`1.BuilderFactory"><summary>
+            获取或设置创建 <see cref="T:Polly.ResiliencePipelineBuilder" /> 实例的工厂方法。
+            </summary><value>
+            默认值是一个使用默认构造函数创建 <see cref="T:Polly.ResiliencePipelineBuilder" /> 新实例的函数。
+            </value></member><member name="P:Polly.Registry.ResiliencePipelineRegistryOptions`1.PipelineComparer"><summary>
+    获取或设置注册表用于检索弹性管道的比较器。
+    </summary><value>
+    默认值为 <see cref="P:System.Collections.Generic.EqualityComparer`1.Default" />。
+    </value></member><member name="P:Polly.Registry.ResiliencePipelineRegistryOptions`1.BuilderComparer"><summary>获取或设置注册表用于检索弹性管道生成器的比较器。</summary><value>默认值为 <see cref="P:System.Collections.Generic.EqualityComparer`1.Default" />。</value></member><member name="P:Polly.Registry.ResiliencePipelineRegistryOptions`1.InstanceNameFormatter"><summary>
+        获取或设置一个格式化程序，该格式化程序由注册表用于将 <typeparamref name="TKey" /> 格式化为表示构建器实例名称的字符串。
+    </summary><remarks>
+        对于复合键，请使用自定义格式化程序，以便为构建器和实例键设置不同的指标值。通常，管道可以具有相同的构建器名称和不同的实例名称。
+    </remarks><value>
+        默认值为 <see langword="null" />。
+    </value></member><member name="P:Polly.Registry.ResiliencePipelineRegistryOptions`1.BuilderNameFormatter"><summary>
+    获取或设置注册表用于将<typeparamref name="TKey" />格式化为表示生成器名称的字符串的格式化程序。
+    </summary><remarks>
+    如果希望生成器和策略键具有不同的指标值，请对复合键使用自定义格式化程序。通常，管道可以具有相同的生成器名称和不同的管道键。
+    </remarks><value>
+    默认值是一个格式化程序，它使用<see cref="M:System.Object.ToString" />方法格式化键。
+    </value></member><member name="T:Polly.ResilienceContext"><summary>
+            分配给 <see cref="T:Polly.ResiliencePipeline" /> 的单个执行上下文。当用户在 <see cref="T:Polly.ResiliencePipeline" /> 之上调用各种扩展时，该上下文会被手动或自动创建。每次执行后，上下文应被丢弃并返回到池中。
+            </summary><remarks>
+            不要在多次执行之间重复使用 <see cref="T:Polly.ResilienceContext" /> 实例。通过调用 <see cref="M:Polly.ResilienceContextPool.Get(System.Threading.CancellationToken)" /> 方法从池中获取 <see cref="T:Polly.ResilienceContext" />。使用完毕后，应通过调用 <see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" /> 方法将其返回到池中。
+            </remarks></member><member name="P:Polly.ResilienceContext.OperationKey"><summary>
+    获取当前执行调用站点的唯一键。
+    </summary><remarks>
+    弹性上下文实例通常在多个调用站点之间重用。
+    设置 <see cref="P:Polly.ResilienceContext.OperationKey" /> 以便日志记录和指标能够区分不同调用站点上策略实例的使用情况。
+    操作键值应具有低基数（即不要将诸如 <see cref="T:System.Guid" /> 的值分配给此属性）。
+    </remarks><value>默认值为 <see langword="null" />。</value></member><member name="P:Polly.ResilienceContext.CancellationToken"><summary>
+            获取与执行关联的<see cref="P:Polly.ResilienceContext.CancellationToken" />。
+            </summary></member><member name="P:Polly.ResilienceContext.IsSynchronous"><summary>
+            获取一个值，该值指示执行是否为同步。
+            </summary></member><member name="P:Polly.ResilienceContext.ResultType"><summary>
+            获取与执行关联的结果的类型。
+            </summary></member><member name="P:Polly.ResilienceContext.IsVoid"><summary>
+            获取一个值，该值指示执行是否表示 void 结果。
+            </summary></member><member name="P:Polly.ResilienceContext.ContinueOnCapturedContext"><summary>
+            获取一个值，该值指示执行是否应在捕获的上下文上继续。
+            </summary></member><member name="P:Polly.ResilienceContext.IsInitialized"><summary>
+            获取一个值，该值指示上下文是否已初始化。
+            </summary></member><member name="P:Polly.ResilienceContext.Properties"><summary>
+            获取附加到上下文的自定义属性。
+            </summary></member><member name="T:Polly.ResilienceContext.UnknownResult"><summary>
+            表示未知结果的标记类。
+            </summary></member><member name="T:Polly.ResilienceContextCreationArguments"><summary>
+            由 <see cref="T:Polly.ResilienceContextPool" /> 在创建 <see cref="T:Polly.ResilienceContext" /> 时使用的参数。
+            </summary></member><member name="M:Polly.ResilienceContextCreationArguments.#ctor(System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)"><summary>初始化 <see cref="T:Polly.ResilienceContextCreationArguments" /> 结构的新实例。</summary><param name="operationKey">操作键（如果有的话）。</param><param name="continueOnCapturedContext">指示是否在已捕获的上下文中继续的值。</param><param name="cancellationToken">取消令牌。</param></member><member name="P:Polly.ResilienceContextCreationArguments.OperationKey"><summary>
+            获取操作键（如果有）。
+            </summary></member><member name="P:Polly.ResilienceContextCreationArguments.ContinueOnCapturedContext"><summary>
+            获取一个值，指示是否在捕获的上下文（如果有）上继续。
+            </summary></member><member name="P:Polly.ResilienceContextCreationArguments.CancellationToken"><summary>
+            获取取消令牌。
+            </summary></member><member name="T:Polly.ResilienceContextPool"><summary><see cref="T:Polly.ResilienceContext" /> 实例的池。
+            </summary></member><member name="P:Polly.ResilienceContextPool.Shared"><summary>
+            获取共享池实例。
+            </summary></member><member name="M:Polly.ResilienceContextPool.Get(System.Threading.CancellationToken)"><summary>
+            从池中获取一个<see cref="T:Polly.ResilienceContext" />实例。
+            </summary><param name="cancellationToken">取消令牌。</param><returns>一个<see cref="T:Polly.ResilienceContext" />实例。</returns><remarks>
+            执行完成后，你应该通过调用<see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" />方法将<see cref="T:Polly.ResilienceContext" />返回到池中。
+            </remarks></member><member name="M:Polly.ResilienceContextPool.Get(System.String,System.Threading.CancellationToken)"><summary>
+            从池中获取一个<see cref="T:Polly.ResilienceContext" />实例。
+            </summary><param name="operationKey">与上下文关联的操作键。</param><param name="cancellationToken">取消令牌。</param><returns>一个<see cref="T:Polly.ResilienceContext" />的实例。</returns><remarks>
+            执行完成后，您应通过调用<see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" />方法将<see cref="T:Polly.ResilienceContext" />返回到池中。
+            </remarks></member><member name="M:Polly.ResilienceContextPool.Get(System.String,System.Nullable{System.Boolean},System.Threading.CancellationToken)"><summary>从池中获取一个<see cref="T:Polly.ResilienceContext" />实例。</summary><param name="operationKey">与上下文关联的操作键。</param><param name="continueOnCapturedContext">指示是否在捕获的上下文上继续的值。</param><param name="cancellationToken">取消令牌。</param><returns>一个<see cref="T:Polly.ResilienceContext" />实例。</returns><remarks>执行完成后，您应该通过调用<see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" />方法将<see cref="T:Polly.ResilienceContext" />返回给池。</remarks></member><member name="M:Polly.ResilienceContextPool.Get(System.Boolean,System.Threading.CancellationToken)"><summary>
+            从池中获取一个<see cref="T:Polly.ResilienceContext" />实例。
+            </summary><param name="continueOnCapturedContext">指示是否在捕获的上下文中继续的值。</param><param name="cancellationToken">取消令牌。</param><returns><see cref="T:Polly.ResilienceContext" />的一个实例。</returns><remarks>
+            执行完成后，应通过调用<see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" />方法将<see cref="T:Polly.ResilienceContext" />返回到池中。
+            </remarks></member><member name="M:Polly.ResilienceContextPool.Get(Polly.ResilienceContextCreationArguments)"><summary>
+    从池中获取一个 <see cref="T:Polly.ResilienceContext" /> 实例。
+    </summary><param name="arguments">创建参数。</param><returns><see cref="T:Polly.ResilienceContext" /> 的一个实例。</returns><remarks>
+    执行完成后，您应通过调用 <see cref="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)" /> 方法将 <see cref="T:Polly.ResilienceContext" /> 返回到池中。
+    </remarks></member><member name="M:Polly.ResilienceContextPool.Return(Polly.ResilienceContext)"><summary>
+            将 <paramref name="context" /> 返回给池。
+            </summary><param name="context">上下文实例。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="T:Polly.ResiliencePipeline"><summary>
+    弹性管道用于执行用户提供的回调。
+    </summary><remarks>
+    弹性管道支持多种类型的回调，并提供统一的执行方式。这包括同步和异步回调的重载，以及泛型和非泛型回调。
+    </remarks></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``1(System.Func{Polly.ResilienceContext,``0,System.Threading.Tasks.ValueTask},Polly.ResilienceContext,``0)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TState">与回调关联的状态的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync(System.Func{Polly.ResilienceContext,System.Threading.Tasks.ValueTask},Polly.ResilienceContext)"><summary>
+            执行指定的回调。
+            </summary><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``1(System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},``0,System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步回调的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><param name="callback">用户提供的回调。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步回调的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteOutcomeAsync``2(System.Func{Polly.ResilienceContext,``1,System.Threading.Tasks.ValueTask{Polly.Outcome{``0}}},Polly.ResilienceContext,``1)"><summary>
+    执行指定的基于结果的回调。
+  </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception><remarks><para><strong>重要提示：</strong>此 API 针对高级、低分配场景。用户回调不得引发异常。请包装您的代码并返回 <see cref="T:Polly.Outcome`1" />：成功时使用 <see cref="M:Polly.Outcome.FromResult``1(``0)" />，失败时使用 <see cref="M:Polly.Outcome.FromException``1(System.Exception)" />。不要依赖策略来捕获异常；任何此类行为都是实现细节，并且在不同的策略或未来版本中不予保证。</para></remarks></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``2(System.Func{Polly.ResilienceContext,``1,System.Threading.Tasks.ValueTask{``0}},Polly.ResilienceContext,``1)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns><see cref="T:System.Threading.Tasks.ValueTask" /> 的实例，表示异步执行。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``1(System.Func{Polly.ResilienceContext,System.Threading.Tasks.ValueTask{``0}},Polly.ResilienceContext)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><returns><see cref="T:System.Threading.Tasks.ValueTask" /> 的实例，表示异步执行。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``2(System.Func{``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},``1,System.Threading.CancellationToken)"><summary>
+        执行指定的回调。
+    </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><param name="callback">用户提供的回调。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="F:Polly.ResiliencePipeline.Empty"><summary>
+    执行用户提供的回调而没有任何额外逻辑的弹性管道。
+    </summary></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Action{Polly.ResilienceContext,``0},Polly.ResilienceContext,``0)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.Execute(System.Action{Polly.ResilienceContext},Polly.ResilienceContext)"><summary>
+            执行指定的回调。
+            </summary><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Action{``0,System.Threading.CancellationToken},``0,System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的<see cref="T:System.Threading.CancellationToken" />。</param><exception cref="T:System.ArgumentNullException">当<paramref name="callback" />为<see langword="null" />时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.Execute(System.Action{System.Threading.CancellationToken},System.Threading.CancellationToken)"><summary>
+        执行指定的回调。
+    </summary><param name="callback">用户提供的回调。</param><param name="cancellationToken">与回调关联的<see cref="T:System.Threading.CancellationToken" />。</param><exception cref="T:System.ArgumentNullException">当<paramref name="callback" />为<see langword="null" />时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Action{``0},``0)"><summary>
+    执行指定的回调。
+    </summary><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><exception cref="T:System.ArgumentNullException">当<paramref name="callback" />为<see langword="null" />时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.Execute(System.Action)"><summary>
+            执行指定的回调。
+            </summary><param name="callback">用户提供的回调。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``2(System.Func{Polly.ResilienceContext,``1,``0},Polly.ResilienceContext,``1)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Func{Polly.ResilienceContext,``0},Polly.ResilienceContext)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><returns><see cref="T:System.Threading.Tasks.ValueTask" /> 的一个实例，表示异步执行。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Func{System.Threading.CancellationToken,``0},System.Threading.CancellationToken)"><summary>
+    执行指定的回调。
+    </summary><typeparam name="TResult">由回调返回的结果的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``1(System.Func{``0})"><summary>
+        执行指定的回调。
+    </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><param name="callback">用户提供的回调。</param><returns>一个表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``2(System.Func{``1,``0},``1)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline.Execute``2(System.Func{``1,System.Threading.CancellationToken,``0},``1,System.Threading.CancellationToken)"><summary>执行指定的回调。</summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的<see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的<see cref="T:System.Threading.Tasks.ValueTask" />实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="callback" />为<see langword="null" />时抛出。</exception></member><member name="T:Polly.ResiliencePipelineBuilder"><summary>
+            用于创建<see cref="T:Polly.ResiliencePipeline" />实例的生成器。
+            </summary><remarks>
+            生成器支持将多个策略组合成弹性策略管道。
+            通过<see cref="M:Polly.ResiliencePipelineBuilder.Build" />调用创建的<see cref="T:Polly.ResiliencePipeline" />实例将按照策略添加到生成器的顺序执行策略。
+            策略的顺序很重要。
+            </remarks></member><member name="M:Polly.ResiliencePipelineBuilder.Build"><summary>
+    构建弹性管道。
+    </summary><returns><see cref="T:Polly.ResiliencePipeline" /> 的实例。</returns><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当此生成器的配置无效时引发。</exception></member><member name="T:Polly.ResiliencePipelineBuilder`1"><summary>
+    用于创建 <see cref="T:Polly.ResiliencePipeline`1" /> 实例的生成器。
+    </summary><typeparam name="TResult">要处理的结果类型。</typeparam><remarks>
+    该生成器支持将多个策略组合成一个弹性策略管道。
+    通过 <see cref="M:Polly.ResiliencePipelineBuilder`1.Build" /> 调用创建的 <see cref="T:Polly.ResiliencePipeline`1" /> 实例将按照策略添加到生成器的顺序执行策略。
+    策略的顺序很重要。
+    </remarks></member><member name="M:Polly.ResiliencePipelineBuilder`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.ResiliencePipelineBuilder`1" /> 类的新实例。
+            </summary></member><member name="M:Polly.ResiliencePipelineBuilder`1.Build"><summary>
+            构建弹性管道。
+            </summary><returns><see cref="T:Polly.ResiliencePipeline`1" /> 的一个实例。</returns><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当此生成器具有无效配置时抛出。</exception></member><member name="T:Polly.ResiliencePipelineBuilderBase"><summary>
+            一个用于创建 <see cref="T:Polly.ResiliencePipeline" /> 实例的生成器。
+            </summary><remarks>
+            该生成器支持将多个策略组合成一个弹性策略管道。
+            生成的 <see cref="T:Polly.ResiliencePipeline" /> 实例按照策略添加到生成器中的相同顺序执行策略。
+            策略的顺序很重要。
+            </remarks></member><member name="P:Polly.ResiliencePipelineBuilderBase.Name"><summary>
+    获取或设置生成器的名称。
+    </summary><remarks>
+    此属性也包含在各个弹性策略生成的遥测数据中。
+    </remarks><value>
+    默认值为 <see langword="null" />。
+    </value></member><member name="P:Polly.ResiliencePipelineBuilderBase.InstanceName"><summary>
+            获取或设置构建器的实例名称。
+            </summary><remarks>
+            此属性也包含在各个韧性策略生成的遥测数据中。
+            实例名称可用于区分具有相同<see cref="P:Polly.ResiliencePipelineBuilderBase.Name" />的多个构建器实例。
+            </remarks><value>
+            默认值为<see langword="null" />。
+            </value></member><member name="P:Polly.ResiliencePipelineBuilderBase.ContextPool"><summary>
+        获取或设置与构建器关联的 <see cref="T:Polly.ResilienceContextPool" />。
+    </summary><remarks>
+        可以使用自定义池来配置创建的自定义行为。
+        这可以包括设置默认的 <c>continueOnCapturedContext</c> 参数或自定义操作键解析。
+    </remarks><value>
+        如果使用默认值 <see langword="null" />，则将使用 <see cref="P:Polly.ResilienceContextPool.Shared" />。
+    </value></member><member name="P:Polly.ResiliencePipelineBuilderBase.TimeProvider"><summary>
+            获取或设置一个 <see cref="P:Polly.ResiliencePipelineBuilderBase.TimeProvider" />，用于处理时间的策略。
+            </summary><value>
+            默认值为 <see langword="null" />，除非设置，否则将使用 <see cref="P:System.TimeProvider.System" />。
+            </value></member><member name="P:Polly.ResiliencePipelineBuilderBase.TelemetryListener"><summary>
+            获取或设置由 Polly 用于报告复原事件的 <see cref="T:Polly.Telemetry.TelemetryListener" />。
+            </summary><remarks>
+            此属性由遥测基础结构使用，不应由用户代码直接使用。
+            </remarks><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="P:Polly.ResiliencePipelineBuilderBase.Validator"><summary>
+            获取用于验证的验证器。
+            </summary><value>默认值是使用数据注释进行验证的验证函数。</value><remarks>
+            当已验证的实例无效时，验证器应引发<see cref="T:System.ComponentModel.DataAnnotations.ValidationException" />。
+            </remarks><exception cref="T:System.ArgumentNullException">当尝试将<see langword="null" />赋值给此属性时引发。</exception></member><member name="T:Polly.ResiliencePipelineBuilderExtensions"><summary>
+            针对 <see cref="T:Polly.ResiliencePipelineBuilderBase" /> 的扩展。
+            </summary></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddPipeline``1(``0,Polly.ResiliencePipeline)"><summary>
+            向生成器添加已创建的管道实例。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="pipeline">管道实例。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">在 <paramref name="pipeline" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.InvalidOperationException">当此生成器已被用于创建管道时抛出。生成器在使用后无法修改。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddPipeline``1(Polly.ResiliencePipelineBuilder{``0},Polly.ResiliencePipeline{``0})"><summary>
+    向生成器添加已创建的管道实例。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><param name="builder">生成器实例。</param><param name="pipeline">管道实例。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="pipeline" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.InvalidOperationException">当此生成器已用于创建策略时引发。生成器在使用后不能再修改。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy``1(``0,System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy},Polly.ResilienceStrategyOptions)"><summary>
+            向生成器添加主动弹性策略。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="factory">创建弹性策略的工厂。</param><param name="options">与策略关联的选项。</param><returns>同一生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" />、<paramref name="factory" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.InvalidOperationException">在已使用此生成器创建管道时引发。生成器在使用后无法修改。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy(Polly.ResiliencePipelineBuilder,System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy{System.Object}},Polly.ResilienceStrategyOptions)"><summary>
+            将一个反应式策略添加到构建器。
+            </summary><param name="builder">构建器实例。</param><param name="factory">创建弹性策略的工厂。</param><param name="options">与该策略关联的选项。</param><returns>同一构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" />、<paramref name="factory" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.InvalidOperationException">当此构建器已用于创建管道时引发。构建器在使用后无法修改。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy``1(Polly.ResiliencePipelineBuilder{``0},System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy{``0}},Polly.ResilienceStrategyOptions)"><summary>
+    向生成器添加一个响应式策略。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><param name="builder">生成器实例。</param><param name="factory">创建弹性策略的工厂。</param><param name="options">与该策略关联的选项。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" />、<paramref name="factory" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.InvalidOperationException">当此生成器已被用于创建管道时引发。生成器在使用后无法修改。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy``1(``0,System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy})"><summary>
+    向生成器添加一个反应式弹性策略。
+    </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="factory">策略工厂。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="factory" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.InvalidOperationException">当此生成器已被用于创建管道时引发。生成器在使用后无法修改。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy(Polly.ResiliencePipelineBuilder,System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy{System.Object}})"><summary>向生成器添加主动弹性策略。</summary><param name="builder">生成器实例。</param><param name="factory">策略实例。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="factory" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.InvalidOperationException">当已使用此生成器创建管道时抛出。生成器在使用后无法修改。</exception></member><member name="M:Polly.ResiliencePipelineBuilderExtensions.AddStrategy``1(Polly.ResiliencePipelineBuilder{``0},System.Func{Polly.StrategyBuilderContext,Polly.ResilienceStrategy{``0}})"><summary>
+            向生成器添加一个响应式弹性策略。
+            </summary><typeparam name="TResult">结果类型。</typeparam><param name="builder">生成器实例。</param><param name="factory">策略实例。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />或<paramref name="factory" />为<see langword="null" />时引发。</exception><exception cref="T:System.InvalidOperationException">当此生成器已用于创建管道时引发。生成器在使用后无法修改。</exception></member><member name="T:Polly.ResiliencePipeline`1"><summary>
+    弹性管道用于执行用户提供的回调。
+    </summary><typeparam name="T">此管道支持的结果类型。</typeparam><remarks>
+    弹性管道支持各种类型的结果类型为 <typeparamref name="T" /> 的回调，并提供了统一的执行方式。这包括同步和异步回调的重载。
+    </remarks></member><member name="M:Polly.ResiliencePipeline`1.ExecuteAsync``2(System.Func{Polly.ResilienceContext,``1,System.Threading.Tasks.ValueTask{``0}},Polly.ResilienceContext,``1)"><summary>
+    执行指定的回调。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><typeparam name="TState">与回调关联的类型的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 的实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline`1.ExecuteAsync``1(System.Func{Polly.ResilienceContext,System.Threading.Tasks.ValueTask{``0}},Polly.ResilienceContext)"><summary>
+        执行指定的回调。
+    </summary><typeparam name="TResult">
+        结果的类型。
+    </typeparam><param name="callback">
+        用户提供的回调。
+    </param><param name="context">
+        与回调关联的上下文。
+    </param><returns>
+        表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。
+    </returns><exception cref="T:System.ArgumentNullException">
+        当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。
+    </exception></member><member name="M:Polly.ResiliencePipeline`1.ExecuteAsync``2(System.Func{``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},``1,System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><typeparam name="TState">与回调关联的状态的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 的实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline`1.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},System.Threading.CancellationToken)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">结果类型。</typeparam><param name="callback">用户提供的回调。</param><param name="cancellationToken">与回调关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline`1.ExecuteOutcomeAsync``2(System.Func{Polly.ResilienceContext,``1,System.Threading.Tasks.ValueTask{Polly.Outcome{``0}}},Polly.ResilienceContext,``1)"><summary>
+            执行指定的基于结果的回调。
+            </summary><typeparam name="TResult">结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception><remarks><para><strong>重要信息：</strong> 此方法面向高级、低分配的场景。用户回调
+            不得抛出异常。应包装您的代码并返回 <see cref="T:Polly.Outcome`1" />：
+            成功时使用 <see cref="M:Polly.Outcome.FromResult``1(``0)" />，失败时使用 <see cref="M:Polly.Outcome.FromException``1(System.Exception)" />。
+            不要依赖策略来捕获您的异常；任何此类行为都是实现细节，并且不保证在所有策略或未来版本中保持一致。</para></remarks></member><member name="F:Polly.ResiliencePipeline`1.Empty"><summary>
+            无需任何额外逻辑即可执行用户提供的回调的复原管道。
+            </summary></member><member name="M:Polly.ResiliencePipeline`1.Execute``2(System.Func{Polly.ResilienceContext,``1,``0},Polly.ResilienceContext,``1)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>一个表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.ResiliencePipeline`1.Execute``1(System.Func{Polly.ResilienceContext,``0},Polly.ResilienceContext)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><returns>一个 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例，表示异步执行。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 或 <paramref name="context" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline`1.Execute``1(System.Func{System.Threading.CancellationToken,``0},System.Threading.CancellationToken)"><summary>
+        执行指定的回调。
+    </summary><typeparam name="TResult">
+        结果的类型。
+    </typeparam><param name="callback">
+        用户提供的回调。
+    </param><param name="cancellationToken">
+        与回调关联的 <see cref="T:System.Threading.CancellationToken" />。
+    </param><returns>
+        表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。
+    </returns><exception cref="T:System.ArgumentNullException">
+        当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。
+    </exception></member><member name="M:Polly.ResiliencePipeline`1.Execute``1(System.Func{``0})"><summary>
+    执行指定的回调。
+    </summary><typeparam name="TResult">结果的类型。</typeparam><param name="callback">用户提供的回调。</param><returns>表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 的实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline`1.Execute``2(System.Func{``1,``0},``1)"><summary>
+            执行指定的回调。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><typeparam name="TState">与回调关联的状态的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><returns>一个表示异步执行的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="callback" /> 为 <see langword="null" /> 时引发。</exception></member><member name="M:Polly.ResiliencePipeline`1.Execute``2(System.Func{``1,System.Threading.CancellationToken,``0},``1,System.Threading.CancellationToken)"><summary>
+        执行指定的回调。
+    </summary><typeparam name="TResult">结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="state">与回调关联的状态。</param><param name="cancellationToken">与回调关联的<see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步执行的<see cref="T:System.Threading.Tasks.ValueTask" />实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="callback" />为<see langword="null" />时抛出。</exception></member><member name="T:Polly.ResilienceProperties"><summary>
+            表示自定义弹性属性的集合。
+            </summary></member><member name="M:Polly.ResilienceProperties.TryGetValue``1(Polly.ResiliencePropertyKey{``0},``0@)"><summary>
+            获取给定属性的值。
+            </summary><param name="key">用于获取属性值的强类型键。</param><param name="value">返回属性的值。</param><typeparam name="TValue">由<paramref name="key" />参数定义的属性值类型。</typeparam><returns>如果检索到属性，则为True。</returns></member><member name="M:Polly.ResilienceProperties.GetValue``1(Polly.ResiliencePropertyKey{``0},``0)"><summary>
+        获取具有回退默认值的给定属性的值。
+    </summary><param name="key">用于获取属性值的强类型键。</param><param name="defaultValue">在未找到属性时使用的默认值。</param><typeparam name="TValue">由 <paramref name="key" /> 参数定义的属性值的类型。</typeparam><returns>属性值或默认值。</returns></member><member name="M:Polly.ResilienceProperties.Set``1(Polly.ResiliencePropertyKey{``0},``0)"><summary>
+            设置给定属性的值。
+            </summary><param name="key">用于获取属性值的强类型键。</param><param name="value">返回属性的值。</param><typeparam name="TValue">由 <paramref name="key" /> 参数定义的属性值的类型。</typeparam></member><member name="T:Polly.ResiliencePropertyKey`1"><summary>
+            表示由 <see cref="T:Polly.ResilienceProperties" /> 使用的键。
+            </summary><typeparam name="TValue">属性的值的类型。</typeparam></member><member name="M:Polly.ResiliencePropertyKey`1.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.ResiliencePropertyKey`1" /> 结构的新实例。
+            </summary><param name="key">键名称。</param></member><member name="P:Polly.ResiliencePropertyKey`1.Key"><summary>
+            获取键的名称。
+            </summary></member><member name="M:Polly.ResiliencePropertyKey`1.ToString"><inheritdoc /></member><member name="T:Polly.ResilienceStrategy"><summary>
+            所有主动弹性策略的基类。
+            </summary></member><member name="M:Polly.ResilienceStrategy.ExecuteCore``2(System.Func{Polly.ResilienceContext,``1,System.Threading.Tasks.ValueTask{Polly.Outcome{``0}}},Polly.ResilienceContext,``1)"><summary>
+    一种主动弹性策略的实现，用于执行指定的 <paramref name="callback" />。
+    </summary><typeparam name="TResult">回调返回的结果类型。</typeparam><typeparam name="TState">与回调关联的状态类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>
+    对于异步执行，是一个挂起的 <see cref="T:System.Threading.Tasks.ValueTask" /> 实例；对于同步执行，是一个已完成的 <see cref="T:System.Threading.Tasks.ValueTask" /> 任务。
+    </returns><remarks>
+    提供的回调从不抛出异常。相反，异常会被捕获并转换为 <see cref="T:Polly.Outcome`1" />。
+    同样，不要从策略实现中抛出异常。相反，应将异常实例作为 <see cref="T:Polly.Outcome`1" /> 返回。
+    </remarks></member><member name="T:Polly.ResilienceStrategy`1"><summary>
+    该基策略类通过限制execute方法接收的泛型类型数量，用于简化泛型（响应式）策略的实现。
+    </summary><typeparam name="TResult">此策略处理的结果类型。</typeparam><remarks>
+    对于处理所有结果类型的策略，泛型参数必须是<see cref="T:System.Object" />类型。
+    </remarks></member><member name="M:Polly.ResilienceStrategy`1.ExecuteCore``1(System.Func{Polly.ResilienceContext,``0,System.Threading.Tasks.ValueTask{Polly.Outcome{`0}}},Polly.ResilienceContext,``0)"><summary>
+    一个执行指定<paramref name="callback" />的被动弹性策略的实现。
+    </summary><typeparam name="TState">与回调关联的状态的类型。</typeparam><param name="callback">用户提供的回调。</param><param name="context">与回调关联的上下文。</param><param name="state">与回调关联的状态。</param><returns>
+    一个用于异步执行的正待完成的<see cref="T:System.Threading.Tasks.ValueTask" />实例，或者用于同步执行的已完成<see cref="T:System.Threading.Tasks.ValueTask" />任务。
+    </returns><remarks>
+    提供的回调从不引发异常。而是捕获异常并将其转换为<see cref="T:Polly.Outcome`1" />。
+    同样，不要从你的策略实现中抛出异常。而是返回一个异常实例作为<see cref="T:Polly.Outcome`1" />。
+    </remarks></member><member name="T:Polly.ResilienceStrategyOptions"><summary>
+    与个体弹性策略关联的选项。
+    </summary></member><member name="P:Polly.ResilienceStrategyOptions.Name"><summary>
+    获取或设置策略的名称。
+    </summary><remarks>
+    此名称唯一标识特定策略的特定实例，并且也包含在由各个弹性策略生成的遥测数据中。
+    </remarks><value>默认值为 <see langword="null" />。</value></member><member name="T:Polly.ResilienceValidationContext"><summary>
+            用于封装验证参数的验证上下文。
+            </summary></member><member name="M:Polly.ResilienceValidationContext.#ctor(System.Object,System.String)"><summary>
+            初始化 <see cref="T:Polly.ResilienceValidationContext" /> 类的新实例。
+            </summary><param name="instance">正在验证的实例。</param><param name="primaryMessage">主要验证消息。</param></member><member name="P:Polly.ResilienceValidationContext.Instance"><summary>
+        获取正在验证的实例。
+    </summary></member><member name="P:Polly.ResilienceValidationContext.PrimaryMessage"><summary>
+            获取主要验证消息。
+            </summary><remarks>
+            主要消息首先显示，接着显示有关验证错误的详细信息。
+            </remarks></member><member name="T:Polly.Retry.OnRetryArguments`1"><summary>
+            表示用于处理重试事件的 <see cref="P:Polly.Retry.RetryStrategyOptions`1.OnRetry" /> 所使用的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Retry.OnRetryArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.Int32,System.TimeSpan,System.TimeSpan)"><summary>
+初始化 <see cref="T:Polly.Retry.OnRetryArguments`1" /> 结构的新实例。
+            </summary><param name="context">发生弹性操作或事件的上下文。</param><param name="outcome">弹性操作或事件的结果。</param><param name="attemptNumber">从零开始的尝试次数。</param><param name="retryDelay">下次重试前的延迟。</param><param name="duration">此尝试的持续时间。</param></member><member name="P:Polly.Retry.OnRetryArguments`1.Outcome"><summary>
+            获取将要重试的结果。
+            </summary></member><member name="P:Polly.Retry.OnRetryArguments`1.Context"><summary>
+    获取此事件的上下文。
+    </summary></member><member name="P:Polly.Retry.OnRetryArguments`1.AttemptNumber"><summary>
+            获取从零开始的尝试次数。
+            </summary></member><member name="P:Polly.Retry.OnRetryArguments`1.RetryDelay"><summary>
+            获取下一次重试前的延迟。
+            </summary></member><member name="P:Polly.Retry.OnRetryArguments`1.Duration"><summary>
+    获取本次尝试的持续时间。
+    </summary></member><member name="T:Polly.Retry.RetryDelayGeneratorArguments`1"><summary>
+        表示由 <see cref="P:Polly.Retry.RetryStrategyOptions`1.DelayGenerator" /> 用于生成下一次重试延迟的参数。
+    </summary><typeparam name="TResult">结果类型。</typeparam><remarks>
+        创建此结构体时务必使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Retry.RetryDelayGeneratorArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.Int32)"><summary>
+        初始化 <see cref="T:Polly.Retry.RetryDelayGeneratorArguments`1" /> 结构的一个新实例。
+    </summary><param name="outcome">发生弹性操作或事件的上下文。</param><param name="context">弹性操作或事件的结果。</param><param name="attemptNumber">从零开始的尝试次数。</param></member><member name="P:Polly.Retry.RetryDelayGeneratorArguments`1.Outcome"><summary>
+    获取弹性操作或事件的结果。
+    </summary></member><member name="P:Polly.Retry.RetryDelayGeneratorArguments`1.Context"><summary>
+            获取弹性操作或事件发生的上下文。
+            </summary></member><member name="P:Polly.Retry.RetryDelayGeneratorArguments`1.AttemptNumber"><summary>
+            获取基于零的尝试次数。
+            </summary></member><member name="M:Polly.Retry.RetryHelper.DecorrelatedJitterBackoffV2(System.Int32,System.TimeSpan,System.Double@,System.Func{System.Double})"><summary>
+    以指数退避和抖动的方式生成休眠持续时间，确保减轻任何相关性。
+    例如：850ms, 1455ms, 3060ms。
+    根据Polly问题 https://github.com/App-vNext/Polly/issues/530 的讨论，此实现的抖动比AWS抖动公式的峰值更少，分布更平滑。
+    </summary><param name="attempt">当前尝试次数。</param><param name="baseDelay">首次重试前目标的中位延迟，称为 <c>f (= f * 2^0).</c>
+选择此值既是为了近似第一次延迟，也是为了缩放系列的其余部分。
+后续重试（在大样本量下）的中位数将近似于在时间 <c>f * 2^1, f * 2^2 ... f * 2^t</c> 等处进行重试，对于尝试 t。
+尝试 t 的实际重试前延迟量可以分布在 0 到 <c>f * (2^(t+1) - 2^(t-1)) for t &gt;= 2;</c> 之间；
+或者对于 t 为 0 或 1，分布在 0 到 <c>f * 2^(t+1)</c> 之间。</param><param name="prev">用于计算的先前状态值。</param><param name="randomizer">要使用的随机生成器。</param><remarks>
+    此代码源自 https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry/blob/master/src/Polly.Contrib.WaitAndRetry/Backoff.DecorrelatedJitterV2.cs.
+    </remarks></member><member name="T:Polly.Retry.RetryPredicateArguments`1"><summary>
+            表示用于<see cref="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle" />确定是否应执行重试的参数。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><remarks>
+            创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Retry.RetryPredicateArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0},System.Int32)"><summary>
+    初始化 <see cref="T:Polly.Retry.RetryPredicateArguments`1" /> 结构的新实例。
+    </summary><param name="outcome">发生弹性操作或事件的上下文。</param><param name="context">弹性操作或事件的结果。</param><param name="attemptNumber">从零开始的尝试次数。</param></member><member name="P:Polly.Retry.RetryPredicateArguments`1.Outcome"><summary>
+            获取用户指定的回调的结果。
+            </summary></member><member name="P:Polly.Retry.RetryPredicateArguments`1.Context"><summary>
+            获取此事件的上下文。
+            </summary></member><member name="P:Polly.Retry.RetryPredicateArguments`1.AttemptNumber"><summary>
+    获取从零开始的尝试次数。
+    </summary></member><member name="T:Polly.Retry.RetryStrategyOptions"><inheritdoc /></member><member name="T:Polly.Retry.RetryStrategyOptions`1"><summary>
+            表示用于配置重试策略的选项。
+            </summary><typeparam name="TResult">重试策略处理的结果类型。</typeparam></member><member name="M:Polly.Retry.RetryStrategyOptions`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.Retry.RetryStrategyOptions`1" /> 类的新实例。
+            </summary></member><member name="P:Polly.Retry.RetryStrategyOptions`1.MaxRetryAttempts"><summary>
+        获取或设置除原始调用外要使用的最大重试次数。
+    </summary><value>
+        默认值为 3 次重试。
+    </value><remarks>
+        若要无限重试，请使用 <see cref="F:System.Int32.MaxValue" />。请注意，报告的尝试次数上限为 <see cref="F:System.Int32.MaxValue" />。
+    </remarks></member><member name="P:Polly.Retry.RetryStrategyOptions`1.BackoffType"><summary>
+            获取或设置退避类型。
+            </summary><remarks>
+            当设置了 <see cref="P:Polly.Retry.RetryStrategyOptions`1.DelayGenerator" /> 时，此属性将被忽略。
+            </remarks><value>
+            默认值为 <see cref="F:Polly.DelayBackoffType.Constant" />。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.UseJitter"><summary>
+            获取或设置一个值，该值指示在计算重试之间的退避延迟时是否应使用抖动。
+            </summary><remarks>
+            请参阅 <see href="https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry#new-jitter-recommendation" /> 了解有关抖动如何在重试相关时提高弹性的更多详细信息。
+            </remarks><value>
+            默认值为 <see langword="false" />。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.Delay"><summary>
+            获取或设置重试之间的基本延迟。
+            </summary><remarks>
+            此值与<see cref="P:Polly.Retry.RetryStrategyOptions`1.BackoffType" />结合使用，为每次重试尝试生成最终延迟：
+            <list type="bullet"><item><see cref="F:Polly.DelayBackoffType.Exponential" />：表示首次重试前要达到的中位延迟。
+            </item><item><see cref="F:Polly.DelayBackoffType.Linear" />：表示初始延迟，后续延迟随着该值线性增加。
+            </item><item><see cref="F:Polly.DelayBackoffType.Constant" /> 表示重试之间的恒定延迟。
+            </item></list>
+            当设置了<see cref="P:Polly.Retry.RetryStrategyOptions`1.DelayGenerator" />并且返回有效的<see cref="T:System.TimeSpan" />值时，将忽略此属性。
+            </remarks><value>
+            默认值为2秒。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.MaxDelay"><summary>
+    获取或设置重试之间的最大延迟。
+    </summary><remarks>
+    此属性用于限制重试之间的最大延迟。当您在特定次数的重试后希望限制最大延迟以避免达到不合理的高值时，此属性非常有用，尤其是在使用 <see cref="F:Polly.DelayBackoffType.Exponential" /> 退避时。如果未指定，则延迟不受限制。此属性忽略由 <see cref="P:Polly.Retry.RetryStrategyOptions`1.DelayGenerator" /> 生成的延迟。
+    </remarks><value>
+    默认值为 <see langword="null" />。
+    </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.ShouldHandle"><summary>
+            获取或设置一个谓词，该谓词确定是否应针对给定结果执行重试。
+            </summary><value>
+            默认值是一个委托，该委托会在任何异常（除了 <see cref="T:System.OperationCanceledException" />）时重试。此属性是必需的。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.DelayGenerator"><summary>
+            获取或设置一个用于计算重试之间延迟的生成器。
+            </summary><remarks>
+            该生成器可以覆盖重试策略生成的延迟。如果生成器返回 <see langword="null" />，则将使用该尝试的重试策略生成的延迟。
+            </remarks><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.OnRetry"><summary>
+            获取或设置一个事件委托，该委托在重试发生时被引发。
+            </summary><remarks>
+            在此事件之后，用户回调产生的结果将被丢弃并释放，以防止资源过度消耗。如果需要保留结果以备进一步处理，请创建结果的副本或在事件中提取并存储所有必要信息。
+            </remarks><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="P:Polly.Retry.RetryStrategyOptions`1.Randomizer"><summary>
+            获取或设置重试策略用于生成随机数的随机化器。
+            </summary><value>
+            默认值是线程安全的随机化器，它返回0.0到1.0之间的值。
+            </value></member><member name="T:Polly.RetryResiliencePipelineBuilderExtensions"><summary>
+            用于向<see cref="T:Polly.ResiliencePipelineBuilder" />添加重试的扩展方法。
+            </summary></member><member name="M:Polly.RetryResiliencePipelineBuilderExtensions.AddRetry(Polly.ResiliencePipelineBuilder,Polly.Retry.RetryStrategyOptions)"><summary>
+        向生成器添加重试。
+    </summary><param name="builder">生成器实例。</param><param name="options">重试选项。</param><returns>已添加重试策略的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="M:Polly.RetryResiliencePipelineBuilderExtensions.AddRetry``1(Polly.ResiliencePipelineBuilder{``0},Polly.Retry.RetryStrategyOptions{``0})"><summary>
+    向构建器添加重试。
+    </summary><typeparam name="TResult">重试处理的结果类型。</typeparam><param name="builder">构建器实例。</param><param name="options">重试选项。</param><returns>添加了重试的构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="T:Polly.Simmy.Behavior.BehaviorGeneratorArguments"><summary>
+            行为混沌策略用于执行用户委托自定义操作所使用的参数。
+            </summary></member><member name="M:Polly.Simmy.Behavior.BehaviorGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Behavior.BehaviorGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.Behavior.BehaviorGeneratorArguments.Context"><summary>
+            获取韧性上下文实例。
+            </summary></member><member name="T:Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions"><summary>
+    表示行为混沌策略的选项。
+    </summary></member><member name="M:Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions" /> 类的新实例。
+            </summary></member><member name="P:Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions.OnBehaviorInjected"><summary>
+            获取或设置在注入行为时引发的委托。
+            </summary><value>
+            默认为 <see langword="null" />。
+            </value></member><member name="P:Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions.BehaviorGenerator"><summary>
+            获取或设置将在给定执行中注入的行为。
+            </summary><value>
+            默认值为 <see langword="null" />。此属性是必需的。
+            </value></member><member name="T:Polly.Simmy.Behavior.OnBehaviorInjectedArguments"><summary>
+    行为混沌策略用于通知自定义行为已注入的参数
+    </summary></member><member name="M:Polly.Simmy.Behavior.OnBehaviorInjectedArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Behavior.OnBehaviorInjectedArguments" /> 结构的新实例。
+            </summary><param name="context">韧性上下文实例。</param></member><member name="P:Polly.Simmy.Behavior.OnBehaviorInjectedArguments.Context"><summary>
+            获取弹性上下文实例。
+            </summary></member><member name="T:Polly.Simmy.ChaosBehaviorPipelineBuilderExtensions"><summary>
+            将混沌行为添加到 <see cref="T:Polly.ResiliencePipelineBuilder" /> 的扩展方法。
+            </summary></member><member name="M:Polly.Simmy.ChaosBehaviorPipelineBuilderExtensions.AddChaosBehavior``1(``0,System.Double,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask})"><summary>
+        向构建器添加行为混沌策略。
+    </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="injectionRate">给定执行的注入率，值应在 0 到 1（含）之间。</param><param name="behavior">要注入的行为。</param><returns>相同的构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数生成的选项无效时引发。</exception></member><member name="M:Polly.Simmy.ChaosBehaviorPipelineBuilderExtensions.AddChaosBehavior``1(``0,Polly.Simmy.Behavior.ChaosBehaviorStrategyOptions)"><summary>
+            向构建器中添加行为混沌策略。
+            </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="options">行为选项。</param><returns>相同的构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="T:Polly.Simmy.ChaosStrategy"><summary>
+            混沌策略的基类。
+            </summary></member><member name="M:Polly.Simmy.ChaosStrategy.#ctor(Polly.Simmy.ChaosStrategyOptions)"><summary>
+            初始化 <see cref="T:Polly.Simmy.ChaosStrategy" /> 类的新实例。
+            </summary><param name="options">混沌策略选项。</param></member><member name="P:Polly.Simmy.ChaosStrategy.InjectionRateGenerator"><summary>
+            获取给定执行的注入率，该值应在 [0, 1]（含）之间。
+            </summary></member><member name="P:Polly.Simmy.ChaosStrategy.EnabledGenerator"><summary>
+    获取一个指示对于给定执行是否启用混沌策略的值。
+    </summary></member><member name="M:Polly.Simmy.ChaosStrategy.ShouldInjectAsync(Polly.ResilienceContext)"><summary>
+            根据注入率和启用标志确定是否应注入混沌策略。
+            </summary><param name="context"><see cref="T:Polly.ResilienceContext" /> 实例。</param><returns>一个布尔值，指示是否应注入混沌策略。</returns><remarks>在注入任何混沌策略之前，使用此方法评估在执行过程中是否需要注入给定的混沌策略。</remarks></member><member name="T:Polly.Simmy.ChaosStrategy`1"><summary>
+            泛型（响应式）混沌策略的基类。
+            </summary><typeparam name="T">此策略处理的结果类型。</typeparam><remarks>
+            对于处理所有结果类型的策略，泛型参数必须是 <see cref="T:System.Object" />类型。
+            </remarks></member><member name="M:Polly.Simmy.ChaosStrategy`1.#ctor(Polly.Simmy.ChaosStrategyOptions)"><summary>
+            初始化 <see cref="T:Polly.Simmy.ChaosStrategy`1" /> 类的新实例。
+            </summary><param name="options">混沌策略选项。</param></member><member name="P:Polly.Simmy.ChaosStrategy`1.InjectionRateGenerator"><summary>
+            获取给定执行的注入比率，该值应在 [0, 1] 之间（包含两端）。
+            </summary></member><member name="P:Polly.Simmy.ChaosStrategy`1.EnabledGenerator"><summary>
+            获取一个值，该值指示是否针对给定执行启用了混沌策略。
+            </summary></member><member name="M:Polly.Simmy.ChaosStrategy`1.ShouldInjectAsync(Polly.ResilienceContext)"><summary>
+            确定是否应根据注入率和启用标志注入混沌策略。
+            </summary><param name="context"><see cref="T:Polly.ResilienceContext" /> 实例。</param><returns>指示是否应注入混沌策略的布尔值。</returns><remarks>在注入任何混沌策略之前使用此方法，以评估在执行期间是否需要注入给定的混沌策略。</remarks></member><member name="T:Polly.Simmy.ChaosStrategyOptions"><summary>
+            与<see cref="T:Polly.Simmy.ChaosStrategy" />关联的选项。
+            </summary></member><member name="P:Polly.Simmy.ChaosStrategyOptions.InjectionRate"><summary>
+            获取或设置给定执行的注入率，其值应在 [0, 1] 之间（含）。
+            </summary><value>
+            默认为 <c>0.001</c>，即千分之一执行/0.1%。当指定了 <see cref="P:Polly.Simmy.ChaosStrategyOptions.InjectionRateGenerator" /> 时，忽略此属性。
+            </value></member><member name="P:Polly.Simmy.ChaosStrategyOptions.InjectionRateGenerator"><summary>
+            获取或设置给定执行的注入速率生成器，该值应在 [0, 1] 之间（包含边界）。
+            </summary><value>
+            默认值为 <see langword="null" />。当指定了生成器时，<see cref="P:Polly.Simmy.ChaosStrategyOptions.InjectionRate" /> 属性将被忽略。
+            </value></member><member name="P:Polly.Simmy.ChaosStrategyOptions.EnabledGenerator"><summary>
+            获取或设置启用的生成器，该生成器指示对于给定执行是否启用混沌策略。
+            </summary><value>
+            默认为 <see langword="null" />。当指定了生成器时，将忽略 <see cref="P:Polly.Simmy.ChaosStrategyOptions.Enabled" /> 属性。
+            </value></member><member name="P:Polly.Simmy.ChaosStrategyOptions.Enabled"><summary>
+    获取或设置一个值，该值指示在给定执行中是否启用了混沌策略。
+    </summary><value>
+    默认为 <see langword="true" />。当指定了 <see cref="P:Polly.Simmy.ChaosStrategyOptions.EnabledGenerator" /> 时，将忽略此属性。
+    </value></member><member name="P:Polly.Simmy.ChaosStrategyOptions.Randomizer"><summary>
+            获取或设置用于评估注入率的Randomizer生成器实例。
+            </summary><value>
+            默认的randomizer是线程安全的，并返回介于<c>0.0</c>和<c>1.0</c>之间的值。
+            </value></member><member name="T:Polly.Simmy.EnabledGeneratorArguments"><summary>
+            定义 <see cref="P:Polly.Simmy.ChaosStrategyOptions.EnabledGenerator" /> 的参数。
+            </summary></member><member name="M:Polly.Simmy.EnabledGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.EnabledGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.EnabledGeneratorArguments.Context"><summary>
+            获取 ResilienceContext 实例。
+            </summary></member><member name="T:Polly.Simmy.Fault.ChaosFaultStrategyOptions"><summary>
+        表示故障混沌策略的选项。
+    </summary></member><member name="M:Polly.Simmy.Fault.ChaosFaultStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Polly.Simmy.Fault.ChaosFaultStrategyOptions" /> 类的新实例。
+            </summary></member><member name="P:Polly.Simmy.Fault.ChaosFaultStrategyOptions.OnFaultInjected"><summary>
+            获取或设置在注入故障时引发的委托。
+            </summary><value>
+            默认为 <see langword="null" />。
+            </value></member><member name="P:Polly.Simmy.Fault.ChaosFaultStrategyOptions.FaultGenerator"><summary>
+        获取或设置用于故障注入的故障生成器。
+    </summary><value>
+        默认为 <see langword="null" />。此属性是必需的。
+    </value></member><member name="T:Polly.Simmy.Fault.FaultGenerator"><summary>
+    使用注册的委托函数来生成故障（异常）的生成器。
+    </summary><remarks>
+    此类的实例可以分配给<see cref="P:Polly.Simmy.Fault.ChaosFaultStrategyOptions.FaultGenerator" />属性。
+    </remarks></member><member name="M:Polly.Simmy.Fault.FaultGenerator.#ctor"><summary>
+    初始化 <see cref="T:Polly.Simmy.Fault.FaultGenerator" /> 类的新实例。
+    </summary></member><member name="M:Polly.Simmy.Fault.FaultGenerator.AddException(System.Func{System.Exception},System.Int32)"><summary>
+            注册异常生成器委托。
+            </summary><param name="generator">生成异常的委托。</param><param name="weight">分配给此生成器的权重。默认为 <c>100</c>。</param><returns>当前 <see cref="T:Polly.Simmy.Fault.FaultGenerator" /> 实例。</returns></member><member name="M:Polly.Simmy.Fault.FaultGenerator.AddException(System.Func{Polly.ResilienceContext,System.Exception},System.Int32)"><summary>
+            注册一个接受<see cref="T:Polly.ResilienceContext" />的异常生成器委托。
+            </summary><param name="generator">生成异常的委托，接受一个<see cref="T:Polly.ResilienceContext" />。</param><param name="weight">分配给此生成器的权重。默认为<c>100</c>。</param><returns>当前<see cref="T:Polly.Simmy.Fault.FaultGenerator" />实例。</returns></member><member name="M:Polly.Simmy.Fault.FaultGenerator.AddException``1(System.Int32)"><summary>
+            使用该异常的默认构造函数为特定异常类型注册异常生成器。
+            </summary><typeparam name="TException">要生成的异常类型。</typeparam><param name="weight">分配给此生成器的权重。默认为 <c>100</c>。</param><returns>当前的 <see cref="T:Polly.Simmy.Fault.FaultGenerator" /> 实例。</returns></member><member name="M:Polly.Simmy.Fault.FaultGenerator.op_Implicit(Polly.Simmy.Fault.FaultGenerator)~System.Func{Polly.Simmy.Fault.FaultGeneratorArguments,System.Threading.Tasks.ValueTask{System.Exception}}"><summary>
+    提供从 <see cref="T:Polly.Simmy.Fault.FaultGenerator" /> 到一个与 <see cref="P:Polly.Simmy.Fault.ChaosFaultStrategyOptions.FaultGenerator" /> 兼容的委托的隐式转换。
+    </summary><param name="generator">一个 <see cref="T:Polly.Simmy.Fault.FaultGenerator" /> 的实例。</param></member><member name="T:Polly.Simmy.Fault.FaultGeneratorArguments"><summary>
+            用于故障混沌策略生成将要注入的故障的参数。
+            </summary></member><member name="M:Polly.Simmy.Fault.FaultGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Fault.FaultGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.Fault.FaultGeneratorArguments.Context"><summary>
+            获取弹性上下文实例。
+            </summary></member><member name="T:Polly.Simmy.Fault.OnFaultInjectedArguments"><summary>
+            由故障混沌策略用来通知已注入故障的参数。
+            </summary></member><member name="M:Polly.Simmy.Fault.OnFaultInjectedArguments.#ctor(Polly.ResilienceContext,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Fault.OnFaultInjectedArguments" /> 结构的新实例。
+            </summary><param name="context">韧性上下文实例。</param><param name="fault">被注入的错误。</param></member><member name="P:Polly.Simmy.Fault.OnFaultInjectedArguments.Context"><summary>
+    获取弹性上下文实例。
+    </summary></member><member name="P:Polly.Simmy.Fault.OnFaultInjectedArguments.Fault"><summary>
+    获取已注入的故障。
+    </summary></member><member name="T:Polly.Simmy.ChaosFaultPipelineBuilderExtensions"><summary>
+            用于向 <see cref="T:Polly.ResiliencePipelineBuilder" /> 添加混沌故障策略的扩展方法。
+            </summary></member><member name="M:Polly.Simmy.ChaosFaultPipelineBuilderExtensions.AddChaosFault``1(``0,System.Double,System.Func{System.Exception})"><summary>
+    向构建器添加故障混沌策略。
+    </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="injectionRate">给定执行的注入率，其值应在 [0, 1] 之间（含边界）。</param><param name="faultGenerator">异常生成器委托。</param><returns>相同的构建器实例。</returns></member><member name="M:Polly.Simmy.ChaosFaultPipelineBuilderExtensions.AddChaosFault``1(``0,Polly.Simmy.Fault.ChaosFaultStrategyOptions)"><summary>
+            向构建器添加故障混沌策略。
+            </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="options">故障策略选项。</param><returns>相同的构建器实例。</returns></member><member name="T:Polly.Simmy.InjectionRateGeneratorArguments"><summary>
+            定义用于 <see cref="P:Polly.Simmy.ChaosStrategyOptions.InjectionRateGenerator" /> 的参数。
+            </summary></member><member name="M:Polly.Simmy.InjectionRateGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.InjectionRateGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.InjectionRateGeneratorArguments.Context"><summary>
+            获取 ResilienceContext 实例。
+            </summary></member><member name="T:Polly.Simmy.Latency.ChaosLatencyStrategyOptions"><summary>
+            表示延迟混沌策略的选项。
+            </summary></member><member name="M:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.#ctor"><summary>
+    初始化 <see cref="T:Polly.Simmy.Latency.ChaosLatencyStrategyOptions" /> 类的新实例。
+  </summary></member><member name="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.OnLatencyInjected"><summary>
+    获取或设置当延迟被注入时引发的委托。
+    </summary><value>
+    默认为 <see langword="null" />。
+    </value></member><member name="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.LatencyGenerator"><summary>
+            获取或设置延迟生成器，该生成器为给定的执行生成延迟。
+            </summary><value>
+            默认为 <see langword="null" />。当此属性为 <see langword="null" /> 时，将使用 <see cref="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.Latency" />。
+            </value></member><member name="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.Latency"><summary>
+            获取或设置要注入到给定执行的延迟。
+            </summary><value>
+            默认值为<c>30</c>秒。当指定了<see cref="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.LatencyGenerator" />时，忽略此属性。
+            </value></member><member name="T:Polly.Simmy.Latency.LatencyGeneratorArguments"><summary>
+            由 <see cref="P:Polly.Simmy.Latency.ChaosLatencyStrategyOptions.LatencyGenerator" /> 使用的参数。
+            </summary></member><member name="M:Polly.Simmy.Latency.LatencyGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Latency.LatencyGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.Latency.LatencyGeneratorArguments.Context"><summary>
+            获取弹性上下文实例。
+            </summary></member><member name="T:Polly.Simmy.Latency.OnLatencyInjectedArguments"><summary>
+            延迟混沌策略用于通知已注入延迟的参数。
+            </summary></member><member name="M:Polly.Simmy.Latency.OnLatencyInjectedArguments.#ctor(Polly.ResilienceContext,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Latency.OnLatencyInjectedArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param><param name="latency">已注入的延迟。</param></member><member name="P:Polly.Simmy.Latency.OnLatencyInjectedArguments.Context"><summary>
+            获取弹性上下文实例。
+            </summary></member><member name="P:Polly.Simmy.Latency.OnLatencyInjectedArguments.Latency"><summary>
+            获取已注入的延迟。
+            </summary></member><member name="T:Polly.Simmy.ChaosLatencyPipelineBuilderExtensions"><summary>
+            将混沌延迟策略添加到<see cref="T:Polly.ResiliencePipelineBuilderBase" />的扩展方法。
+            </summary></member><member name="M:Polly.Simmy.ChaosLatencyPipelineBuilderExtensions.AddChaosLatency``1(``0,System.Double,System.TimeSpan)"><summary>
+            向生成器添加延迟混沌策略。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="injectionRate">给定执行的注入率，其值应在 [0, 1] 之间（包括端点）。</param><param name="latency">延迟值。</param><returns>相同的生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当从参数生成的选项无效时引发。</exception></member><member name="M:Polly.Simmy.ChaosLatencyPipelineBuilderExtensions.AddChaosLatency``1(``0,Polly.Simmy.Latency.ChaosLatencyStrategyOptions)"><summary>
+            向生成器添加延迟混沌策略。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="options">延迟选项。</param><returns>同一生成器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 或 <paramref name="options" /> 为 <see langword="null" /> 时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当 <paramref name="options" /> 无效时引发。</exception></member><member name="T:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1"><summary>
+    表示结果混沌策略的选项。
+    </summary><typeparam name="TResult">被注入的结果的类型。</typeparam></member><member name="M:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1" /> 类的新实例。
+            </summary></member><member name="P:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.OnOutcomeInjected"><summary>
+            获取或设置在注入结果时调用的委托。
+            </summary><value>
+            默认为 <see langword="null" />。
+            </value></member><member name="P:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.OutcomeGenerator"><summary>
+            获取或设置用于生成要注入的结果的生成器。
+            </summary><value>
+            默认为 <see langword="null" />。此属性是必需的。
+            </value></member><member name="T:Polly.Simmy.Outcomes.OnOutcomeInjectedArguments`1"><summary>
+            由结果混沌策略用于通知已注入结果的参数。
+            </summary><typeparam name="TResult">所注入的结果的类型。</typeparam></member><member name="M:Polly.Simmy.Outcomes.OnOutcomeInjectedArguments`1.#ctor(Polly.ResilienceContext,Polly.Outcome{`0})"><summary>
+            初始化 <see cref="T:Polly.Simmy.Outcomes.OnOutcomeInjectedArguments`1" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param><param name="outcome">被注入的结果。</param></member><member name="P:Polly.Simmy.Outcomes.OnOutcomeInjectedArguments`1.Context"><summary>
+    获取弹性上下文实例。
+    </summary></member><member name="P:Polly.Simmy.Outcomes.OnOutcomeInjectedArguments`1.Outcome"><summary>
+            获取已注入的结果。
+            </summary></member><member name="T:Polly.Simmy.Outcomes.OutcomeGenerator`1"><summary>
+    生成结果（如异常或结果）的生成器。
+    </summary><typeparam name="TResult">结果类型。</typeparam><remarks>
+    此类的实例可分配给<see cref="P:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.OutcomeGenerator" />。
+    </remarks></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.#ctor"><summary>
+            初始化 <see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" /> 类的新实例。
+            </summary></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.AddException(System.Func{System.Exception},System.Int32)"><summary>
+            注册异常生成器委托。
+            </summary><param name="generator">生成异常的委托。</param><param name="weight">分配给此生成器的权重。默认为 <c>100</c>。</param><returns>当前 <see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" /> 实例。</returns></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.AddException(System.Func{Polly.ResilienceContext,System.Exception},System.Int32)"><summary>
+            注册一个接受 <see cref="T:Polly.ResilienceContext" /> 的异常生成器委托。
+            </summary><param name="generator">生成异常的委托，接受一个 <see cref="T:Polly.ResilienceContext" />。</param><param name="weight">分配给此生成器的权重。默认为 <c>100</c>。</param><returns>当前 <see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" /> 实例。</returns></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.AddException``1(System.Int32)"><summary>
+    为特定异常类型注册异常生成器，使用该异常的默认构造函数。
+    </summary><typeparam name="TException">要生成的异常类型。</typeparam><param name="weight">分配给此生成器的权重。默认为<c>100</c>。</param><returns><see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" />的当前实例。</returns></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.AddResult(System.Func{`0},System.Int32)"><summary>
+            注册一个结果生成器。
+            </summary><param name="generator">生成结果的委托。</param><param name="weight">分配给此生成器的权重。默认为 <c>100</c>。</param><returns>当前实例 <see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" />。</returns></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.AddResult(System.Func{Polly.ResilienceContext,`0},System.Int32)"><summary>
+            注册一个结果生成器。
+            </summary><param name="generator">生成结果的委托，接受一个<see cref="T:Polly.ResilienceContext" />。</param><param name="weight">分配给此生成器的权重。默认为<c>100</c>。</param><returns><see cref="T:Polly.Simmy.Outcomes.OutcomeGenerator`1" />的当前实例。</returns></member><member name="M:Polly.Simmy.Outcomes.OutcomeGenerator`1.op_Implicit(Polly.Simmy.Outcomes.OutcomeGenerator{`0})~System.Func{Polly.Simmy.Outcomes.OutcomeGeneratorArguments,System.Threading.Tasks.ValueTask{System.Nullable{Polly.Outcome{`0}}}}"><summary>
+            隐式转换为 <see cref="P:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.OutcomeGenerator" />。
+            </summary><param name="generator">生成器实例。</param></member><member name="T:Polly.Simmy.Outcomes.OutcomeGeneratorArguments"><summary>
+            由 <see cref="P:Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions`1.OutcomeGenerator" />使用的参数。
+            </summary></member><member name="M:Polly.Simmy.Outcomes.OutcomeGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Simmy.Outcomes.OutcomeGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">弹性上下文实例。</param></member><member name="P:Polly.Simmy.Outcomes.OutcomeGeneratorArguments.Context"><summary>
+            获取弹性上下文实例。
+            </summary></member><member name="T:Polly.Simmy.ChaosOutcomePipelineBuilderExtensions"><summary>
+            用于向 <see cref="T:Polly.ResiliencePipelineBuilder" /> 添加混沌结果策略的扩展方法。
+            </summary></member><member name="M:Polly.Simmy.ChaosOutcomePipelineBuilderExtensions.AddChaosOutcome``1(Polly.ResiliencePipelineBuilder{``0},System.Double,System.Func{``0})"><summary>
+            向生成器添加一个结果混沌策略。
+            </summary><typeparam name="TResult">策略处理的结果类型。</typeparam><param name="builder">生成器实例。</param><param name="injectionRate">给定执行的注入率，该值应在 [0, 1] （含）之间。</param><param name="resultGenerator">结果生成器委托。</param><returns>相同的生成器实例。</returns></member><member name="M:Polly.Simmy.ChaosOutcomePipelineBuilderExtensions.AddChaosOutcome``1(Polly.ResiliencePipelineBuilder{``0},Polly.Simmy.Outcomes.ChaosOutcomeStrategyOptions{``0})"><summary>
+            添加一个结果混沌策略到构建器。
+            </summary><typeparam name="TResult">策略处理的结果类型。</typeparam><param name="builder">构建器实例。</param><param name="options">策略选项。</param><returns>相同的构建器实例。</returns></member><member name="T:Polly.StrategyBuilderContext"><summary>
+            用于构建单个弹性策略的上下文。
+            </summary></member><member name="P:Polly.StrategyBuilderContext.Telemetry"><summary>
+            获取用于报告重要事件的弹性遥测。
+            </summary></member><member name="P:Polly.StrategyBuilderContext.TimeProvider"><summary>获取此策略使用的 <see cref="P:Polly.StrategyBuilderContext.TimeProvider" />。</summary></member><member name="T:Polly.Telemetry.ExecutionAttemptArguments"><summary>
+            封装重试或对冲的执行尝试的参数。
+            </summary><remarks>
+            在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Telemetry.ExecutionAttemptArguments.#ctor(System.Int32,System.TimeSpan,System.Boolean)"><summary>
+    初始化 <see cref="T:Polly.Telemetry.ExecutionAttemptArguments" /> 结构的新实例。
+    </summary><param name="attemptNumber">执行尝试次数。</param><param name="duration">执行持续时间。</param><param name="handled">确定该尝试是否由策略处理。</param></member><member name="P:Polly.Telemetry.ExecutionAttemptArguments.AttemptNumber"><summary>
+            获取尝试次数。
+            </summary></member><member name="P:Polly.Telemetry.ExecutionAttemptArguments.Duration"><summary>
+    获取尝试的执行持续时间。
+    </summary></member><member name="P:Polly.Telemetry.ExecutionAttemptArguments.Handled"><summary>
+    获取一个值，该值指示结果是否由重试或对冲策略处理。
+    </summary></member><member name="T:Polly.Telemetry.PipelineExecutedArguments"><summary>
+    指示管道执行已开始的参数。
+    </summary><remarks>
+    创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Telemetry.PipelineExecutedArguments.#ctor(System.TimeSpan)"><summary>初始化 <see cref="T:Polly.Telemetry.PipelineExecutedArguments" /> 结构的新实例。</summary><param name="duration">管道执行持续时间。</param></member><member name="P:Polly.Telemetry.PipelineExecutedArguments.Duration"><summary>
+            获取管道执行持续时间。
+            </summary></member><member name="T:Polly.Telemetry.PipelineExecutingArguments"><summary>
+            指示管道执行已开始的参数。
+            </summary><remarks>
+            创建此结构体时请始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="T:Polly.Telemetry.ResilienceEvent"><summary>
+            表示已报告的复原事件。
+            </summary><remarks>
+            在创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Telemetry.ResilienceEvent.#ctor(Polly.Telemetry.ResilienceEventSeverity,System.String)"><summary>
+            初始化 <see cref="T:Polly.Telemetry.ResilienceEvent" /> 结构的新实例。
+            </summary><param name="severity">事件的严重性。</param><param name="eventName">事件名称。</param></member><member name="P:Polly.Telemetry.ResilienceEvent.Severity"><summary>
+    获取事件的严重性。
+    </summary></member><member name="P:Polly.Telemetry.ResilienceEvent.EventName"><summary>
+        获取事件名称。
+    </summary></member><member name="M:Polly.Telemetry.ResilienceEvent.ToString"><summary>
+    返回一个 <see cref="P:Polly.Telemetry.ResilienceEvent.EventName" />。
+    </summary><returns>一个事件名称。</returns></member><member name="T:Polly.Telemetry.ResilienceEventSeverity"><summary>
+    所报告的复原事件的严重性。
+    </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.None"><summary>
+            未记录复原事件。
+            </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.Debug"><summary>
+            该复原事件仅用于调试目的。
+            </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.Information"><summary>
+            该弹性事件是信息性的。
+            </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.Warning"><summary>
+            弹性事件应被视为警告。
+            </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.Error"><summary>
+            复原事件应被视为错误。
+            </summary></member><member name="F:Polly.Telemetry.ResilienceEventSeverity.Critical"><summary>
+            该复原事件应被视为严重错误。
+            </summary></member><member name="T:Polly.Telemetry.ResilienceStrategyTelemetry"><summary>
+    弹性遥测用于各个弹性策略以报告一些重要事件。
+    </summary><remarks>
+    例如，超时策略在超时时报告"OnTimeout"事件，重试策略报告"OnRetry"事件。
+    </remarks></member><member name="M:Polly.Telemetry.ResilienceStrategyTelemetry.SetTelemetrySource(Polly.ExecutionRejectedException)"><summary>
+             在提供的异常上设置遥测源。
+            </summary><param name="exception">要设置的异常。</param></member><member name="M:Polly.Telemetry.ResilienceStrategyTelemetry.Report``1(Polly.Telemetry.ResilienceEvent,Polly.ResilienceContext,``0)"><summary>
+            报告弹性策略中发生的事件。
+            </summary><typeparam name="TArgs">与此事件关联的参数。</typeparam><param name="resilienceEvent">报告的弹性事件。</param><param name="context">与此事件关联的弹性上下文。</param><param name="args">事件参数。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="context" /> 为 <see langword="null" /> 时抛出。</exception></member><member name="M:Polly.Telemetry.ResilienceStrategyTelemetry.Report``2(Polly.Telemetry.ResilienceEvent,Polly.ResilienceContext,Polly.Outcome{``1},``0)"><summary>
+            报告在弹性策略中发生的事件。
+            </summary><typeparam name="TArgs">与此事件关联的参数。</typeparam><typeparam name="TResult">结果类型。</typeparam><param name="resilienceEvent">报告的弹性事件。</param><param name="context">与此事件关联的弹性上下文。</param><param name="outcome">与该事件关联的结果。</param><param name="args">事件参数。</param></member><member name="T:Polly.Telemetry.ResilienceTelemetrySource"><summary>
+            弹性遥测事件的来源。
+            </summary><remarks>
+            此类由遥测基础结构使用，不应由用户代码直接使用。
+            </remarks></member><member name="M:Polly.Telemetry.ResilienceTelemetrySource.#ctor(System.String,System.String,System.String)"><summary>
+            初始化 <see cref="T:Polly.Telemetry.ResilienceTelemetrySource" /> 类的新实例。
+            </summary><param name="pipelineName">管道名称。</param><param name="pipelineInstanceName">管道实例名称。</param><param name="strategyName">策略名称。</param></member><member name="P:Polly.Telemetry.ResilienceTelemetrySource.PipelineName"><summary>
+            获取管道名称。
+            </summary></member><member name="P:Polly.Telemetry.ResilienceTelemetrySource.PipelineInstanceName"><summary>
+    获取管道实例名称。
+    </summary></member><member name="P:Polly.Telemetry.ResilienceTelemetrySource.StrategyName"><summary>
+            获取策略名称。
+            </summary></member><member name="T:Polly.Telemetry.TelemetryEventArguments`2"><summary>
+            表示有关弹性事件的信息。
+            </summary><typeparam name="TResult">结果的类型。</typeparam><typeparam name="TArgs">与弹性事件关联的参数。</typeparam><remarks>
+            在创建此结构时请始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Telemetry.TelemetryEventArguments`2.#ctor(Polly.Telemetry.ResilienceTelemetrySource,Polly.Telemetry.ResilienceEvent,Polly.ResilienceContext,`1,System.Nullable{Polly.Outcome{`0}})"><summary>
+    初始化 <see cref="T:Polly.Telemetry.TelemetryEventArguments`2" /> 结构的新实例。
+    </summary><param name="source">产生韧性事件的源。</param><param name="resilienceEvent">韧性事件。</param><param name="context">与韧性事件关联的上下文。</param><param name="args">与韧性事件关联的参数。</param><param name="outcome">与韧性事件关联的结果（如果有）。</param></member><member name="P:Polly.Telemetry.TelemetryEventArguments`2.Source"><summary>
+            获取产生弹性事件的源。
+            </summary></member><member name="P:Polly.Telemetry.TelemetryEventArguments`2.Event"><summary>
+            获取弹性事件。
+            </summary></member><member name="P:Polly.Telemetry.TelemetryEventArguments`2.Context"><summary>
+            获取与弹性事件关联的上下文。
+            </summary></member><member name="P:Polly.Telemetry.TelemetryEventArguments`2.Arguments"><summary>
+    获取与弹性事件关联的参数。
+    </summary></member><member name="P:Polly.Telemetry.TelemetryEventArguments`2.Outcome"><summary>
+            获取与韧性事件关联的结果（如果有）。
+            </summary></member><member name="T:Polly.Telemetry.TelemetryListener"><summary>
+            弹性遥测事件的侦听器。
+            </summary></member><member name="M:Polly.Telemetry.TelemetryListener.Write``2(Polly.Telemetry.TelemetryEventArguments{``0,``1}@)"><summary>
+            向侦听器写入一个复原事件。
+            </summary><typeparam name="TResult">结果类型。</typeparam><typeparam name="TArgs">与事件关联的参数类型。</typeparam><param name="args">与事件关联的参数。</param></member><member name="T:Polly.Timeout.OnTimeoutArguments"><summary>
+    超时策略用于通知发生超时的参数。
+    </summary><remarks>
+    创建此结构时始终使用构造函数，否则我们不保证二进制兼容性。
+    </remarks></member><member name="M:Polly.Timeout.OnTimeoutArguments.#ctor(Polly.ResilienceContext,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.Timeout.OnTimeoutArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行相关联的上下文。</param><param name="timeout">分配的超时值。</param></member><member name="P:Polly.Timeout.OnTimeoutArguments.Context"><summary>
+            获取与用户提供的回调的执行相关联的上下文。
+            </summary></member><member name="P:Polly.Timeout.OnTimeoutArguments.Timeout"><summary>
+            获取分配的超时值。
+            </summary></member><member name="T:Polly.Timeout.TimeoutGeneratorArguments"><summary>
+            超时策略用于检索当前执行的超时的参数。
+            </summary><remarks>
+            在创建此结构体时始终使用构造函数，否则我们不保证二进制兼容性。
+            </remarks></member><member name="M:Polly.Timeout.TimeoutGeneratorArguments.#ctor(Polly.ResilienceContext)"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutGeneratorArguments" /> 结构的新实例。
+            </summary><param name="context">与用户提供的回调的执行关联的上下文。</param></member><member name="P:Polly.Timeout.TimeoutGeneratorArguments.Context"><summary>
+            获取与用户提供的回调的执行相关联的上下文。
+            </summary></member><member name="T:Polly.Timeout.TimeoutRejectedException"><summary>
+    当通过超时弹性策略执行的委托在配置的超时时间之前未完成时抛出的异常。
+    </summary></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+            </summary></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+            </summary><param name="message">消息。</param></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.String,System.Exception)"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+            </summary><param name="message">消息。</param><param name="innerException">内部异常。</param></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+            </summary><param name="timeout">导致此异常的超时值。</param></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.String,System.TimeSpan)"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+            </summary><param name="timeout">导致此异常的超时值。</param><param name="message">消息。</param></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.String,System.TimeSpan,System.Exception)"><summary>
+    初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+    </summary><param name="message">消息。</param><param name="timeout">导致此异常的超时值。</param><param name="innerException">内部异常。</param></member><member name="P:Polly.Timeout.TimeoutRejectedException.Timeout"><summary>
+            获取导致此异常的超时值。
+            </summary></member><member name="M:Polly.Timeout.TimeoutRejectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><summary>
+    初始化 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 类的新实例。
+    </summary><param name="info">信息。</param><param name="context">上下文。</param></member><member name="M:Polly.Timeout.TimeoutRejectedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"><inheritdoc /></member><member name="T:Polly.Timeout.TimeoutStrategyOptions"><summary>
+            表示超时策略的选项。
+            </summary></member><member name="M:Polly.Timeout.TimeoutStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Polly.Timeout.TimeoutStrategyOptions" /> 类的新实例。
+            </summary></member><member name="P:Polly.Timeout.TimeoutStrategyOptions.Timeout"><summary>
+    获取或设置默认超时时间。
+    </summary><value>
+    此值必须大于10毫秒且小于24小时。默认值为30秒。
+    </value></member><member name="P:Polly.Timeout.TimeoutStrategyOptions.TimeoutGenerator"><summary>
+            获取或设置一个超时生成器，该生成器为给定执行生成超时。
+            </summary><remarks>
+            当生成器为 <see langword="null" /> 时，将改为使用 <see cref="P:Polly.Timeout.TimeoutStrategyOptions.Timeout" /> 属性的值。
+当生成器返回的 <see cref="T:System.TimeSpan" /> 值小于或等于 <see cref="F:System.TimeSpan.Zero" /> 时，策略不会执行任何操作。
+            <para>
+            返回 <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" /> 以禁用给定执行的超时。
+            </para></remarks><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="P:Polly.Timeout.TimeoutStrategyOptions.OnTimeout"><summary>
+            获取或设置在超时时引发的超时委托。
+            </summary><value>
+            默认值为 <see langword="null" />。
+            </value></member><member name="T:Polly.TimeoutResiliencePipelineBuilderExtensions"><summary>
+    用于向 <see cref="T:Polly.ResiliencePipelineBuilder" /> 添加超时的扩展方法。
+    </summary></member><member name="M:Polly.TimeoutResiliencePipelineBuilderExtensions.AddTimeout``1(``0,System.TimeSpan)"><summary>
+            向构建器添加超时。
+            </summary><typeparam name="TBuilder">构建器类型。</typeparam><param name="builder">构建器实例。</param><param name="timeout">超时值。该值应大于 <see cref="F:System.TimeSpan.Zero" />。</param><returns>同一构建器实例。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="builder" /> 为 <see langword="null" /> 时抛出。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当参数生成的选项无效时抛出。</exception></member><member name="M:Polly.TimeoutResiliencePipelineBuilderExtensions.AddTimeout``1(``0,Polly.Timeout.TimeoutStrategyOptions)"><summary>
+            向生成器添加超时。
+            </summary><typeparam name="TBuilder">生成器类型。</typeparam><param name="builder">生成器实例。</param><param name="options">超时选项。</param><returns>同一生成器实例。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="builder" />或<paramref name="options" />为<see langword="null" />时引发。</exception><exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">当<paramref name="options" />无效时引发。</exception></member><member name="T:Polly.Utils.IOutcomeArguments`1"><summary>
+    结果参数的标记接口。
+  </summary><typeparam name="TResult">结果的类型。</typeparam></member><member name="P:Polly.Utils.IOutcomeArguments`1.Context"><summary>
+            获取韧性上下文。
+            </summary></member><member name="P:Polly.Utils.IOutcomeArguments`1.Outcome"><summary>
+    获取结果。
+    </summary></member><member name="M:Polly.Utils.OutcomeUtilities.WithCallerCancellationToken``1(Polly.Outcome{``0},System.Threading.CancellationToken)"><summary>
+            确保当取消是由调用者的令牌引起时，从策略中逸出的<see cref="T:System.OperationCanceledException" />（该策略替换了执行<see cref="T:System.Threading.CancellationToken" />，例如超时或对冲）携带调用者的令牌。
+            </summary><typeparam name="T">结果的结果类型。</typeparam><param name="outcome">策略产生的结果。</param><param name="callerToken">在策略替换执行之前与执行关联的取消令牌。</param><returns>
+            一个结果，其<see cref="T:System.OperationCanceledException" />在调用者请求取消时携带<paramref name="callerToken" />，并将原始异常保留为其<see cref="P:System.Exception.InnerException" />；否则原样返回原始的<paramref name="outcome" />。
+            </returns><remarks>
+            仅当<paramref name="callerToken" />实际请求取消时才会进行重写。这保留了约定，即真正的超时或调用者令牌未被取消时抛出的无关<see cref="T:System.OperationCanceledException" />保持不变。
+            </remarks></member><member name="T:Polly.Utils.Pipeline.CompositeComponent"><summary>
+            多个组件的组合。
+            </summary></member><member name="T:Polly.Utils.Pipeline.DelegatingComponent"><summary>
+            一个将执行委托给链中下一个组件的组件。
+            </summary></member><member name="T:Polly.Utils.Pipeline.PipelineComponent"><summary>
+            表示弹性管道的单个组件。
+            </summary><remarks>
+            管道的组件可以是策略、通用策略或整个管道。
+            </remarks></member><member name="T:Polly.Utils.TimeProviderExtensions"><summary>
+    弹性策略所使用的 <see cref="T:System.TimeProvider" /> 的扩展方法。
+    </summary></member><member name="M:Polly.Utils.TimeProviderExtensions.DelayAsync(System.TimeProvider,System.TimeSpan,Polly.ResilienceContext)"><summary>
+            在指定的时间跨度内延迟执行。
+            </summary><param name="timeProvider"><see cref="T:System.TimeProvider" /> 的实例。</param><param name="delay">我们应该延迟多长时间。</param><param name="context">韧性上下文。</param><returns>任务。</returns><remarks>
+            如果 <see cref="P:Polly.ResilienceContext.IsSynchronous" /> 属性为 true，则同步执行延迟，否则异步执行延迟。
+            此方法以后将变为公共方法。
+            </remarks></member><member name="T:Polly.VoidResult"><summary>
+    表示 void 结果的类。
+    </summary></member></members>
+</doc>

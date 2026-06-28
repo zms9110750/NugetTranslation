@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Primitives</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Primitives.CancellationChangeToken"><summary>
+            一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实现使用 <see cref="T:System.Threading.CancellationToken" />。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.CancellationChangeToken.#ctor(System.Threading.CancellationToken)"><summary>初始化 <see cref="T:Microsoft.Extensions.Primitives.CancellationChangeToken" /> 的新实例。</summary><param name="cancellationToken"><see cref="T:System.Threading.CancellationToken" />。</param></member><member name="P:Microsoft.Extensions.Primitives.CancellationChangeToken.ActiveChangeCallbacks"><inheritdoc /></member><member name="P:Microsoft.Extensions.Primitives.CancellationChangeToken.HasChanged"><inheritdoc /></member><member name="M:Microsoft.Extensions.Primitives.CancellationChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)"><inheritdoc /></member><member name="T:Microsoft.Extensions.Primitives.ChangeToken"><summary>
+    传播发生更改的通知。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.ChangeToken.OnChange(System.Func{Microsoft.Extensions.Primitives.IChangeToken},System.Action)"><summary>
+            注册每当生成的令牌更改时要调用的 <paramref name="changeTokenConsumer" /> 操作。
+            </summary><param name="changeTokenProducer">生成更改令牌。</param><param name="changeTokenConsumer">令牌更改时调用的操作。</param><returns></returns></member><member name="M:Microsoft.Extensions.Primitives.ChangeToken.OnChange``1(System.Func{Microsoft.Extensions.Primitives.IChangeToken},System.Action{``0},``0)"><summary>
+    每当生成的令牌发生变化时，注册要调用的 <paramref name="changeTokenConsumer" /> 操作。
+    </summary><param name="changeTokenProducer">生成更改令牌。</param><param name="changeTokenConsumer">当令牌更改时调用的操作。</param><param name="state">消费者的状态。</param><returns></returns></member><member name="T:Microsoft.Extensions.Primitives.CompositeChangeToken"><summary>
+            一个表示一个或多个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实例的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.CompositeChangeToken.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.Primitives.IChangeToken})"><summary>
+            创建 <see cref="T:Microsoft.Extensions.Primitives.CompositeChangeToken" /> 的新实例。
+            </summary><param name="changeTokens">要组合的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 列表。</param></member><member name="P:Microsoft.Extensions.Primitives.CompositeChangeToken.ChangeTokens"><summary>
+            返回组成当前 <see cref="T:Microsoft.Extensions.Primitives.CompositeChangeToken" /> 的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 列表。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.CompositeChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)"><inheritdoc /></member><member name="P:Microsoft.Extensions.Primitives.CompositeChangeToken.HasChanged"><inheritdoc /></member><member name="P:Microsoft.Extensions.Primitives.CompositeChangeToken.ActiveChangeCallbacks"><inheritdoc /></member><member name="T:Microsoft.Extensions.Primitives.Extensions"><summary>
+    为 <see cref="N:Microsoft.Extensions.Primitives" /> 命名空间提供扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.Extensions.Append(System.Text.StringBuilder,Microsoft.Extensions.Primitives.StringSegment)"><summary>
+            将给定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 添加到 <see cref="T:System.Text.StringBuilder" />。
+            </summary><param name="builder">要添加到的 <see cref="T:System.Text.StringBuilder" />。</param><param name="segment">要添加的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><returns>原始的 <see cref="T:System.Text.StringBuilder" />。</returns></member><member name="T:Microsoft.Extensions.Primitives.IChangeToken"><summary>
+            传播指示已发生更改的通知。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged"><summary>
+            获取一个值，该值指示是否发生了更改。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.IChangeToken.ActiveChangeCallbacks"><summary>
+    指示此令牌是否会主动引发回调。如果<c>false</c>，则令牌使用者必须轮询<see cref="P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged" />以检测更改。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.IChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)"><summary>
+    注册一个回调，当条目发生变化时将调用该回调。
+    <see cref="P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged" /> 必须在调用回调之前设置。
+    </summary><param name="callback">要调用的 <see cref="T:System.Action`1" />。</param><param name="state">要传递给回调的状态。</param><returns>一个用于取消注册回调的 <see cref="T:System.IDisposable" />。</returns></member><member name="T:Microsoft.Extensions.Primitives.InplaceStringBuilder"><summary>
+            提供一种快速、无分配字符串拼接机制。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.#ctor(System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 类的新实例。
+            </summary><param name="capacity"><see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 实例的建议起始大小。</param></member><member name="P:Microsoft.Extensions.Primitives.InplaceStringBuilder.Capacity"><summary>
+            获取当前 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 对象可以包含的字符数。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.String)"><summary>
+            将字符串追加到当前 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 实例的末尾。
+            </summary><param name="value">要追加的字符串。</param></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(Microsoft.Extensions.Primitives.StringSegment)"><summary>
+    将字符串片段追加到当前 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 实例的末尾。
+    </summary><param name="segment">要追加的字符串片段。</param></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.String,System.Int32,System.Int32)"><summary>
+            向当前 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 实例的末尾追加一个子字符串。
+            </summary><param name="value">包含要追加的子字符串的字符串。</param><param name="offset">value 中子字符串的起始位置。</param><param name="count">要追加的 value 中的字符数。</param></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.Char)"><summary>
+            将字符追加到当前 <see cref="T:Microsoft.Extensions.Primitives.InplaceStringBuilder" /> 实例的末尾。
+            </summary><param name="c">要追加的字符。</param></member><member name="M:Microsoft.Extensions.Primitives.InplaceStringBuilder.ToString"><summary>
+            将此实例的值转换为字符串。
+            </summary><returns>一个值与此实例相同的字符串。</returns></member><member name="T:Microsoft.Extensions.Primitives.StringSegment"><summary>
+            子字符串的优化表示。
+            </summary></member><member name="F:Microsoft.Extensions.Primitives.StringSegment.Empty"><summary>
+            表示 <see cref="F:System.String.Empty" /> 的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 结构的一个实例。
+            </summary><param name="buffer">
+            原始 <see cref="T:System.String" />。<see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 包含整个 <see cref="T:System.String" />。
+            </param></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.#ctor(System.String,System.Int32,System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 结构的一个实例。
+            </summary><param name="buffer">用作缓冲区的原始 <see cref="T:System.String" />。</param><param name="offset">段在 <paramref name="buffer" /> 中的偏移量。</param><param name="length">段的长度。</param><exception cref="T:System.ArgumentNullException"><paramref name="buffer" /> 为 <see langword="null" />。
+            </exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset" /> 或 <paramref name="length" /> 小于零，或者 <paramref name="offset" /> +
+            <paramref name="length" /> 大于 <paramref name="buffer" /> 中的字符数。
+            </exception></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.Buffer"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的 <see cref="T:System.String" /> 缓冲区。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.Offset"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 在缓冲区中的偏移量。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.Length"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的长度。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.Value"><summary>
+            获取此段的值作为 <see cref="T:System.String" />。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.HasValue"><summary>
+    获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 是否包含有效值。
+    </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegment.Item(System.Int32)"><summary>
+            获取当前 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中指定位置处的 <see cref="T:System.Char" />。
+            </summary><param name="index">相对于 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的偏移量</param><returns>指定位置处的 <see cref="T:System.Char" />。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.AsSpan"><summary>
+            从当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 获取一个 <see cref="T:System.ReadOnlySpan`1" />。
+            </summary><returns>来自此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的 <see cref="T:System.ReadOnlySpan`1" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.AsSpan(System.Int32)"><summary>
+            从当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中获取一个 <see cref="T:System.ReadOnlySpan`1" />，该 <see cref="T:System.ReadOnlySpan`1" /> 从由 <paramref name="start" /> 指定的位置开始，并包含剩余的长度。
+            </summary><param name="start">在此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从零开始的起始字符位置。</param><returns>一个 <see cref="T:System.ReadOnlySpan`1" />，包含在此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从 <paramref name="start" /> 开始的剩余字符。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="start" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.AsSpan(System.Int32,System.Int32)"><summary>
+            从当前 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 获取一个 <see cref="T:System.ReadOnlySpan`1" />，该 span 从 <paramref name="start" /> 指定的位置开始，并具有指定的 <paramref name="length" />。
+            </summary><param name="start">此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从零开始的起始字符位置。</param><param name="length">span 中的字符数。</param><returns>在此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中，一个从 <paramref name="start" /> 开始、长度为 <paramref name="length" /> 的 <see cref="T:System.ReadOnlySpan`1" />。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="start" /> 或 <paramref name="length" /> 小于零，或者 <paramref name="start" /> + <paramref name="length" /> 大于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" />。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.AsMemory"><summary>
+            从当前<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />获取<see cref="T:System.ReadOnlyMemory`1" />。
+            </summary><returns>从此<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />获取的<see cref="T:System.ReadOnlyMemory`1" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Compare(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)"><summary>
+        使用指定规则比较两个指定<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />对象的子字符串，
+        并返回一个整数，指示它们在排序顺序中的相对位置。
+    </summary><param name="a">要比较的第一个<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="b">要比较的第二个<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="comparisonType">指定比较规则的枚举值之一。</param><returns>
+        一个32位有符号整数，指示两个比较项之间的词法关系。
+        如果<paramref name="a" />小于<paramref name="b" />，则值为负；如果两个比较项相等，则值为0；
+        如果<paramref name="a" />大于<paramref name="b" />，则值为正。
+    </returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.Object)"><summary>
+        指示当前对象是否等于同一类型的另一个对象。
+    </summary><param name="obj">要与此对象进行比较的对象。</param><returns><see langword="true" /> 如果当前对象等于 <paramref name="obj" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment)"><summary>
+    指示当前对象是否与同一类型的另一个对象相等。
+    </summary><param name="other">要与该对象进行比较的对象。</param><returns>如果当前对象等于 <paramref name="other" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)"><summary>
+    指示当前对象是否与同一类型的另一个对象相等。
+    </summary><param name="other">要与此对象进行比较的对象。</param><param name="comparisonType">指定比较中使用的规则的枚举值之一。</param><returns>如果当前对象与<paramref name="other" />相等，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)"><summary>
+            确定两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象是否具有相同的值。参数指定了比较中使用的区域性、大小写和排序规则。
+            </summary><param name="a">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="b">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="comparisonType">指定比较规则的枚举值之一。</param><returns>如果对象相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.String)"><summary>
+            检查指定的 <see cref="T:System.String" /> 是否与当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 相等。
+            </summary><param name="text">要与当前 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 进行比较的 <see cref="T:System.String" />。</param><returns>如果指定的 <see cref="T:System.String" /> 与当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.String,System.StringComparison)"><summary>
+            检查指定的 <see cref="T:System.String" /> 是否与当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 相等。
+            </summary><param name="text">要与当前 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 进行比较的 <see cref="T:System.String" />。</param><param name="comparisonType">枚举值之一，指定用于比较的规则。</param><returns>如果指定的 <see cref="T:System.String" /> 等于当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.GetHashCode"><summary>
+            返回此实例的哈希代码。
+            </summary><returns>
+            此实例的哈希代码，适用于哈希算法和哈希表之类的数据结构。
+            </returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.op_Equality(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)"><summary>
+    检查两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 是否具有相同的值。
+    </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，或 <see langword="null" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，或 <see langword="null" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.op_Inequality(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)"><summary>
+            检查两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 是否具有不同的值。
+            </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，或 <see langword="null" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，或 <see langword="null" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(System.String)~Microsoft.Extensions.Primitives.StringSegment"><summary>
+从给定的 <see cref="T:System.String" /> 创建一个新的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。
+            </summary><param name="value">要转换为 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的 <see cref="T:System.String" />。</param></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlySpan{System.Char}"><summary>
+            从给定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 创建一个 <see cref="T:System.ReadOnlySpan`1" />。
+            </summary><param name="segment">要转换为 <see cref="T:System.ReadOnlySpan`1" /> 的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.StartsWith(System.String,System.StringComparison)"><summary>
+            使用指定的 <paramref name="comparisonType" /> 比较时，检查此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的开头是否与指定的 <see cref="T:System.String" /> 匹配。
+            </summary><param name="text">要比较的 <see cref="T:System.String" />。</param><param name="comparisonType">枚举值之一，指定比较中要使用的规则。</param><returns>如果 <paramref name="text" /> 匹配此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的开头，则为 <see langword="true" />；否则为 <see langword="false" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="text" /> 为 <see langword="null" />。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.EndsWith(System.String,System.StringComparison)"><summary>
+    检查在使用指定的 <paramref name="comparisonType" /> 进行比较时，此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的末尾是否与指定的 <see cref="T:System.String" /> 匹配。
+    </summary><param name="text">要比较的 <see cref="T:System.String" />。</param><param name="comparisonType">一个枚举值，指定比较中使用的规则。</param><returns>如果 <paramref name="text" /> 与此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的末尾匹配，则为 <see langword="true" />；否则为 <see langword="false" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="text" /> 为 <see langword="null" />。
+    </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Substring(System.Int32)"><summary>
+    从此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中检索子字符串。
+    子字符串从由 <paramref name="offset" /> 指定的位置开始，并具有剩余长度。
+    </summary><param name="offset">此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中子字符串的从零开始的起始字符位置。</param><returns>一个 <see cref="T:System.String" />，等效于此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从 <paramref name="offset" /> 开始的剩余长度的子字符串。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+    </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Substring(System.Int32,System.Int32)"><summary>
+            从此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中检索子字符串。子字符串从 <paramref name="offset" /> 指定的位置开始，并具有指定的 <paramref name="length" />。
+            </summary><param name="offset">此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中子字符串的从零开始的起始字符位置。</param><param name="length">子字符串中的字符数。</param><returns>一个 <see cref="T:System.String" />，等效于此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从 <paramref name="offset" /> 开始的长度为 <paramref name="length" /> 的子字符串。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset" /> 或 <paramref name="length" /> 小于零，或 <paramref name="offset" /> + <paramref name="length" /> 大于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" />。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Subsegment(System.Int32)"><summary>
+            从此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中检索表示子字符串的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。
+            该 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 从 <paramref name="offset" /> 指定的位置开始。
+            </summary><param name="offset">从此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中的子字符串的从零开始的起始字符位置。</param><returns>一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，它从此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中的 <paramref name="offset" /> 处开始，其长度为剩余部分。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Subsegment(System.Int32,System.Int32)"><summary>
+            检索一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，它表示此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的子字符串。
+            该 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 从 <paramref name="offset" /> 指定的位置开始，并具有指定的 <paramref name="length" />。
+            </summary><param name="offset">此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中子字符串的从零开始的起始字符位置。</param><param name="length">子字符串中的字符数。</param><returns>一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，相当于此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中从 <paramref name="offset" /> 开始的长度为 <paramref name="length" /> 的子字符串。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="offset" /> 或 <paramref name="length" /> 小于零，或者 <paramref name="offset" /> + <paramref name="length" /> 大于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" />。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char,System.Int32,System.Int32)"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中字符 <paramref name="c" /> 第一个匹配项的从零开始的索引。
+            搜索从 <paramref name="start" /> 开始，并检查指定数量的 <paramref name="count" /> 个字符位置。
+            </summary><param name="c">要搜索的 Unicode 字符。</param><param name="start">搜索开始的从零开始的索引位置。</param><param name="count">要检查的字符数。</param><returns>如果找到该字符，则为从 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 开头开始的 <paramref name="c" /> 的从零开始的索引位置；否则为 -1。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="start" /> 或 <paramref name="count" /> 小于零，或者 <paramref name="start" /> + <paramref name="count" /> 大于
+            <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" />。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char,System.Int32)"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中第一次出现字符 <paramref name="c" /> 的从零开始的索引。搜索从 <paramref name="start" /> 开始。
+            </summary><param name="c">要查找的 Unicode 字符。</param><param name="start">搜索开始的从零开始的索引位置。</param><returns>如果找到该字符，则为从 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 开始的 <paramref name="c" /> 的从零开始的索引位置；如果未找到，则为 -1。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="start" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char)"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 中第一次出现字符 <paramref name="c" /> 的从零开始的索引。
+            </summary><param name="c">要查找的 Unicode 字符。</param><returns>如果找到该字符，则为从 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 开头算起的 <paramref name="c" /> 的从零开始的索引位置；如果找不到，则为 -1。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[],System.Int32,System.Int32)"><summary>
+    报告在此实例中第一次出现指定 Unicode 字符数组中的任何字符的从零开始的索引。搜索从指定的字符位置开始，并检查指定数量的字符位置。
+    </summary><param name="anyOf">一个包含一个或多个要查找的字符的 Unicode 字符数组。</param><param name="startIndex">搜索的起始位置。</param><param name="count">要检查的字符位置数。</param><returns>在此实例中找到 <paramref name="anyOf" /> 中任何字符的第一个匹配项的从零开始的索引位置；如果未找到 <paramref name="anyOf" /> 中的任何字符，则为 -1。</returns><exception cref="T:System.ArgumentNullException"><paramref name="anyOf" /> 是 <see langword="null" />。
+    </exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex" /> 或 <paramref name="count" /> 小于零，或者 <paramref name="startIndex" /> + <paramref name="count" /> 大于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" />。
+    </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[],System.Int32)"><summary>
+            报告此实例中指定 Unicode 字符数组中的任何字符首次出现的从零开始的索引。搜索从指定字符位置开始。
+            </summary><param name="anyOf">一个 Unicode 字符数组，包含一个或多个要查找的字符。</param><param name="startIndex">搜索起始位置。</param><returns>此实例中与 <paramref name="anyOf" /> 中的任何字符匹配的第一个匹配项的从零开始的索引位置；如果未找到 <paramref name="anyOf" /> 中的任何字符，则为 -1。</returns><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex" /> 大于或等于 <see cref="P:Microsoft.Extensions.Primitives.StringSegment.Length" /> 或小于零。
+            </exception></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[])"><summary>
+    报告在此实例中指定Unicode字符数组中的任意字符的第一个匹配项的从零开始的索引。
+    </summary><param name="anyOf">一个Unicode字符数组，包含要查找的一个或多个字符。</param><returns>在此实例中找到<paramref name="anyOf" />中任意字符的第一个匹配项的从零开始的索引位置；如果没有找到<paramref name="anyOf" />中的任何字符，则为 -1。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.LastIndexOf(System.Char)"><summary>
+    报告在此实例中最后一次出现指定 Unicode 字符的从零开始的索引位置。
+    </summary><param name="value">要查找的 Unicode 字符。</param><returns>如果找到该字符，则为 value 的从零开始的索引位置；如果未找到，则为 -1。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Trim"><summary>
+            移除所有前导和尾随空白。
+            </summary><returns>修剪后的<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.TrimStart"><summary>
+            移除所有前导空白字符。
+            </summary><returns>修剪后的<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.TrimEnd"><summary>
+            移除所有尾随空白字符。
+            </summary><returns>裁剪后的<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.Split(System.Char[])"><summary>
+            根据数组中的字符将字符串拆分为<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。
+            </summary><param name="chars">一个字符数组，用于界定此字符串中的子字符串；一个不包含分隔符的空数组；或 null。</param><returns>一个<see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" />，其元素包含此实例中的<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />，这些<see cref="T:Microsoft.Extensions.Primitives.StringSegment" />由<paramref name="chars" />中的一个或多个字符分隔。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.IsNullOrEmpty(Microsoft.Extensions.Primitives.StringSegment)"><summary>
+            指示指定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 是否为 null 或空字符串。
+            </summary><param name="value">要测试的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><returns></returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.ToString"><summary>
+            返回此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 表示的 <see cref="T:System.String" />，如果此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 不包含值，则返回 <see cref="F:System.String.Empty" />。
+            </summary><returns>返回此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 表示的 <see cref="T:System.String" />，如果此 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 不包含值，则返回 <see cref="F:System.String.Empty" />。</returns></member><member name="T:Microsoft.Extensions.Primitives.StringSegmentComparer"><summary>
+            比较两个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegmentComparer.Ordinal"><summary>
+            获取一个执行区分大小写的序号 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 比较的 <see cref="T:Microsoft.Extensions.Primitives.StringSegmentComparer" /> 对象。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringSegmentComparer.OrdinalIgnoreCase"><summary>
+            获取一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegmentComparer" /> 对象，该对象执行不区分大小写的序号 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 比较。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.StringSegmentComparer.Compare(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)"><summary>
+    比较两个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象，并返回一个指示其相对排序顺序的值。
+    </summary><param name="x">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="y">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><returns>一个 32 位有符号整数，指示两个比较对象之间的词法关系。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegmentComparer.Equals(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)"><summary>
+            确定两个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象是否相等。
+            </summary><param name="x">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="y">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><returns>如果两个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringSegmentComparer.GetHashCode(Microsoft.Extensions.Primitives.StringSegment)"><summary>
+    返回一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 对象的哈希代码。
+    </summary><param name="obj">要获取哈希代码的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 的哈希代码，适用于哈希算法和哈希表等数据结构。</returns></member><member name="T:Microsoft.Extensions.Primitives.StringTokenizer"><summary>
+            将 <see cref="T:System.String" /> 分词为 <see cref="T:Microsoft.Extensions.Primitives.StringSegment">StringSegments</see>。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.#ctor(System.String,System.Char[])"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 的新实例。
+            </summary><param name="value">要标记化的 <see cref="T:System.String" />。</param><param name="separators">用于标记化的字符。</param></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.#ctor(Microsoft.Extensions.Primitives.StringSegment,System.Char[])"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 的新实例。
+    </summary><param name="value">要标记化的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param><param name="separators">用于标记化的字符。</param></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.GetEnumerator"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator" /> 的新实例。
+            </summary><returns>
+            一个基于 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 的值和分隔符的 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator" />。
+            </returns></member><member name="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator"><summary>
+    枚举由 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 表示的 <see cref="T:System.String" /> 令牌。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.#ctor(Microsoft.Extensions.Primitives.StringTokenizer@)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 初始化 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator" />。
+            </summary><param name="tokenizer">一个 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" />，包含要枚举的值和令牌分隔符。</param></member><member name="P:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Current"><summary>
+            从 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 获取当前的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Dispose"><summary>
+    释放由 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator" /> 使用的所有资源。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.MoveNext"><summary>
+            将枚举器推进到 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 中的下一个标记。
+            </summary><returns>如果枚举器已成功推进到下一个标记，则为 <see langword="true" />；如果枚举器已超过 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer" /> 的末尾，则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Reset"><summary>
+            将 <see cref="T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator" /> 重置为其初始状态。
+            </summary></member><member name="T:Microsoft.Extensions.Primitives.StringValues"><summary>
+            以高效的方式表示零/null、一个或多个字符串。
+            </summary></member><member name="F:Microsoft.Extensions.Primitives.StringValues.Empty"><summary>
+    只读实例，其值为空字符串数组，属于 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 结构。
+    </summary><remarks>
+    在应用程序代码中，此字段最常用于安全地表示具有空字符串值的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。
+    </remarks></member><member name="M:Microsoft.Extensions.Primitives.StringValues.#ctor(System.String)"><summary>
+            使用指定的字符串初始化 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 结构的新实例。
+            </summary><param name="value">一个字符串值或 <see langword="null" />。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.#ctor(System.String[])"><summary>
+            使用指定的字符串数组初始化 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 结构的新实例。
+            </summary><param name="values">一个字符串数组。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(System.String)~Microsoft.Extensions.Primitives.StringValues"><summary>
+            定义从给定字符串到<see cref="T:Microsoft.Extensions.Primitives.StringValues" />的隐式转换。
+            </summary><param name="value">要隐式转换的字符串。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(System.String[])~Microsoft.Extensions.Primitives.StringValues"><summary>
+            定义从给定字符串数组到 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 的隐式转换。
+            </summary><param name="values">要隐式转换的字符串数组。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(Microsoft.Extensions.Primitives.StringValues)~System.String"><summary>
+            定义将给定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 隐式转换为字符串的转换，其中多个值以逗号分隔的形式连接。
+            </summary><remarks>
+            当 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是从空字符串数组初始化或者是 <see cref="F:Microsoft.Extensions.Primitives.StringValues.Empty" /> 时，返回 <see langword="null" />。
+            </remarks><param name="values">要隐式转换的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(Microsoft.Extensions.Primitives.StringValues)~System.String[]"><summary>
+    定义将给定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 隐式转换为字符串数组。
+    </summary><param name="value">一个要隐式转换的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param></member><member name="P:Microsoft.Extensions.Primitives.StringValues.Count"><summary>
+            获取此 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中包含的 <see cref="T:System.String" /> 元素的数量。
+            </summary></member><member name="P:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IList{System#String}#Item(System.Int32)"><summary>
+    获取指定索引处的 <see cref="T:System.String" />。
+    </summary><value>指定索引处的字符串。</value><param name="index">要获取的元素从零开始的索引。</param><exception cref="T:System.NotSupportedException">只读的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 不支持设置操作。</exception></member><member name="P:Microsoft.Extensions.Primitives.StringValues.Item(System.Int32)"><summary>获取指定索引处的 <see cref="T:System.String" />。</summary><value>指定索引处的字符串。</value><param name="index">要获取的元素的从零开始的索引。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.ToString"><summary>
+            将当前<see cref="T:Microsoft.Extensions.Primitives.StringValues" />对象的值转换为其等效的字符串表示形式，多个值将以逗号分隔连接成字符串。
+            </summary><returns>当前<see cref="T:Microsoft.Extensions.Primitives.StringValues" />对象值的字符串表示形式。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.ToArray"><summary>
+    从当前的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象创建一个字符串数组。
+    </summary><returns>此实例表示的字符串数组。</returns><remarks><para>如果 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 内部包含单个字符串，则将其复制到一个新数组中。</para><para>如果 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 内部包含一个数组，则返回该数组实例。</para></remarks></member><member name="M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IList{System#String}#IndexOf(System.String)"><summary>
+            返回指定项在 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中首次出现的从零开始的索引。
+            </summary><param name="item">要在 <see cref="T:Microsoft.Extensions.Primitives.StringValues"></see> 中定位的字符串。</param><returns>如果找到，则为 <paramref name="item" /> 在 <see cref="T:Microsoft.Extensions.Primitives.StringValues"></see> 中首次出现的从零开始的索引；否则为 -1。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#ICollection{System#String}#Contains(System.String)"><summary>确定字符串是否在 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中。</summary><param name="item">要在 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中定位的 <see cref="T:System.String" />。</param><returns>如果在 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中找到 <paramref name="item" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#ICollection{System#String}#CopyTo(System.String[],System.Int32)"><summary>
+            将整个<see cref="T:Microsoft.Extensions.Primitives.StringValues" />复制到字符串数组，从目标数组的指定索引处开始。
+            </summary><param name="array">一维<see cref="T:System.Array" />，是复制元素的目标。该<see cref="T:System.Array" />必须具有从零开始的索引。</param><param name="arrayIndex">目标数组中从零开始复制开始的索引。</param><exception cref="T:System.ArgumentNullException"><paramref name="array" /> 为 null。</exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex" /> 小于 0。</exception><exception cref="T:System.ArgumentException">源<see cref="T:Microsoft.Extensions.Primitives.StringValues" />中的元素数量大于从<paramref name="arrayIndex" />到目标<paramref name="array" />末尾的可用空间。</exception></member><member name="M:Microsoft.Extensions.Primitives.StringValues.GetEnumerator"><summary>检索一个对象，该对象可以遍历此 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 中的各个字符串。</summary><returns>一个可用于遍历 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 的枚举器。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IEnumerable{System#String}#GetEnumerator"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.GetEnumerator" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.System#Collections#IEnumerable#GetEnumerator"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.GetEnumerator" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.IsNullOrEmpty(Microsoft.Extensions.Primitives.StringValues)"><summary>
+            指示指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是否不包含任何字符串值。
+            </summary><param name="value">要测试的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="value" /> 包含单个 <see langword="null" /> 或空字符串或空数组，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Concat(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            连接两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 实例。
+            </summary><param name="values1">要连接的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="values2">要连接的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns><paramref name="values1" /> 和 <paramref name="values2" /> 的连接结果。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Concat(Microsoft.Extensions.Primitives.StringValues@,System.String)"><summary>
+    将指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 实例与指定的 <see cref="T:System.String" /> 连接。
+    </summary><param name="values">要连接的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="value">要连接的 <see cref="T:System.String" />。</param><returns><paramref name="values" /> 和 <paramref name="value" /> 的连接。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Concat(System.String,Microsoft.Extensions.Primitives.StringValues@)"><summary>
+    串联指定的 <see cref="T:System.String" /> 实例与指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。
+  </summary><param name="value">要串联的 <see cref="T:System.String" />。</param><param name="values">要串联的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns><paramref name="values" /> 和 <paramref name="values" /> 的串联结果。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象是否具有相同的值且顺序相同。
+            </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)"><summary>
+    确定两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是否具有相同的值。
+    </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定两个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是否具有不同的值。
+            </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定此实例与另一个指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象是否具有相同的值。
+            </summary><param name="other">要与此实例进行比较的字符串。</param><returns>如果 <paramref name="other" /> 的值与此实例的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定指定的 <see cref="T:System.String" /> 和 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象是否具有相同的值。
+            </summary><param name="left">要比较的 <see cref="T:System.String" />。</param><param name="right">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。如果 <paramref name="left" /> 为 <see langword="null" />，则该方法返回 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String)"><summary>
+            确定指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 和 <see cref="T:System.String" /> 对象是否具有相同的值。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的 <see cref="T:System.String" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。如果 <paramref name="right" /> 为 <see langword="null" />，则此方法返回 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String)"><summary>
+            确定此实例与指定的 <see cref="T:System.String" /> 是否具有相同的值。
+            </summary><param name="other">要与此实例进行比较的 <see cref="T:System.String" />。</param><returns>如果 <paramref name="other" /> 的值与此实例相同，则为 <see langword="true" />；否则为 <see langword="false" />。如果 <paramref name="other" /> 为 <see langword="null" />，则返回 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[],Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定指定的字符串数组和<see cref="T:Microsoft.Extensions.Primitives.StringValues" />对象是否具有相同的值。
+            </summary><param name="left">要比较的字符串数组。</param><param name="right">要比较的<see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String[])"><summary>
+    确定指定的<see cref="T:Microsoft.Extensions.Primitives.StringValues" />和字符串数组对象是否具有相同的值。
+    </summary><param name="left">要比较的<see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的字符串数组。</param><returns>
+    如果<paramref name="left" />的值与<paramref name="right" />的值相同，则为<see langword="true" />；否则为<see langword="false" />。
+    </returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[])"><summary>
+            确定此实例与指定字符串数组是否具有相同的值。
+            </summary><param name="other">要与此实例进行比较的字符串数组。</param><returns><see langword="true" /> 如果 <paramref name="other" /> 的值与此实例相同；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.String)"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String)" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.String)"><summary>
+            确定指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 和 <see cref="T:System.String" /> 对象是否具有不同的值。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的 <see cref="T:System.String" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.String,Microsoft.Extensions.Primitives.StringValues)"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String,Microsoft.Extensions.Primitives.StringValues)" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.String,Microsoft.Extensions.Primitives.StringValues)"><summary>
+    确定指定的 <see cref="T:System.String" /> 和 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象是否具有不同的值。
+    </summary><param name="left">要比较的 <see cref="T:System.String" />。</param><param name="right">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.String[])"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String[])" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.String[])"><summary>
+            确定指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 和字符串数组是否具有不同的值。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的字符串数组。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.String[],Microsoft.Extensions.Primitives.StringValues)"><inheritdoc cref="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[],Microsoft.Extensions.Primitives.StringValues)" /></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.String[],Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定指定的字符串数组和 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是否具有不同的值。
+            </summary><param name="left">要比较的字符串数组。</param><param name="right">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值不同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.Object)"><summary>
+            确定指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 和 <see cref="T:System.Object" /> 是否具有相同的值，后者必须是 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />、<see cref="T:System.String" /> 或 <see cref="T:System.String" /> 数组。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的 <see cref="T:System.Object" />。</param><returns>如果 <paramref name="left" /> 对象等于 <paramref name="right" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.Object)"><summary>
+            确定指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 和 <see cref="T:System.Object" />（必须为 
+            <see cref="T:Microsoft.Extensions.Primitives.StringValues" />、<see cref="T:System.String" /> 或 <see cref="T:System.String" /> 数组）是否具有不同的值。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的 <see cref="T:System.Object" />。</param><returns>如果 <paramref name="left" /> 对象等于 <paramref name="right" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.Object,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定指定的 <see cref="T:System.Object" />（必须是 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />、<see cref="T:System.String" /> 或 <see cref="T:System.String" /> 数组）和指定的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 是否具有相同的值。
+            </summary><param name="left">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><param name="right">要比较的 <see cref="T:System.Object" />。</param><returns>如果 <paramref name="left" /> 对象等于 <paramref name="right" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.Object,Microsoft.Extensions.Primitives.StringValues)"><summary>
+            确定指定的 <see cref="T:System.Object" /> 和 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 对象是否具有相同的值。
+            </summary><param name="left">要比较的 <see cref="T:System.Object" />。</param><param name="right">要比较的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param><returns>如果 <paramref name="left" /> 对象等于 <paramref name="right" />，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Equals(System.Object)"><summary>
+    确定此实例与指定对象是否具有相同的值。
+    </summary><param name="obj">要与此对象进行比较的对象。</param><returns><see langword="true" /> 如果当前对象等于 <paramref name="obj" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Primitives.StringValues.GetHashCode"><summary>
+            返回此实例的哈希代码。
+            </summary><returns>
+            此实例的哈希代码，适用于哈希算法和哈希表等数据结构。
+            </returns></member><member name="T:Microsoft.Extensions.Primitives.StringValues.Enumerator"><summary>
+            枚举 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 的字符串值。
+            </summary></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Enumerator.#ctor(Microsoft.Extensions.Primitives.StringValues@)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 实例化一个 <see cref="T:Microsoft.Extensions.Primitives.StringValues.Enumerator" />。
+            </summary><param name="values">要枚举的 <see cref="T:Microsoft.Extensions.Primitives.StringValues" />。</param></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Enumerator.MoveNext"><summary>
+            将枚举器推进到 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 的下一个元素。
+            </summary><returns>如果枚举器成功推进到下一个元素，则为 <see langword="true" />；如果枚举器已超过 <see cref="T:Microsoft.Extensions.Primitives.StringValues" /> 的末尾，则为 <see langword="false" />。</returns></member><member name="P:Microsoft.Extensions.Primitives.StringValues.Enumerator.Current"><summary>
+    获取枚举器当前位置的元素。
+    </summary></member><member name="M:Microsoft.Extensions.Primitives.StringValues.Enumerator.Dispose"><summary>
+            释放由<see cref="T:Microsoft.Extensions.Primitives.StringValues.Enumerator" />使用的所有资源。
+            </summary></member><member name="M:Microsoft.Extensions.Internal.ChangeCallbackRegistrar.UnsafeRegisterChangeCallback``1(System.Action{System.Object},System.Object,System.Threading.CancellationToken,System.Action{``0},``0)"><summary>
+    注册一个回调，该回调将在条目已更改时调用。在调用回调之前必须设置 <see cref="P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged" />。
+    </summary><param name="callback">要调用的回调。</param><param name="state">要传递给回调的状态。</param><param name="token">用于调用回调的 <see cref="T:System.Threading.CancellationToken" />。</param><param name="onFailure">当引发 <see cref="T:System.ObjectDisposedException" /> 时要执行的操作。应使用该操作将 IChangeToken 的 ActiveChangeCallbacks 属性设置为 false。</param><param name="onFailureState">要传递给 <paramref name="onFailure" /> 操作的状态。</param><returns><see cref="T:System.Threading.CancellationToken" /> 注册。</returns></member><member name="P:System.SR.Argument_InvalidOffsetLength"><summary>偏移量和长度超出字符串的范围，或者长度大于从索引到字符串末尾的字符数。</summary></member><member name="P:System.SR.Argument_InvalidOffsetLengthStringSegment"><summary>偏移量和长度对于此 StringSegment 超出范围，或者长度大于此 StringSegment 结束位置的字符数。</summary></member><member name="P:System.SR.Capacity_CannotChangeAfterWriteStarted"><summary>写入开始后无法更改容量。</summary></member><member name="P:System.SR.Capacity_NotEnough"><summary>容量不足，无法写入“{0}”个字符，仅剩“{1}”个字符。</summary></member><member name="P:System.SR.Capacity_NotUsedEntirely"><summary>整个保留容量未被使用。容量：'{0}'，写入'{1}'。</summary></member><member name="M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlyMemory{System.Char}"><summary>
+            从给定的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" /> 创建一个 <see cref="T:System.ReadOnlyMemory`1" />。
+            </summary><param name="segment">要转换到 <see cref="T:System.ReadOnlyMemory`1" /> 的 <see cref="T:Microsoft.Extensions.Primitives.StringSegment" />。</param></member></members>
+</doc>
