@@ -1,4 +1,3 @@
 <Solution>
   <Project Path="src\NugetTranslation\NugetTranslation.csproj" />
-  <Project Path="src\Batcher\Batcher.csproj" />
 </Solution>

@@ -1,4 +1,4 @@
-ï»¿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using NeoSmart.Caching.Sqlite;
 using NuGet.Protocol;
 using NuGet.Protocol.Core.Types;
@@ -24,10 +24,10 @@ namespace NugetTranslation;
 internal static class Startup
 {
     /// <summary>
-    /// æ³¨å†ŒFusionCacheä¸ºHybridCacheå¹¶ä½¿ç”¨Sqliteä¸ºäºŒçº§ç¼“å­˜
+    /// ×¢²áFusionCacheÎªHybridCache²¢Ê¹ÓÃSqliteÎª¶ş¼¶»º´æ
     /// </summary>
-    /// <param name="services">æœåŠ¡å®¹å™¨</param> 
-    /// <param name="cachePath">ç¼“å­˜è·¯å¾„</param>
+    /// <param name="services">·şÎñÈİÆ÷</param> 
+    /// <param name="cachePath">»º´æÂ·¾¶</param>
     public static IFusionCacheBuilder AddFusionCacheAndSqliteCache(this IServiceCollection services, string cachePath = "cache.sqlite.db", JsonSerializerOptions? jsonOptions = null)
     {
         return services
@@ -43,8 +43,8 @@ internal static class Startup
             .AsHybridCache();
     }
 
-    /// <summary>æ³¨å†Œ<see cref="ChatClient"/></summary>
-    /// <remarks>Debug ä» UserSecrets è¯»å–ï¼›Release ä»ç¯å¢ƒå˜é‡è¯»å–</remarks>
+    /// <summary>×¢²á<see cref="ChatClient"/></summary>
+    /// <remarks>Debug ´Ó UserSecrets ¶ÁÈ¡£»Release ´Ó»·¾³±äÁ¿¶ÁÈ¡</remarks>
     public static IServiceCollection AddChatClient(this IServiceCollection services, string? model = null, string? apiKey = null, string? endpoint = null)
     {
 #if LOCAL
@@ -68,15 +68,15 @@ internal static class Startup
         return services.AddSingleton(new ChatClient(model, new ApiKeyCredential(apiKey), new OpenAIClientOptions { Endpoint = new Uri(endpoint) }));
     }
 
-    /// <summary>æ³¨å†Œ<see cref="SourceRepository"/>çš„ç½‘ç»œè·å–ã€‚</summary> 
+    /// <summary>×¢²á<see cref="SourceRepository"/>µÄÍøÂç»ñÈ¡¡£</summary> 
     public static IServiceCollection AddSourceRepository(this IServiceCollection services, string url = "https://api.nuget.org/v3/index.json")
     {
         return services.AddSingleton(Repository.Factory.GetCoreV3(url));
     }
-    /// <summary>æ³¨å†Œ<see cref="SourceRepository"/>çš„ç½‘ç»œè·å–ã€‚</summary> 
-    /// <param name="replenishmentRatePerSecond">æ¯ç§’ä»¤ç‰Œè¡¥å……é‡</param>
-    /// <param name="maxBurst">æœ€é«˜çªå‘é‡ï¼ˆä»¤ç‰Œæ¡¶å®¹é‡ï¼‰</param>
-    /// <param name="expectedCompletionTimeInSeconds">æœŸæœ›å®Œæˆæ—¶é—´ï¼ˆç§’ï¼‰</param>
+    /// <summary>×¢²á<see cref="SourceRepository"/>µÄÍøÂç»ñÈ¡¡£</summary> 
+    /// <param name="replenishmentRatePerSecond">Ã¿ÃëÁîÅÆ²¹³äÁ¿</param>
+    /// <param name="maxBurst">×î¸ßÍ»·¢Á¿£¨ÁîÅÆÍ°ÈİÁ¿£©</param>
+    /// <param name="expectedCompletionTimeInSeconds">ÆÚÍûÍê³ÉÊ±¼ä£¨Ãë£©</param>
     public static IServiceCollection AddPolly(this IServiceCollection services, int replenishmentRatePerSecond = 10, int maxBurst = 100, TimeSpan expectedCompletionTimeInSeconds = default)
     {
         var rpb = new ResiliencePipelineBuilder<string>();
@@ -86,29 +86,23 @@ internal static class Startup
                 .Handle<XmlException>()
                 , MaxRetryAttempts = 6
         });
-#if LOCAL
-        // Local æ¨¡å¼ï¼šè·¨è¿›ç¨‹å®Œæ•´ä¿¡å·é‡ï¼Œæ‰€æœ‰ NugetTranslation è¿›ç¨‹å…±äº« 2000 å¹¶å‘
-        rpb.AddRateLimiter(new NamedSemaphoreRateLimiter(2000, "NugetTranslationSemaphore"));
-#else
-        // Debug/Release æ¨¡å¼ï¼šè¿›ç¨‹å†…ç®€å•ä¿¡å·é‡ï¼Œå•è¿›ç¨‹ 200 å¹¶å‘
         rpb.AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
         {
-            PermitLimit = 200,
-            QueueLimit = 200
+            PermitLimit = 2000,
+            QueueLimit = 2000
         }));
-#endif
         services.AddSingleton(rpb.Build());
         return services;
     }
 
     /// <summary>
-    /// æ„å»ºå¤šå±‚é™æµç­–ç•¥ç®¡é“
+    /// ¹¹½¨¶à²ãÏŞÁ÷²ßÂÔ¹ÜµÀ
     /// </summary>
-    /// <param name="builder">ç®¡é“æ„å»ºå™¨</param>
-    /// <param name="replenishmentRatePerSecond">æ¯ç§’ä»¤ç‰Œè¡¥å……é‡</param>
-    /// <param name="maxBurst">æœ€é«˜çªå‘é‡ï¼ˆä»¤ç‰Œæ¡¶å®¹é‡ï¼‰</param>
-    /// <param name="expectedCompletionTimeInSeconds">æœŸæœ›å®Œæˆæ—¶é—´ï¼ˆç§’ï¼‰</param>
-    /// <returns>é…ç½®å¥½çš„å¼¹æ€§ç®¡é“</returns>
+    /// <param name="builder">¹ÜµÀ¹¹½¨Æ÷</param>
+    /// <param name="replenishmentRatePerSecond">Ã¿ÃëÁîÅÆ²¹³äÁ¿</param>
+    /// <param name="maxBurst">×î¸ßÍ»·¢Á¿£¨ÁîÅÆÍ°ÈİÁ¿£©</param>
+    /// <param name="expectedCompletionTimeInSeconds">ÆÚÍûÍê³ÉÊ±¼ä£¨Ãë£©</param>
+    /// <returns>ÅäÖÃºÃµÄµ¯ĞÔ¹ÜµÀ</returns>
     public static ResiliencePipelineBuilder<T> AddRateLimiterAndRetry<T>(this ResiliencePipelineBuilder<T> builder,
         int replenishmentRatePerSecond, int maxBurst = 0,
        TimeSpan expectedCompletionTimeInSeconds = default)
@@ -122,14 +116,14 @@ internal static class Startup
             expectedCompletionTimeInSeconds = TimeSpan.FromSeconds(maxBurst / replenishmentRatePerSecond);
         }
         return builder
-            // æœ€å¤–å±‚ï¼šæ— é™é‡è¯•ï¼ˆæ•è·æ‰€æœ‰é™æµé”™è¯¯ï¼‰
+            // ×îÍâ²ã£ºÎŞÏŞÖØÊÔ£¨²¶»ñËùÓĞÏŞÁ÷´íÎó£©
             .AddRetry(new RetryStrategyOptions<T>
             {
                 ShouldHandle = new PredicateBuilder<T>().Handle<RateLimiterRejectedException>(),
                 MaxRetryAttempts = 6,
                 Delay = TimeSpan.FromSeconds(maxBurst) / replenishmentRatePerSecond
             })
-            // ä¸­é—´å±‚ï¼šå¹¶å‘é™æµå™¨ï¼ˆå¸¦å¯é€‰çš„æ’é˜Ÿï¼‰
+            // ÖĞ¼ä²ã£º²¢·¢ÏŞÁ÷Æ÷£¨´ø¿ÉÑ¡µÄÅÅ¶Ó£©
             .AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
             {
                 PermitLimit = (int)(maxBurst / expectedCompletionTimeInSeconds.TotalSeconds + replenishmentRatePerSecond) + 1,
@@ -141,55 +135,5 @@ internal static class Startup
                 ReplenishmentPeriod = TimeSpan.FromSeconds(1) / replenishmentRatePerSecond,
                 TokensPerPeriod = 1
             }));
-    }
-}
-
-/// <summary>åŸºäºå‘½å System.Semaphore çš„è·¨è¿›ç¨‹ RateLimiter</summary>
-internal class NamedSemaphoreRateLimiter : RateLimiter
-{
-    private readonly Semaphore _semaphore;
-    private long _availablePermits;
-
-    public NamedSemaphoreRateLimiter(int maxCount, string name)
-    {
-        _semaphore = new Semaphore(maxCount, maxCount, name);
-        _availablePermits = maxCount;
-    }
-
-    public override TimeSpan? IdleDuration => TimeSpan.FromSeconds(10);
-    public override RateLimiterStatistics? GetStatistics() => null;
-
-    protected override ValueTask<RateLimitLease> AcquireAsyncCore(int permitCount, CancellationToken cancellationToken)
-    {
-        _semaphore.WaitOne();
-        Interlocked.Decrement(ref _availablePermits);
-        return new ValueTask<RateLimitLease>(new SemaphoreLease(this));
-    }
-
-    protected override RateLimitLease AttemptAcquireCore(int permitCount)
-    {
-        if (_semaphore.WaitOne(0))
-        {
-            Interlocked.Decrement(ref _availablePermits);
-            return new SemaphoreLease(this);
-        }
-        return new SemaphoreLease(this, false);
-    }
-
-    private void Release()
-    {
-        Interlocked.Increment(ref _availablePermits);
-        _semaphore.Release();
-    }
-
-    private class SemaphoreLease : RateLimitLease
-    {
-        private readonly NamedSemaphoreRateLimiter _limiter;
-        private readonly bool _acquired;
-        public SemaphoreLease(NamedSemaphoreRateLimiter limiter, bool acquired = true) { _limiter = limiter; _acquired = acquired; }
-        public override bool IsAcquired => _acquired;
-        public override IEnumerable<string> MetadataNames => [];
-        public override bool TryGetMetadata(string metadataKey, out object? metadata) { metadata = null; return false; }
-        protected override void Dispose(bool disposing) { if (disposing && _acquired) _limiter.Release(); }
     }
 }
