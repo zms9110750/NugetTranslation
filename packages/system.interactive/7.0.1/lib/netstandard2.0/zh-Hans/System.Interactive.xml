@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>System.Interactive</name>
+    </assembly>
+    <members><member name="T:System.Linq.IAwaitable"><summary>
+    表示可以等待异步操作完成的对象接口。
+    </summary></member><member name="M:System.Linq.IAwaitable.GetAwaiter"><summary>
+        获取一个等待器对象。
+    </summary><returns>等待器对象。</returns></member><member name="T:System.Linq.IAwaiter"><summary>
+            异步操作的等待器接口。
+            </summary></member><member name="P:System.Linq.IAwaiter.IsCompleted"><summary>
+            获取一个布尔值，该值指示异步操作是否已完成。
+            </summary></member><member name="M:System.Linq.IAwaiter.GetResult"><summary>
+            获取异步操作的结果。
+            </summary><remarks>
+            如果在 <see cref="P:System.Linq.IAwaiter.IsCompleted" /> 返回 <c>true</c> 之前调用此方法，则可能导致阻塞。可以使用 <see cref="M:System.Runtime.CompilerServices.INotifyCompletion.OnCompleted(System.Action)" /> 来观察异步操作的完成。
+            </remarks></member><member name="T:System.Linq.IBuffer`1"><summary>
+            表示一个缓冲区，该缓冲区公开对底层可枚举序列的共享视图。
+            </summary><typeparam name="T">元素类型。</typeparam></member><member name="T:System.Linq.IYielder`1"><summary>
+            用于向枚举器生成元素的接口。
+            </summary><typeparam name="T">生成到枚举器的元素的类型。</typeparam></member><member name="M:System.Linq.IYielder`1.Break"><summary>
+    停止枚举。
+    </summary><returns>可用于异步方法的可等待对象。</returns></member><member name="M:System.Linq.IYielder`1.Return(`0)"><summary>
+            向枚举器生成一个值。
+            </summary><param name="value">要生成返回的值。</param><returns>可在异步方法中使用的可等待对象。</returns></member><member name="M:System.Linq.EnumerableEx.Buffer``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+    生成源序列上的非重叠相邻缓冲区的序列。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="count">分配的缓冲区中的元素数量。</param><returns>包含源序列元素的缓冲区序列。</returns></member><member name="M:System.Linq.EnumerableEx.Buffer``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)"><summary>
+    生成源序列上的缓冲区序列，具有指定的长度和可能的重叠。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="count">分配的缓冲区中的元素数量。</param><param name="skip">连续缓冲区开始之间要跳过的元素数量。</param><returns>包含源序列元素的缓冲区序列。</returns></member><member name="M:System.Linq.EnumerableEx.Case``2(System.Func{``0},System.Collections.Generic.IDictionary{``0,System.Collections.Generic.IEnumerable{``1}})"><summary>
+            根据选择器函数的计算结果从字典返回一个序列。
+            </summary><typeparam name="TValue">选择器值的类型。</typeparam><typeparam name="TResult">结果序列的元素类型。</typeparam><param name="selector">用于从给定源中选择序列的选择器函数。</param><param name="sources">将选择器值映射到结果序列的字典。</param><returns>与评估的选择器值对应的源序列；否则返回空序列。</returns></member><member name="M:System.Linq.EnumerableEx.Case``2(System.Func{``0},System.Collections.Generic.IDictionary{``0,System.Collections.Generic.IEnumerable{``1}},System.Collections.Generic.IEnumerable{``1})"><summary>
+            基于评估选择器函数的结果从字典返回一个序列，同时指定一个默认序列。
+            </summary><typeparam name="TValue">选择器值的类型。</typeparam><typeparam name="TResult">结果序列元素的类型。</typeparam><param name="selector">用于从给定源中选择序列的选择器函数。</param><param name="sources">将选择器值映射到结果序列的字典。</param><param name="defaultSource">
+            当计算的选择器值没有对应源时返回的默认序列。
+            </param><returns>与评估的选择器值相对应的源序列；否则，默认源。</returns></member><member name="M:System.Linq.EnumerableEx.Catch``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1,System.Collections.Generic.IEnumerable{``0}})"><summary>
+            创建一个序列，该序列对应于源序列，在出现错误时将其与调用异常处理程序函数所产生的序列连接起来。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TException">要捕获的异常类型。</typeparam><param name="source">源序列。</param><param name="handler">当发生指定类型的异常时要调用的处理程序。</param><returns>源序列，在出现错误时与异常处理程序结果序列连接。</returns></member><member name="M:System.Linq.EnumerableEx.Catch``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})"><summary>
+            通过连接源序列直到某个源序列成功完成来创建一个序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>当发生错误时继续连接源序列的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Catch``1(System.Collections.Generic.IEnumerable{``0}[])"><summary>
+    通过连接源序列直到某个源序列成功完成来创建一个序列。
+  </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>在发生错误时继续连接源序列的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Catch``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})"><summary>
+            创建一个序列，返回第一个序列的元素，在出错时切换到第二个序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="first">第一个序列。</param><param name="second">第二个序列，在第一个序列异常完成时连接到结果中。</param><returns>返回第一个序列，如果产生错误则跟上第二个序列。</returns></member><member name="M:System.Linq.EnumerableEx.Concat``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})"><summary>
+    连接输入序列。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>由源序列元素连接而成的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Concat``1(System.Collections.Generic.IEnumerable{``0}[])"><summary>
+    连接输入序列。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>包含连接后的源序列元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Create``1(System.Func{System.Collections.Generic.IEnumerator{``0}})"><summary>
+            基于枚举器工厂函数创建可枚举序列。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="getEnumerator">枚举器工厂函数。</param><returns>将在调用GetEnumerator时调用枚举器工厂的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Create``1(System.Action{System.Linq.IYielder{``0}})"><summary>
+            基于提供yielder的异步方法创建一个可枚举序列。
+            </summary><typeparam name="T">结果序列元素类型。</typeparam><param name="create">实现异步方法的委托，该方法可以使用指定的yielder来生成返回值。</param><returns>将使用异步方法获取其元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Defer``1(System.Func{System.Collections.Generic.IEnumerable{``0}})"><summary>
+            基于可枚举工厂函数创建一个可枚举序列。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="enumerableFactory">可枚举工厂函数。</param><returns>该序列将在调用 GetEnumerator 时调用可枚举工厂函数。</returns></member><member name="M:System.Linq.EnumerableEx.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+            通过使用默认相等比较器比较键值，返回具有不同键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">键选择器。</param><returns>一个序列，其中包含源序列中具有不同键值的元素。</returns></member><member name="M:System.Linq.EnumerableEx.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})"><summary>
+            使用指定的相等比较器比较键值，返回具有不同键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">键选择器。</param><param name="comparer">用于比较键值的比较器。</param><returns>包含源序列中具有不同键值的元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.DistinctUntilChanged``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+    使用默认相等比较器来比较值，返回连续的不重复元素。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>没有相邻重复元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.DistinctUntilChanged``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})"><summary>
+            使用指定的相等比较器比较值，返回连续的非重复元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="comparer">用于比较值的比较器。</param><returns>不含相邻重复元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.DistinctUntilChanged``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+    通过使用指定的相等比较器比较键值，返回基于键值的连续不同元素。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">键选择器。</param><returns>不含相邻重复元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.DistinctUntilChanged``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})"><summary>
+            通过指定的相等比较器比较键值，返回基于键值的连续非重复元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">键选择器。</param><param name="comparer">用于比较键值的比较器。</param><returns>不包含相邻非重复元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})"><summary>
+    延迟为序列中的每个值调用一个操作。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">为每个元素调用的操作。</param><returns>枚举时展现指定副作用的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action)"><summary>
+            延迟调用序列中每个值的操作，并在成功终止时执行操作。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">要对每个元素调用的操作。</param><param name="onCompleted">序列成功终止时要调用的操作。</param><returns>枚举时展现出指定副作用的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{System.Exception})"><summary>
+    延迟为序列中的每个值调用一个操作，并在出现异常终止时执行一个操作。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">为每个元素调用的操作。</param><param name="onError">在序列异常终止时调用的操作。</param><returns>在枚举时呈现指定副作用的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Action{System.Exception},System.Action)"><summary>
+    延迟为序列中的每个值调用一个操作，并在成功或异常终止时执行一个操作。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">为每个元素调用的操作。</param><param name="onError">在序列异常终止时调用的操作。</param><param name="onCompleted">在序列成功终止时调用的操作。</param><returns>枚举时具有指定副作用的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Do``1(System.Collections.Generic.IEnumerable{``0},System.IObserver{``0})"><summary>
+    对于序列中的每个值以及在成功或异常终止时，延迟调用观察者方法。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="observer">要对其调用通知的观察者。</param><returns>在枚举时展现观察者方法调用的副作用的序列。</returns></member><member name="M:System.Linq.EnumerableEx.DoWhile``1(System.Collections.Generic.IEnumerable{``0},System.Func{System.Boolean})"><summary>
+            通过重复源序列生成一个可枚举序列，只要给定的循环后置条件成立。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">在条件评估为真时要重复的源序列。</param><param name="condition">循环条件。</param><returns>通过重复给定的序列直到条件评估为假而生成的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Expand``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})"><summary>
+            通过递归应用选择器函数扩展序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="selector">用于检索要扩展的下一个序列的选择器函数。</param><returns>包含源序列递归扩展结果的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Finally``1(System.Collections.Generic.IEnumerable{``0},System.Action)"><summary>
+    创建一个序列，其枚举器的终止或释放会导致执行一个 finally 操作。
+    </summary><typeparam name="TSource">源序列的元素类型。</typeparam><param name="source">源序列。</param><param name="finallyAction">在序列终止或枚举器释放时运行的操作。</param><returns>保证 finally 操作被调用的源序列。</returns></member><member name="M:System.Linq.EnumerableEx.For``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}})"><summary>
+            通过枚举源序列，将其元素映射到结果序列，然后连接这些序列来生成一个序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">源序列。</param><param name="resultSelector">对源进行每次迭代时评估的结果选择器。</param><returns>
+            连接通过对源元素应用结果选择器得到的内部序列的序列。
+            </returns></member><member name="M:System.Linq.EnumerableEx.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})"><summary>
+            枚举序列，并对序列中的每个值调用给定的操作。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">要对每个元素调用的操作。</param></member><member name="M:System.Linq.EnumerableEx.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})"><summary>
+    枚举序列并对序列中的每个值调用指定的操作。
+  </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="onNext">要为每个元素调用的操作。</param></member><member name="M:System.Linq.EnumerableEx.Generate``2(``0,System.Func{``0,System.Boolean},System.Func{``0,``0},System.Func{``0,``1})"><summary>
+            通过模拟for循环生成序列。
+            </summary><typeparam name="TState">状态类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="initialState">生成器循环的初始状态。</param><param name="condition">循环条件。</param><param name="iterate">每次生成器循环迭代后运行的状态更新函数。</param><param name="resultSelector">用于计算结果序列元素的结果选择器。</param><returns>通过运行生成器循环获得的序列，生成计算出的元素。</returns></member><member name="M:System.Linq.EnumerableEx.Hide``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+    隐藏可枚举序列的对象标识。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>返回与原始序列行为相同的可枚举序列，但隐藏源对象标识。</returns><remarks><see cref="M:System.Linq.Enumerable.AsEnumerable``1(System.Collections.Generic.IEnumerable{``0})" /> 不会隐藏对象标识，它只是转换为 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 接口类型。
+    </remarks></member><member name="M:System.Linq.EnumerableEx.If``1(System.Func{System.Boolean},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})"><summary>
+    根据给定条件的评估结果返回一个可枚举序列。
+    </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="condition">要评估的条件。</param><param name="thenSource">条件评估为真时要返回的序列。</param><param name="elseSource">条件评估为假时要返回的序列。</param><returns>根据条件评估结果返回两个输入序列之一。</returns></member><member name="M:System.Linq.EnumerableEx.If``1(System.Func{System.Boolean},System.Collections.Generic.IEnumerable{``0})"><summary>
+            如果给定条件的计算结果为 true，则返回一个可枚举序列，否则返回一个空序列。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="condition">要计算的条件。</param><param name="thenSource">条件计算结果为 true 时要返回的序列。</param><returns>如果条件计算结果为 true，则为给定的输入序列；否则为一个空序列。</returns></member><member name="M:System.Linq.EnumerableEx.IgnoreElements``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+    忽略源序列中的所有元素。
+    </summary><typeparam name="TSource">源序列的元素类型。</typeparam><param name="source">源序列。</param><returns>不含元素的源序列。</returns></member><member name="M:System.Linq.EnumerableEx.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            确定可枚举序列是否为空。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>如果序列为空，则为 true；否则为 false。</returns></member><member name="M:System.Linq.EnumerableEx.Max``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})"><summary>
+            使用指定的比较器比较值，返回可枚举序列中的最大值。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="comparer">用于确定最大值的比较器。</param><returns>序列中的最大值。</returns></member><member name="M:System.Linq.EnumerableEx.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+            使用默认比较器比较键值，返回具有最大键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><returns>包含共享相同最大键值的元素的列表。</returns></member><member name="M:System.Linq.EnumerableEx.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})"><summary>
+    返回使用指定的比较器比较键值时具有最小键值的元素。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><param name="comparer">用于确定最大键值的比较器。</param><returns>共享相同最大键值的元素列表。</returns></member><member name="M:System.Linq.EnumerableEx.MaxByWithTies``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+            通过使用默认比较器比较键值，返回具有最大键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><returns>包含共享相同最大键值的元素的列表。</returns></member><member name="M:System.Linq.EnumerableEx.MaxByWithTies``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})"><summary>
+            通过使用指定的比较器比较键值，返回具有最小键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><param name="comparer">用于确定最大键值的比较器。</param><returns>具有相同最大键值的元素列表。</returns></member><member name="M:System.Linq.EnumerableEx.Memoize``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            创建一个具有源序列视图的缓冲区，使每个枚举器都能访问序列的所有元素，
+            而不会导致对源的多次枚举。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>
+            缓冲区使每个枚举器能够从共享源序列中检索所有元素，
+            而不会重复源枚举的副作用。
+            </returns><example>
+            var rng = Enumerable.Range(0, 10).Do(x =&gt; Console.WriteLine(x)).Memoize();
+            var e1 = rng.GetEnumerator();
+            Assert.IsTrue(e1.MoveNext());    // 输出 0
+            Assert.AreEqual(0, e1.Current);
+            Assert.IsTrue(e1.MoveNext());    // 输出 1
+            Assert.AreEqual(1, e1.Current);
+            var e2 = rng.GetEnumerator();
+            Assert.IsTrue(e2.MoveNext());    // 不打印任何内容；Do的副作用
+            Assert.AreEqual(0, e2.Current);  // 已在e1迭代期间发生。
+            Assert.IsTrue(e1.MoveNext());    // 输出 2
+            Assert.AreEqual(2, e1.Current);
+            </example></member><member name="M:System.Linq.EnumerableEx.Memoize``2(System.Collections.Generic.IEnumerable{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})"><summary>
+    在选择器函数内对源序列进行记忆化，使得每个枚举器可以访问序列的所有元素，而不会导致对源进行多次枚举。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">源序列。</param><param name="selector">对每个枚举器具有源序列记忆化访问的选择器函数。</param><returns>通过将选择器函数应用于源序列的记忆化视图而产生的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Memoize``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+            创建一个缓冲区，提供源序列的视图，使指定数量的枚举器能够访问序列的所有元素，而不会导致对源进行多次枚举。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="readerCount">
+            可以访问底层缓冲区的枚举器数量。一旦每个枚举器从缓冲区获取了一个元素，该元素就会被从缓冲区中移除。
+            </param><returns>
+            缓冲区使指定数量的枚举器能够从共享源序列中检索所有元素，而不会重复源枚举的副作用。
+            </returns></member><member name="M:System.Linq.EnumerableEx.Memoize``2(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})"><summary>
+            在选择器函数中记忆源序列，其中指定数量的枚举器可以访问序列的所有元素，而不会导致对源进行多次枚举。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">源序列。</param><param name="readerCount">
+            可以访问底层缓冲区的枚举器数量。一旦每个枚举器都从缓冲区获取了一个元素，该元素就会从缓冲区中移除。
+            </param><param name="selector">
+            具有对源序列的记忆化访问的选择器函数，适用于指定数量的枚举器。
+            </param><returns>通过将选择器函数应用于源序列的记忆化视图而得到的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Min``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0})"><summary>
+            通过使用指定的比较器比较值，返回可枚举序列中的最小值。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="comparer">用于确定最小值的比较器。</param><returns>序列中的最小值。</returns></member><member name="M:System.Linq.EnumerableEx.MinBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+            通过使用默认比较器比较键值，返回具有最小键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><returns>具有相同最小键值的元素列表。</returns></member><member name="M:System.Linq.EnumerableEx.MinBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})"><summary>
+            通过使用指定的比较器比较键值，返回具有最小键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><param name="comparer">用于确定最小键值的比较器。</param><returns>包含共享相同最小键值的元素的列表。</returns></member><member name="M:System.Linq.EnumerableEx.MinByWithTies``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})"><summary>
+            使用默认比较器比较键值，返回具有最小键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><returns>包含共享相同最小键值的元素的列表。</returns></member><member name="M:System.Linq.EnumerableEx.MinByWithTies``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})"><summary>
+            通过使用指定的比较器比较键值，返回具有最小键值的元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TKey">键类型。</typeparam><param name="source">源序列。</param><param name="keySelector">用于提取序列中每个元素的键的键选择器。</param><param name="comparer">用于确定最小键值的比较器。</param><returns>具有相同最小键值的元素列表。</returns></member><member name="M:System.Linq.EnumerableEx.OnErrorResumeNext``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})"><summary>
+            创建一个序列，该序列连接两个给定的序列，无论是否发生错误。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="first">第一个序列。</param><param name="second">第二个序列。</param><returns>连接两个序列的元素并忽略错误的序列。</returns></member><member name="M:System.Linq.EnumerableEx.OnErrorResumeNext``1(System.Collections.Generic.IEnumerable{``0}[])"><summary>
+            创建一个序列，该序列将给定的序列连接起来，无论任何序列中是否发生错误。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>连接给定序列元素的序列，忽略错误。</returns></member><member name="M:System.Linq.EnumerableEx.OnErrorResumeNext``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})"><summary>
+            创建一个序列，该序列连接给定的序列，忽略任何序列中发生的错误。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="sources">源序列。</param><returns>连接给定序列的元素并忽略错误的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Publish``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            创建一个带有源序列视图的缓冲区，使每个枚举器能够从缓冲区中的当前索引开始访问序列的剩余部分。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>
+            缓冲区，使每个枚举器能够从共享源序列中检索元素，从获取枚举器时的索引开始。
+            </returns><example>
+            var rng = Enumerable.Range(0, 10).Publish();
+            var e1 = rng.GetEnumerator();    // e1 从元素 0 开始拥有源序列的视图
+            Assert.IsTrue(e1.MoveNext());
+            Assert.AreEqual(0, e1.Current);
+            Assert.IsTrue(e1.MoveNext());
+            Assert.AreEqual(1, e1.Current);
+            var e2 = rng.GetEnumerator();
+            Assert.IsTrue(e2.MoveNext());    // e2 从元素 2 开始拥有源序列的视图
+            Assert.AreEqual(2, e2.Current);
+            Assert.IsTrue(e1.MoveNext());    // e1 继续在其视图上进行枚举
+            Assert.AreEqual(2, e1.Current);
+            </example></member><member name="M:System.Linq.EnumerableEx.Publish``2(System.Collections.Generic.IEnumerable{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})"><summary>
+            在选择器函数内发布源序列，其中每个枚举器可以获得源序列尾部的视图。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">源序列。</param><param name="selector">选择器函数，为每个枚举器提供对源序列的发布访问。</param><returns>通过对源序列的发布视图应用选择器函数而得到的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Repeat``1(``0)"><summary>
+    通过无限重复给定值生成序列。
+    </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="value">要在结果序列中重复的值。</param><returns>无限重复给定值的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Repeat``1(``0,System.Int32)"><summary>
+            生成一个包含单个重复值的序列。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="element">要重复的值。</param><param name="count">在生成的序列中重复该值的次数。</param><returns>包含重复值的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Repeat``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            无限重复并连接源序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>通过无限地将源序列与自身连接而获得的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Repeat``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+            重复并连接源序列指定次数。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="count">重复源序列的次数。</param><returns>通过将源序列重复连接指定次数得到的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Retry``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+            创建一个序列，该序列在发生错误时重试枚举源序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>在发生错误时连接源序列结果的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Retry``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+    创建一个序列，该序列在发生错误时重试枚举源序列，并指定最大重试次数。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="retryCount">最大重试次数。</param><returns>返回一个序列，该序列在发生错误时会将源序列的结果拼接起来。</returns></member><member name="M:System.Linq.EnumerableEx.Return``1(``0)"><summary>
+            返回包含单个元素的序列。
+            </summary><typeparam name="TResult">结果序列的元素类型。</typeparam><param name="value">结果序列中的单个元素。</param><returns>包含单个元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Scan``2(System.Collections.Generic.IEnumerable{``0},``1,System.Func{``1,``0,``1})"><summary>
+            通过扫描源序列并应用累加器函数，生成一个累积值的序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TAccumulate">累积类型。</typeparam><param name="source">源序列。</param><param name="seed">累加器种子值。</param><param name="accumulator">
+            要应用于当前累积值和序列每个元素的累积函数。
+            </param><returns>包含扫描序列产生的所有中间累积值的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Scan``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,``0})"><summary>
+            通过扫描源序列并应用累加器函数生成累积值的序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="accumulator">
+            要应用于当前累积值和序列每个元素的累积函数。
+            </param><returns>包含扫描序列产生的所有中间累积值的序列。</returns></member><member name="M:System.Linq.EnumerableEx.SelectMany``2(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1})"><summary>
+            将序列的每个元素投影到给定的序列，并将结果序列平铺为一个序列。
+            </summary><typeparam name="TSource">第一个源序列元素类型。</typeparam><typeparam name="TOther">第二个源序列元素类型。</typeparam><param name="source">要投影的值序列。</param><param name="other">每个源序列元素投影到的内部序列。</param><returns>将源序列中的元素投影后得到的序列平铺而成的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Share``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+        创建一个缓冲区，提供源序列的共享视图，使每个枚举器从源序列中获取下一个元素。
+    </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><returns>缓冲区，使每个枚举器能够从共享源序列中检索元素。</returns><example>
+        var rng = Enumerable.Range(0, 10).Share();
+        var e1 = rng.GetEnumerator();    // e1和e2都将消耗元素
+        var e2 = rng.GetEnumerator();    // 从源序列。
+        Assert.IsTrue(e1.MoveNext());
+        Assert.AreEqual(0, e1.Current);
+        Assert.IsTrue(e1.MoveNext());
+        Assert.AreEqual(1, e1.Current);
+        Assert.IsTrue(e2.MoveNext());    // e2 “窃取”元素 2
+        Assert.AreEqual(2, e2.Current);
+        Assert.IsTrue(e1.MoveNext());    // e1 看不到元素 2
+        Assert.AreEqual(3, e1.Current);
+    </example></member><member name="M:System.Linq.EnumerableEx.Share``2(System.Collections.Generic.IEnumerable{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1}})"><summary>
+                在选择器函数内共享源序列，其中每个枚举器可以从源序列中获取下一个元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><typeparam name="TResult">结果序列元素类型。</typeparam><param name="source">源序列。</param><param name="selector">为每个枚举器提供对源序列的共享访问的选择器函数。</param><returns>对源序列的共享视图应用选择器函数后产生的序列。</returns></member><member name="M:System.Linq.EnumerableEx.SkipLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+            从序列末尾跳过指定数量的连续元素，并返回剩余元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="count">
+            在返回剩余元素之前，从序列末尾跳过的元素数量。
+            </param><returns>从源序列末尾开始跳过指定数量元素后的序列。</returns></member><member name="M:System.Linq.EnumerableEx.StartWith``1(System.Collections.Generic.IEnumerable{``0},``0[])"><summary>
+            返回以指定值为前缀的源序列。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="values">要作为序列前缀的值。</param><returns>以指定前缀值开始的序列，后跟源序列。</returns></member><member name="M:System.Linq.EnumerableEx.TakeLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"><summary>
+            从序列末尾返回指定数量的连续元素。
+            </summary><typeparam name="TSource">源序列元素类型。</typeparam><param name="source">源序列。</param><param name="count">从序列末尾获取的元素数。</param><returns>从源序列末尾计数的指定数量元素的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Throw``1(System.Exception)"><summary>
+            返回一个在枚举时会引发异常的序列。
+            </summary><typeparam name="TResult">结果序列的元素类型。</typeparam><param name="exception">枚举结果序列时引发的异常。</param><returns>在枚举时引发指定异常的序列。</returns></member><member name="M:System.Linq.EnumerableEx.Using``2(System.Func{``1},System.Func{``1,System.Collections.Generic.IEnumerable{``0}})"><summary>
+            生成一个依赖于资源对象的序列，其生存期由序列使用持续时间决定。
+            </summary><typeparam name="TSource">源元素类型。</typeparam><typeparam name="TResource">资源类型。</typeparam><param name="resourceFactory">资源工厂函数。</param><param name="enumerableFactory">可枚举工厂函数，可访问已获取的资源。</param><returns>其使用控制关联已获取资源生存期的序列。</returns></member><member name="M:System.Linq.EnumerableEx.While``1(System.Func{System.Boolean},System.Collections.Generic.IEnumerable{``0})"><summary>
+            只要给定的循环条件成立，通过重复源序列生成可枚举序列。
+            </summary><typeparam name="TResult">结果序列元素类型。</typeparam><param name="condition">循环条件。</param><param name="source">条件评估为 true 时要重复的序列。</param><returns>通过重复给定序列（当条件评估为 true 时）生成的序列。</returns></member></members>
+</doc>

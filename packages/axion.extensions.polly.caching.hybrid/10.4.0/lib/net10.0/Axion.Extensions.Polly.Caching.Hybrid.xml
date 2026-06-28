@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Axion.Extensions.Polly.Caching.Hybrid</name>
+    </assembly>
+    <members>
+        <member name="T:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument">
+            <summary>
+            An argument that contains a cache key ae.
+            </summary>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Exception">The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.Exception"/> occured.</param>
+        </member>
+        <member name="M:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.#ctor(System.String,System.Exception)">
+            <summary>
+            An argument that contains a cache key ae.
+            </summary>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Exception">The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.Exception"/> occured.</param>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.CacheKey">
+            <summary>The cache key of the entry.</summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.Exception">
+            <summary>The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyAndExceptionArgument.Exception"/> occured.</summary>
+        </member>
+        <member name="T:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyArgument">
+            <summary>
+            An argument that contains a cache key.
+            </summary>
+            <param name="CacheKey">The cache key of the entry.</param>
+        </member>
+        <member name="M:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyArgument.#ctor(System.String)">
+            <summary>
+            An argument that contains a cache key.
+            </summary>
+            <param name="CacheKey">The cache key of the entry.</param>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CacheKeyArgument.CacheKey">
+            <summary>The cache key of the entry.</summary>
+        </member>
+        <member name="T:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1">
+            <summary>
+            Represents the options used to configure a caching strategy.
+            </summary>
+            <typeparam name="TResult">The type of result the retry strategy handles.</typeparam>
+        </member>
+        <member name="M:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1"/> class.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.HybridCache">
+            <summary>
+            Gets and sets an instance of <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.HybridCache"/> used for caching.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.HybridCacheGetFlagsProvider">
+            <summary>
+            Gets or sets a provider to get a <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags"/> to get a cached value.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.CacheKeyProvider">
+            <summary>
+            Gets or sets a provider to get a cache key otherwise <see cref="P:Polly.ResilienceContext.OperationKey"/> is used.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.HybridCacheSetEntryOptionsProvider">
+            <summary>
+            Gets or sets a provider to get a <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions"/> to set the cached value.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.CacheEntryTagsProvider">
+            <summary>
+            Gets or sets a provider to get cache tags.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.OnCacheHit">
+            <summary>
+            Gets or sets a delegate that is called when an item is fetched from the cache.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.OnCacheMiss">
+            <summary>
+            Gets or sets a delegate that is called when an item is missing in the cache.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.OnCacheReadError">
+            <summary>
+            Gets or sets a delegate that is called when a cache reading error occurs.
+            </summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions`1.OnCacheWriteError">
+            <summary>
+            Gets or sets a delegate that is called when a cache writing error occurs.
+            </summary>
+        </member>
+        <member name="T:Axion.Extensions.Polly.Caching.Hybrid.OnCacheHitArgument`1">
+            <summary>
+            An argument when an entry is fetched from the cache.
+            </summary>
+            <typeparam name="TResult">The type of result the retry strategy handles.</typeparam>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Result">The entry that was read from the cache.</param>
+        </member>
+        <member name="M:Axion.Extensions.Polly.Caching.Hybrid.OnCacheHitArgument`1.#ctor(System.String,`0)">
+            <summary>
+            An argument when an entry is fetched from the cache.
+            </summary>
+            <typeparam name="TResult">The type of result the retry strategy handles.</typeparam>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Result">The entry that was read from the cache.</param>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheHitArgument`1.CacheKey">
+            <summary>The cache key of the entry.</summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheHitArgument`1.Result">
+            <summary>The entry that was read from the cache.</summary>
+        </member>
+        <member name="T:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1">
+            <summary>
+            An argument when a write error occured while writing to the cache.
+            </summary>
+            <typeparam name="TResult">The type of result the retry strategy handles.</typeparam>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Result">The entry that was attempted to be writted to the cache.</param>
+            <param name="Exception">The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.Exception"/> occured.</param>
+        </member>
+        <member name="M:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.#ctor(System.String,`0,System.Exception)">
+            <summary>
+            An argument when a write error occured while writing to the cache.
+            </summary>
+            <typeparam name="TResult">The type of result the retry strategy handles.</typeparam>
+            <param name="CacheKey">The cache key of the entry.</param>
+            <param name="Result">The entry that was attempted to be writted to the cache.</param>
+            <param name="Exception">The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.Exception"/> occured.</param>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.CacheKey">
+            <summary>The cache key of the entry.</summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.Result">
+            <summary>The entry that was attempted to be writted to the cache.</summary>
+        </member>
+        <member name="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.Exception">
+            <summary>The <see cref="P:Axion.Extensions.Polly.Caching.Hybrid.OnCacheWriteErrorArgument`1.Exception"/> occured.</summary>
+        </member>
+        <member name="T:Polly.PipelineBuilderExtensions">
+            <summary>
+            Extension methods for <see cref="T:Polly.ResiliencePipelineBuilder`1"/>.
+            </summary>
+        </member>
+        <member name="M:Polly.PipelineBuilderExtensions.AddCaching``1(Polly.ResiliencePipelineBuilder{``0},Axion.Extensions.Polly.Caching.Hybrid.CachingStrategyOptions{``0})">
+            <summary>
+            Adds a caching to the builder.
+            </summary>
+            <typeparam name="TResult">The type of result the caching handles.</typeparam>
+            <param name="builder">The builder instance.</param>
+            <param name="options">The caching options.</param>
+            <returns>The builder instance with the caching added.</returns>
+        </member>
+    </members>
+</doc>

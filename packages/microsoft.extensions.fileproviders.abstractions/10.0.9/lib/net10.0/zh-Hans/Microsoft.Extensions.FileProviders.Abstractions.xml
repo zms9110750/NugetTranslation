@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.FileProviders.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.FileProviders.NullChangeToken"><summary>
+            一个不触发任何更改回调的空更改令牌。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.IsDirectory"><summary>
+            获取一个始终为 <see langword="false" /> 的值。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.Length"><summary>
+            获取文件的长度（以字节为单位），对于目录或不存在的文件，则返回 -1。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.IDirectoryContents"><summary>
+    表示文件提供程序中的目录内容。
+    </summary></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents.Singleton"><summary>
+            获取 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" /> 的共享实例。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.NotFoundFileInfo.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundFileInfo" /> 的一个实例。
+            </summary><param name="name">未能找到的文件的名称。</param></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.Length"><summary>
+            获取一个始终为 -1 的值。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.IFileProvider"><summary>
+            一个只读的文件提供程序抽象。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.NotFoundFileInfo"><summary>
+            表示一个不存在的文件。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.NullFileProvider"><summary>
+            一个没有任何内容的空文件提供程序。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.Name"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents.GetEnumerator"><summary>返回一个遍历集合的枚举器。</summary><returns>一个用于空集合的枚举器。</returns></member><member name="T:Microsoft.Extensions.FileProviders.IFileInfo"><summary>
+    表示给定文件提供程序中的文件。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.IFileProvider.GetDirectoryContents(System.String)"><summary>
+            枚举指定路径下的目录（如果存在）。
+            </summary><param name="subpath">标识目录的相对路径。</param><returns>目录的内容。</returns></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.Exists"><summary>
+            获取一个始终为 <see langword="false" /> 的值。
+            </summary></member><member name="P:System.SR.FileNotExists"><summary>文件 {0} 不存在。</summary></member><member name="M:Microsoft.Extensions.FileProviders.NotFoundFileInfo.CreateReadStream"><summary>
+            始终引发异常。无法为不存在的文件创建流。
+            </summary><exception cref="T:System.IO.FileNotFoundException">在所有情况下。</exception><returns>不返回。</returns></member><member name="M:Microsoft.Extensions.FileProviders.NullFileProvider.GetFileInfo(System.String)"><summary>
+            定位不存在的文件。
+            </summary><param name="subpath">根目录下的一个路径。</param><returns>一个表示给定路径下不存在文件的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" />。</returns></member><member name="M:Microsoft.Extensions.FileProviders.IFileProvider.Watch(System.String)"><summary>
+            为指定的<paramref name="filter" />创建一个<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。
+            </summary><param name="filter">用于确定要监视哪些文件或文件夹的筛选字符串。例如：**/*.cs, *.*, subFolder/**/*.cshtml。</param><returns>一个<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，当匹配<paramref name="filter" />的文件被添加、修改或删除时，该令牌会收到通知。</returns></member><member name="M:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents.System#Collections#IEnumerable#GetEnumerator"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.IFileProvider.GetFileInfo(System.String)"><summary>
+            在给定路径上定位文件。
+            </summary><param name="subpath">标识文件的相对路径。</param><returns>文件信息。调用者必须检查 Exists 属性。</returns></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.Exists"><summary>
+            获取一个值，该值指示资源是否存在于基础存储系统中。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.NullChangeToken.HasChanged"><summary>
+    获取一个始终为 <see langword="false" /> 的值。
+    </summary></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.LastModified"><summary>
+            获取 <see cref="F:System.DateTimeOffset.MinValue" />。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.NullChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)"><summary>
+            始终返回一个空的 disposable 对象。回调永远不会被调用。
+            </summary><param name="callback">此参数被忽略。</param><param name="state">此参数被忽略。</param><returns>一个在释放时不执行任何操作的 disposable 对象。</returns></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents.Exists"><summary>
+            获取一个始终为 <see langword="false" /> 的值。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.NullFileProvider.Watch(System.String)"><summary>
+            返回一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，该令牌不监视任何内容。
+            </summary><param name="filter">用于确定要监视哪些文件或文件夹的筛选字符串。此参数将被忽略。</param><returns>一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，不注册回调。</returns></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.LastModified"><summary>
+            获取文件最后修改的时间。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.NullChangeToken.ActiveChangeCallbacks"><summary>
+            获取一个始终为 <see langword="false" /> 的值。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.NullChangeToken.Singleton"><summary>
+            获取 <see cref="T:Microsoft.Extensions.FileProviders.NullChangeToken" /> 的单例实例。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.Name"><summary>
+            获取文件或目录的名称，不包括任何路径。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents"><summary>
+            表示一个不存在的目录。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.IsDirectory"><summary>
+            获取一个值，该值指示<c>TryGetDirectoryContents</c>是否已枚举子目录。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.IFileInfo.CreateReadStream"><summary>
+            返回文件内容的只读流。
+            </summary><returns>文件流。</returns><remarks>调用者应在完成后释放流。</remarks></member><member name="P:Microsoft.Extensions.FileProviders.NotFoundFileInfo.PhysicalPath"><summary>
+            获取一个始终为 <see langword="null" /> 的值。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.IFileInfo.PhysicalPath"><summary>
+        获取文件路径，包括文件名。如果文件不可直接访问，则返回 <see langword="null" />。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.NullFileProvider.GetDirectoryContents(System.String)"><summary>
+    枚举一个不存在的目录。
+  </summary><param name="subpath">根目录下的路径。此参数将被忽略。</param><returns>一个<see cref="T:Microsoft.Extensions.FileProviders.IDirectoryContents" />，该对象不存在且不包含任何内容。</returns></member><member name="P:Microsoft.Extensions.FileProviders.IDirectoryContents.Exists"><summary>
+            如果在给定路径上找到目录，则为 true。
+            </summary></member></members>
+</doc>

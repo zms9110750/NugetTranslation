@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Hosting.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Hosting.BackgroundService"><summary>
+            实现长时间运行的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 的基类。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.BackgroundService.ExecuteTask"><summary>
+            获取执行后台操作的Task。
+            </summary><remarks>
+            如果后台操作尚未开始，将返回 <see langword="null" />。
+            </remarks></member><member name="M:Microsoft.Extensions.Hosting.BackgroundService.ExecuteAsync(System.Threading.CancellationToken)"><summary>
+    当 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 启动时调用此方法。实现应返回一个表示所执行长时间运行操作的生命周期的任务。
+    </summary><param name="stoppingToken">当调用 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)" /> 时触发。</param><returns>一个表示长时间运行操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns><remarks>有关实现指南，请参阅 <see href="https://learn.microsoft.com/dotnet/core/extensions/workers">.NET 中的辅助服务</see>。</remarks></member><member name="M:Microsoft.Extensions.Hosting.BackgroundService.StartAsync(System.Threading.CancellationToken)"><summary>
+            当应用程序主机准备启动服务时触发。
+            </summary><param name="cancellationToken">指示启动过程已被中止。</param><returns>一个表示异步启动操作的<see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.BackgroundService.StopAsync(System.Threading.CancellationToken)"><summary>
+            当应用程序主机正在执行正常关闭时触发。
+            </summary><param name="cancellationToken">指示关闭过程不应再正常进行。</param><returns>一个表示异步停止操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.BackgroundService.Dispose"><inheritdoc /></member><member name="T:Microsoft.Extensions.Hosting.EnvironmentName"><summary>
+    常用的环境名称。
+    <para>
+     此类型已过时，将在未来版本中移除。推荐的替代方法是 Microsoft.Extensions.Hosting.Environments。
+    </para></summary></member><member name="F:Microsoft.Extensions.Hosting.EnvironmentName.Development"><summary>
+            开发环境的名称。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.EnvironmentName.Staging"><summary>
+            暂存环境的名称。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.EnvironmentName.Production"><summary>
+            生产环境的名称。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.Environments"><summary>
+            常用的环境名称。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.Environments.Development"><summary>
+            指定开发环境。
+            </summary><remarks>开发环境可以启用那些不应在生产环境中暴露的功能。由于性能成本，范围验证和依赖验证仅在开发环境中进行。</remarks></member><member name="F:Microsoft.Extensions.Hosting.Environments.Staging"><summary>指定 Staging 环境。</summary><remarks>暂存环境可用于在将环境更改为生产环境之前验证应用更改。</remarks></member><member name="F:Microsoft.Extensions.Hosting.Environments.Production"><summary>
+            指定生产环境。
+            </summary><remarks>生产环境应配置为最大化安全性、性能和应用程序的可靠性。</remarks></member><member name="T:Microsoft.Extensions.Hosting.HostAbortedException"><summary>
+            当 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 被停止以指示主机正在正常关闭时引发的异常。此异常不应由用户代码引发或处理。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostAbortedException.#ctor"><summary>
+    使用系统提供的错误消息初始化 <see cref="T:Microsoft.Extensions.Hosting.HostAbortedException" /> 类的新实例。
+    </summary></member><member name="M:Microsoft.Extensions.Hosting.HostAbortedException.#ctor(System.String)"><summary>
+    使用指定的错误消息初始化 <see cref="T:Microsoft.Extensions.Hosting.HostAbortedException" /> 类的新实例。
+    </summary><param name="message">
+    解释异常原因的错误消息。
+    </param><remarks><paramref name="message" /> 的内容应为人类可理解。此构造函数的调用者需要确保此字符串已针对当前系统区域性进行本地化。
+    </remarks></member><member name="M:Microsoft.Extensions.Hosting.HostAbortedException.#ctor(System.String,System.Exception)"><summary>
+            使用指定的错误消息以及对导致此异常的内部异常的引用来初始化 <see cref="T:Microsoft.Extensions.Hosting.HostAbortedException" /> 类的新实例。
+            </summary><param name="message">
+            解释异常原因的错误消息。
+            </param><param name="innerException">
+            导致当前异常的异常。
+            </param><remarks><paramref name="message" /> 的内容应能被人类理解。此构造函数的调用者需要确保此字符串已针对当前系统区域性进行了本地化。
+            </remarks></member><member name="M:Microsoft.Extensions.Hosting.HostBuilderContext.#ctor(System.Collections.Generic.IDictionary{System.Object,System.Object})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Hosting.HostBuilderContext" /> 的新实例。
+            </summary><param name="properties">一个非 null 的 <see cref="T:System.Collections.Generic.IDictionary`2" />，用于在主机生成过程中在组件之间共享状态。</param></member><member name="P:Microsoft.Extensions.Hosting.HostBuilderContext.HostingEnvironment"><summary>
+            由 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 初始化的 <see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" />。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration"><summary>包含应用程序和<see cref="T:Microsoft.Extensions.Hosting.IHost" />的合并配置的<see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</summary></member><member name="P:Microsoft.Extensions.Hosting.HostBuilderContext.Properties"><summary>
+            在主机生成过程中，用于组件之间共享状态的中心位置。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.HostDefaults"><summary>
+            HostBuilder 配置键的常量。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.HostDefaults.ApplicationKey"><summary>
+            用于设置 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" /> 的配置键。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.HostDefaults.EnvironmentKey"><summary>
+            用于设置 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 的配置键。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions"><summary>
+                用于 <see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions.IsDevelopment(Microsoft.Extensions.Hosting.IHostEnvironment)"><summary>
+            检查当前主机环境名称是否为 <see cref="F:Microsoft.Extensions.Hosting.Environments.Development" />。
+            </summary><param name="hostEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" /> 的实例。</param><returns>如果环境名称为 <see cref="F:Microsoft.Extensions.Hosting.Environments.Development" />，则为 <see langword="true" />，否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions.IsStaging(Microsoft.Extensions.Hosting.IHostEnvironment)"><summary>
+            检查当前主机环境名称是否为<see cref="F:Microsoft.Extensions.Hosting.Environments.Staging" />。
+            </summary><param name="hostEnvironment">一个<see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" />实例。</param><returns>如果环境名称为<see cref="F:Microsoft.Extensions.Hosting.Environments.Staging" />，则为<see langword="true" />，否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions.IsProduction(Microsoft.Extensions.Hosting.IHostEnvironment)"><summary>
+            检查当前主机环境名称是否为 <see cref="F:Microsoft.Extensions.Hosting.Environments.Production" />。
+            </summary><param name="hostEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" /> 的一个实例。</param><returns>如果环境名称是 <see cref="F:Microsoft.Extensions.Hosting.Environments.Production" />，则为 <see langword="true" />，否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions.IsEnvironment(Microsoft.Extensions.Hosting.IHostEnvironment,System.String)"><summary>
+            将当前主机环境名称与指定值进行比较。
+            </summary><param name="hostEnvironment">一个 <see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" /> 的实例。</param><param name="environmentName">要验证的环境名称。</param><returns>如果指定名称与当前环境相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.HostingAbstractionsHostBuilderExtensions"><summary>
+            提供来自托管抽象包的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostBuilderExtensions.Start(Microsoft.Extensions.Hosting.IHostBuilder)"><summary>
+            构建并启动主机。
+            </summary><param name="hostBuilder">要启动的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><returns>已启动的<see cref="T:Microsoft.Extensions.Hosting.IHost" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostBuilderExtensions.StartAsync(Microsoft.Extensions.Hosting.IHostBuilder,System.Threading.CancellationToken)"><summary>
+    生成并启动主机。
+    </summary><param name="hostBuilder">要启动的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="cancellationToken">可用于取消启动的<see cref="T:System.Threading.CancellationToken" />。</param><returns>已启动的<see cref="T:Microsoft.Extensions.Hosting.IHost" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions"><summary>
+            提供来自宿主抽象包的<see cref="T:Microsoft.Extensions.Hosting.IHost" />的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Start(Microsoft.Extensions.Hosting.IHost)"><summary>
+            同步启动主机。
+            </summary><param name="host">要启动的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.StopAsync(Microsoft.Extensions.Hosting.IHost,System.TimeSpan)"><summary>
+            尝试使用给定的超时时间正常停止主机。
+            </summary><param name="host">要停止的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param><param name="timeout">正常停止的超时时间。一旦过期，服务器可能会终止任何剩余的活跃连接。</param><returns>表示异步操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.WaitForShutdown(Microsoft.Extensions.Hosting.IHost)"><summary>
+    阻止调用线程，直到通过 Ctrl+C 或 SIGTERM 触发关闭。
+    </summary><param name="host">正在运行的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(Microsoft.Extensions.Hosting.IHost)"><summary>
+            运行应用程序并阻止调用线程，直到触发主机关闭并且所有 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 实例停止。
+            </summary><param name="host">要运行的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.WaitForShutdownAsync(Microsoft.Extensions.Hosting.IHost,System.Threading.CancellationToken)"><summary>
+            返回一个任务，该任务在通过给定令牌触发关闭时完成。
+            </summary><param name="host">正在运行的<see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param><param name="token">用于触发关闭的令牌。</param><returns>表示异步操作的<see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.HostingEnvironmentExtensions"><summary><see cref="T:Microsoft.Extensions.Hosting.IHostingEnvironment" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingEnvironmentExtensions.IsStaging(Microsoft.Extensions.Hosting.IHostingEnvironment)"><summary>
+            检查当前托管环境名称是否为<see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Staging" />。
+            </summary><param name="hostingEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostingEnvironment" />的一个实例。</param><returns>如果环境名称是<see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Staging" />，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingEnvironmentExtensions.IsProduction(Microsoft.Extensions.Hosting.IHostingEnvironment)"><summary>
+            检查当前托管环境名称是否为 <see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Production" />。
+            </summary><param name="hostingEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostingEnvironment" /> 的一个实例。</param><returns>如果环境名称为 <see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Production" />，则为 <see langword="true" />，否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingEnvironmentExtensions.IsEnvironment(Microsoft.Extensions.Hosting.IHostingEnvironment,System.String)"><summary>
+            比较当前托管环境名称与指定值。
+            </summary><param name="hostingEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostingEnvironment" /> 的实例。</param><param name="environmentName">要验证的环境名称。</param><returns>如果指定名称与当前环境相同，则为 <see langword="true" />，否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.IApplicationLifetime"><summary>
+    允许使用者在正常关闭期间执行清理操作。
+    <para>
+     此类型已过时，并将在未来版本中移除。
+     建议的替代方案是 Microsoft.Extensions.Hosting.IHostApplicationLifetime。
+    </para></summary></member><member name="P:Microsoft.Extensions.Hosting.IApplicationLifetime.ApplicationStarted"><summary>
+            获取一个取消令牌。当应用程序主机已完全启动并即将等待正常关闭时触发。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IApplicationLifetime.ApplicationStopping"><summary>
+            获取一个取消令牌。当应用程序主机执行正常关闭时触发。此时可能仍有请求正在处理中。关闭将阻塞，直到此事件完成。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IApplicationLifetime.ApplicationStopped"><summary>
+            获取一个取消令牌。当应用程序主机正在执行正常关闭时触发。
+            此时所有请求应已完成。关闭将阻塞直到此事件完成。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IApplicationLifetime.StopApplication"><summary>
+            请求终止当前应用程序。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.IHost"><summary>
+            程序抽象。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHost.Services"><summary>
+            获取为程序配置的服务（例如，使用 <see cref="M:Microsoft.Extensions.Hosting.IHostBuilder.ConfigureServices(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceCollection})" />）。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHost.StartAsync(System.Threading.CancellationToken)"><summary>
+            启动为程序配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 对象。
+            应用程序将一直运行，直到被中断或调用 <see cref="M:Microsoft.Extensions.Hosting.IHostApplicationLifetime.StopApplication" />。
+            </summary><param name="cancellationToken">用于中止程序启动。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />，当 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 启动时完成。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHost.StopAsync(System.Threading.CancellationToken)"><summary>
+            尝试优雅地停止程序。
+            </summary><param name="cancellationToken">用于指示何时停止不应再优雅。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />，当 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 停止时完成。</returns></member><member name="T:Microsoft.Extensions.Hosting.IHostApplicationBuilder"><summary>
+            表示一个托管应用程序和服务构建器，有助于管理配置、日志记录、生命周期等。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Properties"><summary>
+            获取一个中心位置，用于在主机生成过程中在组件之间共享状态。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Configuration"><summary>
+            获取键/值配置属性集。
+            </summary><remarks>
+            可以通过添加更多配置源来修改此属性集，这将更新其当前视图。
+            </remarks></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Environment"><summary>
+            获取有关应用程序正在运行的主机环境的信息。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Logging"><summary>
+            获取应用程序组成的日志提供程序集合。这对于添加新的日志提供程序很有用。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Metrics"><summary>
+            获取一个生成器，该生成器允许启用指标并指定其输出。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationBuilder.Services"><summary>
+    获取一个服务集合，用于应用程序组合。这对于添加用户提供的或框架提供的服务非常有用。
+    </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostApplicationBuilder.ConfigureContainer``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0},System.Action{``0})"><summary>
+            注册一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1" /> 实例，用于创建 <see cref="T:System.IServiceProvider" />。
+            </summary><param name="factory">能够创建 <typeparamref name="TContainerBuilder" /> 和 <see cref="T:System.IServiceProvider" /> 的工厂对象。</param><param name="configure">
+            用于配置 <typeparamref name="TContainerBuilder" /> 的委托。可以使用特定于 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1" /> 实现的 API 来配置服务。
+            </param><typeparam name="TContainerBuilder">由 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1" /> 提供的生成器类型。</typeparam><remarks><para>
+            此生成器生成时会创建 <see cref="T:System.IServiceProvider" />，因此由 <paramref name="configure" /> 提供的委托会在所有其他服务注册之后运行。
+            </para><para>
+            多次调用 <see cref="M:Microsoft.Extensions.Hosting.IHostApplicationBuilder.ConfigureContainer``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0},System.Action{``0})" /> 将替换之前存储的 <paramref name="factory" /> 和 <paramref name="configure" /> 委托。
+            </para></remarks></member><member name="T:Microsoft.Extensions.Hosting.IHostApplicationLifetime"><summary>
+    允许使用者接收应用程序生命周期事件的通知。此接口不应由用户替换。
+    </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationLifetime.ApplicationStarted"><summary>
+            获取一个取消令牌。当应用程序主机完全启动时触发。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationLifetime.ApplicationStopping"><summary>
+            获取一个取消令牌。当应用程序主机开始正常关闭时触发。
+            关闭操作将阻塞，直到此令牌上注册的所有回调完成。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostApplicationLifetime.ApplicationStopped"><summary>
+            获取一个取消令牌。当应用程序主机完成正常关闭时触发。在所有注册到此令牌的回调完成之前，应用程序不会退出。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostApplicationLifetime.StopApplication"><summary>
+            请求终止当前应用程序。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.IHostBuilder"><summary>
+            一个程序初始化抽象。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostBuilder.Properties"><summary>
+            获取在主机生成过程中组件之间共享状态的中央位置。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.ConfigureHostConfiguration(System.Action{Microsoft.Extensions.Configuration.IConfigurationBuilder})"><summary>
+            为生成器本身设置配置。这将用于初始化 <see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" />
+            以便在生成过程后期使用。这可以多次调用，结果将是叠加的。
+            </summary><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该委托将用于
+            为主机构建 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>返回同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，以便链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.ConfigureAppConfiguration(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Configuration.IConfigurationBuilder})"><summary>
+            为构建过程和应用程序的其余部分设置配置。可以多次调用此方法，结果将逐步累加。结果将在后续操作中通过<see cref="P:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration" />获得，也可在<see cref="P:Microsoft.Extensions.Hosting.IHost.Services" />中获取。
+            </summary><param name="configureDelegate">用于配置<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />的委托，该委托将用于构造应用程序的<see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>用于链式调用的同一个<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.ConfigureServices(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceCollection})"><summary>
+    将服务添加到容器。可以多次调用此方法，每次添加的服务将累加。
+    </summary><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 的委托，该委托将用于构造 <see cref="T:System.IServiceProvider" />。</param><returns>返回同一个 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以支持链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.UseServiceProviderFactory``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0})"><summary>
+    重写用于创建服务提供程序的工厂。
+    </summary><typeparam name="TContainerBuilder">生成器的类型。</typeparam><param name="factory">要注册的工厂。</param><returns>用于链式调用的同一<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.UseServiceProviderFactory``1(System.Func{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0}})"><summary>
+            重写用于创建服务提供程序的工厂。
+            </summary><typeparam name="TContainerBuilder">构建器的类型。</typeparam><param name="factory">要注册的工厂。</param><returns>返回同一<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例以用于链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.ConfigureContainer``1(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,``0})"><summary>
+            启用配置已实例化的依赖项容器。可以多次调用，结果将累加。
+            </summary><typeparam name="TContainerBuilder">构建器的类型。</typeparam><param name="configureDelegate">配置构建器的委托。</param><returns>返回同一个 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以用于链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostBuilder.Build"><summary>
+            运行指定的操作以初始化主机。此方法只能调用一次。
+            </summary><returns>一个已初始化的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.IHostedLifecycleService"><summary>
+            定义在 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)" /> 和 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)" /> 之前或之后运行的方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StartingAsync(System.Threading.CancellationToken)"><summary>
+            在 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)" /> 之前触发。
+            </summary><param name="cancellationToken">指示启动过程已中止。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />，表示异步操作。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StartedAsync(System.Threading.CancellationToken)"><summary>
+            在 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)" /> 之后触发。
+            </summary><param name="cancellationToken">表示启动过程已中止。</param><returns>表示异步操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StoppingAsync(System.Threading.CancellationToken)"><summary>
+            在 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)" /> 之前触发。
+            </summary><param name="cancellationToken">指示启动过程已被中止。</param><returns>表示异步操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StoppedAsync(System.Threading.CancellationToken)"><summary>
+            在 <see cref="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)" /> 之后触发。
+            </summary><param name="cancellationToken">指示停止过程已中止。</param><returns>表示异步操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.IHostedService"><summary>
+            定义由主机管理的对象的方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)"><summary>
+                当应用程序主机准备启动服务时触发。
+            </summary><param name="cancellationToken">指示启动过程已被中止。</param><returns>一个表示异步 Start 操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.IHostEnvironment"><summary>
+        提供有关应用程序运行所在主机环境的信息。
+    </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName"><summary>
+    获取或设置环境名称。主机自动将此属性设置为配置中指定的“environment”键的值。
+    </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName"><summary>获取或设置应用程序的名称。此属性由主机自动设置为包含应用程序入口点的程序集。</summary></member><member name="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath"><summary>
+            获取或设置包含应用程序内容文件的目录的绝对路径。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootFileProvider"><summary>
+            获取或设置一个 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />，它指向 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" />。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.IHostingEnvironment"><summary>
+            提供有关应用程序正在运行的主机环境的信息。
+            <para>
+             此类型已过时，将在未来版本中删除。
+             推荐的替代方法是 Microsoft.Extensions.Hosting.IHostEnvironment。
+            </para></summary></member><member name="P:Microsoft.Extensions.Hosting.IHostingEnvironment.EnvironmentName"><summary>获取或设置环境名称。主机自动将此属性设置为配置中指定的"environment"键的值。</summary></member><member name="P:Microsoft.Extensions.Hosting.IHostingEnvironment.ApplicationName"><summary>
+            获取或设置应用程序的名称。此属性由宿主自动设置为包含应用程序入口点的程序集。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostingEnvironment.ContentRootPath"><summary>
+            获取或设置包含应用程序内容文件的目录的绝对路径。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.IHostingEnvironment.ContentRootFileProvider"><summary>
+            获取或设置一个指向 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 的 <see cref="P:Microsoft.Extensions.Hosting.IHostingEnvironment.ContentRootPath" />。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.IHostLifetime"><summary>
+            跟踪主机生存期。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostLifetime.WaitForStartAsync(System.Threading.CancellationToken)"><summary>
+            在 <see cref="M:Microsoft.Extensions.Hosting.IHost.StartAsync(System.Threading.CancellationToken)" /> 启动时调用，它将等待完成后再继续。这可用于延迟启动，直到通过外部事件发出信号。
+            </summary><param name="cancellationToken">用于中止程序启动。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.IHostLifetime.StopAsync(System.Threading.CancellationToken)"><summary>
+            从 <see cref="M:Microsoft.Extensions.Hosting.IHost.StopAsync(System.Threading.CancellationToken)" /> 调用，以指示主机正在停止，是时候关闭了。
+            </summary><param name="cancellationToken">用于指示何时停止不再需要正常关闭。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions"><summary>
+            用于向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加托管服务的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            为给定类型添加 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 注册。
+            </summary><typeparam name="THostedService">要注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" />。</typeparam><param name="services">要注册的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>原始的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</returns></member><member name="P:System.SR.HostAbortedExceptionMessage"><summary>宿主已中止。</summary></member><member name="T:Microsoft.Extensions.Hosting.HostBuilderContext"><summary>
+    包含在 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 上的常见服务的上下文。某些属性可能为 null，直到由 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 设置。
+    </summary></member><member name="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)"><summary>
+            当应用程序主机正在执行正常关闭时触发。
+            </summary><param name="cancellationToken">指示关闭过程不应再正常进行。</param><returns>一个表示异步停止操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="F:Microsoft.Extensions.Hosting.HostDefaults.ContentRootKey"><summary>
+            用于设置<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" />
+            和<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootFileProvider" />的配置键。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})"><summary>
+            为给定的类型添加一个 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 注册。
+            </summary><typeparam name="THostedService">要注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" />。</typeparam><param name="services">要注册到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="implementationFactory">用于创建服务实现新实例的工厂。</param><returns>原始的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingEnvironmentExtensions.IsDevelopment(Microsoft.Extensions.Hosting.IHostingEnvironment)"><summary>
+    检查当前托管环境名称是否为<see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Development" />。
+    </summary><param name="hostingEnvironment"><see cref="T:Microsoft.Extensions.Hosting.IHostingEnvironment" />的实例。</param><returns>如果环境名称是<see cref="F:Microsoft.Extensions.Hosting.EnvironmentName.Development" />，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(Microsoft.Extensions.Hosting.IHost,System.Threading.CancellationToken)"><summary>
+    运行应用程序，并返回一个<see cref="T:System.Threading.Tasks.Task" />，该任务只在令牌被触发或关闭被触发时完成。
+    运行后，<paramref name="host" />实例将被释放。
+    </summary><param name="host">要运行的<see cref="T:Microsoft.Extensions.Hosting.IHost" />。</param><param name="token">用于触发关闭的令牌。</param><returns>表示异步操作的<see cref="T:System.Threading.Tasks.Task" />。</returns></member></members>
+</doc>

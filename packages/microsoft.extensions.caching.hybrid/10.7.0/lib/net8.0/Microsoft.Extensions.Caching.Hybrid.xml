@@ -1,0 +1,669 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Caching.Hybrid</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds">
+            <summary>
+             Various diagnostic IDs reported by this repo.
+            </summary>
+            <remarks>
+             When adding a new diagnostic ID, add a corresponding suppression to the root <c>Directory.Build.targets</c> file,
+             and add a documentation entry to <c>docs/list-of-diagnostics.md</c>.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments">
+            <summary>
+             Experiments supported by this repo.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Shared.Diagnostics.Throw">
+            <summary>
+            Defines static methods used to throw exceptions.
+            </summary>
+            <remarks>
+            The main purpose is to reduce code size, improve performance, and standardize exception
+            messages.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/> if the specified argument is <see langword="null"/>.
+            </summary>
+            <typeparam name="T">Argument type to be checked for <see langword="null"/>.</typeparam>
+            <param name="argument">Object to be checked for <see langword="null"/>.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/> if the specified argument is <see langword="null"/>,
+            or <see cref="T:System.ArgumentException" /> if the specified member is <see langword="null"/>.
+            </summary>
+            <typeparam name="TParameter">Argument type to be checked for <see langword="null"/>.</typeparam>
+            <typeparam name="TMember">Member type to be checked for <see langword="null"/>.</typeparam>
+            <param name="argument">Argument to be checked for <see langword="null"/>.</param>
+            <param name="member">Object member to be checked for <see langword="null"/>.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <param name="memberName">The name of the member.</param>
+            <returns>The original value of <paramref name="member"/>.</returns>
+            <example>
+            <code language="csharp">
+            Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if the specified member is <see langword="null"/>.
+            </summary>
+            <typeparam name="TParameter">Argument type.</typeparam>
+            <typeparam name="TMember">Member type to be checked for <see langword="null"/>.</typeparam>
+            <param name="argument">Argument to which member belongs.</param>
+            <param name="member">Object member to be checked for <see langword="null"/>.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <param name="memberName">The name of the member.</param>
+            <returns>The original value of <paramref name="member"/>.</returns>
+            <example>
+            <code language="csharp">
+            Throws.IfMemberNull(myObject, myObject.MyProperty)
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)">
+            <summary>
+            Throws either an <see cref="T:System.ArgumentNullException"/> or an <see cref="T:System.ArgumentException"/>
+            if the specified string is <see langword="null"/> or whitespace respectively.
+            </summary>
+            <param name="argument">String to be checked for <see langword="null"/> or whitespace.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/> if the string is <see langword="null"/>,
+            or <see cref="T:System.ArgumentException"/> if it is empty.
+            </summary>
+            <param name="argument">String to be checked for <see langword="null"/> or empty.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if the argument's buffer size is less than the required buffer size.
+            </summary>
+            <param name="bufferSize">The actual buffer size.</param>
+            <param name="requiredSize">The required buffer size.</param>
+            <param name="paramName">The name of the parameter to be checked.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the enum value is not valid.
+            </summary>
+            <param name="argument">The argument to evaluate.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <typeparam name="T">The type of the enumeration.</typeparam>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/> if the collection is <see langword="null"/>,
+            or <see cref="T:System.ArgumentException"/> if it is empty.
+            </summary>
+            <param name="argument">The collection to evaluate.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <typeparam name="T">The type of objects in the collection.</typeparam>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+            <param name="actualValue">The value of the argument that caused this exception.</param>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/>.
+            </summary>
+            <param name="paramName">The name of the parameter that caused the exception.</param>
+            <param name="message">A message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+            <remarks>
+            If the <paramref name="innerException"/> is not a <see langword="null"/>, the current exception is raised in a catch
+            block that handles the inner exception.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)">
+            <summary>
+            Throws an <see cref="T:System.InvalidOperationException"/>.
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)">
+            <summary>
+            Throws an <see cref="T:System.InvalidOperationException"/>.
+            </summary>
+            <param name="message">A message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>  if the specified number is less than min.
+            </summary>
+            <param name="argument">Number to be expected being less than min.</param>
+            <param name="min">The number that must be less than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater than max.
+            </summary>
+            <param name="argument">Number to be expected being greater than max.</param>
+            <param name="max">The number that must be greater than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less or equal than min.
+            </summary>
+            <param name="argument">Number to be expected being less or equal than min.</param>
+            <param name="min">The number that must be less or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater or equal than max.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="max">The number that must be greater or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is not in the specified range.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="min">The lower bound of the allowed range of argument values.</param>
+            <param name="max">The upper bound of the allowed range of argument values.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is equal to 0.
+            </summary>
+            <param name="argument">Number to be expected being not equal to zero.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>  if the specified number is less than min.
+            </summary>
+            <param name="argument">Number to be expected being less than min.</param>
+            <param name="min">The number that must be less than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater than max.
+            </summary>
+            <param name="argument">Number to be expected being greater than max.</param>
+            <param name="max">The number that must be greater than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less or equal than min.
+            </summary>
+            <param name="argument">Number to be expected being less or equal than min.</param>
+            <param name="min">The number that must be less or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater or equal than max.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="max">The number that must be greater or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is not in the specified range.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="min">The lower bound of the allowed range of argument values.</param>
+            <param name="max">The upper bound of the allowed range of argument values.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is equal to 0.
+            </summary>
+            <param name="argument">Number to be expected being not equal to zero.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>  if the specified number is less than min.
+            </summary>
+            <param name="argument">Number to be expected being less than min.</param>
+            <param name="min">The number that must be less than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater than max.
+            </summary>
+            <param name="argument">Number to be expected being greater than max.</param>
+            <param name="max">The number that must be greater than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less or equal than min.
+            </summary>
+            <param name="argument">Number to be expected being less or equal than min.</param>
+            <param name="min">The number that must be less or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater or equal than max.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="max">The number that must be greater or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is not in the specified range.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="min">The lower bound of the allowed range of argument values.</param>
+            <param name="max">The upper bound of the allowed range of argument values.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is equal to 0.
+            </summary>
+            <param name="argument">Number to be expected being not equal to zero.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/>  if the specified number is less than min.
+            </summary>
+            <param name="argument">Number to be expected being less than min.</param>
+            <param name="min">The number that must be less than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater than max.
+            </summary>
+            <param name="argument">Number to be expected being greater than max.</param>
+            <param name="max">The number that must be greater than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less or equal than min.
+            </summary>
+            <param name="argument">Number to be expected being less or equal than min.</param>
+            <param name="min">The number that must be less or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater or equal than max.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="max">The number that must be greater or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is not in the specified range.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="min">The lower bound of the allowed range of argument values.</param>
+            <param name="max">The upper bound of the allowed range of argument values.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is equal to 0.
+            </summary>
+            <param name="argument">Number to be expected being not equal to zero.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less than min.
+            </summary>
+            <param name="argument">Number to be expected being less than min.</param>
+            <param name="min">The number that must be less than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater than max.
+            </summary>
+            <param name="argument">Number to be expected being greater than max.</param>
+            <param name="max">The number that must be greater than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is less or equal than min.
+            </summary>
+            <param name="argument">Number to be expected being less or equal than min.</param>
+            <param name="min">The number that must be less or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is greater or equal than max.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="max">The number that must be greater or equal than the argument.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is not in the specified range.
+            </summary>
+            <param name="argument">Number to be expected being greater or equal than max.</param>
+            <param name="min">The lower bound of the allowed range of argument values.</param>
+            <param name="max">The upper bound of the allowed range of argument values.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException"/> if the specified number is equal to 0.
+            </summary>
+            <param name="argument">Number to be expected being not equal to zero.</param>
+            <param name="paramName">The name of the parameter being checked.</param>
+            <returns>The original value of <paramref name="argument"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions">
+            <summary>
+            Configuration extension methods for <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"/> / <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializer``1(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder,Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer{``0})">
+            <summary>
+            Serialize values of type <typeparamref name="T"/> with the specified serializer from <paramref name="serializer"/>.
+            </summary>
+            <typeparam name="T">The type to be serialized.</typeparam>
+            <returns>The <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"/> instance.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializer``2(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder)">
+            <summary>
+            Serialize values of type <typeparamref name="T"/> with the serializer of type <typeparamref name="TImplementation"/>.
+            </summary>
+            <typeparam name="T">The type to be serialized.</typeparam>
+            <typeparam name="TImplementation">The serializer to use for this type.</typeparam>
+            <returns>The <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"/> instance.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializerFactory(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder,Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializerFactory)">
+            <summary>
+            Add <paramref name="factory"/> as an additional serializer factory, which can provide serializers for multiple types.
+            </summary>
+            <returns>The <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"/> instance.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializerFactory``1(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder)">
+            <summary>
+            Add a factory of type <typeparamref name="TImplementation"/> as an additional serializer factory, which can provide serializers for multiple types.
+            </summary>
+            <typeparam name="TImplementation">The type of the serializer factory.</typeparam>
+            <returns>The <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"/> instance.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions">
+            <summary>
+            Configuration extension methods for <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})">
+            <summary>
+            Adds support for multi-tier caching services.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <param name="setupAction">A delegate to run to configure the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"/> instance.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds support for multi-tier caching services.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})">
+            <summary>
+            Adds support for multi-tier caching services with a keyed registration.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <param name="serviceKey">The key for the service registration.</param>
+            <param name="setupAction">A delegate to run to configure the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"/> instance.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.String,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})">
+            <summary>
+            Adds support for multi-tier caching services with a keyed registration.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <param name="serviceKey">The key for the service registration.</param>
+            <param name="optionsName">The named options name to use for the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"/> instance.</param>
+            <param name="setupAction">A delegate to run to configure the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"/> instance.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)">
+            <summary>
+            Adds support for multi-tier caching services with a keyed registration.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <param name="serviceKey">The key for the service registration.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.String)">
+            <summary>
+            Adds support for multi-tier caching services with a keyed registration.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the service to.</param>
+            <param name="serviceKey">The key for the service registration.</param>
+            <param name="optionsName">The named options name to use for the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"/> instance.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.PrepareServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the services required for hybrid caching.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to prepare with <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> prerequisites.</param>
+            <returns>A builder instance that allows further configuration of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> service.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions">
+            <summary>
+            Options for configuring the default <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> implementation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DefaultEntryOptions">
+            <summary>
+            Gets or sets the default global options to be applied to <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> operations.
+            </summary>
+            <remarks>
+            If options are specified at the individual call level, the non-null values are merged
+            (with the per-call options being used in preference to the global options). If no value is
+            specified for a given option (globally or per-call), the implementation can choose a reasonable default.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DisableCompression">
+            <summary>
+            Gets or sets a value indicating whether compression for this <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/> instance is disabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.MaximumPayloadBytes">
+            <summary>
+            Gets or sets the maximum size of cache items.
+            </summary>
+            <value>
+            The maximum size of cache items. The default value is 1 MiB.
+            </value>
+            <remarks>
+            Attempts to store values over this size are logged,
+            and the value isn't stored in the cache.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.MaximumKeyLength">
+            <summary>
+            Gets or sets the maximum permitted length (in characters) of keys.
+            </summary>
+            <value>
+            The maximum permitted length of keys, in characters. The default value is 1024 characters.
+            </value>
+            <remarks>Attempts to use keys over this size are logged.</remarks>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.ReportTagMetrics">
+            <summary>
+            Gets or sets a value indicating whether to use "tags" data as dimensions on metric reporting.
+            </summary>
+            <value>
+            <see langword="true"/> to use "tags" data as dimensions on metric reporting; otherwise, <see langword="false"/>.
+            </value>
+            <remarks>
+            If enabled, take care to ensure that tags don't contain data that
+            should not be visible in metrics systems.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DistributedCacheServiceKey">
+            <summary>
+            Gets or sets the key used to resolve the distributed cache service from the <see cref="T:System.IServiceProvider"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder">
+            <summary>
+            Helper API for configuring <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder.Services">
+            <summary>
+            Gets the services collection associated with this instance.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache">
+            <summary>
+            The inbuilt implementation of <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"/>, as registered via <see cref="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem.Release">
+            <summary>
+            Signal that the consumer is done with this item (ref-count decr).
+            </summary>
+            <returns>True if this is the final release.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.DebugTryGetCacheItem(System.String,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem@)">
+            <summary>
+            Auxiliary API for testing purposes, allowing confirmation of the internal state independent of the public API.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState.#ctor(Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeKey@,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState"/> class optionally with shared cancellation support.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState.#ctor(Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeKey@,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem,System.Threading.CancellationToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState"/> class using a fixed cancellation token.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.ImmutableTypeCache">
+            <summary>
+            Utility type for determining whether a type is blittable; the logic for this is very
+            TFM dependent.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.ImmutableTypeCache`1">
+            <summary>
+            Simple memoize storage for whether the type <typeparamref name="T"/> is blittable, in particular to avoid repeated runtime tests
+            in down-level TFMs where this is trickier to determine. The JIT is very effective at accessing this memoized value.
+            </summary>
+            <typeparam name="T">The type being processed.</typeparam>
+        </member>
+        <member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.RecyclableArrayBufferWriter`1.DetachCommitted(System.Int32@)">
+            <summary>
+            Disconnect the current buffer so that we can store it without it being recycled.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.TagSet">
+            <summary>
+            Represents zero (null), one (string) or more (string[]) tags, avoiding the additional array overhead when necessary.
+            </summary>
+        </member>
+    </members>
+</doc>

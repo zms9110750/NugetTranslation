@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Hosting</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Hosting.BackgroundServiceExceptionBehavior"><summary>
+            指定 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 将遵循的一个行为：当在其某个 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" /> 实例中发生未处理的异常时。
+            </summary></member><member name="F:Microsoft.Extensions.Hosting.BackgroundServiceExceptionBehavior.StopHost"><summary>
+            停止 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 实例。
+            </summary><remarks>
+            如果 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" /> 引发异常，则 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 实例将停止，并继续进程。
+            </remarks></member><member name="F:Microsoft.Extensions.Hosting.BackgroundServiceExceptionBehavior.Ignore"><summary>
+            忽略在 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" /> 中引发的异常。
+            </summary><remarks>
+            如果 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" /> 引发异常，则 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 将记录该错误，但除此以外会忽略它。
+            不会重新启动 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" />。
+            </remarks></member><member name="T:Microsoft.Extensions.Hosting.ConsoleLifetimeOptions"><summary>
+            为 <see cref="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime" /> 提供选项标志。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.ConsoleLifetimeOptions.SuppressStatusMessages"><summary>
+            获取或设置一个值，指示是否应抑制主机生存期状态消息，例如在启动时。
+            </summary><value><see langword="true" /> 如果应抑制主机生存期状态消息。
+            默认值为 <see langword="false" />。
+            </value></member><member name="T:Microsoft.Extensions.Hosting.Host"><summary>
+            提供用于创建具有预配置默认值的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例的便捷方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder"><summary>
+            使用预先配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostBuilder" /> 类的新实例。
+            </summary><remarks>
+              以下默认值将应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostBuilder" />：
+              <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从“DOTNET_”前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖关系注入容器上启用范围验证</description></item></list></remarks><returns>已初始化的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(System.String[])"><summary>
+            使用预配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostBuilder" /> 类的新实例。
+            </summary><remarks>
+              以下默认值应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostBuilder" />：
+              <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从以 "DOTNET_" 为前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖注入容器上启用范围验证</description></item></list></remarks><param name="args">命令行参数。</param><returns>初始化后的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder"><summary>
+            使用预配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 类的新实例。
+            </summary><remarks>
+              以下默认值将应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />：
+              <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从以 "DOTNET_" 为前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖注入容器上启用作用域验证</description></item></list></remarks><returns>已初始化的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(System.String[])"><summary>
+    使用预配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 类的新实例。
+    </summary><remarks>
+      以下默认值应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />：
+      <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从带有“DOTNET_”前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为“Development”时，使用入口程序集从用户机密加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为“Development”时，在依赖注入容器上启用范围验证</description></item></list></remarks><param name="args">命令行参数。</param><returns>已初始化的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(Microsoft.Extensions.Hosting.HostApplicationBuilderSettings)"><inheritdoc cref="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder" /><param name="settings">控制用于构造 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 的初始配置和其他设置。</param></member><member name="M:Microsoft.Extensions.Hosting.Host.CreateEmptyApplicationBuilder(Microsoft.Extensions.Hosting.HostApplicationBuilderSettings)"><summary>
+        初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 类的新实例，没有预配置的默认值。
+    </summary><param name="settings">控制用于构造 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 的初始配置和其他设置。</param><returns>已初始化的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.HostApplicationBuilder"><summary>
+            表示一个托管应用程序和服务生成器，帮助管理配置、日志记录、生命周期等。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.#ctor"><summary>
+            使用预配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 类的新实例。
+            </summary><remarks>
+              以下默认设置应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />：
+              <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从以 "DOTNET_" 为前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" /> 不为空时，从 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.json' 和 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖关系注入容器上启用范围验证</description></item></list></remarks></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.#ctor(System.String[])"><summary>
+            使用预配置的默认值初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 类的新实例。
+            </summary><remarks>
+              以下默认值应用于返回的 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />：
+              <list type="bullet"><item><description>将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果</description></item><item><description>从以"DOTNET_"为前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" /> 不为空时，从 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.json' 和 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从环境变量加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>从提供的命令行参数加载应用程序 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /></description></item><item><description>配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以记录到控制台、调试和事件源输出</description></item><item><description>当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖注入容器上启用范围验证</description></item></list></remarks><param name="args">命令行参数。</param></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.#ctor(Microsoft.Extensions.Hosting.HostApplicationBuilderSettings)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 的新实例。
+            </summary><param name="settings">控制初始配置以及是否应使用默认设置的设置。</param></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Environment"><inheritdoc /></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration"><summary>
+            获取键/值配置属性的集合。
+            </summary><remarks>
+            可以通过添加更多配置源来更改此集合，这将更新其当前视图。
+            </remarks></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Services"><inheritdoc /></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Logging"><inheritdoc /></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Metrics"><inheritdoc /></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.ConfigureContainer``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0},System.Action{``0})"><inheritdoc /></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.Build"><summary>
+            生成主机。此方法只能调用一次。
+            </summary><returns>一个已初始化的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</returns></member><member name="T:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings"><summary>
+    用于构造 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 的设置。
+    </summary></member><member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings" /> 类的实例。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.DisableDefaults"><summary>
+            获取或设置一个值，该值指示 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 实例是否配置了预置默认值。
+            </summary><value>
+            如果 <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" /> 实例配置了预置默认值，则为 <see langword="false" />。
+            这类似于调用 <see cref="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureDefaults(Microsoft.Extensions.Hosting.IHostBuilder,System.String[])" />。
+            </value><remarks>
+              以下默认值应用于 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />：
+                * 将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果
+                * 从以 "DOTNET_" 为前缀的环境变量加载 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从环境变量加载 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从提供的命令行参数加载 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" />，以记录到控制台、调试和事件源输出
+                * 当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖项注入容器上启用范围验证
+            </remarks></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.Args"><summary>
+            获取或设置要添加到 <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration" /> 的命令行参数。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.Configuration"><summary>
+            获取或设置要添加到 <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Configuration" /> 的初始配置源。这些源可以通过使用 <see cref="T:Microsoft.Extensions.Hosting.HostDefaults" /> 键来影响 <see cref="P:Microsoft.Extensions.Hosting.HostApplicationBuilder.Environment" />。释放已生成的 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 会同时释放 <see cref="T:Microsoft.Extensions.Configuration.ConfigurationManager" />。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.EnvironmentName"><summary>
+    获取或设置环境名称。
+  </summary></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.ApplicationName"><summary>
+            获取或设置应用程序名称。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostApplicationBuilderSettings.ContentRootPath"><summary>
+            获取或设置内容根路径。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.HostBuilder"><summary>
+            程序初始化实用工具。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Hosting.HostBuilder" /> 类的新实例。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostBuilder.Properties"><summary>
+            获取一个用于在主机构建过程中在组件之间共享状态的中央位置。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.ConfigureHostConfiguration(System.Action{Microsoft.Extensions.Configuration.IConfigurationBuilder})"><summary>
+            为生成器本身设置配置。这用于初始化 <see cref="T:Microsoft.Extensions.Hosting.IHostEnvironment" />，以便稍后在生成过程中使用。可以多次调用此方法，结果将叠加。
+            </summary><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该委托将用于构建主机的 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>返回相同的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，以便链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Configuration.IConfigurationBuilder})"><summary>
+            为后续的构建过程和应用程序设置配置。可以多次调用，结果将累加。结果将在后续操作中通过 <see cref="P:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration" /> 提供，同时在 <see cref="P:Microsoft.Extensions.Hosting.IHost.Services" /> 中也可用。
+            </summary><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该构建器将用于构造主机的 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>返回同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以支持链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.ConfigureServices(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceCollection})"><summary>
+    将服务添加到容器中。可以多次调用此方法，结果将是累加的。
+    </summary><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该委托将用于构建主机的 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>返回同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以实现链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.UseServiceProviderFactory``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0})"><summary>
+    重写用于创建服务提供程序的工厂。
+    </summary><typeparam name="TContainerBuilder">要创建的生成器的类型。</typeparam><param name="factory">用于创建服务提供程序的工厂。</param><returns>返回 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 的同一实例以进行链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.UseServiceProviderFactory``1(System.Func{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0}})"><summary>
+            覆盖用于创建服务提供程序的工厂。
+            </summary><param name="factory">用于创建服务提供程序的工厂。</param><typeparam name="TContainerBuilder">要创建的构建器的类型。</typeparam><returns>返回同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以实现链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.ConfigureContainer``1(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,``0})"><summary>
+            启用配置已实例化的依赖项容器。可以多次调用此方法，结果将叠加。
+            </summary><typeparam name="TContainerBuilder">要创建的生成器的类型。</typeparam><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 将用于为主机构建 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>返回相同的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，以便进行链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostBuilder.Build"><summary>
+            运行给定的操作来初始化主机。此方法只能调用一次。
+            </summary><returns>一个已初始化的 <see cref="T:Microsoft.Extensions.Hosting.IHost" />。</returns><remarks>向主机添加基本服务，例如应用程序生存期、主机环境、日志记录等。</remarks></member><member name="T:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions"><summary>
+            为托管包中的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 提供扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseEnvironment(Microsoft.Extensions.Hosting.IHostBuilder,System.String)"><summary>
+            指定主机使用的环境。为了避免环境被默认值覆盖，请确保在配置默认值后调用此方法。
+            </summary><param name="hostBuilder">要配置的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="environment">应用程序在其中的运行环境。</param><returns><see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseContentRoot(Microsoft.Extensions.Hosting.IHostBuilder,System.String)"><summary>指定主机使用的内容根目录。为避免内容根目录被默认值覆盖，请确保在配置默认值之后调用此方法。</summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="contentRoot">应用程序根目录的路径。</param><returns>返回 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseDefaultServiceProvider(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.DependencyInjection.ServiceProviderOptions})"><summary>
+            指定默认的 <see cref="T:System.IServiceProvider" />。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configure">配置 <see cref="T:System.IServiceProvider" /> 的委托。</param><returns>返回 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseDefaultServiceProvider(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions})"><summary>
+            指定默认的 <see cref="T:System.IServiceProvider" />。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configure">配置 <see cref="T:System.IServiceProvider" /> 的委托。</param><returns><see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureLogging(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Logging.ILoggingBuilder})"><summary>
+            添加一个用于配置所提供的 <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> 的委托。可以多次调用此方法。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureLogging">用于配置 <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> 的委托。</param><returns>返回同一个 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，以便链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureLogging(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Logging.ILoggingBuilder})"><summary>
+            添加一个委托来配置提供的 <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。可以多次调用。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureLogging">配置 <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> 的委托。</param><returns>返回相同的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以进行链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureHostOptions(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Hosting.HostOptions})"><summary>
+            添加一个委托，用于配置 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 的 <see cref="T:Microsoft.Extensions.Hosting.HostOptions" />。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureOptions">用于配置 <see cref="T:Microsoft.Extensions.Hosting.HostOptions" /> 的委托。</param><returns>相同的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，用于链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureHostOptions(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostOptions})"><summary>
+    添加一个委托，用于配置 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 的 <see cref="T:Microsoft.Extensions.Hosting.HostOptions" />。
+    </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureOptions">用于配置 <see cref="T:Microsoft.Extensions.Hosting.HostOptions" /> 的委托。</param><returns>返回同一个 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以支持链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureContainer``1(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{``0})"><summary>
+            启用配置实例化的依赖项容器。可以多次调用此方法，结果将是累加的。
+            </summary><typeparam name="TContainerBuilder">生成器的类型。</typeparam><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureDelegate">用于配置 <typeparamref name="TContainerBuilder" /> 的委托。</param><returns>用于链式调用的同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例。</returns></member><member name="P:System.SR.ResolverReturnedNull"><summary>解析器返回了一个空的IServiceProviderFactory</summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.WaitForStartAsync(System.Threading.CancellationToken)"><summary>
+            为此应用程序注册应用程序启动、应用程序停止和关闭处理程序。
+            </summary><param name="cancellationToken">要监视取消请求的取消令牌。</param><returns>一个 <see cref="T:System.Threading.Tasks.Task" />，表示异步注册操作。</returns></member><member name="P:Microsoft.Extensions.Hosting.Internal.HostingEnvironment.ContentRootPath"><summary>
+            此 API 支持基础结构，并且不打算直接从代码中使用。此 API 可能在将来的版本中更改或删除。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.RunConsoleAsync(Microsoft.Extensions.Hosting.IHostBuilder,System.Threading.CancellationToken)"><summary>
+            启用控制台支持，构建并启动主机，并等待 Ctrl+C 或 SIGTERM 以关闭。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="cancellationToken">可用于取消控制台的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>仅在触发令牌或触发关闭时完成的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="P:System.SR.CreateBuilderCallBeforeCreateServiceProvider"><summary>必须在调用CreateServiceProvider之前调用CreateBuilder</summary></member><member name="T:Microsoft.Extensions.Hosting.HostOptions"><summary>
+            用于 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStopping"><summary>
+            获取一个取消令牌。当应用程序主机执行正常关闭时触发。可能会有仍在处理中的请求。关闭操作将阻塞，直到此事件完成。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime"><summary>
+            监听 Ctrl+C 或 SIGTERM 信号并启动关闭。
+            </summary></member><member name="T:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime"><summary>
+            允许使用者在正常关闭期间执行清理。
+            </summary></member><member name="P:System.SR.EnvironmentNameChangeNotSupoprted"><summary>环境名称已从"{0}"改为"{1}"。不支持更改主机配置。</summary></member><member name="P:Microsoft.Extensions.Hosting.Internal.HostingEnvironment.ApplicationName"><summary>
+            此 API 支持基础结构，不应直接从你的代码中使用。此 API 可能在将来版本中更改或移除。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted"><summary>
+            触发 ApplicationStarted 事件并等待其完成。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.#ctor(Microsoft.Extensions.Logging.ILogger{Microsoft.Extensions.Hosting.Internal.ApplicationLifetime})"><summary>
+            使用指定的记录器初始化 <see cref="T:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime" /> 实例。
+            </summary><param name="logger">用于初始化此实例的记录器。</param></member><member name="P:Microsoft.Extensions.Hosting.Internal.HostingEnvironment.EnvironmentName"><summary>
+            此 API 支持基础结构，不打算直接从你的代码中使用。此 API 可能会在将来的版本中更改或移除。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostOptions.ServicesStopConcurrently"><summary>
+            获取或设置一个值，该值指示 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 将并发或顺序停止已注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 实例。
+            </summary><value><see langword="true" /> 表示 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 将并发停止已注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 实例；<see langword="false" /> 表示 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 将顺序停止已注册的实例。默认值为 <see langword="false" />。
+            </value></member><member name="M:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStopped"><summary>
+            触发 ApplicationStopped 事件并阻塞直到其完成。
+            </summary></member><member name="P:System.SR.BuildCalled"><summary>生成只能被调用一次。</summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.Host.StopAsync(System.Threading.CancellationToken)"><summary>
+            顺序：
+             IHostedLifecycleService.StoppingAsync
+             IHostApplicationLifetime.ApplicationStopping
+             IHostedService.Stop
+             IHostedLifecycleService.StoppedAsync
+             IHostApplicationLifetime.ApplicationStopped
+             IHostLifetime.StopAsync
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureMetrics(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder})"><summary>
+            添加一个委托来配置提供的<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />。可以多次调用。
+            </summary><param name="hostBuilder">要配置的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureMetrics">配置<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />的委托。</param><returns>同一个<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例，用于链式调用。</returns></member><member name="P:System.SR.IHostApplicationLifetimeReplacementNotSupported"><summary>不支持替换 IHostApplicationLifetime。</summary></member><member name="P:System.SR.NullIServiceProvider"><summary>IServiceProviderFactory 返回了一个 null IServiceProvider。</summary></member><member name="P:Microsoft.Extensions.Hosting.Internal.HostingEnvironment.ContentRootFileProvider"><summary>
+            此 API 支持基础结构，不应直接从您的代码中使用。此 API 可能会在将来版本中更改或删除。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostOptions.ServicesStartConcurrently"><summary>
+            获取或设置一个值，该值指示 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 是并发启动还是顺序启动注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 实例。
+            </summary><value><see langword="true" /> 如果 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 并发启动注册的 <see cref="T:Microsoft.Extensions.Hosting.IHostedService" /> 实例；<see langword="false" /> 如果 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 顺序启动注册的实例。默认值为 <see langword="false" />。
+            </value></member><member name="M:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication"><summary>
+            触发 ApplicationStopping 事件并阻塞直到该事件完成。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.Host.StartAsync(System.Threading.CancellationToken)"><summary>
+            顺序:
+             IHostLifetime.WaitForStartAsync
+             Services.GetService{IStartupValidator}().Validate()
+             IHostedLifecycleService.StartingAsync
+             IHostedService.Start
+             IHostedLifecycleService.StartedAsync
+             IHostApplicationLifetime.ApplicationStarted
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureServices(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})"><summary>
+    将服务添加到容器中。可以多次调用此方法，并且结果是累加的。
+    </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 的委托。</param><returns>同一个 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例，用于链式调用。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseConsoleLifetime(Microsoft.Extensions.Hosting.IHostBuilder)"><summary>
+            监听 Ctrl+C 或 SIGTERM 信号，并调用 <see cref="M:Microsoft.Extensions.Hosting.IHostApplicationLifetime.StopApplication" /> 来启动关闭过程。
+            这将解除对类似 RunAsync 和 WaitForShutdownAsync 等扩展的阻塞。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><returns>用于链式调用的同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例。</returns></member><member name="P:System.SR.ContentRootChangeNotSupported"><summary>内容根已从"{0}"更改为"{1}"。不支持更改主机配置。</summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Hosting.ConsoleLifetimeOptions},Microsoft.Extensions.Hosting.IHostEnvironment,Microsoft.Extensions.Hosting.IHostApplicationLifetime,Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Hosting.HostOptions})"><summary>
+            使用指定的控制台生命周期选项、主机环境、主机应用程序生命周期和主机选项初始化一个<see cref="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime" />实例。
+            </summary><param name="options">用于检索<see cref="T:Microsoft.Extensions.Hosting.ConsoleLifetimeOptions" />实例的对象。</param><param name="environment">关于应用程序正在运行的主机环境的信息。</param><param name="applicationLifetime">一个允许使用者接收应用程序生命周期事件通知的对象。</param><param name="hostOptions">用于检索内部主机选项实例的对象。</param><exception cref="T:System.ArgumentNullException"><paramref name="options" />、<paramref name="environment" />、<paramref name="applicationLifetime" /> 或 <paramref name="hostOptions" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStarted"><summary>
+            获取一个取消令牌。当应用程序主机已完全启动并即将等待正常关闭时触发。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureMetrics(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder})"><summary>
+            添加一个用于配置提供的<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />的委托。可以多次调用。
+            </summary><param name="hostBuilder">要配置的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureMetrics">配置<see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />的委托。</param><returns>用于链式调用的同一个<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例。</returns></member><member name="P:System.SR.ApplicationNameChangeNotSupported"><summary>应用程序名称已从“{0}”更改为“{1}”。不支持更改主机配置。</summary></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureAppConfiguration(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Configuration.IConfigurationBuilder})"><summary>
+    为生成过程和应用程序的其余部分设置配置。可以多次调用此方法，结果将累加。结果将在后续操作中通过 <see cref="P:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration" /> 提供，也可在 <see cref="P:Microsoft.Extensions.Hosting.IHost.Services" /> 中获取。
+    </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureDelegate">用于配置 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 的委托，该委托将用于为主机构建 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns>用于链式调用的同一 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例。</returns></member><member name="P:System.SR.BackgroundServiceExceptionStoppedHost"><summary>HostOptions.BackgroundServiceExceptionBehavior 配置为 StopHost。一个 BackgroundService 引发了未处理的异常，并且 IHost 实例正在停止。若要避免此行为，请将其配置为 Ignore；但是 BackgroundService 将不再 ...</summary></member><member name="P:Microsoft.Extensions.Hosting.HostOptions.StartupTimeout"><summary>
+            获取或设置 <see cref="M:Microsoft.Extensions.Hosting.IHost.StartAsync(System.Threading.CancellationToken)" /> 的默认超时时间。
+            </summary><remarks>
+            此超时时间还包括所有实现了 <see cref="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StartingAsync(System.Threading.CancellationToken)" /> 和 <see cref="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StartedAsync(System.Threading.CancellationToken)" /> 的主机服务。
+            </remarks></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.RunConsoleAsync(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.ConsoleLifetimeOptions},System.Threading.CancellationToken)"><summary>
+            启用控制台支持，生成并启动主机，并等待 Ctrl+C 或 SIGTERM 以关闭。
+            </summary><param name="hostBuilder">要配置的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureOptions">用于配置 <see cref="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime" /> 的委托。</param><param name="cancellationToken">一个可用于取消控制台的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>一个仅在令牌被触发或关闭被触发时完成的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="P:Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.ApplicationStopped"><summary>
+            获取一个取消令牌。在应用程序主机执行正常关闭时触发。
+            此时所有请求应已完成。关闭将阻塞
+            直到此事件完成。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.StopAsync(System.Threading.CancellationToken)"><summary>
+            此方法不执行任何操作。
+            </summary><param name="cancellationToken">一个取消令牌实例。</param><returns>一个表示已完成任务的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.UseConsoleLifetime(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Hosting.ConsoleLifetimeOptions})"><summary>
+    监听Ctrl+C或SIGTERM信号，并调用<see cref="M:Microsoft.Extensions.Hosting.IHostApplicationLifetime.StopApplication" />来启动关闭过程。
+    这会取消阻止RunAsync和WaitForShutdownAsync等扩展。
+    </summary><param name="hostBuilder">要配置的<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />。</param><param name="configureOptions">用于配置<see cref="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime" />的委托。</param><returns>返回同一个<see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />实例，以便链式调用。</returns></member><member name="T:Microsoft.Extensions.Hosting.Internal.NullLifetime"><summary>
+            极简生存期，不执行任何操作。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Hosting.ConsoleLifetimeOptions},Microsoft.Extensions.Hosting.IHostEnvironment,Microsoft.Extensions.Hosting.IHostApplicationLifetime,Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Hosting.HostOptions},Microsoft.Extensions.Logging.ILoggerFactory)"><summary>
+    使用指定的控制台生命周期选项、主机环境、主机选项和记录器工厂初始化 <see cref="T:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime" /> 实例。
+    </summary><param name="options">用于检索 <see cref="T:Microsoft.Extensions.Hosting.ConsoleLifetimeOptions" /> 实例的对象。</param><param name="environment">关于应用程序运行的主机环境的信息。</param><param name="applicationLifetime">允许使用者接收应用程序生命周期事件通知的对象。</param><param name="hostOptions">用于检索 <see cref="P:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.HostOptions" /> 实例的对象。</param><param name="loggerFactory">用于配置日志记录系统的对象，并从已注册的 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> 创建 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。</param><exception cref="T:System.ArgumentNullException"><paramref name="options" />、<paramref name="environment" />、<paramref name="applicationLifetime" />、<paramref name="hostOptions" /> 或 <paramref name="loggerFactory" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Extensions.Hosting.HostOptions.ShutdownTimeout"><summary>
+            获取或设置 <see cref="M:Microsoft.Extensions.Hosting.IHost.StopAsync(System.Threading.CancellationToken)" /> 的默认超时。
+            </summary><remarks>
+            此超时也包括所有实现 <see cref="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StoppingAsync(System.Threading.CancellationToken)" /> 和 <see cref="M:Microsoft.Extensions.Hosting.IHostedLifecycleService.StoppedAsync(System.Threading.CancellationToken)" /> 的主机服务。
+            </remarks></member><member name="T:Microsoft.Extensions.Hosting.Internal.HostingEnvironment"><summary>
+            此 API 支持基础设施，不应直接从您的代码中使用。
+            此 API 可能在未来的版本中更改或移除。
+            </summary></member><member name="M:Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.Dispose"><summary>
+            注销关闭处理程序，并释放应用程序启动和停止注册。
+            </summary></member><member name="P:Microsoft.Extensions.Hosting.HostOptions.BackgroundServiceExceptionBehavior"><summary>
+            获取或设置 <see cref="T:Microsoft.Extensions.Hosting.IHost" /> 在其任何 <see cref="T:Microsoft.Extensions.Hosting.BackgroundService" /> 实例引发未处理异常时所遵循的行为。
+            </summary><remarks>
+            默认值为 <see cref="F:Microsoft.Extensions.Hosting.BackgroundServiceExceptionBehavior.StopHost" />。
+            </remarks></member><member name="M:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureDefaults(Microsoft.Extensions.Hosting.IHostBuilder,System.String[])"><summary>
+            使用预配置的默认值配置现有的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例。这将覆盖以前配置的值，并旨在在额外配置调用之前调用。
+            </summary><remarks>
+              以下默认值应用于 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" />：
+                * 将 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ContentRootPath" /> 设置为 <see cref="M:System.IO.Directory.GetCurrentDirectory" /> 的结果
+                * 从以 "DOTNET_" 为前缀的环境变量加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从提供的命令行参数加载主机 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从 'appsettings.json' 和 'appsettings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" /> 不为空时，从 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.json' 和 '[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.ApplicationName" />].settings.[<see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" />].json' 加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，使用入口程序集从用户机密加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从环境变量加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 从提供的命令行参数加载应用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />
+                * 配置 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 以将日志记录到控制台、调试和事件源输出
+                * 当 <see cref="P:Microsoft.Extensions.Hosting.IHostEnvironment.EnvironmentName" /> 为 'Development' 时，在依赖注入容器上启用范围验证
+            </remarks><param name="builder">要配置的现有生成器。</param><param name="args">命令行参数。</param><returns>返回相同的 <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder" /> 实例以用于链式调用。</returns></member></members>
+</doc>

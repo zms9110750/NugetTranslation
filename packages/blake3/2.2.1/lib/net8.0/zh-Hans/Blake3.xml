@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Blake3</name>
+    </assembly>
+    <members><member name="T:Blake3.Blake3HashAlgorithm"><summary>
+    BLAKE3 的 <see cref="T:System.Security.Cryptography.HashAlgorithm" /> 实现。
+    </summary></member><member name="T:Blake3.Blake3Stream"><summary>
+             一个流，允许在从后端流读取/写入时计算哈希值。
+            
+             在释放流之前，使用 <see cref="M:Blake3.Blake3Stream.ComputeHash" /> 或 <see cref="M:Blake3.Blake3Stream.ComputeHash(System.Span{System.Byte})" /> 方法计算哈希值
+             </summary></member><member name="M:Blake3.Blake3Stream.#ctor(System.IO.Stream,System.Boolean)"><summary>
+    使用指定的后端流创建一个 <see cref="T:Blake3.Blake3Stream" /> 实例。
+    </summary><param name="backendStream"></param><param name="dispose">一个布尔值，指示此流是否将释放后端流。默认为 true。</param></member><member name="T:Blake3.Hash"><summary>
+            默认大小（32字节）的输出，提供恒定时间相等性检查。
+            </summary><remarks>
+            此哈希由 <see cref="M:Blake3.Hasher.Hash(System.ReadOnlySpan{System.Byte})" /> 返回。
+            此哈希结构提供结构相等性。
+            </remarks></member><member name="F:Blake3.Hash.Size"><summary>
+            此哈希的大小为32字节。
+            </summary></member><member name="M:Blake3.Hash.CopyFromBytes(System.ReadOnlySpan{System.Byte})"><summary>
+    将字节复制到此哈希。输入数据必须为32字节。
+    </summary><param name="data">一个32字节的缓冲区。</param></member><member name="M:Blake3.Hash.FromBytes(System.ReadOnlySpan{System.Byte})"><summary>
+            从必须为32字节的输入数据创建一个哈希。
+            </summary><param name="data">一个32字节的缓冲区。</param><returns>32字节的哈希。</returns></member><member name="M:Blake3.Hash.AsSpan"><summary>
+            从哈希创建一个跨度。返回的跨度必须与所引用哈希的生命周期相同。
+            </summary><returns>跨度的哈希</returns></member><member name="T:Blake3.Hasher"><summary>
+            一种增量哈希状态，可以接受任意数量的写入。
+            </summary><remarks>
+            性能说明：当调用者的输入缓冲区较小时，<see cref="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})" /> 和 <see cref="M:Blake3.Hasher.UpdateWithJoin``1(System.ReadOnlySpan{``0})" /> 方法的性能较差。
+            请参阅下面它们的方法文档。16 KiB 的缓冲区足够大，可以充分利用当前所有支持的 SIMD 指令集。
+            </remarks></member><member name="F:Blake3.Hasher.LimitPreemptive"><summary>
+            我们采用1024字节的限制来切换到抢先版本，
+            因为在最新版的x64 CPU上该操作大约需要1微秒，这与<see cref="T:System.Runtime.InteropServices.SuppressGCTransitionAttribute" />的文档更一致：
+            `本机函数总是执行一个微不足道的时间（少于1微秒）。`
+            </summary></member><member name="M:Blake3.Hasher.#ctor"><summary>
+            无效的构造函数。
+            </summary></member><member name="M:Blake3.Hasher.Hash(System.ReadOnlySpan{System.Byte})"><summary>默认哈希函数。</summary><param name="input">要哈希的输入数据。</param><returns>计算得到的256位/32字节哈希值。</returns><remarks>对于接受多次写入的增量版本，请参见 <see cref="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})" />。此函数始终是单线程的。对于多线程支持，请参见 <see cref="M:Blake3.Hasher.UpdateWithJoin(System.ReadOnlySpan{System.Byte})" />。</remarks></member><member name="M:Blake3.Hasher.Hash(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})"><summary>
+            默认哈希函数。
+            </summary><param name="input">要哈希的输入数据。</param><param name="output">输出哈希。</param><remarks>
+            对于接受多次写入的增量版本，请参见 <see cref="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})" />
+            此函数始终是单线程的。对于多线程支持，请参见 <see cref="M:Blake3.Hasher.UpdateWithJoin(System.ReadOnlySpan{System.Byte})" /></remarks></member><member name="M:Blake3.Hasher.Dispose"><summary>
+            释放此实例。
+            </summary></member><member name="M:Blake3.Hasher.Reset"><summary>
+            将Hasher重置为其初始状态。
+            </summary><remarks>
+            这在功能上等同于用一个新的Hasher覆盖当前Hasher，如果存在相同的键或上下文字符串的话。
+            然而，根据优化器内联的程度，移动Hasher可能会复制其整个CV栈，其中大部分是无用的未初始化字节。
+            此方法避免了该复制。
+            </remarks></member><member name="M:Blake3.Hasher.Update(System.ReadOnlySpan{System.Byte})"><summary>
+             向哈希状态添加输入字节。您可以任意次数调用此方法。
+             </summary><param name="data">要哈希的输入数据字节缓冲区。</param><remarks>
+             此方法始终是单线程的。关于多线程支持，请参阅下面的<see cref="M:Blake3.Hasher.UpdateWithJoin(System.ReadOnlySpan{System.Byte})" />。
+             
+             请注意，此更新方法可以使用的SIMD并行度受此输入缓冲区大小的限制。例如，当前std::io::copy使用的8 KiB缓冲区足以利用AVX2，但不足以利用AVX-512。16 KiB缓冲区足以利用当前所有支持的SIMD指令集。
+             </remarks></member><member name="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})"><summary>
+    将输入数据添加到哈希状态。您可以多次调用此方法。
+  </summary><typeparam name="T">数据的类型</typeparam><param name="data">要哈希的数据跨度。</param><remarks>
+    此方法始终是单线程的。有关多线程支持，请参见下面的<see cref="M:Blake3.Hasher.UpdateWithJoin(System.ReadOnlySpan{System.Byte})" />。
+    
+    请注意，update 可以利用的 SIMD 并行程度受此输入缓冲区大小的限制。例如，当前 std::io::copy 使用的 8 KiB 缓冲区足以利用 AVX2，但不足以利用 AVX-512。16 KiB 缓冲区足以利用当前所有支持的 SIMD 指令集。
+  </remarks></member><member name="M:Blake3.Hasher.UpdateWithJoin(System.ReadOnlySpan{System.Byte})"><summary>
+            将输入字节添加到哈希状态，与update类似，但可能使用多线程。
+            </summary><param name="data">输入字节缓冲区。</param><remarks>
+            要从多线程中获得任何性能提升，输入缓冲区的大小需要非常大。
+            根据经验，在x86_64上，小于128 KiB的输入没有多线程的好处。
+            其他平台有不同的阈值，通常需要针对你的具体用例进行基准测试。
+            如果可能，建议对整个输入文件进行内存映射，以便在无需调整特定缓冲区大小的情况下充分利用多线程。
+            如果无法进行内存映射，良好的多线程性能需要在后台线程上执行IO，以避免在（串行）重新填充输入缓冲区时所有工作线程处于休眠状态。
+            与内存映射相比，这相当复杂。
+            </remarks></member><member name="M:Blake3.Hasher.UpdateWithJoin``1(System.ReadOnlySpan{``0})"><summary>
+            将输入数据跨度添加到哈希状态，如同更新，但可能使用多线程。
+            </summary><param name="data">输入数据缓冲区。</param><remarks>
+            要从多线程获得任何性能优势，输入缓冲区大小需要非常大。
+            根据经验，在x86_64上，对小于128 KiB的输入使用多线程没有好处。
+            其他平台有不同的阈值，通常您需要基准测试您的特定用例。
+            如果可能，建议对整个输入文件进行内存映射，以便充分利用多线程优势，而无需调整特定的缓冲区大小。
+            如果无法进行内存映射，良好的多线程性能需要在后台线程上执行IO，以避免在（串行）重新填充输入缓冲区时使所有工作线程休眠。
+            与内存映射相比，这相当复杂。
+            </remarks></member><member name="M:Blake3.Hasher.Finalize"><summary>
+            结束哈希状态并返回输入的哈希值。
+            </summary><returns>计算得到的256位/32字节哈希值。</returns><remarks>
+            此方法是幂等的。调用两次将得到相同的结果。您还可以添加更多输入并再次完成。
+            </remarks></member><member name="M:Blake3.Hasher.Finalize(System.Span{System.Byte})"><summary>
+    将哈希状态最终化到输出跨度，该跨度可以提供任意数量的输出字节。
+    </summary><param name="hash">输出哈希，它可以提供任意数量的输出字节。</param><remarks>
+    此方法是幂等的。调用两次将产生相同的结果。您还可以添加更多输入并再次完成最终化。
+    </remarks></member><member name="M:Blake3.Hasher.Finalize(System.UInt64,System.Span{System.Byte})"><summary>
+            完成哈希状态到输出跨度，该跨度可以提供任意数量的输出字节。
+            </summary><param name="offset">要在输出流中查找的偏移量，相对于起始位置。</param><param name="hash">输出哈希，可以提供任意数量的输出字节。</param><remarks>
+            此方法是幂等的。调用两次将得到相同的结果。您还可以添加更多输入并再次完成。
+            </remarks></member><member name="M:Blake3.Hasher.Finalize(System.Int64,System.Span{System.Byte})"><summary>
+            将哈希状态最终确定到输出范围，该范围可以提供任意数量的输出字节。
+            </summary><param name="offset">输出流中相对于起始位置的偏移量。</param><param name="hash">输出哈希，可以提供任意数量的输出字节。</param><remarks>
+            此方法是幂等的。调用两次将得到相同的结果。您还可以添加更多输入并再次最终确定。
+            </remarks></member><member name="M:Blake3.Hasher.New"><summary>
+            为常规哈希函数构造一个新的Hasher。
+            </summary><returns>hasher的一个新实例</returns><remarks>
+            返回的结构需要显式释放。
+            </remarks></member><member name="M:Blake3.Hasher.NewKeyed(System.ReadOnlySpan{System.Byte})"><summary>
+    为键控哈希函数构造一个新的Hasher。
+    </summary><param name="key">一个32字节的密钥。</param><returns>Hasher的新实例。</returns><remarks>
+    返回的结构体需要显式释放。
+    </remarks></member><member name="M:Blake3.Hasher.NewDeriveKey(System.String)"><summary>
+            为密钥派生函数构造一个新的Hasher。
+            </summary><returns>Hasher的新实例</returns><remarks>
+            返回的结构体需要显式释放。
+            </remarks></member><member name="M:Blake3.Hasher.NewDeriveKey(System.ReadOnlySpan{System.Byte})"><summary>
+            为密钥派生函数构造一个新的Hasher。
+            </summary><returns>Hasher的新实例</returns><remarks>
+            返回的结构体需要显式释放。
+            </remarks></member></members>
+</doc>

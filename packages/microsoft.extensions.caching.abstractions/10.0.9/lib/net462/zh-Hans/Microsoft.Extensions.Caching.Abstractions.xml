@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Caching.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions"><summary>
+    提供针对 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" /> 操作的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetPriority(Microsoft.Extensions.Caching.Memory.ICacheEntry,Microsoft.Extensions.Caching.Memory.CacheItemPriority)"><summary>
+            设置在内存压力触发的清理期间保留缓存条目的优先级。
+            </summary><param name="entry">要设置优先级的条目。</param><param name="priority">在条目上设置的 <see cref="T:Microsoft.Extensions.Caching.Memory.CacheItemPriority" />。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.AddExpirationToken(Microsoft.Extensions.Caching.Memory.ICacheEntry,Microsoft.Extensions.Primitives.IChangeToken)"><summary>
+            如果给定的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 过期，则使缓存条目过期。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="expirationToken">导致缓存条目过期的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Memory.ICacheEntry,System.TimeSpan)"><summary>
+            设置一个相对于现在的绝对到期时间。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="relative">表示相对于现在的到期时间的 <see cref="T:System.TimeSpan" />。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Memory.ICacheEntry,System.DateTimeOffset)"><summary>
+            为缓存条目设置绝对过期日期。
+            </summary><param name="entry">该<see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="absolute">一个表示绝对过期时间的<see cref="T:System.DateTimeOffset" />。</param><returns>用于链式调用的<see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetSlidingExpiration(Microsoft.Extensions.Caching.Memory.ICacheEntry,System.TimeSpan)"><summary>
+            设置缓存条目在被移除之前可以处于非活动状态（例如，未被访问）的时间长度。此方法不会将条目生存期延长至绝对过期时间（如果设置了的话）。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="offset">一个表示滑动过期的 <see cref="T:System.TimeSpan" />。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.RegisterPostEvictionCallback(Microsoft.Extensions.Caching.Memory.ICacheEntry,Microsoft.Extensions.Caching.Memory.PostEvictionDelegate)"><summary>
+    在缓存条目从缓存中逐出后触发给定的回调。
+  </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="callback">在条目被逐出后运行的回调。</param><returns>用于链式调用的<see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.RegisterPostEvictionCallback(Microsoft.Extensions.Caching.Memory.ICacheEntry,Microsoft.Extensions.Caching.Memory.PostEvictionDelegate,System.Object)"><summary>
+            在缓存条目从缓存中逐出后触发给定的回调。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="callback">条目被逐出后运行的回调。</param><param name="state">传递给逐出后回调的状态。</param><returns>用于链式连接的<see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetValue(Microsoft.Extensions.Caching.Memory.ICacheEntry,System.Object)"><summary>
+        设置缓存条目的值。
+    </summary><param name="entry">该 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="value">要设置在 <paramref name="entry" /> 上的值。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetSize(Microsoft.Extensions.Caching.Memory.ICacheEntry,System.Int64)"><summary>
+            设置缓存条目值的大小。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</param><param name="size">要设置在 <paramref name="entry" /> 上的大小。</param><returns>用于链式操作的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheEntryExtensions.SetOptions(Microsoft.Extensions.Caching.Memory.ICacheEntry,Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)"><summary>
+            将现有 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 的值应用于该条目。
+            </summary><param name="entry"><see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。
+            </param><param name="options">在 <paramref name="entry" /> 上设置这些选项的值。</param><returns>用于链式调用的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" />。</returns></member><member name="T:Microsoft.Extensions.Caching.Memory.CacheItemPriority"><summary>
+    指定在内存压力触发的清理过程中如何对项进行优先保留。
+    </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.Low"><summary>
+            在内存压力触发清理期间，应尽快移除缓存项。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.Normal"><summary>
+    当内存压力触发清理时，如果没有其他低优先级的缓存条目，则应删除该缓存条目。
+    </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.High"><summary>
+            在由内存压力触发的清理过程中，仅当没有其他低优先级或普通优先级的缓存项时，才应移除该缓存项。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.NeverRemove"><summary>
+            在内存压力触发的清理过程中，缓存条目不应被删除。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.EvictionReason"><summary>
+            指定缓存条目被逐出的原因。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.None"><summary>
+            该项未被从缓存中移除。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.Removed"><summary>
+            该项已从缓存中手动移除。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.Replaced"><summary>
+            该项因被覆盖而从缓存中移除。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.Expired"><summary>
+    该项目因超时而被从缓存中移除。
+    </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.TokenExpired"><summary>
+            该项因令牌过期而从缓存中移除。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Memory.EvictionReason.Capacity"><summary>
+            该条目因超出容量限制而从缓存中移除。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.ICacheEntry"><summary>
+            表示 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实现中的一个条目。
+            释放时，会提交到缓存。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.Key"><summary>
+            获取缓存项的密钥。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.Value"><summary>
+            获取或设置缓存条目的值。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.AbsoluteExpiration"><summary>
+            获取或设置缓存项的绝对过期日期。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.AbsoluteExpirationRelativeToNow"><summary>
+            获取或设置相对于现在的绝对过期时间。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.SlidingExpiration"><summary>
+            获取或设置缓存条目在被移除之前可以处于非活动状态（例如未被访问）的时间长度。
+            这不会将条目生命周期延长到超过绝对过期时间（如果已设置）。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.ExpirationTokens"><summary>
+            获取导致缓存条目过期的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实例。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.PostEvictionCallbacks"><summary>
+            获取或设置缓存条目从缓存中逐出后触发的回调。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.Priority"><summary>
+            获取或设置清理期间保留缓存条目在缓存中的优先级。默认值为 <see cref="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.Normal" />。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.Size"><summary>
+            获取或设置缓存条目值的大小。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.IMemoryCache"><summary>
+            表示一个本地内存缓存，其值不会被序列化。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Memory.IMemoryCache.TryGetValue(System.Object,System.Object@)"><summary>
+            获取与此键关联的项（如果存在）。
+            </summary><param name="key">标识请求的条目的对象。</param><param name="value">定位到的值或 null。</param><returns>如果找到了键，则为 true。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.IMemoryCache.CreateEntry(System.Object)"><summary>
+            在缓存中创建或覆盖一个条目。
+            </summary><param name="key">标识此条目的对象。</param><returns>新创建的 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" /> 实例。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.IMemoryCache.Remove(System.Object)"><summary>
+            移除与给定键关联的对象。
+            </summary><param name="key">一个标识该条目的对象。</param></member><member name="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions"><summary>
+    为 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 操作提供扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.SetPriority(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,Microsoft.Extensions.Caching.Memory.CacheItemPriority)"><summary>
+            设置在内存压力引发的清理过程中保留缓存条目的优先级。
+            </summary><param name="options">要设置优先级的选项。</param><param name="priority">要设置在选项中的 <see cref="T:Microsoft.Extensions.Caching.Memory.CacheItemPriority" /> 优先级。</param><returns><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.SetSize(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,System.Int64)"><summary>
+            设置缓存条目值的大小。
+            </summary><param name="options">要设置条目大小的选项。</param><param name="size">要在 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 上设置的大小。</param><returns>返回 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.AddExpirationToken(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,Microsoft.Extensions.Primitives.IChangeToken)"><summary>
+            如果给定的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 过期，则使缓存条目过期。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="expirationToken">导致缓存条目过期的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。</param><returns>返回 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />，以便可以链接其他调用。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,System.TimeSpan)"><summary>
+            设置一个绝对过期时间，相对于当前时间。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="relative">相对于当前时间的过期时间。</param><returns>返回<see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />以便可以链接其他调用。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,System.DateTimeOffset)"><summary>
+            为缓存项设置绝对过期日期。
+            </summary><param name="options">表示缓存选项的 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="absolute">绝对过期时间。</param><returns>返回 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 以便可以链接其他调用。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.SetSlidingExpiration(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,System.TimeSpan)"><summary>
+    设置缓存条目在移除之前可以处于非活动状态（例如未被访问）的时间。这不会将条目生命周期延长至绝对过期时间之外（如果已设置）。
+  </summary><param name="options"><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="offset">滑动过期时间。</param><returns><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.RegisterPostEvictionCallback(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,Microsoft.Extensions.Caching.Memory.PostEvictionDelegate)"><summary>
+            在缓存条目从缓存中逐出后触发给定的回调。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="callback">注册用于在条目被逐出后调用的回调。</param><returns>返回 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryExtensions.RegisterPostEvictionCallback(Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions,Microsoft.Extensions.Caching.Memory.PostEvictionDelegate,System.Object)"><summary>
+            在缓存条目被从缓存中逐出后触发给定的回调。
+            </summary><param name="options"><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />。</param><param name="callback">要注册的回调，在条目被逐出后调用。</param><param name="state">要传递给回调的状态。</param><returns><see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" />，以便可以链式调用其他调用。</returns></member><member name="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions"><summary>
+            表示应用于 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例的条目的缓存选项。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpiration"><summary>
+            获取或设置缓存条目的绝对过期日期。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpirationRelativeToNow"><summary>
+            获取或设置一个相对于现在的绝对过期时间。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.SlidingExpiration"><summary>
+            获取或设置缓存条目在被移除前可以处于非活动状态（例如，未被访问）的持续时间。
+            这不会将条目的生存期延长到绝对过期时间（如果已设置）之外。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.ExpirationTokens"><summary>
+            获取导致缓存条目过期的<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />实例。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.PostEvictionCallbacks"><summary>
+            获取或设置缓存条目从缓存中逐出后将要触发的回调。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.Priority"><summary>
+    获取或设置在内存压力触发清理期间将缓存条目保留在缓存中的优先级。默认值为 <see cref="F:Microsoft.Extensions.Caching.Memory.CacheItemPriority.Normal" />。
+    </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.Size"><summary>
+            获取或设置缓存条目值的大小。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.CacheExtensions"><summary>
+    提供用于 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 操作的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Get(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object)"><summary>
+            如果存在，则获取与此键关联的值。
+            </summary><param name="cache">此方法扩展的<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />实例。</param><param name="key">要获取值的键。</param><returns>与此键关联的值，如果该键不存在，则为<c>null</c>。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Get``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object)"><summary>
+    获取与此键关联的值（如果存在）。
+    </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要获取的值的键。</param><returns>与此键关联的值，如果该键不存在，则为 <c>default(TItem)</c>。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.TryGetValue``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0@)"><summary>
+            尝试获取与给定键关联的值。
+            </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />实例。</param><param name="key">要获取的值的键。</param><param name="value">与给定键关联的值。</param><returns>如果找到键，则为<c>true</c>；否则为<c>false</c>。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Set``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0)"><summary>
+            将值与<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />中的键关联。
+            </summary><typeparam name="TItem">要设置的对象类型。</typeparam><param name="cache">此方法扩展的<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />实例。</param><param name="key">要设置的条目的键。</param><param name="value">要与键关联的值。</param><returns>已设置的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Set``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0,System.DateTimeOffset)"><summary>
+    设置一个具有指定键和值的缓存条目，并在指定持续时间后过期。
+    </summary><typeparam name="TItem">要设置的对象类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要设置的条目的键。</param><param name="value">要与键关联的值。</param><param name="absoluteExpiration">缓存条目过期的时间点。</param><returns>已设置的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Set``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0,System.TimeSpan)"><summary>
+            设置一个缓存条目，具有给定的键和值，该条目从现在起在给定的持续时间后过期。
+            </summary><typeparam name="TItem">要设置的对象的类型。</typeparam><param name="cache">此方法扩展的<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />实例。</param><param name="key">要设置的条目的键。</param><param name="value">要与键关联的值。</param><param name="absoluteExpirationRelativeToNow">从现在起缓存条目过期的时间间隔。</param><returns>已设置的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Set``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0,Microsoft.Extensions.Primitives.IChangeToken)"><summary>
+            设置具有指定键和值的缓存项，当<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />过期时该项将过期。
+            </summary><typeparam name="TItem">要设置的对象类型。</typeparam><param name="cache">此方法扩展的<see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" />实例。</param><param name="key">要设置的项的键。</param><param name="value">要与键关联的值。</param><param name="expirationToken">导致缓存项过期的<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。</param><returns>已设置的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.Set``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,``0,Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)"><summary>
+            设置具有给定键和值的缓存条目，并将现有 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 的值应用于创建的条目。
+            </summary><typeparam name="TItem">要设置的对象类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要设置的条目的键。</param><param name="value">要与键关联的值。</param><param name="options">要应用于新条目的现有 <see cref="T:Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions" /> 实例。</param><returns>已设置的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.GetOrCreate``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,System.Func{Microsoft.Extensions.Caching.Memory.ICacheEntry,``0})"><summary>
+            获取与此键关联的值（如果存在），否则使用提供的键和给定工厂的值生成一个新条目。
+            </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不存在此键，则创建与此键关联的值的工厂。</param><returns>与此键关联的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.GetOrCreate``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,System.Func{Microsoft.Extensions.Caching.Memory.ICacheEntry,``0},Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)"><summary>
+    如果存在，则获取与此键关联的值；否则，使用提供的键和给定工厂创建新条目。
+    </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不存在该键，则创建与该键关联的值的工厂。</param><param name="createOptions">如果缓存中不存在该键，则应用于 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" /> 的选项。</param><returns>与此键关联的值。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.GetOrCreateAsync``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,System.Func{Microsoft.Extensions.Caching.Memory.ICacheEntry,System.Threading.Tasks.Task{``0}})"><summary>
+    异步获取与此键关联的值（如果存在），否则使用提供的键和来自给定工厂的值创建新条目。
+    </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不存在该键，则创建与该键关联的值的工厂任务。</param><returns>表示异步操作的任务对象。</returns></member><member name="M:Microsoft.Extensions.Caching.Memory.CacheExtensions.GetOrCreateAsync``1(Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Object,System.Func{Microsoft.Extensions.Caching.Memory.ICacheEntry,System.Threading.Tasks.Task{``0}},Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)"><summary>
+            异步获取与此键关联的值（如果存在），否则如果未找到键，则使用提供的键和给定工厂中的值生成新条目。
+            </summary><typeparam name="TItem">要获取的对象的类型。</typeparam><param name="cache">此方法扩展的 <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> 实例。</param><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不存在该键，则创建与该键关联的值的工厂任务。</param><param name="createOptions">如果缓存中不存在该键，则应用于 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" /> 的选项。</param><returns>表示异步操作的任务对象。</returns></member><member name="T:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics"><summary>
+            保存内存缓存统计信息的快照。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics.#ctor"><summary>
+            初始化 MemoryCacheStatistics 的一个实例。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics.CurrentEntryCount"><summary>
+        获取当前内存缓存中 <see cref="T:Microsoft.Extensions.Caching.Memory.ICacheEntry" /> 实例的数量。
+    </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics.CurrentEstimatedSize"><summary>
+            获取内存缓存中当前所有 <see cref="P:Microsoft.Extensions.Caching.Memory.ICacheEntry.Size" /> 值的估计总和。
+            </summary><returns>如果未跟踪大小，则返回 <see langword="null" />。常见的 MemoryCache 实现在缓存上设置了 SizeLimit 时会跟踪大小。</returns></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics.TotalMisses"><summary>
+            获取缓存未命中的总数。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.MemoryCacheStatistics.TotalHits"><summary>
+            获取缓存命中的总数。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.PostEvictionCallbackRegistration"><summary>
+            表示在从缓存中逐出条目后将触发的回调委托。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.PostEvictionCallbackRegistration.EvictionCallback"><summary>
+            获取或设置缓存条目被逐出后将触发的回调委托。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Memory.PostEvictionCallbackRegistration.State"><summary>
+    获取或设置要传递给回调委托的状态。
+    </summary></member><member name="T:Microsoft.Extensions.Caching.Memory.PostEvictionDelegate"><summary>
+            表示当缓存条目过期时调用的回调方法。
+            </summary><param name="key">被逐出的条目的键。</param><param name="value">被逐出的条目的值。</param><param name="reason"><see cref="T:Microsoft.Extensions.Caching.Memory.EvictionReason" />。</param><param name="state">注册回调时传递的信息。</param></member><member name="T:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryExtensions"><summary>
+  提供用于 <see cref="T:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions" /> 操作的扩展方法。
+  </summary></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.TimeSpan)"><summary>
+            设置相对于当前时间的绝对过期时间。
+            </summary><param name="options">要操作的选项。</param><param name="relative">相对于当前时间的过期时间。</param></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryExtensions.SetAbsoluteExpiration(Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.DateTimeOffset)"><summary>
+            设置缓存项的绝对过期日期。
+            </summary><param name="options">要操作的选项。</param><param name="absolute">过期时间，以绝对时间表示。</param></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryExtensions.SetSlidingExpiration(Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.TimeSpan)"><summary>
+    设置在移除缓存条目之前其可以处于非活动状态（例如，未被访问）的时间。
+    这不会将条目生存期延长到超过绝对过期时间（如果已设置）。
+    </summary><param name="options">要操作的选项。</param><param name="offset">滑动过期时间。</param></member><member name="T:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions"><summary>
+            提供 <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> 中条目的缓存选项。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpiration"><summary>
+            获取或设置缓存项的绝对过期日期。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpirationRelativeToNow"><summary>
+            获取或设置相对于现在的绝对过期时间。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.SlidingExpiration"><summary>
+            获取或设置缓存条目在被移除之前可以处于非活动状态（例如，未被访问）的时长。这不会将条目的生存期延长到超过绝对过期时间（如果已设置）。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions"><summary>
+            用于在 <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> 中设置数据的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.Set(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.Byte[])"><summary>
+            使用指定的键将字节序列设置到指定的缓存中。
+            </summary><param name="cache">要在其中存储数据的缓存。</param><param name="key">用于存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetAsync(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.Byte[],System.Threading.CancellationToken)"><summary>
+            使用指定的键，异步设置指定缓存中的字节序列。
+            </summary><param name="cache">要在其中存储数据的缓存。</param><param name="key">存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><param name="token">可选。用于取消操作的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步设置操作的任务。</returns><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetString(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.String)"><summary>
+            使用指定的键在指定的缓存中设置字符串。
+            </summary><param name="cache">用于存储数据的缓存。</param><param name="key">用于存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetString(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.String,Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions)"><summary>
+            使用指定的键在指定的缓存中设置一个字符串。
+            </summary><param name="cache">用于存储数据的缓存。</param><param name="key">用于存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><param name="options">该条目的缓存选项。</param><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.String,System.Threading.CancellationToken)"><summary>
+            异步使用指定的键将字符串设置到指定的缓存中。
+            </summary><param name="cache">用于存储数据的缓存。</param><param name="key">用于存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><param name="token">可选。用于取消操作的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步设置操作的任务。</returns><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.String,Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.Threading.CancellationToken)"><summary>
+            异步使用指定的键将字符串设置到指定缓存中。
+            </summary><param name="cache">要存储数据的缓存。</param><param name="key">存储数据的键。</param><param name="value">要存储在缓存中的数据。</param><param name="options">条目的缓存选项。</param><param name="token">可选。用于取消操作的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步设置操作的任务。</returns><exception cref="T:System.ArgumentNullException"><paramref name="key" /> 或 <paramref name="value" /> 为 null。</exception></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetString(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String)"><summary>
+            从指定缓存中获取指定键的字符串。
+            </summary><param name="cache">要在其中存储数据的缓存。</param><param name="key">要获取其存储数据的键。</param><returns>来自存储的缓存键的字符串值。</returns></member><member name="M:Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.String,System.Threading.CancellationToken)"><summary>
+            从指定的缓存中异步获取指定键的字符串。
+            </summary><param name="cache">要存储数据的缓存。</param><param name="key">用于获取存储数据的键。</param><param name="token">可选。一个<see cref="T:System.Threading.CancellationToken" />用于取消操作。</param><returns>一个从存储的缓存键获取字符串值的任务。</returns></member><member name="T:Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache"><summary>
+            表示一个序列化值的分布式缓存，支持低分配数据传输。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache.TryGet(System.String,System.Buffers.IBufferWriter{System.Byte})"><summary>
+            尝试检索现有的缓存项。
+            </summary><param name="key">缓存项的唯一键。</param><param name="destination">成功时写入缓存内容的目标。</param><returns><c>true</c> 如果找到缓存项，<c>false</c> 否则。</returns><remarks>此方法在功能上与 <see cref="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Get(System.String)" /> 类似，但避免了数组分配。</remarks></member><member name="M:Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache.TryGetAsync(System.String,System.Buffers.IBufferWriter{System.Byte},System.Threading.CancellationToken)"><summary>
+            尝试异步检索现有的缓存条目。
+            </summary><param name="key">缓存条目的唯一键。</param><param name="destination">成功时写入缓存内容的目标。</param><param name="token">用于传播应取消操作的通知的<see cref="T:System.Threading.CancellationToken" />。</param><returns>如果找到缓存条目，则为<c>true</c>；否则为<c>false</c>。</returns><remarks>此方法在功能上类似于<see cref="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.GetAsync(System.String,System.Threading.CancellationToken)" />，但避免了数组分配。</remarks></member><member name="M:Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache.Set(System.String,System.Buffers.ReadOnlySequence{System.Byte},Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions)"><summary>
+            设置或覆盖缓存项。
+            </summary><param name="key">要创建的条目的键。</param><param name="value">此缓存项的值。</param><param name="options">该条目的缓存选项。</param><remarks>此方法在功能上类似于<see cref="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Set(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions)" />，但避免了数组分配。</remarks></member><member name="M:Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache.SetAsync(System.String,System.Buffers.ReadOnlySequence{System.Byte},Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.Threading.CancellationToken)"><summary>
+            异步设置或覆盖缓存条目。
+            </summary><param name="key">要创建的条目的键。</param><param name="value">此缓存条目的值。</param><param name="options">该值的缓存选项。</param><param name="token">用于传播应取消操作的通知的 <see cref="T:System.Threading.CancellationToken" />。</param><remarks>此方法在功能上类似于 <see cref="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.SetAsync(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.Threading.CancellationToken)" />，但避免了数组分配。</remarks></member><member name="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache"><summary>
+            表示序列化值的分布式缓存。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Get(System.String)"><summary>
+            使用给定的键获取值。
+            </summary><param name="key">标识请求的值的字符串。</param><returns>找到的值或 null。</returns></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.GetAsync(System.String,System.Threading.CancellationToken)"><summary>
+            获取具有给定键的值。
+            </summary><param name="key">标识所请求值的字符串。</param><param name="token">可选。用于传播应取消操作的通知的<see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步操作的<see cref="T:System.Threading.Tasks.Task" />，包含找到的值或 null。</returns></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Set(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions)"><summary>
+            使用给定的键设置一个值。
+            </summary><param name="key">一个标识所请求值的字符串。</param><param name="value">要在缓存中设置的值。</param><param name="options">该值的缓存选项。</param></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.SetAsync(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.Threading.CancellationToken)"><summary>
+            使用给定的键设置值。
+            </summary><param name="key">一个字符串，用于标识请求的值。</param><param name="value">要设置到缓存中的值。</param><param name="options">值的缓存选项。</param><param name="token">可选。用于传播应取消操作的通知的<see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步操作的<see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Refresh(System.String)"><summary>
+            根据键刷新缓存中的值，重置其滑动过期超时（如果有）。
+            </summary><param name="key">标识所请求值的字符串。</param></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.RefreshAsync(System.String,System.Threading.CancellationToken)"><summary>
+            根据键刷新缓存中的值，重置其滑动过期超时（如果有）。
+            </summary><param name="key">标识请求值的字符串。</param><param name="token">可选。用于传播操作应被取消的通知的<see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步操作的<see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.Remove(System.String)"><summary>
+            移除具有给定键的值。
+            </summary><param name="key">一个标识所请求值的字符串。</param></member><member name="M:Microsoft.Extensions.Caching.Distributed.IDistributedCache.RemoveAsync(System.String,System.Threading.CancellationToken)"><summary>
+    删除具有指定键的值。
+    </summary><param name="key">标识所请求值的字符串。</param><param name="token">可选。用于传播应取消操作的通知的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步操作的 <see cref="T:System.Threading.Tasks.Task" />。</returns></member><member name="T:Microsoft.Extensions.Caching.Hybrid.HybridCache"><summary>
+            提供基于 <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> 后端的多级缓存服务。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.GetOrCreateAsync``2(System.String,``0,System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"><summary>
+            异步获取与键关联的值（如果存在），如果未找到键，则使用提供的键和给定工厂的值生成新条目。
+            </summary><typeparam name="TState"><paramref name="factory" /> 所需的其他状态的类型。</typeparam><typeparam name="T">所考虑的数据的类型。</typeparam><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不存在数据，则提供底层数据服务。</param><param name="state"><paramref name="factory" /> 所需的状态。</param><param name="options">此缓存条目的其他选项。</param><param name="tags">要与该缓存项关联的标记。</param><param name="cancellationToken">用于传播应取消操作的通知的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>数据，来自缓存或底层数据服务。</returns></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.GetOrCreateAsync``1(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"><summary>
+            异步获取与键关联的值（如果存在），如果未找到键，则使用提供的键和给定工厂中的值生成新条目。
+            </summary><typeparam name="T">正在考虑的数据类型。</typeparam><param name="key">要查找或创建的条目的键。</param><param name="factory">如果缓存中不可用，则提供底层数据服务。</param><param name="options">此缓存条目的其他选项。</param><param name="tags">与此缓存项关联的标签。</param><param name="cancellationToken">用于传播应取消操作的通知的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>数据，来自缓存或底层数据服务。</returns></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.SetAsync``1(System.String,``0,Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"><summary>
+            异步设置或覆盖与键关联的值。
+            </summary><typeparam name="T">正在考虑的数据的类型。</typeparam><param name="key">要创建的条目的键。</param><param name="value">要为此缓存条目分配的值。</param><param name="options">此缓存条目的附加选项。</param><param name="tags">要与此缓存条目关联的标记。</param><param name="cancellationToken">用于传播操作应被取消的通知的<see cref="T:System.Threading.CancellationToken" />。</param></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.RemoveAsync(System.String,System.Threading.CancellationToken)"><summary>
+            如果存在，则异步移除与键关联的值。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.RemoveAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"><summary>
+            异步移除与键关联的值（如果存在）。
+            </summary><remarks>实现者应将<c>null</c>视为空。</remarks></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.RemoveByTagAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"><summary>
+            异步移除与指定标签关联的所有值。
+            </summary><remarks>实现者应将 <c>null</c> 视为空。</remarks></member><member name="M:Microsoft.Extensions.Caching.Hybrid.HybridCache.RemoveByTagAsync(System.String,System.Threading.CancellationToken)"><summary>
+            异步移除与指定标签关联的所有值。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags"><summary>
+            适用于 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 操作的附加标志。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.None"><summary>
+            无附加标志。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableLocalCacheRead"><summary>
+    禁用从本地进程内缓存读取。
+    </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableLocalCacheWrite"><summary>
+            禁用写入本地进程内缓存。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableLocalCache"><summary>
+            禁用对本地进程内缓存的读取和写入。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableDistributedCacheRead"><summary>
+            禁用从辅助分布式缓存读取。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableDistributedCacheWrite"><summary>
+            禁用向辅助分布式缓存写入。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableDistributedCache"><summary>
+            禁用对二级分布式缓存的读取和写入。
+            </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableUnderlyingData"><summary>
+    仅从缓存获取值；不尝试访问底层数据存储。
+    </summary></member><member name="F:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryFlags.DisableCompression"><summary>
+            禁用此有效负载的压缩。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions"><summary>
+            指定应用于 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 操作的附加选项（例如，过期时间）。当可以在多个级别（例如，全局和每次调用）指定选项时，这些值会被组合；使用最具体的非 null 值，并从更高层级继承 null 值。如果任何级别都没有指定值，则实现可以选择合理的默认值。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Expiration"><summary>
+            获取或设置此条目的总体缓存持续时间，传递给后端分布式缓存。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.LocalCacheExpiration"><remarks>
+    当从外部缓存存储中检索缓存值时，此值将用于计算本地缓存过期时间，并且不超过剩余的总体缓存生存期。
+    </remarks></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Flags"><summary>
+            获取或设置应用于所请求操作的附加标志。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer`1"><summary>
+            为<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" />提供按类型的序列化和反序列化支持。
+            </summary><typeparam name="T">正在进行序列化/反序列化的类型。</typeparam></member><member name="M:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer`1.Deserialize(System.Buffers.ReadOnlySequence{System.Byte})"><summary>
+            从提供的<paramref name="source" />中反序列化一个<typeparamref name="T" />值。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer`1.Serialize(`0,System.Buffers.IBufferWriter{System.Byte})"><summary>
+            将 <paramref name="value" /> 序列化到所提供的 <paramref name="target" />。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializerFactory"><summary>
+            每个类型的 <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer`1" /> 实例的工厂提供程序。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializerFactory.TryCreateSerializer``1(Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer{``0}@)"><summary>
+            如果可能，为提供的类型请求一个序列化器。
+            </summary><typeparam name="T">正在序列化或反序列化的类型。</typeparam><param name="serializer">序列化器。</param><returns>如果工厂支持此类型，则为<c>true</c>；否则为<c>false</c>。</returns></member><member name="T:Microsoft.Extensions.Internal.ISystemClock"><summary>
+            抽象系统时钟以便于测试。
+            </summary></member><member name="P:Microsoft.Extensions.Internal.ISystemClock.UtcNow"><summary>
+            获取当前的系统时间（UTC）。
+            </summary></member><member name="T:Microsoft.Extensions.Internal.SystemClock"><summary>
+            提供对正常系统时钟的访问。
+            </summary></member><member name="P:Microsoft.Extensions.Internal.SystemClock.UtcNow"><summary>
+            检索当前 UTC 系统时间。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName"><summary>
+            获取包含导入的库的名称。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名称。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定当方法或属性返回指定的返回值条件时，将确保所列出的字段和属性成员具有非 null 值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数不为 null，则输出也不为 null。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定方法或属性将确保列出的字段和属性成员具有非 null 值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员列表初始化属性。</summary><param name="members">
+            保证不为空的字段和属性成员的列表。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值和条件以及字段或属性成员初始化该特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的字段或属性成员将不为 null。
+            </param><param name="member">
+            保证不为 null 的字段或属性成员。
+            </param></member><member name="T:System.Runtime.CompilerServices.IsExternalInit"><summary>
+    保留供编译器用于跟踪元数据。
+    开发人员不应在源代码中使用此类。
+    </summary></member><member name="P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling"><summary>
+            获取或设置如何封送字符串参数到方法。
+            </summary><remarks>
+            如果此字段设置为除了 <see cref="F:System.Runtime.InteropServices.StringMarshalling.Custom" /> 以外的值，则不能指定 <see cref="P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType" />。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="F:System.Runtime.InteropServices.StringMarshalling.Custom"><summary>
+            表示用户在<see cref="P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType" />中提供了特定的封送拆收器。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使在相应类型允许 null 的情况下，也禁止将 null 作为输入。</summary></member><member name="P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint"><summary>
+            获取或设置要调用的入口点的名称。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定输出可能为 null，即使对应的类型不允许。</summary></member><member name="T:System.ExceptionPolyfills"><summary>为派生自 Exception 的类型的静态方法提供低级别填充。</summary></member><member name="P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError"><summary>
+            获取或设置调用方在从带有此特性的方法返回之前是否设置错误（在Windows上为SetLastError，在其他平台上为errno）。
+            </summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化特性。</summary><param name="member">
+            保证不为空的字段或属性成员。
+            </param></member><member name="M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Runtime.InteropServices.LibraryImportAttribute" /> 的新实例。
+            </summary><param name="libraryName">包含导入的库的名称。</param></member><member name="T:System.Runtime.InteropServices.StringMarshalling"><summary>
+            指定如何对生成的 p/invoke 进行字符串封送处理
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使相应类型不允许，参数也可能为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使相应类型允许，输出也不会为 null。指定调用返回时输入参数不为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递了指定的值，则方法将不会返回。</summary></member><member name="P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType"><summary>
+            获取或设置用于控制方法字符串参数封送处理的 <see cref="T:System.Type" />。
+            </summary><remarks>
+            如果指定了此字段，则不得指定 <see cref="P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling" />，或者必须将其设置为 <see cref="F:System.Runtime.InteropServices.StringMarshalling.Custom" />。
+            </remarks></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应的类型不允许，也允许 null 作为输入。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+    条件参数值。如果关联参数的实参与此值匹配，则诊断会将方法之后的代码视为不可达。
+    </param></member><member name="F:System.Runtime.InteropServices.StringMarshalling.Utf16"><summary>
+            使用平台提供的 UTF-16 封送处理程序。
+            </summary></member><member name="F:System.Runtime.InteropServices.StringMarshalling.Utf8"><summary>
+            使用平台提供的 UTF-8 封送处理程序。
+            </summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为 null。
+            </param></member><member name="T:System.Runtime.InteropServices.LibraryImportAttribute"><summary>
+    用于指示源代码生成器应创建用于封送参数的函数，而不是依赖运行时在运行时生成等效的封送函数的属性。
+    </summary><remarks>
+    如果未启用与之关联的源代码生成器，则此属性无意义。
+    当前内置的源代码生成器仅支持 C#，并且仅在应用于静态、分部、非泛型方法时提供实现。
+    </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">返回值条件。如果方法返回此值，则关联参数将不为null。</param></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回<see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" />时，即使相应类型允许，参数也不会为null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段与属性成员列表初始化特性。</summary><param name="returnValue">
+    返回值条件。如果方法返回此值，关联的字段和属性成员将不会为 null。
+    </param><param name="members">
+    承诺不为 null 的字段和属性成员列表。
+    </param></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化属性。</summary><param name="parameterName">
+            关联的参数名称。  如果指定参数的参数不为null，则输出将为非null。
+            </param></member></members>
+</doc>

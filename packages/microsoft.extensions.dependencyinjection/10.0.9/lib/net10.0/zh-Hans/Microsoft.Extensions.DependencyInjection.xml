@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.DependencyInjection</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory"><summary><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1" /> 的默认实现。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.#ctor"><summary>
+            使用默认选项初始化 <see cref="T:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.#ctor(Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)"><summary>
+            使用指定的 <paramref name="options" /> 初始化 <see cref="T:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory" /> 类的新实例。
+            </summary><param name="options">用于此实例的选项。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><inheritdoc /></member><member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><inheritdoc /></member><member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions"><summary>
+            从 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 构建 <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            从所提供的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 创建一个包含服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />。
+            </summary><param name="services">包含服务描述符的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)"><summary>
+    创建<see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />，其中包含来自所提供的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />的服务，并可选择启用范围验证。
+    </summary><param name="services">包含服务描述符的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="validateScopes"><c>true</c> 执行检查，验证范围内服务永远不会从根提供程序解析；否则为 <c>false</c>。
+    </param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.ValidateTrimmingAnnotations(System.Type,System.Type[],System.Type,System.Type[])"><summary>
+            验证两个泛型类型定义在其泛型参数上具有兼容的剪裁注释。
+            </summary><remarks>
+            当在DI中使用开放式泛型类型时，如果具体实现类型在泛型参数类型上具有[DynamicallyAccessedMembers]属性，但接口/服务类型没有匹配的注释，则会出现错误。问题是剪裁器看不到需要保留在传递给泛型参数的类型上的成员。但是，当接口/服务类型也具有注释时，剪裁器将看到需要在封闭泛型参数类型上保留哪些成员。
+            </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceIdentifier,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain,System.Reflection.ParameterInfo[],System.Boolean)"><returns>如果 <b>throwIfCallSiteNotFound</b> 为 true，则不为 <b>null</b>。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.VerifyOpenGenericAotCompatibility(System.Type,System.Type[])"><summary>
+            验证所有泛型类型参数都不是值类型。
+            </summary><remarks>
+            NativeAOT 应用程序不能保证已为值类型的封闭泛型生成本机代码。为了尽早捕获这些问题，此验证在开发时启用，以尽早通知开发人员该场景在AOT后将无法工作。
+            </remarks></member><member name="P:Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey.ServiceIdentifier"><summary>
+            被缓存的服务类型
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey.Slot"><summary>
+            当在<c>IEnumerable&lt;Type&gt;</c>中解析服务时的反向索引，默认实例获得插槽 0。
+            例如服务集合：
+             IService Impl1
+             IService Impl2
+             IService Impl3
+            我们将得到以下缓存键：
+             Impl1 2
+             Impl2 1
+             Impl3 0
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey.Equals(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)"><summary>指示当前实例是否等于同一类型的另一个实例。</summary><param name="other">要与此实例进行比较的一个实例。</param><returns>如果当前实例等于其他实例，则为 true；否则为 false。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite"><summary>
+            ServiceCallSite 的摘要说明
+            </summary></member><member name="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"><summary>
+            默认的IServiceProvider。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(System.Type)"><summary>
+    获取指定类型的服务对象。
+    </summary><param name="serviceType">要获取的服务的类型。</param><returns>所产生的服务。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.GetKeyedService(System.Type,System.Object)"><summary>
+            获取指定类型和指定键的服务对象。
+            </summary><param name="serviceType">要获取的服务的类型。</param><param name="serviceKey">要获取的服务的键。</param><returns>键控服务。</returns><exception cref="T:System.InvalidOperationException">该 <see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" /> 值用于 <paramref name="serviceKey" />，
+            当 <paramref name="serviceType" /> 不是基于 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 的可枚举类型时。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.GetRequiredKeyedService(System.Type,System.Object)"><summary>
+            获取指定类型的服务对象。
+            </summary><param name="serviceType">要获取的服务的类型。</param><param name="serviceKey">要获取的服务的键。</param><returns>键控服务。</returns><exception cref="T:System.InvalidOperationException">未找到该服务，或者当 <paramref name="serviceType" /> 不是基于 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 的可枚举类型时，<see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" /> 值被用于 <paramref name="serviceKey" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.Dispose"><inheritdoc /></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.DisposeAsync"><inheritdoc /></member><member name="T:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions"><summary>
+            用于配置默认<see cref="T:System.IServiceProvider" />实现的各种行为的选项。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateScopes"><summary>
+            获取或设置一个值，该值指示是否执行验证以确保作用域服务永远不会从根提供程序解析。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild"><summary>
+            获取或设置一个值，该值指示在调用 <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)" /> 时是否执行验证以确保所有服务都可以被创建。
+            </summary><remarks>
+            不验证开放式泛型服务。
+            </remarks></member><member name="M:Microsoft.Extensions.Internal.TypeNameHelper.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)"><summary>
+    美化打印类型名称。
+    </summary><param name="type">类型 <see cref="T:System.Type" />。</param><param name="fullName"><c>true</c> 表示打印完全限定名称。</param><param name="includeGenericParameterNames"><c>true</c> 表示包含泛型参数名称。</param><param name="includeGenericParameters"><c>true</c> 表示包含泛型参数。</param><param name="nestedTypeDelimiter">在嵌套类型名称中用作分隔符的字符。</param><returns>经过美化打印的类型名称。</returns></member><member name="P:System.SR.AmbiguousConstructorException"><summary>无法激活类型 '{0}'。以下构造函数不明确：</summary></member><member name="P:System.SR.CannotResolveService"><summary>在尝试激活“{1}”时无法解析类型“{0}”的服务。</summary></member><member name="P:System.SR.CircularDependencyException"><summary>检测到类型为 '{0}' 的服务存在循环依赖。</summary></member><member name="P:System.SR.UnableToActivateTypeException"><summary>无法使用服务容器中的服务和默认值实例化类型“{0}”的任何构造函数。</summary></member><member name="P:System.SR.OpenGenericServiceRequiresOpenGenericImplementation"><summary>开放式泛型服务类型“{0}”需要注册一个开放式泛型实现类型。</summary></member><member name="P:System.SR.ArityOfOpenGenericServiceNotEqualArityOfOpenGenericImplementation"><summary>开放式泛型服务类型'{0}'的元数不等于开放式泛型实现类型'{1}'的元数。</summary></member><member name="P:System.SR.TypeCannotBeActivated"><summary>无法为服务类型“{1}”实例化实现类型“{0}”。</summary></member><member name="P:System.SR.NoConstructorMatch"><summary>无法找到类型'{0}'的合适构造函数。请确保该类型为具体类型并且已为公共构造函数的各个参数注册了服务。</summary></member><member name="P:System.SR.ScopedInSingletonException"><summary>无法从 {3} '{1}' 使用 {2} 服务 '{0}'。</summary></member><member name="P:System.SR.ScopedResolvedFromRootException"><summary>无法从根提供程序解析'{0}'，因为它需要{2}服务'{1}'。</summary></member><member name="P:System.SR.DirectScopedResolvedFromRootException"><summary>无法从根提供程序解析 {1} 服务 '{0}'。</summary></member><member name="P:System.SR.ConstantCantBeConvertedToServiceType"><summary>类型为'{0}'的常量值无法转换为服务类型'{1}'</summary></member><member name="P:System.SR.ImplementationTypeCantBeConvertedToServiceType"><summary>实现类型 '{0}' 无法转换为服务类型 '{1}'</summary></member><member name="P:System.SR.AsyncDisposableServiceDispose"><summary>'{0}' 类型仅实现 IAsyncDisposable。请使用 DisposeAsync 释放容器。</summary></member><member name="P:System.SR.GetCaptureDisposableNotSupported"><summary>GetCaptureDisposable 调用仅支持主作用域</summary></member><member name="P:System.SR.InvalidServiceDescriptor"><summary>无效的服务描述符</summary></member><member name="P:System.SR.ServiceDescriptorNotExist"><summary>请求的服务描述符不存在。</summary></member><member name="P:System.SR.CallSiteTypeNotSupported"><summary>调用站点类型 {0} 不受支持</summary></member><member name="P:System.SR.TrimmingAnnotationsDoNotMatch"><summary>泛型实现类型 '{0}' 有一个应用于泛型参数类型的 DynamicallyAccessedMembers 属性，但服务类型 '{1}' 在其泛型参数类型上没有匹配的 DynamicallyAccessedMembers 属性。</summary></member><member name="P:System.SR.TrimmingAnnotationsDoNotMatch_NewConstraint"><summary>泛型实现类型 '{0}' 具有默认构造函数约束（'new()' 约束），但泛型服务类型 '{1}' 没有。</summary></member><member name="P:System.SR.AotCannotCreateEnumerableValueType"><summary>无法创建类型为“{0}”的可枚举服务，因为它是值类型。支持创建可枚举服务的本机代码在本机AOT中可能不可用。</summary></member><member name="P:System.SR.AotCannotCreateGenericValueType"><summary>无法为类型'{0}'创建泛型服务，因为'{1}'是值类型。使用本机AOT时，可能没有可用于支持创建泛型服务的本机代码。</summary></member><member name="P:System.SR.NoServiceRegistered"><summary>尚未注册类型“{0}”的服务。</summary></member><member name="P:System.SR.InvalidServiceKeyType"><summary>用于查找的键的类型与构造函数参数中具有ServiceKey属性的类型不匹配。</summary></member><member name="P:System.SR.KeyedServiceAnyKeyUsedToResolveService"><summary>KeyedService.AnyKey 无法用于解析单个服务。</summary></member><member name="P:System.SR.NoKeyedServiceRegistered"><summary>尚未注册类型 '{0}' 使用键类型 '{1}' 的键控服务。</summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)"><summary>
+            创建一个 <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />，其中包含来自提供的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 的服务，并可选地启用作用域验证。
+            </summary><param name="services">包含服务描述符的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="options">
+            配置各种服务提供程序行为。
+            </param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider" />。</returns></member></members>
+</doc>

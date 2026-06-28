@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Logging.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord"><summary>
+            表示一个缓冲日志记录，它将被批量写入<see cref="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger" />。
+            </summary><remarks>
+            此类型的实例可以被池化并重复使用。<see cref="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger" /> 的实现不得在其 <see cref="M:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger.LogRecords(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord})" /> 方法的调用之外保留传递给该方法的 <see cref="T:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord" /> 实例。
+            </remarks></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.Timestamp"><summary>
+            获取日志记录首次创建的时间。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.LogLevel"><summary>
+            获取记录的日志严重性级别。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.EventId"><summary>
+            获取记录的事件ID。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.Exception"><summary>
+            获取此记录的异常字符串。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.ActivitySpanId"><summary>
+            获取此记录的活动跨度 ID，表示创建该记录的线程的状态。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.ActivityTraceId"><summary>
+            获取此记录的活动跟踪ID，表示创建此记录的线程的状态。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.ManagedThreadId"><summary>
+            获取创建日志记录的线程的 ID。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.FormattedMessage"><summary>
+            获取格式化的日志消息。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.MessageTemplate"><summary>
+            获取原始日志消息模板。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.Attributes"><summary>
+            获取与此记录关联的变量名称/值对集合。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger"><summary>
+             表示日志提供程序支持缓冲日志记录的能力。
+             </summary><remarks>
+             日志提供程序实现 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 接口，当需要记录某段状态时，日志基础结构会调用该接口。
+
+             日志提供程序还可以选择性地实现 <see cref="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger" /> 接口。
+             日志基础结构可以对 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 对象进行类型测试，以确定它是否支持 <see cref="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger" /> 接口。如果支持，则向日志基础结构表明该日志提供程序支持缓冲。每当启用日志缓冲时，缓冲的日志记录可能会通过
+             <see cref="M:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger.LogRecords(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord})" /> 批量传递给日志提供程序。
+
+             如果日志提供程序不支持日志缓冲，则始终会收到非缓冲的日志记录。如果日志提供程序确实支持日志缓冲，则使用其 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 还是 <see cref="T:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger" /> 实现由日志生成器决定。
+             </remarks></member><member name="M:Microsoft.Extensions.Logging.Abstractions.IBufferedLogger.LogRecords(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord})"><summary>
+            将一批缓冲的日志记录传递给日志提供程序。
+            </summary><param name="records">要记录的缓冲日志记录。</param><remarks>
+            一旦此函数返回，实现就不应再访问这些记录或这些记录引用的状态，因为实例可能会被重用表示其他日志。
+            </remarks></member><member name="T:Microsoft.Extensions.Logging.Abstractions.LogEntry`1"><summary>
+            包含单个日志条目的信息。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.#ctor(Microsoft.Extensions.Logging.LogLevel,System.String,Microsoft.Extensions.Logging.EventId,`0,System.Exception,System.Func{`0,System.Exception,System.String})"><summary>
+            初始化 LogEntry 结构的实例。
+            </summary><param name="logLevel">日志级别。</param><param name="category">日志的类别名称。</param><param name="eventId">日志事件 ID。</param><param name="state">正在写入日志的状态。</param><param name="exception">日志异常。</param><param name="formatter">格式化程序。</param></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.LogLevel"><summary>
+            获取日志级别。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.Category"><summary>
+            获取日志类别。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.EventId"><summary>
+    获取日志事件 ID。
+    </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.State"><summary>
+            获取状态。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.Exception"><summary>
+            获取日志异常。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.LogEntry`1.Formatter"><summary>
+    获取格式化程序。
+    </summary></member><member name="T:Microsoft.Extensions.Logging.Abstractions.NullLogger"><summary>
+            不执行任何操作的最小化日志记录器。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.NullLogger.Instance"><summary>
+            返回 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger" /> 的共享实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger.BeginScope``1(``0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory"><summary>
+            一个 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 用于创建不记录任何日志的 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger" /> 实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.#ctor"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory" /> 实例。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.Instance"><summary>
+            返回 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory" />的共享实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.CreateLogger(System.String)"><inheritdoc /><remarks>
+            这将返回一个<see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger" />实例，该实例不记录任何内容。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)"><inheritdoc /><remarks>
+            此方法忽略参数且不执行任何操作。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.Dispose"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.Abstractions.NullLoggerProvider"><summary><see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger" /> 的提供程序。
+    </summary></member><member name="P:Microsoft.Extensions.Logging.Abstractions.NullLoggerProvider.Instance"><summary>
+            返回 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLoggerProvider" /> 的一个实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerProvider.CreateLogger(System.String)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLoggerProvider.Dispose"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.Abstractions.NullLogger`1"><summary>
+            不执行任何操作的最小化记录器。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.Abstractions.NullLogger`1.Instance"><summary>
+    返回 <see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger`1" /> 的一个实例。
+    </summary><returns><see cref="T:Microsoft.Extensions.Logging.Abstractions.NullLogger`1" /> 的一个实例。
+    </returns></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger`1.BeginScope``1(``0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger`1.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})"><inheritdoc /><remarks>
+            此方法忽略参数且不执行任何操作。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.Abstractions.NullLogger`1.IsEnabled(Microsoft.Extensions.Logging.LogLevel)"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.EventId"><summary>
+            标识一个日志事件。主要标识符是"Id"属性，"Name"属性提供此类事件的简短描述。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.EventId.op_Implicit(System.Int32)~Microsoft.Extensions.Logging.EventId"><summary>
+            从给定的 <see cref="T:System.Int32" /> 隐式创建 EventId。
+            </summary><param name="i">要转换为 EventId 的 <see cref="T:System.Int32" />。</param></member><member name="M:Microsoft.Extensions.Logging.EventId.op_Equality(Microsoft.Extensions.Logging.EventId,Microsoft.Extensions.Logging.EventId)"><summary>
+            检查两个指定的<see cref="T:Microsoft.Extensions.Logging.EventId" />实例是否具有相同的值。如果它们具有相同的ID，则它们相等。
+            </summary><param name="left">第一个<see cref="T:Microsoft.Extensions.Logging.EventId" />。</param><param name="right">第二个<see cref="T:Microsoft.Extensions.Logging.EventId" />。</param><returns>如果对象相等，则为<see langword="true" />。</returns></member><member name="M:Microsoft.Extensions.Logging.EventId.op_Inequality(Microsoft.Extensions.Logging.EventId,Microsoft.Extensions.Logging.EventId)"><summary>
+    检查两个指定的 <see cref="T:Microsoft.Extensions.Logging.EventId" /> 实例是否具有不同的值。
+    </summary><param name="left">第一个 <see cref="T:Microsoft.Extensions.Logging.EventId" />。</param><param name="right">第二个 <see cref="T:Microsoft.Extensions.Logging.EventId" />。</param><returns>如果对象不相等，则为 <see langword="true" />。</returns></member><member name="M:Microsoft.Extensions.Logging.EventId.#ctor(System.Int32,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.EventId" /> 结构的一个实例。
+            </summary><param name="id">此事件的数字标识符。</param><param name="name">此事件的名称。</param></member><member name="P:Microsoft.Extensions.Logging.EventId.Id"><summary>
+            获取此事件的数字标识符。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.EventId.Name"><summary>
+            获取此事件的名称。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.EventId.ToString"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.EventId.Equals(Microsoft.Extensions.Logging.EventId)"><summary>
+            比较当前实例与同一类型的另一个对象。如果两个事件的ID相同，则它们相等。
+            </summary><param name="other">要与此对象进行比较的对象。</param><returns><see langword="true" /> 如果当前对象等于 <paramref name="other" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Logging.EventId.Equals(System.Object)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.EventId.GetHashCode"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.FormattedLogValues"><summary>
+            启用 <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object)" /> 支持的格式化选项的 LogValues。
+            这也允许在格式字符串中使用 {NamedFormatItem}。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.IExternalScopeProvider"><summary>
+            表示公共范围数据的存储。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.IExternalScopeProvider.ForEachScope``1(System.Action{System.Object,``0},``0)"><summary>
+            按创建顺序对每个当前活动的作用域对象执行回调。
+            所有回调都保证从此方法内联调用。
+            </summary><param name="callback">要对每个作用域对象执行的回调。</param><param name="state">要传递到回调中的状态对象。</param><typeparam name="TState">要接受的状态类型。</typeparam></member><member name="M:Microsoft.Extensions.Logging.IExternalScopeProvider.Push(System.Object)"><summary>
+            将作用域对象添加到列表中。
+            </summary><param name="state">作用域对象。</param><returns>在释放时移除作用域的 <see cref="T:System.IDisposable" /> 令牌。</returns></member><member name="T:Microsoft.Extensions.Logging.ILogger"><summary>
+            表示用于执行日志记录的类型。
+            </summary><remarks>将大多数日志记录模式聚合到单个方法中。</remarks></member><member name="M:Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)"><summary>
+            检查给定的 <paramref name="logLevel" /> 是否已启用。
+            </summary><param name="logLevel">要检查的级别。</param><returns>如果已启用，则为 <see langword="true" />。</returns></member><member name="M:Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)"><summary>
+            开始一个逻辑操作作用域。
+            </summary><param name="state">作用域的标识符。</param><typeparam name="TState">要开始作用域的状态的类型。</typeparam><returns>一个 <see cref="T:System.IDisposable" />，在释放时结束逻辑操作作用域。</returns></member><member name="T:Microsoft.Extensions.Logging.ILoggerFactory"><summary>
+    表示一种用于配置日志记录系统并从注册的<see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />创建<see cref="T:Microsoft.Extensions.Logging.ILogger" />实例的类型。
+    </summary></member><member name="M:Microsoft.Extensions.Logging.ILoggerFactory.CreateLogger(System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。
+            </summary><param name="categoryName">日志记录器生成的消息的类别名称。</param><returns>该 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</returns></member><member name="M:Microsoft.Extensions.Logging.ILoggerFactory.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)"><summary>
+            将一个<see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />添加到日志系统。
+            </summary><param name="provider">该<see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />。</param></member><member name="T:Microsoft.Extensions.Logging.ILoggerProvider"><summary>
+            表示一种可以创建 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例的类型。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.ILoggerProvider.CreateLogger(System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。
+            </summary><param name="categoryName">记录器生成的消息的类别名称。</param><returns>创建的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。</returns></member><member name="T:Microsoft.Extensions.Logging.ILogger`1"><summary>
+            一个通用日志记录接口，其中类别名称派生自指定的
+            <typeparamref name="TCategoryName" /> 类型名称。
+            通常用于通过依赖注入启用命名 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 的激活。
+            </summary><typeparam name="TCategoryName">其名称用于记录器类别名称的类型。</typeparam></member><member name="T:Microsoft.Extensions.Logging.ILoggingBuilder"><summary>
+    用于配置日志记录提供程序的接口。
+    </summary></member><member name="P:Microsoft.Extensions.Logging.ILoggingBuilder.Services"><summary>
+            获取配置日志记录服务的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.ISupportExternalScope"><summary>
+            表示一个能够使用外部范围信息的 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.ISupportExternalScope.SetScopeProvider(Microsoft.Extensions.Logging.IExternalScopeProvider)"><summary>
+            为记录器提供程序设置外部范围信息源。
+            </summary><param name="scopeProvider">范围数据的提供程序。</param></member><member name="T:Microsoft.Extensions.Logging.LogDefineOptions"><summary>
+            用于 <see cref="M:Microsoft.Extensions.Logging.LoggerMessage.Define(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)" /> 及其重载的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LogDefineOptions.SkipEnabledCheck"><summary>
+    获取或设置是否跳过对日志记录方法进行 IsEnabled 检查的标志。
+    </summary></member><member name="T:Microsoft.Extensions.Logging.LoggerExtensions"><summary>
+            ILogger 针对常见场景的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+            格式化并写入调试日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件ID。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个包含零个或多个要格式化的对象的对象数组。</param><example><code language="csharp">
+            logger.LogDebug(0, exception, "Error while processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+    格式化并写入调试日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+        logger.LogDebug(0, "Processing request from {Address}", address)
+        </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入调试日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的消息模板格式的格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+    logger.LogDebug(exception, "Error while processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+    格式化并写入调试日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">日志消息的格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+    logger.LogDebug("Processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>格式化并写入跟踪日志消息。</summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件ID。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">包含零个或多个要格式化对象的对象数组。</param><example><code language="csharp">
+logger.LogTrace(0, exception, "Error while processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+            格式化和写入跟踪日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="message">日志消息的格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含要格式化的零个或多个对象。</param><example><code language="csharp">
+            logger.LogTrace(0, "Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+            格式化并写入一条跟踪日志消息。
+            </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含要格式化的零个或多个对象。</param><example><code language="csharp">
+            logger.LogTrace(exception, "Error while processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+        格式化并写入跟踪日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">消息模板格式的日志消息格式字符串。例如：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">包含零个或多个要进行格式化的对象的对象数组。</param><example><code language="csharp">
+logger.LogTrace("Processing request from {Address}", address)
+        </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入一条信息性日志消息。
+    </summary><param name="logger">要写入到的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。示例： <c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，其中包含要格式化的零个或多个对象。</param><example><code language="csharp">
+    logger.LogInformation(0, exception, "Error while processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+    格式化并写入一条信息性日志消息。
+    </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="message">日志消息的格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+    logger.LogInformation(0, "Processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+            格式化并写入一条信息日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="exception">要记录的异常。</param><param name="message">日志消息格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个包含零个或多个要格式化对象的对象数组。</param><example><code language="csharp">
+            logger.LogInformation(exception, "Error while processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+    格式化并写入信息日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">消息模板格式的日志消息的格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+    logger.LogInformation("Processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+            格式化并写入一条警告日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件ID。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+            logger.LogWarning(0, exception, "Error while processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+            格式化并写入警告日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件ID。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含要格式化的零个或多个对象。</param><example><code language="csharp">
+            logger.LogWarning(0, "Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入一条警告日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。例如：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+        logger.LogWarning(exception, "Error while processing request from {Address}", address)
+        </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+            格式化并写入一条警告日志消息。
+            </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+            logger.LogWarning("Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入错误日志消息。
+    </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的消息模板格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">包含零个或多个要格式化的对象的对象数组。</param><example><code language="csharp">
+    logger.LogError(0, exception, "Error while processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+    格式化并写入错误日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="message">消息模板格式的日志消息格式字符串。示例：<c>"用户 {User} 从 {Address} 登录"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+    logger.LogError(0, "正在处理来自 {Address} 的请求", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入一条错误日志消息。
+    </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="exception">要记录的异常。</param><param name="message">消息模板格式的日志消息格式字符串。示例： <c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+        logger.LogError(exception, "Error while processing request from {Address}", address)
+        </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+            格式化并写入错误日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">日志消息的格式字符串，采用消息模板格式。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+            logger.LogError("Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+            格式化并写入关键日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件ID。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的格式字符串，使用消息模板格式。例如：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><example><code language="csharp">
+            logger.LogCritical(0, exception, "Error while processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+            格式化并写入严重日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="eventId">与日志关联的事件 ID。</param><param name="message">采用消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">包含零个或多个要格式化对象的对象数组。</param><example><code language="csharp">
+            logger.LogCritical(0, "Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Object[])"><summary>
+    格式化并写入关键日志消息
+    </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /></param><param name="exception">要记录的异常</param><param name="message">采用消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c></param><param name="args">一个对象数组，包含零个或多个要格式化的对象</param><example><code language="csharp">
+    logger.LogCritical(exception, "Error while processing request from {Address}", address)
+    </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+            格式化并写入一条严重日志消息。
+            </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="message">采用消息模板格式的日志消息格式字符串。例如：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个包含零个或多个要格式化对象的对象数组。</param><example><code language="csharp">
+            logger.LogCritical("Processing request from {Address}", address)
+            </code></example></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])"><summary>
+            编译并写入指定日志级别的日志消息。
+            </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="logLevel">将在此级别写入条目。</param><param name="message">日志消息的格式字符串。</param><param name="args">包含零个或多个要格式化的对象的对象数组。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,System.Object[])"><summary>
+            在指定的日志级别格式化并写入日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="logLevel">条目将在此级别写入。</param><param name="eventId">与日志关联的事件ID。</param><param name="message">日志消息的格式字符串。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String,System.Object[])"><summary>
+            在指定的日志级别格式化并写入一条日志消息。
+            </summary><param name="logger">要写入的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="logLevel">条目将在此级别写入。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的格式字符串。</param><param name="args">包含零个或多个要格式化对象的对象数组。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])"><summary>
+            在指定的日志级别格式化并写入日志消息。
+            </summary><param name="logger">要写入的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="logLevel">将在此级别写入条目。</param><param name="eventId">与日志关联的事件 ID。</param><param name="exception">要记录的异常。</param><param name="message">日志消息的格式字符串。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerExtensions.BeginScope(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])"><summary>
+            格式化消息并创建作用域。
+            </summary><param name="logger">要在其中创建作用域的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="messageFormat">消息模板格式的日志消息格式字符串。示例：<c>"User {User} logged in from {Address}"</c>。</param><param name="args">一个对象数组，包含零个或多个要格式化的对象。</param><returns>一个可释放的作用域对象。可以为 null。</returns><example><code language="csharp">
+            using(logger.BeginScope("Processing request from {Address}", address)) { }
+            </code></example></member><member name="T:Microsoft.Extensions.Logging.LoggerExternalScopeProvider"><summary><see cref="T:Microsoft.Extensions.Logging.IExternalScopeProvider" /> 的默认实现。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerExternalScopeProvider.#ctor"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.LoggerExternalScopeProvider" />。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerExternalScopeProvider.ForEachScope``1(System.Action{System.Object,``0},``0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.LoggerExternalScopeProvider.Push(System.Object)"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.LoggerFactoryExtensions"><summary>
+            ILoggerFactory 扩展方法，用于常见场景。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerFactoryExtensions.CreateLogger``1(Microsoft.Extensions.Logging.ILoggerFactory)"><summary>
+            使用给定类型的完全限定名创建一个新的<see cref="T:Microsoft.Extensions.Logging.ILogger" />实例。
+            </summary><param name="factory">工厂。</param><typeparam name="T">类型。</typeparam><returns>已创建的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerFactoryExtensions.CreateLogger(Microsoft.Extensions.Logging.ILoggerFactory,System.Type)"><summary>
+            使用给定的 <paramref name="type" /> 的完整名称创建一个新的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。
+            </summary><param name="factory">工厂。</param><param name="type">类型。</param><returns>所创建的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</returns></member><member name="T:Microsoft.Extensions.Logging.LoggerMessage"><summary>
+            创建可以稍后缓存以高效记录日志消息的委托。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope(System.String)"><summary>
+            创建一个可被调用的委托，用于创建日志作用域。
+            </summary><param name="formatString">命名的格式字符串。</param><returns>一个委托，当调用时，创建一个日志作用域。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``1(System.String)"><summary>
+            创建一个可以调用的委托，用于创建日志作用域。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><param name="formatString">命名格式字符串。</param><returns>一个委托，在调用时创建日志作用域。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``2(System.String)"><summary>
+            创建一个可用于创建日志范围的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><param name="formatString">命名的格式字符串。</param><returns>一个委托，当调用时，创建一个日志范围。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``3(System.String)"><summary>
+            创建一个可以被调用来创建日志范围的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><param name="formatString">命名格式字符串。</param><returns>一个委托，当被调用时，创建一个日志范围。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``4(System.String)"><summary>
+            创建一个可调用来创建日志作用域的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><param name="formatString">命名格式字符串。</param><returns>一个委托，当调用时创建日志作用域。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``5(System.String)"><summary>
+            创建一个可调用以创建日志作用域的委托。
+            </summary><typeparam name="T1">传递到命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递到命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递到命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递到命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递到命名格式字符串的第五个参数的类型。</typeparam><param name="formatString">命名格式字符串。</param><returns>一个委托，当调用时，会创建一个日志作用域。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.DefineScope``6(System.String)"><summary>
+    创建一个委托，该委托可以被调用来创建日志范围。
+    </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递给命名格式字符串的第五个参数的类型。</typeparam><typeparam name="T6">传递给命名格式字符串的第六个参数的类型。</typeparam><param name="formatString">命名格式字符串。</param><returns>一个委托，当调用它时，会创建一个日志范围。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+            创建一个可用于记录消息的委托。
+            </summary><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件ID。</param><param name="formatString">命名格式字符串。</param><returns>一个委托，当被调用时，创建一条日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+            创建一个可用于记录日志消息的委托。
+            </summary><param name="logLevel">此 <see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名的格式字符串。</param><param name="options">此 <see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，在调用时创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+            创建一个可被调用的委托，用于记录日志消息。
+            </summary><typeparam name="T1">传递给命名格式化字符串的第一个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式化字符串。</param><returns>一个委托，当被调用时创建一个日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+            创建一个可用于记录消息的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，在调用时创建一个日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``2(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+            创建一个可用于记录日志消息的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><param name="logLevel">日志级别 <see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><returns>一个委托，在调用时创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``2(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+    创建一个可以调用以记录消息的委托。
+    </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，在调用时创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``3(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+    创建一个可用于记录消息的委托。
+    </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><returns>一个委托，调用时创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``3(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+            创建一个可用于记录消息的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，调用时会创建一条日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``4(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+        创建一个可调用以记录消息的委托。
+    </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><param name="logLevel">日志级别（<see cref="T:Microsoft.Extensions.Logging.LogLevel" />）。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><returns>一个委托，调用时将创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``4(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+            创建一个委托，可用于记录日志消息。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，当被调用时，创建一条日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``5(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+            创建一个可用于记录日志消息的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递给命名格式字符串的第五个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><returns>一个在调用时创建日志消息的委托。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``5(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+            创建一个可用于记录消息的委托。
+            </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递给命名格式字符串的第五个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名的格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，在调用时创建日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``6(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String)"><summary>
+    创建一个可用于记录日志消息的委托。
+    </summary><typeparam name="T1">传递给命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递给命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递给命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递给命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递给命名格式字符串的第五个参数的类型。</typeparam><typeparam name="T6">传递给命名格式字符串的第六个参数的类型。</typeparam><param name="logLevel">日志级别<see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件ID。</param><param name="formatString">命名格式字符串。</param><returns>一个委托，当调用时会创建一条日志消息。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggerMessage.Define``6(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,Microsoft.Extensions.Logging.LogDefineOptions)"><summary>
+        创建一个可用于记录日志消息的委托。
+    </summary><typeparam name="T1">传递到命名格式字符串的第一个参数的类型。</typeparam><typeparam name="T2">传递到命名格式字符串的第二个参数的类型。</typeparam><typeparam name="T3">传递到命名格式字符串的第三个参数的类型。</typeparam><typeparam name="T4">传递到命名格式字符串的第四个参数的类型。</typeparam><typeparam name="T5">传递到命名格式字符串的第五个参数的类型。</typeparam><typeparam name="T6">传递到命名格式字符串的第六个参数的类型。</typeparam><param name="logLevel"><see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><param name="eventId">事件 ID。</param><param name="formatString">命名格式字符串。</param><param name="options"><see cref="T:Microsoft.Extensions.Logging.LogDefineOptions" />。</param><returns>一个委托，在调用时会创建日志消息。</returns></member><member name="T:Microsoft.Extensions.Logging.LoggerMessageAttribute"><summary>
+            提供信息以指导生成强类型的日志记录方法。
+            </summary><remarks><para>此特性应用于的方法：</para><para>   - 必须是分部方法。</para><para>   - 必须返回 <c>void</c>。</para><para>   - 不得是泛型。</para><para>   - 必须将一个 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 作为其参数之一。</para><para>   - 必须将一个 <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> 作为其参数之一。</para><para>   - 所有参数都不能是泛型。</para></remarks><example><format type="text/markdown"><![CDATA[
+            ```csharp
+            static partial class Log
+            {
+                [LoggerMessage(EventId = 0, Message = "无法为 {hostName} 打开套接字")]
+                static partial void CouldNotOpenSocket(ILogger logger, LogLevel level, string hostName);
+            }
+            ```
+            ]]></format></example></member><member name="M:Microsoft.Extensions.Logging.LoggerMessageAttribute.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageAttribute" /> 类的新实例，用于指导强类型日志记录方法的生成。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggerMessageAttribute.#ctor(System.Int32,Microsoft.Extensions.Logging.LogLevel,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageAttribute" /> 类的新实例，该类用于指导强类型日志记录方法的生成。
+            </summary><param name="eventId">日志事件 ID。</param><param name="level">日志级别。</param><param name="message">日志消息的格式字符串。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerMessageAttribute.#ctor(Microsoft.Extensions.Logging.LogLevel,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageAttribute" /> 类的新实例，该类用于指导强类型日志记录方法的生成。
+            </summary><param name="level">日志级别。</param><param name="message">日志消息的格式字符串。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerMessageAttribute.#ctor(Microsoft.Extensions.Logging.LogLevel)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageAttribute" /> 类的新实例，该实例用于指导生成强类型日志记录方法。
+            </summary><param name="level">日志级别。</param></member><member name="M:Microsoft.Extensions.Logging.LoggerMessageAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageAttribute" /> 类的新实例，
+            该类用于指导生成强类型日志记录方法。
+            </summary><param name="message">日志消息的格式字符串。</param></member><member name="P:Microsoft.Extensions.Logging.LoggerMessageAttribute.EventId"><summary>
+            获取或设置日志记录方法的日志事件 ID。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LoggerMessageAttribute.EventName"><summary>
+            获取或设置日志记录方法的日志事件名称。
+            </summary><remarks>
+            如果未指定，则此值将等于方法名称。
+            </remarks></member><member name="P:Microsoft.Extensions.Logging.LoggerMessageAttribute.Level"><summary>
+            获取或设置日志记录方法的日志级别。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LoggerMessageAttribute.Message"><summary>
+            获取或设置日志记录方法的消息文本。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LoggerMessageAttribute.SkipEnabledCheck"><summary>
+            获取或设置用于跳过日志记录方法的 IsEnabled 检查的标志。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.Logger`1"><summary>
+            委托给一个新的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例，该实例使用给定类型的完整名称，由提供的 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 创建。
+            </summary><typeparam name="T">类型。</typeparam></member><member name="M:Microsoft.Extensions.Logging.Logger`1.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.Logger`1" />。
+            </summary><param name="factory">工厂。</param></member><member name="M:Microsoft.Extensions.Logging.Logger`1.Microsoft#Extensions#Logging#ILogger#BeginScope``1(``0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Logger`1.Microsoft#Extensions#Logging#ILogger#IsEnabled(Microsoft.Extensions.Logging.LogLevel)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.Logger`1.Microsoft#Extensions#Logging#ILogger#Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.LogLevel"><summary>
+            定义日志记录严重性级别。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Trace"><summary>
+            包含最详细消息的日志。这些消息可能包含敏感的应用程序数据。
+            默认情况下禁用这些消息，并且不应在生产环境中启用。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Debug"><summary>
+            用于开发过程中交互式调查的日志。这些日志主要应包含对调试有用的信息，并且没有长期价值。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Information"><summary>
+            跟踪应用程序一般流程的日志。这些日志应具有长期价值。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Warning"><summary>记录应用程序流中的异常或意外事件，但不会导致应用程序执行停止。</summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Error"><summary>
+            记录当前执行流因失败而停止时突出显示的日志。这些日志应指示当前活动中的失败，
+            而非整个应用程序的失败。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.Critical"><summary>
+            日志，描述不可恢复的应用程序或系统崩溃，或需要立即关注的灾难性故障。
+            </summary></member><member name="F:Microsoft.Extensions.Logging.LogLevel.None"><summary>
+            不用于写入日志消息。指定日志类别不应写入任何消息。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.LogValuesFormatter"><summary>
+    将类似 {NamedformatItem} 的命名格式项转换为 <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object)" /> 格式的格式化程序。
+    </summary></member><member name="T:Microsoft.Extensions.Logging.ProviderAliasAttribute"><summary>
+            为 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> 实现定义一个别名，用于过滤规则。
+            </summary><remarks><para>默认情况下，筛选规则使用日志记录提供程序类型的 <see cref="P:System.Reflection.Assembly.FullName" /> 作为配置节名称来定义。</para><para><see cref="T:Microsoft.Extensions.Logging.ProviderAliasAttribute" /> 提供了指定第二个、额外的、更简洁且用户友好的配置节名称来指定筛选规则。</para><para>在指定了 <see cref="T:Microsoft.Extensions.Logging.ProviderAliasAttribute" /> 的提供程序上，日志记录提供程序类型的 <see cref="P:System.Reflection.Assembly.FullName" /> 仍可用作配置节名称，且其配置节筛选规则优先于为该别名指定的筛选规则。
+            </para></remarks></member><member name="M:Microsoft.Extensions.Logging.ProviderAliasAttribute.#ctor(System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.ProviderAliasAttribute" /> 实例。
+            </summary><param name="alias">要设置的别名。</param></member><member name="P:Microsoft.Extensions.Logging.ProviderAliasAttribute.Alias"><summary>
+            获取提供程序的别名。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.NullExternalScopeProvider"><summary>
+    不执行任何操作的范围提供程序。
+    </summary></member><member name="P:Microsoft.Extensions.Logging.NullExternalScopeProvider.Instance"><summary>
+            返回 <see cref="T:Microsoft.Extensions.Logging.NullExternalScopeProvider" />的缓存实例。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.NullExternalScopeProvider.Microsoft#Extensions#Logging#IExternalScopeProvider#ForEachScope``1(System.Action{System.Object,``0},``0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Logging.NullExternalScopeProvider.Microsoft#Extensions#Logging#IExternalScopeProvider#Push(System.Object)"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.NullScope"><summary>
+            一个没有任何逻辑的空范围
+            </summary></member><member name="M:Microsoft.Extensions.Logging.NullScope.Dispose"><inheritdoc /></member><member name="M:Microsoft.Extensions.Internal.TypeNameHelper.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)"><summary>
+            以美观方式输出类型名称。
+            </summary><param name="type">类型 <see cref="T:System.Type" />。</param><param name="fullName">如果为 <c>true</c>，则输出完全限定名称。</param><param name="includeGenericParameterNames">如果为 <c>true</c>，则包含泛型参数名称。</param><param name="includeGenericParameters">如果为 <c>true</c>，则包含泛型参数。</param><param name="nestedTypeDelimiter">作为嵌套类型名称中分隔符的字符。</param><returns>经过美观输出的类型名称。</returns></member><member name="M:System.Text.ValueStringBuilder.GetPinnableReference"><summary>
+        获取构建器的可固定引用。
+        不确保在<see cref="P:System.Text.ValueStringBuilder.Length" />之后有空字符。
+        此重载在C# 7.3+编译器中进行模式匹配，因此您可以省略显式方法调用，例如写"fixed (char* c = builder)"。
+    </summary></member><member name="M:System.Text.ValueStringBuilder.GetPinnableReference(System.Boolean)"><summary>
+            获取指向生成器的可固定引用。
+            </summary><param name="terminate">确保生成器在<see cref="P:System.Text.ValueStringBuilder.Length" />之后有一个空字符</param></member><member name="P:System.Text.ValueStringBuilder.RawChars"><summary>返回构建器的底层存储。</summary></member><member name="M:System.Text.ValueStringBuilder.AsSpan(System.Boolean)"><summary>
+            返回生成器内容的一个跨度。
+            </summary><param name="terminate">确保生成器在<see cref="P:System.Text.ValueStringBuilder.Length" />之后有一个空字符。</param></member><member name="M:System.Text.ValueStringBuilder.Grow(System.Int32)"><summary>
+        调整内部缓冲区的大小，要么将当前缓冲区大小加倍，要么将<paramref name="additionalCapacityBeyondPos" />添加到<see cref="F:System.Text.ValueStringBuilder._pos" />中，以较大者为准。
+    </summary><param name="additionalCapacityBeyondPos">
+        请求的超出当前位置的字符数。
+    </param></member><member name="P:System.SR.UnexpectedNumberOfNamedParameters"><summary>格式字符串'{0}'没有期望数量的命名参数。期望{1}个参数，但发现了{2}个参数。</summary></member><member name="M:Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})"><summary>
+    写入日志条目。
+    </summary><param name="logLevel">将在此级别写入条目。</param><param name="eventId">事件的ID。</param><param name="state">要写入的条目。也可以是对象。</param><param name="exception">与此条目相关的异常。</param><param name="formatter">根据 <paramref name="state" /> 和 <paramref name="exception" /> 创建 <see cref="T:System.String" /> 消息的函数。</param><typeparam name="TState">要写入的对象的类型。</typeparam></member></members>
+</doc>

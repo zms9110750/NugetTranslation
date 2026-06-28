@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>HtmlAgilityPack</name>
+    </assembly>
+    <members><member name="T:HtmlAgilityPack.Crc32"><summary>
+            一个用于计算 CRC32 的实用工具类。
+            </summary></member><member name="M:HtmlAgilityPack.Crc32.CRC32Bytes(System.Byte[])"><summary>
+            计算给定字节数组的校验和。
+            </summary><param name="bytes">要为其计算校验和的字节数组。</param><returns>计算出的校验和。</returns></member><member name="M:HtmlAgilityPack.Crc32.CRC32String(System.String)"><summary>
+            为给定的字符串计算校验和。
+            </summary><param name="text">要为其计算校验和的字符串。</param><returns>计算得到的校验和。</returns></member><member name="T:HtmlAgilityPack.HtmlAttribute"><summary>
+            表示一个HTML属性。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.Line"><summary>
+            获取该属性在文档中的行号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.LinePosition"><summary>
+            获取此属性在文档中的列号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.ValueStartIndex"><summary>
+        获取此属性的值在文档中的流位置，相对于文档的开头。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.ValueLength"><summary>
+            获取值的长度。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.UseOriginalName"><summary>获取或设置一个值，指示属性是否应使用原始名称。</summary><value>如果属性应使用原始名称，则为true；否则为false。</value></member><member name="P:HtmlAgilityPack.HtmlAttribute.Name"><summary>
+            获取属性的限定名称。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.OriginalName"><summary>
+            原始大小写的属性名称
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.OwnerDocument"><summary>
+            获取此属性所属的HTML文档。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.OwnerNode"><summary>
+            获取此属性所属的HTML节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.QuoteType"><summary>
+        指定数据应包装在什么类型的引号中
+    </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.InternalQuoteType"><summary>
+            指定数据应被包装在哪种引号内（内部用于保持向后兼容性）
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.StreamPosition"><summary>
+            获取此属性在文档中的流位置，相对于文档开头。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.Value"><summary>
+    获取或设置属性的值。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.DeEntitizeValue"><summary>
+            获取属性的反实体化值。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttribute.XPath"><summary>
+            获取指向此属性的有效XPath字符串
+            </summary></member><member name="M:HtmlAgilityPack.HtmlAttribute.CompareTo(System.Object)"><summary>
+            将当前实例与另一个属性进行比较。比较基于属性的名称。
+            </summary><param name="obj">要与此实例进行比较的属性。</param><returns>一个32位有符号整数，指示名称比较的相对顺序。</returns></member><member name="M:HtmlAgilityPack.HtmlAttribute.Clone"><summary>
+            创建此属性的副本。
+            </summary><returns>克隆的属性。</returns></member><member name="M:HtmlAgilityPack.HtmlAttribute.Remove"><summary>
+            从父集合中移除此属性
+            </summary></member><member name="T:HtmlAgilityPack.AttributeValueQuote"><summary>
+            表示用于包围属性值的不同引号类型的枚举
+            </summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.SingleQuote"><summary>
+            单引号标记 '
+            </summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.DoubleQuote"><summary>
+            双引号标记 "
+            </summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.None"><summary>
+            无引号标记
+            </summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.WithoutValue"><summary>没有值，例如'&lt;span readonly&gt;'</summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.Initial"><summary>
+            初始值（当前值）
+            </summary></member><member name="F:HtmlAgilityPack.AttributeValueQuote.InitialExceptWithoutValue"><summary>
+            初始值（当前值）。但是无值的标签默认将具有双引号。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlAttributeCollection"><summary>
+            表示HTML节点的组合列表和集合。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttributeCollection.Count"><summary>
+            获取列表中实际包含的元素数量。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttributeCollection.IsReadOnly"><summary>
+            获取集合的只读状态
+            </summary></member><member name="P:HtmlAgilityPack.HtmlAttributeCollection.Item(System.Int32)"><summary>
+    获取指定索引处的属性。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlAttributeCollection.Item(System.String)"><summary>
+            通过名称从列表中获取给定的属性。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Add(System.String,System.String)"><summary>
+            向集合中添加具有给定值的新属性
+            </summary><param name="name"></param><param name="value"></param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Add(HtmlAgilityPack.HtmlAttribute)"><summary>
+            将提供的项添加到集合中
+            </summary><param name="item"></param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.AddRange(System.Collections.Generic.IEnumerable{HtmlAgilityPack.HtmlAttribute})"><summary>将一系列提供的项添加到集合中。</summary><param name="items">一个IEnumerable&lt;HtmlAttribute&gt;，包含要追加到此集合的项。</param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.AddRange(System.Collections.Generic.Dictionary{System.String,System.String})"><summary>使用字典将一系列提供的项添加到集合中。</summary><param name="items">要追加到此集合的项的 Dictionary&lt;string,string&gt;</param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.System#Collections#Generic#ICollection{HtmlAgilityPack#HtmlAttribute}#Clear"><summary>
+            显式清除
+            </summary></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Contains(HtmlAgilityPack.HtmlAttribute)"><summary>
+            检索是否存在所提供的项
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.CopyTo(HtmlAgilityPack.HtmlAttribute[],System.Int32)"><summary>
+            将集合复制到数组
+            </summary><param name="array"></param><param name="arrayIndex"></param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.System#Collections#Generic#IEnumerable{HtmlAgilityPack#HtmlAttribute}#GetEnumerator"><summary>
+    获取显式枚举器
+    </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.System#Collections#IEnumerable#GetEnumerator"><summary>
+            显式非泛型枚举器
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.IndexOf(HtmlAgilityPack.HtmlAttribute)"><summary>
+            检索提供的项的索引，如果未找到则返回-1
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Insert(System.Int32,HtmlAgilityPack.HtmlAttribute)"><summary>
+            将给定项插入集合的指定索引处
+            </summary><param name="index"></param><param name="item"></param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.System#Collections#Generic#ICollection{HtmlAgilityPack#HtmlAttribute}#Remove(HtmlAgilityPack.HtmlAttribute)"><summary>
+            显式集合移除
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.RemoveAt(System.Int32)"><summary>
+            移除指定索引处的属性。
+            </summary><param name="index">要移除的属性的索引。</param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Append(HtmlAgilityPack.HtmlAttribute)"><summary>
+            将指定的属性插入为集合中的最后一个属性。
+            </summary><param name="newAttribute">要插入的属性。不能为 null。</param><returns>追加的属性。</returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Append(System.String)"><summary>
+    创建并插入一个新属性，作为集合中的最后一个属性。
+    </summary><param name="name">要插入的属性的名称。</param><returns>追加的属性。</returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Append(System.String,System.String)"><summary>
+            创建并插入一个新属性作为集合中的最后一个属性。
+            </summary><param name="name">要插入的属性的名称。</param><param name="value">要插入的属性的值。</param><returns>追加的属性。</returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Contains(System.String)"><summary>
+            检查具有给定名称的属性是否存在。
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Prepend(HtmlAgilityPack.HtmlAttribute)"><summary>
+    将指定的属性插入为集合中的第一个节点。
+    </summary><param name="newAttribute">要插入的属性。不能为null。</param><returns>已前置的属性。</returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Remove(HtmlAgilityPack.HtmlAttribute)"><summary>
+            从列表中移除指定的属性。
+            </summary><param name="attribute">要移除的属性。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Remove(System.String)"><summary>
+            根据名称从列表中移除一个属性。如果存在多个同名的属性，它们都将被移除。
+            </summary><param name="name">属性的名称。不能为 null。</param></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.RemoveAll"><summary>
+            移除列表中的所有属性。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.AttributesWithName(System.String)"><summary>
+            返回具有指定名称的所有属性。处理大小写不敏感性。
+            </summary><param name="attributeName">属性名称</param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Remove"><summary>
+            从集合中移除所有属性
+            </summary></member><member name="M:HtmlAgilityPack.HtmlAttributeCollection.Clear"><summary>
+            清除属性集合
+            </summary></member><member name="T:HtmlAgilityPack.HtmlCommentNode"><summary>
+            表示一个HTML注释。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlCommentNode.Comment"><summary>
+            获取或设置节点的注释文本。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlCommentNode.InnerHtml"><summary>
+            获取或设置对象开始标签和结束标签之间的HTML。如果是文本节点，则等同于OuterHtml。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlCommentNode.OuterHtml"><summary>
+            获取或设置HTML中的对象及其内容。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlDocument"><summary>
+            表示一个完整的HTML文档。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.DisableBehaviorTagP"><summary>True 表示禁用，false 表示启用行为标签 p。</summary></member><member name="P:HtmlAgilityPack.HtmlDocument.DefaultBuilder"><summary>HtmlDocument 构造函数中使用的默认生成器</summary></member><member name="P:HtmlAgilityPack.HtmlDocument.ParseExecuting"><summary>在解析执行之前执行的操作</summary></member><member name="F:HtmlAgilityPack.HtmlDocument._maxDepthLevel"><summary>
+            定义我们将深入HTML文档的最大级别
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.Text"><summary>HtmlDocument 文本。如果你修改它，请小心。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.BackwardCompatibility"><summary>为true则保持与HAP先前版本的向后兼容性。此选项不能保证100%的兼容性。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionAddDebuggingAttributes"><summary>
+            向节点添加调试属性。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionAutoCloseOnEnd"><summary>
+            定义是否必须在文档末尾或直接在文档中关闭未关闭的节点。
+            将此设置为true实际上可以改变浏览器呈现页面的方式。默认值为false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionCheckSyntax"><summary>
+            定义是否在解析结束时检查未封闭的节点。默认值为 true。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionComputeChecksum"><summary>
+            定义是否在解析文档时必须计算校验和。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionEmptyCollection"><summary>
+            定义当没有节点匹配XPath表达式时，SelectNodes方法返回null还是空集合。将此设置为true将返回空集合，false将返回null。默认为false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionTreatCDataBlockAsComment"><summary>如果整个&lt;![CDATA[块应被视为单个注释，则为true。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.DisableServerSideCode"><summary>为 true 时禁用，为 false 时启用服务器端代码。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionDefaultStreamEncoding"><summary>
+    定义要使用的默认流编码。默认值是System.Text.Encoding.Default。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionXmlForceOriginalComment"><summary>
+            强制获取原始注释而不是创建它
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionExtractErrorSourceText"><summary>
+            定义在解析错误时是否必须提取源文本。
+            如果文档有很多错误或级联错误，设置为true可能会显著影响解析性能。
+            默认值为false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionExtractErrorSourceTextMaxLength"><summary>
+    定义源文本或解析错误的最大长度。默认值为100。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionFixNestedTags"><summary>
+            定义当检测到嵌套错误时，是否必须部分修复 LI、TR、TH、TD 标签。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionOutputAsXml"><summary>
+            定义输出是否必须符合XML而不是HTML。默认值为false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.DisableImplicitEnd"><summary>设置为 true 可禁用隐式结束。将改用显式结束逻辑。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionPreserveXmlNamespaces"><summary>
+        如果与<see cref="F:HtmlAgilityPack.HtmlDocument.OptionOutputAsXml" />一起使用并启用，则元素名称中的XML命名空间会被保留。默认值为false。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionOutputOptimizeAttributeValues"><summary>
+    定义是否必须优化属性值输出（如果可能，不使用双引号括起来）。默认值为 false。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.GlobalAttributeValueQuote"><summary>定义全局属性值引号。指定后，它将始终优先。</summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionOutputOriginalCase"><summary>
+            定义名称是否必须以原始大小写输出。对于asp.net标签和属性很有用。默认值为false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionOutputUpperCase"><summary>
+    定义名称是否必须以大写输出。默认值为 false。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionReadEncoding"><summary>
+            定义是否必须从文档中读取声明的编码。
+            声明的编码是通过 meta http-equiv="content-type" content="text/html;charset=XXXXX" HTML 节点确定的。
+            默认为 true。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionStopperNodeName"><summary>
+            定义节点的名称，当该节点作为结束节点被发现时将引发StopperNodeException。默认值为null。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionDefaultUseOriginalName"><summary>
+            定义默认情况下属性是否应使用原始名称而不是小写名称。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionUseIdAttribute"><summary>
+            定义是否必须专门使用'id'属性。默认值为true。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionWriteEmptyNodes"><summary>
+            定义在输出时是否必须将空节点写为闭合节点。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionWriteEmptyNodesWithoutSpace"><summary>
+            定义空节点是否必须写入时不带额外空格。默认值为 false。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionMaxNestedChildNodes"><summary>
+            最大嵌套子节点数。
+添加此选项以防止当页面有成千上万个没有关闭标签的打开HTML标签时出现堆栈溢出问题。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlDocument.OptionEnableBreakLineForInnerText"><summary>
+            允许为诸如"br"之类的标签创建"新行"
+            </summary></member><member name="M:HtmlAgilityPack.HtmlDocument.#ctor"><summary>
+            创建 HTML 文档的实例。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.ParsedText"><summary>获取已解析的文本。</summary><value>已解析的文本。</value></member><member name="P:HtmlAgilityPack.HtmlDocument.MaxDepthLevel"><summary>
+            定义我们将深入HTML文档的最大级别。如果超过此深度级别，则会抛出异常。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.CheckSum"><summary>
+  如果解析前将OptionComputeChecksum设置为true，则获取文档的CRC32校验和，否则为0。
+  </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.DeclaredEncoding"><summary>
+    获取文档的声明编码。
+    声明编码是通过使用 meta http-equiv="content-type" content="text/html;charset=XXXXX" html节点（pre-HTML5）或 meta charset="XXXXX" html节点（HTML5）确定的。
+  </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.DocumentNode"><summary>
+            获取文档的根节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.Encoding"><summary>
+    获取文档的输出编码。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.ParseErrors"><summary>
+            获取文档中发现的解析错误列表。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.Remainder"><summary>
+            获取剩余的文本。
+            如果OptionStopperNodeName为null，则始终为null。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.RemainderOffset"><summary>
+            获取Remainder在原始Html文本中的偏移量。
+            如果OptionStopperNodeName为null，则返回原始Html文本的长度。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlDocument.StreamEncoding"><summary>
+            获取文档的流编码。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlDocument.GetXmlName(System.String)"><summary>
+            获取一个有效的XML名称。
+            </summary><param name="name">任意文本。</param><returns>一个有效的XML名称字符串。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.HtmlEncode(System.String)"><summary>
+            对指定的字符串应用HTML编码。
+            </summary><param name="html">要编码的输入字符串。不能为null。</param><returns>编码后的字符串。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.IsWhiteSpace(System.Int32)"><summary>
+            确定指定的字符是否被视为空白字符。
+            </summary><param name="c">要检查的字符。</param><returns>如果指定的字符被视为空白字符，则为true。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateAttribute(System.String)"><summary>
+            使用指定的名称创建一个HTML属性。
+            </summary><param name="name">属性的名称。不能为空。</param><returns>新的HTML属性。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateAttribute(System.String,System.String)"><summary>
+            使用指定的名称创建 HTML 属性。
+            </summary><param name="name">属性的名称。不能为 null。</param><param name="value">属性的值。</param><returns>新的 HTML 属性。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateComment"><summary>
+            创建一个 HTML 注释节点。
+            </summary><returns>新的 HTML 注释节点。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateComment(System.String)"><summary>
+    使用指定的注释文本创建 HTML 注释节点。
+    </summary><param name="comment">注释文本。不能为 null。</param><returns>新的 HTML 注释节点。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateElement(System.String)"><summary>
+            使用指定名称创建一个HTML元素节点。
+            </summary><param name="name">元素的限定名称。不能为null。</param><returns>新的HTML节点。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateTextNode"><summary>
+            创建一个HTML文本节点。
+            </summary><returns>新的HTML文本节点。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateTextNode(System.String)"><summary>
+            创建一个包含指定文本的HTML文本节点。
+            </summary><param name="text">节点的文本。不能为null。</param><returns>新的HTML文本节点。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncoding(System.IO.Stream)"><summary>
+            检测HTML流的编码。
+            </summary><param name="stream">输入流。不能为 null。</param><returns>检测到的编码。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncoding(System.IO.Stream,System.Boolean)"><summary>
+            检测HTML流的编码。
+            </summary><param name="stream">输入流。不能为null。</param><param name="checkHtml">检查HTML。</param><returns>检测到的编码。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncoding(System.IO.TextReader)"><summary>
+            检测通过 TextReader 提供的 HTML 文本的编码。
+            </summary><param name="reader">用于提供 HTML 的 TextReader。不能为 null。</param><returns>检测到的编码。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncodingHtml(System.String)"><summary>
+            检测HTML文本的编码。
+            </summary><param name="html">输入的HTML文本。不能为null。</param><returns>检测到的编码。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.GetElementbyId(System.String)"><summary>
+            获取具有指定 'id' 属性值的 HTML 节点。
+            </summary><param name="id">要匹配的属性 id。不能为 null。</param><returns>具有匹配 id 的 HTML 节点，如果未找到则为 null。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.Stream)"><summary>
+            从流中加载 HTML 文档。
+            </summary><param name="stream">输入流。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.Stream,System.Boolean)"><summary>
+    从流中加载HTML文档。
+    </summary><param name="stream">输入流。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.Stream,System.Text.Encoding)"><summary>
+    从流中加载HTML文档。
+    </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.Stream,System.Text.Encoding,System.Boolean)"><summary>
+            从流中加载HTML文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流的开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32)"><summary>
+            从流加载HTML文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.IO.TextReader)"><summary>
+            从指定的 TextReader 加载 HTML 文档。
+            </summary><param name="reader">用于将 HTML 数据输入文档的 TextReader。不得为 null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.LoadHtml(System.String)"><summary>
+            从指定的字符串加载 HTML 文档。
+            </summary><param name="html">包含要加载的 HTML 文档的字符串。不能为 null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.IO.Stream)"><summary>
+            将HTML文档保存到指定的流。
+            </summary><param name="outStream">您要保存到的流。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.IO.Stream,System.Text.Encoding)"><summary>
+            将HTML文档保存到指定的流。
+            </summary><param name="outStream">要保存到的流。不能为null。</param><param name="encoding">要使用的字符编码。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.IO.StreamWriter)"><summary>
+            将HTML文档保存到指定的StreamWriter。
+            </summary><param name="writer">您要保存到的StreamWriter。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.IO.TextWriter)"><summary>
+            将HTML文档保存到指定的TextWriter。
+            </summary><param name="writer">要保存到的TextWriter。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.Xml.XmlWriter)"><summary>
+            将HTML文档保存到指定的XmlWriter。
+            </summary><param name="writer">要保存到的XmlWriter。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncodingAndLoad(System.String)"><summary>
+            首先检测文件中的HTML文档编码，然后加载该文件。
+            </summary><param name="path">要读取的完整文件路径。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncodingAndLoad(System.String,System.Boolean)"><summary>
+            首先从文件中检测HTML文档的编码，然后加载文件。
+            </summary><param name="path">要读取的完整文件路径。不能为null。</param><param name="detectEncoding">true 表示检测编码，否则为 false。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.DetectEncoding(System.String)"><summary>
+            检测HTML文件的编码。
+            </summary><param name="path">包含要检测的HTML文档的文件路径。不能为null。</param><returns>检测到的编码。</returns></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.String)"><summary>
+            从文件加载HTML文档。
+            </summary><param name="path">要读取的完整文件路径。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.String,System.Boolean)"><summary>
+            从文件加载HTML文档。
+            </summary><param name="path">要读取的完整文件路径。不能为null。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.String,System.Text.Encoding)"><summary>
+    从文件加载HTML文档。
+    </summary><param name="path">要读取的完整文件路径。不能为null。</param><param name="encoding">要使用的字符编码。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.String,System.Text.Encoding,System.Boolean)"><summary>
+            从文件加载HTML文档。
+            </summary><param name="path">要读取的完整文件路径。不能为null。</param><param name="encoding">要使用的字符编码。不能为null。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Load(System.String,System.Text.Encoding,System.Boolean,System.Int32)"><summary>
+            从文件加载HTML文档。
+            </summary><param name="path">要读取的完整文件路径。不能为null。</param><param name="encoding">要使用的字符编码。不能为null。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.String)"><summary>
+            将混合文档保存到指定文件。
+            </summary><param name="filename">您要保存文档的文件位置。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.Save(System.String,System.Text.Encoding)"><summary>
+            将混合文档保存到指定文件。
+            </summary><param name="filename">要保存文档的文件位置。不能为null。</param><param name="encoding">要使用的字符编码。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlDocument.CreateNavigator"><summary>
+            创建一个用于导航此 HTML 文档的新 XPathNavigator 对象。
+            </summary><returns>一个 XPathNavigator 对象。该 XPathNavigator 位于文档的根节点。</returns></member><member name="T:HtmlAgilityPack.HtmlElementFlag"><summary>
+            描述元素节点行为的标志。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlElementFlag.CData"><summary>
+            该节点是一个CDATA节点。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlElementFlag.Empty"><summary>
+            该节点为空。META 或 IMG 是此类节点的示例。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlElementFlag.Closed"><summary>
+            该节点在解析期间将自动关闭。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlElementFlag.CanOverlap"><summary>
+    节点可以重叠。
+    </summary></member><member name="T:HtmlAgilityPack.HtmlEntity"><summary>
+            一个实用工具类，用于将特殊字符替换为实体，反之亦然。
+            遵循在 http://www.w3.org/TR/html4/sgml/entities.html 找到的 HTML 4.0 规范。
+            遵循在 https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references 找到的附加规范。
+            另请参阅：https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references
+            </summary></member><member name="P:HtmlAgilityPack.HtmlEntity.EntityName"><summary>
+            一个按名称索引的实体集合。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlEntity.EntityValue"><summary>
+            一个按值索引的实体集合。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlEntity.DeEntitize(System.String)"><summary>
+            将已知的实体替换为字符。
+            </summary><param name="text">源文本。</param><returns>结果文本。</returns></member><member name="M:HtmlAgilityPack.HtmlEntity.Entitize(HtmlAgilityPack.HtmlNode)"><summary>
+            克隆并实体化一个HtmlNode。这将影响属性值和节点的文本。它还会实体化所有子节点。
+            </summary><param name="node">要实体化的节点。</param><returns>一个实体化后的克隆节点。</returns></member><member name="M:HtmlAgilityPack.HtmlEntity.Entitize(System.String)"><summary>
+            将127以上的字符替换为实体。
+            </summary><param name="text">源文本。</param><returns>结果文本。</returns></member><member name="M:HtmlAgilityPack.HtmlEntity.Entitize(System.String,System.Boolean)"><summary>
+            将大于127的字符替换为实体。
+            </summary><param name="text">源文本。</param><param name="useNames">如果设置为false，函数将不使用已知的实体名称。默认值为true。</param><returns>结果文本。</returns></member><member name="M:HtmlAgilityPack.HtmlEntity.Entitize(System.String,System.Boolean,System.Boolean)"><summary>
+    替换超过127的字符为实体。
+  </summary><param name="text">源文本。</param><param name="useNames">如果设置为false，函数将不使用已知的实体名称。默认值为true。</param><param name="entitizeQuotAmpAndLtGt">如果设置为true，[引号]、[&amp;]、[小于]和[大于]字符将被实体化。</param><returns>结果文本。</returns></member><member name="T:HtmlAgilityPack.HtmlNode"><summary>
+            表示一个 HTML 节点。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNode.HtmlNodeTypeNameComment"><summary>
+    获取注释节点的名称。它实际上被定义为'#comment'。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlNode.HtmlNodeTypeNameDocument"><summary>
+            获取文档节点的名称。它实际上被定义为 '#document'。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNode.HtmlNodeTypeNameText"><summary>
+            获取文本节点的名称。它实际上被定义为'#text'。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNode.ElementsFlags"><summary>
+            获取一个标志集合，这些标志定义了特定元素节点的特定行为。
+            该表包含一个DictionaryEntry列表，以小写标签名作为键，以HtmlElementFlags的组合作为值。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.#cctor"><summary>
+            初始化HtmlNode。构建具有特殊权限的所有标签的列表。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.#ctor(HtmlAgilityPack.HtmlNodeType,HtmlAgilityPack.HtmlDocument,System.Int32)"><summary>
+            初始化 HtmlNode，提供类型、所属文档以及它在集合中的位置
+            </summary><param name="type"></param><param name="ownerdocument"></param><param name="index"></param></member><member name="P:HtmlAgilityPack.HtmlNode.Attributes"><summary>
+            获取此节点的 HTML 属性集合。不为 null。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.ChildNodes"><summary>
+            获取节点的所有子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.Closed"><summary>
+            获取一个值，指示此节点是否已关闭。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.ClosingAttributes"><summary>
+            获取结束标签的HTML属性集合。不为 null。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.EndNode"><summary>
+            获取节点的结束标签。
+            对于自闭合节点，这将引用一个内部占位符，其行为类似于空结束标签或可能为null。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.FirstChild"><summary>
+            获取节点的第一个子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.HasAttributes"><summary>
+    获取一个值，该值指示当前节点是否具有任何属性。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNode.HasChildNodes"><summary>
+            获取一个值，该值指示此节点是否有任何子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.HasClosingAttributes"><summary>
+            获取一个值，该值指示当前节点是否在结束标记上具有任何属性。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.Id"><summary>
+            获取或设置 'id' HTML 属性的值。文档必须使用将 OptionUseIdAttribute 设置为 true 的方式进行解析。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.InnerHtml"><summary>
+            获取或设置对象开始和结束标签之间的HTML。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.InnerText"><summary>
+            获取对象的开始标签和结束标签之间的文本。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.GetDirectInnerText"><summary>获取直接内部文本。</summary><returns>直接内部文本。</returns></member><member name="P:HtmlAgilityPack.HtmlNode.LastChild"><summary>
+            获取节点的最后一个子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.Line"><summary>
+            获取此节点在文档中的行号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.LinePosition"><summary>
+            获取此节点在文档中的列号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.InnerStartIndex"><summary>
+            获取节点的开始标签和结束标签之间区域相对于文档起始位置的流位置。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.OuterStartIndex"><summary>
+            获取标签开始区域的流位置，相对于文档的开头。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.InnerLength"><summary>
+            获取节点开始标签和结束标签之间区域的长度。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.OuterLength"><summary>
+    获取整个节点的长度，包括开始和结束标签。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNode.OriginalOuterLength"><summary>
+            获取原始外部长度。当前的“OuterLength”属性返回“OuterHtml.Length”，它可能包含不同的值。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.Name"><summary>
+            获取或设置此节点的名称。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.NextSibling"><summary>
+            获取紧随此元素的HTML节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.NodeType"><summary>
+            获取此节点的类型。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.OriginalName"><summary>标签的原始未更改名称</summary></member><member name="P:HtmlAgilityPack.HtmlNode.OuterHtml"><summary>
+    获取或设置 HTML 中的对象及其内容。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNode.OwnerDocument"><summary>
+            获取此节点所属的<see cref="T:HtmlAgilityPack.HtmlDocument" />。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.ParentNode"><summary>
+            获取此节点的父节点（适用于可以有父节点的节点）。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.PreviousSibling"><summary>
+            获取紧接在此节点之前的节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.StreamPosition"><summary>
+            获取此节点在文档中的流位置，相对于文档的开头。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNode.XPath"><summary>
+    获取指向此节点的有效XPath字符串
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNode.Depth"><summary>
+            节点相对于打开的根html元素的深度。此值用于确定文档是否具有太多嵌套的html节点，这可能导致堆栈溢出。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.CanOverlapElement(System.String)"><summary>
+            确定一个元素节点是否可以保持重叠。
+            </summary><param name="name">要检查的元素节点的名称。不能为<c>null</c>。</param><returns>如果该名称是可以保持重叠的元素节点的名称，则为true；否则为<c>false</c>。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.CreateNode(System.String)"><summary>
+            从表示字面 HTML 的字符串创建 HTML 节点。
+            </summary><param name="html">HTML 文本。</param><returns>新创建的节点实例。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.CreateNode(System.String,System.Action{HtmlAgilityPack.HtmlDocument})"><summary>
+            从表示字面HTML的字符串创建HTML节点。
+            </summary><param name="html">HTML文本。</param><param name="htmlDocumentBuilder">HTML文档构建器。</param><returns>新创建的节点实例。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.IsCDataElement(System.String)"><summary>
+            确定元素节点是否为CDATA元素节点。
+            </summary><param name="name">要检查的元素节点的名称。不能为null。</param><returns>如果该名称是CDATA元素节点的名称，则为true；否则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.IsClosedElement(System.String)"><summary>
+            确定元素节点是否已闭合。
+            </summary><param name="name">要检查的元素节点的名称。不能为 null。</param><returns>如果该名称是闭合元素节点的名称，则为 true；否则为 false。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.IsEmptyElement(System.String)"><summary>
+    确定元素节点是否被定义为空。
+    </summary><param name="name">要检查的元素节点的名称。不能为null。</param><returns>如果该名称是空元素节点的名称，则为true；否则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.IsOverlappedClosingElement(System.String)"><summary>
+            确定文本是否对应于可以保持重叠的节点的结束标签。
+            </summary><param name="text">要检查的文本。不能为 null。</param><returns>true 或 false。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.Ancestors"><summary>
+    返回此元素的所有祖先节点的集合。
+    </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Ancestors(System.String)"><summary>
+            获取具有匹配名称的祖先
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.AncestorsAndSelf"><summary>
+            返回此元素的所有祖先节点的集合。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.AncestorsAndSelf(System.String)"><summary>
+            获取所有祖先节点和当前节点
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.AppendChild(HtmlAgilityPack.HtmlNode)"><summary>
+            将指定的节点添加到此节点的子节点列表的末尾。
+            </summary><param name="newChild">要添加的节点。不能为 null。</param><returns>添加的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SetChildNodesId(HtmlAgilityPack.HtmlNode)"><summary>设置子节点标识符。</summary><param name="chilNode">子节点。</param></member><member name="M:HtmlAgilityPack.HtmlNode.AppendChildren(HtmlAgilityPack.HtmlNodeCollection)"><summary>
+            将指定的节点添加到此节点的子节点列表的末尾。
+            </summary><param name="newChildren">要添加的节点列表。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlNode.ChildAttributes(System.String)"><summary>
+            获取所有具有指定名称的属性
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Clone"><summary>
+            创建节点的副本
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.CloneNode(System.String)"><summary>
+    创建节点的副本并同时更改其名称。
+    </summary><param name="newName">克隆节点的新名称。不能为<c>null</c>。</param><returns>克隆的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.CloneNode(System.String,System.Boolean)"><summary>
+            创建节点的副本并同时更改其名称。
+            </summary><param name="newName">克隆节点的新名称。不能为 null。</param><param name="deep">true 表示递归克隆指定节点下的子树；false 表示仅克隆节点本身。</param><returns>克隆的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.CloneNode(System.Boolean)"><summary>
+            创建节点的副本。
+            </summary><param name="deep">如果为 true，则递归克隆指定节点下的子树；如果为 false，则仅克隆节点本身。</param><returns>克隆的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.CopyFrom(HtmlAgilityPack.HtmlNode)"><summary>
+            创建节点及其子树的副本。
+            </summary><param name="node">要复制的节点。不能为<c>null</c>。</param></member><member name="M:HtmlAgilityPack.HtmlNode.CopyFrom(HtmlAgilityPack.HtmlNode,System.Boolean)"><summary>
+    创建节点的副本。
+    </summary><param name="node">要复制的节点。不能为<c>null</c>。</param><param name="deep">如果为true，则递归克隆指定节点下的子树；如果为false，则仅克隆节点本身。</param></member><member name="M:HtmlAgilityPack.HtmlNode.DescendantNodes(System.Int32)"><summary>
+            获取此节点及其每个子节点的所有后代节点
+            </summary><param name="level">要在html树中解析的节点的深度级别</param><returns>以HtmlNode形式返回当前元素</returns></member><member name="M:HtmlAgilityPack.HtmlNode.DescendantNodesAndSelf"><summary>
+            返回此元素的所有后代节点的集合，按文档顺序。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Descendants"><summary>
+            获取枚举列表中的所有后代节点。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Descendants(System.Int32)"><summary>
+            获取枚举列表中所有后代节点
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Descendants(System.String)"><summary>
+            获取所有具有匹配名称的后代节点
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.DescendantsAndSelf"><summary>
+        返回此元素的所有后代节点的集合，按文档顺序排列。
+    </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.DescendantsAndSelf(System.String)"><summary>
+            获取包括此节点在内的所有后代节点。
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Element(System.String)"><summary>
+            获取匹配名称的第一代子节点
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.Elements(System.String)"><summary>
+            获取与名称匹配的第一代子节点
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetDataAttribute(System.String)"><summary>获取数据属性。</summary><param name="key">键。</param><returns>数据属性。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetDataAttributes"><summary>获取此集合中的数据属性。</summary><returns>
+            一个枚举器，允许使用 foreach 循环处理此集合中的数据属性。
+            </returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributes"><summary>获取此集合中的属性。</summary><returns>
+            一个枚举器，允许使用foreach遍历此集合中的属性。
+            </returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributes(System.String[])"><summary>获取此集合中的属性。</summary><param name="attributeNames">包含属性名称的可变长度参数列表。</param><returns>
+            一个枚举器，允许使用 foreach 来处理此集合中的属性。
+            </returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributeValue(System.String,System.String)"><summary>
+            获取此节点属性的值的辅助方法。如果未找到该属性，将返回默认值。
+            </summary><param name="name">要获取的属性名称。不能为<c>null</c>。</param><param name="def">如果未找到，则返回的默认值。</param><returns>如果找到，返回属性的值；如果未找到，返回默认值。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributeValue(System.String,System.Int32)"><summary>
+    获取此节点属性值的辅助方法。如果未找到该属性，将返回默认值。
+    </summary><param name="name">要获取的属性名称。不能为<c>null</c>。</param><param name="def">如果未找到，则返回的默认值。</param><returns>如果找到则返回属性值，如果未找到则返回默认值。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributeValue(System.String,System.Boolean)"><summary>
+    获取此节点属性值的帮助方法。如果未找到该属性，则返回默认值。
+    </summary><param name="name">要获取的属性的名称。不能为 <c>null</c>。</param><param name="def">如果未找到，则返回的默认值。</param><returns>如果找到，则返回属性的值；如果未找到，则返回默认值。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributeValue``1(System.String,``0)"><summary>
+            获取此节点属性值的辅助方法。如果未找到该属性，
+            则将返回默认值。
+            </summary><param name="name">要获取的属性名称。不能为<c>null</c>.</param><param name="def">如果未找到，则返回的默认值。</param><returns>如果找到，则为属性的值；如果未找到，则为默认值。</returns></member><member name="T:HtmlAgilityPack.HtmlNode.AttributeValueParser`1"><summary>
+    属性值的解析器。
+    </summary><typeparam name="T">将字符串值解析成的类型</typeparam></member><member name="M:HtmlAgilityPack.HtmlNode.GetAttributeValue``1(System.String,``0,HtmlAgilityPack.HtmlNode.AttributeValueParser{``0})"><summary>
+    获取此节点属性作为类型T的值的辅助方法。如果未找到该属性或该属性无法解析为类型T，则将返回默认值。
+    </summary><param name="name">要获取的属性名称。不能为<c>null</c>。</param><param name="def">如果未找到，则返回的默认值。</param><param name="parser">用于将字符串属性值转换为T的解析器。</param><returns>如果找到并可解析，则为属性的值；否则为默认值。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.InsertAfter(HtmlAgilityPack.HtmlNode,HtmlAgilityPack.HtmlNode)"><summary>
+    将指定节点立即插入到指定参考节点之后。
+    </summary><param name="newChild">要插入的节点。不可为<c>null</c>。</param><param name="refChild">作为参考节点的节点。newNode将放置在refNode之后。</param><returns>被插入的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.InsertBefore(HtmlAgilityPack.HtmlNode,HtmlAgilityPack.HtmlNode)"><summary>
+            将指定的节点插入到指定的引用节点之前。
+            </summary><param name="newChild">要插入的节点。不能为 <c>null</c>。</param><param name="refChild">作为引用节点的节点。newChild 将放置在此节点之前。</param><returns>正在插入的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.PrependChild(HtmlAgilityPack.HtmlNode)"><summary>
+            将指定节点添加到该节点的子节点列表的开头。
+            </summary><param name="newChild">要添加的节点。不能为<c>null</c>。</param><returns>已添加的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.PrependChildren(HtmlAgilityPack.HtmlNodeCollection)"><summary>
+    将指定的节点列表添加到此节点的子节点列表的开头。
+    </summary><param name="newChildren">要添加的节点列表。不能为<c>null</c>。</param></member><member name="M:HtmlAgilityPack.HtmlNode.Remove"><summary>
+            从父集合中移除节点
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveAll"><summary>
+            移除当前节点的所有子节点和/或属性。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveAllChildren"><summary>
+            移除当前节点的所有子节点。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveAllIDforNode(HtmlAgilityPack.HtmlNode)"><summary>移除节点的所有ID。</summary><param name="node">节点。</param></member><member name="M:HtmlAgilityPack.HtmlNode.MoveChild(HtmlAgilityPack.HtmlNode)"><summary>移动一个已关联的节点并将其附加到此节点（必须来自不同的文档）。</summary><param name="child">要移动的子节点。</param></member><member name="M:HtmlAgilityPack.HtmlNode.MoveChildren(HtmlAgilityPack.HtmlNodeCollection)"><summary>将已关联的子集合移动并追加到此节点（必须来自不同的文档）。</summary><param name="children">要移动到另一个节点的已关联子集合。</param></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveChildren(HtmlAgilityPack.HtmlNodeCollection)"><summary>移除此节点的子节点集合。</summary><param name="oldChildren">要移除的旧子节点集合。</param></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveChild(HtmlAgilityPack.HtmlNode)"><summary>
+        移除指定的子节点。
+    </summary><param name="oldChild">正在被移除的节点。不能为<c>null</c>。</param><returns>已移除的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveChild(HtmlAgilityPack.HtmlNode,System.Boolean)"><summary>
+            移除指定的子节点。
+            </summary><param name="oldChild">正在移除的节点。不能为<c>null</c>。</param><param name="keepGrandChildren">如果保留节点的孙节点，则为true；否则为false。</param><returns>被移除的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.ReplaceChild(HtmlAgilityPack.HtmlNode,HtmlAgilityPack.HtmlNode)"><summary>
+            将子节点 oldChild 替换为 newChild 节点。
+            </summary><param name="newChild">要放入子列表的新节点。</param><param name="oldChild">正在被替换的节点。</param><returns>被替换的节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SetAttributeValue(System.String,System.String)"><summary>
+            用于设置此节点属性值的辅助方法。如果未找到该属性，将自动创建它。
+            </summary><param name="name">要设置的属性名称。不能为null。</param><param name="value">属性的值。</param><returns>相应的属性实例。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.WriteContentTo(System.IO.TextWriter,System.Int32)"><summary>
+            将所有子节点保存到指定的TextWriter。
+            </summary><param name="outText">要保存到的TextWriter。</param><param name="level">标识当前所在的级别，从根级别0开始。</param></member><member name="M:HtmlAgilityPack.HtmlNode.WriteContentTo"><summary>
+            将节点的所有子节点保存到一个字符串中。
+            </summary><returns>保存的字符串。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.WriteTo(System.IO.TextWriter,System.Int32)"><summary>
+    将当前节点保存到指定的TextWriter。
+  </summary><param name="outText">您要保存到的TextWriter。</param><param name="level">标识我们所在的层级，从根节点0开始。</param></member><member name="M:HtmlAgilityPack.HtmlNode.WriteTo(System.Xml.XmlWriter)"><summary>
+            将当前节点保存到指定的XmlWriter。
+            </summary><param name="writer">要保存到的XmlWriter。</param></member><member name="M:HtmlAgilityPack.HtmlNode.WriteTo"><summary>
+            将当前节点保存为字符串。
+            </summary><returns>保存的字符串。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SetParent(HtmlAgilityPack.HtmlNode)"><summary>
+            设置父Html节点，并使用父节点的深度正确确定当前节点的深度。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.AddClass(System.String)"><summary>
+            向此节点添加一个或多个类。
+            </summary><param name="name">要添加的节点列表。不能为null。</param></member><member name="M:HtmlAgilityPack.HtmlNode.AddClass(System.String,System.Boolean)"><summary>
+            向此节点添加一个或多个类。
+            </summary><param name="name">要添加的节点列表。不得为 null。</param><param name="throwError">如果类名已存在则引发错误，否则为 false。</param></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveClass"><summary>
+            从节点中移除class属性。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveClass(System.Boolean)"><summary>
+            从节点中移除类属性。
+            </summary><param name="throwError">如果类名不存在，则为 true 时引发错误；否则为 false。</param></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveClass(System.String)"><summary>
+    从节点中移除指定的类。
+    </summary><param name="name">正在被移除的类。不得为<c>null</c>。</param></member><member name="M:HtmlAgilityPack.HtmlNode.RemoveClass(System.String,System.Boolean)"><summary>
+            从节点中移除指定的类。
+            </summary><param name="name">被移除的类。不能为<c>null</c>。</param><param name="throwError">如果类名不存在，则为 true 以引发错误；否则为 false。</param></member><member name="M:HtmlAgilityPack.HtmlNode.ReplaceClass(System.String,System.String)"><summary>
+            将类名 oldClass 替换为 newClass 名称。
+            </summary><param name="newClass">新的类名。</param><param name="oldClass">被替换的类。</param></member><member name="M:HtmlAgilityPack.HtmlNode.ReplaceClass(System.String,System.String,System.Boolean)"><summary>
+            用新类名 newClass 替换旧类名 oldClass。
+            </summary><param name="newClass">新的类名。</param><param name="oldClass">被替换的类名。</param><param name="throwError">如果类名不存在则引发错误，则为 true；否则为 false。</param></member><member name="M:HtmlAgilityPack.HtmlNode.GetClasses"><summary>从节点获取CSS类。</summary><returns>
+                从节点获取的CSS类
+            </returns></member><member name="M:HtmlAgilityPack.HtmlNode.HasClass(System.String)"><summary>检查节点类是否具有参数类。</summary><param name="class">此类。</param><returns>如果节点类具有参数类，则为True；否则为False。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.GetEncapsulatedData``1"><summary>
+            填充一个对象并遍历其属性，同时填充它们。
+            </summary><typeparam name="T">要填充的对象类型。它应至少有一个定义了XPath的属性。</typeparam><returns>返回包含封装数据的类型T的对象。</returns><exception cref="T:System.ArgumentException">抛出异常的原因。</exception><exception cref="T:System.ArgumentNullException">抛出异常的原因。</exception><exception cref="T:System.MissingMethodException"><see cref="T:System.MissingMethodException" /></exception><exception cref="T:HtmlAgilityPack.MissingXPathException"><see cref="T:HtmlAgilityPack.MissingXPathException" /></exception><exception cref="T:System.Xml.XPath.XPathException"><see cref="!:XPathExeption" /></exception><exception cref="T:HtmlAgilityPack.NodeNotFoundException"><see cref="T:HtmlAgilityPack.NodeNotFoundException" /></exception><exception cref="T:HtmlAgilityPack.NodeAttributeNotFoundException"><see cref="T:HtmlAgilityPack.NodeAttributeNotFoundException" /></exception><exception cref="T:System.FormatException">抛出异常的原因。</exception><exception cref="T:System.Exception">抛出异常的原因。</exception><exception cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException"><see cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException" /></exception></member><member name="M:HtmlAgilityPack.HtmlNode.GetEncapsulatedData``1(HtmlAgilityPack.HtmlDocument)"><summary>
+            填充一个对象并遍历其属性，也填充它们。
+            </summary><typeparam name="T">要填充的对象类型。它应该至少有一个定义了XPath的属性。</typeparam><param name="htmlDocument">如果htmlDocument包含数据，则将此参数保留为null。否则传递你的特定htmlDocument。</param><returns>返回一个包含封装数据的T类型对象。</returns><exception cref="T:System.ArgumentException">抛出原因。</exception><exception cref="T:System.ArgumentNullException">抛出原因。</exception><exception cref="T:System.MissingMethodException"><see cref="T:System.MissingMethodException" /></exception><exception cref="T:HtmlAgilityPack.MissingXPathException"><see cref="T:HtmlAgilityPack.MissingXPathException" /></exception><exception cref="T:System.Xml.XPath.XPathException"><see cref="!:XPathExeption" /></exception><exception cref="T:HtmlAgilityPack.NodeNotFoundException"><see cref="T:HtmlAgilityPack.NodeNotFoundException" /></exception><exception cref="T:HtmlAgilityPack.NodeAttributeNotFoundException"><see cref="T:HtmlAgilityPack.NodeAttributeNotFoundException" /></exception><exception cref="T:System.FormatException">抛出原因。</exception><exception cref="T:System.Exception">抛出原因。</exception><exception cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException"><see cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException" /></exception></member><member name="M:HtmlAgilityPack.HtmlNode.GetEncapsulatedData(System.Type,HtmlAgilityPack.HtmlDocument)"><summary>
+            填充对象并遍历其属性，同样填充它们。
+            </summary><param name="targetType">要填充的对象类型。它应该至少有一个定义了XPath的属性。</param><param name="htmlDocument">如果htmlDocument包含数据，则将此参数保留为null。否则传入你自己的htmldocument。</param><returns>返回targetType类型的对象，其中包含封装的数据。</returns><exception cref="T:System.ArgumentException">为什么会引发此异常。</exception><exception cref="T:System.ArgumentNullException">为什么会引发此异常。</exception><exception cref="T:System.MissingMethodException"><see cref="T:System.MissingMethodException" /></exception><exception cref="T:HtmlAgilityPack.MissingXPathException"><see cref="T:HtmlAgilityPack.MissingXPathException" /></exception><exception cref="T:System.Xml.XPath.XPathException"><see cref="!:XPathExeption" /></exception><exception cref="T:HtmlAgilityPack.NodeNotFoundException"><see cref="T:HtmlAgilityPack.NodeNotFoundException" /></exception><exception cref="T:HtmlAgilityPack.NodeAttributeNotFoundException"><see cref="T:HtmlAgilityPack.NodeAttributeNotFoundException" /></exception><exception cref="T:System.FormatException">为什么会引发此异常。</exception><exception cref="T:System.Exception">为什么会引发此异常。</exception><exception cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException"><see cref="T:HtmlAgilityPack.InvalidNodeReturnTypeException" /></exception></member><member name="M:HtmlAgilityPack.HtmlNode.CreateNavigator"><summary>
+            创建一个新的 XPathNavigator 对象，用于导航此 HTML 节点。
+            </summary><returns>
+            一个 XPathNavigator 对象。XPathNavigator 位于调用该方法的节点上，而不是文档的根节点上。
+            </returns></member><member name="M:HtmlAgilityPack.HtmlNode.CreateRootNavigator"><summary>
+            使用此文档的根创建一个 XPathNavigator。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNode.SelectNodes(System.String)"><summary>
+            选择与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />表达式匹配的节点列表。
+            </summary><param name="xpath">XPath表达式。</param><returns>一个包含与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />查询匹配的节点集合的<see cref="T:HtmlAgilityPack.HtmlNodeCollection" />，如果没有节点匹配XPath表达式，则为<c>null</c>。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SelectNodes(System.Xml.XPath.XPathExpression)"><summary>
+            选择与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />表达式匹配的节点列表。
+            </summary><param name="xpath">XPath 表达式。</param><returns>包含与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />查询匹配的节点集合的<see cref="T:HtmlAgilityPack.HtmlNodeCollection" />，如果没有节点匹配XPath表达式，则为<c>null</c>。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SelectSingleNode(System.String)"><summary>
+            选择与 <see cref="P:HtmlAgilityPack.HtmlNode.XPath" /> 表达式匹配的第一个 XmlNode。
+            </summary><param name="xpath">XPath 表达式。不能为 null。</param><returns>第一个与 XPath 查询匹配的 <see cref="T:HtmlAgilityPack.HtmlNode" />，如果未找到匹配节点，则为 null 引用。</returns></member><member name="M:HtmlAgilityPack.HtmlNode.SelectSingleNode(System.Xml.XPath.XPathExpression)"><summary>
+            选择与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />表达式匹配的第一个XmlNode。
+            </summary><param name="xpath">XPath表达式。</param><returns>一个包含与<see cref="P:HtmlAgilityPack.HtmlNode.XPath" />查询匹配的节点集合的<see cref="T:HtmlAgilityPack.HtmlNodeCollection" />，如果没有节点与XPath表达式匹配，则为<c>null</c>。</returns></member><member name="T:HtmlAgilityPack.Tools"><summary>
+            包含GetEncapsulatedData方法所使用的工具。
+            </summary></member><member name="M:HtmlAgilityPack.Tools.IsDefinedAttribute(System.Type,System.Type)"><summary>
+            判断一个类型是否定义了一个特性，同时支持 .NetStandard 和 .NetFramework2.0
+            </summary><param name="type">要测试的类型。</param><param name="attributeType">类型必须具有或不具有的特性。</param><returns>如果为 true，则 type 参数定义了 attributeType 参数。</returns></member><member name="M:HtmlAgilityPack.Tools.GetPropertiesDefinedXPath(System.Type)"><summary>
+            检索定义了<see cref="T:HtmlAgilityPack.XPathAttribute" />的类型的属性。
+            </summary><param name="type">您想要查找其XPath定义属性的类型。</param><returns>一个类型的属性信息的IEnumerable，该类型定义了特定属性。</returns></member><member name="M:HtmlAgilityPack.Tools.IsIEnumerable(System.Reflection.PropertyInfo)"><summary>
+            判断某个 <see cref="T:System.Reflection.PropertyInfo" /> 是否实现了 <see cref="T:System.Collections.IEnumerable" />，但 <see cref="T:System.String" /> 被视为非 IEnumerable！
+            </summary><param name="propertyInfo">要测试的属性信息。</param><returns>如果属性信息为 IEnumerable，则返回 True。</returns></member><member name="M:HtmlAgilityPack.Tools.GetGenericTypes(System.Reflection.PropertyInfo)"><summary>
+    返回 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 或 <see cref="T:System.Collections.Generic.List`1" /> 的 T 类型（第一个泛型类型）。
+    </summary><param name="propertyInfo">实现了 IEnumerable 接口的属性</param><returns>泛型类型的列表。</returns></member><member name="M:HtmlAgilityPack.Tools.GetMethodByItsName(System.Type,System.String)"><summary>
+            查找并返回类中定义的方法，通过其名称。
+            </summary><param name="type">包含所请求方法的类的类型。</param><param name="methodName">所请求方法的名称（字符串）。</param><returns>所请求方法的方法信息。</returns></member><member name="M:HtmlAgilityPack.Tools.CreateIListOfType(System.Type)"><summary>
+    创建给定类型的 <see cref="T:System.Collections.IList" />。
+    </summary><param name="type">您要为其创建列表的类型。</param><returns>返回给定类型的 IList。</returns></member><member name="M:HtmlAgilityPack.Tools.GetNodeValueBasedOnXPathReturnType``1(HtmlAgilityPack.HtmlNode,HtmlAgilityPack.XPathAttribute)"><summary>
+            返回您想要的<see cref="T:HtmlAgilityPack.HtmlNode" />值的一部分作为 。
+            </summary><param name="htmlNode">一个htmlNode实例。</param><param name="xPathAttribute">包含ReturnType的属性。</param><returns>从HtmlNode中选择的字符串作为结果。</returns></member><member name="M:HtmlAgilityPack.Tools.GetNodesValuesBasedOnXPathReturnType(HtmlAgilityPack.HtmlNodeCollection,HtmlAgilityPack.XPathAttribute,System.Type)"><summary>
+            返回您想要的<see cref="T:HtmlAgilityPack.HtmlNode" />的值的一部分，作为<see cref="T:System.Collections.Generic.IList`1" />。
+            </summary><param name="htmlNodeCollection">您想要检索每个<see cref="T:HtmlAgilityPack.HtmlNode" />值的<see cref="T:HtmlAgilityPack.HtmlNodeCollection" />。</param><param name="xPathAttribute">一个包含<see cref="T:HtmlAgilityPack.ReturnType" />的<see cref="T:HtmlAgilityPack.XPathAttribute" />实例。</param><param name="listGenericType">您想要的IList泛型的类型。</param><returns></returns></member><member name="T:HtmlAgilityPack.Tools.HAPFunc`2"><summary>
+    模拟用于 Lambda 表达式的 Func 方法。
+    </summary><typeparam name="T"></typeparam><typeparam name="TResult"></typeparam><param name="arg"></param><returns></returns></member><member name="M:HtmlAgilityPack.Tools.HAPWhere``1(System.Collections.Generic.IEnumerable{``0},HtmlAgilityPack.Tools.HAPFunc{``0,System.Boolean})"><summary>
+            此方法的工作方式类似于LINQ中的Where方法。
+            </summary><typeparam name="TSource"></typeparam><param name="source"></param><param name="predicate"></param><returns></returns></member><member name="M:HtmlAgilityPack.Tools.IsInstantiable(System.Type)"><summary>检查类型是否可以被实例化。</summary><param name="type"></param><returns></returns></member><member name="M:HtmlAgilityPack.Tools.CountOfIEnumerable``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+        返回存储在 IEnumerable&lt;T&gt; 中的元素数量
+    </summary><typeparam name="T"></typeparam><param name="source"></param><returns></returns></member><member name="M:HtmlAgilityPack.Tools.GetHtmlForEncapsulation(HtmlAgilityPack.HtmlNode,HtmlAgilityPack.ReturnType)"><summary>
+            根据 <see cref="T:HtmlAgilityPack.ReturnType" /> 返回 <see cref="T:HtmlAgilityPack.HtmlNode" /> 的Html部分
+            </summary><param name="node">一个HtmlNode实例</param><param name="returnType"><see cref="T:HtmlAgilityPack.ReturnType" /></param><returns>Html部分</returns><exception cref="T:System.IndexOutOfRangeException">超出 <see cref="T:HtmlAgilityPack.ReturnType" /> 的范围</exception></member><member name="T:HtmlAgilityPack.ReturnType"><summary>
+            指定请求 <see cref="T:HtmlAgilityPack.HtmlNode" /> 的哪个部分。
+            </summary></member><member name="F:HtmlAgilityPack.ReturnType.InnerText"><summary>
+            对象的开始标签和结束标签之间的文本。
+            </summary></member><member name="F:HtmlAgilityPack.ReturnType.InnerHtml"><summary>
+            对象的开始和结束标签之间的HTML
+            </summary></member><member name="F:HtmlAgilityPack.ReturnType.OuterHtml"><summary>
+    对象及其HTML内容
+    </summary></member><member name="T:HtmlAgilityPack.HasXPathAttribute"><summary>
+            仅标记和标注类，以显示它们具有定义了 <see cref="T:HtmlAgilityPack.XPathAttribute" /> 的属性。
+            </summary></member><member name="T:HtmlAgilityPack.XPathAttribute"><summary>
+    包含 XPath 和 <see cref="P:HtmlAgilityPack.XPathAttribute.NodeReturnType" />。XPath 用于查找 HTML 标签，<see cref="P:HtmlAgilityPack.XPathAttribute.NodeReturnType" /> 用于指定要返回的 <see cref="T:HtmlAgilityPack.HtmlNode" /> 的哪一部分。
+    </summary></member><member name="P:HtmlAgilityPack.XPathAttribute.XPath"><summary>
+            用于查找相关HTML节点的XPath表达式。
+            </summary></member><member name="P:HtmlAgilityPack.XPathAttribute.AttributeName"><summary>
+            Html 属性名称
+            </summary></member><member name="P:HtmlAgilityPack.XPathAttribute.NodeReturnType"><summary>
+            输出方法
+            </summary></member><member name="M:HtmlAgilityPack.XPathAttribute.#ctor(System.String)"><summary>
+            指定XPath以查找相关的Html节点。
+            </summary><param name="xpathString"></param></member><member name="M:HtmlAgilityPack.XPathAttribute.#ctor(System.String,HtmlAgilityPack.ReturnType)"><summary>
+            指定用于查找相关HTML节点的XPath。
+            </summary><param name="xpathString"></param><param name="nodeReturnType">指定您希望输出也包括HTML文本。</param></member><member name="M:HtmlAgilityPack.XPathAttribute.#ctor(System.String,System.String)"><summary>
+            指定XPath和属性以查找相关的HTML节点及其属性值。
+            </summary><param name="xpathString"></param><param name="attributeName"></param></member><member name="T:HtmlAgilityPack.SkipNodeNotFoundAttribute"><summary>
+    使用此特性标记属性时，如果该属性导致错误，Encapsulator 将忽略该属性。
+    </summary></member><member name="T:HtmlAgilityPack.NodeNotFoundException"><summary>
+    当无法将XPath绑定到HTML标签时经常发生的异常。
+    </summary></member><member name="M:HtmlAgilityPack.NodeNotFoundException.#ctor"><summary></summary></member><member name="M:HtmlAgilityPack.NodeNotFoundException.#ctor(System.String)"><summary></summary><param name="message"></param></member><member name="M:HtmlAgilityPack.NodeNotFoundException.#ctor(System.String,System.Exception)"><summary></summary><param name="message"></param><param name="inner"></param></member><member name="T:HtmlAgilityPack.NodeAttributeNotFoundException"><summary>
+            当无法将XPath绑定到HtmlTag属性时经常发生的异常。
+            </summary></member><member name="M:HtmlAgilityPack.NodeAttributeNotFoundException.#ctor"><summary></summary></member><member name="M:HtmlAgilityPack.NodeAttributeNotFoundException.#ctor(System.String)"><summary></summary><param name="message"></param></member><member name="M:HtmlAgilityPack.NodeAttributeNotFoundException.#ctor(System.String,System.Exception)"><summary></summary><param name="message"></param><param name="inner"></param></member><member name="T:HtmlAgilityPack.MissingXPathException"><summary>
+            当类中没有通过XPath属性赋值的属性时经常发生的异常。
+            </summary></member><member name="M:HtmlAgilityPack.MissingXPathException.#ctor"><summary></summary></member><member name="M:HtmlAgilityPack.MissingXPathException.#ctor(System.String)"><summary></summary><param name="message"></param></member><member name="M:HtmlAgilityPack.MissingXPathException.#ctor(System.String,System.Exception)"><summary></summary><param name="message"></param><param name="inner"></param></member><member name="T:HtmlAgilityPack.InvalidNodeReturnTypeException"><summary>
+    当XPathAttribute特性指定的ReturnType无效时引发的异常。
+    </summary></member><member name="M:HtmlAgilityPack.InvalidNodeReturnTypeException.#ctor(System.String)"><summary></summary><param name="message"></param></member><member name="M:HtmlAgilityPack.InvalidNodeReturnTypeException.#ctor(System.String,System.Exception)"><summary></summary><param name="message"></param><param name="inner"></param></member><member name="T:HtmlAgilityPack.HtmlNodeCollection"><summary>
+            表示HTML节点的组合列表和集合。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.#ctor(HtmlAgilityPack.HtmlNode)"><summary>
+            使用基础父节点初始化 HtmlNodeCollection
+            </summary><param name="parentnode">集合的基础节点</param></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.ParentNode"><summary>获取与此集合关联的父节点。</summary></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.Item(HtmlAgilityPack.HtmlNode)"><summary>
+            从列表中获取指定节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.Item(System.String)"><summary>
+    获取具有标签名称的节点
+    </summary><param name="nodeName"></param><returns></returns></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.Count"><summary>
+            获取列表中实际包含的元素数量。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.IsReadOnly"><summary>
+    集合是否为只读
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNodeCollection.Item(System.Int32)"><summary>
+            获取指定索引处的节点。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Add(HtmlAgilityPack.HtmlNode)"><summary>
+            将节点添加到集合中
+            </summary><param name="node"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Add(HtmlAgilityPack.HtmlNode,System.Boolean)"><summary>
+            将节点添加到集合中
+            </summary><param name="node"></param><param name="setParent"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Clear"><summary>
+            清除HtmlNode集合。移除每个节点对父节点、下一个节点和前一个节点的引用。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Contains(HtmlAgilityPack.HtmlNode)"><summary>
+            获取节点在集合中的存在性
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.CopyTo(HtmlAgilityPack.HtmlNode[],System.Int32)"><summary>
+    将集合复制到数组
+    </summary><param name="array"></param><param name="arrayIndex"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.GetEnumerator"><summary>
+            获取枚举器
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.System#Collections#Generic#IEnumerable{HtmlAgilityPack#HtmlNode}#GetEnumerator"><summary>
+            获取枚举器
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.System#Collections#IEnumerable#GetEnumerator"><summary>
+    获取显式枚举器
+    </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.IndexOf(HtmlAgilityPack.HtmlNode)"><summary>
+            获取节点的索引
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Insert(System.Int32,HtmlAgilityPack.HtmlNode)"><summary>
+            在索引处插入节点
+            </summary><param name="index"></param><param name="node"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Remove(HtmlAgilityPack.HtmlNode)"><summary>
+            移除节点
+            </summary><param name="item"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.RemoveAt(System.Int32)"><summary>
+            移除索引处的 <see cref="T:HtmlAgilityPack.HtmlNode" /></summary><param name="index"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.FindFirst(HtmlAgilityPack.HtmlNodeCollection,System.String)"><summary>
+        获取提供的集合中的第一个节点实例
+    </summary><param name="items"></param><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Append(HtmlAgilityPack.HtmlNode)"><summary>
+    将节点添加到集合末尾
+  </summary><param name="node" /></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.FindFirst(System.String)"><summary>
+            获取具有指定名称的第一个节点实例
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.GetNodeIndex(HtmlAgilityPack.HtmlNode)"><summary>
+            获取节点的索引
+            </summary><param name="node"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Prepend(HtmlAgilityPack.HtmlNode)"><summary>
+            将节点添加到集合的开头
+            </summary><param name="node"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Remove(System.Int32)"><summary>
+            删除指定索引处的节点
+            </summary><param name="index"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Replace(System.Int32,HtmlAgilityPack.HtmlNode)"><summary>
+            替换指定索引处的节点
+            </summary><param name="index"></param><param name="node"></param></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Descendants"><summary>
+            获取此集合中的所有后代节点
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Descendants(System.String)"><summary>
+            获取此集合中所有具有匹配名称的后代节点。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Elements"><summary>
+            获取集合中的所有第一代元素
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Elements(System.String)"><summary>
+            获取所有匹配名称的第一代元素
+            </summary><param name="name"></param><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeCollection.Nodes"><summary>
+            集合中的所有第一代节点
+            </summary><returns></returns></member><member name="T:HtmlAgilityPack.HtmlNodeNavigator"><summary>
+            表示将HTML文档视为数据存储的HTML导航器。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.Stream)"><summary>
+            初始化 HtmlNavigator 的新实例，并从流中加载 HTML 文档。
+            </summary><param name="stream">输入流。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.Stream,System.Boolean)"><summary>
+    初始化 HtmlNavigator 的新实例并从流加载 HTML 文档。
+    </summary><param name="stream">输入流。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流的开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.Stream,System.Text.Encoding)"><summary>
+            初始化 HtmlNavigator 的新实例并从流加载 HTML 文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)"><summary>
+        初始化 HtmlNavigator 的新实例，并从流中加载 HTML 文档。
+    </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流的开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32)"><summary>
+            初始化 HtmlNavigator 的新实例并从流中加载 HTML 文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在流的开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.IO.TextReader)"><summary>
+            初始化 HtmlNavigator 的新实例，并从 TextReader 加载 HTML 文档。
+            </summary><param name="reader">用于将 HTML 数据输入文档的 TextReader。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.String)"><summary>
+            初始化 HtmlNavigator 类的新实例并从文件加载 HTML 文档。
+            </summary><param name="path">要读取的完整文件路径。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.String,System.Boolean)"><summary>
+            初始化 HtmlNavigator 的新实例，并从文件中加载 HTML 文档。
+            </summary><param name="path">要读取的完整文件路径。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.String,System.Text.Encoding)"><summary>
+    初始化 HtmlNavigator 的新实例并从文件加载 HTML 文档。
+    </summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.String,System.Text.Encoding,System.Boolean)"><summary>
+            初始化 HtmlNavigator 的新实例并从文件加载 HTML 文档。
+            </summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.#ctor(System.String,System.Text.Encoding,System.Boolean,System.Int32)"><summary>
+            初始化 HtmlNavigator 的新实例，并从文件加载 HTML 文档。
+            </summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.BaseURI"><summary>
+    获取当前节点的基URI。
+    在HtmlNavigator实现的情况下始终返回string.Empty。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.CurrentDocument"><summary>
+            获取当前HTML文档。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.CurrentNode"><summary>
+            获取当前HTML节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.HasAttributes"><summary>
+            获取一个值，指示当前节点是否有子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.HasChildren"><summary>
+            获取一个值，该值指示当前节点是否有子节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.IsEmptyElement"><summary>
+            获取一个值，该值指示当前节点是否为空元素。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.LocalName"><summary>
+            获取不带命名空间前缀的当前HTML节点的名称。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.Name"><summary>
+            获取当前节点的限定名称。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.NamespaceURI"><summary>
+            获取当前节点的命名空间URI（根据W3C命名空间规范定义）。
+            对于HtmlNavigator实现，始终返回string.Empty。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.NameTable"><summary>
+            获取与此实现关联的<see cref="T:System.Xml.XmlNameTable" />。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.NodeType"><summary>
+            获取当前节点的类型。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.Prefix"><summary>
+            获取与当前节点关联的前缀。
+            在 HtmlNavigator 实现中，始终返回 string.Empty。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.Value"><summary>
+            获取当前节点的文本值。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlNodeNavigator.XmlLang"><summary>
+            获取当前节点的xml:lang范围。
+            在HtmlNavigator实现的情况下始终返回string.Empty。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.Clone"><summary>
+            创建一个新的 HtmlNavigator，定位在此 HtmlNavigator 的相同节点上。
+            </summary><returns>一个新的 HtmlNavigator 对象，位于原始 HtmlNavigator 的相同节点。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.GetAttribute(System.String,System.String)"><summary>
+            获取具有指定本地名称和命名空间URI的HTML属性的值。
+            </summary><param name="localName">HTML属性的本地名称。</param><param name="namespaceURI">属性的命名空间URI。在HtmlNavigator实现中不支持。</param><returns>指定HTML属性的值。如果未找到匹配的属性或者导航器未定位在元素节点上，则为String.Empty或null。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.GetNamespace(System.String)"><summary>
+            返回与指定本地名称对应的命名空间节点的值。
+            对于HtmlNavigator实现，始终返回string.Empty。
+            </summary><param name="name">命名空间节点的本地名称。</param><returns>对于HtmlNavigator实现，始终返回string.Empty。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.IsSamePosition(System.Xml.XPath.XPathNavigator)"><summary>
+            确定当前的HtmlNavigator是否与指定的HtmlNavigator处于相同的位置。
+            </summary><param name="other">要比较的HtmlNavigator。</param><returns>如果两个导航器位于同一位置，则为true；否则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveTo(System.Xml.XPath.XPathNavigator)"><summary>
+            移动至指定的HtmlNavigator所在的同一位置。
+            </summary><param name="other">指向要移动到的节点的HtmlNavigator。</param><returns>如果成功，则为true；否则为false。如果为false，导航器的位置不变。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToAttribute(System.String,System.String)"><summary>
+            移动到具有匹配的 LocalName 和 NamespaceURI 的 HTML 属性。
+            </summary><param name="localName">HTML 属性的本地名称。</param><param name="namespaceURI">属性的命名空间 URI。HtmlNavigator 实现不支持此项。</param><returns>如果找到 HTML 属性，则为 true；否则为 false。如果为 false，导航器的位置不会改变。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToFirst"><summary>
+            移动到当前节点的第一个同级节点。
+            </summary><returns>如果导航器成功移动到第一个同级节点，则为true；如果没有第一个同级节点或导航器当前位于属性节点上，则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToFirstAttribute"><summary>
+            移动到第一个HTML属性。
+            </summary><returns>如果导航器成功移动到第一个HTML属性，则为true；否则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToFirstChild"><summary>移动到当前节点的第一个子节点。</summary><returns>如果存在第一个子节点，则为true；否则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToFirstNamespace(System.Xml.XPath.XPathNamespaceScope)"><summary>
+            将XPathNavigator移动到当前元素的第一个命名空间节点。对于HtmlNavigator实现始终返回false。
+            </summary><param name="scope">一个描述命名空间范围的XPathNamespaceScope值。</param><returns>对于HtmlNavigator实现始终返回false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToId(System.String)"><summary>
+            移动到具有类型为ID的属性且其值与指定字符串匹配的节点。
+            </summary><param name="id">表示要移动到的节点的ID值的字符串。此参数不需要被原子化。</param><returns>如果移动成功，则为true；否则为false。如果为false，导航器的位置不变。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToNamespace(System.String)"><summary>
+            将XPathNavigator移动到具有指定本地名称的命名空间节点。
+            对于HtmlNavigator实现，始终返回false。
+            </summary><param name="name">命名空间节点的本地名称。</param><returns>对于HtmlNavigator实现，始终返回false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToNext"><summary>
+            移动到当前节点的下一个同级节点。
+            </summary><returns>如果导航器成功移动到下一个同级节点，则为 true；如果没有更多同级节点或导航器当前位于属性节点上，则为 false。如果为 false，导航器的位置保持不变。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToNextAttribute"><summary>
+            移动到下一个 HTML 属性。
+            </summary><returns></returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToNextNamespace(System.Xml.XPath.XPathNamespaceScope)"><summary>
+            将XPathNavigator移动到下一个命名空间节点。对于HtmlNavigator实现，始终返回false。
+            </summary><param name="scope">一个描述命名空间范围的XPathNamespaceScope值。</param><returns>对于HtmlNavigator实现，始终返回false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToParent"><summary>
+            移动到当前节点的父节点。
+            </summary><returns>如果存在父节点，则为 true；否则为 false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToPrevious"><summary>
+            移动到当前节点的上一个同级节点。
+            </summary><returns>如果导航器成功移动到上一个同级节点，则为true；如果没有上一个同级节点或导航器当前位于属性节点上，则为false。</returns></member><member name="M:HtmlAgilityPack.HtmlNodeNavigator.MoveToRoot"><summary>
+    移动到当前节点所属的根节点。
+    </summary></member><member name="T:HtmlAgilityPack.HtmlNodeType"><summary>
+            表示节点的类型。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNodeType.Document"><summary>
+            文档的根。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNodeType.Element"><summary>
+    一个HTML元素。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlNodeType.Comment"><summary>
+            一个 HTML 注释。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlNodeType.Text"><summary>
+            文本节点始终是元素节点或文档节点的子节点。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlParseError"><summary>
+            表示在文档解析过程中发现的解析错误。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.Code"><summary>
+    获取错误类型。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.Line"><summary>
+            获取文档中此错误的行号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.LinePosition"><summary>
+            获取此错误在文档中的列号。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.Reason"><summary>
+            获取错误的描述。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.SourceText"><summary>
+            获取包含错误的行的完整文本。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlParseError.StreamPosition"><summary>
+            获取此错误在文档中的绝对流位置，相对于文档开头。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlParseErrorCode"><summary>
+            表示解析错误的类型。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlParseErrorCode.TagNotClosed"><summary>
+            标签未关闭。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlParseErrorCode.TagNotOpened"><summary>
+    标签未打开。
+    </summary></member><member name="F:HtmlAgilityPack.HtmlParseErrorCode.CharsetMismatch"><summary>
+            流与声明的（META）编码之间存在字符集不匹配。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlParseErrorCode.EndTagNotRequired"><summary>
+            不需要结束标记。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlParseErrorCode.EndTagInvalidHere"><summary>
+            结束标签在此位置无效。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlTextNode"><summary>
+            表示一个HTML文本节点。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlTextNode.InnerHtml"><summary>
+            获取或设置对象的开始和结束标签之间的HTML。对于文本节点，它等于OuterHtml。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlTextNode.OuterHtml"><summary>
+            获取或设置对象及其HTML内容。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlTextNode.Text"><summary>
+            获取或设置节点的文本。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlWeb"><summary>
+            从 HTTP 获取 HTML 文档的工具类。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlWeb.PostResponseHandler"><summary>
+            表示将处理 PostResponse 事件的方法。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlWeb.PreHandleDocumentHandler"><summary>
+            表示将处理 PreHandleDocument 事件的方法。
+            </summary></member><member name="T:HtmlAgilityPack.HtmlWeb.PreRequestHandler"><summary>
+            表示将处理 PreRequest 事件的方法。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlWeb.PostResponse"><summary>
+            发生在HTTP请求执行之后。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlWeb.PreHandleDocument"><summary>
+            在 HTML 文档被处理之前发生。
+            </summary></member><member name="F:HtmlAgilityPack.HtmlWeb.PreRequest"><summary>
+            发生在HTTP请求执行之前。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.AutomaticDecompression"><summary>获取或设置自动解压缩。</summary><value>自动解压缩。</value></member><member name="P:HtmlAgilityPack.HtmlWeb.MaxAutoRedirects"><summary>
+        将跟踪的最大重定向次数。
+        若要禁用重定向，不要将值设置为0，请将CaptureRedirect设置为'true'。
+    </summary><value>必须大于0。</value></member><member name="P:HtmlAgilityPack.HtmlWeb.Timeout"><summary>
+            获取或设置超时值（毫秒）。必须大于零。值为-1表示无限超时。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.AutoDetectEncoding"><summary>
+            获取或设置一个值，指示是否必须自动检测文档编码。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.OverrideEncoding"><summary>
+            获取或设置用于覆盖任何 Web 请求响应流的编码
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.CacheOnly"><summary>
+            获取或设置一个值，指示是否仅从缓存中获取文档。
+如果此值设置为 true 并且文档在缓存中未找到，则不会加载任何内容。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.UsingCacheIfExists"><summary>
+            获取或设置一个值，指示是否从缓存获取文档（如果存在），否则从网络获取。
+            一个值，指示是否从缓存获取文档（如果存在），否则从网络获取。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.CachePath"><summary>
+    获取或设置缓存路径。如果为空，则不使用缓存机制。
+    </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.FromCache"><summary>
+            获取一个值，指示最后一个文档是否从缓存中检索。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.RequestDuration"><summary>
+            获取最后一个请求的持续时间（毫秒）。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.ResponseUri"><summary>
+            获取实际响应请求的Internet资源的URI。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.StatusCode"><summary>
+            获取最后一个请求状态。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.StreamBufferSize"><summary>
+            获取或设置用于内存操作的缓冲区大小。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.UseCookies"><summary>
+            获取或设置一个值，指示是否存储cookie。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.CaptureRedirect"><summary>获取或设置一个值，该值指示是否应捕获重定向而不是当前的位置。</summary><value>如果捕获重定向，则为 true；否则为 false。</value></member><member name="P:HtmlAgilityPack.HtmlWeb.UserAgent"><summary>
+            获取或设置在任何网络请求中发送的用户代理HTTP 1.1头。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.UsingCache"><summary>
+            获取或设置一个值，指示是否应使用缓存机制。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlWeb.GetContentTypeForExtension(System.String,System.String)"><summary>
+            获取给定路径扩展名的MIME内容类型。
+            </summary><param name="extension">输入的路径扩展名。</param><param name="def">如果发生任何错误，则返回的默认内容类型。</param><returns>路径扩展名的MIME内容类型。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.GetExtensionForContentType(System.String,System.String)"><summary>
+    获取给定MIME内容类型的路径扩展名。
+    </summary><param name="contentType">输入的MIME内容类型。</param><param name="def">如果发生错误，要返回的默认路径扩展名。</param><returns>MIME内容类型的路径扩展名。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.CreateInstance(System.String,System.Type)"><summary>
+            从指定的Internet资源创建给定类型的实例。
+            </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="type">请求的类型。</param><returns>一个新创建的实例。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Get(System.String,System.String)"><summary>
+            从互联网资源获取HTML文档并将其保存到指定的文件。
+            </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="path">您要保存文档的文件位置。</param></member><member name="M:HtmlAgilityPack.HtmlWeb.Get(System.String,System.String,System.Net.WebProxy,System.Net.NetworkCredential)"><summary>
+    从 Internet 资源获取 HTML 文档并保存到指定文件。 - 支持代理
+  </summary><param name="url">请求的 URL，例如 "http://Myserver/Mypath/Myfile.asp"。</param><param name="path">您要保存文档的文件位置。</param><param name="proxy"></param><param name="credentials"></param></member><member name="M:HtmlAgilityPack.HtmlWeb.Get(System.String,System.String,System.String)"><summary>从Internet资源获取HTML文档并将其保存到指定文件。</summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="path">要保存文档的文件位置。</param><param name="method">用于打开连接的HTTP方法，例如GET、POST、PUT或PROPFIND。</param></member><member name="M:HtmlAgilityPack.HtmlWeb.Get(System.String,System.String,System.Net.WebProxy,System.Net.NetworkCredential,System.String)"><summary>
+            从Internet资源获取HTML文档并将其保存到指定文件。支持代理。
+            </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="path">要保存文档的文件位置。</param><param name="credentials"></param><param name="method">用于打开连接的HTTP方法，例如GET、POST、PUT或PROPFIND。</param><param name="proxy"></param></member><member name="M:HtmlAgilityPack.HtmlWeb.GetCachePath(System.Uri)"><summary>
+            获取指定URL的缓存文件路径。
+            </summary><param name="uri">要为其检索缓存路径的URL。不能为null。</param><returns>缓存文件路径。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.String)"><summary>
+            从互联网资源获取HTML文档。
+            </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.Uri)"><summary>
+    从 Internet 资源获取 HTML 文档。
+    </summary><param name="uri">请求的 Uri，例如 new Uri("http://Myserver/Mypath/Myfile.asp")。</param><returns>一个新的 HTML 文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.String,System.String,System.Int32,System.String,System.String)"><summary>
+        从互联网资源获取HTML文档。
+    </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="proxyHost">用于代理的主机</param><param name="proxyPort">代理所在的端口</param><param name="userId">用于身份验证的用户ID</param><param name="password">用于身份验证的密码</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.Uri,System.String,System.Int32,System.String,System.String)"><summary>
+            从Internet资源获取一个HTML文档。
+            </summary><param name="uri">请求的Uri，例如 new Uri("http://Myserver/Mypath/Myfile.asp")。</param><param name="proxyHost">用于代理的主机。</param><param name="proxyPort">代理的端口号。</param><param name="userId">用于身份验证的用户ID。</param><param name="password">用于身份验证的密码。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.String,System.String)"><summary>
+        从互联网资源加载HTML文档。
+    </summary><param name="url">请求的URL，例如 "http://Myserver/Mypath/Myfile.asp"。</param><param name="method">用于打开连接的HTTP方法，例如 GET、POST、PUT 或 PROPFIND。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.Uri,System.String)"><summary>
+            从Internet资源加载HTML文档。
+            </summary><param name="uri">请求的URL，例如new Uri("http://Myserver/Mypath/Myfile.asp")。</param><param name="method">用于打开连接的HTTP方法，例如GET、POST、PUT或PROPFIND。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.String,System.String,System.Net.WebProxy,System.Net.NetworkCredential)"><summary>
+            从互联网资源加载HTML文档。
+            </summary><param name="url">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="method">用于打开连接的HTTP方法，例如GET、POST、PUT或PROPFIND。</param><param name="proxy">用于此请求的代理</param><param name="credentials">身份验证时使用的凭据</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.Load(System.Uri,System.String,System.Net.WebProxy,System.Net.NetworkCredential)"><summary>
+            从Internet资源加载HTML文档。
+            </summary><param name="uri">请求的Uri，例如new Uri("http://Myserver/Mypath/Myfile.asp")。</param><param name="method">用于打开连接的HTTP方法，例如GET、POST、PUT或PROPFIND。</param><param name="proxy">用于此请求的代理。</param><param name="credentials">用于身份验证的凭据。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadHtmlAsXml(System.String,System.Xml.XmlTextWriter)"><summary>
+            从互联网资源加载HTML文档，并将其保存到指定的XmlTextWriter。
+            </summary><param name="htmlUrl">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="writer">要保存到的XmlTextWriter。</param></member><member name="M:HtmlAgilityPack.HtmlWeb.CreateInstance(System.String,System.String,System.Xml.Xsl.XsltArgumentList,System.Type)"><summary>
+            从指定的 Internet 资源创建给定类型的实例。
+            </summary><param name="htmlUrl">请求的 URL，例如 "http://Myserver/Mypath/Myfile.asp"。</param><param name="xsltUrl">指定要加载的 XSLT 样式表的 URL。</param><param name="xsltArgs">一个 <see cref="T:System.Xml.Xsl.XsltArgumentList" />，包含用作转换输入的命名空间限定参数。</param><param name="type">请求的类型。</param><returns>一个新创建的实例。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.CreateInstance(System.String,System.String,System.Xml.Xsl.XsltArgumentList,System.Type,System.String)"><summary>
+            根据指定的 Internet 资源创建给定类型的实例。
+            </summary><param name="htmlUrl">请求的 URL，例如 "http://Myserver/Mypath/Myfile.asp"。</param><param name="xsltUrl">指定要加载的 XSLT 样式表的 URL。</param><param name="xsltArgs">一个 <see cref="T:System.Xml.Xsl.XsltArgumentList" />，包含用作转换输入的命名空间限定参数。</param><param name="type">请求的类型。</param><param name="xmlPath">保存转换前临时 XML 的文件路径。主要用于调试目的。</param><returns>一个新创建的实例。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadHtmlAsXml(System.String,System.String,System.Xml.Xsl.XsltArgumentList,System.Xml.XmlTextWriter)"><summary>
+            从Internet资源加载HTML文档，并在进行XSLT转换后将其保存到指定的XmlTextWriter。
+            </summary><param name="htmlUrl">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。</param><param name="xsltUrl">指定要加载的XSLT样式表的URL。</param><param name="xsltArgs">一个XsltArgumentList，包含作为转换输入的命名空间限定参数。</param><param name="writer">要保存到的XmlTextWriter。</param></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadHtmlAsXml(System.String,System.String,System.Xml.Xsl.XsltArgumentList,System.Xml.XmlTextWriter,System.String)"><summary>
+            从Internet资源加载HTML文档，并在XSLT转换后将其保存到指定的XmlTextWriter。
+            </summary><param name="htmlUrl">请求的URL，例如"http://Myserver/Mypath/Myfile.asp"。不能为null。</param><param name="xsltUrl">指定要加载的XSLT样式表的URL。</param><param name="xsltArgs">一个XsltArgumentList，包含用作转换输入的命名空间限定参数。</param><param name="writer">要保存到的XmlTextWriter。</param><param name="xmlPath">一个文件路径，转换前的临时XML将保存在此处。主要用于调试目的。</param></member><member name="T:HtmlAgilityPack.HtmlWebException"><summary>
+            表示由HtmlWeb实用工具类引发的异常。
+            </summary></member><member name="M:HtmlAgilityPack.HtmlWebException.#ctor(System.String)"><summary>
+            创建 HtmlWebException 的实例。
+            </summary><param name="message">异常的消息。</param></member><member name="T:HtmlAgilityPack.MixedCodeDocument"><summary>
+            表示混合代码和文本的文档。ASP、ASPX、JSP 就是此类文档的典型例子。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocument.TokenCodeEnd"><summary>
+            获取或设置表示代码结束的标记。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocument.TokenCodeStart"><summary>
+            获取或设置表示代码开始的标记。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocument.TokenDirective"><summary>
+            获取或设置表示代码指令的令牌。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocument.TokenResponseWrite"><summary>
+            获取或设置表示响应写入指令的标记。
+            </summary></member><member name="M:HtmlAgilityPack.MixedCodeDocument.#ctor"><summary>
+    创建一个混合代码文档实例。
+    </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocument.Code"><summary>
+            获取被视为模板的混合代码文档所表示的代码。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocument.CodeFragments"><summary>
+            获取文档中的代码片段列表。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocument.Fragments"><summary>
+            获取文档中所有片段的列表。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocument.StreamEncoding"><summary>
+            获取用于读取文档的流的编码。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocument.TextFragments"><summary>
+    获取文档中的文本片段列表。
+    </summary></member><member name="M:HtmlAgilityPack.MixedCodeDocument.CreateCodeFragment"><summary>
+            创建一个代码片段实例。
+            </summary><returns>新创建的代码片段实例。</returns></member><member name="M:HtmlAgilityPack.MixedCodeDocument.CreateTextFragment"><summary>
+            创建一个文本片段实例。
+            </summary><returns>新创建的文本片段实例。</returns></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.Stream)"><summary>
+            从流加载混合代码文档。
+            </summary><param name="stream">输入流。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.Stream,System.Boolean)"><summary>
+            从流中加载混合代码文档。
+            </summary><param name="stream">输入流。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.Stream,System.Text.Encoding)"><summary>
+            从流中加载混合代码文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.Stream,System.Text.Encoding,System.Boolean)"><summary>
+    从流中加载混合代码文档。
+    </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32)"><summary>
+            从流中加载混合代码文档。
+            </summary><param name="stream">输入流。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.String)"><summary>
+            从文件加载混合代码文档。
+            </summary><param name="path">要读取的完整文件路径。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.String,System.Boolean)"><summary>
+            从文件加载混合代码文档。
+            </summary><param name="path">要读取的完整文件路径。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.String,System.Text.Encoding)"><summary>
+    从文件加载混合代码文档。
+    </summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.String,System.Text.Encoding,System.Boolean)"><summary>
+            从文件加载混合代码文档。
+            </summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.String,System.Text.Encoding,System.Boolean,System.Int32)"><summary>从文件加载混合代码文档。</summary><param name="path">要读取的完整文件路径。</param><param name="encoding">要使用的字符编码。</param><param name="detectEncodingFromByteOrderMarks">指示是否在文件开头查找字节顺序标记。</param><param name="buffersize">最小缓冲区大小。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Load(System.IO.TextReader)"><summary>
+            从指定的TextReader加载混合代码文档。
+            </summary><param name="reader">用于将HTML数据输入到文档的TextReader。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.LoadHtml(System.String)"><summary>
+            从文本加载混合文档
+            </summary><param name="html">要加载的文本。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.IO.Stream)"><summary>
+            将混合文档保存到指定的流。
+            </summary><param name="outStream">您要保存到的流。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.IO.Stream,System.Text.Encoding)"><summary>
+    将混合文档保存到指定的流。
+    </summary><param name="outStream">要保存到的流。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.String)"><summary>
+            保存混合文档到指定文件。
+            </summary><param name="filename">要保存文档的文件位置。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.String,System.Text.Encoding)"><summary>
+            保存混合文档到指定的文件。
+            </summary><param name="filename">您要保存文档的文件位置。</param><param name="encoding">要使用的字符编码。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.IO.StreamWriter)"><summary>
+            将混合文档保存到指定的StreamWriter。
+            </summary><param name="writer">要保存到的StreamWriter。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocument.Save(System.IO.TextWriter)"><summary>
+            将混合文档保存到指定的TextWriter。
+            </summary><param name="writer">要保存到的TextWriter。</param></member><member name="T:HtmlAgilityPack.MixedCodeDocumentCodeFragment"><summary>
+    表示混合代码文档中的代码片段。
+    </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentCodeFragment.Code"><summary>
+            获取片段代码文本。
+            </summary></member><member name="T:HtmlAgilityPack.MixedCodeDocumentFragment"><summary>
+            表示混合代码文档中片段的基类。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragment.FragmentText"><summary>
+            获取片段文本。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragment.FragmentType"><summary>
+            获取片段的类型。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragment.Line"><summary>
+            获取片段的行号。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragment.LinePosition"><summary>
+            获取片段的行位置（列）。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragment.StreamPosition"><summary>
+            获取片段在文档流中的位置。
+            </summary></member><member name="T:HtmlAgilityPack.MixedCodeDocumentFragmentList"><summary>
+            表示混合代码片段的列表。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragmentList.Doc"><summary>
+             获取文档
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragmentList.Count"><summary>
+    获取列表中包含的片段数量。
+    </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragmentList.Item(System.Int32)"><summary>通过索引从列表中获取片段。</summary></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.System#Collections#IEnumerable#GetEnumerator"><summary>
+            获取一个可用于遍历片段列表的枚举器。
+            </summary></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.Append(HtmlAgilityPack.MixedCodeDocumentFragment)"><summary>
+    将片段追加到片段列表。
+    </summary><param name="newFragment">要追加的片段。不能为null。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.GetEnumerator"><summary>
+        获取一个可以遍历片段列表的枚举器。
+    </summary></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.Prepend(HtmlAgilityPack.MixedCodeDocumentFragment)"><summary>
+            将片段前置到片段列表的开头。
+            </summary><param name="newFragment">要追加的片段。不能为null。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.Remove(HtmlAgilityPack.MixedCodeDocumentFragment)"><summary>
+            从片段列表中移除一个片段。如果该片段不在列表中，将引发异常。
+            </summary><param name="fragment">要移除的片段。不能为null。</param></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.RemoveAll"><summary>
+            从列表中移除所有片段。
+            </summary></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.RemoveAt(System.Int32)"><summary>
+            使用其在列表中的索引从片段列表中移除一个片段。
+            </summary><param name="index">要移除的片段的索引。</param></member><member name="T:HtmlAgilityPack.MixedCodeDocumentFragmentList.MixedCodeDocumentFragmentEnumerator"><summary>
+            表示一个片段枚举器。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragmentList.MixedCodeDocumentFragmentEnumerator.Current"><summary>
+    获取集合中的当前元素。
+    </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentFragmentList.MixedCodeDocumentFragmentEnumerator.System#Collections#IEnumerator#Current"><summary>获取集合中的当前元素。</summary></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.MixedCodeDocumentFragmentEnumerator.MoveNext"><summary>
+        将枚举器前进到集合的下一个元素。
+    </summary><returns>如果枚举器成功前进到下一个元素，则为 true；如果枚举器已超过集合的末尾，则为 false。</returns></member><member name="M:HtmlAgilityPack.MixedCodeDocumentFragmentList.MixedCodeDocumentFragmentEnumerator.Reset"><summary>
+            将枚举数设置为其初始位置，该位置位于集合中第一个元素之前。
+            </summary></member><member name="T:HtmlAgilityPack.MixedCodeDocumentFragmentType"><summary>
+            表示混合代码文档中片段的类型。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocumentFragmentType.Code"><summary>
+            该片段包含代码。
+            </summary></member><member name="F:HtmlAgilityPack.MixedCodeDocumentFragmentType.Text"><summary>
+            此片段包含文本。
+            </summary></member><member name="T:HtmlAgilityPack.MixedCodeDocumentTextFragment"><summary>
+            表示混合代码文档中的文本片段。
+            </summary></member><member name="P:HtmlAgilityPack.MixedCodeDocumentTextFragment.Text"><summary>
+            获取片段文本。
+            </summary></member><member name="P:HtmlAgilityPack.HtmlWeb.BrowserDelay"><summary>获取或设置 Web 浏览器延迟。</summary></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadFromBrowser(System.String,System.Func{System.Object,System.Boolean})"><summary>使用Web浏览器和Application.DoEvents加载HTML。</summary><exception cref="T:System.Exception">当发生异常错误条件时引发。</exception><param name="url">请求的URL，例如"http://html-agility-pack.net/"。</param><param name="isBrowserScriptCompleted">（可选）检查浏览器脚本是否都已运行并完成。</param><returns>一个新的HTML文档。</returns></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadFromBrowser(System.String)"><summary>使用WebBrowser和Application.DoEvents加载HTML。</summary><exception cref="T:System.Exception">当发生异常错误条件时抛出。</exception><param name="url">请求的URL，例如"http://html-agility-pack.net/"。</param><returns>一个新的HTML文档。</returns></member><member name="P:HtmlAgilityPack.HtmlWeb.BrowserTimeout"><summary>获取或设置Web浏览器超时时间。</summary></member><member name="M:HtmlAgilityPack.HtmlWeb.LoadFromBrowser(System.String,System.Func{System.String,System.Boolean})"><summary>使用 WebBrowser 和 Application.DoEvents 加载 HTML。</summary><exception cref="T:System.Exception">当出现异常错误条件时引发异常。</exception><param name="url">请求的 URL，例如 "http://html-agility-pack.net/"。</param><param name="isBrowserScriptCompleted">（可选）检查浏览器脚本是否已全部运行并完成。</param><returns>一个新的 HTML 文档。</returns></member></members>
+</doc>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.Abstractions</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext"><summary>
+            提供有关配置的当前项的数据。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Configuration.IConfigurationProvider)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext" /> 的新实例。
+            </summary><param name="path">配置的当前项的路径。</param><param name="key">配置的当前项的键。</param><param name="value">配置的当前项的值。</param><param name="configurationProvider">用于获取当前项值的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />。</param></member><member name="P:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext.Path"><summary>
+            获取当前项的路径。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext.Key"><summary>
+            获取当前项的键。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext.Value"><summary>
+            获取当前项的值。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.ConfigurationDebugViewContext.ConfigurationProvider"><summary>
+            获取用于获取当前项值的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.ConfigurationExtensions"><summary>
+    为配置类提供扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.Add``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})"><summary>
+            添加一个新的配置源。
+            </summary><param name="builder">要添加到的生成器。</param><param name="configureSource">配置源机密。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.GetConnectionString(Microsoft.Extensions.Configuration.IConfiguration,System.String)"><summary>
+            从指定的配置中获取指定的连接字符串。
+            是<c>GetSection("ConnectionStrings")[name]</c>的简写。
+            </summary><param name="configuration">要枚举的配置。</param><param name="name">连接字符串键。</param><returns>连接字符串。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.AsEnumerable(Microsoft.Extensions.Configuration.IConfiguration)"><summary>
+            获取 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> 中的键值对枚举。
+            </summary><param name="configuration">要枚举的配置。</param><returns>键值对的枚举。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.AsEnumerable(Microsoft.Extensions.Configuration.IConfiguration,System.Boolean)"><summary>
+    获取 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> 中的键值对枚举
+    </summary><param name="configuration">要枚举的配置。</param><param name="makePathsRelative"><see langword="true" /> 表示从返回的子键前面修剪当前配置的路径。</param><returns>键值对枚举。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.Exists(Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            确定该节是否具有 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationSection.Value" /> 或有子项。
+            </summary><param name="section">要枚举的节。</param><returns>如果该节具有值或子项，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.ConfigurationKeyNameAttribute"><summary>
+            指定配置属性的键名。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationKeyNameAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Configuration.ConfigurationKeyNameAttribute" /> 的新实例。
+            </summary><param name="name">键名。</param></member><member name="P:Microsoft.Extensions.Configuration.ConfigurationKeyNameAttribute.Name"><summary>
+            获取配置属性的键名。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.ConfigurationPath"><summary>
+            提供用于操作配置路径的实用方法和常量。
+            </summary></member><member name="F:Microsoft.Extensions.Configuration.ConfigurationPath.KeyDelimiter"><summary>
+            分隔符“:”用于分隔路径中的各个键。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationPath.Combine(System.String[])"><summary>
+            将路径段合并为一个路径。
+            </summary><param name="pathSegments">要合并的路径段。</param><returns>合并后的路径。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationPath.Combine(System.Collections.Generic.IEnumerable{System.String})"><summary>
+            将路径段组合成一个路径。
+            </summary><param name="pathSegments">要组合的路径段。</param><returns>组合后的路径。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationPath.GetSectionKey(System.String)"><summary>
+            从路径中提取最后一个路径段。
+            </summary><param name="path">路径。</param><returns>路径的最后一个路径段。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationPath.GetParentPath(System.String)"><summary>
+            提取给定路径对应的父节点的路径。
+            </summary><param name="path">路径。</param><returns>原始路径减去其中的最后一个单独段。如果原始路径对应顶级节点，则为Null。</returns></member><member name="T:Microsoft.Extensions.Configuration.ConfigurationRootExtensions"><summary>
+            提供用于 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationRootExtensions.GetDebugView(Microsoft.Extensions.Configuration.IConfigurationRoot)"><summary>
+            生成配置的人类可读视图，显示每个值的来源。
+            </summary><returns>调试视图。</returns></member><member name="T:Microsoft.Extensions.Configuration.IConfiguration"><summary>
+            表示一组键/值应用程序配置属性。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfiguration.Item(System.String)"><summary>
+            获取或设置一个配置值。
+            </summary><param name="key">配置键。</param><returns>配置值。</returns></member><member name="M:Microsoft.Extensions.Configuration.IConfiguration.GetSection(System.String)"><summary>
+            获取指定键的配置子节。
+            </summary><param name="key">配置节的键。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</returns><remarks>
+                此方法永远不会返回 <c>null</c>。如果未找到指定键的匹配子节，将返回一个空的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。
+            </remarks></member><member name="M:Microsoft.Extensions.Configuration.IConfiguration.GetChildren"><summary>
+            获取直接下级配置子部分。
+            </summary><returns>配置子部分。</returns></member><member name="M:Microsoft.Extensions.Configuration.IConfiguration.GetReloadToken"><summary>
+    返回一个<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，可用于在重新加载此配置时进行观察。
+    </summary><returns>如果此提供程序支持更改跟踪，则返回一个<see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />令牌；否则返回<see langword="null" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"><summary>
+            表示用于构建应用程序配置的类型。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties"><summary>
+            获取一个键/值集合，可用于在<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />
+            和已注册的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />之间共享数据。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Sources"><summary>
+            获取配置值所用的源
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(Microsoft.Extensions.Configuration.IConfigurationSource)"><summary>添加一个新的配置源。</summary><param name="source">要添加的配置源。</param><returns>相同的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationBuilder.Build"><summary>
+            使用在 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Sources" /> 中注册的源集合，构建一个包含键和值的 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。
+            </summary><returns>一个包含来自已注册源的键和值的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationManager"><summary>
+            表示一个可变的配置对象。
+            </summary><remarks>
+            它同时是一个 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" /> 和一个 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。
+            随着源的添加，它会更新其当前配置视图。
+            </remarks></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationProvider"><summary>
+            为应用程序提供配置键/值。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.TryGet(System.String,System.String@)"><summary>
+    尝试获取指定键的配置值。
+    </summary><param name="key">键。</param><param name="value">当此方法返回时，包含指定键的值。</param><returns><see langword="true" /> 如果找到了指定键的值，否则 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.Set(System.String,System.String)"><summary>
+            为指定的键设置配置值。
+            </summary><param name="key">键。</param><param name="value">值。</param></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.GetReloadToken"><summary>
+            尝试获取用于更改跟踪的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。
+            </summary><returns>如果此提供程序支持更改跟踪，则为 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 标记；否则为 <see langword="null" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationRoot"><summary>
+            表示一个 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> 层次结构的根。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationRoot.Reload"><summary>
+    强制从底层 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" /> 提供程序重新加载配置值。
+    </summary></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationSection"><summary>
+            表示应用程序配置值的一个节。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationSection.Key"><summary>
+            获取此节在其父级中所占的键。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationSection.Path"><summary>
+            获取此节在<see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />中的完整路径。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationSection.Value"><summary>
+            获取或设置节的值。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.IConfigurationSource"><summary>
+            表示应用程序的配置键/值的来源。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+    为此源生成<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" /></returns></member><member name="P:System.SR.InvalidSectionName"><summary>在配置中未找到节“{0}”。</summary></member><member name="P:Microsoft.Extensions.Configuration.IConfigurationRoot.Providers"><summary>
+            获取此配置的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" /> 提供程序。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.GetChildKeys(System.Collections.Generic.IEnumerable{System.String},System.String)"><summary>
+            基于此<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />的数据和所有先前<see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />提供程序返回的键集，返回给定父路径的直接子代配置键。
+            </summary><param name="earlierKeys">由先前提供程序为同一父路径返回的子键。</param><param name="parentPath">父路径。</param><returns>子键。</returns></member><member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.Load"><summary>
+            从此 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" /> 表示的源加载配置值。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationRootExtensions.GetDebugView(Microsoft.Extensions.Configuration.IConfigurationRoot,System.Func{Microsoft.Extensions.Configuration.ConfigurationDebugViewContext,System.String})"><summary>
+            生成配置的人类可读视图，显示每个值的来源。
+            </summary><param name="root">配置根对象。</param><param name="processValue">
+            用于处理值的函数，例如隐藏机密。
+            参数：
+              ConfigurationDebugViewContext：当前配置项的上下文。
+              返回：一个字符串值，用于指定为配置节的Value。
+            </param><returns>调试视图。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.GetRequiredSection(Microsoft.Extensions.Configuration.IConfiguration,System.String)"><summary>
+                获取具有指定键的配置子节。
+            </summary><param name="configuration">要枚举的配置。</param><param name="key">配置节的键。</param><returns>一个<see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</returns><remarks>
+                如果未找到具有指定键的匹配子节，则会引发异常。
+            </remarks><exception cref="T:System.InvalidOperationException">不存在键为<paramref name="key" />的节。</exception></member></members>
+</doc>

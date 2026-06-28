@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Options</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`1"><summary>
+    实现 <see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" />。
+    </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`1.#ctor(System.String,System.Action{`0})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ConfigureNamedOptions`1" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`1.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`1.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的配置 <see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`1.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(`0)"><summary>
+        使用<see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />配置<typeparamref name="TOptions" />实例。
+    </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`2"><summary><see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep">依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`2.#ctor(System.String,`1,System.Action{`0,`1})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ConfigureNamedOptions`2" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Name"><summary>
+    获取选项名称。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Dependency"><summary>
+            获取依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Configure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的配置 <see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`2.Configure(`0)"><summary>
+    使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置一个 <typeparamref name="TOptions" /> 实例。
+    </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`3"><summary><see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" /> 的实现。
+    </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖项类型。</typeparam><typeparam name="TDep2">第二个依赖项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`3.#ctor(System.String,`1,`2,System.Action{`0,`1,`2})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ConfigureNamedOptions`3" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Name"><summary>
+    获取选项名称。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Action"><summary>
+    获取配置操作。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Configure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的配置 <see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`3.Configure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`4"><summary>
+            实现 <see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" />。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一依赖类型。</typeparam><typeparam name="TDep2">第二依赖类型。</typeparam><typeparam name="TDep3">第三依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`4.#ctor(System.String,`1,`2,`3,System.Action{`0,`1,`2,`3})"><summary>
+            构造函数。
+            </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Name"><summary>
+        获取选项名称。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Dependency1"><summary>
+        获取第一个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Configure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的配置 <see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`4.Configure(`0)"><summary>
+            使用<see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />配置一个<typeparamref name="TOptions" />实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`5"><summary><see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖项类型。</typeparam><typeparam name="TDep2">第二个依赖项类型。</typeparam><typeparam name="TDep3">第三个依赖项类型。</typeparam><typeparam name="TDep4">第四个依赖项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`5.#ctor(System.String,`1,`2,`3,`4,System.Action{`0,`1,`2,`3,`4})"><summary>
+    构造函数。
+    </summary><param name="name">选项的名称。</param><param name="dependency1">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Dependency1"><summary>
+    获取第一个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Dependency2"><summary>
+    获取第二个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Dependency4"><summary>
+            获取第四个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Configure(System.String,`0)"><summary>
+    如果 <paramref name="name" /> 匹配，则调用已注册的配置<see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Action" />。
+    </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`5.Configure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureNamedOptions`6"><summary>
+            实现 <see cref="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1" />。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam><typeparam name="TDep3">第三个依赖类型。</typeparam><typeparam name="TDep4">第四个依赖类型。</typeparam><typeparam name="TDep5">第五个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`6.#ctor(System.String,`1,`2,`3,`4,`5,System.Action{`0,`1,`2,`3,`4,`5})"><summary>
+            构造函数。
+            </summary><param name="name">选项的名称。</param><param name="dependency1">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="dependency5">第五个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Action"><summary>
+        获取配置操作。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Dependency4"><summary>
+    获取第四个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Dependency5"><summary>
+            获取第五个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Configure(System.String,`0)"><summary>
+    如果 <paramref name="name" /> 匹配，则调用已注册的配置操作 <see cref="P:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Action" />。
+    </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.ConfigureNamedOptions`6.Configure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ConfigureOptions`1"><summary><see cref="T:Microsoft.Extensions.Options.IConfigureOptions`1" />的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ConfigureOptions`1.#ctor(System.Action{`0})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ConfigureOptions`1" /> 的新实例。
+            </summary><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.ConfigureOptions`1.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ConfigureOptions`1.Configure(`0)"><summary>
+            调用已注册的配置 <see cref="P:Microsoft.Extensions.Options.ConfigureOptions`1.Action" />。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.IConfigureNamedOptions`1"><summary>
+            表示配置 <typeparamref name="TOptions" /> 类型的某种东西。
+            </summary><typeparam name="TOptions">正在被配置的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IConfigureNamedOptions`1.Configure(System.String,`0)"><summary>
+            配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.IConfigureOptions`1"><summary>
+            表示配置 <typeparamref name="TOptions" /> 类型的对象。
+            </summary><typeparam name="TOptions">正在被配置的选项类型。</typeparam><remarks>
+            这些在所有 <see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 之前运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.IConfigureOptions`1.Configure(`0)"><summary>
+            配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.IOptions`1"><summary>
+            检索已配置的<typeparamref name="TOptions" />实例。
+            </summary><typeparam name="TOptions">正在请求的选项类型。</typeparam></member><member name="P:Microsoft.Extensions.Options.IOptions`1.Value"><summary>
+            获取默认配置的 <typeparamref name="TOptions" /> 实例。
+            </summary></member><member name="T:Microsoft.Extensions.Options.IOptionsChangeTokenSource`1"><summary>
+            获取一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，用于跟踪选项更改。
+            </summary><typeparam name="TOptions">正在被更改的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IOptionsChangeTokenSource`1.GetChangeToken"><summary>
+            返回一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，可用于注册更改通知回调。
+            </summary><returns>一个更改令牌。</returns></member><member name="P:Microsoft.Extensions.Options.IOptionsChangeTokenSource`1.Name"><summary>
+            获取正在更改的选项实例的名称。
+            </summary></member><member name="T:Microsoft.Extensions.Options.IOptionsFactory`1"><summary>
+            创建 <typeparamref name="TOptions" /> 实例。
+            </summary><typeparam name="TOptions">所请求的选项的类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IOptionsFactory`1.Create(System.String)"><summary>
+            返回一个具有给定 <paramref name="name" /> 的已配置的 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="name">要创建的 <typeparamref name="TOptions" /> 实例的名称。</param><returns>创建的具有给定 <paramref name="name" /> 的 <typeparamref name="TOptions" /> 实例。</returns></member><member name="T:Microsoft.Extensions.Options.IOptionsMonitor`1"><summary>
+            监视 <typeparamref name="TOptions" /> 实例的更改。
+            </summary><typeparam name="TOptions">选项类型。</typeparam></member><member name="P:Microsoft.Extensions.Options.IOptionsMonitor`1.CurrentValue"><summary>
+            获取当前的 <typeparamref name="TOptions" /> 实例，该实例使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />。
+            </summary></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitor`1.Get(System.String)"><summary>
+            返回一个使用给定 <paramref name="name" /> 配置的 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="name"><typeparamref name="TOptions" /> 实例的名称。如果为 <see langword="null" />，则使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />，即空字符串。</param><returns>与给定 <paramref name="name" /> 匹配的 <typeparamref name="TOptions" /> 实例。</returns></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitor`1.OnChange(System.Action{`0,System.String})"><summary>
+    注册一个侦听器，每当指定的 <typeparamref name="TOptions" /> 发生更改时调用。
+    </summary><param name="listener">要在 <typeparamref name="TOptions" /> 发生更改时调用的操作。</param><returns>一个 <see cref="T:System.IDisposable" />，应将其释放以停止侦听更改。</returns></member><member name="T:Microsoft.Extensions.Options.IOptionsMonitorCache`1"><summary>
+            由 <see cref="T:Microsoft.Extensions.Options.IOptionsMonitor`1" /> 用于缓存 <typeparamref name="TOptions" /> 实例。
+            </summary><typeparam name="TOptions">正在请求的选项的类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitorCache`1.GetOrAdd(System.String,System.Func{`0})"><summary>
+            获取命名选项实例，或添加由 <paramref name="createOptions" /> 创建的新实例。
+            </summary><param name="name">选项实例的名称。</param><param name="createOptions">用于创建新实例的函数。</param><returns>选项实例。</returns></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitorCache`1.TryAdd(System.String,`0)"><summary>
+    尝试向缓存添加新选项。
+    </summary><param name="name">选项实例的名称。</param><param name="options">选项实例。</param><returns><see langword="true" /> 如果选项实例被添加；<see langword="false" /> 如果名称已存在。</returns></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitorCache`1.TryRemove(System.String)"><summary>
+            尝试移除一个选项实例。
+            </summary><param name="name">选项实例的名称。</param><returns><see langword="true" /> 如果选项实例已被移除；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Options.IOptionsMonitorCache`1.Clear"><summary>
+            从缓存中清除所有选项实例。
+            </summary></member><member name="T:Microsoft.Extensions.Options.IOptionsSnapshot`1"><summary>
+            用于在请求的生命周期内访问<typeparamref name="TOptions" />的值。
+            </summary><typeparam name="TOptions">选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IOptionsSnapshot`1.Get(System.String)"><summary>
+    返回一个已配置的 <typeparamref name="TOptions" /> 实例，该实例使用给定的 <paramref name="name" />。
+  </summary><param name="name"><typeparamref name="TOptions" /> 实例的名称。如果为 <see langword="null" />，则使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />（空字符串）。</param><returns>与给定 <paramref name="name" /> 匹配的 <typeparamref name="TOptions" /> 实例。</returns></member><member name="T:Microsoft.Extensions.Options.IPostConfigureOptions`1"><summary>
+        表示对 <typeparamref name="TOptions" /> 类型进行配置的对象。
+    </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><remarks>
+        这些在所有 <see cref="T:Microsoft.Extensions.Options.IConfigureOptions`1" /> 之后运行。
+    </remarks></member><member name="M:Microsoft.Extensions.Options.IPostConfigureOptions`1.PostConfigure(System.String,`0)"><summary>
+    配置 <typeparamref name="TOptions" /> 实例。
+    </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.IStartupValidator"><summary>
+            由主机在启动期间用于验证选项。
+            </summary><remarks>
+            通过调用<see cref="M:Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.ValidateOnStart``1(Microsoft.Extensions.Options.OptionsBuilder{``0})" />，可以在启动期间对选项进行验证。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.IStartupValidator.Validate"><summary>
+            调用 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 验证器。
+            </summary><exception cref="T:Microsoft.Extensions.Options.OptionsValidationException">一个或多个 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 在验证时返回失败的 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。</exception></member><member name="T:Microsoft.Extensions.Options.IValidateOptions`1"><summary>
+            验证选项。
+            </summary><typeparam name="TOptions">要验证的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.IValidateOptions`1.Validate(System.String,`0)"><summary>
+            验证指定的命名选项实例（如果<paramref name="name" />为<see langword="null" />，则验证所有）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.Options"><summary>
+            选项的帮助类。
+            </summary></member><member name="F:Microsoft.Extensions.Options.Options.DefaultName"><summary>
+            用于选项实例的默认名称：""。
+            </summary></member><member name="M:Microsoft.Extensions.Options.Options.Create``1(``0)"><summary>
+    创建围绕 <typeparamref name="TOptions" /> 实例的包装器，使其自身作为 <see cref="T:Microsoft.Extensions.Options.IOptions`1" /> 返回。
+    </summary><typeparam name="TOptions">选项类型。</typeparam><param name="options">选项对象。</param><returns>包装后的选项对象。</returns></member><member name="T:Microsoft.Extensions.Options.OptionsBuilder`1"><summary>
+    配置 <typeparamref name="TOptions" /> 实例。
+    </summary><typeparam name="TOptions">所请求的选项类型。</typeparam></member><member name="P:Microsoft.Extensions.Options.OptionsBuilder`1.Name"><summary>
+            获取 <typeparamref name="TOptions" /> 实例的默认名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.OptionsBuilder`1.Services"><summary>
+        获取正在配置的选项的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+    </summary></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+            创建一个新的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />类的实例。
+            </summary><param name="services">用于配置选项的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name"><typeparamref name="TOptions" />实例的默认名称；如果为<see langword="null" />，则使用<see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />。</param></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})"><summary>
+            注册用于配置特定类型选项的操作。
+            </summary><param name="configureOptions">用于配置选项的操作。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" /> 之前运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure``1(System.Action{`0,``0})"><summary>
+            注册用于配置特定类型选项的操作。
+            </summary><typeparam name="TDep">操作所使用的依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" /> 之前运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure``2(System.Action{`0,``0,``1})"><summary>
+            注册用于配置特定选项类型的操作。
+            </summary><typeparam name="TDep1">操作使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作使用的第二个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" /> 之前运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure``3(System.Action{`0,``0,``1,``2})"><summary>
+    注册用于配置特定类型选项的操作。
+    </summary><typeparam name="TDep1">操作使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作使用的第二个依赖项。</typeparam><typeparam name="TDep3">操作使用的第三个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+    这些在所有<see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" />之前运行。
+    </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure``4(System.Action{`0,``0,``1,``2,``3})"><summary>注册一个用于配置特定类型选项的操作。</summary><typeparam name="TDep1">操作所使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作所使用的第二个依赖项。</typeparam><typeparam name="TDep3">操作所使用的第三个依赖项。</typeparam><typeparam name="TDep4">操作所使用的第四个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>这些操作在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" /> 之前运行。</remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure``5(System.Action{`0,``0,``1,``2,``3,``4})"><summary>
+    注册一个用于配置特定类型选项的操作。
+    </summary><typeparam name="TDep1">操作所使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作所使用的第二个依赖项。</typeparam><typeparam name="TDep3">操作所使用的第三个依赖项。</typeparam><typeparam name="TDep4">操作所使用的第四个依赖项。</typeparam><typeparam name="TDep5">操作所使用的第五个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+    这些操作在所有<see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})" />之前运行。
+    </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure(System.Action{`0})"><summary>
+            注册一个用于配置特定选项类型的操作。
+            </summary><param name="configureOptions">用于配置选项的操作。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些在所有<see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" />之后运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure``1(System.Action{`0,``0})"><summary>
+            注册用于对特定类型的选项进行后期配置的操作。
+            </summary><typeparam name="TDep">该操作所使用的依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些操作在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" /> 之后运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure``2(System.Action{`0,``0,``1})"><summary>
+    注册用于后期配置特定类型选项的操作。
+    </summary><typeparam name="TDep1">操作使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作使用的第二个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+    这些将在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" /> 之后运行。
+    </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure``3(System.Action{`0,``0,``1,``2})"><summary>
+    注册用于对特定选项类型进行后期配置的操作。
+    </summary><typeparam name="TDep1">操作使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作使用的第二个依赖项。</typeparam><typeparam name="TDep3">操作使用的第三个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+    这些在所有<see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" />之后运行。
+    </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure``4(System.Action{`0,``0,``1,``2,``3})"><summary>
+            注册一个用于后配置特定选项类型的操作。
+            </summary><typeparam name="TDep1">该操作使用的第一个依赖项。</typeparam><typeparam name="TDep2">该操作使用的第二个依赖项。</typeparam><typeparam name="TDep3">该操作使用的第三个依赖项。</typeparam><typeparam name="TDep4">该操作使用的第四个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些会在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" /> 之后运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.PostConfigure``5(System.Action{`0,``0,``1,``2,``3,``4})"><summary>
+            注册一个用于后期配置特定选项类型的操作。
+            </summary><typeparam name="TDep1">操作所使用的第一个依赖项。</typeparam><typeparam name="TDep2">操作所使用的第二个依赖项。</typeparam><typeparam name="TDep3">操作所使用的第三个依赖项。</typeparam><typeparam name="TDep4">操作所使用的第四个依赖项。</typeparam><typeparam name="TDep5">操作所使用的第五个依赖项。</typeparam><param name="configureOptions">用于配置选项的操作。</param><returns>当前 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns><remarks>
+            这些操作在所有 <see cref="M:Microsoft.Extensions.Options.OptionsBuilder`1.Configure(System.Action{`0})" /> 之后运行。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate(System.Func{`0,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><param name="validation">验证函数。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate(System.Func{`0,System.Boolean},System.String)"><summary>
+    为选项类型注册验证操作。
+    </summary><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的失败消息。</param><returns>当前 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``1(System.Func{`0,``0,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><typeparam name="TDep">验证函数使用的依赖项。</typeparam><param name="validation">验证函数。</param><returns>当前的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``1(System.Func{`0,``0,System.Boolean},System.String)"><summary>
+    为选项类型注册验证操作。
+    </summary><typeparam name="TDep">验证函数所使用的依赖项。</typeparam><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的失败消息。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``2(System.Func{`0,``0,``1,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><param name="validation">验证函数。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``2(System.Func{`0,``0,``1,System.Boolean},System.String)"><summary>
+            为选项类型注册验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的失败消息。</param><returns>当前<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``3(System.Func{`0,``0,``1,``2,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><typeparam name="TDep3">验证函数使用的第三个依赖项。</typeparam><param name="validation">验证函数。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``3(System.Func{`0,``0,``1,``2,System.Boolean},System.String)"><summary>
+            注册选项类型的验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><typeparam name="TDep3">验证函数使用的第三个依赖项。</typeparam><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的错误消息。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``4(System.Func{`0,``0,``1,``2,``3,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><typeparam name="TDep3">验证函数使用的第三个依赖项。</typeparam><typeparam name="TDep4">验证函数使用的第四个依赖项。</typeparam><param name="validation">验证函数。</param><returns>当前<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``4(System.Func{`0,``0,``1,``2,``3,System.Boolean},System.String)"><summary>为选项类型注册验证操作。</summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><typeparam name="TDep3">验证函数使用的第三个依赖项。</typeparam><typeparam name="TDep4">验证函数使用的第四个依赖项。</typeparam><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的失败消息。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``5(System.Func{`0,``0,``1,``2,``3,``4,System.Boolean})"><summary>
+            使用默认失败消息为选项类型注册验证操作。
+            </summary><typeparam name="TDep1">验证函数使用的第一个依赖项。</typeparam><typeparam name="TDep2">验证函数使用的第二个依赖项。</typeparam><typeparam name="TDep3">验证函数使用的第三个依赖项。</typeparam><typeparam name="TDep4">验证函数使用的第四个依赖项。</typeparam><typeparam name="TDep5">验证函数使用的第五个依赖项。</typeparam><param name="validation">验证函数。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsBuilder`1.Validate``5(System.Func{`0,``0,``1,``2,``3,``4,System.Boolean},System.String)"><summary>
+    注册一个用于选项类型的验证操作。
+    </summary><typeparam name="TDep1">第一个由验证函数使用的依赖项。</typeparam><typeparam name="TDep2">第二个由验证函数使用的依赖项。</typeparam><typeparam name="TDep3">第三个由验证函数使用的依赖项。</typeparam><typeparam name="TDep4">第四个由验证函数使用的依赖项。</typeparam><typeparam name="TDep5">第五个由验证函数使用的依赖项。</typeparam><param name="validation">验证函数。</param><param name="failureMessage">验证失败时使用的失败消息。</param><returns>当前的 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</returns></member><member name="T:Microsoft.Extensions.Options.OptionsCache`1"><summary>
+    缓存 <typeparamref name="TOptions" /> 实例。
+    </summary><typeparam name="TOptions">所请求的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.OptionsCache`1.Clear"><summary>
+            从缓存中清除所有选项实例。
+            </summary></member><member name="M:Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(System.String,System.Func{`0})"><summary>
+            获取命名的选项实例，或添加使用 <paramref name="createOptions" /> 创建的新实例。
+            </summary><param name="name">选项实例的名称。</param><param name="createOptions">用于创建新实例的函数。</param><returns>选项实例。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsCache`1.TryGetValue(System.String,`0@)"><summary>
+            获取命名选项实例（如果可用）。
+            </summary><param name="name">选项实例的名称。</param><param name="options">选项实例。</param><returns>如果检索到选项则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsCache`1.TryAdd(System.String,`0)"><summary>
+            尝试向缓存添加一个新选项。
+            </summary><param name="name">选项实例的名称。</param><param name="options">选项实例。</param><returns>如果选项已添加，则为<see langword="true" />；如果名称已存在，则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsCache`1.TryRemove(System.String)"><summary>
+    尝试移除一个选项实例。
+    </summary><param name="name">选项实例的名称。</param><returns>如果移除了任何内容，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Extensions.Options.OptionsFactory`1"><summary><see cref="T:Microsoft.Extensions.Options.IOptionsFactory`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在请求的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.OptionsFactory`1.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IConfigureOptions{`0}},System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IPostConfigureOptions{`0}})"><summary>
+            使用指定的选项配置初始化一个新实例。
+            </summary><param name="setups">要运行的配置操作。</param><param name="postConfigures">要运行的初始化操作。</param></member><member name="M:Microsoft.Extensions.Options.OptionsFactory`1.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IConfigureOptions{`0}},System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IPostConfigureOptions{`0}},System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IValidateOptions{`0}})"><summary>
+            使用指定的选项配置初始化新实例。
+            </summary><param name="setups">要运行的配置操作。</param><param name="postConfigures">要运行的初始化操作。</param><param name="validations">要运行的验证。</param></member><member name="M:Microsoft.Extensions.Options.OptionsFactory`1.Create(System.String)"><summary>
+            返回一个使用给定的 <paramref name="name" /> 配置的 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="name">要创建的 <typeparamref name="TOptions" /> 实例的名称。</param><returns>使用给定的 <paramref name="name" /> 创建的 <typeparamref name="TOptions" /> 实例。</returns><exception cref="T:Microsoft.Extensions.Options.OptionsValidationException">一个或多个 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 在验证创建的 <typeparamref name="TOptions" /> 实例时返回失败的 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。</exception><exception cref="T:System.MissingMethodException"><typeparamref name="TOptions" /> 没有公共的无参数构造函数，或者 <typeparamref name="TOptions" /> 是 <see langword="abstract" />。</exception></member><member name="M:Microsoft.Extensions.Options.OptionsFactory`1.CreateInstance(System.String)"><summary>
+            创建一个类型为 <typeparamref name="TOptions" /> 的新实例。
+            </summary><param name="name">要创建的 <typeparamref name="TOptions" /> 实例的名称。</param><returns>已创建的 <typeparamref name="TOptions" /> 实例。</returns><exception cref="T:System.MissingMethodException"><typeparamref name="TOptions" /> 没有公共的无参数构造函数，或者 <typeparamref name="TOptions" /> 是 <see langword="abstract" />。</exception></member><member name="T:Microsoft.Extensions.Options.OptionsManager`1"><summary>
+    实现 <see cref="T:Microsoft.Extensions.Options.IOptions`1" /> 和 <see cref="T:Microsoft.Extensions.Options.IOptionsSnapshot`1" />。
+    </summary><typeparam name="TOptions">选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.OptionsManager`1.#ctor(Microsoft.Extensions.Options.IOptionsFactory{`0})"><summary>
+            使用指定的选项配置初始化一个新实例。
+            </summary><param name="factory">用于创建选项的工厂。</param></member><member name="P:Microsoft.Extensions.Options.OptionsManager`1.Value"><summary>
+            获取默认配置的 <typeparamref name="TOptions" /> 实例（相当于 <c>Get(Options.DefaultName)</c>）。
+            </summary></member><member name="M:Microsoft.Extensions.Options.OptionsManager`1.Get(System.String)"><summary>
+            根据给定的 <paramref name="name" /> 返回一个已配置的 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="name"><typeparamref name="TOptions" /> 实例的名称。如果为 <see langword="null" />，则使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />（即空字符串）。</param><returns>与给定 <paramref name="name" /> 匹配的 <typeparamref name="TOptions" /> 实例。</returns><exception cref="T:Microsoft.Extensions.Options.OptionsValidationException">一个或多个 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 在验证所创建的 <typeparamref name="TOptions" /> 实例时返回失败的 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。</exception><exception cref="T:System.MissingMethodException"><typeparamref name="TOptions" /> 没有公共的无参数构造函数，或者 <typeparamref name="TOptions" /> 是 <see langword="abstract" />。</exception></member><member name="T:Microsoft.Extensions.Options.OptionsMonitor`1"><summary>
+            实现 <see cref="T:Microsoft.Extensions.Options.IOptionsMonitor`1" />。
+            </summary><typeparam name="TOptions">选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.OptionsMonitor`1.#ctor(Microsoft.Extensions.Options.IOptionsFactory{`0},System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IOptionsChangeTokenSource{`0}},Microsoft.Extensions.Options.IOptionsMonitorCache{`0})"><summary>
+            使用指定的工厂、源和缓存初始化 <see cref="T:Microsoft.Extensions.Options.OptionsMonitor`1" /> 的新实例。
+            </summary><param name="factory">用于创建选项的工厂。</param><param name="sources">用于监听选项实例更改的源。</param><param name="cache">用于存储选项的缓存。</param></member><member name="P:Microsoft.Extensions.Options.OptionsMonitor`1.CurrentValue"><summary>
+            获取选项的当前值（相当于 <c>Get(Options.DefaultName)</c>）。
+            </summary><exception cref="T:Microsoft.Extensions.Options.OptionsValidationException">在验证创建的 <typeparamref name="TOptions" /> 实例时，一个或多个 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 返回失败的 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。</exception><exception cref="T:System.MissingMethodException"><typeparamref name="TOptions" /> 没有公共的无参数构造函数，或者 <typeparamref name="TOptions" /> 是 <see langword="abstract" />。</exception></member><member name="M:Microsoft.Extensions.Options.OptionsMonitor`1.OnChange(System.Action{`0,System.String})"><summary>
+            注册一个侦听器，以便在<typeparamref name="TOptions" />发生更改时调用。
+            </summary><param name="listener">当<typeparamref name="TOptions" />发生更改时要调用的操作。</param><returns>一个<see cref="T:System.IDisposable" />，应释放它以停止侦听更改。</returns></member><member name="M:Microsoft.Extensions.Options.OptionsMonitor`1.Dispose"><summary>
+            移除所有更改注册订阅。
+            </summary></member><member name="T:Microsoft.Extensions.Options.OptionsMonitorExtensions"><summary><see cref="T:Microsoft.Extensions.Options.IOptionsMonitor`1" /> 的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Options.OptionsMonitorExtensions.OnChange``1(Microsoft.Extensions.Options.IOptionsMonitor{``0},System.Action{``0})"><summary>
+            注册一个监听器，当<typeparamref name="TOptions" />发生变化时调用。
+            </summary><typeparam name="TOptions">正在监视的选项实例的类型。</typeparam><param name="monitor">IOptionsMonitor。</param><param name="listener">当<typeparamref name="TOptions" />发生变化时要调用的操作。</param><returns>一个对象，应释放它以停止监听更改。</returns></member><member name="T:Microsoft.Extensions.Options.OptionsValidationException"><summary>
+            表示当选项验证失败时引发的异常。
+            </summary></member><member name="M:Microsoft.Extensions.Options.OptionsValidationException.#ctor(System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})"><summary>
+            创建 <see cref="T:Microsoft.Extensions.Options.OptionsValidationException" /> 的新实例。
+            </summary><param name="optionsName">失败的选项实例的名称。</param><param name="optionsType">失败的选项类型。</param><param name="failureMessages">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.OptionsValidationException.OptionsName"><summary>
+            获取失败的选项实例的名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.OptionsValidationException.OptionsType"><summary>
+            获取失败的选项的类型。
+            </summary></member><member name="P:Microsoft.Extensions.Options.OptionsValidationException.Failures"><summary>
+            获取验证失败。
+            </summary></member><member name="P:Microsoft.Extensions.Options.OptionsValidationException.Message"><summary>
+            获取一个用分号分隔的 <see cref="P:Microsoft.Extensions.Options.OptionsValidationException.Failures" /> 列表。
+            </summary></member><member name="T:Microsoft.Extensions.Options.OptionsValidatorAttribute"><summary>
+            在编译时触发自动生成 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的实现。
+            </summary></member><member name="T:Microsoft.Extensions.Options.OptionsWrapper`1"><summary>
+    包装选项实例。
+    </summary><typeparam name="TOptions">选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.OptionsWrapper`1.#ctor(`0)"><summary>
+            使用要返回的选项实例初始化包装器。
+            </summary><param name="options">要返回的选项实例。</param></member><member name="P:Microsoft.Extensions.Options.OptionsWrapper`1.Value"><summary>
+            获取选项实例。
+            </summary></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`1"><summary><see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" />的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`1.#ctor(System.String,System.Action{`0})"><summary>
+        创建一个新的 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`1" /> 实例。
+    </summary><param name="name">选项的名称。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`1.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`1.Action"><summary>
+            获取初始化操作。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`1.PostConfigure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用注册的初始化 <see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`1.Action" />。
+            </summary><param name="name">要调用的操作的名称。</param><param name="options">初始化中使用的选项。</param></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`2"><summary><see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 的实现。
+    </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep">依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`2.#ctor(System.String,`1,System.Action{`0,`1})"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`2" /> 的新实例。
+    </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`2.Name"><summary>
+    获取选项名称。
+    </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`2.Action"><summary>
+    获取配置操作。
+    </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`2.Dependency"><summary>
+            依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`2.PostConfigure(System.String,`0)"><summary>
+            如果<paramref name="name" />匹配，则调用注册的初始化<see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`2.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`2.PostConfigure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`3"><summary><see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`3.#ctor(System.String,`1,`2,System.Action{`0,`1,`2})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`3" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`3.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`3.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`3.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`3.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`3.PostConfigure(System.String,`0)"><summary>
+    如果 <paramref name="name" /> 匹配，则调用已注册的初始化 <see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`3.Action" />。
+    </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`3.PostConfigure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`4"><summary><see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam><typeparam name="TDep3">第三个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`4.#ctor(System.String,`1,`2,`3,System.Action{`0,`1,`2,`3})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`4" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="dependency">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`4.PostConfigure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的初始化 <see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`4.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`4.PostConfigure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置一个 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`5"><summary>
+            实现 <see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" />。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam><typeparam name="TDep3">第三个依赖类型。</typeparam><typeparam name="TDep4">第四个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`5.#ctor(System.String,`1,`2,`3,`4,System.Action{`0,`1,`2,`3,`4})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`5" /> 的新实例。
+            </summary><param name="name">选项的名称。</param><param name="dependency1">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Name"><summary>
+    获取选项名称。
+    </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Dependency4"><summary>
+            获取第四个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`5.PostConfigure(System.String,`0)"><summary>
+            如果 <paramref name="name" /> 匹配，则调用已注册的初始化 <see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`5.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`5.PostConfigure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.PostConfigureOptions`6"><summary><see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">正在配置的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam><typeparam name="TDep3">第三个依赖类型。</typeparam><typeparam name="TDep4">第四个依赖类型。</typeparam><typeparam name="TDep5">第五个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`6.#ctor(System.String,`1,`2,`3,`4,`5,System.Action{`0,`1,`2,`3,`4,`5})"><summary>初始化 <see cref="T:Microsoft.Extensions.Options.PostConfigureOptions`6" /> 的新实例。</summary><param name="name">选项名称。</param><param name="dependency1">一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="dependency5">第五个依赖项。</param><param name="action">要注册的操作。</param></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Action"><summary>
+            获取配置操作。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Dependency4"><summary>
+    获取第四个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Dependency5"><summary>
+            获取第五个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`6.PostConfigure(System.String,`0)"><summary>
+            如果<paramref name="name" />匹配，则调用已注册的初始化<see cref="P:Microsoft.Extensions.Options.PostConfigureOptions`6.Action" />。
+            </summary><param name="name">正在配置的选项实例的名称。</param><param name="options">要配置的选项实例。</param></member><member name="M:Microsoft.Extensions.Options.PostConfigureOptions`6.PostConfigure(`0)"><summary>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 配置 <typeparamref name="TOptions" /> 实例。
+            </summary><param name="options">要配置的选项实例。</param></member><member name="T:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute"><summary>
+    标记要枚举的字段或属性；每个枚举的对象都会被验证。
+    </summary></member><member name="M:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute" /> 类的新实例。
+            </summary><remarks>
+            对字段或属性使用此构造函数会告知代码生成器为可枚举类型的各个成员生成验证。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute.#ctor(System.Type)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute" /> 类的新实例。
+            </summary><param name="validator">一个实现 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的类型，用于可枚举类型的验证。</param><remarks>
+            将此构造函数用于字段或属性时，会告知代码生成器使用给定的类型来验证可枚举持有的对象。
+            </remarks></member><member name="P:Microsoft.Extensions.Options.ValidateEnumeratedItemsAttribute.Validator"><summary>
+            获取用于验证可枚举对象的类型。
+            </summary></member><member name="T:Microsoft.Extensions.Options.ValidateObjectMembersAttribute"><summary>
+            标记一个字段或属性以进行递归验证。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateObjectMembersAttribute.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateObjectMembersAttribute" /> 类的新实例。
+            </summary><remarks>
+            将此构造函数用于字段或属性会告知代码生成器对该字段/属性类型的各个成员生成验证。
+            </remarks></member><member name="M:Microsoft.Extensions.Options.ValidateObjectMembersAttribute.#ctor(System.Type)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateObjectMembersAttribute" /> 类的新实例。
+            </summary><param name="validator">一个实现 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的类型，用于字段/属性的类型。</param><remarks>
+            对字段或属性使用此构造函数将告知代码生成器使用给定类型来验证该字段或属性所持有的对象。
+            </remarks></member><member name="P:Microsoft.Extensions.Options.ValidateObjectMembersAttribute.Validator"><summary>
+            获取用于验证字段或属性的类型。
+            </summary></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`1"><summary>
+    对 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的实现
+    </summary><typeparam name="TOptions">要验证的选项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`1.#ctor(System.String,System.Func{`0,System.Boolean},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`1" /> 的新实例。
+            </summary><param name="name">选项名称。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`1.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`1.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`1.FailureMessage"><summary>
+    获取在验证失败时要返回的错误。
+    </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`1.Validate(System.String,`0)"><summary>
+            验证一个特定的命名选项实例（当 <paramref name="name" /> 为 null 时验证所有实例）。
+            </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`2"><summary><see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的实现
+    </summary><typeparam name="TOptions">要验证的选项类型。</typeparam><typeparam name="TDep">依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`2.#ctor(System.String,`1,System.Func{`0,`1,System.Boolean},System.String)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`2" /> 的新实例。
+    </summary><param name="name">选项名称。</param><param name="dependency">获取依赖项。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`2.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`2.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`2.FailureMessage"><summary>
+            获取验证失败时返回的错误。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`2.Dependency"><summary>
+            获取依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`2.Validate(System.String,`0)"><summary>
+    验证特定的命名选项实例（如果<paramref name="name" />为 null，则验证所有实例）。
+    </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`3"><summary><see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">要验证的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`3.#ctor(System.String,`1,`2,System.Func{`0,`1,`2,System.Boolean},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`3" /> 的新实例。
+            </summary><param name="name">选项名称。</param><param name="dependency1">第一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`3.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`3.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`3.FailureMessage"><summary>
+            获取验证失败时要返回的错误。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`3.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`3.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`3.Validate(System.String,`0)"><summary>
+            验证特定的命名选项实例（当 <paramref name="name" /> 为 null 时验证所有）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`4"><summary><see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 的实现。
+            </summary><typeparam name="TOptions">要验证的选项类型。</typeparam><typeparam name="TDep1">第一个依赖项类型。</typeparam><typeparam name="TDep2">第二个依赖项类型。</typeparam><typeparam name="TDep3">第三个依赖项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`4.#ctor(System.String,`1,`2,`3,System.Func{`0,`1,`2,`3,System.Boolean},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`4" /> 类的新实例。
+            </summary><param name="name">选项名称。</param><param name="dependency1">第一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.FailureMessage"><summary>
+            获取验证失败时返回的错误。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`4.Dependency3"><summary>
+            获取第三个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`4.Validate(System.String,`0)"><summary>
+            验证特定的命名选项实例（如果 <paramref name="name" /> 为 null，则验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`5"><summary>
+            实现 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /></summary><typeparam name="TOptions">要验证的选项类型。</typeparam><typeparam name="TDep1">第一个依赖类型。</typeparam><typeparam name="TDep2">第二个依赖类型。</typeparam><typeparam name="TDep3">第三个依赖类型。</typeparam><typeparam name="TDep4">第四个依赖类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`5.#ctor(System.String,`1,`2,`3,`4,System.Func{`0,`1,`2,`3,`4,System.Boolean},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`5" /> 的新实例。
+            </summary><param name="name">选项名称。</param><param name="dependency1">第一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.FailureMessage"><summary>
+            获取验证失败时要返回的错误。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Dependency2"><summary>
+            获取第二个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Dependency3"><summary>
+    获取第三个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`5.Dependency4"><summary>
+            获取第四个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`5.Validate(System.String,`0)"><summary>
+            验证特定的命名选项实例（当 <paramref name="name" /> 为 null 时验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptions`6"><summary>
+    实现 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /></summary><typeparam name="TOptions">要验证的选项类型。</typeparam><typeparam name="TDep1">第一个依赖项类型。</typeparam><typeparam name="TDep2">第二个依赖项类型。</typeparam><typeparam name="TDep3">第三个依赖项类型。</typeparam><typeparam name="TDep4">第四个依赖项类型。</typeparam><typeparam name="TDep5">第五个依赖项类型。</typeparam></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`6.#ctor(System.String,`1,`2,`3,`4,`5,System.Func{`0,`1,`2,`3,`4,`5,System.Boolean},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Options.ValidateOptions`6" /> 的新实例。
+            </summary><param name="name">选项名称。</param><param name="dependency1">第一个依赖项。</param><param name="dependency2">第二个依赖项。</param><param name="dependency3">第三个依赖项。</param><param name="dependency4">第四个依赖项。</param><param name="dependency5">第五个依赖项。</param><param name="validation">验证函数。</param><param name="failureMessage">验证失败消息。</param></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Name"><summary>
+            获取选项名称。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Validation"><summary>
+            获取验证函数。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.FailureMessage"><summary>
+            当验证失败时获取要返回的错误。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Dependency1"><summary>
+            获取第一个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Dependency2"><summary>
+    获取第二个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Dependency3"><summary>
+    获取第三个依赖项。
+    </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Dependency4"><summary>
+            获取第四个依赖项。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptions`6.Dependency5"><summary>
+            获取第五个依赖项。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptions`6.Validate(System.String,`0)"><summary>
+            验证指定的命名选项实例（或当<paramref name="name" />为 null 时验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptionsResult"><summary>
+    表示选项验证的结果。
+    </summary></member><member name="F:Microsoft.Extensions.Options.ValidateOptionsResult.Skip"><summary>
+            当验证因名称不匹配而跳过时的结果。
+            </summary></member><member name="F:Microsoft.Extensions.Options.ValidateOptionsResult.Success"><summary>
+            验证成功时的结果。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptionsResult.Succeeded"><summary>
+            获取一个值，该值指示验证是否成功。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptionsResult.Skipped"><summary>
+            获取一个值，该值指示是否运行了验证。
+            </summary><value><see langword="true" /> 如果跳过了验证；<see langword="false" /> 如果运行了验证。
+            </value></member><member name="P:Microsoft.Extensions.Options.ValidateOptionsResult.Failed"><summary>
+            获取一个值，该值指示验证是否失败。
+            </summary><value>
+            如果验证失败，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </value></member><member name="P:Microsoft.Extensions.Options.ValidateOptionsResult.FailureMessage"><summary>
+            获取验证失败的原因描述。
+            </summary></member><member name="P:Microsoft.Extensions.Options.ValidateOptionsResult.Failures"><summary>
+            获取完整的失败列表（可以有多个）。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResult.Fail(System.String)"><summary>
+            返回失败结果。
+            </summary><param name="failureMessage">失败的原因。</param><returns>失败结果。</returns></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResult.Fail(System.Collections.Generic.IEnumerable{System.String})"><summary>
+            返回失败结果。
+            </summary><param name="failures">失败的原因。</param><returns>失败结果。</returns></member><member name="T:Microsoft.Extensions.Options.ValidateOptionsResultBuilder"><summary>
+            构建支持多个错误消息的<see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.#ctor"><summary>
+            创建 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResultBuilder" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.AddError(System.String,System.String)"><summary>
+            向生成器添加新的验证错误。
+            </summary><param name="error">错误消息的内容。</param><param name="propertyName">选项对象中包含错误的属性。</param></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.AddResult(System.ComponentModel.DataAnnotations.ValidationResult)"><summary>
+            将由 <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" /> 实例携带的任何验证错误添加到此实例。
+            </summary><param name="result">要从中附加错误的实例。</param></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.AddResults(System.Collections.Generic.IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult})"><summary>
+            将 <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" /> 实例枚举所携带的任何验证错误添加到此实例。
+            </summary><param name="results">要从中获取错误的枚举。</param></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.AddResult(Microsoft.Extensions.Options.ValidateOptionsResult)"><summary>
+            将 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 实例所携带的所有验证错误添加到当前实例。
+        </summary><param name="result">要从中使用错误的实例。</param></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.Build"><summary>
+            根据提供的数据生成 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。
+            </summary><returns><see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" /> 的新实例。</returns></member><member name="M:Microsoft.Extensions.Options.ValidateOptionsResultBuilder.Clear"><summary>
+            将生成器重置为空状态。
+            </summary></member><member name="T:Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions"><summary>
+            通过 <see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" /> 向 DI 容器添加与配置相关的选项服务的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.ValidateOnStart``1(Microsoft.Extensions.Options.OptionsBuilder{``0})"><summary>
+    在启动时而非运行时强制执行选项验证检查。
+    </summary><typeparam name="TOptions">选项的类型。</typeparam><param name="optionsBuilder">用于配置选项实例的<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />。</param><returns>此<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />，以便可以链式调用其他调用。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions"><summary>
+    向DI容器添加选项服务的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.AddOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加使用选项所需的服务。
+            </summary><param name="services">要将服务添加到的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链接其他调用。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.AddOptionsWithValidateOnStart``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+    添加使用选项所需的服务，并强制在启动时而非运行时进行选项验证检查。
+    </summary><remarks>
+    此方法调用 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.ValidateOnStart``1(Microsoft.Extensions.Options.OptionsBuilder{``0})" /> 扩展方法。
+    </remarks><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">选项实例的名称。</param><returns><see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />，以便可以在其上链接配置调用。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.AddOptionsWithValidateOnStart``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+            添加使用选项所需的服务，并在启动时而不是运行时强制执行选项验证检查。
+            </summary><remarks>
+            此方法调用 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.ValidateOnStart``1(Microsoft.Extensions.Options.OptionsBuilder{``0})" /> 扩展方法。
+            </remarks><typeparam name="TOptions">要配置的选项类型。</typeparam><typeparam name="TValidateOptions"><see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 验证程序类型。</typeparam><param name="services">要向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">选项实例的名称。</param><returns><see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />，以便可以对其链式调用配置方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})"><summary>
+            注册用于配置特定选项类型的操作。
+            注意：这些操作在所有 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.PostConfigure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})" /> 之前运行。
+            </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureOptions">用于配置选项的操作。</param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{``0})"><summary>
+    注册用于配置特定选项类型的操作。
+    注意：这些操作在所有 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.PostConfigure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})" /> 之前运行。
+    </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">选项实例的名称。</param><param name="configureOptions">用于配置选项的操作。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.ConfigureAll``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})"><summary>
+    注册一个用于配置特定选项类型的所有实例的操作
+    </summary><typeparam name="TOptions">要配置的选项类型</typeparam><param name="services">用于添加服务的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /></param><param name="configureOptions">用于配置选项的操作</param><returns>返回<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />以便可以链式调用其他方法</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.PostConfigure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})"><summary>
+            注册用于初始化特定类型选项的操作。注意：这些操作在所有 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})" /> 之后运行。
+            </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureOptions">用于配置选项的操作。</param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 以便可以链式调用其他操作。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.PostConfigure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{``0})"><summary>
+    注册一个用于配置特定选项类型的操作。注意：这些操作在所有<see cref="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})" />之后运行。
+    </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要向其中添加服务的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">选项实例的名称。</param><param name="configureOptions">用于配置选项的操作。</param><returns>返回<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.PostConfigureAll``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})"><summary>
+            注册一个用于后配置所有特定类型选项实例的操作。
+            注意：这些操作在所有 <see cref="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{``0})" /> 之后运行。
+            </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureOptions">用于配置选项的操作。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他调用。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.ConfigureOptions``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    注册一个类型，其所有的 <see cref="T:Microsoft.Extensions.Options.IConfigureOptions`1" />、<see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 和 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 都将被注册。
+    </summary><typeparam name="TConfigureOptions">将配置选项的类型。</typeparam><param name="services">向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.ConfigureOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)"><summary>
+            注册一个类型，该类型的所有 <see cref="T:Microsoft.Extensions.Options.IConfigureOptions`1" />、
+            <see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 和 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 都将被注册。
+            </summary><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureType">将配置选项的类型。</param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.ConfigureOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+            注册一个对象，该对象的所有 <see cref="T:Microsoft.Extensions.Options.IConfigureOptions`1" />、
+            <see cref="T:Microsoft.Extensions.Options.IPostConfigureOptions`1" /> 和 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 都将被注册。
+            </summary><param name="services">要将服务添加到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureInstance">将配置选项的实例。</param><returns>一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链接其他调用。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.AddOptions``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            获取一个选项生成器，该生成器将针对同一<typeparamref name="TOptions" />的Configure调用转发到基础服务集合。
+            </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要向其中添加服务的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>返回<see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />，以便可以链式调用Configure方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.OptionsServiceCollectionExtensions.AddOptions``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+            获取一个选项构建器，它将针对相同名称 <typeparamref name="TOptions" /> 的 Configure 调用转发到底层服务集合。
+            </summary><typeparam name="TOptions">要配置的选项类型。</typeparam><param name="services">要将服务添加到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">选项实例的名称。</param><returns><see cref="T:Microsoft.Extensions.Options.OptionsBuilder`1" />，以便可以在其上链式调用配置方法。</returns></member><member name="P:System.SR.Error_CannotActivateAbstractOrInterface"><summary>无法创建类型'{0}'的实例，因为它是抽象类型或接口。</summary></member><member name="P:System.SR.Error_FailedBinding"><summary>未能将'{0}'转换为类型'{1}'。</summary></member><member name="P:System.SR.Error_FailedToActivate"><summary>无法创建类型 '{0}' 的实例。</summary></member><member name="P:System.SR.Error_MissingParameterlessConstructor"><summary>无法创建类型“{0}”的实例，因为它缺少公共的无参数构造函数。</summary></member><member name="P:System.SR.Error_NoConfigurationServices"><summary>未找到任何 IConfigureOptions&lt;&gt;、IPostConfigureOptions&lt;&gt; 或 IValidateOptions&lt;&gt; 的实现。</summary></member><member name="P:System.SR.Error_NoConfigurationServicesAndAction"><summary>未找到IConfigureOptions&lt;&gt;、IPostConfigureOptions&lt;&gt;或IValidateOptions&lt;&gt;的实现，您是否想要调用Configure&lt;&gt;或PostConfigure&lt;&gt;？</summary></member><member name="M:Microsoft.Extensions.Options.OptionsMonitor`1.Get(System.String)"><summary>
+  返回一个根据给定的 <paramref name="name" /> 配置的 <typeparamref name="TOptions" /> 实例。
+  </summary><param name="name"><typeparamref name="TOptions" /> 实例的名称。如果为 <see langword="null" />，则使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />（即空字符串）。
+  </param><returns>
+  与给定的 <paramref name="name" /> 匹配的 <typeparamref name="TOptions" /> 实例。
+  </returns><exception cref="T:Microsoft.Extensions.Options.OptionsValidationException">
+  一个或多个 <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> 在验证创建的 <typeparamref name="TOptions" /> 实例时返回失败的 <see cref="T:Microsoft.Extensions.Options.ValidateOptionsResult" />。
+  </exception><exception cref="T:System.MissingMethodException"><typeparamref name="TOptions" /> 没有公共的无参数构造函数，或者 <typeparamref name="TOptions" /> 是 <see langword="abstract" /> 的。
+  </exception></member></members>
+</doc>

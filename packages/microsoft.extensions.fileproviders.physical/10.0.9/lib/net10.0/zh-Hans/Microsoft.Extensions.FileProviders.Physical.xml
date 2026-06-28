@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.FileProviders.Physical</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters"><summary>
+    指定文件或目录的筛选行为。
+    </summary></member><member name="F:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters.Sensitive"><summary>
+    相当于 <c>DotPrefixed | Hidden | System</c>。当名称以句点开头，或者在 <see cref="P:System.IO.FileSystemInfo.Attributes" /> 中设置了 <see cref="F:System.IO.FileAttributes.Hidden" /> 或 <see cref="F:System.IO.FileAttributes.System" /> 时，排除这些文件和目录。
+    </summary></member><member name="F:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters.DotPrefixed"><summary>
+            排除名称以句点开头的文件和目录。
+            </summary></member><member name="F:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters.Hidden"><summary>
+            当 <see cref="F:System.IO.FileAttributes.Hidden" /> 设置于 <see cref="P:System.IO.FileSystemInfo.Attributes" /> 时，排除文件和目录。
+            </summary></member><member name="F:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters.System"><summary>
+            当 <see cref="F:System.IO.FileAttributes.System" /> 被设置于 <see cref="P:System.IO.FileSystemInfo.Attributes" /> 时，排除文件和目录。
+            </summary></member><member name="F:Microsoft.Extensions.FileProviders.Physical.ExclusionFilters.None"><summary>
+    不排除任何文件。
+    </summary></member><member name="T:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo"><summary>
+            表示物理文件系统上的一个目录。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.#ctor(System.IO.DirectoryInfo)"><summary>
+            初始化一个 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo" /> 实例，该实例包装了一个 <see cref="T:System.IO.DirectoryInfo" /> 实例。
+            </summary><param name="info">要表示的目录。</param></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.Exists"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.Length"><summary>
+            获取一个始终为 -1 的值。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.PhysicalPath"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.Name"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.LastModified"><summary>
+            获取目录上次写入的时间。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.IsDirectory"><summary>
+            获取一个始终为 <see langword="true" /> 的值。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.CreateReadStream"><summary>
+            始终引发异常，因为目录不支持读取流。
+            </summary><exception cref="T:System.InvalidOperationException">在所有情况下。</exception><returns>从不返回。</returns></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalDirectoryInfo.GetEnumerator"><inheritdoc /></member><member name="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo"><summary>
+            表示物理文件系统上的一个文件。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.#ctor(System.IO.FileInfo)"><summary>
+            初始化一个 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo" /> 的实例，它包装了一个 <see cref="T:System.IO.FileInfo" /> 的实例。
+            </summary><param name="info">要包装的 <see cref="T:System.IO.FileInfo" />。</param></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.Exists"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.Length"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.PhysicalPath"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.Name"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.LastModified"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.IsDirectory"><summary>
+            获取一个始终为 <see langword="false" /> 的值。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.CreateReadStream"><inheritdoc /></member><member name="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher"><summary>
+            监视物理文件系统的更改，并在文件被创建、更改、重命名或删除时触发
+            <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 上的事件。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.#ctor(System.String,System.IO.FileSystemWatcher,System.Boolean)"><summary>
+            初始化一个 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher" /> 实例，用于监视 <paramref name="root" /> 中的文件。
+            包装了一个 <see cref="T:System.IO.FileSystemWatcher" /> 实例。
+            </summary><param name="root">监视器的根目录。</param><param name="fileSystemWatcher">被包装的正在监视 <paramref name="root" /> 的监视器。</param><param name="pollForChanges">
+            如果为 <see langword="true" />，则轮询器使用轮询来触发由
+            <see cref="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.CreateFileChangeToken(System.String)" /> 创建的
+            <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实例。
+            </param></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.#ctor(System.String,System.IO.FileSystemWatcher,System.Boolean,Microsoft.Extensions.FileProviders.Physical.ExclusionFilters)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher" /> 的一个实例，该实例监视 <paramref name="root" /> 中的文件。包装一个 <see cref="T:System.IO.FileSystemWatcher" /> 的实例。
+    </summary><param name="root">监视器的根目录。</param><param name="fileSystemWatcher">正在监视 <paramref name="root" /> 的包装监视器。</param><param name="pollForChanges">
+    如果为 <see langword="true" />，则轮询器使用轮询来触发由 <see cref="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.CreateFileChangeToken(System.String)" /> 创建的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实例。
+    </param><param name="filters">指定排除哪些文件或目录。对这些文件或目录的更改通知不会引发。</param></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.CreateFileChangeToken(System.String)"><summary>
+        为所有与 <paramref name="filter" /> 匹配的文件和目录创建一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 实例。
+    </summary><param name="filter">用于监视的文件和目录的通配符模式。</param><returns>一个更改令牌，用于匹配筛选条件的所有文件。</returns><remarks>
+        通配符模式相对于构造函数 <see cref="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.#ctor(System.String,System.IO.FileSystemWatcher,System.Boolean)" /> 中给定的根目录。通配符模式由 <see cref="T:Microsoft.Extensions.FileSystemGlobbing.Matcher" /> 解释。
+    </remarks><exception cref="T:System.ArgumentNullException"><paramref name="filter" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.Dispose"><summary>
+    释放提供程序。释放提供程序之后，更改令牌可能不会触发。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher.Dispose(System.Boolean)"><summary>
+    释放提供程序。
+    </summary><param name="disposing"><c>true</c> 是从 <see cref="M:System.IDisposable.Dispose" /> 调用的。</param></member><member name="T:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken"><summary>
+            一个轮询文件系统更改的更改令牌。
+            </summary><remarks><para>轮询每4秒发生一次。</para><para>此更改令牌不会引发任何更改回调。调用者应监视<see cref="P:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.HasChanged" />从<see langword="false" />变为<see langword="true" />，并在发生这种情况后释放令牌。</para></remarks></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.#ctor(System.IO.FileInfo)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken" /> 的新实例，该实例根据 <see cref="P:System.IO.FileSystemInfo.LastWriteTimeUtc" /> 确定的变化来轮询指定的文件。
+            </summary><param name="fileInfo">要轮询的 <see cref="T:System.IO.FileInfo" />。</param></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.ActiveChangeCallbacks"><summary>
+            获取一个始终为<see langword="false" />的值。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.HasChanged"><summary>
+        获取一个值，该值指示自创建更改令牌以来文件是否已更改。
+    </summary><remarks>
+        一旦文件发生更改，此值始终为 <see langword="true" />。更改令牌过期后不应重复使用。当调用者发现 <see cref="P:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.HasChanged" /> 为 true 时，应丢弃此实例。
+    </remarks></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)"><summary>
+    不实际注册回调。
+    </summary><param name="callback">此参数被忽略。</param><param name="state">此参数被忽略。</param><returns>一个在释放时无操作的可释放对象。</returns></member><member name="T:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken"><summary>
+            一个基于轮询的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，用于通配符模式。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken.ActiveChangeCallbacks"><inheritdoc /></member><member name="P:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken.HasChanged"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken.GetLastWriteUtc(System.String)"><summary>
+            获取指定 <paramref name="path" /> 文件的最后写入时间。
+            </summary><param name="path">根相对路径。</param><returns>文件最后修改的 <see cref="T:System.DateTime" />。</returns></member><member name="T:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents"><summary>
+            表示物理文件目录的内容。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents" /> 的一个实例。
+            </summary><param name="directory">要表示的目录。</param></member><member name="M:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents.#ctor(System.String,Microsoft.Extensions.FileProviders.Physical.ExclusionFilters)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents" /> 的一个实例。
+            </summary><param name="directory">要表示的目录。</param><param name="filters">指定哪些文件或目录被排除在枚举之外。</param></member><member name="P:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents.Exists"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.Internal.PhysicalDirectoryContents.GetEnumerator"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.#ctor(System.String)"><summary>
+            在给定的根目录处初始化 PhysicalFileProvider 的新实例。
+            </summary><param name="root">根目录。这应该是一个绝对路径。</param></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.#ctor(System.String,Microsoft.Extensions.FileProviders.Physical.ExclusionFilters)"><summary>
+            在指定的根目录下初始化 PhysicalFileProvider 的新实例。
+            </summary><param name="root">根目录。应为绝对路径。</param><param name="filters">指定排除哪些文件或目录。</param></member><member name="P:Microsoft.Extensions.FileProviders.PhysicalFileProvider.UsePollingFileWatcher"><summary>
+            获取或设置一个值，该值决定此 <see cref="T:Microsoft.Extensions.FileProviders.PhysicalFileProvider" /> 实例是否使用轮询来确定文件更改。
+            </summary><value>
+            此属性的默认值由名为 <c>DOTNET_USE_POLLING_FILE_WATCHER</c> 的环境变量的值决定。
+            当 <see langword="true" /> 或 <c>1</c> 时，此属性默认为 <see langword="true" />；否则默认为 <see langword="false" />。
+            </value><remarks>
+            默认情况下，<see cref="T:Microsoft.Extensions.FileProviders.PhysicalFileProvider" /> 使用 <see cref="T:System.IO.FileSystemWatcher" /> 来监听文件更改事件，用于 <see cref="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Watch(System.String)" />。
+            在某些情况下（如挂载的驱动器），<see cref="T:System.IO.FileSystemWatcher" /> 无效。需要轮询才能有效监视文件更改。
+            </remarks><seealso cref="P:Microsoft.Extensions.FileProviders.PhysicalFileProvider.UseActivePolling" /></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Dispose"><summary>
+            释放提供程序。释放提供程序后，更改令牌可能不会触发。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Dispose(System.Boolean)"><summary>
+            释放提供程序。
+            </summary><param name="disposing">如果从 <see cref="M:System.IDisposable.Dispose" /> 中调用，则为 <c>true</c>。</param></member><member name="P:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Root"><summary>
+            获取此实例的根目录。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.GetFileInfo(System.String)"><summary>
+            通过直接将路径段映射到物理目录，定位给定路径处的文件。
+            </summary><param name="subpath">根目录下的路径。</param><returns>文件信息。调用方必须检查<see cref="P:Microsoft.Extensions.FileProviders.IFileInfo.Exists" />属性。</returns></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.GetDirectoryContents(System.String)"><summary>
+                枚举指定路径下的目录（如果存在）。
+            </summary><param name="subpath">根目录下的路径。开头的斜杠将被忽略。</param><returns>
+                目录的内容。
+            </returns><remarks><para>调用者必须检查 <see cref="P:Microsoft.Extensions.FileProviders.IDirectoryContents.Exists" /> 属性。</para><para>如果 <paramref name="subpath" /> 是绝对路径，目录不存在，或 <paramref name="subpath" /> 包含无效字符，则返回 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" />。</para></remarks></member><member name="P:System.SR.Argument_InvalidOffLen"><summary>偏移量和长度超出了数组的界限，或者计数大于从索引到源集合末尾的元素数量。</summary></member><member name="P:System.SR.ArgumentOutOfRange_NeedNonNegNum"><summary>需要非负数。</summary></member><member name="P:System.SR.Error_FileSystemWatcherRequiredWithoutPolling"><summary>当 pollForChanges 为 false 时，fileSystemWatcher 参数必须为非 null。</summary></member><member name="P:System.SR.CannotCreateStream"><summary>无法为目录创建流。</summary></member><member name="P:System.SR.CannotModifyWhenFileWatcherInitialized"><summary>一旦文件监视器已初始化，便无法修改{0}。</summary></member><member name="P:System.SR.Cryptography_HashAlgorithmNameNullOrEmpty"><summary>哈希算法名称不能为 null 或空。</summary></member><member name="P:System.SR.UnexpectedFileSystemInfo"><summary>意外的 FileSystemInfo 类型</summary></member><member name="P:System.SR.FileSystemWatcher_PlatformNotSupported"><summary>此平台不支持类型 '{0}'，请改用轮询。</summary></member><member name="M:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken" /> 的新实例。
+            </summary><param name="root">文件系统的根目录。</param><param name="pattern">要监视的模式。</param></member><member name="P:Microsoft.Extensions.FileProviders.PhysicalFileProvider.UseActivePolling"><summary>
+            获取或设置一个值，该值确定此 <see cref="T:Microsoft.Extensions.FileProviders.PhysicalFileProvider" /> 实例是否主动轮询文件更改。
+            </summary><value><see langword="true" /> 表示由 <see cref="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Watch(System.String)" /> 返回的 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> 主动轮询文件更改
+            （<see cref="P:Microsoft.Extensions.Primitives.IChangeToken.ActiveChangeCallbacks" /> 将为 <see langword="true" />），而不是被动轮询。
+            此属性的默认值由名为 <c>DOTNET_USE_POLLING_FILE_WATCHER</c> 的环境变量的值决定。
+            当该环境变量为 <see langword="true" /> 或 <c>1</c> 时，此属性默认为 <see langword="true" />；否则为 <see langword="false" />。
+            </value><remarks><para>
+            此属性仅在设置了 <see cref="P:Microsoft.Extensions.FileProviders.PhysicalFileProvider.UsePollingFileWatcher" /> 时有效。
+            </para></remarks></member><member name="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Watch(System.String)"><summary><para>为指定的 <paramref name="filter" /> 创建一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。</para><para>通配符模式由 <see cref="T:Microsoft.Extensions.FileSystemGlobbing.Matcher" /> 进行解释。</para></summary><param name="filter">
+            用于确定要监视哪些文件或文件夹的筛选字符串。示例：**/*.cs, *.*,
+            subFolder/**/*.cshtml。
+            </param><returns>
+            一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，当匹配 <paramref name="filter" /> 的文件被添加、修改或删除时会收到通知。如果 <paramref name="filter" /> 包含无效的筛选字符，或者 <paramref name="filter" /> 是绝对路径或超出构造函数 <see cref="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.#ctor(System.String)" /> 指定的根目录，则返回 <see cref="T:Microsoft.Extensions.FileProviders.NullChangeToken" />。
+            </returns></member><member name="T:Microsoft.Extensions.FileProviders.PhysicalFileProvider"><summary>
+            使用磁盘文件系统查找文件。
+            </summary><remarks>
+            当环境变量 "DOTNET_USE_POLLING_FILE_WATCHER" 设置为 "1" 或 "true" 时，对
+            <see cref="M:Microsoft.Extensions.FileProviders.PhysicalFileProvider.Watch(System.String)" /> 的调用将使用 <see cref="T:Microsoft.Extensions.FileProviders.Physical.PollingFileChangeToken" />。
+            </remarks></member></members>
+</doc>

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Autofac.Pooling</name>
+    </assembly>
+    <members><member name="T:Autofac.Pooling.AutofacPooledObjectPolicy`1"><summary>
+            以Autofac方式提供在池中创建/返回对象所需的<see cref="T:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1" />。
+            </summary><typeparam name="TPooledObject">被池化的对象类型。</typeparam></member><member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.#ctor(Autofac.Core.Service,Autofac.ILifetimeScope,Autofac.Pooling.IPooledRegistrationPolicy{`0})"><summary>
+        初始化 <see cref="T:Autofac.Pooling.AutofacPooledObjectPolicy`1" /> 类的新实例。
+    </summary><param name="poolInstanceService">用于解析池化项新实例的池化实例服务。</param><param name="poolOwningScope">池的所属作用域。</param><param name="registrationPolicy">池的注册策略。</param></member><member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Create"><inheritdoc /></member><member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Return(`0)"><inheritdoc /></member><member name="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1"><summary>
+            提供默认的<see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" />。
+            </summary><typeparam name="TPooledObject">被池化的对象的类型。</typeparam></member><member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor"><summary>
+                初始化 <see cref="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1" /> 类的新实例。
+            </summary></member><member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor(System.Int32)"><summary>
+            初始化 <see cref="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1" /> 类的新实例。
+            </summary><param name="maximumRetained">池中应保留的最大实例数。</param></member><member name="P:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.MaximumRetained"><inheritdoc /></member><member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})"><inheritdoc /></member><member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Return(`0)"><inheritdoc /></member><member name="T:Autofac.Pooling.IPooledComponent"><summary>
+            实现此接口的组件知道它们是被池化的，因此当从池中检索时，
+            以及归还到池中时会收到通知。
+            </summary></member><member name="M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})"><summary>当从此池中获取此实例时调用。使用提供的 <see cref="T:Autofac.IComponentContext" /> 检索到的任何依赖项都必须在 <see cref="M:Autofac.Pooling.IPooledComponent.OnReturnToPool" /> 中丢弃，否则可能发生内存泄漏。</summary><param name="context">当前解析请求的组件上下文。</param><param name="parameters">解析请求的参数。</param></member><member name="M:Autofac.Pooling.IPooledComponent.OnReturnToPool"><summary><para>
+             当此实例被返回到池中时调用。在此方法中应丢弃在<see cref="M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})" />中检索到的任何依赖项。
+             </para><para>
+             如果已达到最大池容量（或自定义<see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" />决定不将实例返回到池中），则会调用此方法，但随后该对象将不会放回池中（并且如果组件实现了<see cref="T:System.IDisposable" />，可能会被释放）。
+             </para></summary></member><member name="T:Autofac.Pooling.IPooledRegistrationPolicy`1"><summary>
+            定义自定义池注册策略的接口，该策略定义了从池中检索实例时发生的情况，以及将实例返回到池时发生的情况。
+            </summary><typeparam name="TPooledObject">正在池化的对象类型。</typeparam></member><member name="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained"><summary>
+        获取一个值，该值指示池中将保留的最大项数。这不是对可创建对象数量的限制，而是超过该阈值后，任何返回到池的对象都将被丢弃。
+    </summary></member><member name="M:Autofac.Pooling.IPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})"><summary>
+    当请求<typeparamref name="TPooledObject" />的实例时调用。策略可以调用<paramref name="getFromPool" />从池中检索实例。同样，它也可以决定忽略池，直接返回自定义实例。
+  </summary><param name="context">当前组件上下文。</param><param name="parameters">访问池的解析请求的参数集。</param><param name="getFromPool">从底层对象池中检索项目的回调。</param><returns>来自池中的<typeparamref name="TPooledObject" />实例或自定义实例。</returns></member><member name="T:Autofac.Pooling.PoolActivator`1"><summary>
+            一个激活器，用于创建支持池化注册的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" />。
+            </summary><typeparam name="TLimit">
+            池中对象的限制类型。
+            </typeparam></member><member name="M:Autofac.Pooling.PoolActivator`1.#ctor(Autofac.Core.Service,System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{`0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})"><summary>
+            初始化 <see cref="T:Autofac.Pooling.PoolActivator`1" /> 类的新实例。
+            </summary><param name="pooledInstanceService">
+            用于解析池化注册的新实例的服务。
+            </param><param name="policyFactory">
+            一个工厂，返回要使用的策略，在构建池时调用。
+            </param><param name="providerFactory">
+            一个可选工厂，返回创建后备池的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />，在构建池时调用。当为 <see langword="null" /> 时，使用默认的 <see cref="T:Microsoft.Extensions.ObjectPool.DefaultObjectPoolProvider" />，其大小由 <see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" /> 决定。
+            </param><remarks>
+            这两个工厂在解析期间调用一次，因此 <see cref="T:Autofac.IComponentContext" /> 可用于解析依赖项。
+            </remarks><exception cref="T:System.ArgumentNullException">
+            当 <paramref name="pooledInstanceService" /> 或 <paramref name="policyFactory" /> 为 <see langword="null" /> 时抛出。
+            </exception></member><member name="P:Autofac.Pooling.PoolActivator`1.LimitType"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolActivator`1.Dispose"><inheritdoc /></member><member name="T:Autofac.Pooling.PooledInstanceContext`1"><summary>
+            将已解析的对象池与用于构建它的策略相关联。
+            </summary><typeparam name="TLimit">
+            池中对象的限制类型。
+            </typeparam><remarks>
+            策略在构建池时创建，并通过此包装器与获取端激活器共享，因此双方使用相同的策略实例。
+            </remarks></member><member name="M:Autofac.Pooling.PooledInstanceContext`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},Autofac.Pooling.IPooledRegistrationPolicy{`0})"><summary>
+            初始化 <see cref="T:Autofac.Pooling.PooledInstanceContext`1" /> 类的新实例。
+            </summary><param name="pool">
+            对象池。
+            </param><param name="policy">
+            已解析的注册策略。
+            </param></member><member name="P:Autofac.Pooling.PooledInstanceContext`1.Pool"><summary>
+            获取对象池。
+            </summary></member><member name="P:Autofac.Pooling.PooledInstanceContext`1.Policy"><summary>
+            获取已解析的注册策略，该策略在池创建和检索之间共享。
+            </summary></member><member name="T:Autofac.Pooling.PooledInstanceTracker`1"><summary>
+    一个跟踪类，当被释放时会将包装的实例返回到提供的池中。
+    </summary><typeparam name="TPooledObject">被池化的对象的类型。</typeparam></member><member name="M:Autofac.Pooling.PooledInstanceTracker`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},`0)"><summary>
+    初始化 <see cref="T:Autofac.Pooling.PooledInstanceTracker`1" /> 类的一个新实例。
+    </summary><param name="pool">池。</param><param name="instance">要包装的实例。</param></member><member name="P:Autofac.Pooling.PooledInstanceTracker`1.Instance"><summary>
+    获取包装的实例。
+    </summary></member><member name="M:Autofac.Pooling.PooledInstanceTracker`1.Dispose"><summary>
+        释放容器，将实例返回到池中。
+    </summary></member><member name="P:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Phase"><inheritdoc /></member><member name="M:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Execute(Autofac.Core.Resolving.Pipeline.ResolveRequestContext,System.Action{Autofac.Core.Resolving.Pipeline.ResolveRequestContext})"><inheritdoc /></member><member name="T:Autofac.Pooling.PooledLifetime"><summary>
+            生命周期包装器，用于帮助我们检测是否已在池化配置中完成注册。
+            </summary></member><member name="T:Autofac.Pooling.PoolGetActivator`1"><summary>
+            激活器，用于解析对象池并从池中检索对象，而不是创建新实例。
+            </summary><typeparam name="TLimit">池中对象的限制类型。</typeparam></member><member name="P:Autofac.Pooling.PoolGetActivator`1.LimitType"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolGetActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolGetActivator`1.Dispose"><inheritdoc /></member><member name="T:Autofac.Pooling.PoolService"><summary>
+            定义一个用于访问 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 的服务，确保每个池化项注册获得不同的池。
+            </summary></member><member name="M:Autofac.Pooling.PoolService.#ctor(Autofac.Core.IComponentRegistration)"><summary>
+            初始化 <see cref="T:Autofac.Pooling.PoolService" /> 类的新实例。
+            </summary><param name="pooledItemRegistration">池化项的注册。</param></member><member name="P:Autofac.Pooling.PoolService.Description"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolService.Equals(Autofac.Pooling.PoolService)"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolService.Equals(System.Object)"><inheritdoc /></member><member name="M:Autofac.Pooling.PoolService.GetHashCode"><inheritdoc /></member><member name="T:Autofac.Pooling.RegistrationExtensions"><summary>
+    提供用于设置池化实例的注册方法。
+    </summary></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2})"><summary>
+            配置组件，使得在单个<see cref="T:Autofac.ILifetimeScope" />内的每个依赖组件或手动解析都共享一个从池中获取的实例，并在作用域结束时将其返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><remarks><para>
+            池最多保留处理器数量两倍（<see cref="P:System.Environment.ProcessorCount" /> x 2）的实例。超出此数量的请求实例将被释放或丢弃，而不是保留。
+            </para><para>
+            要在从池中获取或返回实例时运行行为，请在组件上实现<see cref="T:Autofac.Pooling.IPooledComponent" />，或使用接受自定义<see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" />的重载。
+            </para></remarks><returns>
+            注册构建器，以允许进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />为<see langword="null" />时抛出。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32)"><summary>
+        配置组件，使得在单个 <see cref="T:Autofac.ILifetimeScope" /> 内的每个依赖组件或手动解析共享一个来自池的实例，并在作用域结束时将其返回池中。
+    </summary><typeparam name="TLimit">
+        注册限制类型。
+    </typeparam><typeparam name="TActivatorData">
+        激活器数据类型。
+    </typeparam><typeparam name="TSingleRegistrationStyle">
+        注册样式。
+    </typeparam><param name="registration">
+        要配置的注册。
+    </param><param name="maximumRetainedInstances">
+        池中保留的最大实例数。
+    </param><remarks><para>
+            池最多保留 <paramref name="maximumRetainedInstances" /> 个实例。超过此数量的请求实例将被释放或丢弃，而不是保留。
+        </para><para>
+            若要在从池中取出或返回实例时运行行为，请在组件上实现 <see cref="T:Autofac.Pooling.IPooledComponent" />，或使用接受自定义 <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" /> 的重载。
+        </para></remarks><returns>
+        注册构建器，以进行进一步配置。
+    </returns><exception cref="T:System.ArgumentNullException">
+        当 <paramref name="registration" /> 为 <see langword="null" /> 时抛出。
+    </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0})"><summary>
+            配置组件，使得在同一个<see cref="T:Autofac.ILifetimeScope" />中的每个依赖组件或手动解析共享一个从自定义策略管理的池中获取的实例，并在作用域结束时将其放回池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="poolPolicy">
+            控制池行为的自定义策略。
+            </param><remarks><para>
+            该策略提供了对从池中检索实例方式的细粒度控制，包括是否将实例放回池中。
+            </para><para>
+            池最多保留<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" />个实例。超出此数量的请求实例将被释放或丢弃，而不是保留。
+            </para></remarks><returns>
+            注册构建器，以允许进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />为<see langword="null" />时引发。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}})"><summary>
+        配置组件，使得在单个<see cref="T:Autofac.ILifetimeScope" />内的每个依赖组件或手动解析共享一个从由提供的工厂策略管理的池中获取的实例，并在作用域结束时将其返回到池中。
+    </summary><typeparam name="TLimit">
+        注册限制类型。
+    </typeparam><typeparam name="TActivatorData">
+        激活器数据类型。
+    </typeparam><typeparam name="TSingleRegistrationStyle">
+        注册样式。
+    </typeparam><param name="registration">
+        要配置的注册。
+    </param><param name="policyFactory">
+        返回要使用的策略的工厂，在池构建时调用。
+    </param><remarks><para>
+            工厂使用当前<see cref="T:Autofac.IComponentContext" />调用，因此策略可以作为组件解析并使其依赖项由容器管理（例如，<c>ctx =&gt; ctx.Resolve&lt;IMyPolicy&gt;()</c>）。
+        </para><para>
+            池最多保留工厂返回的<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" />值。超过该值的实例被释放或丢弃，而不是保留。
+        </para></remarks><returns>
+        注册构建器，以允许进一步配置。
+    </returns><exception cref="T:System.ArgumentNullException">
+        当<paramref name="registration" />或<paramref name="policyFactory" />为<see langword="null" />时抛出。
+    </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})"><summary>
+            配置组件，以便在单个<see cref="T:Autofac.ILifetimeScope" />中，每个依赖组件或手动解析共享一个从池中获取的实例，该池的存储和逐出由自定义的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />控制，并在作用域结束时将实例返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="providerFactory">
+            一个工厂，返回创建后备池的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />，在构建池时调用一次。
+            </param><remarks><para>
+            该工厂被调用一次，从池所有者（根）作用域解析，因此它可以从<see cref="T:Autofac.IComponentContext" />解析依赖项（例如，<c>ctx =&gt; ctx.Resolve&lt;ObjectPoolProvider&gt;()</c>）。Autofac仍然拥有池化实例和池化回调的构造；提供者仅控制实例的存储位置和逐出时间。
+            </para><para>
+            由于提供者拥有大小调整和逐出控制，<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" />不会调整池的大小。池必须是线程安全的，因为它在所有生命周期作用域和线程之间共享。
+            </para><para>
+            如果池实现了<see cref="T:System.IDisposable" />，容器将在关闭时释放它。由于<see cref="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Return(`0)" />不报告结果且没有逐出回调，池负责释放在返回时拒绝或异步逐出的实例。
+            </para></remarks><returns>
+            注册构建器，以启用进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />或<paramref name="providerFactory" />为<see langword="null" />时抛出。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})"><summary>
+    配置组件，使得在单个<see cref="T:Autofac.ILifetimeScope" />中的每个依赖组件或手动解析共享同一个从池中获取的实例，该池的行为由自定义策略控制，其存储和驱逐由自定义的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />控制，并在作用域结束时将实例返还给池。
+  </summary><typeparam name="TLimit">
+    注册限制类型。
+  </typeparam><typeparam name="TActivatorData">
+    激活器数据类型。
+  </typeparam><typeparam name="TSingleRegistrationStyle">
+    注册样式。
+  </typeparam><param name="registration">
+    要配置的注册。
+  </param><param name="policyFactory">
+    返回要使用的策略的工厂，在构建池时调用。
+  </param><param name="providerFactory">
+    返回创建后备池的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />的工厂，在构建池时调用一次。
+  </param><remarks><para>
+      两个工厂都只调用一次，从拥有池的（根）作用域解析，因此它们可以从<see cref="T:Autofac.IComponentContext" />解析依赖项。策略控制如何从池中检索和返回实例；提供者控制实例的存储位置和驱逐时机。Autofac仍然拥有池化实例的构造和池化回调。
+    </para><para>
+      由于提供者拥有大小调整和驱逐功能，<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" />并不调整池的大小。池必须是线程安全的，因为它在所有生命周期作用域和线程之间共享。
+    </para><para>
+      如果池实现了<see cref="T:System.IDisposable" />，容器会在关闭时释放它。由于<see cref="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Return(`0)" />不报告结果且没有驱逐回调，池负责处理它在返回时拒绝的实例或异步驱逐的实例的释放。
+    </para></remarks><returns>
+    注册构建器，以启用进一步配置。
+  </returns><exception cref="T:System.ArgumentNullException">
+    当<paramref name="registration" />、<paramref name="policyFactory" />或<paramref name="providerFactory" />为<see langword="null" />时抛出。
+  </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Object[])"><summary>
+            配置组件，使得在标记有这些标签中的任意一个的<see cref="T:Autofac.ILifetimeScope" />内，每个依赖组件或手动解析都共享从池中获取的一个实例，并在作用域结束时将该实例返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="lifetimeScopeTags">
+            标识匹配的生存期范围的标记。
+            </param><remarks><para>
+            嵌套在匹配作用域下方的作用域中的依赖组件共享该作用域的实例。
+            </para><para>
+            池最多保留处理器计数（<see cref="P:System.Environment.ProcessorCount" /> x 2）的两倍实例数。超出该数量的请求实例将被释放或丢弃，而不是保留。
+            </para><para>
+            要在从池中获取实例或将实例返回到池时运行行为，请在组件上实现<see cref="T:Autofac.Pooling.IPooledComponent" />，或使用接受自定义<see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" />的重载。
+            </para></remarks><returns>
+            注册构建器，用于进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />为<see langword="null" />时抛出。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，当层次结构中不存在标记有<paramref name="lifetimeScopeTags" />中任一标记的作用域时抛出。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32,System.Object[])"><summary>
+            配置组件，使得在带有这些标记之一的<see cref="T:Autofac.ILifetimeScope" />中的每个依赖组件或手动解析共享一个从池中获取的实例，并在作用域结束时将其返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="maximumRetainedInstances">
+            池中保留的最大实例数。
+            </param><param name="lifetimeScopeTags">
+            标识匹配生存期作用域的标记。
+            </param><remarks><para>
+            在匹配作用域下方嵌套的作用域中的依赖组件共享该作用域的实例。
+            </para><para>
+            池最多保留<paramref name="maximumRetainedInstances" />个实例。请求超过该数量的实例将被释放或丢弃，而不是保留。
+            </para><para>
+            要在实例从池中取出或返回池中时运行行为，请在组件上实现<see cref="T:Autofac.Pooling.IPooledComponent" />，或使用接受自定义<see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1" />的重载。
+            </para></remarks><returns>
+            注册构建器，以启用进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />为<see langword="null" />时抛出。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，当层次结构中不存在标记有<paramref name="lifetimeScopeTags" />之一的作用域时抛出。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0},System.Object[])"><summary>
+            配置组件，使得在使用这些标记中的任何一个进行标记的 <see cref="T:Autofac.ILifetimeScope" /> 内的每个依赖组件或手动解析共享一个实例，该实例取自由自定义策略管理的池，并在作用域结束时将其返回到池。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="poolPolicy">
+            控制池行为的自定义策略。
+            </param><param name="lifetimeScopeTags">
+            标识匹配的生存期作用域的标记。
+            </param><remarks><para>
+            在匹配作用域下方嵌套的作用域中的依赖组件共享该作用域的实例。该策略提供了细粒度的控制，以控制如何从池中检索实例，包括是否将实例返回到池中。
+            </para><para>
+            池最多保留 <see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" /> 个实例。超出此范围的实例将被释放或丢弃，而不是被保留。
+            </para></remarks><returns>
+            注册生成器，用于进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当 <paramref name="registration" /> 为 <see langword="null" /> 时引发。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，如果层次结构中不存在用 <paramref name="lifetimeScopeTags" /> 之一标记的作用域，则引发。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Object[])"><summary>
+            配置组件，使得在带有这些标记的<see cref="T:Autofac.ILifetimeScope" />内的每个依赖组件或手动解析共享一个从池中获取的实例，该池由提供的工厂中的策略管理，并在作用域结束时将实例返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="policyFactory">
+            返回要使用的策略的工厂，在构建池时调用。
+            </param><param name="lifetimeScopeTags">
+            用于标识匹配生命周期作用域的标记。
+            </param><remarks><para>
+            在匹配作用域下面嵌套的作用域中的依赖组件共享该作用域的实例。工厂使用当前的<see cref="T:Autofac.IComponentContext" />调用，因此策略可以作为一个组件被解析，并且其依赖项由容器管理（例如，<c>ctx =&gt; ctx.Resolve&lt;IMyPolicy&gt;()</c>）。
+            </para><para>
+            池最多保留工厂返回的<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" />值所指定的实例数。超出该值的实例请求将被释放或丢弃，而不是保留。
+            </para></remarks><returns>
+            注册构建器，以启用进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当<paramref name="registration" />或<paramref name="policyFactory" />为<see langword="null" />时抛出。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，当层次结构中不存在带有<paramref name="lifetimeScopeTags" />中任何一个标记的作用域时抛出。
+            </exception></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])"><summary>
+            配置组件，使得任何标记有这些标签的 <see cref="T:Autofac.ILifetimeScope" /> 内的依赖组件或手动解析共享一个池中的实例，该池的行为由自定义策略控制，其存储和回收由自定义 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" /> 控制，并在作用域结束时将实例返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="policyFactory">
+            一个返回要使用的策略的工厂，在构建池时调用。
+            </param><param name="providerFactory">
+            一个返回创建后备池的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" /> 的工厂，在构建池时调用一次。
+            </param><param name="lifetimeScopeTags">
+            用于标识匹配的生命周期作用域的标签。
+            </param><remarks><para>
+            嵌套在匹配作用域下方的作用域中的依赖组件共享该作用域的实例。两个工厂都被调用一次，从拥有池的（根）作用域解析。策略控制如何从池中获取和返回实例；提供程序控制实例的存储位置和回收时机。Autofac 仍拥有池化实例的构造和池化回调。
+            </para><para>
+            由于提供程序拥有大小调整和回收控制，<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" /> 并不决定池的大小。池必须是线程安全的，因为它跨所有生命周期作用域和线程共享。
+            </para><para>
+            如果池实现了 <see cref="T:System.IDisposable" />，则容器在关闭时释放它。由于 <see cref="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Return(`0)" /> 不报告结果，并且没有回收回调，池负责处理它在返回时拒绝或异步回收的实例。
+            </para></remarks><returns>
+            注册构建器，用于进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当 <paramref name="registration" />、<paramref name="policyFactory" /> 或 <paramref name="providerFactory" /> 为 <see langword="null" /> 时抛出。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，如果层次结构中不存在标记有 <paramref name="lifetimeScopeTags" /> 之一的作用域，则抛出。
+            </exception></member><member name="T:Autofac.Pooling.RegistrationExtensions.DefaultPolicyFactory`1"><summary>
+            为每个封闭的 <typeparamref name="TLimit" /> 持有缓存的默认策略工厂，因此仅提供者的重载不会每次调用分配新的委托。
+            </summary><typeparam name="TLimit">注册限制类型。</typeparam></member><member name="T:Autofac.Pooling.PoolGetActivatorResources"><summary>
+              一个强类型资源类，用于查找本地化字符串等。
+              此类由MSBuild使用GenerateResource任务生成。
+              要添加或移除成员，请编辑.resx文件，然后重新运行MSBuild。
+            </summary></member><member name="P:Autofac.Pooling.PoolGetActivatorResources.ResourceManager"><summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary></member><member name="P:Autofac.Pooling.PoolGetActivatorResources.Culture"><summary>
+              覆盖当前线程的 CurrentUICulture 属性，
+              用于此强类型资源类的所有资源查找。
+            </summary></member><member name="P:Autofac.Pooling.PoolGetActivatorResources.PolicyMustReturnInstance"><summary>
+              查找类似于“由 {0} 提供的自定义池策略在请求时未返回 {1} 的实例。”的本地化字符串。
+            </summary></member><member name="T:Autofac.Pooling.PoolServiceResources"><summary>
+      一个强类型资源类，用于查找本地化字符串等。
+      此类由MSBuild使用GenerateResource任务生成。
+      要添加或删除成员，请编辑.resx文件，然后重新运行MSBuild。
+    </summary></member><member name="P:Autofac.Pooling.PoolServiceResources.ResourceManager"><summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary></member><member name="P:Autofac.Pooling.PoolServiceResources.Culture"><summary>
+              重写当前线程的 CurrentUICulture 属性，以使用此强类型资源类进行所有资源查找。
+            </summary></member><member name="P:Autofac.Pooling.PoolServiceResources.Description"><summary>
+              查找类似于“{0}的池”的本地化字符串。
+            </summary></member><member name="T:Autofac.Pooling.RegistrationExtensionsResources"><summary>
+    一个强类型资源类，用于查找本地化字符串等。
+    此类由MSBuild使用GenerateResource任务生成。
+    若要添加或删除成员，请编辑.resx文件，然后重新运行MSBuild。
+  </summary></member><member name="P:Autofac.Pooling.RegistrationExtensionsResources.ResourceManager"><summary>
+              返回此类使用的已缓存 ResourceManager 实例。
+            </summary></member><member name="P:Autofac.Pooling.RegistrationExtensionsResources.Culture"><summary>
+              重写当前线程的 CurrentUICulture 属性，以使用此强类型资源类进行所有资源查找。
+            </summary></member><member name="P:Autofac.Pooling.RegistrationExtensionsResources.CannotUseProvidedInstances"><summary>
+              查找与以下内容类似的本地化字符串：池化注册不能与提供的实例一起使用。请改用类型注册或委托注册。
+            </summary></member><member name="P:Autofac.Pooling.RegistrationExtensionsResources.OnReleaseNotSupported"><summary>
+        查找类似于“无法对池注册使用自定义的 OnRelease 事件。相反，要么提供自定义的 IPooledRegistrationPolicy 来处理返回到池中的项，要么在组件类型上实现 IPooledComponent。”的本地化字符串。
+    </summary></member><member name="P:Autofac.Pooling.RegistrationExtensionsResources.RequiresCallbackContainer"><summary>
+              查找类似以下内容的本地化字符串：您只能为具有附加回调容器的注册指定池化注册（例如，使用标准ContainerBuilder扩展方法创建的注册）。
+            </summary></member><member name="T:Autofac.Pooling.PooledInstanceUnpackMiddleware`1"><summary>
+    用于从池实例容器中提取请求的实例的中间件。
+    </summary><typeparam name="TLimit">已池化的注册的限制类型。</typeparam></member><member name="M:Autofac.Pooling.IPooledRegistrationPolicy`1.Return(`0)"><summary>
+            当对象即将返回到池中时调用。此方法应用于在使用后清理对象的状态（重置连接、释放临时资源等）。
+            </summary><param name="pooledObject">池中的对象。</param><returns>
+            如果对象应返回到池中，则为 true。
+            如果对象不应放回池中（并且如果它实现了 <see cref="T:System.IDisposable" />，则会立即释放），则为 false。
+            </returns></member><member name="M:Autofac.Pooling.PoolGetActivator`1.#ctor(Autofac.Pooling.PoolService)"><summary>
+            初始化 <see cref="T:Autofac.Pooling.PoolGetActivator`1" /> 类的新实例。
+            </summary><param name="poolService">用于访问池的服务。</param><remarks>
+            池及其策略在解析时从通过 <paramref name="poolService" /> 解析的 <see cref="T:Autofac.Pooling.PooledInstanceContext`1" /> 中检索。
+            </remarks></member><member name="M:Autofac.Pooling.PooledInstanceContext`1.Dispose"><summary>
+                释放包装器使用的资源。
+            </summary><remarks>
+                容器通过根作用域拥有此包装器，并在关闭时将其释放。当池实现<see cref="T:System.IDisposable" />时，释放会级联到<see cref="P:Autofac.Pooling.PooledInstanceContext`1.Pool" />，因此池可以释放其保留的任何实例。
+            </remarks></member><member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])"><summary>
+            配置组件，使得在被其中任何标签标记的<see cref="T:Autofac.ILifetimeScope" />内的每个依赖组件或手动解析共享一个从池中获取的实例，该池的存储和逐出由自定义的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />控制，并在作用域结束时将其返回到池中。
+            </summary><typeparam name="TLimit">
+            注册限制类型。
+            </typeparam><typeparam name="TActivatorData">
+            激活器数据类型。
+            </typeparam><typeparam name="TSingleRegistrationStyle">
+            注册样式。
+            </typeparam><param name="registration">
+            要配置的注册。
+            </param><param name="providerFactory">
+            一个工厂，返回创建后备池的<see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />，在池构建时调用一次。
+            </param><param name="lifetimeScopeTags">
+            标识匹配的生命周期作用域的标签。
+            </param><remarks><para>
+            在匹配作用域下方嵌套的作用域中的依赖组件共享该作用域的实例。工厂被调用一次，从拥有池的（根）作用域解析。Autofac仍然拥有池实例的构造和池回调；提供者仅控制实例的存储位置和逐出时机。
+            </para><para>
+            由于提供者拥有大小控制和逐出策略，<see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained" /> 不会调整池的大小。池必须是线程安全的，因为它在所有生命周期作用域和线程之间共享。
+            </para><para>
+            如果池实现了<see cref="T:System.IDisposable" />，容器会在关闭时将其释放。由于<see cref="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Return(`0)" />不报告任何结果并且没有逐出回调，池负责释放那些在归还时被拒绝或异步逐出的实例。
+            </para></remarks><returns>
+            注册构建器，以支持进一步配置。
+            </returns><exception cref="T:System.ArgumentNullException">
+            当 <paramref name="registration" /> 或 <paramref name="providerFactory" /> 为 <see langword="null" /> 时抛出。
+            </exception><exception cref="T:Autofac.Core.DependencyResolutionException">
+            在解析时，当层次结构中不存在被 <paramref name="lifetimeScopeTags" /> 中任何一个标签标记的作用域时抛出。
+            </exception></member></members>
+</doc>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.Binder</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Configuration.BinderOptions"><summary>
+        指定由 <see cref="T:Microsoft.Extensions.Configuration.ConfigurationBinder" /> 使用的选项。
+    </summary></member><member name="P:Microsoft.Extensions.Configuration.BinderOptions.BindNonPublicProperties"><summary>
+            获取或设置一个值，该值指示绑定器是尝试设置所有属性还是仅设置公共属性。
+            </summary><value><see langword="true" /> 表示绑定器尝试设置所有非只读属性；<see langword="false" /> 表示仅设置公共属性。
+            </value></member><member name="T:Microsoft.Extensions.Configuration.ConfigurationBinder"><summary>
+    静态帮助程序类，允许将强类型对象绑定到配置值。
+  </summary></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get``1(Microsoft.Extensions.Configuration.IConfiguration)"><summary>
+            尝试将配置实例绑定到类型T的新实例。如果此配置节具有值，则将使用该值。否则，通过将属性名称与配置键递归匹配进行绑定。
+            </summary><typeparam name="T">要绑定的新实例的类型。</typeparam><param name="configuration">要绑定的配置实例。</param><returns>如果成功，则返回T的新实例；否则返回default(T)。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get``1(Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>
+    尝试将配置实例绑定到类型 T 的新实例。如果此配置部分有值，则将使用该值。否则通过将属性名称与配置键递归匹配进行绑定。
+    </summary><typeparam name="T">要绑定的新实例的类型。</typeparam><param name="configuration">要绑定的配置实例。</param><param name="configureOptions">配置绑定器选项。</param><returns>如果成功，则为 T 的新实例；否则为 default(T)。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get(Microsoft.Extensions.Configuration.IConfiguration,System.Type)"><summary>
+            尝试将配置实例绑定到类型T的新实例。
+            如果此配置部分具有值，则将使用该值。
+            否则通过递归匹配属性名称与配置键进行绑定。
+            </summary><param name="configuration">要绑定的配置实例。</param><param name="type">要绑定的新实例的类型。</param><returns>如果成功则为新实例，否则为null。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>
+    尝试将配置实例绑定到类型 T 的新实例。如果此配置节有值，则使用该值。否则，通过递归匹配属性名称与配置键进行绑定。
+    </summary><param name="configuration">要绑定的配置实例。</param><param name="type">要绑定的新实例的类型。</param><param name="configureOptions">配置绑定器选项。</param><returns>如果成功则返回新实例，否则返回 null。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(Microsoft.Extensions.Configuration.IConfiguration,System.String,System.Object)"><summary>
+            尝试将给定的对象实例绑定到由键指定的配置节，通过递归匹配属性名称与配置键。
+            </summary><param name="configuration">要绑定的配置实例。</param><param name="key">要绑定的配置节的键。</param><param name="instance">要绑定的对象。</param></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(Microsoft.Extensions.Configuration.IConfiguration,System.Object)"><summary>
+            尝试通过递归地将属性名称与配置键进行匹配，将给定的对象实例绑定到配置值。
+            </summary><param name="configuration">要绑定的配置实例。</param><param name="instance">要绑定的对象。</param></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(Microsoft.Extensions.Configuration.IConfiguration,System.Object,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>
+            尝试通过递归地将属性名称与配置键匹配，将给定的对象实例绑定到配置值。
+            </summary><param name="configuration">要绑定的配置实例。</param><param name="instance">要绑定的对象。</param><param name="configureOptions">配置绑定器选项。</param></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue``1(Microsoft.Extensions.Configuration.IConfiguration,System.String)"><summary>
+            提取具有指定键的值并将其转换为类型T。
+            </summary><typeparam name="T">要转换到的类型。</typeparam><param name="configuration">配置。</param><param name="key">要转换的配置节值的键。</param><returns>转换后的值。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue``1(Microsoft.Extensions.Configuration.IConfiguration,System.String,``0)"><summary>
+            提取具有指定键的值并将其转换为类型T。
+            </summary><typeparam name="T">要转换到的类型。</typeparam><param name="configuration">配置。</param><param name="key">要转换的配置节值的键。</param><param name="defaultValue">如果未找到值，则使用的默认值。</param><returns>转换后的值。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.String)"><summary>
+            提取具有指定键的值并将其转换为指定类型。
+            </summary><param name="configuration">配置。</param><param name="type">要将值转换为的类型。</param><param name="key">要转换的配置节值的键。</param><returns>转换后的值。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.String,System.Object)"><summary>
+    提取具有指定键的值并将其转换为指定类型。
+    </summary><param name="configuration">配置。</param><param name="type">要将值转换成的类型。</param><param name="key">要转换的配置节值的键。</param><param name="defaultValue">如果未找到值，则使用的默认值。</param><returns>转换后的值。</returns></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.ResetPropertyValue(System.Reflection.PropertyInfo,System.Object,Microsoft.Extensions.Configuration.BinderOptions)"><summary>
+            将属性值重置为属性 getter 返回的值。这对于在其 getter 或 setter 中包含某些逻辑并可能更改对象状态的属性非常有用。
+            </summary><param name="property">要重置的属性。</param><param name="instance">要重置其属性的实例。</param><param name="options">绑定器选项。</param><remarks>
+            此方法不执行任何配置绑定。它只是将属性值重置为属性 getter 返回的值。
+            此方法仅在通过使用参数名称与属性名称匹配的主构造函数创建实例时调用。
+            </remarks></member><member name="M:Microsoft.Extensions.Configuration.ConfigurationBinder.CreateInstance(System.Type,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions,System.Reflection.ParameterInfo[]@)"><summary>
+            创建指定类型的实例。
+            </summary><param name="type">要创建实例的类型。</param><param name="config">要绑定到实例的配置。</param><param name="options">绑定器选项。</param><param name="constructorParameters">用于创建实例的构造函数的参数。</param><returns>创建的实例。</returns><exception cref="T:System.InvalidOperationException">如果无法创建该类型。</exception><remarks>
+            仅当使用从配置中获取值的参数的构造函数时，constructorParameters 才不会为 null。
+            当使用属性与构造函数参数名称匹配的类型时会发生这种情况。`record` 类型就是一个例子。
+            在这种情况下，我们需要携带参数列表，以避免在 BindProperties 期间再次绑定属性。
+            </remarks></member><member name="P:System.SR.Error_CannotActivateAbstractOrInterface"><summary>无法创建类型“{0}”的实例，因为它是抽象类型或接口。</summary></member><member name="P:System.SR.Error_CannotBindToConstructorParameter"><summary>无法创建类型 '{0}' 的实例，因为一个或多个参数无法绑定。构造函数参数不能声明为 in、out 或 ref。无效的参数是：'{1}'</summary></member><member name="P:System.SR.Error_ConstructorParametersDoNotMatchProperties"><summary>无法创建类型'{0}'的实例，因为一个或多个参数无法绑定。构造函数参数必须具有对应的属性。不支持字段。缺少的属性为：'{1}'</summary></member><member name="P:System.SR.Error_FailedBinding"><summary>无法将配置值'{0}'在'{1}'处转换为类型'{2}'。</summary></member><member name="P:System.SR.Error_FailedToActivate"><summary>无法创建类型 '{0}' 的实例。</summary></member><member name="P:System.SR.Error_GeneralErrorWhenBinding"><summary>“{0}”已设置但绑定失败。可能的原因是配置值无效。</summary></member><member name="P:System.SR.Error_MissingConfig"><summary>'{0}' 已在提供的 {1} 上设置，但在 {2} 的实例上未找到以下属性：{3}</summary></member><member name="P:System.SR.Error_MissingPublicInstanceConstructor"><summary>无法创建类型 '{0}' 的实例，因为它缺少公共实例构造函数。</summary></member><member name="P:System.SR.Error_MultipleParameterizedConstructors"><summary>无法创建类型“{0}”的实例，因为它具有多个公共参数化构造函数。</summary></member><member name="P:System.SR.Error_ParameterBeingBoundToIsUnnamed"><summary>无法创建类型 '{0}' 的实例，因为一个或多个参数未命名。</summary></member><member name="P:System.SR.Error_ParameterHasNoMatchingConfig"><summary>无法创建类型'{0}'的实例，因为参数'{1}'没有匹配的配置。构造函数中每个没有默认值的参数都必须有一个对应的配置条目。</summary></member><member name="P:System.SR.Error_UnsupportedMultidimensionalArray"><summary>无法创建类型为'{0}'的实例，因为不支持多维数组。</summary></member><member name="P:Microsoft.Extensions.Configuration.BinderOptions.ErrorOnUnknownConfiguration"><summary>
+            获取或设置一个值，该值指示在转换值时，或者当找到配置键但提供的模型对象没有与该键名匹配的适当属性时，是否引发异常。
+            </summary><value><see langword="true" /> 如果抛出一个带有描述信息的 <see cref="T:System.InvalidOperationException" />；<see langword="false" /> 如果不抛出任何异常。默认值为 <see langword="false" />。
+            </value></member></members>
+</doc>

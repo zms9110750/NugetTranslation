@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Nito.AsyncEx.Coordination</name>
+    </assembly>
+    <members><member name="T:Nito.AsyncEx.AsyncAutoResetEvent"><summary>
+            异步兼容的自动重置事件。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncAutoResetEvent._queue"><summary>
+            其他任务正在等待的TCS队列。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncAutoResetEvent._set"><summary>
+            事件的当前状态。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncAutoResetEvent._id"><summary>
+    此实例的半唯一标识符。如果该标识符尚未创建，则为0。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncAutoResetEvent._mutex"><summary>
+            用于互斥的对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.#ctor(System.Boolean,Nito.AsyncEx.IAsyncWaitQueue{System.Object})"><summary>
+            创建一个异步兼容的自动重置事件。
+            </summary><param name="set">指示自动重置事件最初是设置为有信号还是无信号。</param><param name="queue">用于管理等待者的等待队列。它可以为<c>null</c>以使用默认（FIFO）队列。</param></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.#ctor(System.Boolean)"><summary>
+            创建一个异步兼容的自动重置事件。
+            </summary><param name="set">自动重置事件最初是设置为已触发还是未触发。</param></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.#ctor"><summary>
+            创建一个初始为未设置状态的异步兼容自动重置事件。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncAutoResetEvent.Id"><summary>
+            获取此异步自动重置事件的半唯一标识符。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncAutoResetEvent.IsSet"><summary>
+            此事件当前是否已设置。此成员很少使用；使用此成员的代码出现争用条件的可能性很高。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.WaitAsync(System.Threading.CancellationToken)"><summary>
+    异步等待此事件被设置。如果事件已被设置，此方法将自动重置并立即返回，即使取消令牌已经被触发。如果等待被取消，则不会自动重置此事件。
+    </summary><param name="cancellationToken">用于取消此等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.WaitAsync"><summary>
+            异步等待此事件被设置。如果事件已设置，此方法将自动重置它并立即返回。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.Wait(System.Threading.CancellationToken)"><summary>
+    同步等待此事件被设置。如果事件已设置，则此方法将自动重置它并立即返回，即使取消令牌已经发出信号。如果等待被取消，则不会自动重置此事件。此方法可能会阻塞调用线程。
+    </summary><param name="cancellationToken">用于取消此等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.Wait"><summary>
+            同步等待此事件被设置。如果事件已被设置，此方法将自动重置并立即返回。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncAutoResetEvent.Set"><summary>
+            设置事件，原子地完成由 <see cref="o:WaitAsync" /> 返回的任务。如果事件已设置，则此方法不执行任何操作。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncCollection`1"><summary>
+            一个异步兼容的生产者/消费者集合。
+            </summary><typeparam name="T">集合中包含的元素类型。</typeparam></member><member name="F:Nito.AsyncEx.AsyncCollection`1._collection"><summary>
+            底层集合。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCollection`1._maxCount"><summary>
+            集合中允许的最大元素数。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCollection`1._mutex"><summary>
+            保护集合的互斥锁。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCollection`1._completedOrNotFull"><summary>
+            当集合已完成或未满时发出信号的条件变量。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCollection`1._completedOrNotEmpty"><summary>
+    一个条件变量，当集合完成或非空时发出信号。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncCollection`1._completed"><summary>
+            集合是否已被标记为添加完成。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Collections.Concurrent.IProducerConsumerCollection{`0},System.Int32)"><summary>
+        创建一个新的异步兼容的生产者/消费者集合，包装指定的集合并具有最大元素计数。
+    </summary><param name="collection">要包装的集合。</param><param name="maxCount">最大元素计数。此值必须大于零。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Collections.Concurrent.IProducerConsumerCollection{`0})"><summary>
+            创建一个新的异步兼容的生产者/消费者集合，包装指定的集合。
+            </summary><param name="collection">要包装的集合。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Int32)"><summary>
+        创建一个具有最大元素计数的新异步兼容生产者/消费者集合。
+    </summary><param name="maxCount">最大元素计数。必须大于零。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor"><summary>
+    创建一个新的异步兼容的生产者/消费者集合。
+    </summary></member><member name="P:Nito.AsyncEx.AsyncCollection`1.Empty"><summary>
+    集合是否为空。
+    </summary></member><member name="P:Nito.AsyncEx.AsyncCollection`1.Full"><summary>
+            集合是否已满。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.CompleteAdding"><summary>
+            同步地将生产者/消费者集合标记为添加完成。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.DoAddAsync(`0,System.Threading.CancellationToken,System.Boolean)"><summary>
+            尝试添加一个项。
+            </summary><param name="item">要添加的项。</param><param name="cancellationToken">可用于中止添加操作的取消标记。</param><param name="sync">是否同步运行此方法。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.AddAsync(`0,System.Threading.CancellationToken)"><summary>
+            向生产者/消费者集合添加一个项。如果生产者/消费者集合已完成添加或项目被底层集合拒绝，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要添加的项。</param><param name="cancellationToken">可用于中止添加操作的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.Add(`0,System.Threading.CancellationToken)"><summary>
+            向生产者/消费者集合中添加一个项。如果生产者/消费者集合已完成添加或该项被基础集合拒绝，则抛出 <see cref="T:System.InvalidOperationException" />。此方法可能会阻塞调用线程。
+            </summary><param name="item">要添加的项。</param><param name="cancellationToken">可用于中止添加操作的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.AddAsync(`0)"><summary>
+            向生产者/消费者集合添加一个项。如果生产者/消费者集合已完成添加或项被底层集合拒绝，则引发<see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要添加的项。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.Add(`0)"><summary>
+            向生产者/消费者集合添加一个项。如果生产者/消费者集合已完成添加，或者该项被底层集合拒绝，则引发<see cref="T:System.InvalidOperationException" />。此方法可能会阻塞调用线程。
+            </summary><param name="item">要添加的项。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.DoOutputAvailableAsync(System.Threading.CancellationToken,System.Boolean)"><summary>
+            等待直到有可获取的项目。如果生产者/消费者集合已完成添加且没有更多项目，则返回<c>false</c>。
+            </summary><param name="cancellationToken">可用于中止等待的取消令牌。</param><param name="sync">是否同步运行此方法。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailableAsync(System.Threading.CancellationToken)"><summary>
+            异步等待直到有项目可供取出。如果生产者/消费者集合已完成添加并且没有更多项目，则返回 <c>false</c>。
+            </summary><param name="cancellationToken">可用于中止异步等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailableAsync"><summary>
+    异步等待，直到有项目可取出。如果生产者/消费者集合已完成添加且没有更多项，则返回 <c>false</c>。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailable(System.Threading.CancellationToken)"><summary>
+            同步等待直到有一个可获取的项目。如果生产者/消费者集合已完成添加且没有更多项目，则返回<c>false</c>。
+            </summary><param name="cancellationToken">可用于中止等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailable"><summary>
+    同步等待直到有可供获取的项目。如果生产者/消费者集合已完成添加且没有更多项目，则返回<c>false</c>。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.GetConsumingEnumerable(System.Threading.CancellationToken)"><summary>
+            为生产者/消费者集合中的项提供（同步）消耗枚举器。
+            </summary><param name="cancellationToken">可用于中止同步枚举的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.GetConsumingEnumerable"><summary>
+            提供生产者/消费者队列中项的（同步）消耗可枚举集合。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.DoTakeAsync(System.Threading.CancellationToken,System.Boolean)"><summary>
+            尝试获取一个项目。
+            </summary><param name="cancellationToken">可用于中止获取操作的取消令牌。</param><param name="sync">是否同步运行此方法。</param><exception cref="T:System.InvalidOperationException">集合已标记为添加完成且为空。</exception></member><member name="M:Nito.AsyncEx.AsyncCollection`1.TakeAsync(System.Threading.CancellationToken)"><summary>
+            从生产者/消费者集合中获取一项。返回该项。如果生产者/消费者集合已完成添加且为空，或者从底层集合的获取失败，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="cancellationToken">可用于中止获取操作的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.Take(System.Threading.CancellationToken)"><summary>
+            从生产者/消费者集合中取出一个项。返回该项。如果生产者/消费者集合已完成添加并且为空，或者从基础集合中取出失败，则引发 <see cref="T:System.InvalidOperationException" />。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">可用于中止取出操作的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncCollection`1.TakeAsync"><summary>
+            从生产者/消费者集合中提取一个项。返回该项。如果生产者/消费者集合已完成添加并且为空，或者从底层集合中提取失败，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCollection`1.Take"><summary>
+    从生产者/消费者集合中取出一个项目。返回该项目。如果生产者/消费者集合已完成添加且为空，或者从底层集合进行取出操作失败，则抛出 <see cref="T:System.InvalidOperationException" />。此方法可能会阻塞调用线程。
+    </summary></member><member name="T:Nito.AsyncEx.AsyncConditionVariable"><summary>
+            一个异步兼容的条件变量。此类型使用 Mesa 风格的语义（通知任务不会让渡）。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncConditionVariable._asyncLock"><summary>
+            与此条件变量关联的锁。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncConditionVariable._queue"><summary>
+            等待任务队列。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncConditionVariable._id"><summary>
+            此实例的半唯一标识符。如果尚未创建标识符，则为 0。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncConditionVariable._mutex"><summary>
+            用于互斥的对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.#ctor(Nito.AsyncEx.AsyncLock,Nito.AsyncEx.IAsyncWaitQueue{System.Object})"><summary>
+            创建与异步兼容锁关联的异步兼容条件变量。
+            </summary><param name="asyncLock">与此条件变量关联的锁。</param><param name="queue">用于管理等待者的等待队列。可以设置为<c>null</c>以使用默认（FIFO）队列。</param></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.#ctor(Nito.AsyncEx.AsyncLock)"><summary>
+    创建一个与异步兼容锁关联的异步兼容条件变量。
+    </summary><param name="asyncLock">与此条件变量关联的锁。</param></member><member name="P:Nito.AsyncEx.AsyncConditionVariable.Id"><summary>
+            获取此异步条件变量的半唯一标识符。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.Notify"><summary>
+            向在此条件变量上等待的单个任务发送信号。调用此方法时必须持有关联的锁，并且在此方法返回时该锁仍将被持有。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.NotifyAll"><summary>
+            向所有等待此条件变量的任务发送信号。调用此方法时必须持有相关锁，并且该方法返回时仍将持有该锁。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.WaitAsync(System.Threading.CancellationToken)"><summary>
+    异步等待此条件变量上的信号。调用此方法时必须持有关联的锁，当此方法返回时（即使方法被取消）该锁仍将被持有。
+    </summary><param name="cancellationToken">用于取消此等待的取消信号。</param></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.WaitAsync"><summary>
+            在此条件变量上异步等待信号。调用此方法时必须持有关联锁，并且在返回的任务完成时，该锁仍将被持有。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.Wait(System.Threading.CancellationToken)"><summary>
+            在此条件变量上同步等待信号。此方法可能会阻塞调用线程。调用此方法时必须持有关联的锁，并且即使该方法被取消，在方法返回时仍将持有该锁。
+            </summary><param name="cancellationToken">用于取消此等待的取消信号。</param></member><member name="M:Nito.AsyncEx.AsyncConditionVariable.Wait"><summary>
+            同步等待此条件变量的信号。此方法可能会阻塞调用线程。调用此方法时必须持有关联的锁，并且在方法返回时仍将持有该锁。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncCountdownEvent"><summary>
+            一个异步兼容的倒计时事件。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCountdownEvent._mre"><summary>
+            底层的手动重置事件。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncCountdownEvent._count"><summary>
+            此事件的剩余计数。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.#ctor(System.Int64)"><summary>
+            创建一个异步兼容的倒计时事件。
+            </summary><param name="count">此事件变为已设定状态之前所需信号的次数。</param></member><member name="P:Nito.AsyncEx.AsyncCountdownEvent.Id"><summary>
+            获取此异步倒计时事件的半唯一标识符。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncCountdownEvent.CurrentCount"><summary>
+            获取在此事件变为已设置状态之前剩余的信号数。此成员很少使用；使用此成员的代码极有可能出现争用情况。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.WaitAsync"><summary>
+            异步等待计数达到零。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.WaitAsync(System.Threading.CancellationToken)"><summary>
+            同步等待计数达到零。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消等待的取消令牌。如果此令牌已被取消，此方法将首先检查事件是否已设置。</param></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.Wait"><summary>
+            同步等待计数达到零。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.Wait(System.Threading.CancellationToken)"><summary>
+            同步等待计数达到零。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消等待的取消标记。如果此标记已被取消，此方法将首先检查事件是否已设置。</param></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.ModifyCount(System.Int64,System.Boolean)"><summary>
+            尝试按指定量修改当前计数。
+            </summary><param name="difference">用于改变当前计数的数量。</param><param name="add"><c>true</c> 表示添加到当前计数；<c>false</c> 表示减去。</param></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.AddCount(System.Int64)"><summary>
+            将指定的值添加到当前计数。
+            </summary><param name="addCount">要更改当前计数的数量。</param></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.AddCount"><summary>
+            将当前计数加一。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.Signal(System.Int64)"><summary>
+            从当前计数中减去指定值。
+            </summary><param name="signalCount">更改当前计数的量。</param></member><member name="M:Nito.AsyncEx.AsyncCountdownEvent.Signal"><summary>
+            从当前计数中减去一。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncLazyFlags"><summary>
+            控制 <see cref="T:Nito.AsyncEx.AsyncLazy`1" /> 行为的标志。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncLazyFlags.None"><summary>
+            没有特殊标志。工厂方法在线程池线程上执行，并且在失败时不会重试初始化（失败会被缓存）。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncLazyFlags.ExecuteOnCallingThread"><summary>
+    在调用线程上执行工厂方法。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncLazyFlags.RetryOnFailure"><summary>
+            如果工厂方法失败，则下次重新运行工厂方法，而不是缓存失败的任务。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncLazy`1"><summary>
+            为异步延迟初始化提供支持。此类型是完全线程安全的。
+            </summary><typeparam name="T">正在异步初始化的对象的类型。</typeparam></member><member name="F:Nito.AsyncEx.AsyncLazy`1._mutex"><summary>
+    保护<c>_instance</c>的同步对象。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncLazy`1._factory"><summary>
+            要调用的工厂方法。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncLazy`1._instance"><summary>
+    底层延迟任务。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncLazy`1._id"><summary>
+            该实例的半唯一标识符。如果id尚未创建，则为0。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLazy`1.#ctor(System.Func{System.Threading.Tasks.Task{`0}},Nito.AsyncEx.AsyncLazyFlags)"><summary>
+    初始化 <see cref="T:Nito.AsyncEx.AsyncLazy`1" /> 类的新实例。
+    </summary><param name="factory">在需要时调用以生成值的异步委托。不能为 <c>null</c>。</param><param name="flags">影响异步延迟语义的标志。</param></member><member name="P:Nito.AsyncEx.AsyncLazy`1.Id"><summary>
+            获取此异步惰性实例的半唯一标识符。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncLazy`1.IsStarted"><summary>
+            异步工厂方法是否已启动。最初为 <c>false</c>，当此实例被等待或调用 <see cref="M:Nito.AsyncEx.AsyncLazy`1.Start" /> 后变为 <c>true</c>。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncLazy`1.Task"><summary>
+            启动异步工厂方法（如果尚未启动），并返回结果任务。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLazy`1.GetAwaiter"><summary>
+    异步基础结构支持。此方法允许 <see cref="T:Nito.AsyncEx.AsyncLazy`1" /> 的实例被等待。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncLazy`1.ConfigureAwait(System.Boolean)"><summary>
+            异步基础结构支持。此方法允许对 <see cref="T:Nito.AsyncEx.AsyncLazy`1" /> 实例进行等待。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLazy`1.Start"><summary>
+            启动异步初始化（如果尚未启动）。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncLock"><summary>
+  一个与异步兼容的互斥锁。请注意，此锁<b>不</b>可重入！
+  </summary><remarks><para>这是<c>lock</c>关键字或<see cref="T:System.Threading.Mutex" />类型的异步就绪的几乎等效实现，类似于<a href="http://blogs.msdn.com/b/pfxteam/archive/2012/02/12/10266988.aspx">Stephen Toub 的 AsyncLock</a>。它只是<i>几乎</i>等效，因为<c>lock</c>关键字允许重入，而这目前在异步就绪的锁中是不可能的。</para><para>一个<see cref="T:Nito.AsyncEx.AsyncLock" />要么被获取，要么没有被获取。可以通过调用<see autoUpgrade="true" cref="M:Nito.AsyncEx.AsyncLock.LockAsync" />异步获取锁，并通过释放该任务的结果来释放锁。<see cref="M:Nito.AsyncEx.AsyncLock.LockAsync(System.Threading.CancellationToken)" />接受一个可选的<see cref="T:System.Threading.CancellationToken" />，可用于取消获取锁的操作。</para><para>从<see autoUpgrade="true" cref="M:Nito.AsyncEx.AsyncLock.LockAsync" />返回的任务在获取到<see cref="T:Nito.AsyncEx.AsyncLock" />后将进入<c>Completed</c>状态。如果<see cref="T:System.Threading.CancellationToken" />在等待完成之前被触发，同样的任务将进入<c>Canceled</c>状态；在这种情况下，<see cref="T:Nito.AsyncEx.AsyncLock" />不会被该任务获取。</para><para>你可以使用一个已经取消的<see cref="T:System.Threading.CancellationToken" />调用<see cref="M:Nito.AsyncEx.AsyncLock.Lock(System.Threading.CancellationToken)" />或<see cref="M:Nito.AsyncEx.AsyncLock.LockAsync(System.Threading.CancellationToken)" />，试图立即获取<see cref="T:Nito.AsyncEx.AsyncLock" />，而无需实际进入等待队列。</para></remarks><example><para>绝大多数用例只是替换一个<c>lock</c>语句。也就是说，原始代码如下所示：</para><code>
+  private readonly object _mutex = new object();
+  public void DoStuff()
+  {
+      lock (_mutex)
+      {
+          Thread.Sleep(TimeSpan.FromSeconds(1));
+      }
+  }
+  </code><para>如果我们想将阻塞操作<c>Thread.Sleep</c>替换为异步等效操作，因为<c>lock</c>块而无法直接实现。我们无法在<c>lock</c>内部使用<c>await</c>。</para><para>所以，我们改用异步兼容的<see cref="T:Nito.AsyncEx.AsyncLock" />：</para><code>
+  private readonly AsyncLock _mutex = new AsyncLock();
+  public async Task DoStuffAsync()
+  {
+      using (await _mutex.LockAsync())
+      {
+          await Task.Delay(TimeSpan.FromSeconds(1));
+      }
+  }
+  </code></example></member><member name="F:Nito.AsyncEx.AsyncLock._taken"><summary>
+            锁是否已被任务获取。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncLock._queue"><summary>
+    其他任务正在等待获取锁的TCS队列。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncLock._id"><summary>
+            这个实例的半唯一标识符。如果标识符尚未创建，则此值为0。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncLock._mutex"><summary>
+            用于互斥的对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLock.#ctor"><summary>
+            创建一个新的异步兼容互斥锁。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLock.#ctor(Nito.AsyncEx.IAsyncWaitQueue{System.IDisposable})"><summary>
+            使用指定的等待队列创建一个新的异步兼容互斥锁。
+            </summary><param name="queue">用于管理等待者的等待队列。如果为<c>null</c>，则使用默认（先进先出）队列。</param></member><member name="P:Nito.AsyncEx.AsyncLock.Id"><summary>
+            获取此异步锁的半唯一标识符。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLock.RequestLockAsync(System.Threading.CancellationToken)"><summary>
+            异步获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁的取消标记。如果此标记已设置，则此方法将尝试立即获取锁（如果锁当前可用，则成功）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncLock.LockAsync(System.Threading.CancellationToken)"><summary>
+            异步获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁定的取消令牌。如果此令牌已设置，则此方法将尝试立即获取锁（如果锁当前可用，则成功）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncLock.LockAsync"><summary>
+            异步获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncLock.Lock(System.Threading.CancellationToken)"><summary>
+    同步获取锁。返回一个在释放时释放锁的可释放对象。此方法可能会阻塞调用线程。
+    </summary><param name="cancellationToken">用于取消锁的取消令牌。如果已设置此令牌，则此方法将尝试立即获取锁（如果锁当前可用，则成功）。</param></member><member name="M:Nito.AsyncEx.AsyncLock.Lock"><summary>
+            同步获取锁。返回一个在释放时释放锁的一次性对象。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLock.ReleaseLock"><summary>
+            释放锁。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncLock.Key"><summary>
+            释放锁的可释放对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncLock.Key.#ctor(Nito.AsyncEx.AsyncLock)"><summary>
+        创建锁的键。
+    </summary><param name="asyncLock">要释放的锁。不能为<c>null</c>。</param></member><member name="T:Nito.AsyncEx.AsyncManualResetEvent"><summary>
+            一种异步兼容的手动重置事件。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncManualResetEvent._mutex"><summary>
+            用于同步的对象。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncManualResetEvent._tcs"><summary>
+            事件的当前状态。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncManualResetEvent._id"><summary>
+            此实例的半唯一标识符。如果尚未创建id，则为0。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.#ctor(System.Boolean)"><summary>
+            创建一个异步兼容的手动重置事件。
+            </summary><param name="set">手动重置事件初始是已设置还是未设置。</param></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.#ctor"><summary>
+            创建一个最初未设置的异步兼容手动重置事件。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncManualResetEvent.Id"><summary>
+    获取此异步手动重置事件的半唯一标识符。
+    </summary></member><member name="P:Nito.AsyncEx.AsyncManualResetEvent.IsSet"><summary>
+    此事件当前是否已设置。此成员很少使用；使用此成员的代码很可能出现竞争条件。
+  </summary></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.WaitAsync"><summary>
+            异步等待此事件被设置。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.WaitAsync(System.Threading.CancellationToken)"><summary>
+    异步等待此事件被设置或等待被取消。
+    </summary><param name="cancellationToken">用于取消等待的取消令牌。如果此令牌已被取消，则此方法将首先检查事件是否已设置。</param></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.Wait"><summary>
+            同步等待此事件被设置。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.Wait(System.Threading.CancellationToken)"><summary>
+    同步等待此事件被设置。此方法可能会阻塞调用线程。
+    </summary><param name="cancellationToken">用于取消等待的取消令牌。如果此令牌已被取消，则此方法将首先检查事件是否已设置。</param></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.Set"><summary>
+            设置该事件，以原子方式完成由 <see cref="O:Nito.AsyncEx.AsyncManualResetEvent.WaitAsync" /> 返回的每个任务。如果事件已设置，则此方法不执行任何操作。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncManualResetEvent.Reset"><summary>
+            重置事件。如果事件已经重置，则此方法不执行任何操作。
+            </summary></member><member name="T:Nito.AsyncEx.AsyncMonitor"><summary>
+            一个异步兼容的监视器。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncMonitor._asyncLock"><summary>
+            锁。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncMonitor._conditionVariable"><summary>
+            条件变量。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.#ctor(Nito.AsyncEx.IAsyncWaitQueue{System.IDisposable},Nito.AsyncEx.IAsyncWaitQueue{System.Object})"><summary>
+    构造一个新的监视器。
+    </summary><param name="lockQueue">用于管理锁的等待者的等待队列。可以为 <c>null</c> 以使用默认（FIFO）队列。</param><param name="conditionVariableQueue">用于管理信号的等待者的等待队列。可以为 <c>null</c> 以使用默认（FIFO）队列。</param></member><member name="M:Nito.AsyncEx.AsyncMonitor.#ctor"><summary>
+            构造一个新的监视器。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncMonitor.Id"><summary>
+    获取此监视器的半唯一标识符。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.EnterAsync(System.Threading.CancellationToken)"><summary>
+            异步进入监视器。返回一个在释放时离开监视器的可释放对象。
+            </summary><param name="cancellationToken">用于取消进入操作的取消令牌。如果此令牌已设置，则此方法将尝试立即进入监视器（如果监视器当前可用，则会成功）。</param><returns>一个在释放时离开监视器的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncMonitor.EnterAsync"><summary>
+            异步进入监视器。返回一个在释放时离开监视器的可释放对象。
+            </summary><returns>一个在释放时离开监视器的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncMonitor.Enter(System.Threading.CancellationToken)"><summary>
+            以同步方式进入监视器。返回一个在释放时退出监视器的可释放对象。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消进入操作的取消令牌。如果此令牌已设置，则此方法将尝试立即进入监视器（如果监视器当前可用则成功）。</param></member><member name="M:Nito.AsyncEx.AsyncMonitor.Enter"><summary>
+            异步进入监视器。返回一个在释放时离开监视器的可释放对象。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.WaitAsync(System.Threading.CancellationToken)"><summary>
+            异步等待此监视器上的脉冲信号。调用此方法时必须已经进入监视器，并且当此方法返回时监视器仍将处于已进入状态，即使方法被取消。此方法在内部将在等待通知时离开监视器。
+            </summary><param name="cancellationToken">用于取消此等待的取消信号。</param></member><member name="M:Nito.AsyncEx.AsyncMonitor.WaitAsync"><summary>
+            异步等待此监视器上的脉冲信号。调用此方法时，监视器必须已经进入，并且此方法返回时仍将保持进入状态。此方法在等待通知期间会在内部离开监视器。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.Wait(System.Threading.CancellationToken)"><summary>
+            异步等待此监视器上的脉冲信号。此方法可能会阻止调用线程。调用此方法时，监视器必须已进入，并且在方法返回时（即使方法被取消），监视器仍然会保持进入状态。此方法内部将在等待通知时离开监视器。
+            </summary><param name="cancellationToken">用于取消此等待的取消信号。</param></member><member name="M:Nito.AsyncEx.AsyncMonitor.Wait"><summary>
+            异步等待此监视器上的脉冲信号。此方法可能会阻塞调用线程。调用此方法时必须已经进入监视器，并且在此方法返回时仍然处于进入状态。此方法在等待通知期间会在内部离开监视器。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.Pulse"><summary>
+            向等待此监视器的单个任务发送信号。调用此方法时，监视器必须已经进入，并且此方法返回后仍然处于进入状态。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncMonitor.PulseAll"><summary>
+    向等待在此监视器上的所有任务发送信号。调用此方法时必须已经进入该监视器，并且方法返回时仍然保持进入状态。
+    </summary></member><member name="T:Nito.AsyncEx.AsyncProducerConsumerQueue`1"><summary>
+            一个异步兼容的生产者/消费者队列。
+            </summary><typeparam name="T">队列中包含的元素类型。</typeparam></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._queue"><summary>
+    底层队列。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._maxCount"><summary>
+            队列中允许的最大元素数量。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._mutex"><summary>
+            保护<c>_queue</c>和<c>_completed</c>的互斥锁。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._completedOrNotFull"><summary>
+            当队列未满时发信号的条件变量。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._completedOrNotEmpty"><summary>
+    当队列完成或不为空时发出信号的条件变量。
+    </summary></member><member name="F:Nito.AsyncEx.AsyncProducerConsumerQueue`1._completed"><summary>
+            此生产者/消费者队列是否已标记为添加完成。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32)"><summary>
+            创建一个新的异步兼容的生产者/消费者队列，具有指定的初始元素和最大元素数。
+            </summary><param name="collection">要放置在队列中的初始元素。此参数可以为<c>null</c>，以初始化为空集合。</param><param name="maxCount">最大元素数。此值必须大于零，并且大于或等于<paramref name="collection" />中的元素数。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.#ctor(System.Collections.Generic.IEnumerable{`0})"><summary>
+            使用指定的初始元素创建一个新的异步兼容的生产者/消费者队列。
+            </summary><param name="collection">要放入队列的初始元素。可以为<c>null</c>以从空集合开始。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.#ctor(System.Int32)"><summary>
+        创建一个具有最大元素数的新的异步兼容的生产者/消费者队列。
+    </summary><param name="maxCount">最大元素数。必须大于零。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.#ctor"><summary>
+            创建一个新的异步兼容的生产者/消费者队列。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Empty"><summary>
+            队列是否为空。此属性假定已经持有 <c>_mutex</c>。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Full"><summary>
+            队列是否已满。此属性假定已持有<c>_mutex</c>。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.CompleteAdding"><summary>
+            将生产者/消费者队列标记为添加完成。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.DoEnqueueAsync(`0,System.Threading.CancellationToken,System.Boolean)"><summary>
+            将项加入生产者/消费者队列。如果生产者/消费者队列已完成添加，则引发<see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要入队的项。</param><param name="cancellationToken">可用于中止入队操作的取消令牌。</param><param name="sync">是否同步运行此方法。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.EnqueueAsync(`0,System.Threading.CancellationToken)"><summary>
+            将一个项加入生产者/消费者队列。如果生产者/消费者队列已完成添加，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要入队的项。</param><param name="cancellationToken">可用于中止入队操作的取消令牌。</param><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为添加完成。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.EnqueueAsync(`0)"><summary>
+            将一个项加入生产者/消费者队列。如果生产者/消费者队列已完成添加，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要加入队列的项。</param><exception cref="T:System.InvalidOperationException">生产者/消费者队列已标记为添加完成。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Enqueue(`0,System.Threading.CancellationToken)"><summary>
+            将项目排入生产者/消费者队列。此方法可能会阻塞调用线程。如果生产者/消费者队列已完成添加，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="item">要排队的项目。</param><param name="cancellationToken">可用于中止排队操作的取消令牌。</param><exception cref="T:System.InvalidOperationException">生产者/消费者队列已标记为完成添加。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Enqueue(`0)"><summary>
+    将项入队到生产者/消费者队列。此方法可能会阻塞调用线程。如果生产者/消费者队列已完成添加，则抛出<see cref="T:System.InvalidOperationException" />。
+    </summary><param name="item">要入队的项。</param><exception cref="T:System.InvalidOperationException">生产者/消费者队列已标记为完成添加。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.DoOutputAvailableAsync(System.Threading.CancellationToken,System.Boolean)"><summary>
+            等待直到有项目可供出队。如果生产者/消费者队列已完成添加且没有更多项目，则返回<c>false</c>。
+            </summary><param name="cancellationToken">可用于中止异步等待的取消令牌。</param><param name="sync">是否同步运行此方法。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.OutputAvailableAsync(System.Threading.CancellationToken)"><summary>
+    异步等待直到有项可出队。如果生产者/消费者队列已完成添加且没有更多项，则返回 <c>false</c>。
+    </summary><param name="cancellationToken">可用于中止异步等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.OutputAvailableAsync"><summary>
+            异步等待直到有项目可供出队。如果生产者/消费者队列已完成添加且没有更多项目，则返回 <c>false</c>。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.OutputAvailable(System.Threading.CancellationToken)"><summary>
+            同步等待直到有项可出队。如果生产者/消费者队列已完成添加且没有更多项，则返回 <c>false</c>。
+            </summary><param name="cancellationToken">可用于中止异步等待的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.OutputAvailable"><summary>
+            同步等待直到有项可出队。如果生产者/消费者队列已完成添加且没有更多项，则返回<c>false</c>。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.GetConsumingEnumerable(System.Threading.CancellationToken)"><summary>
+            为生产者/消费者队列中的项提供一个（同步）消耗性枚举。
+            </summary><param name="cancellationToken">可用于中止同步枚举的取消令牌。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.GetConsumingEnumerable"><summary>
+            提供生产者/消费者队列中项的（同步）消费可枚举。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.TryDoDequeueAsync(System.Threading.CancellationToken,System.Boolean)"><summary>
+            尝试从生产者/消费者队列中出队一个项。如果生产者/消费者队列已完成添加且为空，则返回<c>false</c>。
+            </summary><param name="cancellationToken">可用于中止出队操作的取消标记。</param><param name="sync">是否同步运行此方法。</param></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.DoDequeueAsync(System.Threading.CancellationToken,System.Boolean)"><summary>
+            从生产者/消费者队列中出队一个项。如果生产者/消费者队列已完成添加且为空，则抛出<see cref="T:System.InvalidOperationException" />。
+            </summary><param name="cancellationToken">可用于中止出队操作的取消令牌。</param><param name="sync">是否同步运行此方法。</param><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为添加完成并且为空。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.DequeueAsync(System.Threading.CancellationToken)"><summary>
+    从生产者/消费者队列中出队一个项。如果生产者/消费者队列已完成添加并且为空，则抛出 <see cref="T:System.InvalidOperationException" />。
+    </summary><param name="cancellationToken">可用于中止出队操作的取消令牌。</param><returns>已出队的项。</returns><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为完成添加并且为空。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.DequeueAsync"><summary>
+            从生产者/消费者队列中取出一个项。返回取出的项。如果生产者/消费者队列已完成添加且为空，则引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><returns>取出的项。</returns><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为完成添加并且为空。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Dequeue(System.Threading.CancellationToken)"><summary>
+            从生产者/消费者队列中取出一个项。返回取出的项。此方法可能阻塞调用线程。如果生产者/消费者队列已完成添加并且为空，则抛出 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="cancellationToken">可用于中止出队操作的取消令牌。</param><returns>取出的项。</returns><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为添加完成并且为空。</exception></member><member name="M:Nito.AsyncEx.AsyncProducerConsumerQueue`1.Dequeue"><summary>
+            从生产者/消费者队列中取出一个项。返回取出的项。此方法可能会阻塞调用线程。如果生产者/消费者队列已完成添加且为空，则抛出 <see cref="T:System.InvalidOperationException" />。
+            </summary><returns>返回取出的项。</returns><exception cref="T:System.InvalidOperationException">生产者/消费者队列已被标记为完成添加并且为空。</exception></member><member name="T:Nito.AsyncEx.AsyncReaderWriterLock"><summary>
+            一个与异步兼容的读取器/写入器锁。请注意，此锁<b>不</b>是可重入的！
+            </summary></member><member name="F:Nito.AsyncEx.AsyncReaderWriterLock._writerQueue"><summary>
+            其他任务正在等待以写入者身份获取锁的TCS队列。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncReaderWriterLock._readerQueue"><summary>
+            其他任务等待以读取器身份获取锁的TCS队列。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncReaderWriterLock._mutex"><summary>
+            用于互斥的对象。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncReaderWriterLock._id"><summary>
+            此实例的半唯一标识符。如果尚未创建该id，则此值为0。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncReaderWriterLock._locksHeld"><summary>
+            当前持有的读取锁数；-1 表示持有写入锁；0 表示未持有任何锁。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.#ctor(Nito.AsyncEx.IAsyncWaitQueue{System.IDisposable},Nito.AsyncEx.IAsyncWaitQueue{System.IDisposable})"><summary>
+    创建一个新的异步兼容的读写锁。
+    </summary><param name="writerQueue">用于管理写入锁等待者的等待队列。如果为<c>null</c>，则使用默认（FIFO）队列。</param><param name="readerQueue">用于管理读取锁等待者的等待队列。如果为<c>null</c>，则使用默认（FIFO）队列。</param></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.#ctor"><summary>
+            创建一个新的异步兼容的读写锁。
+            </summary></member><member name="P:Nito.AsyncEx.AsyncReaderWriterLock.Id"><summary>
+            获取此异步锁的半唯一标识符。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReleaseWaitersWhenCanceled(System.Threading.Tasks.Task)"><summary>
+            向任务应用一个延续，如果任务被取消，该延续将调用<see cref="M:Nito.AsyncEx.AsyncReaderWriterLock.ReleaseWaiters" />。此方法在持有同步锁时不得调用。
+            </summary><param name="task">要观察取消的任务。</param></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.RequestReaderLockAsync(System.Threading.CancellationToken)"><summary>
+            异步以读取者身份获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁的取消令牌。如果已经设置，此方法将尝试立即获取锁（如果锁当前可用则成功）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReaderLockAsync(System.Threading.CancellationToken)"><summary>
+            以读取器身份异步获取锁定。返回一个在释放时释放锁定的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁定的取消令牌。如果已设置此令牌，则此方法将尝试立即获取锁定（如果锁定当前可用，则成功）。</param><returns>一个在释放时释放锁定的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReaderLockAsync"><summary>
+            以读取器身份异步获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReaderLock(System.Threading.CancellationToken)"><summary>
+            以读取器方式同步获取锁。返回一个在释放时释放锁的可释放对象。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消锁的取消令牌。如果该令牌已设置，则此方法将尝试立即获取锁（如果锁当前可用，则成功）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReaderLock"><summary>
+            以读取器身份同步获取锁。返回一个在释放时释放锁的IDisposable对象。此方法可能会阻塞调用线程。
+            </summary><returns>一个在释放时释放锁的IDisposable对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.RequestWriterLockAsync(System.Threading.CancellationToken)"><summary>
+            以写入者身份异步获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁的取消令牌。如果已设置此令牌，则此方法将尝试立即获取锁（如果锁当前可用，则成功获取）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.WriterLockAsync(System.Threading.CancellationToken)"><summary>
+            异步以写入者身份获取锁。返回一个在释放时释放锁的可释放对象。
+            </summary><param name="cancellationToken">用于取消锁的取消令牌。如果此令牌已设置，则此方法将尝试立即获取锁（如果锁当前可用，则会成功）。</param><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.WriterLockAsync"><summary>
+    异步获取写入者锁。返回一个在释放时释放锁的可释放对象。
+  </summary><returns>一个在释放时释放锁的可释放对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.WriterLock(System.Threading.CancellationToken)"><summary>
+            以写入者身份同步获取锁。返回一个在释放锁时释放的一次性对象。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消锁定操作的取消令牌。如果该令牌已设置，则此方法将尝试立即获取锁（如果锁当前可用，则成功）。</param><returns>一个在释放锁时释放的一次性对象。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.WriterLock"><summary>
+            以异步方式获取写入器锁。返回一个一次性对象，释放该对象时释放锁。此方法可能会阻塞调用线程。
+            </summary><returns>一个一次性对象，释放时释放锁。</returns></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReleaseWaiters"><summary>
+            向等待的任务授予锁。此方法假定同步锁已被持有。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReleaseReaderLock"><summary>
+    释放读取器锁。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReleaseWriterLock"><summary>
+    以写入者身份释放锁。
+    </summary></member><member name="T:Nito.AsyncEx.AsyncReaderWriterLock.ReaderKey"><summary>
+            释放读取器锁的可释放对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.ReaderKey.#ctor(Nito.AsyncEx.AsyncReaderWriterLock)"><summary>
+            创建锁的键。
+            </summary><param name="asyncReaderWriterLock">要释放的锁。不能为<c>null</c>。</param></member><member name="T:Nito.AsyncEx.AsyncReaderWriterLock.WriterKey"><summary>
+            释放写入器锁的可释放对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncReaderWriterLock.WriterKey.#ctor(Nito.AsyncEx.AsyncReaderWriterLock)"><summary>
+    创建锁的键。
+    </summary><param name="asyncReaderWriterLock">要释放的锁。不可以为<c>null</c>。</param></member><member name="T:Nito.AsyncEx.AsyncSemaphore"><summary>
+            一个异步兼容的信号量。或者，你可以使用<c>SemaphoreSlim</c>。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncSemaphore._queue"><summary>
+            其他任务正在等待获取信号量的TCS队列。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncSemaphore._count"><summary>
+            将立即被授予的等待数量。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncSemaphore._id"><summary>
+            此实例的半唯一标识符。如果该id尚未创建，则为0。
+            </summary></member><member name="F:Nito.AsyncEx.AsyncSemaphore._mutex"><summary>
+            用于互斥的对象。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.#ctor(System.Int64,Nito.AsyncEx.IAsyncWaitQueue{System.Object})"><summary>
+            创建一个具有指定初始计数的异步兼容信号量。
+            </summary><param name="initialCount">此信号量的初始计数。必须大于或等于零。</param><param name="queue">用于管理等待者的等待队列。这可以是<c>null</c>以使用默认（FIFO）队列。</param></member><member name="M:Nito.AsyncEx.AsyncSemaphore.#ctor(System.Int64)"><summary>
+            使用指定的初始计数创建一个新的异步兼容信号量。
+            </summary><param name="initialCount">此信号量的初始计数。必须大于或等于零。</param></member><member name="P:Nito.AsyncEx.AsyncSemaphore.Id"><summary>
+    获取此异步信号量的半唯一标识符。
+    </summary></member><member name="P:Nito.AsyncEx.AsyncSemaphore.CurrentCount"><summary>
+            获取此信号量上当前可用的槽位数。此成员很少使用；使用此成员的代码具有很高的竞态条件可能性。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.WaitAsync(System.Threading.CancellationToken)"><summary>
+            异步等待信号量中的插槽可用。
+            </summary><param name="cancellationToken">用于取消等待的取消令牌。如果此令牌已设置，则此方法将立即尝试获取插槽（如果当前有可用插槽，则成功）。</param></member><member name="M:Nito.AsyncEx.AsyncSemaphore.WaitAsync"><summary>
+        异步等待信号量中的槽位变为可用。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Wait(System.Threading.CancellationToken)"><summary>
+            同步等待信号量中的槽变为可用。此方法可能会阻塞调用线程。
+            </summary><param name="cancellationToken">用于取消等待的取消令牌。如果该令牌已设置，则此方法将尝试立即获取槽（如果当前有可用槽，则成功）。</param></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Wait"><summary>
+            同步等待信号量中的可用槽位。此方法可能会阻塞调用线程。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Release(System.Int64)"><summary>
+            释放信号量。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Release"><summary>
+            释放信号量。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.LockAsync(System.Threading.CancellationToken)"><summary>异步等待信号量，并返回一个一次性对象，当该对象被释放时释放信号量，从而将此信号量视为“多锁”。</summary><param name="cancellationToken">用于取消等待的取消标记。如果该标记已设置，则此方法将立即尝试获取位置（如果当前有可用位置则成功）。</param></member><member name="M:Nito.AsyncEx.AsyncSemaphore.LockAsync"><summary>
+            异步等待信号量，并返回一个可释放对象，该对象在释放时释放信号量，从而将此信号量视为“多锁”。
+            </summary></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Lock(System.Threading.CancellationToken)"><summary>
+    同步等待信号量，并返回一个在释放时释放信号量的可释放对象，从而将此信号量视为“多锁”。
+    </summary><param name="cancellationToken">用于取消等待的取消令牌。如果已设置，此方法将尝试立即获取槽位（如果当前有可用的槽位，则会成功）。</param></member><member name="M:Nito.AsyncEx.AsyncSemaphore.Lock"><summary>
+            同步等待信号量，并返回一个在释放时释放信号量的可释放对象，从而将此信号量视为“多锁”。
+            </summary></member><member name="T:Nito.AsyncEx.IAsyncWaitQueue`1"><summary>
+            一个可取消的 <see cref="T:System.Threading.Tasks.TaskCompletionSource`1" /> 实例集合。实现者必须假定调用者持有锁。
+            </summary><typeparam name="T">结果的类型。如果不需要，请使用 <see cref="T:System.Object" />。</typeparam></member><member name="P:Nito.AsyncEx.IAsyncWaitQueue`1.IsEmpty"><summary>
+            获取队列是否为空。
+            </summary></member><member name="M:Nito.AsyncEx.IAsyncWaitQueue`1.Enqueue"><summary>
+            创建一个新条目并将其排队到此等待队列。返回的任务必须同时支持同步和异步等待。
+            </summary><returns>已排队的任务。</returns></member><member name="M:Nito.AsyncEx.IAsyncWaitQueue`1.Dequeue(`0)"><summary>
+            从等待队列中移除单个条目并完成它。仅当 <see cref="P:Nito.AsyncEx.IAsyncWaitQueue`1.IsEmpty" /> 为 <c>false</c> 时才能调用此方法。已完成任务的延续任务必须异步执行。
+            </summary><param name="result">用于完成等待队列条目的结果。如果不需要，则使用 <c>default(T)</c>。</param></member><member name="M:Nito.AsyncEx.IAsyncWaitQueue`1.DequeueAll(`0)"><summary>
+            移除等待队列中的所有条目并完成它们。已完成任务的任务延续必须异步执行。
+            </summary><param name="result">用于完成等待队列条目的结果。如果不需要，请使用 <c>default(T)</c>。</param></member><member name="M:Nito.AsyncEx.IAsyncWaitQueue`1.TryCancel(System.Threading.Tasks.Task,System.Threading.CancellationToken)"><summary>
+            尝试从等待队列中移除一个条目并将其取消。已完成任务的任务延续必须异步执行。
+            </summary><param name="task">要取消的任务。</param><param name="cancellationToken">用于取消任务的取消令牌。</param></member><member name="M:Nito.AsyncEx.IAsyncWaitQueue`1.CancelAll(System.Threading.CancellationToken)"><summary>
+            从等待队列中移除所有条目并取消它们。已完成任务的任务延续必须异步执行。
+            </summary><param name="cancellationToken">用于取消任务的取消令牌。</param></member><member name="T:Nito.AsyncEx.AsyncWaitQueueExtensions"><summary>
+    为等待队列提供扩展方法。
+    </summary></member><member name="M:Nito.AsyncEx.AsyncWaitQueueExtensions.Enqueue``1(Nito.AsyncEx.IAsyncWaitQueue{``0},System.Object,System.Threading.CancellationToken)"><summary>
+            创建一个新条目并将其排队到此等待队列。如果取消标记已被取消，此方法会立即返回一个已取消的任务，而不修改等待队列。
+            </summary><param name="this">等待队列。</param><param name="mutex">在取消条目时使用的同步对象。</param><param name="token">用于取消等待的标记。</param><returns>排队后的任务。</returns></member><member name="T:Nito.AsyncEx.DefaultAsyncWaitQueue`1"><summary>
+            默认等待队列实现，使用双端队列。
+            </summary><typeparam name="T">结果的类型。如果不需要，请使用 <see cref="T:System.Object" />。</typeparam></member><member name="T:Nito.AsyncEx.IdManager`1"><summary>
+            按需为实例分配Id。0是一个无效/未分配的Id。在长时间运行的系统中，Id可能不是唯一的。这与<see cref="T:System.Threading.Tasks.Task" />和<see cref="T:System.Threading.Tasks.TaskScheduler" />使用的Id系统类似。
+            </summary><typeparam name="TTag">要为其生成Id的类型。</typeparam></member><member name="F:Nito.AsyncEx.IdManager`1._lastId"><summary>
+            此类型生成的最后一个 ID。如果没有生成任何 ID，则为 0。
+            </summary></member><member name="M:Nito.AsyncEx.IdManager`1.GetId(System.Int32@)"><summary>
+            返回 ID，必要时进行分配。
+            </summary><param name="id">对包含 ID 的字段的引用。</param></member><member name="T:Nito.AsyncEx.PauseTokenSource"><summary>
+            一个“暂停令牌”的源（控制器），可用于协作暂停和恢复操作。
+            </summary></member><member name="F:Nito.AsyncEx.PauseTokenSource._mre"><summary>
+    管理“暂停”逻辑的MRE。当MRE被设置时，令牌未被暂停；当MRE未被设置时，令牌被暂停。
+    </summary></member><member name="P:Nito.AsyncEx.PauseTokenSource.IsPaused"><summary>
+            这个源（以及它的令牌）是否处于暂停状态。这个成员很少使用；使用这个成员的代码有很高的可能性出现竞态条件。
+            </summary></member><member name="P:Nito.AsyncEx.PauseTokenSource.Token"><summary>
+            获取由此源控制的暂停令牌。
+            </summary></member><member name="T:Nito.AsyncEx.PauseToken"><summary>
+            一种允许操作协同暂停的类型。
+            </summary></member><member name="F:Nito.AsyncEx.PauseToken._mre"><summary>
+            管理“暂停”逻辑的MRE，如果此令牌永远无法暂停则为<c>null</c>。当MRE被设置时，令牌未暂停；当MRE未被设置时，令牌暂停。
+            </summary></member><member name="P:Nito.AsyncEx.PauseToken.CanBePaused"><summary>
+            此令牌是否可能被暂停。
+            </summary></member><member name="P:Nito.AsyncEx.PauseToken.IsPaused"><summary>
+            此令牌是否处于暂停状态。
+            </summary></member><member name="M:Nito.AsyncEx.PauseToken.WaitWhilePausedAsync"><summary>
+            异步等待，直到暂停令牌不再暂停。
+            </summary></member><member name="M:Nito.AsyncEx.PauseToken.WaitWhilePausedAsync(System.Threading.CancellationToken)"><summary>
+            异步等待，直到暂停令牌不再暂停，或者直到此等待被取消令牌取消。
+            </summary><param name="token">要观察的取消令牌。如果令牌已被取消，此方法将首先检查暂停令牌是否未暂停，并在那种情况下返回而不引发异常。</param></member><member name="M:Nito.AsyncEx.PauseToken.WaitWhilePaused"><summary>
+            同步等待，直到暂停令牌未被暂停。
+            </summary></member><member name="M:Nito.AsyncEx.PauseToken.WaitWhilePaused(System.Threading.CancellationToken)"><summary>
+            同步等待，直到暂停令牌未被暂停，或者直到此等待被取消令牌取消。
+            </summary><param name="token">要观察的取消令牌。如果令牌已取消，则此方法将首先检查暂停令牌是否未暂停，并在这种情况下返回而不引发异常。</param></member></members>
+</doc>

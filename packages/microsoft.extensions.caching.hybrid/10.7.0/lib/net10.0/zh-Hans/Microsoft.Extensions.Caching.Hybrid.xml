@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Caching.Hybrid</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+     此存储库报告的各种诊断 ID。
+    </summary><remarks>
+     添加新的诊断 ID 时，将相应的禁止显示添加到根 <c>Directory.Build.targets</c> 文件中，并将文档条目添加到 <c>docs/list-of-diagnostics.md</c> 中。
+    </remarks></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+    此存储库支持的实验。
+    </summary></member><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+            定义用于引发异常的静态方法。
+            </summary><remarks>
+            主要目的是减少代码大小、提高性能并标准化异常消息。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+    如果指定的参数为<see langword="null" />，则抛出<see cref="T:System.ArgumentNullException" />。
+    </summary><typeparam name="T">要检查<see langword="null" />的参数类型。</typeparam><param name="argument">要检查<see langword="null" />的对象。</param><param name="paramName">正在检查的参数名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">正在检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+  如果指定的成员为<see langword="null" />，则引发<see cref="T:System.ArgumentException" />异常。
+  </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为<see langword="null" />的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为<see langword="null" />的对象成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" />的原始值。</returns><example><code language="csharp">
+    Throws.IfMemberNull(myObject, myObject.MyProperty)
+    </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+            如果指定的字符串为<see langword="null" />或空白，则分别引发<see cref="T:System.ArgumentNullException" />或<see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为<see langword="null" />或空白的字符串。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            如果字符串为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+            如果字符串为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为 <see langword="null" /> 或空的字符串。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+            如果参数的缓冲区大小小于所需缓冲区大小，则引发<see cref="T:System.ArgumentException" />。
+            </summary><param name="bufferSize">实际的缓冲区大小。</param><param name="requiredSize">所需的缓冲区大小。</param><param name="paramName">要检查的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+            如果枚举值无效，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要计算的参数。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">枚举的类型。</typeparam><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为<see langword="null" />，则引发<see cref="T:System.ArgumentNullException" />；如果集合为空，则引发<see cref="T:System.ArgumentException" />。
+    </summary><param name="argument">要评估的集合。</param><param name="paramName">被检查的参数名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+            抛出一个 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+            引发一个<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="actualValue">导致此异常的自变量的值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+    抛出 <see cref="T:System.ArgumentException" /> 异常。
+    </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+    如果 <paramref name="innerException" /> 不是 <see langword="null" />，则当前异常会在处理内部异常的 catch 块中抛出。
+    </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+    引发一个 <see cref="T:System.InvalidOperationException" />。
+    </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            引发一个 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">预期要大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字小于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于 max，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应该是大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+  </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+    </summary><param name="argument">应大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">被检查参数的名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期要大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期为非零的数字。</param><param name="paramName">被检查参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+        如果指定数字小于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定的数字大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">被期望大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">被检查的参数的名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值（max）的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+            如果指定的数值等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">要求不为零的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于最大值的数字。</param><param name="max">必须大于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+                如果指定数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期的数值大于或等于最大值。</param><param name="min">参数允许范围的下限。</param><param name="max">参数允许范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+    如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要确保不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions"><summary>
+    针对 <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder" /> 和 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 的配置扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializer``1(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder,Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializer{``0})"><summary>
+            使用来自 <paramref name="serializer" /> 的指定序列化器序列化 <typeparamref name="T" /> 类型的值。
+            </summary><typeparam name="T">要序列化的类型。</typeparam><returns>该 <see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder" /> 实例。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializer``2(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder)"><summary>
+            使用类型 <typeparamref name="TImplementation" /> 的序列化器序列化类型 <typeparamref name="T" /> 的值。
+            </summary><typeparam name="T">要序列化的类型。</typeparam><typeparam name="TImplementation">用于此类型的序列化器。</typeparam><returns><see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder" /> 实例。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializerFactory(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder,Microsoft.Extensions.Caching.Hybrid.IHybridCacheSerializerFactory)"><summary>
+            将 <paramref name="factory" /> 添加为额外的序列化器工厂，它可以为多种类型提供序列化器。
+            </summary><returns><see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder" /> 实例。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions"><summary>
+            用于 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 的配置扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})"><summary>
+            添加对多层缓存服务的支持。
+            </summary><param name="services">要将服务添加到的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="setupAction">用于配置<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions" />实例的委托。</param><returns>一个允许进一步配置<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" />服务的生成器实例。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})"><summary>
+            添加对使用键控注册的多层缓存服务的支持。
+            </summary><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="serviceKey">服务注册的键。</param><param name="setupAction">用于配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions" /> 实例的委托。</param><returns>一个生成器实例，允许进一步配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+            通过键注册添加对多级缓存服务的支持。
+            </summary><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="serviceKey">服务注册的键。</param><returns>一个生成器实例，允许进一步配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.String)"><summary>
+            添加对带键注册的多层缓存服务的支持。
+            </summary><param name="services">要添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="serviceKey">服务注册的键。</param><param name="optionsName">用于 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions" /> 实例的命名选项名称。</param><returns>一个生成器实例，允许进一步配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.PrepareServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加混合缓存所需的服务。
+            </summary><param name="services">要准备的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，包含 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 的先决条件。</param><returns>一个生成器实例，允许进一步配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务。</returns></member><member name="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions"><summary>
+            用于配置默认<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" />实现的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DefaultEntryOptions"><summary>
+            获取或设置应用于 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 操作的默认全局选项。
+            </summary><remarks>
+            如果在单个调用级别指定了选项，则非空值会合并（每次调用选项优先于全局选项）。如果未为给定选项（全局或每次调用）指定任何值，则实现可以选择合理的默认值。
+            </remarks></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DisableCompression"><summary>
+            获取或设置一个值，该值指示是否禁用了此 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 实例的压缩。
+            </summary></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.MaximumPayloadBytes"><summary>
+            获取或设置缓存项的最大大小。
+            </summary><value>
+            缓存项的最大大小。默认值为 1 MiB。
+            </value><remarks>
+            尝试存储超过此大小的值会被记录，
+            并且该值不会存储在缓存中。
+            </remarks></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.MaximumKeyLength"><summary>
+            获取或设置键的最大允许长度（以字符为单位）。
+            </summary><value>
+            键的最大允许长度（以字符为单位）。默认值为1024个字符。
+            </value><remarks>尝试使用超过此大小的键会被记录。</remarks></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.ReportTagMetrics"><summary>
+            获取或设置一个值，指示是否在指标报告中使用“标签”数据作为维度。
+            </summary><value><see langword="true" /> 使用“标签”数据作为指标报告中的维度；否则为 <see langword="false" />。
+            </value><remarks>
+            如果启用，请注意确保标签不包含在指标系统中不应可见的数据。
+            </remarks></member><member name="P:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions.DistributedCacheServiceKey"><summary>
+            获取或设置用于从<see cref="T:System.IServiceProvider" />解析分布式缓存服务的键。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder"><summary>
+    用于配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 的辅助 API。
+    </summary></member><member name="P:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder.Services"><summary>
+            获取与此实例关联的服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache"><summary><see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 的内置实现，通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)" /> 注册。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem.Release"><summary>
+            指示使用者已完成此项目（引用计数减一）。
+            </summary><returns>如果这是最终释放，则为 True。</returns></member><member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.DebugTryGetCacheItem(System.String,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem@)"><summary>
+            用于测试目的的辅助API，允许独立于公共API确认内部状态。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState.#ctor(Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeKey@,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem,System.Boolean)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState" /> 类的新实例，可选择支持共享取消。
+            </summary></member><member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState.#ctor(Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeKey@,Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.CacheItem,System.Threading.CancellationToken)"><summary>
+            使用固定的取消令牌初始化<see cref="T:Microsoft.Extensions.Caching.Hybrid.Internal.DefaultHybridCache.StampedeState" />类的新实例。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.ImmutableTypeCache"><summary>
+            用于判断类型是否为 blittable 的实用类型；此逻辑非常依赖于
+            TFM。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.ImmutableTypeCache`1"><summary>
+    用于判断类型<typeparamref name="T" />是否为blittable的简单缓存，特别是为了避免在较低版本的目标框架（TFM）中重复进行运行时测试，因为这些测试更难确定。JIT在访问此缓存值时非常高效。
+    </summary><typeparam name="T">正在处理的类型。</typeparam></member><member name="M:Microsoft.Extensions.Caching.Hybrid.Internal.RecyclableArrayBufferWriter`1.DetachCommitted(System.Int32@)"><summary>
+            断开当前缓冲区，以便我们可以将其存储而不被回收。
+            </summary></member><member name="T:Microsoft.Extensions.Caching.Hybrid.Internal.TagSet"><summary>
+            表示零（null）、一个（string）或多个（string[]）标签，在必要时避免额外的数组开销。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheBuilderExtensions.AddSerializerFactory``1(Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder)"><summary>
+    添加类型为 <typeparamref name="TImplementation" /> 的工厂作为额外的序列化器工厂，它可以为多种类型提供序列化器。
+    </summary><typeparam name="TImplementation">序列化器工厂的类型。</typeparam><returns><see cref="T:Microsoft.Extensions.Caching.Hybrid.IHybridCacheBuilder" /> 实例。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddKeyedHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.String,System.Action{Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions})"><summary>
+            通过键控注册添加对多层缓存服务的支持。
+            </summary><param name="services">要向其添加服务的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="serviceKey">服务注册的键。</param><param name="optionsName">用于<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions" />实例的命名选项名称。</param><param name="setupAction">用于配置<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCacheOptions" />实例的委托。</param><returns>一个允许进一步配置<see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" />服务的生成器实例。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HybridCacheServiceExtensions.AddHybridCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    添加对多层缓存服务的支持。
+    </summary><param name="services">要向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>一个允许进一步配置 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务的生成器实例。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望此数字小于或等于最小值。</param><param name="min">必须小于或等于参数值的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数值小于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要检查是否小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member></members>
+</doc>

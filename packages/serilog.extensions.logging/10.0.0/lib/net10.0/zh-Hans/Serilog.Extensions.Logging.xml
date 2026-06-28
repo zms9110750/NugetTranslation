@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Serilog.Extensions.Logging</name>
+    </assembly>
+    <members><member name="T:Serilog.Extensions.Logging.LevelConvert"><summary>
+            在 Serilog 和 Microsoft.Extensions.Logging 的级别枚举值之间进行转换。
+            </summary></member><member name="M:Serilog.Extensions.Logging.LevelConvert.ToSerilogLevel(Microsoft.Extensions.Logging.LogLevel)"><summary>
+            将 <paramref name="logLevel" /> 转换为等效的 Serilog <see cref="T:Serilog.Events.LogEventLevel" />。
+            </summary><param name="logLevel">一个 Microsoft.Extensions.Logging <see cref="T:Microsoft.Extensions.Logging.LogLevel" />。</param><returns>与 <paramref name="logLevel" /> 等效的 Serilog 值。</returns><remarks><see cref="F:Microsoft.Extensions.Logging.LogLevel.None" /> 值没有 Serilog 等效项。它被映射到
+            <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 作为最接近的近似值，但这具有完全
+            不同的语义。</remarks></member><member name="M:Serilog.Extensions.Logging.LevelConvert.ToExtensionsLevel(Serilog.Events.LogEventLevel)"><summary>
+            将 <paramref name="logEventLevel" /> 转换为等效的 Microsoft.Extensions.Logging <see cref="T:Microsoft.Extensions.Logging.LogLevel" />。
+            </summary><param name="logEventLevel">一个 Serilog <see cref="T:Serilog.Events.LogEventLevel" />。</param><returns><paramref name="logEventLevel" /> 的 Microsoft.Extensions.Logging 等效项。</returns></member><member name="T:Serilog.Extensions.Logging.LoggerProviderCollection"><summary>
+            一个可动态修改的 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> 集合。
+            </summary></member><member name="M:Serilog.Extensions.Logging.LoggerProviderCollection.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)"><summary>将 <paramref name="provider" /> 添加到集合中。</summary><param name="provider">一个记录器提供程序。</param></member><member name="P:Serilog.Extensions.Logging.LoggerProviderCollection.Providers"><summary>
+            获取当前活动的提供程序。
+            </summary><remarks>
+            如果该集合已被释放，我们将让各个提供程序各自负责抛出<see cref="T:System.ObjectDisposedException" />。
+            </remarks></member><member name="M:Serilog.Extensions.Logging.LoggerProviderCollection.Dispose"><inheritdoc cref="T:System.IDisposable" /></member><member name="T:Serilog.Extensions.Logging.SerilogLoggerFactory"><summary>
+            一个完整的基于Serilog的.NET Core日志基础设施实现。
+            </summary></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerFactory.Dispose"><summary>
+            释放提供程序。
+            </summary></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerFactory.CreateLogger(System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 实例。
+            </summary><param name="categoryName">记录器生成的消息的类别名称。</param><returns><see cref="T:Microsoft.Extensions.Logging.ILogger" />。
+            </returns></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerFactory.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)"><summary>
+            将一个 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> 添加到日志记录系统。
+            </summary><param name="provider">该 <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />。</param></member><member name="T:Serilog.Extensions.Logging.SerilogLoggerProvider"><summary>
+            一个通过Serilog管道传递事件的<see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />。
+            </summary></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.#ctor(Serilog.ILogger,System.Boolean)"><summary>
+    构造一个 <see cref="T:Serilog.Extensions.Logging.SerilogLoggerProvider" />。
+    </summary><param name="logger">用于传递事件的 Serilog 记录器；如果为 null，则将使用静态的 <see cref="T:Serilog.Log" /> 类。</param><param name="dispose">如果为 true，则在释放提供程序时，将释放/关闭所提供的记录器或静态日志类。</param></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.CreateLogger(System.String)"><inheritdoc /></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.BeginScope``1(``0)"><inheritdoc cref="T:System.IDisposable" /></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.Enrich(Serilog.Events.LogEvent,Serilog.Core.ILogEventPropertyFactory)"><inheritdoc /></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.SetScopeProvider(Microsoft.Extensions.Logging.IExternalScopeProvider)"><inheritdoc /></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.Dispose"><inheritdoc /></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerProvider.DisposeAsync"><inheritdoc /></member><member name="T:Serilog.Extensions.Logging.SerilogLoggerProvider.ScopeCollector"><summary>
+            围绕列表的包装器，允许在遍历作用域时进行延迟初始化。
+            </summary></member><member name="T:Serilog.LoggerSinkConfigurationExtensions"><summary><see cref="T:Serilog.Configuration.LoggerSinkConfiguration" /> 的扩展方法。
+            </summary></member><member name="M:Serilog.LoggerSinkConfigurationExtensions.Providers(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Extensions.Logging.LoggerProviderCollection,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将Serilog事件写入<paramref name="providers" />中的提供程序。
+            </summary><param name="configuration"><c>WriteTo</c>对象。</param><param name="providers">一个用于写入事件的<see cref="T:Serilog.Extensions.Logging.LoggerProviderCollection" />。</param><param name="restrictedToMinimumLevel">通过接收器传递的事件的最低级别。当指定<paramref name="levelSwitch" />时忽略。</param><param name="levelSwitch">一个允许在运行时更改通过的最低级别的开关。</param><returns>一个允许方法链式调用的<see cref="T:Serilog.LoggerConfiguration" />。</returns></member><member name="T:Serilog.SerilogLoggerFactoryExtensions"><summary>
+            使用Serilog配置方法扩展<see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" />。
+            </summary></member><member name="M:Serilog.SerilogLoggerFactoryExtensions.AddSerilog(Microsoft.Extensions.Logging.ILoggerFactory,Serilog.ILogger,System.Boolean)"><summary>
+    将Serilog添加到日志记录管道。
+    </summary><param name="factory">要配置的记录器工厂。</param><param name="logger">Serilog记录器；如果未提供，则将使用静态<see cref="T:Serilog.Log" />。</param><param name="dispose">如果为true，则在框架释放提供程序时释放<paramref name="logger" />。如果未指定记录器但<paramref name="dispose" />为true，则将在静态<see cref="T:Serilog.Log" />类上调用<see cref="M:Serilog.Log.CloseAndFlush" />方法。</param><returns>对提供的<paramref name="factory" />的引用。</returns></member><member name="T:Serilog.SerilogLoggingBuilderExtensions"><summary>
+            使用Serilog配置方法扩展<see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。
+            </summary></member><member name="M:Serilog.SerilogLoggingBuilderExtensions.AddSerilog(Microsoft.Extensions.Logging.ILoggingBuilder,Serilog.ILogger,System.Boolean)"><summary>
+            将 Serilog 添加到日志记录管道。
+            </summary><param name="builder">要添加日志记录提供程序的 <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。</param><param name="logger">Serilog 日志记录器；如果未提供，则将使用静态的 <see cref="T:Serilog.Log" />。</param><param name="dispose">如果为 true，则当框架释放提供程序时释放 <paramref name="logger" />。如果未指定日志记录器但 <paramref name="dispose" /> 为 true，则将在静态 <see cref="T:Serilog.Log" /> 类上调用 <see cref="M:Serilog.Log.CloseAndFlush" /> 方法。</param><returns>对所提供的 <paramref name="builder" /> 的引用。</returns></member><member name="M:Serilog.Extensions.Logging.SerilogLoggerFactory.#ctor(Serilog.ILogger,System.Boolean,Serilog.Extensions.Logging.LoggerProviderCollection)"><summary>初始化 <see cref="T:Serilog.Extensions.Logging.SerilogLoggerFactory" /> 类的新实例。</summary><param name="logger">Serilog 记录器；如果未提供，则将使用静态的 <see cref="T:Serilog.Log" />。</param><param name="dispose">如果为 true，则当框架释放提供程序时释放 <paramref name="logger" />。如果未指定记录器但 <paramref name="dispose" /> 为 true，则改为在静态 <see cref="T:Serilog.Log" /> 类上调用 <see cref="M:Serilog.Log.CloseAndFlush" /> 方法。</param><param name="providerCollection">一个 <see cref="T:Serilog.Extensions.Logging.LoggerProviderCollection" />，用于与 <c>WriteTo.Providers()</c> 一起使用。</param></member></members>
+</doc>

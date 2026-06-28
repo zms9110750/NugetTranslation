@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.FileExtensions</name>
+    </assembly>
+    <members><member name="M:Microsoft.Extensions.Configuration.FileConfigurationExtensions.GetFileProvider(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+    获取用于基于文件的提供程序的默认<see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>默认<see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationExtensions.SetBasePath(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)"><summary>
+            将基于文件的提供程序的 FileProvider 设置为具有基路径的 PhysicalFileProvider。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="basePath">基于文件的提供程序的绝对路径。</param><returns>该 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationExtensions.GetFileLoadExceptionHandler(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            获取在发生错误时为基于文件的提供程序调用的默认操作。
+            </summary><param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>如果已设置，则在文件加载异常时要调用的操作。</returns></member><member name="T:Microsoft.Extensions.Configuration.FileConfigurationProvider"><summary>
+            为基于文件的 <see cref="T:Microsoft.Extensions.Configuration.ConfigurationProvider" /> 提供程序提供基类。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.FileConfigurationSource)"><summary>
+            使用指定的源初始化新实例。
+            </summary><param name="source">源设置。</param></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationProvider.Source"><summary>
+            获取此提供程序的源设置。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.ToString"><summary>
+            生成表示此提供程序名称和相关详细信息的字符串。
+            </summary><returns>配置名称。</returns></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.Load"><summary>
+            加载在 <see cref="T:System.IO.Path" /> 处的文件内容。
+            </summary><exception cref="T:System.IO.DirectoryNotFoundException">源上的 Optional 为 <c>false</c>，并且在指定路径处找不到目录。</exception><exception cref="T:System.IO.FileNotFoundException">源上的 Optional 为 <c>false</c>，并且在指定路径处文件不存在。</exception><exception cref="T:System.IO.InvalidDataException">由 <see cref="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.Load" /> 方法的具体实现引发异常。如果需要更细致地控制异常，请使用源的 <see cref="P:Microsoft.Extensions.Configuration.FileConfigurationSource.OnLoadException" /> 回调。</exception></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(System.IO.Stream)"><summary>
+            从此提供程序的数据流中加载数据。
+            </summary><param name="stream">要读取的流。</param></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.Dispose"><inheritdoc /></member><member name="T:Microsoft.Extensions.Configuration.FileConfigurationSource"><summary>
+            提供基于文件的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" /> 的基类。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.FileProvider"><summary>
+            获取或设置用于访问文件内容的提供程序。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.Path"><summary>
+            获取或设置文件的路径。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.Optional"><summary>
+            获取或设置一个值，该值指示是否可选加载文件。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.ReloadOnChange"><summary>
+            获取或设置一个值，该值指示当基础文件发生更改时是否重新加载源。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.ReloadDelay"><summary>
+            获取或设置在调用 Load 之前重新加载等待的毫秒数。
+            </summary><value>
+            重新加载在调用 Load 之前等待的毫秒数。默认值为 250。
+            </value><remarks>
+            此延迟有助于避免在文件完全写入之前触发重新加载。
+            </remarks></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源生成 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>待添加。</returns></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationSource.EnsureDefaults(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            用于在生成器上使用任何默认设置，例如 FileProvider 或 FileLoadExceptionHandler。
+            </summary><param name="builder">此 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationSource.ResolveFileProvider"><summary>
+            如果尚未设置文件提供程序，则为最近的现有目录创建一个物理文件提供程序，用于绝对路径。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.FileLoadExceptionContext"><summary>
+            包含有关文件加载异常的信息。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileLoadExceptionContext.Provider"><summary>
+            获取或设置导致异常的 <see cref="T:Microsoft.Extensions.Configuration.FileConfigurationProvider" />。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileLoadExceptionContext.Exception"><summary>
+            获取或设置在加载中发生的异常。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.FileLoadExceptionContext.Ignore"><summary>
+            获取或设置一个值，该值指示是否重新引发异常。
+            </summary><value><see langword="true" /> 如果未重新引发异常；否则为 <see langword="false" />。
+            </value></member><member name="P:System.SR.Error_ExpectedPhysicalPath"><summary>预期的物理路径是'{0}'。</summary></member><member name="P:System.SR.Error_FileNotFound"><summary>未找到配置文件'{0}'，且它不是可选的。</summary></member><member name="P:System.SR.Error_FailedToLoad"><summary>从文件 '{0}' 加载配置失败。</summary></member><member name="T:Microsoft.Extensions.Configuration.FileConfigurationExtensions"><summary>
+            为 <see cref="T:Microsoft.Extensions.Configuration.FileConfigurationProvider" /> 提供扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationExtensions.SetFileProvider(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.FileProviders.IFileProvider)"><summary>
+            设置默认的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 以用于基于文件的提供程序。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="fileProvider">默认文件提供程序实例。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationProvider.Dispose(System.Boolean)"><summary>
+            释放提供程序。
+            </summary><param name="disposing"><c>true</c> 如果从 <see cref="M:System.IDisposable.Dispose" /> 调用。</param></member><member name="M:Microsoft.Extensions.Configuration.FileConfigurationExtensions.SetFileLoadExceptionHandler(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.FileLoadExceptionContext})"><summary>
+            设置当发生错误时为基于文件的提供程序调用的默认操作。
+            </summary><param name="builder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="handler">要在文件加载异常时调用的操作。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="P:Microsoft.Extensions.Configuration.FileConfigurationSource.OnLoadException"><summary>获取或设置一个操作，该操作在 FileConfigurationProvider.Load 中发生未捕获的异常时被调用。</summary></member></members>
+</doc>

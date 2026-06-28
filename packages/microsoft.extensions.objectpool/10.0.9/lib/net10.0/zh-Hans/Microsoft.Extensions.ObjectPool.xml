@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.ObjectPool</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1"><summary><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 的默认实现。
+            </summary><typeparam name="T">要为对象池化的类型。</typeparam><remarks>此实现会缓存保留的对象。这意味着如果对象在池已达到“maximumRetained”个对象时归还，则它们将可供垃圾回收。</remarks></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1.#ctor(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{`0})"><summary>
+            创建 <see cref="T:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1" /> 的一个实例。
+            </summary><param name="policy">要使用的池策略。</param></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1.#ctor(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{`0},System.Int32)"><summary>
+    创建 <see cref="T:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1" /> 的一个实例。
+    </summary><param name="policy">要使用的池策略。</param><param name="maximumRetained">池中要保留的最大对象数。</param></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1.Get"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1.Return(`0)"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPool`1.ReturnCore(`0)"><summary>
+            将对象返回到池中。
+            </summary><returns>如果对象已返回到池中，则为true。</returns></member><member name="T:Microsoft.Extensions.ObjectPool.DefaultObjectPoolProvider"><summary>
+    默认的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />。
+  </summary></member><member name="P:Microsoft.Extensions.ObjectPool.DefaultObjectPoolProvider.MaximumRetained"><summary>
+            池中保留的最大对象数。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultObjectPoolProvider.Create``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0})"><inheritdoc /></member><member name="T:Microsoft.Extensions.ObjectPool.DefaultPooledObjectPolicy`1"><summary><see cref="T:Microsoft.Extensions.ObjectPool.PooledObjectPolicy`1" /> 的默认实现。
+            </summary><typeparam name="T">要池化的对象的类型。</typeparam></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultPooledObjectPolicy`1.Create"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.DefaultPooledObjectPolicy`1.Return(`0)"><inheritdoc /></member><member name="T:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1"><summary>
+            表示管理池化对象的策略。
+            </summary><typeparam name="T">要池化的对象类型。</typeparam></member><member name="M:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1.Return(`0)"><summary>
+        当对象返回到池中时运行一些处理。可用于重置对象状态并指示是否应将对象返回到池中。
+    </summary><param name="obj">要返回到池中的对象。</param><returns><see langword="true" /> 如果应将对象返回到池中；<see langword="false" /> 如果池无法或不希望保留该对象。</returns></member><member name="T:Microsoft.Extensions.ObjectPool.IResettable"><summary>
+            定义将对象重置为其初始状态的方法。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.IResettable.TryReset"><summary>
+    将对象重置为中性状态，语义上类似于对象首次构造时的状态。
+  </summary><returns>如果对象能够重置自身，则为<see langword="true" />；否则为<see langword="false" />。</returns><remarks>
+    通常，此方法不应是线程安全的。
+  </remarks></member><member name="T:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1"><summary>
+            一个检测对象池使用中泄漏的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 实现。
+            <para>
+            如果从池中租用了一个对象但在其被终结前没有归还，则产生泄漏。
+            仅在 <c>Debug</c> 生成中产生错误。
+            此类型仅建议用于诊断生成。
+            </para></summary><typeparam name="T">被池化的对象类型。</typeparam></member><member name="M:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0})"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1" /> 的新实例。
+    </summary><param name="inner">要在其中跟踪泄漏的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 实例。</param></member><member name="M:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1.Get"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1.Return(`0)"><inheritdoc /></member><member name="T:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPoolProvider"><summary>
+            一个 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />，它生成 <see cref="T:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPool`1" /> 的实例。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPoolProvider.#ctor(Microsoft.Extensions.ObjectPool.ObjectPoolProvider)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPoolProvider" /> 的新实例。
+            </summary><param name="inner">要包装的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />。</param></member><member name="M:Microsoft.Extensions.ObjectPool.LeakTrackingObjectPoolProvider.Create``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0})"><inheritdoc /></member><member name="T:Microsoft.Extensions.ObjectPool.ObjectPool`1"><summary>
+            对象池。
+            </summary><typeparam name="T">要池化的对象的类型。</typeparam></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Get"><summary>
+        如果池中有可用对象，则从池中获取一个对象；否则创建一个。
+    </summary><returns>一个<typeparamref name="T" />。</returns></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPool`1.Return(`0)"><summary>
+            将对象归还到池中。
+            </summary><param name="obj">要添加到池中的对象。</param></member><member name="T:Microsoft.Extensions.ObjectPool.ObjectPool"><summary>
+            用于创建 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 实例的方法。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPool.Create``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0})"><inheritdoc cref="M:Microsoft.Extensions.ObjectPool.ObjectPoolProvider.Create``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0})" /></member><member name="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider"><summary>
+            一个 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" /> 实例的提供者。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPoolProvider.Create``1"><summary>
+            创建一个 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool" />。
+            </summary><typeparam name="T">要为其创建池的类型。</typeparam></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPoolProvider.Create``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0})"><summary>
+            使用给定的 <see cref="T:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1" /> 创建一个 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool" />。
+            </summary><typeparam name="T">要为其创建池的类型。</typeparam></member><member name="T:Microsoft.Extensions.ObjectPool.ObjectPoolProviderExtensions"><summary><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPoolProviderExtensions.CreateStringBuilderPool(Microsoft.Extensions.ObjectPool.ObjectPoolProvider)"><summary>
+            创建一个 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" />，用于池化 <see cref="T:System.Text.StringBuilder" /> 实例。
+            </summary><param name="provider"><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />。</param><returns><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" />。</returns></member><member name="M:Microsoft.Extensions.ObjectPool.ObjectPoolProviderExtensions.CreateStringBuilderPool(Microsoft.Extensions.ObjectPool.ObjectPoolProvider,System.Int32,System.Int32)"><summary>
+            创建一个用于池化 <see cref="T:System.Text.StringBuilder" /> 实例的 <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" />。
+            </summary><param name="provider"><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPoolProvider" />。
+            </param><param name="initialCapacity">
+            用于初始化 <see cref="T:System.Text.StringBuilder" /> 实例的初始容量。
+            </param><param name="maximumRetainedCapacity">
+            当实例返回时，允许保留的 <see cref="P:System.Text.StringBuilder.Capacity" /> 的最大值。
+            </param><returns><see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1" />。
+            </returns></member><member name="M:Microsoft.Extensions.ObjectPool.PooledObjectPolicy`1.Create"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.PooledObjectPolicy`1.Return(`0)"><inheritdoc /></member><member name="T:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy"><summary>
+            用于池化 <see cref="T:System.Text.StringBuilder" /> 实例的策略。
+            </summary></member><member name="P:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy.InitialCapacity"><summary>
+            获取或设置池化的 <see cref="T:System.Text.StringBuilder" /> 实例的初始容量。
+            </summary><value>默认为 <c>100</c>。</value></member><member name="M:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy.Create"><inheritdoc /></member><member name="M:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy.Return(System.Text.StringBuilder)"><inheritdoc /></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)"><summary>当 <paramref name="argument" /> 为 null 时，会引发 <see cref="T:System.ArgumentNullException" />。</summary><param name="argument">要验证为非 null 的引用类型参数。</param><param name="paramName">与 <paramref name="argument" /> 相对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null 或空字符串，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证为非 null 且非空的 <see cref="T:System.String" /> 参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="P:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy.MaximumRetainedCapacity"><summary>
+            获取或设置允许保留的<see cref="P:System.Text.StringBuilder.Capacity" />的最大值，当调用<see cref="M:Microsoft.Extensions.ObjectPool.StringBuilderPooledObjectPolicy.Return(System.Text.StringBuilder)" />时。
+            </summary><value>默认值为<c>4096</c>。</value></member><member name="M:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1.Create"><summary>
+            创建一个 <typeparamref name="T" />。
+            </summary><returns>所创建的 <typeparamref name="T" />。</returns></member><member name="T:Microsoft.Extensions.ObjectPool.PooledObjectPolicy`1"><summary><see cref="T:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1" /> 的基类型。
+            </summary><typeparam name="T">正在池化的对象的类型。</typeparam></member></members>
+</doc>
