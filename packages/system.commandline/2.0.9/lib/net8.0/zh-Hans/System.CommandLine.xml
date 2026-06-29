@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>System.CommandLine</name>
+    </assembly>
+    <members><member name="T:System.CommandLine.Argument"><summary>
+        定义可以通过命令行传递给 <see cref="T:System.CommandLine.Command">命令</see> 或 <see cref="T:System.CommandLine.Option">选项</see> 的值的符号。
+    </summary></member><member name="M:System.CommandLine.Argument.#ctor(System.String)"><summary>
+            初始化 Argument 类的新实例。
+            </summary><param name="name">参数的名称。可用于查找解析的值，并在帮助中显示。</param></member><member name="P:System.CommandLine.Argument.Arity"><summary>
+            获取或设置参数的元数。
+            </summary></member><member name="P:System.CommandLine.Argument.HelpName"><summary>
+            帮助输出中用于描述参数的名称。
+            </summary></member><member name="P:System.CommandLine.Argument.CompletionSources"><summary>
+            获取参数的完成源列表。
+            </summary></member><member name="P:System.CommandLine.Argument.ValueType"><summary>
+            获取或设置参数解析后的令牌将被转换成的 <see cref="T:System.Type" />。
+            </summary></member><member name="P:System.CommandLine.Argument.Validators"><summary>
+    提供参数验证器的列表。验证器可用于基于用户输入提供自定义错误。
+    </summary></member><member name="M:System.CommandLine.Argument.GetDefaultValue"><summary>
+            获取参数的默认值。
+            </summary><returns>返回参数的默认值（如果已定义）。否则为 null。</returns></member><member name="P:System.CommandLine.Argument.HasDefaultValue"><summary>
+            指定是否为参数定义了默认值。
+            </summary></member><member name="M:System.CommandLine.Argument.GetCompletions(System.CommandLine.Completions.CompletionContext)"><inheritdoc /></member><member name="M:System.CommandLine.Argument.ToString"><inheritdoc /></member><member name="T:System.CommandLine.ArgumentArity"><summary>
+            定义选项或参数的元数。
+            </summary><remarks>元数指的是可以在命令行上传递的值的数量。
+            </remarks></member><member name="M:System.CommandLine.ArgumentArity.#ctor(System.Int32,System.Int32)"><summary>
+            初始化 ArgumentArity 类的新实例。
+            </summary><param name="minimumNumberOfValues">参数所需的最小值数目。</param><param name="maximumNumberOfValues">参数允许的最大值数目。</param><exception cref="T:System.ArgumentOutOfRangeException">当 <paramref name="minimumNumberOfValues" /> 为负数时引发。</exception><exception cref="T:System.ArgumentException">当最大值小于最小值或最大值大于 MaximumArity 时引发。</exception></member><member name="P:System.CommandLine.ArgumentArity.MinimumNumberOfValues"><summary>
+            获取 <see cref="T:System.CommandLine.Argument">参数</see> 所需的最小值的数量。
+            </summary></member><member name="P:System.CommandLine.ArgumentArity.MaximumNumberOfValues"><summary>
+            获取一个<see cref="T:System.CommandLine.Argument">参数</see>允许的最大值的数目。
+            </summary></member><member name="M:System.CommandLine.ArgumentArity.Equals(System.CommandLine.ArgumentArity)"><inheritdoc /></member><member name="M:System.CommandLine.ArgumentArity.Equals(System.Object)"><inheritdoc /></member><member name="M:System.CommandLine.ArgumentArity.GetHashCode"><inheritdoc /></member><member name="P:System.CommandLine.ArgumentArity.Zero"><summary>
+            不允许任何值的参数数量。
+            </summary></member><member name="P:System.CommandLine.ArgumentArity.ZeroOrOne"><summary>
+            一个可能包含一个值但不能多于一个的参数个数。
+            </summary></member><member name="P:System.CommandLine.ArgumentArity.ExactlyOne"><summary>
+            必须恰好有一个值的元数。
+            </summary></member><member name="P:System.CommandLine.ArgumentArity.ZeroOrMore"><summary>
+            一个可以有多个值的参数数量。
+            </summary></member><member name="P:System.CommandLine.ArgumentArity.OneOrMore"><summary>
+            必须至少包含一个值的参数数量。
+            </summary></member><member name="T:System.CommandLine.ArgumentValidation"><summary>
+            提供 <see cref="T:System.CommandLine.Argument" /> 的扩展方法。
+            </summary></member><member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.FileInfo})"><summary>
+            配置参数以仅接受与现有文件对应的值。
+            </summary><param name="argument">要配置的参数。</param><param name="argument">要配置的参数。</param><returns>已配置的参数。</returns></member><member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.DirectoryInfo})"><summary>
+            配置一个参数以仅接受对应现有目录的值。
+            </summary><param name="argument">要配置的参数。</param></member><member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly(System.CommandLine.Argument{System.IO.FileSystemInfo})"><summary>
+            配置参数以仅接受对应于现有文件或目录的值。
+            </summary><param name="argument">要配置的参数。</param><returns>已配置的参数。</returns></member><member name="M:System.CommandLine.ArgumentValidation.AcceptExistingOnly``1(System.CommandLine.Argument{``0})"><summary>
+            将参数配置为仅接受与现有文件或目录对应的值。
+            </summary><param name="argument">要配置的参数。</param><returns>配置后的参数。</returns></member><member name="M:System.CommandLine.ArgumentValidation.AcceptLegalFileNamesOnly``1(System.CommandLine.Argument{``0})"><summary>
+            配置参数，使其仅接受表示合法文件名的值。
+            </summary><remarks>例如，如果在解析值中发现文件路径分隔符，则会导致解析错误。</remarks></member><member name="M:System.CommandLine.ArgumentValidation.AcceptLegalFilePathsOnly``1(System.CommandLine.Argument{``0})"><summary>
+            将参数配置为仅接受表示合法文件路径的值。
+            </summary></member><member name="M:System.CommandLine.ArgumentValidation.AcceptOnlyFromAmong``1(System.CommandLine.Argument{``0},System.String[])"><summary>
+            将参数配置为仅接受指定的值，并将它们作为命令行补全提示。
+            </summary><param name="argument">要配置的参数。</param><param name="values">该参数允许的值。</param></member><member name="T:System.CommandLine.Argument`1"><inheritdoc cref="T:System.CommandLine.Argument" /></member><member name="M:System.CommandLine.Argument`1.#ctor(System.String)"><summary>
+    初始化 Argument 类的新实例。
+  </summary><param name="name">参数的名称。可用于查找解析的值，并在帮助中显示。</param></member><member name="P:System.CommandLine.Argument`1.DefaultValueFactory"><summary>
+            要调用以创建默认值的委托。
+            </summary><remarks>
+            当没有为给定参数提供解析输入时，会调用该委托。
+            同一实例可以设置为 <see cref="P:System.CommandLine.Argument`1.CustomParser" />，在这种情况下，
+            当提供了输入时，也会调用该委托。
+            </remarks></member><member name="P:System.CommandLine.Argument`1.CustomParser"><summary>
+            一个自定义参数解析器。
+            </summary><remarks>
+            当为给定参数提供了解析输入时，会调用该实例。
+            同一个实例也可以设置为 <see cref="P:System.CommandLine.Argument`1.DefaultValueFactory" />，在这种情况下，当没有提供输入时也会调用该委托。
+            </remarks></member><member name="P:System.CommandLine.Argument`1.ValueType"><inheritdoc /></member><member name="P:System.CommandLine.Argument`1.HasDefaultValue"><inheritdoc /></member><member name="T:System.CommandLine.ChildSymbolList`1"><summary>
+            一个 List<typeparamref name="T" /> 的包装器，为每个添加的元素设置父对象。
+            </summary></member><member name="T:System.CommandLine.Command"><summary>
+    表示应用程序执行的特定操作。
+    </summary><remarks>
+    使用 Command 对象来表示与特定字符串（命令名称）对应的操作。有关只有一个操作的简单应用程序，请参阅 <see cref="T:System.CommandLine.RootCommand" />。例如，<c>dotnet run</c> 使用 <c>run</c> 作为命令。
+    </remarks></member><member name="M:System.CommandLine.Command.#ctor(System.String,System.String)"><summary>
+            初始化 Command 类的新实例。
+            </summary><param name="name">命令的名称。</param><param name="description">命令的描述，显示在帮助中。</param></member><member name="P:System.CommandLine.Command.Children"><summary>
+            获取子符号。
+            </summary></member><member name="P:System.CommandLine.Command.Arguments"><summary>
+            表示命令的所有参数。
+            </summary></member><member name="P:System.CommandLine.Command.Options"><summary>
+            表示命令的所有选项，包括已应用于命令的任意祖先的继承选项。
+            </summary></member><member name="P:System.CommandLine.Command.Subcommands"><summary>
+            表示命令的所有子命令。
+            </summary></member><member name="P:System.CommandLine.Command.Validators"><summary>
+            命令的验证器。验证器可用于创建自定义验证逻辑。
+            </summary></member><member name="P:System.CommandLine.Command.Aliases"><summary>
+            获取可用于在命令行上指定命令的唯一字符串集。
+            </summary><remarks>该集合不包含命令的 <see cref="P:System.CommandLine.Symbol.Name" />。</remarks></member><member name="P:System.CommandLine.Command.Action"><summary>
+    获取或设置命令的 <see cref="T:System.CommandLine.Invocation.CommandLineAction" />。处理程序表示调用命令时将执行的操作。
+    </summary><remarks><para>使用 <see cref="M:System.CommandLine.Command.SetAction(System.Action{System.CommandLine.ParseResult})" /> 的重载之一来构造处理程序。</para><para>如果未指定处理程序，则对于调用此命令的命令行输入将生成分析器错误。</para></remarks></member><member name="M:System.CommandLine.Command.SetAction(System.Action{System.CommandLine.ParseResult})"><summary>
+            设置一个在命令被调用时运行的同步操作。
+            </summary></member><member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Int32})"><summary>
+            设置在调用命令时运行的同步操作。
+            </summary><remarks>从 <paramref name="action" /> 委托返回的值可用于设置进程退出代码。</remarks></member><member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task})"><summary>
+            设置当命令被调用时要运行的异步操作。
+            </summary></member><member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.Tasks.Task})"><summary>
+            设置在调用命令时要运行的异步操作。
+            </summary><remarks>
+            如果可能，最好使用 <see cref="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task})" /> 重载，
+            并将 <see cref="T:System.Threading.CancellationToken" /> 参数传递给操作所调用的异步方法。
+            </remarks></member><member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.Tasks.Task{System.Int32}})"><summary>
+            设置当调用命令时要运行的异步操作。
+            </summary><remarks>
+            如果可能，建议使用 <see cref="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Int32}})" /> 重载
+            并将 <see cref="T:System.Threading.CancellationToken" /> 参数传递给操作调用的异步方法。
+            </remarks></member><member name="M:System.CommandLine.Command.SetAction(System.Func{System.CommandLine.ParseResult,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Int32}})"><summary>
+            设置一个在命令调用时执行的异步操作。
+            </summary><remarks>从 <paramref name="action" /> 委托返回的值可用于设置进程退出代码。</remarks></member><member name="M:System.CommandLine.Command.Add(System.CommandLine.Argument)"><summary>
+            向命令添加 <see cref="T:System.CommandLine.Argument" />。
+            </summary><param name="argument">要添加到命令的选项。</param></member><member name="M:System.CommandLine.Command.Add(System.CommandLine.Option)"><summary>
+            将 <see cref="T:System.CommandLine.Option" /> 添加到命令。
+            </summary><param name="option">要添加到命令的选项。</param></member><member name="M:System.CommandLine.Command.Add(System.CommandLine.Command)"><summary>
+            将 <see cref="T:System.CommandLine.Command" /> 添加到命令中。
+            </summary><param name="command">要添加到命令的 Command。</param></member><member name="P:System.CommandLine.Command.TreatUnmatchedTokensAsErrors"><summary>
+            获取或设置一个值，该值指示是否应将不匹配的令牌视为错误。例如，如果设置为 <see langword="true" /> 并且提供了额外的命令或参数，则验证将失败。
+            </summary></member><member name="M:System.CommandLine.Command.System#Collections#IEnumerable#GetEnumerator"><inheritdoc /></member><member name="M:System.CommandLine.Command.Parse(System.Collections.Generic.IReadOnlyList{System.String},System.CommandLine.ParserConfiguration)"><summary>
+            使用命令解析字符串数组。
+            </summary><param name="args">要解析的字符串参数。</param><param name="configuration">解析器语法和行为所基于的配置。</param><returns>描述解析操作结果的解析结果。</returns></member><member name="M:System.CommandLine.Command.Parse(System.String,System.CommandLine.ParserConfiguration)"><summary>
+            使用命令解析命令行字符串值。
+            </summary><remarks>命令行字符串输入将被拆分为标记，就像在命令行上传递一样。</remarks><param name="commandLine">要解析的命令行字符串，可以包含空格和引号，等效于可在终端中输入的内容。</param><param name="configuration">解析器语法和行为所基于的配置。</param><returns>描述解析操作结果的解析结果。</returns></member><member name="M:System.CommandLine.Command.GetCompletions(System.CommandLine.Completions.CompletionContext)"><inheritdoc /></member><member name="T:System.CommandLine.CompletionSourceExtensions"><summary>
+            提供用于处理完成源的扩展方法。
+            </summary></member><member name="M:System.CommandLine.CompletionSourceExtensions.Add(System.Collections.Generic.List{System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.CommandLine.Completions.CompletionItem}}},System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.String}})"><summary>
+            使用委托添加完成源。
+            </summary><param name="completionSources">要添加到的完成源列表。</param><param name="completionsDelegate">计算完成时要调用的委托。</param></member><member name="M:System.CommandLine.CompletionSourceExtensions.Add(System.Collections.Generic.List{System.Func{System.CommandLine.Completions.CompletionContext,System.Collections.Generic.IEnumerable{System.CommandLine.Completions.CompletionItem}}},System.String[])"><summary>
+    使用委托添加完成源。
+    </summary><param name="completionSources">要添加到的完成源列表。</param><param name="completions">建议用于命令行完成的字符串列表。</param></member><member name="T:System.CommandLine.Completions.CompletionAction"><summary>
+            实现 <c>[suggest]</c> 指令的操作，当在命令行中指定该指令时，将中断正常命令处理并显示一个图表，说明命令行输入的解析结果。
+            </summary></member><member name="M:System.CommandLine.Completions.CompletionAction.Invoke(System.CommandLine.ParseResult)"><inheritdoc /></member><member name="T:System.CommandLine.Completions.CompletionContext"><summary>
+            支持命令行补全操作。
+            </summary></member><member name="P:System.CommandLine.Completions.CompletionContext.WordToComplete">
+            要补全的单词的文本（如果有的话）。
+        </member><member name="P:System.CommandLine.Completions.CompletionContext.ParseResult">
+            正在为其请求完成项的解析结果。
+        </member><member name="P:System.CommandLine.Completions.CompletionContext.Empty"><summary>
+            获取一个空的 CompletionContext。
+            </summary><remarks>可用于测试目的。</remarks></member><member name="M:System.CommandLine.Completions.CompletionContext.GetWordToComplete(System.CommandLine.ParseResult,System.Nullable{System.Int32})"><summary>
+            获取用于完成匹配的文本，可用于筛选完成列表。
+            </summary><param name="parseResult">一个分析结果。</param><param name="position">原始输入中提供补全的位置（如果可用）。</param><returns>一个包含用户输入文本的字符串，用于完成匹配。</returns></member><member name="T:System.CommandLine.Completions.CompletionItem"><summary>
+    提供有关命令行完成项的详细信息。
+    </summary></member><member name="M:System.CommandLine.Completions.CompletionItem.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)"><param name="label">标签值，即显示给用户的文本，并且除非设置了<paramref name="insertText" />，否则也会用于填充<see cref="P:System.CommandLine.Completions.CompletionItem.InsertText" />属性。</param><param name="kind">完成项的种类。</param><param name="sortText">用于在列表中排序完成项的值。如果未提供此项，则使用<paramref name="label" />。</param><param name="insertText">此完成项要插入的文本。如果未提供此项，则使用<paramref name="label" />。</param><param name="documentation">关于完成项的文档。</param><param name="detail">有关完成项的更多详细信息。</param></member><member name="P:System.CommandLine.Completions.CompletionItem.Label"><summary>
+    标签值，即显示给用户的文本。
+    </summary></member><member name="P:System.CommandLine.Completions.CompletionItem.Kind"><summary>
+            完成项的种类。
+            </summary></member><member name="P:System.CommandLine.Completions.CompletionItem.SortText"><summary>
+            用于对列表中的完成项进行排序的值。
+            </summary></member><member name="P:System.CommandLine.Completions.CompletionItem.InsertText"><summary>
+            此完成项要插入的文本。
+            </summary></member><member name="P:System.CommandLine.Completions.CompletionItem.Documentation"><summary>
+            关于完成项的文档。
+            </summary></member><member name="P:System.CommandLine.Completions.CompletionItem.Detail"><summary>
+            关于完成项的附加详细信息。
+            </summary></member><member name="M:System.CommandLine.Completions.CompletionItem.ToString"><inheritdoc /></member><member name="M:System.CommandLine.Completions.CompletionItem.Equals(System.CommandLine.Completions.CompletionItem)"><summary>
+            确定两个完成项是否相等。
+            </summary></member><member name="M:System.CommandLine.Completions.CompletionItem.Equals(System.Object)"><inheritdoc /></member><member name="M:System.CommandLine.Completions.CompletionItem.GetHashCode"><inheritdoc /></member><member name="T:System.CommandLine.Completions.SuggestDirective"><summary>
+            启用<c>[suggest]</c>指令，当在命令行输入中指定该指令时，它会短路正常的命令处理，并写入一个以换行符分隔的建议列表，适用于大多数shell提供命令行补全。
+            </summary><remarks><c>dotnet-suggest</c>工具要求应用程序启用suggest指令才能提供补全功能。</remarks></member><member name="M:System.CommandLine.Completions.SuggestDirective.#ctor"><inheritdoc /></member><member name="P:System.CommandLine.Completions.SuggestDirective.Action"><inheritdoc /></member><member name="T:System.CommandLine.Completions.TextCompletionContext"><summary>
+    提供在完整、未拆分的命令行文本上下文中计算补全的详细信息。
+    </summary></member><member name="P:System.CommandLine.Completions.TextCompletionContext.CursorPosition"><summary>
+            光标在命令行中的位置。
+            </summary></member><member name="P:System.CommandLine.Completions.TextCompletionContext.CommandLineText"><summary>
+            命令行在拆分前的完整文本，包括任何额外的空白字符。
+            </summary></member><member name="M:System.CommandLine.Completions.TextCompletionContext.AtCursorPosition(System.Int32)"><summary>
+    在指定的光标位置创建 <see cref="T:System.CommandLine.Completions.TextCompletionContext" /> 的新实例。
+  </summary><param name="position">计算完成项的光标位置。</param></member><member name="T:System.CommandLine.Directive"><summary>
+            指令的目的是提供可以跨命令行应用应用的横切功能。
+            由于指令在语法上与应用程序自身的语法不同，因此它们可以提供跨应用程序应用的功能。
+            
+            指令必须符合以下语法规则：
+            * 它是一个令牌，位于命令行上应用程序名称之后但在任何子命令或选项之前。
+            * 它括在方括号中。
+            * 它不包含空格。
+            </summary></member><member name="M:System.CommandLine.Directive.#ctor(System.String)"><summary>
+            初始化 Directive 类的新实例。
+            </summary><param name="name">指令的名称。它不能包含空格。</param></member><member name="M:System.CommandLine.Directive.GetCompletions(System.CommandLine.Completions.CompletionContext)"><inheritdoc /></member><member name="T:System.CommandLine.EnumerableExtensions"><summary>
+            提供一组 <see langword="static" /> 方法，用于查询实现 <see cref="T:System.Collections.IEnumerable" /> 的对象。
+            </summary></member><member name="T:System.CommandLine.EnvironmentVariablesDirective"><summary>
+    启用 <c>[env:key=value]</c> 指令的使用，允许在调用时从命令行设置环境变量。
+    </summary></member><member name="M:System.CommandLine.EnvironmentVariablesDirective.#ctor"><inheritdoc /></member><member name="P:System.CommandLine.EnvironmentVariablesDirective.Action"><inheritdoc /></member><member name="T:System.CommandLine.Help.HelpAction"><summary>
+            提供命令行帮助。
+            </summary></member><member name="P:System.CommandLine.Help.HelpAction.MaxWidth"><summary>
+            帮助输出被换行后的最大字符宽度。
+            </summary><remarks>它默认值为 <see cref="P:System.Console.WindowWidth" />。</remarks></member><member name="P:System.CommandLine.Help.HelpAction.Builder"><summary>
+            指定在请求帮助时用于格式化帮助输出的 <see cref="P:System.CommandLine.Help.HelpAction.Builder" />。
+            </summary></member><member name="M:System.CommandLine.Help.HelpAction.Invoke(System.CommandLine.ParseResult)"><inheritdoc /></member><member name="T:System.CommandLine.Help.HelpBuilder"><summary>
+    格式化输出以向用户说明如何使用命令行工具。
+    </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.#ctor(System.Int32)"><param name="maxWidth">最大字符宽度，超过该宽度后帮助输出会被换行。</param></member><member name="P:System.CommandLine.Help.HelpBuilder.MaxWidth"><summary>
+            格式化帮助输出的最大宽度。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Write(System.CommandLine.Help.HelpContext)"><summary>
+            为指定命令写入帮助输出。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.CustomizeLayout(System.Func{System.CommandLine.Help.HelpContext,System.Collections.Generic.IEnumerable{System.Func{System.CommandLine.Help.HelpContext,System.Boolean}}})"><summary>
+    自定义将显示的帮助部分。
+    </summary><param name="getLayout">
+    一个委托，按应该写入的顺序返回部分。<br />
+    如果部分为空，该部分委托应返回 false；否则返回 true。
+    </param></member><member name="M:System.CommandLine.Help.HelpBuilder.CustomizeSymbol(System.CommandLine.Symbol,System.String,System.String,System.String)"><summary>
+            为特定符号指定自定义帮助详细信息。
+            </summary><param name="symbol">要为其自定义帮助详细信息的符号。</param><param name="firstColumnText">用于显示第一帮助列（通常为名称和用法信息）的委托。</param><param name="secondColumnText">用于显示第二帮助列（通常为描述）的委托。</param><param name="defaultValue">为该符号显示的默认值。</param></member><member name="M:System.CommandLine.Help.HelpBuilder.Write(System.CommandLine.Command,System.IO.TextWriter)"><summary>
+            写入指定命令的帮助输出。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.WriteColumns(System.Collections.Generic.IReadOnlyList{System.CommandLine.Help.TwoColumnHelpRow},System.CommandLine.Help.HelpContext)"><summary>
+  写入指定的帮助行，在列中对齐输出。
+  </summary><param name="items">要在列中写出的帮助项。</param><param name="context">帮助上下文。</param></member><member name="M:System.CommandLine.Help.HelpBuilder.GetTwoColumnRow(System.CommandLine.Symbol,System.CommandLine.Help.HelpContext)"><summary>
+            获取指定符号的帮助项。
+            </summary><param name="symbol">要为其获取帮助项的符号。</param><param name="context">帮助上下文。</param></member><member name="T:System.CommandLine.Help.HelpBuilder.Default"><summary>
+            提供帮助输出的默认格式。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentDefaultValue(System.CommandLine.Symbol)"><summary>
+            获取要在帮助中显示的参数的默认值。
+            </summary><param name="symbol">要获取其默认值的参数或选项。</param></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentDescription(System.CommandLine.Argument)"><summary>
+            获取参数的描述（通常用于参数部分的第二列文本）。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetArgumentUsageLabel(System.CommandLine.Symbol)"><summary>
+            获取参数的用法标题（例如：<c>&lt;value&gt;</c>，通常用于参数用法部分的第一列文本中，或用于概要中）。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetCommandUsageLabel(System.CommandLine.Command)"><summary>
+            获取指定符号的使用标签（通常用作帮助输出中的第一列文本）。
+            </summary><param name="symbol">要为之获取帮助项的符号。</param><returns>要显示的文本。</returns></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetOptionUsageLabel(System.CommandLine.Option)"><inheritdoc cref="M:System.CommandLine.Help.HelpBuilder.Default.GetCommandUsageLabel(System.CommandLine.Command)" /></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.GetLayout"><summary>
+            获取要为命令行帮助编写的默认部分。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.SynopsisSection"><summary>
+            写入描述命令概要的帮助部分。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.CommandUsageSection"><summary>
+            写入描述命令用法的帮助部分。
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.CommandArgumentsSection"><summary>
+            写入一个描述命令参数的帮助部分。
+             </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.OptionsSection"><summary>
+            编写描述命令选项的帮助部分。
+             </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.AdditionalArgumentsSection"><summary>
+    写入一个帮助部分，描述命令的附加参数，通常仅在 <see cref="P:System.CommandLine.Command.TreatUnmatchedTokensAsErrors" /> 设置为 <see langword="true" /> 时显示。
+  </summary></member><member name="T:System.CommandLine.Help.HelpContext"><summary>
+            支持格式化命令行帮助。
+            </summary></member><member name="M:System.CommandLine.Help.HelpContext.#ctor(System.CommandLine.Help.HelpBuilder,System.CommandLine.Command,System.IO.TextWriter)"><param name="helpBuilder">当前的帮助生成器。</param><param name="command">正在为其格式化帮助的命令。</param><param name="output">用于写入输出的文本编写器。</param></member><member name="P:System.CommandLine.Help.HelpContext.HelpBuilder"><summary>
+    当前操作的帮助生成器。
+    </summary></member><member name="P:System.CommandLine.Help.HelpContext.Command"><summary>
+            正在为其格式化帮助的命令。
+            </summary></member><member name="P:System.CommandLine.Help.HelpContext.Output"><summary>用于写入输出的文本编写器。</summary></member><member name="T:System.CommandLine.Help.HelpOption"><summary>
+            一个标准选项，指示应显示命令行帮助。
+            </summary></member><member name="M:System.CommandLine.Help.HelpOption.#ctor"><summary>
+            当添加到 <see cref="T:System.CommandLine.Command" /> 时，它配置应用程序在命令行中指定以下选项之一时显示帮助：
+            <code>
+               -h
+               /h
+               --help
+               -?
+               /?
+            </code></summary></member><member name="M:System.CommandLine.Help.HelpOption.#ctor(System.String,System.String[])"><summary>
+            当添加到 <see cref="T:System.CommandLine.Command" /> 时，它配置应用程序在命令行上指定名称或别名之一时显示帮助。
+            </summary></member><member name="P:System.CommandLine.Help.HelpOption.Action"><inheritdoc /></member><member name="T:System.CommandLine.Help.TwoColumnHelpRow"><summary>
+            提供有关要格式化输出的项的详细信息，以便显示双列命令行帮助。
+            </summary></member><member name="M:System.CommandLine.Help.TwoColumnHelpRow.#ctor(System.String,System.String)"><param name="firstColumnText">名称和调用详细信息，通常显示在帮助的第一列。</param><param name="secondColumnText">符号的描述，通常显示在帮助的第二列。</param></member><member name="P:System.CommandLine.Help.TwoColumnHelpRow.FirstColumnText"><summary>
+    帮助条目的第一列，通常包含选项或参数的名称和其他使用细节。
+    </summary></member><member name="P:System.CommandLine.Help.TwoColumnHelpRow.SecondColumnText"><summary>
+            帮助条目的第二列，通常包含选项或参数的名称及其他用法详情。
+            </summary></member><member name="M:System.CommandLine.Help.TwoColumnHelpRow.Equals(System.Object)"><inheritdoc /></member><member name="M:System.CommandLine.Help.TwoColumnHelpRow.Equals(System.CommandLine.Help.TwoColumnHelpRow)"><inheritdoc /></member><member name="M:System.CommandLine.Help.TwoColumnHelpRow.GetHashCode"><inheritdoc /></member><member name="P:System.CommandLine.InvocationConfiguration.EnableDefaultExceptionHandler"><summary>
+        启用默认异常处理程序以捕获调用期间引发的任何未处理异常。默认情况下启用。
+    </summary></member><member name="P:System.CommandLine.InvocationConfiguration.Output"><summary>
+            标准输出。由帮助和其他写入非错误信息的工具使用。
+            默认情况下设置为 <see cref="P:System.Console.Out" />。
+            出于测试目的，可以将其设置为 <see cref="T:System.IO.StringWriter" /> 的新实例。
+            如果要禁用输出，请将其设置为 <see cref="F:System.IO.TextWriter.Null" />。
+            </summary></member><member name="P:System.CommandLine.InvocationConfiguration.Error"><summary>
+            标准错误。用于打印错误信息（如解析错误）。
+            默认情况下，它被设置为 <see cref="P:System.Console.Error" />。
+            在测试时，可以将其设置为 <see cref="T:System.IO.StringWriter" /> 的新实例。
+            </summary></member><member name="M:System.CommandLine.Invocation.AnonymousAsynchronousCommandLineAction.InvokeAsync(System.CommandLine.ParseResult,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:System.CommandLine.Invocation.AnonymousSynchronousCommandLineAction.Invoke(System.CommandLine.ParseResult)"><inheritdoc /></member><member name="T:System.CommandLine.Invocation.AsynchronousCommandLineAction">
+            定义与命令行符号关联的异步行为。
+        </member><member name="M:System.CommandLine.Invocation.AsynchronousCommandLineAction.InvokeAsync(System.CommandLine.ParseResult,System.Threading.CancellationToken)"><summary>
+            当关联符号在命令行上被调用时执行操作。
+            </summary><param name="parseResult">提供解析结果。</param><param name="cancellationToken">用于监视取消请求的令牌。</param><returns>可用作进程退出代码的值。</returns></member><member name="T:System.CommandLine.Invocation.CommandLineAction"><summary>
+    定义与命令行符号关联的行为。
+    </summary></member><member name="P:System.CommandLine.Invocation.CommandLineAction.Terminating"><summary>
+            指示该操作终止命令行调用，并跳过后续操作。
+            </summary></member><member name="P:System.CommandLine.Invocation.CommandLineAction.ClearsParseErrors"><summary>
+            指示操作清除与拥有<see cref="T:System.CommandLine.Invocation.CommandLineAction" />的符号以外的任何符号关联的解析错误。
+            </summary><remarks>当<see cref="P:System.CommandLine.Invocation.CommandLineAction.Terminating" />设置为<see langword="false" />时，将忽略此属性。</remarks></member><member name="T:System.CommandLine.Invocation.ParseErrorAction"><summary>
+            在解析错误时提供带有错误详细信息的命令行输出。
+            </summary></member><member name="P:System.CommandLine.Invocation.ParseErrorAction.ShowHelp"><summary>
+            指示在解析过程中发现错误时是否显示帮助以及错误详细信息。
+            </summary><remarks>当设置为 <see langword="true" /> 时，表示将显示帮助以及解析错误详细信息。当设置为 false 时，不显示帮助。</remarks></member><member name="P:System.CommandLine.Invocation.ParseErrorAction.ShowTypoCorrections"><summary>
+            指示在解析过程中发现错误时是否同时显示拼写建议和错误详细信息。
+            </summary><remarks>当设置为 <see langword="true" /> 时，表示将同时显示建议和解析错误详细信息。当设置为 false 时，将不显示建议。</remarks></member><member name="M:System.CommandLine.Invocation.ParseErrorAction.Invoke(System.CommandLine.ParseResult)"><inheritdoc /></member><member name="T:System.CommandLine.Invocation.SynchronousCommandLineAction"><summary>
+            定义与命令行符号关联的同步行为。
+            </summary></member><member name="M:System.CommandLine.Invocation.SynchronousCommandLineAction.Invoke(System.CommandLine.ParseResult)"><summary>
+            当命令行上调用关联符号时执行操作。
+            </summary><param name="parseResult">提供分析结果。</param><returns>一个可用作进程退出代码的值。</returns></member><member name="T:System.CommandLine.LocalizationResources"><summary>
+    提供帮助和错误消息的可本地化字符串。
+    </summary></member><member name="M:System.CommandLine.LocalizationResources.ExpectsOneArgument(System.CommandLine.Parsing.OptionResult)"><summary>
+              将值插入到类似于“命令 '{0}' 需要一个参数，但提供了 {1} 个。”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.DirectoryDoesNotExist(System.String)"><summary>
+              将值插入到类似于“Directory does not exist: {0}”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.FileDoesNotExist(System.String)"><summary>
+      将值插入到类似于“文件不存在：{0}”的本地化字符串中。
+    </summary></member><member name="M:System.CommandLine.LocalizationResources.FileOrDirectoryDoesNotExist(System.String)"><summary>
+      将值插入到类似于“文件或目录不存在：{0}”的本地化字符串中。
+    </summary></member><member name="M:System.CommandLine.LocalizationResources.InvalidCharactersInPath(System.Char)"><summary>
+              将值插入到类似于“Character not allowed in a path: {0}”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.InvalidCharactersInFileName(System.Char)"><summary>
+              将值插入到本地化字符串中，该字符串类似于"文件名中不允许的字符：{0}"。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.RequiredArgumentMissing(System.CommandLine.Parsing.ArgumentResult)"><summary>
+              将值插值到本地化字符串中，该字符串类似于“命令缺少必需参数：{0}”。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.RequiredArgumentMissing(System.CommandLine.Parsing.OptionResult)"><summary>
+              将值插入到类似于“选项缺少必需参数：{0}”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.RequiredCommandWasNotProvided"><summary>
+              将值插入到类似于“未提供必需命令”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.RequiredOptionWasNotProvided(System.String)"><summary>
+              将值插入到与“选项'{0}'是必需的”类似的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.UnrecognizedArgument(System.String,System.Collections.Generic.IReadOnlyCollection{System.String})"><summary>
+              将值插入到本地化字符串中，该字符串类似于“参数'{0}'无法识别。必须是以下之一：{1}。”
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.UnrecognizedCommandOrArgument(System.String)"><summary>
+              将值插入到类似于“无法识别的命令或参数 '{0}'”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ResponseFileNotFound(System.String)"><summary>
+              将值插入到本地化字符串中，该字符串类似于“未找到响应文件 '{0}'”。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpOptionDescription"><summary>
+              将值插入到类似于“显示帮助和使用信息”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpUsageTitle"><summary>
+              将值插入到类似于"Usage:"的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpDescriptionTitle"><summary>
+              将值插入到一个类似于“Description:”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpUsageOptions"><summary>
+              将值插入到类似于 [options] 的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpUsageCommand"><summary>
+              将值内插到类似于 [command] 的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpUsageAdditionalArguments"><summary>
+              将值插入到类似于 [[--] &lt;additional arguments&gt;...]] 的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpArgumentsTitle"><summary>
+              将值插入到类似于“Arguments:”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpOptionsTitle"><summary>
+              将值插入到类似于“Options:”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpOptionsRequiredLabel"><summary>
+              将值插入到类似“(必需)”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpArgumentDefaultValueLabel"><summary>
+              将值插值到类似于默认值的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpCommandsTitle"><summary>
+              将值插入到类似于Commands:的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpAdditionalArgumentsTitle"><summary>
+              将值插值到类似于“附加参数：”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.HelpAdditionalArgumentsDescription"><summary>
+              将值插值到一个本地化字符串中，类似于传递给正在运行的应用程序的参数..
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.VersionOptionDescription"><summary>
+              将值插入到类似于“显示版本信息”的本地化字符串中。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.VersionOptionCannotBeCombinedWithOtherArguments(System.String)"><summary>
+              将值插入本地化字符串，类似于 {0} 选项不能与其他参数组合。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ExceptionHandlerHeader"><summary>
+      将值插入到类似于“未处理的异常:”的本地化字符串中。
+    </summary></member><member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParse(System.String,System.Type)"><summary>
+              将值插入本地化字符串，类似于“无法将参数 '{0}' 解析为预期类型 {1}。。”
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForCommand(System.String,System.String,System.Type)"><summary>
+              将值插值到本地化字符串中，类似于无法将参数'{0}'解析为命令'{1}'的预期类型{2}..
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForCommand(System.String,System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})"><summary>
+              将值插入到本地化字符串中，该字符串类似于“无法将参数“{0}”解析为命令“{1}”的预期类型 {2}”。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForOption(System.String,System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})"><summary>
+      将值插入到本地化字符串中，类似于无法将参数 '{0}' 解析为选项 '{1}' 的预期类型 {2}..
+    </summary></member><member name="M:System.CommandLine.LocalizationResources.GetResourceString(System.String,System.Object[])"><summary>
+            将值内插到本地化字符串中。
+            </summary><param name="resourceString">将值内插到的字符串模板。</param><param name="formatArguments">要内插的值。</param><returns>内插后的最终字符串。</returns></member><member name="T:System.CommandLine.Option"><summary>
+            定义命名参数及其值的符号。
+            </summary></member><member name="M:System.CommandLine.Option.#ctor(System.String,System.String[])"><summary>
+    初始化 <see cref="T:System.CommandLine.Option" /> 类的新实例。
+    </summary><param name="name">选项的名称。在解析期间使用，并在帮助中显示。</param><param name="aliases">可选的别名，通过该别名可以在命令行中指定该选项。</param></member><member name="P:System.CommandLine.Option.Argument"><summary>
+            获取选项的<see cref="P:System.CommandLine.Option.Argument">参数</see>。
+            </summary></member><member name="P:System.CommandLine.Option.HasDefaultValue"><summary>
+            指定是否为选项定义了默认值。
+            </summary></member><member name="P:System.CommandLine.Option.HelpName"><summary>
+            获取或设置选项在帮助中显示的名称。
+            </summary><value>
+            选项在帮助中显示的名称。
+            </value><remarks>对本地化很有用，因为它不用于实际解析。</remarks></member><member name="P:System.CommandLine.Option.Arity"><summary>
+            获取或设置选项的参数数量。
+            </summary></member><member name="P:System.CommandLine.Option.Recursive"><summary>
+            当设置为 true 时，此选项将应用于其直接父命令，并递归应用于它们的子命令。
+            </summary></member><member name="P:System.CommandLine.Option.ValueType"><summary>
+            获取选项的已分析标记将转换到的<see cref="T:System.Type" />。
+            </summary></member><member name="P:System.CommandLine.Option.Validators"><summary>
+            当选项被解析器匹配时将调用的验证器。
+            </summary></member><member name="P:System.CommandLine.Option.CompletionSources"><summary>
+            获取选项的完成源列表。
+            </summary></member><member name="P:System.CommandLine.Option.AllowMultipleArgumentsPerToken"><summary>
+            获取一个值，该值指示是否允许每个选项标识令牌有多个参数令牌。
+            </summary><example>
+            如果设置为 <see langword="true" />，则以下命令行对于传递多个参数是有效的：
+            <code>
+            &gt; --opt 1 2 3
+            </code>
+            以下内容等效，并且始终有效：
+            <code>
+            &gt; --opt 1 --opt 2 --opt 3
+            </code></example></member><member name="P:System.CommandLine.Option.Required"><summary>
+            指示当父命令被调用时该选项是否为必需的。
+            </summary><remarks>当一个选项是必需的并且其父命令在没有该选项的情况下被调用时，会出现错误。</remarks></member><member name="P:System.CommandLine.Option.Aliases"><summary>
+            获取可在命令行上用于指定选项的唯一字符串集合。
+            </summary><remarks>该集合不包含选项的<see cref="P:System.CommandLine.Symbol.Name" />。</remarks></member><member name="P:System.CommandLine.Option.Action"><summary>
+            获取或设置选项的<see cref="T:System.CommandLine.Invocation.CommandLineAction" />。处理程序表示在调用该选项时将执行的操作。
+            </summary></member><member name="M:System.CommandLine.Option.GetCompletions(System.CommandLine.Completions.CompletionContext)"><inheritdoc /></member><member name="M:System.CommandLine.Option.GetDefaultValue"><summary>
+    获取选项的默认值。
+    </summary><returns>返回选项的默认值（如果已定义），否则返回 null。</returns></member><member name="T:System.CommandLine.OptionValidation"><summary>
+            提供用于 <see cref="T:System.CommandLine.Option" /> 的扩展方法。
+            </summary></member><member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.FileInfo})"><summary>
+            配置选项仅接受与现有文件对应的值。
+            </summary><param name="option">要配置的选项。</param><returns>正在扩展的选项。</returns></member><member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.DirectoryInfo})"><summary>
+            配置一个选项，使其仅接受对应现有目录的值。
+            </summary><param name="option">要配置的选项。</param><returns>正在扩展的选项。</returns></member><member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly(System.CommandLine.Option{System.IO.FileSystemInfo})"><summary>
+            配置一个选项，使其仅接受对应于现有文件或目录的值。
+            </summary><param name="option">要配置的选项。</param><returns>被扩展的选项。</returns></member><member name="M:System.CommandLine.OptionValidation.AcceptExistingOnly``1(System.CommandLine.Option{``0})"><summary>
+            配置选项以仅接受与现有文件或目录相对应的值。
+            </summary><param name="option">要配置的选项。</param><returns>正在扩展的选项。</returns></member><member name="T:System.CommandLine.Option`1"><inheritdoc cref="T:System.CommandLine.Option" /><typeparam name="T">选项的参数预期被解析为的 <see cref="T:System.Type" />。</typeparam></member><member name="M:System.CommandLine.Option`1.#ctor(System.String,System.String[])"><summary>
+    初始化 <see cref="T:System.CommandLine.Option" /> 类的新实例。
+    </summary><param name="name">选项的名称。在解析期间使用并显示在帮助中。</param><param name="aliases">可选别名，用于在命令行上指定选项。</param></member><member name="P:System.CommandLine.Option`1.DefaultValueFactory"><inheritdoc cref="P:System.CommandLine.Argument`1.DefaultValueFactory" /></member><member name="P:System.CommandLine.Option`1.CustomParser"><inheritdoc cref="P:System.CommandLine.Argument`1.CustomParser" /></member><member name="P:System.CommandLine.Option`1.ValueType"><inheritdoc /></member><member name="M:System.CommandLine.Option`1.AcceptOnlyFromAmong(System.String[])"><summary>
+            配置选项仅接受指定的值，并在命令行完成时建议这些值。
+            </summary><param name="values">该选项允许的值。</param></member><member name="M:System.CommandLine.Option`1.AcceptLegalFilePathsOnly"><summary>
+            配置选项以仅接受表示合法文件路径的值。
+            </summary></member><member name="M:System.CommandLine.Option`1.AcceptLegalFileNamesOnly"><summary>
+            配置选项以仅接受表示合法文件名的值。
+            </summary><remarks>例如，如果在解析的值中发现文件路径分隔符，将导致解析错误。</remarks></member><member name="T:System.CommandLine.DiagramDirective"><summary>
+            启用 <c>[diagram]</c> 指令，当在命令行中指定此指令时，将短路正常的命令处理并显示一个解释命令行输入解析结果的图表。
+            </summary></member><member name="M:System.CommandLine.DiagramDirective.#ctor"><summary>
+            将解析结果的图示写入输出。
+            </summary></member><member name="P:System.CommandLine.DiagramDirective.Action"><inheritdoc /></member><member name="P:System.CommandLine.DiagramDirective.ParseErrorReturnValue"><summary>
+            获取或设置当解析遇到错误时可以用作退出代码的返回值。
+            </summary></member><member name="T:System.CommandLine.ParserConfiguration"><summary>
+            表示由 <see cref="T:System.CommandLine.Parsing.CommandLineParser" /> 使用的配置。
+            </summary></member><member name="P:System.CommandLine.ParserConfiguration.EnablePosixBundling"><summary>
+        使解析器能够识别和展开POSIX风格的捆绑选项。
+    </summary><param name="value"><see langword="true" /> 表示解析POSIX捆绑；否则为 <see langword="false" />。</param><remarks>
+        POSIX 约定建议允许在单个 <c>-</c> 前缀后一起指定单字符选项。当 <see cref="P:System.CommandLine.ParserConfiguration.EnablePosixBundling" /> 设置为 <see langword="true" /> 时，以下命令行是等效的：
+        
+        <code>
+            &gt; myapp -a -b -c
+            &gt; myapp -abc
+        </code>
+        
+        如果在选项捆绑后提供了一个参数，则该参数适用于捆绑中的最后一个选项。当 <see cref="P:System.CommandLine.ParserConfiguration.EnablePosixBundling" /> 设置为 <see langword="true" /> 时，以下所有命令行都是等效的：
+        <code>
+            &gt; myapp -a -b -c arg
+            &gt; myapp -abc arg
+            &gt; myapp -abcarg
+        </code></remarks></member><member name="P:System.CommandLine.ParserConfiguration.ResponseFileTokenReplacer"><summary>
+            响应文件令牌替换器，默认启用。若要禁用响应文件支持，需要将此属性设置为 null。
+            </summary><remarks>
+            启用后，任何以 <code>@</code> 为前缀的令牌都可以被替换为零个或多个其他令牌。这通常用于从响应文件中展开令牌，并在解析前将它们插入到命令行中。
+            </remarks></member><member name="T:System.CommandLine.ParseResult"><summary>
+            描述基于特定解析器配置解析命令行输入的结果。
+            </summary></member><member name="P:System.CommandLine.ParseResult.CommandResult"><summary>
+            表示命令行输入中指定的命令的结果。
+            </summary></member><member name="P:System.CommandLine.ParseResult.Configuration"><summary>
+            用于生成解析结果的配置。
+            </summary></member><member name="P:System.CommandLine.ParseResult.InvocationConfiguration"><summary>
+            用于指定命令行运行时行为的配置。
+            </summary></member><member name="P:System.CommandLine.ParseResult.RootCommandResult"><summary>
+            获取根命令结果。
+            </summary></member><member name="P:System.CommandLine.ParseResult.Errors"><summary>
+            获取在分析命令行输入时发现的分析错误。
+            </summary></member><member name="P:System.CommandLine.ParseResult.Tokens"><summary>
+            获取解析命令行输入时识别的令牌。
+            </summary></member><member name="P:System.CommandLine.ParseResult.CommandLineText"><summary>
+            当提供时，保存完整的命令行输入在分割和标记化之前的值。
+            </summary><remarks>当解析器从<c>Program.Main</c>调用时，不会设置此值。它主要用于通过<c>dotnet-suggest</c>工具计算建议时。</remarks></member><member name="P:System.CommandLine.ParseResult.UnmatchedTokens"><summary>
+    获取在命令行上使用但未被解析器匹配的标记列表。
+    </summary></member><member name="M:System.CommandLine.ParseResult.GetCompletionContext"><summary>
+            获取解析结果的完成上下文。
+            </summary></member><member name="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Argument{``0})"><summary>
+            获取指定参数的解析值或默认值。
+            </summary><param name="argument">要为其获取值的参数。</param><returns>解析值或配置的默认值。</returns></member><member name="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Option{``0})"><summary>
+            获取指定选项的解析值或默认值。
+            </summary><param name="option">要获取其值的选项。</param><returns>解析值或配置的默认值。</returns></member><member name="M:System.CommandLine.ParseResult.GetValue``1(System.String)"><summary>
+            获取指定符号名称的解析值或默认值，在解析命令的上下文中（非整个符号树）。
+            </summary><param name="name">要获取值的符号名称。</param><returns>解析后的值或配置的默认值。</returns><exception cref="T:System.InvalidOperationException">当解析导致错误时抛出。</exception><exception cref="T:System.ArgumentException">当解析命令的给定名称没有定义符号时抛出。</exception><exception cref="T:System.InvalidCastException">当解析结果无法转换为 <typeparamref name="T" />时抛出。</exception></member><member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Argument{``0})"><summary>
+    获取指定必需参数的解析值或默认值，否则引发异常。
+    </summary><param name="argument">要获取其值的参数。</param><returns>解析后的值或配置的默认值。</returns><exception cref="T:System.InvalidOperationException">当必需参数未解析或没有配置默认值时引发。</exception></member><member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Option{``0})"><summary>
+    获取指定的必选项的已解析值或默认值，否则引发异常。
+  </summary><param name="option">要为其获取值的选项。</param><returns>已解析的值或已配置的默认值。</returns><exception cref="T:System.InvalidOperationException">当必选项未被解析或没有配置默认值时引发异常。</exception></member><member name="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.String)"><summary>
+    获取指定必需符号名称的已解析或默认值，在已解析命令的上下文中（而非整个符号树）。
+    </summary><param name="name">要获取值的必需符号的名称。</param><returns>已解析的值或已配置的默认值。</returns><exception cref="T:System.InvalidOperationException">当解析导致解析错误，或必需符号未被解析，或未配置默认值时引发。</exception><exception cref="T:System.ArgumentException">当为已解析命令给定了名称但未定义符号时引发。</exception><exception cref="T:System.InvalidCastException">当解析结果无法强制转换为 <typeparamref name="T" /> 时引发。</exception></member><member name="M:System.CommandLine.ParseResult.ToString"><inheritdoc /></member><member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Argument)"><summary>
+    获取指定参数的结果（如果有）。
+    </summary><param name="argument">要为其查找结果的参数。</param><returns>指定参数的结果；如果未提供且未配置默认值，则为 <see langword="null" />。</returns></member><member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Command)"><summary>
+    获取指定命令的结果（如果有）。
+    </summary><param name="command">要为其查找结果的命令。</param><returns>指定命令的结果，如果未提供则为 <see langword="null" />。</returns></member><member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Option)"><summary>
+    获取指定选项的结果（如果有）。
+    </summary><param name="option">要查找其结果的选项。</param><returns>指定选项的结果，如果未提供且未配置默认值，则为<see langword="null" />。</returns></member><member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Directive)"><summary>
+    获取指定指令的结果（如果有）。
+    </summary><param name="directive">要查找其结果的指令。</param><returns>指定指令的结果；如果未提供该指令，则为 <see langword="null" />。</returns></member><member name="M:System.CommandLine.ParseResult.GetResult(System.CommandLine.Symbol)"><summary>
+    获取指定符号的结果（如果有）。
+    </summary><param name="symbol">要为其查找结果的符号。</param><returns>指定符号的结果；如果未提供且未配置默认值，则为 <see langword="null" />。</returns></member><member name="M:System.CommandLine.ParseResult.GetResult(System.String)"><summary>
+            在解析树中的任何位置查找具有指定名称的符号的结果。
+            </summary><param name="name">要查找结果的符号的名称。</param><returns>如果参数被解析器匹配或具有默认值，则返回符号结果；否则返回 <c>null</c>。</returns></member><member name="M:System.CommandLine.ParseResult.GetCompletions(System.Nullable{System.Int32})"><summary>
+            根据给定的解析结果获取补全。
+            </summary><param name="position">请求补全的位置。</param><returns>用于补全的一组补全项。</returns></member><member name="M:System.CommandLine.ParseResult.InvokeAsync(System.CommandLine.InvocationConfiguration,System.Threading.CancellationToken)"><summary>
+            调用已解析的命令行输入的相应命令处理程序。
+            </summary><param name="configuration">用于定义调用行为的配置。</param><param name="cancellationToken">可用于取消调用的令牌。</param><returns>一个任务，其结果可用作进程退出代码。</returns></member><member name="M:System.CommandLine.ParseResult.Invoke(System.CommandLine.InvocationConfiguration)"><summary>
+            为已解析的命令行输入调用相应的命令处理程序。
+            </summary><param name="configuration">用于定义调用行为的配置。</param><returns>一个可用作进程退出代码的值。</returns></member><member name="P:System.CommandLine.ParseResult.Action"><summary>
+            获取解析结果的<see cref="T:System.CommandLine.Invocation.CommandLineAction" />。
+            处理程序表示在调用解析结果时将执行的操作。
+            </summary></member><member name="T:System.CommandLine.Parsing.ArgumentResult"><summary>
+    解析 <see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument" /> 时产生的结果。
+    </summary></member><member name="P:System.CommandLine.Parsing.ArgumentResult.Argument"><summary>
+            结果所应用的参数。
+            </summary></member><member name="M:System.CommandLine.Parsing.ArgumentResult.GetValueOrDefault``1"><summary>
+            获取 <see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument" /> 的解析值或默认值。
+            </summary><returns><see cref="P:System.CommandLine.Parsing.ArgumentResult.Argument" /> 的解析值或默认值。</returns></member><member name="M:System.CommandLine.Parsing.ArgumentResult.OnlyTake(System.Int32)"><summary>
+            指定参数要使用的最大令牌数。剩余的令牌将传递下去，可以由后面的参数使用，否则将添加到 <see cref="P:System.CommandLine.ParseResult.UnmatchedTokens" />。
+            </summary><param name="numberOfTokens">要获取的令牌数。其余的传递下去。</param><exception cref="T:System.ArgumentOutOfRangeException">numberOfTokens - 值必须至少为 1。</exception><exception cref="T:System.InvalidOperationException">如果此方法被多次调用，则引发。</exception><exception cref="T:System.NotSupportedException">如果此方法由 Option 所拥有的 ArgumentResult 调用，则引发。</exception></member><member name="M:System.CommandLine.Parsing.ArgumentResult.ToString"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.ArgumentResult.AddError(System.String)"><inheritdoc /></member><member name="P:System.CommandLine.Parsing.ArgumentResult.AppliesToPublicSymbolResult"><summary>
+            由于 Option.Argument 是一个内部实现细节，如果父级是 OptionResult，则此 ArgumentResult 适用于公共 API 中的 OptionResult。
+            </summary></member><member name="T:System.CommandLine.Parsing.CommandLineParser"><summary>
+            解析命令行输入。
+            </summary></member><member name="M:System.CommandLine.Parsing.CommandLineParser.Parse(System.CommandLine.Command,System.Collections.Generic.IReadOnlyList{System.String},System.CommandLine.ParserConfiguration)"><summary>
+            解析参数列表。
+            </summary><param name="command">用于解析命令行输入的命令。</param><param name="args">通常传递给程序的<c>Main</c>方法的字符串数组。</param><param name="configuration">解析器的语法和行为所依据的配置。</param><returns>一个<see cref="T:System.CommandLine.ParseResult" />提供有关解析操作的详细信息。</returns></member><member name="M:System.CommandLine.Parsing.CommandLineParser.Parse(System.CommandLine.Command,System.String,System.CommandLine.ParserConfiguration)"><summary>
+    解析命令行字符串。
+    </summary><param name="command">用于解析命令行输入的命令。</param><param name="commandLine">在拆分和标记化之前的完整命令行输入。当从 <c>Program.Main</c> 调用解析器时，此输入通常不可用。它主要用于通过 <c>dotnet-suggest</c> 工具计算补全。</param><param name="configuration">解析器语法和行为所基于的配置。</param><remarks>命令行字符串输入将被拆分为标记，就像它在命令行上传递一样。</remarks><returns>一个 <see cref="T:System.CommandLine.ParseResult" />，提供有关解析操作的详细信息。</returns></member><member name="M:System.CommandLine.Parsing.CommandLineParser.SplitCommandLine(System.String)"><summary>
+            根据空格和引号将字符串拆分为字符串序列。
+            </summary><param name="commandLine">一个命令行输入字符串。</param><returns>一个字符串序列。</returns></member><member name="T:System.CommandLine.Parsing.CommandResult"><summary>
+    解析 <see cref="P:System.CommandLine.Parsing.CommandResult.Command" /> 时产生的结果。
+    </summary></member><member name="P:System.CommandLine.Parsing.CommandResult.Command"><summary>
+            结果所适用的命令。
+            </summary></member><member name="P:System.CommandLine.Parsing.CommandResult.IdentifierToken"><summary>
+            用于指定命令的已解析令牌。
+            </summary></member><member name="P:System.CommandLine.Parsing.CommandResult.Children"><summary>
+            解析树中的子符号结果。
+            </summary></member><member name="M:System.CommandLine.Parsing.CommandResult.ToString"><inheritdoc /></member><member name="T:System.CommandLine.Parsing.DirectiveResult"><summary>
+            当解析 <see cref="P:System.CommandLine.Parsing.DirectiveResult.Directive" /> 时产生的结果。
+            </summary></member><member name="P:System.CommandLine.Parsing.DirectiveResult.Values"><summary>
+            [name:value] 指令的解析值。
+            </summary><remarks>对于 [name] 指令可能为空。</remarks></member><member name="P:System.CommandLine.Parsing.DirectiveResult.Directive"><summary>
+            结果所应用的指令。
+            </summary></member><member name="P:System.CommandLine.Parsing.DirectiveResult.Token"><summary>
+            用于指定指令的解析令牌。
+            </summary></member><member name="T:System.CommandLine.Parsing.OptionResult"><summary>
+    解析 <see cref="P:System.CommandLine.Parsing.OptionResult.Option" />时产生的结果。
+    </summary></member><member name="P:System.CommandLine.Parsing.OptionResult.Option"><summary>
+            结果所适用的选项。
+            </summary></member><member name="P:System.CommandLine.Parsing.OptionResult.Implicit"><summary>
+            指示结果是否是隐式创建的，而不是因为在命令行中指定了选项。
+            </summary><remarks>隐式结果通常是由于选项具有默认值而产生的。</remarks></member><member name="P:System.CommandLine.Parsing.OptionResult.IdentifierToken"><summary>
+            用于指定选项的已解析令牌。
+            </summary><remarks>标识符令牌是匹配选项名称或其中一个别名的令牌。</remarks></member><member name="P:System.CommandLine.Parsing.OptionResult.IdentifierTokenCount"><summary>
+            与选项匹配的标识符令牌的出现次数。
+            </summary></member><member name="M:System.CommandLine.Parsing.OptionResult.ToString"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.OptionResult.GetValueOrDefault``1"><summary>
+            获取<see cref="P:System.CommandLine.Parsing.OptionResult.Option" />的解析值或默认值。
+            </summary><returns><see cref="P:System.CommandLine.Parsing.OptionResult.Option" />的解析值或默认值</returns></member><member name="T:System.CommandLine.Parsing.ParseDiagramAction"><summary>
+            实现 <c>[diagram]</c> 指令操作，当在命令行中指定时，将绕过正常的命令处理并显示一个图表，说明命令行输入的解析结果。
+            </summary></member><member name="M:System.CommandLine.Parsing.ParseDiagramAction.Diagram(System.CommandLine.ParseResult)"><summary>
+            格式化解释分析结果的字符串。
+            </summary><param name="parseResult">要进行图表化的分析结果。</param><returns>包含分析结果图表的字符串。</returns></member><member name="T:System.CommandLine.Parsing.ParseError"><summary>
+    描述在解析命令行输入时发生的错误。
+    </summary></member><member name="P:System.CommandLine.Parsing.ParseError.Message"><summary>
+            向用户解释错误的消息。
+            </summary></member><member name="P:System.CommandLine.Parsing.ParseError.SymbolResult"><summary>
+            符号结果，详细描述解析失败的符号和涉及的标记。
+            </summary></member><member name="M:System.CommandLine.Parsing.ParseError.ToString"><inheritdoc /></member><member name="T:System.CommandLine.Parsing.SymbolResult"><summary>
+            在解析过程中为特定符号生成的结果。
+            </summary></member><member name="P:System.CommandLine.Parsing.SymbolResult.Errors"><summary>
+            与此符号结果关联的解析错误。
+            </summary></member><member name="P:System.CommandLine.Parsing.SymbolResult.Parent"><summary>
+            解析树中的父符号结果。
+            </summary></member><member name="P:System.CommandLine.Parsing.SymbolResult.Tokens"><summary>
+            在解析过程中与此符号结果关联的令牌列表。
+            </summary></member><member name="M:System.CommandLine.Parsing.SymbolResult.AddError(System.String)"><summary>
+            向此符号结果的解析树添加一条错误消息。
+            </summary><remarks>设置错误将导致解析器向用户指示错误，并阻止命令行的调用。</remarks></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Argument)"><summary>
+            在解析树中的任何位置查找特定参数的结果，包括父级和子级符号结果。
+            </summary><param name="argument">要查找结果的参数。</param><returns>如果参数被解析器匹配或具有默认值，则返回参数结果；否则，返回 <c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Command)"><summary>
+            在解析树中的任何位置（包括父级和子符号结果）查找特定命令的结果。
+            </summary><param name="command">要查找结果的命令。</param><returns>如果该命令被解析器匹配，则返回一个命令结果；否则为<c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Option)"><summary>
+            在解析树中的任意位置查找特定选项的结果，包括父级和子级符号结果。
+            </summary><param name="option">要查找结果的选项。</param><returns>如果选项被分析器匹配或具有默认值，则返回选项结果；否则返回<c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.CommandLine.Directive)"><summary>
+    在解析树中的任何位置查找特定指令的结果。
+    </summary><param name="directive">要查找结果的指令。</param><returns>如果解析器匹配了该指令，则为指令结果；否则为 <c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetResult(System.String)"><summary>
+            在解析树中的任意位置查找具有指定名称的符号的结果。
+            </summary><param name="name">要查找结果的符号的名称。</param><returns>如果该参数被解析器匹配或具有默认值，则返回参数结果；否则返回 <c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.CommandLine.Argument{``0})"><inheritdoc cref="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Argument{``0})" /></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.CommandLine.Option{``0})"><inheritdoc cref="M:System.CommandLine.ParseResult.GetValue``1(System.CommandLine.Option{``0})" /></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.CommandLine.Argument{``0})"><inheritdoc cref="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Argument{``0})" /></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.CommandLine.Option{``0})"><inheritdoc cref="M:System.CommandLine.ParseResult.GetRequiredValue``1(System.CommandLine.Option{``0})" /></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetValue``1(System.String)"><summary>
+            获取解析树中任何位置具有指定名称的符号的值。
+            </summary><param name="name">要查找结果的符号名称。</param><returns>如果参数被解析器匹配或具有默认值，则为参数结果；否则为<c>null</c>。</returns></member><member name="M:System.CommandLine.Parsing.SymbolResult.GetRequiredValue``1(System.String)"><summary>
+            获取解析树中具有指定名称的符号的值。
+            </summary><param name="name">要查找结果的符号名称。</param><returns>如果参数被解析器匹配或具有默认值，则返回参数结果；否则，<c>null</c>。</returns></member><member name="T:System.CommandLine.Parsing.Token"><summary>
+            命令行上的一个有意义文本单元。
+            </summary></member><member name="M:System.CommandLine.Parsing.Token.#ctor(System.String,System.CommandLine.Parsing.TokenType,System.CommandLine.Symbol)"><param name="value">标记的字符串值。</param><param name="type">标记的类型。</param><param name="symbol">标记所表示的对象</param></member><member name="P:System.CommandLine.Parsing.Token.Value"><summary>
+            令牌的字符串值。
+            </summary></member><member name="P:System.CommandLine.Parsing.Token.Type"><summary>
+            令牌的类型。
+            </summary></member><member name="P:System.CommandLine.Parsing.Token.Symbol"><summary>
+            令牌所表示的符号（如果有）。
+            </summary></member><member name="M:System.CommandLine.Parsing.Token.Equals(System.Object)"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.Token.Equals(System.CommandLine.Parsing.Token)"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.Token.GetHashCode"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.Token.ToString"><inheritdoc /></member><member name="M:System.CommandLine.Parsing.Token.op_Equality(System.CommandLine.Parsing.Token,System.CommandLine.Parsing.Token)"><summary>
+            检查两个指定的 <see cref="T:System.CommandLine.Parsing.Token" /> 实例是否具有相同的值。
+            </summary><param name="left">第一个 <see cref="T:System.CommandLine.Parsing.Token" />。</param><param name="right">第二个 <see cref="T:System.CommandLine.Parsing.Token" />。</param><returns>如果对象相等，则为 <see langword="true" />。</returns></member><member name="T:System.CommandLine.Parsing.TokenType"><summary>
+            标识 <see cref="T:System.CommandLine.Parsing.Token" /> 的类型。
+            </summary></member><member name="F:System.CommandLine.Parsing.TokenType.Argument"><summary>
+            一个参数标记。
+            </summary><see cref="T:System.CommandLine.Argument" /></member><member name="F:System.CommandLine.Parsing.TokenType.Command"><summary>
+            命令令牌。
+            </summary><see cref="T:System.CommandLine.Command" /></member><member name="F:System.CommandLine.Parsing.TokenType.Option"><summary>
+            一个选项标记。
+            </summary><see cref="T:System.CommandLine.Option" /></member><member name="F:System.CommandLine.Parsing.TokenType.DoubleDash"><summary>
+            一个双破折号 (<c>--</c>) 标记，它会改变后续标记的含义。
+            </summary></member><member name="F:System.CommandLine.Parsing.TokenType.Directive"><summary>
+            一个指令标记。
+            </summary><see cref="T:System.CommandLine.Directive" /></member><member name="T:System.CommandLine.Parsing.TryReplaceToken"><summary>
+    在解析之前，将一个标记替换为一个或多个其他标记。
+    </summary></member><member name="T:System.CommandLine.Properties.Resources"><summary>
+              一个强类型资源类，用于查找本地化字符串等。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ResourceManager"><summary>
+      返回此类使用的缓存的 ResourceManager 实例。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.Culture"><summary>
+              重写当前线程的CurrentUICulture属性，用于所有使用此强类型资源类的资源查找。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParse"><summary>
+              查找类似于“无法将参数“{0}”解析为预期类型“{1}”。”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForCommand"><summary>
+              查找类似于“无法将参数'{0}'解析为命令'{1}'的预期类型'{2}'。”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForOption"><summary>
+      查找类似于“无法将参数“{0}”解析为选项“{1}”的预期类型“{2}”。”的本地化字符串。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForOption_Completions"><summary>
+              查找类似于“无法将选项'{1}'的参数'{0}'解析为预期的类型'{2}'。您是否指的是以下之一？{3}”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.CommandRequiredArgumentMissing"><summary>
+              查找与“命令'{0}'缺少必需参数”类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ErrorReadingResponseFile"><summary>
+        查找与“读取响应文件 '{0}' 时出错：{1}”类似的本地化字符串。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.ExceptionHandlerHeader"><summary>
+              查找一个本地化字符串，类似于“未处理的异常：”。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.FileOrDirectoryDoesNotExist"><summary>
+              查找与"文件或目录不存在：'{0}'.."类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpAdditionalArgumentsDescription"><summary>
+              查找一个本地化字符串，类似于“传递给正在运行的应用程序的参数”。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpAdditionalArgumentsTitle"><summary>
+              查找一个本地化的字符串，类似于“附加参数：”。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpArgumentDefaultValueLabel"><summary>
+              查找类似于“default”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpArgumentsTitle"><summary>
+              查找类似于"Arguments:"的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpCommandsTitle"><summary>
+              查找与“Commands:”类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpDescriptionTitle"><summary>
+              查找类似于"Description:."的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpOptionDescription"><summary>
+              查找与“显示帮助和使用信息”类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpOptionsRequiredLabel"><summary>
+              查找类似于“（必需）”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpOptionsTitle"><summary>
+              查找与"Options:"类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpUsageAdditionalArguments"><summary>
+              查找一个本地化字符串，类似于 [[--] &lt;additional arguments&gt;...]]。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpUsageCommand"><summary>
+              查找与 [command] 类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpUsageOptions"><summary>
+              查找与 [options] 类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.HelpUsageTitle"><summary>
+      查找与"Usage:."类似的本地化字符串。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.InvalidCharactersInFileName"><summary>
+              查找类似于“文件名中不允许字符：'{0}'。”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.InvalidCharactersInPath"><summary>
+              查找与“路径中不允许的字符：'{0}'”类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.OptionExpectsOneArgument"><summary>
+              查找类似于"选项 '{0}' 需要一个参数，但提供了 {1} 个。"的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.OptionRequiredArgumentMissing"><summary>
+              查找与"选项缺少必需参数: '{0}'.."类似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.RequiredCommandWasNotProvided"><summary>
+              查找类似于“未提供必需的命令。”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.RequiredOptionWasNotProvided"><summary>
+              查找与“选项 '{0}' 是必需的。”相似的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.ResponseFileNotFound"><summary>
+              查找类似于“Response file not found '{0}'”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.SuggestionsTokenNotMatched"><summary>
+              查找类似于“{0}”不匹配的本地化字符串。您是否指的是以下之一？
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.UnrecognizedArgument"><summary>
+      查找与“参数'{0}'无法识别。必须是以下之一：{1}”类似的本地化字符串。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.UnrecognizedCommandOrArgument"><summary>
+    查找类似“未识别的命令或参数 '{0}'”的本地化字符串。
+  </summary></member><member name="P:System.CommandLine.Properties.Resources.VersionOptionCannotBeCombinedWithOtherArguments"><summary>
+              查找类似于“{0}选项不能与其他参数组合。”的本地化字符串。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.VersionOptionDescription"><summary>
+              查找类似于“显示版本信息”的本地化字符串。
+            </summary></member><member name="T:System.CommandLine.RootCommand"><summary>
+    表示应用程序执行的主要操作。
+    </summary><remarks>
+    对于执行单一操作的应用程序，使用不包含任何子命令的 RootCommand 对象。对于需要通过特定字符串标识操作的应用程序，可以向根添加子命令。例如，`dir` 不使用任何子命令。对于具有多个操作的应用程序，请参阅 <see cref="T:System.CommandLine.Command" />。
+    </remarks></member><member name="M:System.CommandLine.RootCommand.#ctor(System.String)"><param name="description">命令的描述，显示在帮助中。</param></member><member name="P:System.CommandLine.RootCommand.Directives"><summary>
+    表示根命令下所有有效的指令。
+    </summary></member><member name="M:System.CommandLine.RootCommand.Add(System.CommandLine.Directive)"><summary>
+            将 <see cref="T:System.CommandLine.Directive" /> 添加到命令。
+            </summary></member><member name="P:System.CommandLine.RootCommand.ExecutableName"><summary>
+            当前正在运行的可执行文件的名称。
+            </summary></member><member name="P:System.CommandLine.RootCommand.ExecutablePath"><summary>
+            当前正在运行的可执行文件的路径。
+            </summary></member><member name="T:System.CommandLine.Symbol"><summary>
+            定义一个命名符号，该符号位于具有父级和子级符号的层级结构中。
+            </summary></member><member name="P:System.CommandLine.Symbol.Description"><summary>
+            获取或设置符号的说明。
+            </summary></member><member name="P:System.CommandLine.Symbol.Name"><summary>
+            获取符号的名称。
+            </summary></member><member name="P:System.CommandLine.Symbol.FirstParent"><summary>
+            表示第一个父节点。
+            </summary></member><member name="P:System.CommandLine.Symbol.Hidden"><summary>
+            获取或设置一个值，该值指示符号是否隐藏。
+            </summary></member><member name="P:System.CommandLine.Symbol.Parents"><summary>
+            获取父符号。
+            </summary></member><member name="M:System.CommandLine.Symbol.GetCompletions(System.CommandLine.Completions.CompletionContext)"><summary>
+            获取符号的补全项。
+            </summary></member><member name="M:System.CommandLine.Symbol.ToString"><inheritdoc /></member><member name="T:System.CommandLine.VersionOption"><summary>
+            一个标准选项，指示应为应用程序显示版本信息。
+            </summary></member><member name="P:System.CommandLine.VersionOption.Action"><inheritdoc /></member><member name="P:System.CommandLine.VersionOption.ValueType"><inheritdoc /></member><member name="M:System.CommandLine.VersionOption.#ctor"><summary>
+            当添加到 <see cref="T:System.CommandLine.Command" /> 时，它启用了一个 <c>--version</c> 选项，当在命令行输入中指定该选项时，将短路正常的命令处理，并在退出前写出版本信息。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.SuggestionsTokenNotMatched(System.String)"><summary>
+              将值插值到本地化字符串中，类似于“{0}”不匹配。您是否指的是以下选项之一？
+            </summary></member><member name="M:System.CommandLine.Help.HelpBuilder.CustomizeSymbol(System.CommandLine.Symbol,System.Func{System.CommandLine.Help.HelpContext,System.String},System.Func{System.CommandLine.Help.HelpContext,System.String},System.Func{System.CommandLine.Help.HelpContext,System.String})"><summary>
+            为特定符号指定自定义帮助详细信息。
+            </summary><param name="symbol">要为其指定自定义帮助详细信息的符号。</param><param name="firstColumnText">一个委托，用于显示第一个帮助列（通常是名称和使用信息）。</param><param name="secondColumnText">一个委托，用于显示第二个帮助列（通常是描述）。</param><param name="defaultValue">一个委托，用于显示符号的默认值。</param></member><member name="M:System.CommandLine.Parsing.Token.op_Inequality(System.CommandLine.Parsing.Token,System.CommandLine.Parsing.Token)"><summary>
+            检查两个指定的 <see cref="T:System.CommandLine.Parsing.Token" /> 实例是否具有不同的值。
+            </summary><param name="left">第一个 <see cref="T:System.CommandLine.Parsing.Token" />。</param><param name="right">第二个 <see cref="T:System.CommandLine.Parsing.Token" />。</param><returns>如果对象不相等，则为 <see langword="true" />。</returns></member><member name="M:System.CommandLine.Help.HelpBuilder.Default.SubcommandsSection"><summary>
+            写入描述命令子命令的帮助部分。
+             </summary></member><member name="P:System.CommandLine.Properties.Resources.ArgumentConversionCannotParseForCommand_Completions"><summary>
+    查找与以下字符串类似的本地化字符串：无法将命令“{1}”的参数“{0}”解析为预期类型“{2}”。您是否指的是以下选项之一？{3}。
+  </summary></member><member name="P:System.CommandLine.InvocationConfiguration.ProcessTerminationTimeout"><summary>
+            允许通过 <see cref="T:System.Threading.CancellationToken" /> 实现进程终止（Ctrl+C、SIGINT、SIGTERM）的信号通知和处理，该 <see cref="T:System.Threading.CancellationToken" /> 可在调用期间传递给 <see cref="T:System.CommandLine.Invocation.CommandLineAction" />。如果未提供，则强制使用默认超时时间 2 秒。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ErrorReadingResponseFile(System.String,System.IO.IOException)"><summary>将值插入到类似于“读取响应文件'{0}'时出错：{1}”的本地化字符串中。</summary></member><member name="P:System.CommandLine.Directive.Action"><summary>
+            获取或设置指令的 <see cref="T:System.CommandLine.Invocation.CommandLineAction" />。
+            处理程序表示当指令被调用时将执行的操作。
+            </summary></member><member name="P:System.CommandLine.Properties.Resources.FileDoesNotExist"><summary>
+        查找类似于“文件不存在: '{0}'”的本地化字符串。
+    </summary></member><member name="P:System.CommandLine.Properties.Resources.DirectoryDoesNotExist"><summary>
+              查找与“Directory does not exist: '{0}'.”类似的本地化字符串。
+            </summary></member><member name="M:System.CommandLine.VersionOption.#ctor(System.String,System.String[])"><summary>
+            当添加到 <see cref="T:System.CommandLine.Command" /> 时，它允许使用提供的选项名称和别名，当在命令行输入中指定时，将短路正常的命令处理，并在退出前输出版本信息。
+            </summary></member><member name="M:System.CommandLine.LocalizationResources.ArgumentConversionCannotParseForOption(System.String,System.String,System.Type)"><summary>将值插值到本地化字符串中，该字符串类似于“无法将参数'{0}'解析为选项'{1}'的预期类型{2}。”</summary></member></members>
+</doc>

@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Http.Resilience</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+             本仓库报告的各种诊断 ID。
+            </summary><remarks>
+             当添加新的诊断 ID 时，请向根 <c>Directory.Build.targets</c> 文件添加相应的抑制项，并向 <c>docs/list-of-diagnostics.md</c> 添加文档条目。
+            </remarks></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+             此存储库支持的实验。
+            </summary></member><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+            定义用于抛出异常的静态方法。
+            </summary><remarks>
+            主要目的是减少代码大小、提高性能并标准化异常消息。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+    如果指定的参数为<see langword="null" />，则引发<see cref="T:System.ArgumentNullException" />。
+    </summary><typeparam name="T">要检查是否为<see langword="null" />的参数类型。</typeparam><param name="argument">要检查是否为<see langword="null" />的对象。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象的成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" />的原始值。</returns><example><code language="csharp">
+            Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+    如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+    Throws.IfMemberNull(myObject, myObject.MyProperty)
+    </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+    如果指定的字符串为<see langword="null" />或空白，则分别抛出<see cref="T:System.ArgumentNullException" />或<see cref="T:System.ArgumentException" />。
+    </summary><param name="argument">要检查是否为<see langword="null" />或空白的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            如果字符串为<see langword="null" />，则引发<see cref="T:System.ArgumentNullException" />；如果字符串为空，则引发<see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为<see langword="null" />或空的字符串。</param><param name="paramName">正在检查的参数的名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+            如果参数的缓冲区大小小于所需的缓冲区大小，则抛出一个<see cref="T:System.ArgumentException" />。
+            </summary><param name="bufferSize">实际缓冲区大小。</param><param name="requiredSize">所需缓冲区大小。</param><param name="paramName">要检查的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+            如果枚举值无效，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要计算的参数。</param><param name="paramName">正在检查的参数名称。</param><typeparam name="T">枚举的类型。</typeparam><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果集合为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要评估的集合。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+            抛出一个 <see cref="T:System.ArgumentNullException" /> 异常。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+            抛出<see cref="T:System.ArgumentNullException" />异常。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+    抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="paramName">导致该异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+    引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="paramName">导致异常的参数的名称。</param><param name="actualValue">导致此异常的参数值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+        抛出 <see cref="T:System.ArgumentException" />。
+    </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+        如果 <paramref name="innerException" /> 不为 <see langword="null" />，则当前异常在处理内部异常的 catch 块中引发。
+    </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+    引发 <see cref="T:System.InvalidOperationException" />。
+    </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于 min，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">应大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于 0，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+            当指定的数字不在指定的范围内时，抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>
+    如果指定的数字小于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+    </summary><param name="argument">要检查是否小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于 min 的数字。</param><param name="min">必须小于或等于 argument 的数字。</param><param name="paramName">要检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期的数字应大于或等于最大值。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望的数字大于或等于最大值。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+    如果指定的数字等于 0，则会引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字大于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要被检查是否大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 参数的原始值。
+            </returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+            如果指定的数字等于0，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="T:Microsoft.Shared.Text.NumericExtensions"><summary>
+    增强基本数值类型的实用工具。
+    </summary></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int32)"><summary>
+    将整数格式化为固定区域设置的字符串。
+    </summary><param name="value">要格式化为字符串的值。</param><returns>整数值的字符串表示。</returns><remarks>
+    此方法的工作方式与<c>value.ToString(CultureInfo.InvariantCulture)</c>相同，但速度更快，因为它为常见整数值维护了预格式化字符串。
+    </remarks></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int64)"><summary>
+    将 64 位整数格式化为固定区域字符串。
+    </summary><param name="value">要格式化为字符串的值。</param><returns>整数值的字符串表示形式。</returns><remarks>
+    此方法的工作方式与 <c>value.ToString(CultureInfo.InvariantCulture)</c> 完全相同，但速度更快，因为它为常见整数值维护了预格式化字符串。
+    </remarks></member><member name="T:Microsoft.Shared.Data.Validation.LengthAttribute"><summary>
+            指定任何 <see cref="T:System.Collections.IEnumerable" /> 或 <see cref="T:System.String" /> 对象的最小长度。
+            </summary><remarks>
+            标准的 <see cref="T:System.ComponentModel.DataAnnotations.MinLengthAttribute" /> 在 .NET Framework 上仅支持非泛型的 <see cref="T:System.Array" /> 或 <see cref="T:System.String" /> 类型对象，而在 .NET Core 上仅支持 <see cref="T:System.Collections.Generic.ICollection`1" /> 类型。
+            请参阅此处的问题 <see href="https://github.com/dotnet/runtime/issues/23288" />。
+            此属性旨在跨目标框架以一致的方式验证所有这些对象。
+            </remarks></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength"><summary>
+            获取集合或字符串的最小允许长度。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength"><summary>
+            获取集合或字符串允许的最大长度。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.Exclusive"><summary>
+            获取或设置一个值，该值指示长度验证是否应排除 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength" /> 和 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength" /> 的值。
+            </summary><value>
+            默认值为 <c>false</c>。
+            </value></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.#ctor(System.Int32)"><summary>
+    初始化 <see cref="T:Microsoft.Shared.Data.Validation.LengthAttribute" /> 类的新实例。
+    </summary><param name="minimumLength">
+    数组/字符串数据的最小允许长度。值必须大于或等于零。
+    </param></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.#ctor(System.Int32,System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.LengthAttribute" /> 类的一个新实例。
+            </summary><param name="minimumLength">
+            数组/字符串数据的最小允许长度。
+            值必须大于或等于零。
+            </param><param name="maximumLength">
+            数组/字符串数据的最大允许长度。
+            值必须大于或等于零。
+            </param></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)"><summary>
+            验证给定的值是否在范围内。
+            </summary><remarks>
+            如果 <paramref name="value" /> 为 <see langword="null" />，则此方法返回 <c>true</c>。
+            如果值可能不为 <see langword="null" />，则假定使用了 <see cref="T:System.ComponentModel.DataAnnotations.RequiredAttribute" />。
+            </remarks><param name="value">要验证的值。</param><param name="validationContext">此验证的附加上下文。</param><returns>指示成功或失败的值。</returns><exception cref="T:System.ArgumentOutOfRangeException"><see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength" /> 小于零或大于 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength" />。</exception><exception cref="T:System.InvalidOperationException">不支持已验证的类型。</exception></member><member name="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute"><summary>
+    为 <see cref="T:System.TimeSpan" /> 提供边界验证。
+    </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Minimum"><summary>
+            获取时间跨度的下限。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Maximum"><summary>
+    获取时间跨度的上限。
+    </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Exclusive"><summary>
+    获取或设置一个值，该值指示时间跨度验证是否应排除最小值和最大值。
+    </summary><value>
+    默认值为 <c>false</c>。
+    </value></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+            </summary><param name="minMs">最小毫秒数。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.Int32,System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+            </summary><param name="minMs">以毫秒为单位的最小值。</param><param name="maxMs">以毫秒为单位的最大值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+            </summary><param name="min">表示为时间跨度字符串的最小值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+            </summary><param name="min">以时间跨度字符串表示的最小值。</param><param name="max">以时间跨度字符串表示的最大值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)"><summary>
+    验证给定值是否表示一个范围内的 TimeSpan 值。
+    </summary><param name="value">要验证的值。</param><param name="validationContext">此验证的附加上下文。</param><returns>指示成功或失败的值。</returns></member><member name="T:Microsoft.Shared.Pools.NoopPooledObjectPolicy`1"><summary>
+            不执行任何操作的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledCancellationTokenSourcePolicy"><summary>
+    一个用于取消令牌源的对象池策略。
+    </summary></member><member name="T:Microsoft.Shared.Pools.PooledDictionaryPolicy`2"><summary>
+            用于字典的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledListPolicy`1"><summary>
+    用于列表的对象池策略。
+    </summary></member><member name="T:Microsoft.Shared.Pools.PooledListWithCapacityPolicy`1"><summary>
+            用于具有容量的列表的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledSetPolicy`1"><summary>
+            集合的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PoolFactory"><summary>
+            对象池工厂。
+            </summary><remarks>
+            此类使得创建高效的对象池变得容易，用于通过减轻垃圾回收器的压力来提高性能。
+            </remarks></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreatePool``1(System.Int32)"><summary>
+    创建一个对象池。
+    </summary><typeparam name="T">要保留在池中的对象的类型。</typeparam><param name="maxCapacity">要保留在池中的最大项数。默认为1024。此值仅为建议，池中可能会保留更多对象。</param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreatePool``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0},System.Int32)"><summary>
+            使用自定义策略创建一个对象池。
+            </summary><typeparam name="T">要在池中保留的对象的类型。</typeparam><param name="policy">负责创建新对象并准备要添加到池中的对象的自定义策略。</param><param name="maxCapacity">池中保留的最大项数。默认为1024。此值为建议值，池可能会保留比此更多的对象。</param><returns>该池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateResettingPool``1(System.Int32)"><summary>
+    创建一个用于可重置对象的对象池。
+    </summary><typeparam name="T">要保留在池中的对象类型。</typeparam><param name="maxCapacity">要保留在池中的最大项数。默认为1024。此值为建议值，池可能会保留超过此数量的对象。</param><returns>池。</returns><remarks>
+    对象在添加到池之前会被系统性地重置。
+    </remarks></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateStringBuilderPool(System.Int32,System.Int32)"><summary>
+            创建 <see cref="T:System.Text.StringBuilder" /> 实例池。
+            </summary><param name="maxCapacity">池中要保留的最大项数。默认为 1024。此值只是一个建议，池可能会保留比此值更多的对象。</param><param name="maxStringBuilderCapacity">池中要保留的字符串生成器的最大容量。默认为 64K。</param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateListPool``1(System.Int32)"><summary>
+            创建 <see cref="T:System.Collections.Generic.List`1" /> 实例的对象池。
+            </summary><typeparam name="T">列表所持有的对象的类型。</typeparam><param name="maxCapacity">
+            池中要保留的最大项数。
+            默认值为 1024。
+            此值为建议值，池可能会保留比此值更多的对象。
+            </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateListPoolWithCapacity``1(System.Int32,System.Int32)"><summary>
+    创建一个对象池，其中包含<see cref="T:System.Collections.Generic.List`1" />实例，每个实例具有指定的<paramref name="listCapacity" />容量。
+    </summary><typeparam name="T">列表所持有的对象的类型。</typeparam><param name="listCapacity">每个创建的<see cref="T:System.Collections.Generic.List`1" />实例的容量。</param><param name="maxCapacity">
+    池中保留的最大项数。
+    默认值为1024。
+    此为建议值，池可能保留多于该值的对象。
+    </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateDictionaryPool``2(System.Collections.Generic.IEqualityComparer{``0},System.Int32)"><summary>
+            创建 <see cref="T:System.Collections.Generic.Dictionary`2" /> 实例的对象池。
+            </summary><typeparam name="TKey">字典键的类型。</typeparam><typeparam name="TValue">字典值的类型。</typeparam><param name="comparer">可选的字典键比较器。</param><param name="maxCapacity">
+            池中要保留的最大项数。
+            默认值为 1024。
+            此值为建议值，池可能保留更多对象。
+            </param><returns>对象池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateHashSetPool``1(System.Collections.Generic.IEqualityComparer{``0},System.Int32)"><summary>
+    创建 <see cref="T:System.Collections.Generic.HashSet`1" /> 实例的对象池。
+    </summary><typeparam name="T">集合中持有的对象的类型。</typeparam><param name="comparer">集合使用的可选键比较器。</param><param name="maxCapacity">
+    池中保留的最大项目数。
+    默认为1024。
+    此值是一个建议，池可能会保留比此更多的对象。
+    </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateCancellationTokenSourcePool(System.Int32)"><summary>
+            创建 <see cref="T:System.Threading.CancellationTokenSource" /> 实例的对象池。
+            </summary><param name="maxCapacity">
+            池中保留的最大项数。
+            默认值为 1024。
+            此值是一个建议，池可能保留比此更多的对象。
+            </param><returns>池。</returns><remarks>
+            在 .NET 6 及更高版本中，取消标记源是可重用的，此池利用了此功能。
+            在较旧框架上运行时，此池实际上是一个空操作，每次从池中获取源时，它始终是一个新实例。在这种情况下，将对象返回到池只是释放它。
+            </remarks></member><member name="P:Microsoft.Shared.Pools.PoolFactory.SharedStringBuilderPool"><summary>
+    获取<see cref="T:System.Text.StringBuilder" />实例的共享池。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions"><summary>
+    针对特定终结点的复原策略管道的选项。
+    </summary><remarks>
+    它按此顺序（从最外层到最内层）使用三个链式层：舱壁 -&gt; 断路器 -&gt; 尝试超时。
+    </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions.RateLimiter"><summary>
+            获取或设置终结点的舱壁选项。
+            </summary><remarks>
+            默认情况下，它用一个唯一的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpRateLimiterStrategyOptions" /> 实例初始化，并使用默认属性值。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions.CircuitBreaker"><summary>
+            获取或设置终结点的断路器选项。
+            </summary><remarks>
+            默认情况下，它使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions" /> 的唯一实例。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions.Timeout"><summary>
+            获取或设置应用于每个请求尝试的超时弹性策略选项。
+            </summary><remarks>
+            默认情况下，它使用一个唯一的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions" /> 实例进行初始化，
+            该实例使用自定义的 10 秒 <see cref="P:Polly.Timeout.TimeoutStrategyOptions.Timeout" />。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpClientHedgingResiliencePredicates"><summary>
+    当前包中使用的静态谓词。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientHedgingResiliencePredicates.IsTransient(Polly.Outcome{System.Net.Http.HttpResponseMessage})"><summary>
+            确定一个结果是否应被对冲策略视为瞬时故障。
+            </summary><param name="outcome">用户指定的回调的结果。</param><returns><see langword="true" /> 如果结果是瞬时的，<see langword="false" /> 否则。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientHedgingResiliencePredicates.IsTransient(Polly.Outcome{System.Net.Http.HttpResponseMessage},System.Threading.CancellationToken)"><summary>
+            确定 <see cref="T:System.Net.Http.HttpResponseMessage" /> 是否应被对冲视为瞬态故障。
+            </summary><param name="outcome">用户指定回调的结果。</param><param name="cancellationToken">与执行关联的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>如果结果为瞬态，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientHedgingResiliencePredicates.IsTransientHttpException(System.Exception)"><summary>
+            确定是否应通过对冲将异常视为暂时性故障。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpHedgingStrategyOptions"><summary>
+            针对 <see cref="T:System.Net.Http.HttpResponseMessage" /> 结果的 <see cref="T:Polly.Hedging.HedgingStrategyOptions`1" /> 类的实现。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpHedgingStrategyOptions.#ctor"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpHedgingStrategyOptions" /> 类的新实例。
+    </summary><remarks>
+    默认情况下，这些选项配置为仅处理瞬时故障。
+    具体来说，这包括 HTTP 状态码 408、429、500 及以上，
+    以及 <see cref="T:System.Net.Http.HttpRequestException" />、<see cref="T:Polly.CircuitBreaker.BrokenCircuitException" /> 和 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 异常。
+    </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions"><summary>
+            用于对冲HTTP场景的弹性策略管道的选项。
+            </summary><remarks>
+            这些选项表示按以下顺序（从最外层到最内层）的5个链接层的配置：
+            <para>
+            总请求超时 -&gt; 对冲 -&gt; 舱壁（每个端点） -&gt; 断路器（每个端点） -&gt; 尝试超时（每个端点）。
+            </para>
+            每个弹性策略的配置初始化为每种类型的默认选项。请求经过这些弹性策略：
+            <para><list type="number"><item><description>总请求超时策略为执行应用整体超时，确保包括对冲尝试在内的请求不超过配置的限制。</description></item><item><description>当依赖项缓慢或返回瞬时错误时，对冲策略会针对多个端点执行请求。</description></item><item><description>速率限制器管道限制发送到依赖项的最大请求数。</description></item><item><description>如果检测到太多直接失败或超时，断路器会阻止执行。</description></item><item><description>尝试超时策略限制每次请求尝试的持续时间，并在超出时抛出异常。</description></item></list></para>
+            最后三个策略分配给每个单独的端点。端点的选择可以通过
+            <see cref="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder)" /> 或
+            <see cref="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineBy(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder,System.Func{System.IServiceProvider,System.Func{System.Net.Http.HttpRequestMessage,System.String}})" /> 扩展进行自定义。
+            <para>
+            默认情况下，通过权威（方案+主机+端口）选择端点。
+            </para></remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions.TotalRequestTimeout"><summary>
+            获取或设置应用于请求执行的总体超时的超时策略选项。
+            </summary><remarks>
+            默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions" /> 的唯一实例。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions.Hedging"><summary>
+            获取或设置对冲策略选项。
+            </summary><remarks>
+            默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpHedgingStrategyOptions" /> 的唯一实例。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions.Endpoint"><summary>
+            获取或设置 hedging 终结点选项。
+            </summary><remarks>
+            默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions" /> 的唯一实例。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.Internal.RequestMessageSnapshotStrategy"><summary>
+            此策略在执行对冲操作前创建 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的快照，以防止同时克隆和修改消息时出现竞态条件。
+            这样一来，所有对冲请求都将拥有从快照中获取的消息的独立实例，而无需访问原始消息进行克隆。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.Validators.HttpStandardHedgingResilienceOptionsValidator.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions)"><summary>
+            验证特定的命名选项实例（当<paramref name="name" />为<see langword="null" />时验证所有实例）。
+            </summary><param name="name">被验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.Validators.HttpStandardResilienceOptionsValidator.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions)"><summary>
+            验证特定的命名选项实例（当<paramref name="name" />为<see langword="null" />时验证所有实例）。
+            </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Http.Resilience.Internal.NamedOptionsCache`1"><summary>
+    命名选项的缓存，允许访问最后一个有效的选项实例。
+    </summary><typeparam name="TOptions">选项的类型。</typeparam></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.RetryAfterHelper.TryParse(System.Net.Http.HttpResponseMessage,System.TimeProvider,System.TimeSpan@)"><summary>
+    从相关的 HTTP 响应头中解析 Retry-After 值。如果未找到，则返回 <see cref="F:System.TimeSpan.Zero" />。
+    </summary><see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After" />.
+</member><member name="T:Microsoft.Extensions.Http.Resilience.Internal.UriExtensions"><summary>
+            Uri 类的扩展，用于替换主机。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.UriExtensions.ReplaceHost(System.Uri,System.Uri)"><summary>
+            将 <paramref name="currentUri" /> 的主机替换为 <paramref name="hostUri" /> 的主机。
+            </summary><param name="currentUri">带有旧主机的 Uri。</param><param name="hostUri">带有新主机的 Uri。</param><returns>从 <paramref name="hostUri" /> 获取主机的 <paramref name="currentUri" />。</returns></member><member name="T:Microsoft.Extensions.Http.Resilience.Internal.PipelineKeyOptions"><summary>
+            从请求消息中返回管道键的提供程序。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.Routing.OrderedGroupsRoutingOptionsValidator.Validate(System.String,Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions)"><summary>验证特定的命名选项实例（或当 <paramref name="name" /> 为 <see langword="null" /> 时的所有实例）。</summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.Internal.Routing.WeightedGroupsRoutingOptionsValidator.Validate(System.String,Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions)"><summary>
+            验证特定的命名选项实例（或当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder"><summary>
+    定义用于配置标准对冲处理程序的生成器。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder.Name"><summary>
+            获取正在配置的标准对冲处理程序的名称。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder.Services"><summary>
+            获取服务集合。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder.RoutingStrategyBuilder"><summary>
+            获取路由策略的生成器。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions"><summary><see cref="T:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder" /> 的扩展。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            为标准回退管道配置 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions" />。
+            </summary><param name="builder">管道生成器。</param><param name="section">选项绑定的配置节。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder,System.Action{Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions})"><summary>
+            配置标准对冲管道的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+            </summary><param name="builder">管道生成器。</param><param name="configure">配置方法。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder,System.Action{Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions,System.IServiceProvider})"><summary>
+            为标准对冲管道配置 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+            </summary><param name="builder">管道生成器。</param><param name="configure">配置方法。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder)"><summary>
+            指示底层管道构建器根据脱敏的授权信息（方案+主机+端口）选择管道实例。
+            </summary><param name="builder">构建器实例。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineBy(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder,System.Func{System.IServiceProvider,System.Func{System.Net.Http.HttpRequestMessage,System.String}})"><summary>
+            指示底层管道生成器通过自定义选择器选择管道实例。
+            </summary><param name="builder">生成器实例。</param><param name="selectorFactory">返回键选择器的工厂。</param><returns><paramref name="builder" /> 的值。</returns><remarks>管道键用于指标和日志，因此不要返回任何敏感值。</remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions"><summary>
+    针对 <see cref="T:System.Net.Http.HttpResponseMessage" /> 结果的 <see cref="T:Polly.CircuitBreaker.CircuitBreakerStrategyOptions`1" /> 实现。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions" /> 类的新实例。
+            </summary><remarks>
+            默认情况下，该选项设置为仅处理瞬时故障，
+            即超时、5xx 响应和 <see cref="T:System.Net.Http.HttpRequestException" /> 异常。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpClientResiliencePredicates"><summary>
+            提供当前包中使用的静态谓词。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientResiliencePredicates.IsTransient(Polly.Outcome{System.Net.Http.HttpResponseMessage})"><summary>
+            确定是否应将结果视为弹性策略的瞬时故障。
+            </summary><returns>如果结果是瞬态的，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientResiliencePredicates.IsTransient(Polly.Outcome{System.Net.Http.HttpResponseMessage},System.Threading.CancellationToken)"><summary>
+            确定一个<see cref="T:System.Net.Http.HttpResponseMessage" />是否应被弹性策略视为瞬时故障。
+            </summary><param name="outcome">用户指定回调的结果。</param><param name="cancellationToken">与执行关联的<see cref="T:System.Threading.CancellationToken" />。</param><returns>如果结果是瞬时故障，则为<see langword="true" />，否则为<see langword="false" />。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientResiliencePredicates.IsTransientHttpException(System.Exception)"><summary>
+            确定异常是否应被弹性策略视为瞬态故障。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpClientResiliencePredicates.IsTransientHttpFailure(System.Net.Http.HttpResponseMessage)"><summary>
+            判断响应是否包含瞬时故障。
+            </summary><remarks> 当前处理实现采用Polly提出的方法：
+            <see href="https://github.com/App-vNext/Polly.Extensions.Http/blob/master/src/Polly.Extensions.Http/HttpPolicyExtensions.cs" />。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpRateLimiterStrategyOptions"><summary>
+            HTTP 场景的 <see cref="T:Polly.RateLimiting.RateLimiterStrategyOptions" /> 实现。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions"><summary>
+            针对 <see cref="T:System.Net.Http.HttpResponseMessage" /> 结果的 <see cref="T:Polly.Retry.RetryStrategyOptions`1" /> 的实现。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions" /> 类的新实例。
+            </summary><remarks>
+            默认情况下，选项配置为仅处理瞬时故障。
+            具体来说，这包括HTTP状态码408、429、500及以上，以及 <see cref="T:System.Net.Http.HttpRequestException" /> 和 <see cref="T:Polly.Timeout.TimeoutRejectedException" /> 异常。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions.ShouldRetryAfterHeader"><summary>
+    获取或设置一个值，该值指示是否使用<c>Retry-After</c>头进行重试延迟。
+    </summary><value>
+    默认为<see langword="true" />。
+    </value><remarks>
+    如果该属性设置为<see langword="true" />，则生成器将根据<c>Retry-After</c>头规则解析延迟，否则将返回<see langword="null" />，重试策略延迟将根据配置的选项生成延迟。
+    </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptionsExtensions"><summary><see cref="T:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptionsExtensions.DisableForUnsafeHttpMethods(Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions)"><summary>
+    禁用对 POST、PATCH、PUT、DELETE 和 CONNECT HTTP 方法的重试尝试。
+    </summary><param name="options">重试策略选项。</param></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptionsExtensions.DisableFor(Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions,System.Net.Http.HttpMethod[])"><summary>
+    禁用给定HTTP方法列表的重试尝试。
+    </summary><param name="options">重试策略选项。</param><param name="methods">HTTP方法列表。</param></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions"><summary>
+    HTTP 场景下的 <see cref="T:Polly.Timeout.TimeoutStrategyOptions" /> 实现。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpResiliencePipelineBuilderExtensions"><summary><see cref="T:Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder" /> 的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpResiliencePipelineBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder)"><summary>
+            指示基础构建器根据脱敏的授权部分（方案+主机+端口）选择管道实例。
+            </summary><param name="builder">构建器实例。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpResiliencePipelineBuilderExtensions.SelectPipelineBy(Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder,System.Func{System.IServiceProvider,System.Func{System.Net.Http.HttpRequestMessage,System.String}})"><summary>
+            指示基础生成器通过自定义选择器选择管道实例。
+            </summary><param name="builder">生成器实例。</param><param name="selectorFactory">返回键选择器的工厂。</param><returns><paramref name="builder" /> 的值。</returns><remarks>管道键用于指标和日志，因此不要返回任何敏感值。</remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions"><summary>
+            用于HTTP场景中的弹性策略选项。
+            </summary><remarks>
+            这些选项代表按顺序（从最外层到最内层）的五个链式弹性策略的配置：
+            <para>
+            隔离 -&gt; 总请求超时 -&gt; 重试 -&gt; 断路器 -&gt; 尝试超时。
+            </para>
+            每个管道的配置初始化为每种类型的默认选项。请求按以下策略顺序进行：
+            <list type="number"><item><description>总请求超时管道对执行应用一个总体超时，确保请求（包括对冲尝试）不超过配置的限制。</description></item><item><description>重试管道在依赖项缓慢或返回暂时性错误时重试请求。</description></item><item><description>隔离管道限制同时发送到依赖项的最大请求数。</description></item><item><description>断路器在检测到太多直接失败或超时时阻止执行。</description></item><item><description>尝试超时管道限制每个请求尝试的持续时间，如果超出则抛出异常。</description></item></list></remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions.RateLimiter"><summary>
+    获取或设置舱壁选项。
+    </summary><remarks>
+    默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpRateLimiterStrategyOptions" /> 的唯一实例。
+    </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions.TotalRequestTimeout"><summary>
+            获取或设置应用于请求执行的总超时时限策略选项。
+            </summary><remarks>
+            默认情况下，此属性使用 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions" /> 的唯一实例进行初始化。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions.Retry"><summary>
+    获取或设置重试管道选项。
+  </summary><remarks>
+    默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions" /> 的唯一实例。
+  </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions.CircuitBreaker"><summary>
+            获取或设置断路器选项。
+            </summary><remarks>
+            默认情况下，此属性使用默认属性值初始化为 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions" /> 的唯一实例。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions.AttemptTimeout"><summary>
+            获取或设置应用于每个请求尝试的超时管道的选项。
+            </summary><remarks>
+            默认情况下，此属性初始化为<see cref="T:Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions" />的唯一实例，
+            该实例使用自定义的10秒<see cref="P:Polly.Timeout.TimeoutStrategyOptions.Timeout" />。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions"><summary>
+    用于 <see cref="T:Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder" /> 的扩展。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            为标准复原管道配置 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+            </summary><param name="builder">管道生成器。</param><param name="section">选项将绑定到的配置节。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder,System.Action{Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions})"><summary>
+    配置标准弹性管道的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+    </summary><param name="builder">管道生成器。</param><param name="configure">配置方法。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions.Configure(Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder,System.Action{Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions,System.IServiceProvider})"><summary>
+                为标准复原管道配置 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+            </summary><param name="builder">管道生成器。</param><param name="configure">配置方法。</param><returns><paramref name="builder" />的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder)"><summary>
+            指示基础构建器通过已编辑的权威机构（方案+主机+端口）选择管道实例。
+            </summary><param name="builder">管道构建器。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.HttpStandardResiliencePipelineBuilderExtensions.SelectPipelineBy(Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder,System.Func{System.IServiceProvider,System.Func{System.Net.Http.HttpRequestMessage,System.String}})"><summary>
+    指示底层构建器通过自定义选择器选择管道实例。
+    </summary><param name="builder">管道构建器。</param><param name="selectorFactory">返回键选择器的工厂。</param><returns><paramref name="builder" /> 的值。</returns><remarks>管道键用于指标和日志，因此不要返回任何敏感值。</remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder"><summary>
+    用于配置 HTTP 客户端弹性管道的生成器。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder.PipelineName"><summary>
+    获取由此生成器配置的复原管道的名称。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IHttpResiliencePipelineBuilder.Services"><summary>
+            获取应用程序服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder"><summary>
+            标准 HTTP 复原管道的生成器。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder.PipelineName"><summary>
+            获取由此生成器配置的复原管道的名称。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IHttpStandardResiliencePipelineBuilder.Services"><summary>
+            获取应用程序服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.ResilienceHandler"><summary>
+    复原处理程序的基类，即使用复原策略发送请求的处理程序。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandler.#ctor(System.Func{System.Net.Http.HttpRequestMessage,Polly.ResiliencePipeline{System.Net.Http.HttpResponseMessage}})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Resilience.ResilienceHandler" /> 类的新实例。
+            </summary><param name="pipelineProvider">提供用于响应 HTTP 消息的管道的管道提供程序。</param><exception cref="T:System.ArgumentNullException">如果 <paramref name="pipelineProvider" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandler.#ctor(Polly.ResiliencePipeline{System.Net.Http.HttpResponseMessage})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Resilience.ResilienceHandler" /> 类的新实例。
+            </summary><param name="pipeline">用于消息的管道。</param><exception cref="T:System.ArgumentNullException">如果 <paramref name="pipeline" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><summary>
+            作为异步操作，将 HTTP 请求发送到内部处理程序以发送到服务器。
+            </summary><param name="request">要发送到服务器的 HTTP 请求消息。</param><param name="cancellationToken">用于取消操作的取消标记。</param><returns>表示异步操作的 Task 对象。</returns><exception cref="T:System.ArgumentNullException">如果 <paramref name="request" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandler.Send(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><summary>
+    以同步操作的方式向内部处理程序发送 HTTP 请求以发送到服务器。
+    </summary><param name="request">要发送到服务器的 HTTP 请求消息。</param><param name="cancellationToken">用于取消操作的取消令牌。</param><returns>从服务器接收到的 HTTP 响应。</returns><exception cref="T:System.ArgumentNullException">如果 <paramref name="request" /> 为 <see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext"><summary>
+            构建弹性管道 HTTP 处理程序时使用的上下文。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.ServiceProvider"><summary>
+            获取服务提供程序。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.BuilderName"><summary>
+            获取正在生成的生成器的名称。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.InstanceName"><summary>
+            获取正在构建的弹性管道的实例名称。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.EnableReloads``1(System.String)"><summary>
+    每当 <typeparamref name="TOptions" /> 选项发生更改时，启用复原管线的动态重新加载。
+    </summary><typeparam name="TOptions">要侦听的选项类型。</typeparam><param name="name">命名选项（如果有）。</param><remarks>
+    你可以根据 <paramref name="name" /> 决定是侦听全局选项还是命名选项的更改。
+    如果 <paramref name="name" /> 为 <see langword="null" />，则侦听全局选项。
+    默认情况下，<paramref name="name" /> 参数为 <see langword="null" />。
+    <para>
+    你只能侦听单个选项的更改。如果多次调用此方法，则前面的调用将被忽略，只有最后一次调用有效。
+    </para></remarks></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.GetOptions``1(System.String)"><summary>
+    获取由 <paramref name="name" /> 标识的选项。
+    </summary><typeparam name="TOptions">选项类型。</typeparam><param name="name">选项名称（如果有）。</param><returns>选项实例。</returns><remarks>
+    如果 <paramref name="name" /> 为 <see langword="null" />，则返回全局选项。
+    默认情况下，<paramref name="name" /> 参数为 <see langword="null" />。
+    </remarks></member><member name="M:Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext.OnPipelineDisposed(System.Action)"><summary>
+            注册一个回调，当所配置的管道实例被释放时调用。
+            </summary><param name="callback">回调委托。</param></member><member name="T:Microsoft.Extensions.Http.Resilience.Routing.Internal.RequestRoutingStrategy"><summary>
+            定义了一种用于检索路由 URL 的策略，用于将单个请求路由到一组不同的终结点。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.Routing.Internal.RequestRoutingStrategy.TryGetNextRoute(System.Uri@)"><summary>
+            获取下一个路由 Uri。
+            </summary><param name="nextRoute">保存下一个路由值，或 <see langword="null" />。</param><returns>如果下一个路由可用，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Extensions.Http.Resilience.Routing.Internal.RoutingResilienceStrategy"><summary>
+            为内部策略添加路由支持。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder"><summary>
+        用于配置与对冲处理程序关联的路由策略的构建器。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder.Name"><summary>
+    获取正在配置的路由策略名称。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder.Services"><summary>
+            获取服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions"><summary>
+        表示具有固定顺序的终结点组集合的选项。
+    </summary><remarks>
+        此策略按照它们在 <see cref="P:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions.Groups" /> 集合中指定的相同顺序选择终结点组。
+    </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions.Groups"><summary>
+            获取或设置有序终结点组的集合。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions"><summary><see cref="T:Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureOrderedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" /> 配置有序组路由。
+            </summary><param name="builder">路由构建器。</param><param name="section">该节将绑定 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" />。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureOrderedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,System.Action{Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions})"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" /> 配置有序组路由。
+            </summary><param name="builder">路由生成器。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" /> 的回调。</param><returns>返回 <param name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureOrderedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,System.Action{Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions,System.IServiceProvider})"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" /> 配置有序组路由。
+            </summary><param name="builder">路由生成器。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Resilience.OrderedGroupsRoutingOptions" /> 的回调。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureWeightedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 配置加权组路由。
+            </summary><param name="builder">路由生成器。</param><param name="section"><see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 将绑定到的节。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureWeightedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,System.Action{Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions})"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 配置加权组路由。
+            </summary><param name="builder">路由构建器。</param><param name="configure">配置 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 的回调。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.RoutingStrategyBuilderExtensions.ConfigureWeightedGroups(Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder,System.Action{Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions,System.IServiceProvider})"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 配置加权组路由。
+            </summary><param name="builder">路由生成器。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 的回调。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="T:Microsoft.Extensions.Http.Resilience.UriEndpoint"><summary>
+    表示基于 URI 的终结点。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.UriEndpoint.Uri"><summary>
+            获取或设置终结点的 URL。
+            </summary><remarks>
+            仅使用方案、域名和端口。URL 的其余部分从请求 URL 构造。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.UriEndpointGroup"><summary>
+            表示 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedUriEndpoint" /> 的集合。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.UriEndpointGroup.Endpoints"><summary>
+    获取或设置此终结点组中的终结点。
+    </summary><remarks>
+    默认情况下，终结点初始化为一个空列表。
+    客户端必须为每个终结点组定义终结点。
+    每个终结点组必须至少定义一个终结点才能执行对冲请求。
+    </remarks></member><member name="T:Microsoft.Extensions.Http.Resilience.WeightedGroupSelectionMode"><summary>
+            表示在 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions" /> 中使用的选择模式。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Resilience.WeightedGroupSelectionMode.EveryAttempt"><summary>
+    在此选择模式下，每次选择 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedUriEndpointGroup" /> 时都会使用权重。
+    </summary></member><member name="F:Microsoft.Extensions.Http.Resilience.WeightedGroupSelectionMode.InitialAttempt"><summary>
+            在这种选择模式下，权重仅用于选择初始的 <see cref="T:Microsoft.Extensions.Http.Resilience.WeightedUriEndpointGroup" />。
+            其余组按顺序选择，从第一个开始，到最后一个结束，并跳过已选择的组。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions"><summary>
+            表示具有权重分配的端点组集合的选项。
+            </summary><remarks>
+            此策略根据权重选择第一个端点组，然后按顺序选择剩余的组，
+            从第一个开始并省略已经选择的那个。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions.SelectionMode"><summary>
+            获取或设置选择模式，该模式确定底层路由策略的行为。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.WeightedGroupsRoutingOptions.Groups"><summary>
+            获取或设置加权终结点组的集合。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Resilience.WeightedUriEndpoint"><summary>
+    表示已分配权重的基于 URI 的终结点。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.WeightedUriEndpoint.Uri"><summary>
+            获取或设置端点的 URL。
+            </summary><remarks>
+            仅使用架构、域名和端口。URL 的其余部分由请求 URL 构造。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Resilience.WeightedUriEndpoint.Weight"><summary>
+            获取或设置终结点的权重。
+            </summary><value>
+            默认值为 32000。
+            </value></member><member name="T:Microsoft.Extensions.Http.Resilience.WeightedUriEndpointGroup"><summary>
+            表示一个已分配权重的 <see cref="T:Microsoft.Extensions.Http.Resilience.UriEndpoint" /> 集合。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Resilience.WeightedUriEndpointGroup.Weight"><summary>
+            获取或设置组的权重。
+            </summary><value>
+            默认值为 32000。
+            </value></member><member name="M:Microsoft.Extensions.Http.Resilience.__HedgingEndpointOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HedgingEndpointOptions)"><summary>
+    验证特定的命名选项实例（当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有选项实例）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__HttpCircuitBreakerStrategyOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpCircuitBreakerStrategyOptions)"><summary>
+        验证一个特定的命名选项实例（或者当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有）。
+    </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__HttpHedgingStrategyOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpHedgingStrategyOptions)"><summary>
+            验证特定命名的选项实例（或当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__HttpRateLimiterStrategyOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpRateLimiterStrategyOptions)"><summary>
+        验证特定的命名选项实例（当<paramref name="name" />为<see langword="null" />时验证所有实例）。
+    </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__HttpRetryStrategyOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions)"><summary>
+        验证特定的命名选项实例（当<paramref name="name" />为<see langword="null" />时验证所有）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__HttpTimeoutStrategyOptionsValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.HttpTimeoutStrategyOptions)"><summary>
+            验证特定的命名选项实例（或当<paramref name="name" />为<see langword="null" />时验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__UriEndpointGroupValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.UriEndpointGroup)"><summary>
+    验证一个特定的命名选项实例（或者当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有选项实例）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__WeightedUriEndpointGroupValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.WeightedUriEndpointGroup)"><summary>
+    验证特定的命名选项实例（当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有实例）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Http.Resilience.__WeightedUriEndpointValidator__.Validate(System.String,Microsoft.Extensions.Http.Resilience.WeightedUriEndpoint)"><summary>
+            验证特定的命名选项实例（当 <paramref name="name" /> 为 <see langword="null" /> 时，验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions"><summary><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的扩展。
+            </summary><summary><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddStandardHedgingHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.Http.Resilience.IRoutingStrategyBuilder})"><summary>
+            添加一个标准对冲处理程序，该程序使用标准对冲机制包装请求的执行。
+            </summary><param name="builder">HTTP 客户端生成器。</param><param name="configure">配置与此处理程序关联的路由策略。</param><returns>
+            一个 <see cref="T:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder" /> 实例，可用于配置标准对冲行为。
+            </returns><remarks>
+            标准对冲使用断路器池来确保不对不健康的终结点进行对冲。
+            默认情况下，从池中选择是基于 URL 颁发机构（方案 + 主机 + 端口）。
+            建议您通过调用
+            <see cref="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder)" />
+            扩展来配置策略的选择方式。
+            <para>
+            有关所使用的复原策略的详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions" />。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddStandardHedgingHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    添加一个标准对冲处理程序，该处理程序使用标准对冲机制包装请求的执行。
+    </summary><param name="builder">HTTP 客户端生成器。</param><returns>
+    一个 <see cref="T:Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder" /> 实例，可用于配置标准对冲行为。
+    </returns><remarks>
+    标准对冲使用断路器池来确保不会对冲不健康的终结点。
+    默认情况下，从池中的选择基于 URL 颁发机构（方案 + 主机 + 端口）。
+    建议你通过调用 <see cref="M:Microsoft.Extensions.Http.Resilience.StandardHedgingHandlerBuilderExtensions.SelectPipelineByAuthority(Microsoft.Extensions.Http.Resilience.IStandardHedgingHandlerBuilder)" /> 扩展来配置策略的选择方式。
+    <para>
+    有关使用的复原策略的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardHedgingResilienceOptions" />。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddResilienceHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.String,System.Action{Polly.ResiliencePipelineBuilder{System.Net.Http.HttpResponseMessage}})"><summary>
+            添加一个使用命名内联弹性管道的弹性管道处理程序。
+            </summary><param name="builder">生成器实例。</param><param name="pipelineName">弹性管道的自定义标识符，用于管道的名称。</param><param name="configure">配置管道的回调。</param><returns><paramref name="builder" /> 的值。</returns><remarks>
+            最终管道名称是 <see cref="P:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder.Name" /> 和 <paramref name="pipelineName" /> 的组合。如果您的 HTTP 客户端包含多个弹性处理程序，请使用管道名称标识符。
+            </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddResilienceHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.String,System.Action{Polly.ResiliencePipelineBuilder{System.Net.Http.HttpResponseMessage},Microsoft.Extensions.Http.Resilience.ResilienceHandlerContext})"><summary>
+    添加一个使用命名内联弹性管道的弹性管道处理程序。
+    </summary><param name="builder">生成器实例。</param><param name="pipelineName">弹性管道的自定义标识符，用于管道的名称。</param><param name="configure">配置管道的回调。</param><returns>返回 <paramref name="builder" /> 的值。</returns><remarks>
+    最终的管道名称是 <see cref="P:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder.Name" /> 和 <paramref name="pipelineName" /> 的组合。
+    如果您的 HTTP 客户端包含多个弹性处理程序，请使用管道名称标识符。
+    </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.RemoveAllResilienceHandlers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+        删除所有之前注册的弹性处理程序。
+    </summary><param name="builder">生成器实例。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddStandardResilienceHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+    添加一个标准弹性处理程序，该程序使用多个具有默认选项的弹性策略来发送请求并处理任何瞬时错误。
+    </summary><param name="builder">生成器实例。</param><param name="section">选项所绑定的节。</param><returns><paramref name="builder" /> 的值。</returns><remarks>
+    弹性管道结合了多个策略，这些策略基于特定于 HTTP 的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" /> 选项（带有推荐的默认值）进行配置。有关此方法配置的各个弹性策略的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+    </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddStandardResilienceHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions})"><summary>
+    添加一个标准复原处理器，该处理器使用多个默认选项的复原策略来发送请求并处理任何瞬时错误。
+    </summary><param name="builder">生成器实例。</param><param name="configure">配置选项的回调。</param><returns><paramref name="builder" />的值。</returns><remarks>
+    复原管道组合了多个策略，这些策略基于特定于 HTTP 的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" /> 选项（使用建议的默认值）进行配置。有关此方法配置的各项复原策略的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+    </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.ResilienceHttpClientBuilderExtensions.AddStandardResilienceHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    使用默认选项添加一个标准复原处理程序，该处理程序使用多种复原策略来发送请求并处理任何临时错误。
+    </summary><param name="builder">生成器实例。</param><returns><paramref name="builder" /> 的值。</returns><remarks>
+    复原管道结合了多种策略，这些策略基于 HTTP 特定的 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" /> 选项配置，并使用了建议的默认值。有关此方法配置的各个复原策略的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.Resilience.HttpStandardResilienceOptions" />。
+    </remarks></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration)"><summary>注册一个配置实例，<typeparamref name="TOptions" />将绑定该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，<typeparamref name="TOptions" />将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，TOptions 将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.TryGetConfigurationValue(Microsoft.Extensions.Configuration.IConfiguration,System.String,System.String@)"><summary>尝试获取指定键的配置值。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.ValidateConfigurationKeys(System.Type,System.Lazy{System.Collections.Generic.HashSet{System.String}},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions)"><summary>如果绑定器选项要求，则验证输入配置对象中没有未知键。</summary></member><member name="T:Polly.HttpResilienceContextExtensions"><summary>
+    提供用于处理 <see cref="T:Polly.ResilienceContext" /> 的实用方法。
+    </summary></member><member name="M:Polly.HttpResilienceContextExtensions.GetRequestMessage(Polly.ResilienceContext)"><summary>
+    从 <see cref="T:Polly.ResilienceContext" /> 获取请求消息。
+    </summary><param name="context">弹性上下文。</param><returns>
+    请求消息。
+    如果请求消息不在 <see cref="T:Polly.ResilienceContext" /> 中，则该方法返回 <see langword="null" />。
+    </returns><exception cref="T:System.ArgumentNullException"><paramref name="context" /> 为 <see langword="null" />。</exception></member><member name="M:Polly.HttpResilienceContextExtensions.SetRequestMessage(Polly.ResilienceContext,System.Net.Http.HttpRequestMessage)"><summary>
+    在<see cref="T:Polly.ResilienceContext" />上设置请求消息。
+    </summary><param name="context">弹性上下文。</param><param name="requestMessage">请求消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="context" /> 为 <see langword="null" />。</exception></member><member name="T:System.Net.Http.HttpResilienceHttpRequestMessageExtensions"><summary><see cref="T:System.Net.Http.HttpRequestMessage" /> 的复原扩展。
+            </summary></member><member name="M:System.Net.Http.HttpResilienceHttpRequestMessageExtensions.GetResilienceContext(System.Net.Http.HttpRequestMessage)"><summary>
+            从请求消息中获取 <see cref="T:Polly.ResilienceContext" />。
+            </summary><param name="requestMessage">请求。</param><returns><see cref="T:Polly.ResilienceContext" /> 的实例或 <see langword="null" />。</returns></member><member name="M:System.Net.Http.HttpResilienceHttpRequestMessageExtensions.SetResilienceContext(System.Net.Http.HttpRequestMessage,Polly.ResilienceContext)"><summary>
+            在请求消息上设置<see cref="T:Polly.ResilienceContext" />。
+            </summary><param name="requestMessage">请求。</param><param name="resilienceContext"><see cref="T:Polly.ResilienceContext" />的一个实例。</param></member></members>
+</doc>

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Telemetry</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+    此存储库报告的各种诊断ID。
+  </summary><remarks>
+    添加新的诊断ID时，向根<c>Directory.Build.targets</c>文件添加相应的抑制，并向<c>docs/list-of-diagnostics.md</c>添加文档条目。
+  </remarks></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+             此存储库支持的实验。
+            </summary></member><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+            定义用于抛出异常的静态方法。
+            </summary><remarks>
+            主要目的是减少代码大小、提高性能以及标准化异常消息。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />。
+            </summary><typeparam name="T">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的对象。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+            如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">要检查是否为 null 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 null 的成员类型。</typeparam><param name="argument">要检查是否为 null 的参数。</param><param name="member">要检查是否为 null 的对象成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            当指定的成员为 <see langword="null" /> 时，抛出 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfMemberNull(myObject, myObject.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+    如果指定的字符串为 null 或空白，则分别引发 <see cref="T:System.ArgumentNullException" /> 或 <see cref="T:System.ArgumentException" />。
+    </summary><param name="argument">要检查是否为 null 或空白的字符串。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            引发<see cref="T:System.ArgumentNullException" />当字符串为<see langword="null" />，或者引发<see cref="T:System.ArgumentException" />当字符串为空时。
+            </summary><param name="argument">要检查是否为<see langword="null" />或空的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+            当参数的缓冲区大小小于所需缓冲区大小时，抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="bufferSize">实际缓冲区大小。</param><param name="requiredSize">所需缓冲区大小。</param><param name="paramName">要检查的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+    如果枚举值无效，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要计算的参数。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">枚举的类型。</typeparam><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为 <see langword="null" />，则抛出 <see cref="T:System.ArgumentNullException" />；如果集合为空，则抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要评估的集合。</param><param name="paramName">正在检查的参数名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+    引发一个 <see cref="T:System.ArgumentNullException" />。
+    </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="actualValue">导致此异常的参数的值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+        抛出一个 <see cref="T:System.ArgumentException" />。
+    </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+            抛出一个 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+            如果 <paramref name="innerException" /> 不是 <see langword="null" />，则在处理内部异常的 catch 块中引发当前异常。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            引发 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+  </summary><param name="argument">期望小于最小值的数值。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字大于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">被检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+    </summary><param name="argument">应大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">数字预期应大于或等于最大值。</param><param name="min">允许的 argument 值范围的下限。</param><param name="max">允许的 argument 值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应为不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于或等于min，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">需确保该数字小于或等于min。</param><param name="min">必须小于或等于argument的数字。</param><param name="paramName">正在被检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于或等于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">应该大于或等于最大值的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>
+    如果指定的数字小于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+        如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应为小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于或等于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应大于或等于 max 的数字。</param><param name="max">必须大于或等于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于max的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">被检查参数的名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于 min 的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要检查是否大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望数字大于或等于 max。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+            如果指定数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定范围内，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望数字大于或等于最大值。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+    如果指定的数字等于 0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="T:Microsoft.Shared.Pools.RentedSpan`1"><summary>
+        表示可能基于租用数组创建的跨度。
+    </summary><typeparam name="T">跨度持有的对象的类型。</typeparam><remarks>
+        此类型用于实现一种常见模式，以在使用临时缓冲区时提高性能。该模式鼓励尽可能使用基于堆栈的缓冲区，从而消除缓冲区的垃圾回收开销。
+
+        使用此类型时，你可以进行推测性调用来分配缓冲区。如果缓冲区太大而无法固定在堆栈上，则从 <see cref="T:System.Buffers.ArrayPool`1" /> 分配。如果缓冲区可以在堆栈上分配，则不从数组池获取缓冲区，而是期望调用方使用 <see langword="stackalloc" /> 来获取缓冲区。
+    </remarks><example><code language="csharp">
+        using var rental = new RentedSpan&lt;char&gt;(length);
+        var span = rental.Rented ? rental.Span : stackalloc char[length];
+        </code></example></member><member name="F:Microsoft.Shared.Pools.RentedSpan`1.MinimumRentalSpace"><summary>
+            触发缓冲区租赁的最小大小（以字节为单位）。
+            </summary></member><member name="M:Microsoft.Shared.Pools.RentedSpan`1.#ctor(System.Int32)"><summary>
+    初始化 <see cref="T:Microsoft.Shared.Pools.RentedSpan`1" /> 结构的新实例。
+    </summary><param name="length">范围的所需长度。如果此值%lt;= 0，则不分配缓冲区。</param></member><member name="M:Microsoft.Shared.Pools.RentedSpan`1.Dispose"><summary>
+             将租用的数组归还到数组池。
+             </summary><remarks>
+             如果实际上没有从数组池分配数组
+             （当<see cref="P:Microsoft.Shared.Pools.RentedSpan`1.Rented" />为<see langword="false" />时），
+             则此方法不起作用。
+            
+             不支持在同一对象上多次调用此方法，请不要这样做。
+             </remarks></member><member name="P:Microsoft.Shared.Pools.RentedSpan`1.Span"><summary>
+            获取已租用缓冲区上的跨度。
+            </summary><remarks>
+            如果没有租用缓冲区（因为缓冲区被认为太小），则返回一个空跨度。
+            当此类型未租用缓冲区时，提示你应该改用 stackalloc 从堆栈分配缓冲区。
+            </remarks></member><member name="P:Microsoft.Shared.Pools.RentedSpan`1.Rented"><summary>
+            获取一个值，指示缓冲区是否已被租用。
+            </summary></member><member name="T:Microsoft.Shared.Pools.NoopPooledObjectPolicy`1"><summary>
+            一个无操作的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledCancellationTokenSourcePolicy"><summary>
+            用于取消令牌源的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledDictionaryPolicy`2"><summary>
+            字典的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledListPolicy`1"><summary>
+            列表的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledListWithCapacityPolicy`1"><summary>
+            针对具有容量的列表的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PooledSetPolicy`1"><summary>
+            集合的对象池策略。
+            </summary></member><member name="T:Microsoft.Shared.Pools.PoolFactory"><summary>
+            对象池工厂。
+            </summary><remarks>
+            此类可以轻松创建高效的对象池，这些对象池通过减少垃圾回收器的压力来提高性能。
+            </remarks></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreatePool``1(System.Int32)"><summary>
+            创建对象池。
+            </summary><typeparam name="T">要在池中保存的对象的类型。</typeparam><param name="maxCapacity">要在池中保存的最大项数。默认值为1024。此值仅供参考，池可能会保留比此更多的对象。</param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreatePool``1(Microsoft.Extensions.ObjectPool.IPooledObjectPolicy{``0},System.Int32)"><summary>
+    使用自定义策略创建一个对象池。
+    </summary><typeparam name="T">要在池中保留的对象的类型。</typeparam><param name="policy">负责创建新对象并准备要添加到池中的对象的自定义策略。</param><param name="maxCapacity">池中要保留的最大项目数。默认值为1024。此值是一个建议，池可能会保留多于这个数量的对象。</param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateResettingPool``1(System.Int32)"><summary>
+            创建用于可重置对象的对象池。
+            </summary><typeparam name="T">要在池中保存的对象类型。</typeparam><param name="maxCapacity">池中要保留的最大项目数。默认值为1024。此值为建议值，池可能保留多于该数量的对象。</param><returns>对象池。</returns><remarks>
+            对象在添加到池之前会被系统地重置。
+            </remarks></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateStringBuilderPool(System.Int32,System.Int32)"><summary>
+            创建一个 <see cref="T:System.Text.StringBuilder" /> 实例池。
+            </summary><param name="maxCapacity">池中保留的最大项数。默认值为1024。此值仅是一个建议，池中可能会保留比此值更多的对象。</param><param name="maxStringBuilderCapacity">池中保留的字符串生成器的最大容量。默认值为64K。</param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateListPool``1(System.Int32)"><summary>
+            创建 <see cref="T:System.Collections.Generic.List`1" /> 实例的对象池。
+            </summary><typeparam name="T">列表所持有的对象类型。</typeparam><param name="maxCapacity">
+            池中保留的最大项目数。
+            默认值为 1024。
+            此值是一个建议，池可能会保留超过此数量的对象。
+            </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateListPoolWithCapacity``1(System.Int32,System.Int32)"><summary>
+    创建对象池，其中的每个 <see cref="T:System.Collections.Generic.List`1" /> 实例都具有指定的 <paramref name="listCapacity" />。
+    </summary><typeparam name="T">列表所持有的对象的类型。</typeparam><param name="listCapacity">每个创建的 <see cref="T:System.Collections.Generic.List`1" /> 实例的容量。</param><param name="maxCapacity">
+    要在池中保留的最大项目数。
+    默认值为 1024。
+    此值是一个建议，池可能会保留比此更多的对象。
+    </param><returns>对象池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateDictionaryPool``2(System.Collections.Generic.IEqualityComparer{``0},System.Int32)"><summary>
+            创建 <see cref="T:System.Collections.Generic.Dictionary`2" /> 实例的对象池。
+            </summary><typeparam name="TKey">字典键的类型。</typeparam><typeparam name="TValue">字典值的类型。</typeparam><param name="comparer">字典使用的可选键比较器。</param><param name="maxCapacity">
+            池中保留的最大项目数。
+            默认值为 1024。
+            这是一个建议值，池可能保留比此更多的对象。
+            </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateHashSetPool``1(System.Collections.Generic.IEqualityComparer{``0},System.Int32)"><summary>
+    创建 <see cref="T:System.Collections.Generic.HashSet`1" /> 实例的对象池。
+    </summary><typeparam name="T">集合中保存的对象的类型。</typeparam><param name="comparer">集合使用的可选键比较器。</param><param name="maxCapacity">
+    池中要保留的最大项数。
+    默认值为 1024。
+    此值为建议值，池可能会保留更多的对象。
+    </param><returns>池。</returns></member><member name="M:Microsoft.Shared.Pools.PoolFactory.CreateCancellationTokenSourcePool(System.Int32)"><summary>
+            创建一个 <see cref="T:System.Threading.CancellationTokenSource" /> 实例的对象池。
+            </summary><param name="maxCapacity">
+            池中保留的最大项数。
+            默认值为 1024。
+            此值是一个建议，池可能会保留多于该数量的对象。
+            </param><returns>该池。</returns><remarks>
+            在 .NET 6 及更高版本上，取消令牌源是可重用的，此池利用了此功能。
+            在较旧的框架上运行时，此池实际上是一个空操作，每次从池中获取源时，它始终是一个新实例。在这种情况下，将对象返回到池只会将其释放。
+            </remarks></member><member name="P:Microsoft.Shared.Pools.PoolFactory.SharedStringBuilderPool"><summary>
+        获取 <see cref="T:System.Text.StringBuilder" /> 实例的共享池。
+    </summary></member><member name="T:Microsoft.Shared.Text.NumericExtensions"><summary>
+            用于增强基本数值类型的实用工具。
+            </summary></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int32)"><summary>
+    将整数格式化为不变字符串。
+    </summary><param name="value">要格式化为字符串的值。</param><returns>该整数值的字符串表示形式。</returns><remarks>
+    此方法的工作方式与 <c>value.ToString(CultureInfo.InvariantCulture)</c> 完全相同，但由于它维护了常见整数值的预格式化字符串，因此速度更快。
+    </remarks></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int64)"><summary>
+            将64位整数格式化为固定字符串。
+            </summary><param name="value">要格式化为字符串的值。</param><returns>整数值的字符串表示形式。</returns><remarks>
+            这与<c>value.ToString(CultureInfo.InvariantCulture)</c>完全相同，但速度更快，因为它维护了常见整数值的预格式化字符串。
+            </remarks></member><member name="T:Microsoft.Shared.Memoization.Memoize"><summary>
+            给定一个元数为 N（1 &lt;= N &lt;= 2）的函数，返回一个行为相同的函数，但与原始函数不同的是，使用相同参数的重复调用会返回缓存的值，而不是重新进行计算。
+            </summary><remarks>
+            Memoize 类似于 <see cref="T:System.Lazy`1" />，但适用于函数而不是值。
+            Memoize 将使用输入参数类型的相等性。这意味着任意对象将使用引用相等性，除非这些类型定义了它们自己的相等性语义。这意味着调用者应当注意使用 Memoize 的类型应该是可以安全放入字典的类型：如果类型是可变的，并且其 Equals/GetHashCode 依赖于这些可变部分，则可能会导致意外行为。
+            </remarks></member><member name="M:Microsoft.Shared.Memoization.Memoize.Function``2(System.Func{``0,``1})"><summary>
+            返回一个函数，该函数会记住给定函数先前调用的结果。
+            </summary><typeparam name="TParameter">函数输入类型。</typeparam><typeparam name="TResult">函数输出类型。</typeparam><param name="f">需要记忆化的函数。</param><returns>返回一个看起来与原始函数相同的函数，但重复调用几乎是瞬间完成的。</returns><remarks>
+            计算值会消耗内存。当返回的 Func 被释放时，垃圾回收将释放这些内存。如果你正在为大量输入计算值，请记住这一点：如果
+            Func 生存时间很长，内存使用可能会无限增长。
+            </remarks></member><member name="M:Microsoft.Shared.Memoization.Memoize.Function``3(System.Func{``0,``1,``2})"><summary>
+            返回一个函数，该函数会记住给定函数先前调用的结果。
+            </summary><typeparam name="TParameter1">函数的第一个参数的类型。</typeparam><typeparam name="TParameter2">函数的第二个参数的类型。</typeparam><typeparam name="TResult">函数的输出类型。</typeparam><param name="f">需要进行记忆化的函数。</param><returns>一个看起来与原始函数相同的函数，但重复调用几乎是瞬间完成的。</returns><remarks>
+            计算值会消耗内存。当返回的 Func 被释放时，垃圾回收将释放这些内存。如果你要为大量输入计算值，请记住这一点：如果 Func 存在很长时间，内存使用可能会无限增长。
+            </remarks></member><member name="T:Microsoft.Shared.Memoization.MemoizedFunction`2"><summary>
+            一元函数的记忆化器。
+            </summary><remarks>
+            我们不使用弱引用，因为弱引用只能包装引用类型，而我们希望支持返回其他类型值的函数。
+            </remarks><typeparam name="TParameter">记忆化函数的输入参数类型。</typeparam><typeparam name="TResult">记忆化函数的返回类型。</typeparam></member><member name="M:Microsoft.Shared.Memoization.MemoizedFunction`2.#ctor(System.Func{`0,`1})"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Memoization.MemoizedFunction`2" /> 类的新实例。
+            </summary><param name="function">其结果将被记忆化的函数。</param></member><member name="T:Microsoft.Shared.Memoization.MemoizedFunction`3"><summary>
+            用于二元函数的记忆化器。
+            </summary><typeparam name="TParameter1">记忆化函数的第一个输入参数类型。</typeparam><typeparam name="TParameter2">记忆化函数的第二个输入参数类型。</typeparam><typeparam name="TResult">记忆化函数的返回值类型。</typeparam></member><member name="M:Microsoft.Shared.Memoization.MemoizedFunction`3.#ctor(System.Func{`0,`1,`2})"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Memoization.MemoizedFunction`3" /> 类的新实例。
+            </summary><param name="function">其结果将被记忆的函数。</param></member><member name="T:Microsoft.Shared.Data.Validation.LengthAttribute"><summary>
+    指定任何 <see cref="T:System.Collections.IEnumerable" /> 或 <see cref="T:System.String" /> 对象的最小长度。
+    </summary><remarks>
+    标准的 <see cref="T:System.ComponentModel.DataAnnotations.MinLengthAttribute" /> 仅支持非泛型的 <see cref="T:System.Array" /> 或 <see cref="T:System.String" /> 类型的对象
+    在 .NET Framework 上，而 <see cref="T:System.Collections.Generic.ICollection`1" /> 类型仅在 .NET Core 上受支持。
+    参见此处的问题 <see href="https://github.com/dotnet/runtime/issues/23288" />。
+    此属性旨在允许跨目标框架以一致的方式验证所有这些对象。
+    </remarks></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength"><summary>
+            获取集合或字符串的最小允许长度。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength"><summary>
+            获取集合或字符串允许的最大长度。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.LengthAttribute.Exclusive"><summary>
+            获取或设置一个值，该值指示长度验证是否应排除 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength" /> 和 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength" /> 值。
+            </summary><value>
+            默认值为 <c>false</c>。
+            </value></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.#ctor(System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.LengthAttribute" /> 类的新实例。
+            </summary><param name="minimumLength">
+            数组/字符串数据的最小允许长度。
+            值必须大于或等于零。
+            </param></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.#ctor(System.Int32,System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.LengthAttribute" /> 类的新实例。
+            </summary><param name="minimumLength">
+            数组/字符串数据的最小允许长度。
+            值必须大于或等于零。
+            </param><param name="maximumLength">
+            数组/字符串数据的最大允许长度。
+            值必须大于或等于零。
+            </param></member><member name="M:Microsoft.Shared.Data.Validation.LengthAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)"><summary>
+    验证给定值是否在范围内。
+    </summary><remarks>
+    如果<paramref name="value" />为<see langword="null" />，则此方法返回<c>true</c>。
+    如果值可能不为<see langword="null" />，则假定使用<see cref="T:System.ComponentModel.DataAnnotations.RequiredAttribute" />。
+    </remarks><param name="value">要验证的值。</param><param name="validationContext">此验证的附加上下文。</param><returns>指示成功或失败的值。</returns><exception cref="T:System.ArgumentOutOfRangeException"><see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MinimumLength" /> 小于零或大于 <see cref="P:Microsoft.Shared.Data.Validation.LengthAttribute.MaximumLength" />。</exception><exception cref="T:System.InvalidOperationException">不支持验证的类型。</exception></member><member name="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute"><summary>
+    提供对<see cref="T:System.TimeSpan" />的边界验证。
+    </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Minimum"><summary>
+            获取时间间隔的下限。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Maximum"><summary>
+            获取时间跨度的上限。
+            </summary></member><member name="P:Microsoft.Shared.Data.Validation.TimeSpanAttribute.Exclusive"><summary>
+    获取或设置一个值，该值指示时间跨度验证是否应排除最小值和最大值。
+    </summary><value>
+    默认值为 <c>false</c>。
+    </value></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.Int32)"><summary>
+            初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+            </summary><param name="minMs">以毫秒为单位的最小值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.Int32,System.Int32)"><summary>初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。</summary><param name="minMs">以毫秒为单位的最小值。</param><param name="maxMs">以毫秒为单位的最大值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.String)"><summary>
+    初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+    </summary><param name="min">以时间跨度字符串表示的最小值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.#ctor(System.String,System.String)"><summary>
+        初始化 <see cref="T:Microsoft.Shared.Data.Validation.TimeSpanAttribute" /> 类的新实例。
+    </summary><param name="min">表示为时间跨度字符串的最小值。</param><param name="max">表示为时间跨度字符串的最大值。</param></member><member name="M:Microsoft.Shared.Data.Validation.TimeSpanAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)"><summary>
+    验证给定的值是否表示一个范围内的TimeSpan值。
+    </summary><param name="value">要验证的值。</param><param name="validationContext">此验证的附加上下文。</param><returns>指示成功或失败的值。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord"><summary>
+            表示从某处（如缓冲区）反序列化的日志记录。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.#ctor(System.DateTimeOffset,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.Collections.Generic.KeyValuePair{System.String,System.Object}})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord" /> 类的新实例。
+            </summary><param name="timestamp">日志记录首次创建的时间。</param><param name="logLevel">日志记录严重性级别。</param><param name="eventId">事件 ID。</param><param name="exception">此记录的异常字符串。</param><param name="formattedMessage">格式化后的日志消息。</param><param name="attributes">与记录关联的名称/值对集合。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.Timestamp"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.LogLevel"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.EventId"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.Exception"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.FormattedMessage"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.DeserializedLogRecord.Attributes"><inheritdoc /></member><member name="T:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord"><summary>
+            表示一个已被序列化的日志记录，用于缓冲或类似目的。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.#ctor(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,System.DateTimeOffset,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.String,System.String,System.Int32)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord" /> 结构的新实例。
+    </summary><param name="logLevel">日志严重性级别。</param><param name="eventId">事件 ID。</param><param name="timestamp">首次创建日志记录的时间。</param><param name="attributes">与此记录关联的名称/值对集合。</param><param name="exceptionMessage">此记录的异常消息。</param><param name="formattedMessage">格式化后的日志消息。</param><param name="sizeInBytes">此实例的近似大小（以字节为单位）。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.LogLevel"><summary>
+            获取记录的日志严重性级别。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.EventId"><summary>
+            获取记录的事件 ID。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.Timestamp"><summary>
+            获取日志记录首次创建的时间。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.Attributes"><summary>
+            获取与该记录关联的名称/值对的可变集合。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.Exception"><summary>
+            获取此记录的异常字符串。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.FormattedMessage"><summary>
+            获取带格式的日志消息。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.SerializedLogRecord.SizeInBytes"><summary>
+            获取序列化日志记录的近似大小（以字节为单位）。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions"><summary>
+            全局日志缓冲的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.AutoFlushDuration"><summary>
+            获取或设置在进行手动刷新后进行自动刷新的时间。
+            </summary><remarks>
+            使用此选项可在刷新后暂时暂停缓冲，例如，在发生事件时，您可能希望所有日志立即发出，因此缓冲将在 <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.AutoFlushDuration" /> 时间内暂停。
+            </remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.MaxLogRecordSizeInBytes"><summary>
+            获取或设置每个单独日志记录的最大大小（以字节为单位）。
+            </summary><remarks>
+            如果日志记录的大小超过此限制，则不会对其进行缓冲。
+            </remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.MaxBufferSizeInBytes"><summary>
+            获取或设置缓冲区的最大大小（以字节为单位）。
+            </summary><remarks>
+            如果添加新的日志条目会导致缓冲区大小超过此限制，则将丢弃最旧的缓冲日志记录以腾出空间。
+            </remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.Rules"><summary>
+    获取或设置用于过滤日志消息以进行进一步缓冲的 <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule" /> 集合。
+    </summary><remarks>
+    如果日志条目匹配某个规则，它将被缓冲。随后，当缓冲区被刷新时，它将被发出。
+    如果日志条目不匹配任何规则，它将正常发出。
+    如果达到缓冲区大小限制，最旧的缓冲日志条目将被丢弃（不发出！）以便为新条目腾出空间。
+    如果日志条目大小大于 <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.MaxLogRecordSizeInBytes" />，它将不会被缓冲，而是正常发出。
+    </remarks></member><member name="M:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptionsValidator.Validate(System.String,Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions)"><summary>
+    验证特定的命名选项实例（或当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule"><summary>
+    定义用于进一步缓冲筛选日志消息的规则。
+    </summary><remarks>
+    如果日志条目匹配规则，它将被缓冲。因此，当缓冲区刷新时，它将在稍后发出。
+    如果日志条目不匹配任何规则，它将正常发出。
+    如果达到缓冲区大小限制，最旧的缓冲日志条目将被丢弃（不会发出！）以便为新条目腾出空间。
+    </remarks></member><member name="M:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.#ctor(System.String,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.Nullable{System.Int32},System.String,System.Collections.Generic.IReadOnlyList{System.Collections.Generic.KeyValuePair{System.String,System.Object}})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule" /> 类的新实例。
+            </summary><param name="categoryName">此筛选规则中使用的类别名称。</param><param name="logLevel">此筛选规则中使用的 <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel" />。</param><param name="eventId">此筛选规则中使用的事件 ID。</param><param name="eventName">此筛选规则中使用的事件名称。</param><param name="attributes">此筛选规则中使用的日志状态属性。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.CategoryName"><summary>
+            获取此规则适用的记录器类别名称。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel"><summary>
+    获取此规则适用的消息的最大 <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel" />。
+    </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.EventId"><summary>
+    获取此规则所适用的消息的事件 ID。
+  </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.EventName"><summary>
+            获取此规则应用的事件名称。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.Attributes"><summary>
+            获取此规则适用的消息的日志状态属性。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRuleSelector"><summary>
+            从规则列表中为给定的日志事件选择最佳规则。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags"><summary>
+            用于丰富标签的常量。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags.ApplicationName"><summary>
+            应用程序名称。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags.EnvironmentName"><summary>
+            环境名称。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags.DeploymentRing"><summary>
+            部署环。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags.BuildVersion"><summary>
+            生成版本。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags.DimensionNames"><summary>
+            获取所有维度名称的列表。
+            </summary><returns>所有维度名称的只读 <see cref="T:System.Collections.Generic.IReadOnlyList`1" />。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions"><summary>
+            应用程序日志扩充器的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions.EnvironmentName"><summary>
+        获取或设置一个值，该值指示是否使用 <see cref="P:Microsoft.Extensions.AmbientMetadata.ApplicationMetadata.EnvironmentName" /> 进行日志丰富化。
+    </summary><value>
+        默认值为 <see langword="true" />。
+    </value></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions.ApplicationName"><summary>
+            获取或设置一个值，该值指示是否使用 <see cref="P:Microsoft.Extensions.AmbientMetadata.ApplicationMetadata.ApplicationName" /> 进行日志丰富。
+            </summary><value>
+            默认值为 <see langword="true" />。
+            </value></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions.DeploymentRing"><summary>
+            获取或设置一个值，该值指示是否使用 <see cref="P:Microsoft.Extensions.AmbientMetadata.ApplicationMetadata.DeploymentRing" /> 进行日志丰富。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions.BuildVersion"><summary>
+            获取或设置一个值，该值指示是否将 <see cref="P:Microsoft.Extensions.AmbientMetadata.ApplicationMetadata.BuildVersion" /> 用于日志充实。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ProcessEnricherTagNames"><summary>
+            用于扩充标记的常量。
+            </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ProcessEnricherTagNames.ProcessId"><summary>
+    进程 ID。
+    </summary></member><member name="F:Microsoft.Extensions.Diagnostics.Enrichment.ProcessEnricherTagNames.ThreadId"><summary>
+            线程 ID。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ProcessEnricherTagNames.DimensionNames"><summary>
+    获取所有维度名称的列表。
+    </summary><returns>所有维度名称的只读<see cref="T:System.Collections.Generic.IReadOnlyList`1" />。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricher"><summary>
+            使用进程信息丰富日志。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions"><summary>
+            进程充实器的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions.ProcessId"><summary>
+    获取或设置一个值，该值指示是否使用当前进程 ID 进行日志丰富。
+    </summary><value>
+    默认值是 <see langword="true" />。
+    </value></member><member name="P:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions.ThreadId"><summary>
+            获取或设置一个值，该值指示是否使用当前线程 ID 进行日志丰富。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value></member><member name="T:Microsoft.Extensions.Diagnostics.Enrichment.StaticProcessLogEnricher"><summary>
+            使用进程信息丰富日志。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker"><summary>
+            跟踪检查点的类。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.Registry)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker" /> 类的新实例。
+            </summary><param name="registry">检查点名称的注册表。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker.TryReset"><summary>
+            重置 CheckpointTracker。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker.Add(Microsoft.Extensions.Diagnostics.Latency.CheckpointToken)"><summary>
+            为令牌添加检查点。
+            </summary><param name="token">检查点的令牌。</param><remarks> 如果同一检查点被添加多次，则以第一次写入为准。</remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.CheckpointTracker.Checkpoints"><summary>
+            获取已添加的检查点列表。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContext"><summary><see cref="T:Microsoft.Extensions.Diagnostics.Latency.ILatencyContext" /> 的实现。
+    </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool"><summary>
+    用于延迟测量的仪器对象池。
+    </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyInstrumentProvider)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool" /> 类的新实例。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.LatencyContextPolicy"><summary>
+            用于<see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool" />的对象池策略。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.LatencyContextPolicy.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.LatencyContextPolicy" /> 类的新实例。
+    </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.LatencyContextPolicy.Create"><summary>
+            创建对象。
+            </summary><returns>创建的对象。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextPool.LatencyContextPolicy.Return(Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContext)"><summary>
+    将对象返回到池中。
+    </summary><param name="obj">要返回的对象。</param><returns>true，表示对象将被返回。</returns></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextProvider"><summary><see cref="T:Microsoft.Extensions.Diagnostics.Latency.ILatencyContextProvider" /> 的实现。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextProvider.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyInstrumentProvider)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextProvider" /> 类的新实例。
+            </summary><param name="latencyInstrumentProvider">延迟仪器提供程序。</param></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextRegistrySet"><summary>
+            包含用于<see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContext" /> API的名称注册表的类。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextRegistrySet.CheckpointNameRegistry"><summary>
+    获取检查点名称的注册表。
+    </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextRegistrySet.TagNameRegistry"><summary>
+            获取标签名称的注册表。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.LatencyContextRegistrySet.MeasureNameRegistry"><summary>
+            获取计数器名称的注册表。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.Registry)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker" /> 类的新实例。
+            </summary><param name="registry">度量名称的注册表。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.TryReset"><summary>
+            重置 MeasureTracker。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.AddLong(Microsoft.Extensions.Diagnostics.Latency.MeasureToken,System.Int64)"><summary>
+            将值添加到度量。
+            </summary><param name="token">度量的令牌。</param><param name="value">度量的值。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.SetLong(Microsoft.Extensions.Diagnostics.Latency.MeasureToken,System.Int64)"><summary>
+            设置度量值。
+            </summary><param name="token">度量令牌。</param><param name="value">度量值。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.GetPositionOfMeasure(Microsoft.Extensions.Diagnostics.Latency.MeasureToken)"><summary>
+            获取已添加度量值的位置。
+            </summary><param name="measureToken">度量值的令牌。</param><returns>度量值的位置。</returns><remarks> 此函数将_measurePosition用作字典。键是
+注册表中名称的顺序。值是跟踪数组_measureNames和_measureValues中的位置。 </remarks></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.MeasureTracker.Measures"><summary>
+            获取已添加的度量列表。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry"><summary>
+            提供注册功能。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry.#ctor(System.String[],System.Boolean)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry" /> 类的新实例。
+    </summary><param name="keys">要注册的键集合。</param><param name="throwOnUnregisteredKeyLookup">如果为 true，则在获取未注册键的顺序时引发异常。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry.OrderedKeys"><summary>
+            获取已注册键的列表，使用默认比较器排序。
+            </summary><returns>已排序的键列表。</returns></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry.KeyCount"><summary>
+            获取已注册密钥的数量。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.Registry.GetRegisteredKeyIndex(System.String)"><summary>
+            获取已注册键的从零开始的顺序。
+            </summary><param name="key">要获取顺序的键。</param><returns>键的索引。如果未注册，则返回 -1。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.ResetOnGetObjectPool`1.#ctor(Microsoft.Extensions.ObjectPool.PooledObjectPolicy{`0})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.ResetOnGetObjectPool`1" /> 类的新实例。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection"><summary>
+            用于添加标签的类。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection.#ctor(Microsoft.Extensions.Diagnostics.Latency.Internal.Registry)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection" /> 类的新实例。
+            </summary><param name="registry">标签名称的注册表。</param></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection.TryReset"><summary>
+            重置 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection" />。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection.Set(Microsoft.Extensions.Diagnostics.Latency.TagToken,System.String)"><summary>
+            设置标签的值。
+            </summary><param name="token">标签的令牌。</param><param name="value">标签的值。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.Internal.TagCollection.Tags"><summary>
+    获取已添加的标签列表。
+    </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions"><summary>
+    控制台延迟数据导出器的选项。
+    </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions.OutputCheckpoints"><summary>
+    获取或设置一个值，该值指示是否将延迟检查点信息输出到控制台。
+    </summary><value>
+    默认值为 <see langword="true" />。
+    </value></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions.OutputTags"><summary>
+            获取或设置一个值，该值指示是否将延迟标记信息输出到控制台。
+            </summary><value>
+            默认值为 <see langword="true" />。
+            </value></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions.OutputMeasures"><summary>
+        获取或设置一个值，该值指示是否将延迟度量信息输出到控制台。
+    </summary><value>
+        默认为 <see langword="true" />。
+    </value></member><member name="T:Microsoft.Extensions.Diagnostics.Latency.LatencyContextOptions"><summary>
+            LatencyContext 的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Latency.LatencyContextOptions.ThrowOnUnregisteredNames"><summary>
+            获取或设置一个值，该值指示在使用未注册的名称时是否引发异常。
+            </summary><value><see langword="true" /> 表示 ILatencyContext API 在使用未注册的名称时引发异常；<see langword="false" /> 表示不执行任何操作。默认值为 <see langword="false" />。
+            </value></member><member name="T:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule"><summary>
+            表示用于过滤日志消息以进行日志采样和缓冲的规则。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule.CategoryName"><summary>
+            获取此规则适用的记录器类别。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule.LogLevel"><summary>
+            获取消息的最大<see cref="P:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule.LogLevel" />。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule.EventId"><summary>
+            获取此规则应用的事件 ID。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.ILogSamplingFilterRule.EventName"><summary>
+            获取此规则所适用的事件的名称。
+            </summary></member><member name="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSampler"><summary>
+    根据指定的概率随机采样日志。
+    </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSampler.#ctor(Microsoft.Extensions.Diagnostics.Sampling.LogSamplingRuleSelector{Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule},Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSampler" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSampler.ShouldSample``1(Microsoft.Extensions.Logging.Abstractions.LogEntry{``0}@)"><inheritdoc /></member><member name="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule"><summary>
+            定义一个用于采样目的的日志消息过滤规则。
+            </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.#ctor(System.Double,System.String,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.Nullable{System.Int32},System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule" /> 类的新实例。
+            </summary><param name="probability">此规则适用时用于采样的概率。</param><param name="categoryName">在此筛选规则中使用的类别名称。</param><param name="logLevel">在此筛选规则中使用的 <see cref="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.LogLevel" />。</param><param name="eventId">在此筛选规则中使用的事件 ID。</param><param name="eventName">在此筛选规则中使用的事件名称。</param></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.Probability"><summary>
+            获取规则适用时的采样概率。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.CategoryName"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.LogLevel"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.EventId"><inheritdoc /></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule.EventName"><inheritdoc /></member><member name="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions"><summary>
+            随机概率采样器的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions.Rules"><summary>
+    获取或设置用于筛选日志消息的 <see cref="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule" /> 的集合。
+    </summary></member><member name="M:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptionsValidator.Validate(System.String,Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions)"><summary>
+            验证特定命名的选项实例（当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="M:Microsoft.Extensions.Diagnostics.Sampling.__RandomProbabilisticSamplerFilterRuleValidator__.Validate(System.String,Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule)"><summary>验证特定的命名选项实例（或当<paramref name="name" />为<see langword="null" />时验证所有实例）。</summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions"><summary>
+    允许您在依赖注入容器中注册日志缓冲。
+    </summary></member><member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfiguration)"><summary>
+            向日志记录基础结构添加全局日志缓冲。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。</param><param name="configuration">要添加的 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><remarks>
+            匹配的日志将被缓冲，并可以选择刷新和发出。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions})"><summary>
+            将全局日志缓冲添加到日志记录基础结构中。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。</param><param name="configure">配置缓冲区选项。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><remarks>
+            匹配的日志将被缓冲，并可选择刷新和发出。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,System.Nullable{Microsoft.Extensions.Logging.LogLevel})"><summary>
+            向日志记录基础结构添加全局日志缓冲。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />。</param><param name="logLevel">要应用缓冲的日志级别（及以下）。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><remarks>
+            匹配的日志将被缓冲，并可以选择性地刷新和发出。
+            </remarks></member><member name="T:Microsoft.Extensions.Logging.ExtendedLogger.EnrichmentTagCollector"><summary>
+            用于在现代日志记录路径中收集标签。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.ExtendedLogger.EnrichmentTagCollector.#ctor(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Object}})"><summary>
+        用于收集现代日志记录路径中的标签。
+    </summary></member><member name="T:Microsoft.Extensions.Logging.ExtendedLogger.LegacyTagJoiner"><summary>
+            用于在旧版日志记录路径中收集标记。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.ExtendedLogger.ModernTagJoiner"><summary>
+    用于在现代日志记录路径中收集标签。
+    </summary></member><member name="P:Microsoft.Extensions.Logging.ExtendedLoggerFactory.Config"><summary>
+            获取记录器应使用的当前配置状态。
+            </summary><remarks>
+            每当选项监视器触发时，此值会被替换。记录器应采样此值，并在对 ILogger.Log 的整个调用中使用它，以便在函数的执行跨度内获得一致的配置视图。
+            </remarks></member><member name="T:Microsoft.Extensions.Logging.LoggerFactoryScopeProvider"><summary><see cref="T:Microsoft.Extensions.Logging.IExternalScopeProvider" /> 的默认实现
+            </summary></member><member name="T:Microsoft.Extensions.Logging.NullScope"><summary>
+    不含任何逻辑的空作用域
+    </summary></member><member name="M:Microsoft.Extensions.Logging.NullScope.Dispose"><inheritdoc /></member><member name="T:Microsoft.Extensions.Logging.JustInTimeRedactor"><summary>
+            执行延迟修订，以避免分配中间字符串，并在可能的情况下实现从跨度到跨度的修订。
+            </summary></member><member name="T:Microsoft.Extensions.Logging.LoggerEnrichmentOptions"><summary>
+            用于日志记录丰富功能的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.CaptureStackTraces"><summary>
+            获取或设置一个值，该值指示记录异常时是否包括堆栈跟踪。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value><remarks>
+            当设置为 <see langword="true" /> 且记录异常时，日志记录器将添加异常堆栈跟踪，并将内部异常作为单独的键值对（键为 'stackTrace'）添加。
+            列的最大长度默认为 4096 个字符，可以通过设置 <see cref="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.MaxStackTraceLength" /> 属性进行修改。
+            超出当前限制的堆栈跟踪将被截断。
+            </remarks></member><member name="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.UseFileInfoForStackTraces"><summary>
+    获取或设置一个值，指示在生成堆栈跟踪时是否查阅调试文件（PDB文件）。
+    </summary><remarks>
+    读取可用的调试文件会产生更丰富的堆栈跟踪，但可能会耗费大量时间来生成。因此，此选项应仅在开发场景中启用，而不是在生产环境中使用。
+    
+    如果 <see cref="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.CaptureStackTraces" /> 为 <see langword="false" />，则此属性无效。
+    
+    此值默认为 <see langword="false" />。
+    </remarks></member><member name="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.IncludeExceptionMessage"><summary>
+            获取或设置一个值，该值指示在记录异常时是否包含异常消息。
+            </summary><value>
+            此值默认为 <see langword="false" />。
+            </value><remarks>
+            当将 <see cref="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.IncludeExceptionMessage" /> 和 <see cref="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.CaptureStackTraces" /> 均设置为
+            <see langword="true" /> 时，异常消息也会包含在堆栈跟踪中。
+            </remarks></member><member name="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.MaxStackTraceLength"><summary>
+             获取或设置要为给定日志记录发出的最大堆栈跟踪长度。
+             </summary><value>
+             默认值为 4096。
+             </value><remarks>
+             当设置为小于 2 KB 或大于 32 KB 时，将引发异常。
+            
+             如果 <see cref="P:Microsoft.Extensions.Logging.LoggerEnrichmentOptions.CaptureStackTraces" /> 为 <see langword="false" />，则此属性不起作用。
+             </remarks></member><member name="M:Microsoft.Extensions.Logging.LoggerEnrichmentOptionsValidator.Validate(System.String,Microsoft.Extensions.Logging.LoggerEnrichmentOptions)"><summary>
+            验证特定的命名选项实例（当 <paramref name="name" /> 为 <see langword="null" /> 时，验证所有实例）。
+            </summary><param name="name">正在验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Logging.LoggerRedactionOptions"><summary>
+            控制修订的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Logging.LoggerRedactionOptions.ApplyDiscriminator"><summary>
+            获取或设置一个值，该值指示是否将鉴别器值应用于每个已编校的值。
+            </summary><value>
+            默认为 <see langword="true" />。
+            </value><remarks>
+            鉴别器用于限制在状态片段之间关联数据的能力。当此属性为 <see langword="true" /> 时，每个值的标记名称将作为已编校文本的一部分包含在内，通常使得无法在不同名称的标记之间关联数据。
+            </remarks></member><member name="T:Microsoft.Extensions.Logging.LoggingEnrichmentExtensions"><summary>
+            用于配置日志丰富功能的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.LoggingEnrichmentExtensions.EnableEnrichment(Microsoft.Extensions.Logging.ILoggingBuilder)"><summary>
+    在日志记录基础结构中启用丰富功能。
+    </summary><param name="builder">要向其中添加日志记录的依赖项注入容器。</param><returns>返回 <paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggingEnrichmentExtensions.EnableEnrichment(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.LoggerEnrichmentOptions})"><summary>
+        在日志记录基础结构中启用丰富功能。
+    </summary><param name="builder">要向其中添加日志记录的依赖注入容器。</param><param name="configure">用于微调选项的委托。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggingEnrichmentExtensions.EnableEnrichment(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            在日志记录基础结构中启用丰富功能。
+            </summary><param name="builder">要向其添加日志记录的依赖项注入容器。</param><param name="section">包含<see cref="T:Microsoft.Extensions.Logging.LoggerEnrichmentOptions" />的配置节。</param><returns><paramref name="builder" />的值。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggingEnrichmentExtensions.AddExtendedLoggerFeactory(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将默认的 <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> 实现添加到服务集合中。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </param><returns><paramref name="services" /> 的值。
+            </returns></member><member name="T:Microsoft.Extensions.Logging.LoggingRedactionExtensions"><summary>
+    用于配置日志记录编辑功能的扩展。
+    </summary></member><member name="M:Microsoft.Extensions.Logging.LoggingRedactionExtensions.EnableRedaction(Microsoft.Extensions.Logging.ILoggingBuilder)"><summary>
+            在日志记录基础结构中启用编辑功能。
+            </summary><param name="builder">用于添加日志记录的依赖项注入容器。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggingRedactionExtensions.EnableRedaction(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.LoggerRedactionOptions})"><summary>
+            在日志记录基础设施中启用修订功能。
+            </summary><param name="builder">要添加日志记录的依赖注入容器。</param><param name="configure">用于微调选项的委托。</param><returns><paramref name="builder" /> 的值。</returns></member><member name="M:Microsoft.Extensions.Logging.LoggingRedactionExtensions.EnableRedaction(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            启用日志记录基础结构中的编辑功能。
+            </summary><param name="builder">要向其添加日志记录的依赖项注入容器。</param><param name="section">包含<see cref="T:Microsoft.Extensions.Logging.LoggerRedactionOptions" />的配置节。</param><returns><paramref name="builder" />的值。</returns></member><member name="T:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions"><summary>
+            用于配置日志采样的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddTraceBasedSampler(Microsoft.Extensions.Logging.ILoggingBuilder)"><summary>
+            向日志记录基础结构中添加基于跟踪的日志采样器。
+            </summary><param name="builder">要向其添加日志记录的依赖项注入容器。</param><returns>即<paramref name="builder" />的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><remarks>日志的采样决策与基础<see cref="T:System.Diagnostics.Activity" />的采样决策完全匹配。
+            你可能需要作为 OpenTelemetry .NET 的一部分单独配置跟踪采样。</remarks></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddRandomProbabilisticSampler(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfiguration)"><summary>
+            向日志记录基础结构添加随机概率日志记录采样器。
+            </summary><param name="builder">要添加日志记录的依赖注入容器。</param><param name="configuration">要添加的<see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />。</param><returns><paramref name="builder" />的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><remarks>
+            匹配的日志将根据配置的概率进行随机采样。
+            概率值越高，给定的日志记录被采样的概率就越高。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddRandomProbabilisticSampler(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions})"><summary>
+            向日志记录基础设施添加随机概率日志记录采样器。
+            </summary><param name="builder">要添加日志记录的依赖注入容器。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions" /> 配置委托。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 或 <paramref name="configure" /> 为 <see langword="null" />。</exception><remarks>
+            匹配的日志将根据配置的概率随机采样。
+            概率值越高，给定日志记录被采样的概率越高。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddRandomProbabilisticSampler(Microsoft.Extensions.Logging.ILoggingBuilder,System.Double,System.Nullable{Microsoft.Extensions.Logging.LogLevel})"><summary>
+            向日志记录基础结构添加随机概率日志采样器。
+            </summary><param name="builder">要向其添加日志记录的依赖注入容器。</param><param name="probability">介于0.0到1.0之间的概率。</param><param name="level">要对其应用采样器的日志级别（及以下）。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception><exception cref="T:System.ArgumentOutOfRangeException"><paramref name="probability" /> 小于0或大于1。</exception><remarks>
+            匹配的日志将根据配置的 <paramref name="probability" /> 进行随机采样。概率值越大，给定日志记录被采样的概率越高。
+            </remarks></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddSampler``1(Microsoft.Extensions.Logging.ILoggingBuilder)"><summary>
+        向日志记录基础结构中添加日志记录采样器类型。
+        </summary><typeparam name="T">日志记录采样器类型。</typeparam><param name="builder">要添加日志记录的依赖注入容器。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Logging.SamplingLoggerBuilderExtensions.AddSampler(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Logging.LoggingSampler)"><summary>
+            向日志记录基础结构添加日志记录采样器实例。
+            </summary><param name="builder">要添加日志记录的依赖项注入容器。</param><param name="sampler">要添加的采样器实例。</param><returns><paramref name="builder" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="builder" /> 或 <paramref name="sampler" /> 为 <see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions"><summary>
+    提供用于在 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中设置服务扩充器的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddServiceLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加服务增强器的一个实例。
+            </summary><param name="services">要向其添加服务增强器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddServiceLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions})"><summary>
+            向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加服务丰富器的实例。
+            </summary><param name="services">要向其中添加服务丰富器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions" /> 配置委托。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">如果任何参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddServiceLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+    向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加一个服务丰富器实例。
+    </summary><param name="services">要向其添加服务丰富器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="section">用于配置服务丰富器中 <see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions" /> 的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">任何参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddApplicationLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加应用程序富化器的一个实例。
+    </summary><param name="services">要将应用程序富化器添加到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddApplicationLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions})"><summary>
+    将应用程序丰富器实例添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+    </summary><param name="services">要向其中添加应用程序丰富器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions" /> 配置委托。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">任何参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ApplicationEnricherServiceCollectionExtensions.AddApplicationLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            将应用程序日志丰富器的实例添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </summary><param name="services">要将应用程序日志丰富器添加到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="section">用于在应用程序日志丰富器中配置 <see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationLogEnricherOptions" /> 的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">任何参数为 <see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.DependencyInjection.ProcessEnricherServiceCollectionExtensions"><summary>
+            提供用于在 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中设置进程扩充器的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.ProcessEnricherServiceCollectionExtensions.AddProcessLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将进程丰富器实例添加到<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </summary><param name="services">要向其添加进程丰富器的<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><paramref name="services" />的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" />为<see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ProcessEnricherServiceCollectionExtensions.AddProcessLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions})"><summary>
+            向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加进程丰富器的实例。
+            </summary><param name="services">要向其添加进程丰富器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions" /> 配置委托。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">任何参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.ProcessEnricherServiceCollectionExtensions.AddProcessLogEnricher(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+    向 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加一个主机富化器实例。
+    </summary><param name="services">要添加进程富化器的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="section">用于在进程富化器中配置 <see cref="T:Microsoft.Extensions.Diagnostics.Enrichment.ProcessLogEnricherOptions" /> 的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException">任何一个参数为 <see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.DependencyInjection.LatencyConsoleExtensions"><summary>
+            用于添加控制台延迟数据导出器的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyConsoleExtensions.AddConsoleLatencyDataExporter(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            为控制台添加延迟数据导出器。
+            </summary><param name="services">依赖注入容器。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyConsoleExtensions.AddConsoleLatencyDataExporter(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions})"><summary>
+    为控制台添加延迟数据导出程序。
+    </summary><param name="services">依赖注入容器。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions" /> 配置委托。</param><returns><paramref name="services" /> 的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" /> 或 <paramref name="configure" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyConsoleExtensions.AddConsoleLatencyDataExporter(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+    为控制台添加延迟数据导出器。
+    </summary><param name="services">依赖注入容器。</param><param name="section"><see cref="T:Microsoft.Extensions.Diagnostics.Latency.LatencyConsoleOptions" />的配置。</param><returns><paramref name="services" />的值。</returns><exception cref="T:System.ArgumentNullException"><paramref name="services" />或<paramref name="section" />为<see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.DependencyInjection.LatencyContextExtensions"><summary>
+            用于添加延迟上下文的扩展。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyContextExtensions.AddLatencyContext(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加延迟上下文。
+            </summary><param name="services">依赖注入容器。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyContextExtensions.AddLatencyContext(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.Latency.LatencyContextOptions})"><summary>
+    添加延迟上下文。
+    </summary><param name="services">依赖注入容器。</param><param name="configure"><see cref="T:Microsoft.Extensions.Diagnostics.Latency.LatencyContextOptions" /> 配置委托。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.LatencyContextExtensions.AddLatencyContext(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            添加延迟上下文。
+            </summary><param name="services">依赖项注入容器。</param><param name="section"><see cref="T:Microsoft.Extensions.Diagnostics.Latency.LatencyContextOptions" />的配置。</param><returns><paramref name="services" />的值。</returns></member><member name="T:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter"><summary>
+            用于保存路由参数元数据的结构。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter.#ctor(System.String,System.String,System.Boolean)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter" /> 结构的新实例。
+            </summary><param name="name">参数名。</param><param name="value">参数值。</param><param name="isRedacted">指示是否编辑参数值。</param></member><member name="P:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter.Name"><summary>
+            获取参数名称。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter.Value"><summary>
+            获取参数值。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter.IsRedacted"><summary>
+    获取一个值，指示参数值是否被编辑。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Diagnostics.IHttpRouteFormatter"><summary>
+            HTTP 请求路由格式化程序。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.IHttpRouteFormatter.Format(System.String,System.String,Microsoft.Extensions.Http.Diagnostics.HttpRouteParameterRedactionMode,System.Collections.Generic.IReadOnlyDictionary{System.String,Microsoft.Extensions.Compliance.Classification.DataClassification})"><summary>
+    使用路由模板格式化HTTP路径，并编辑敏感参数。
+    </summary><param name="httpRoute">HTTP请求路由模板。</param><param name="httpPath">HTTP请求的绝对路径。</param><param name="redactionMode">用于决定如何编辑参数的策略。</param><param name="parametersToRedact">需要编辑的参数字典及其数据分类。</param><returns>返回已编辑敏感参数值的格式化路径。</returns></member><member name="M:Microsoft.Extensions.Http.Diagnostics.IHttpRouteFormatter.Format(Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments@,System.String,Microsoft.Extensions.Http.Diagnostics.HttpRouteParameterRedactionMode,System.Collections.Generic.IReadOnlyDictionary{System.String,Microsoft.Extensions.Compliance.Classification.DataClassification})"><summary>
+            使用路由模板格式化 HTTP 路径，并对敏感参数进行编辑。
+            </summary><param name="routeSegments">HTTP 请求的路由段。</param><param name="httpPath">HTTP 请求的绝对路径。</param><param name="redactionMode">决定如何编辑参数的策略。</param><param name="parametersToRedact">需要编辑的参数及其数据分类的字典。</param><returns>返回已编辑敏感参数值的格式化路径。</returns></member><member name="T:Microsoft.Extensions.Http.Diagnostics.IHttpRouteParser"><summary>
+    HTTP 请求路由解析器。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.IHttpRouteParser.ParseRoute(System.String)"><summary>
+            解析HTTP路由并将其分解为文本段和参数段。
+            </summary><param name="httpRoute">HTTP请求的路由模板。</param><returns>返回路由的文本段和参数段。</returns></member><member name="M:Microsoft.Extensions.Http.Diagnostics.IHttpRouteParser.TryExtractParameters(System.String,Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments@,Microsoft.Extensions.Http.Diagnostics.HttpRouteParameterRedactionMode,System.Collections.Generic.IReadOnlyDictionary{System.String,Microsoft.Extensions.Compliance.Classification.DataClassification},Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter[]@)"><summary>
+            从http请求路径中提取参数值。
+            </summary><param name="httpPath">Http请求的绝对路径。</param><param name="routeSegments">包含路由文本段和参数段的路由段。</param><param name="redactionMode">决定参数如何被修订的策略。</param><param name="parametersToRedact">需要修订的参数及其数据分类的字典。</param><param name="httpRouteParameters">输出数组，参数将被存储。调用者必须提供具有足够容量的数组以容纳路由段中的所有参数。</param><returns>如果参数成功提取返回true，否则返回false。</returns></member><member name="T:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments"><summary>
+            用于保存解析路由后创建的路由片段的结构体。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments.#ctor(System.String,Microsoft.Extensions.Http.Diagnostics.Segment[])"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments" /> 结构的新实例。
+            </summary><param name="routeTemplate">路由模板。</param><param name="segments">段数组。</param></member><member name="P:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments.RouteTemplate"><summary>
+            获取路由模板。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments.Segments"><summary>
+            获取路由的所有段。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.ParsedRouteSegments.ParameterCount"><summary>
+            获取路由中的参数数量。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Diagnostics.Segment"><summary>
+            用于保存路由段元数据的结构体。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.Segment.#ctor(System.Int32,System.Int32,System.String,System.Boolean,System.String,System.String,System.Boolean)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.Http.Diagnostics.Segment" /> 结构的新实例。
+    </summary><param name="start">段的起始索引。</param><param name="end">段的结束索引。</param><param name="content">段的实际内容。</param><param name="isParam">如果该段是参数。</param><param name="paramName">参数的名称。</param><param name="defaultValue">参数的默认值。</param><param name="isCatchAll">如果该段是全部捕获参数。</param></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.Start"><summary>
+            获取段的起始索引。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.End"><summary>
+    获取段的结束索引。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.Content"><summary>
+            获取段的内容。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.IsParam"><summary>
+            获取一个值，该值指示该段是否为参数。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.ParamName"><summary>
+            获取参数的名称。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.DefaultValue"><summary>
+            获取参数的默认值。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Diagnostics.Segment.IsCatchAll"><summary>
+    获取一个值，该值指示该段是否为捕获所有参数。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Diagnostics.TelemetryCommonExtensions"><summary>
+    常见遥测实用工具的扩展。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.TelemetryCommonExtensions.AddHttpRouteProcessor(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加 HTTP 路由处理元素。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 对象。</param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 对象。</returns></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Get``1(Microsoft.Extensions.Configuration.IConfiguration)"><summary>尝试将配置实例绑定到类型T的新实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration)"><summary>注册一个配置实例，<typeparamref name="TOptions" />将与之绑定。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，<typeparamref name="TOptions" />将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"><summary>注册一个TOptions将绑定到的配置实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，TOptions 将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.ValidateConfigurationKeys(System.Type,System.Lazy{System.Collections.Generic.HashSet{System.String}},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions)"><summary>如果绑定器选项要求，则验证输入配置对象中没有未知键。</summary></member></members>
+</doc>

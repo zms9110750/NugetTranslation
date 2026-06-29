@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.FileProviders.Composite</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents"><summary>
+            表示对 <see cref="M:Microsoft.Extensions.FileProviders.IFileProvider.GetDirectoryContents(System.String)" /> 的调用组合结果，针对一组 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 和一个路径。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.#ctor(System.Collections.Generic.IList{Microsoft.Extensions.FileProviders.IFileProvider},System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents" /> 实例，用于表示调用组合 <see cref="M:Microsoft.Extensions.FileProviders.IFileProvider.GetDirectoryContents(System.String)" /> 的结果。
+            </summary><param name="fileProviders">需要组合其结果 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 的列表。</param><param name="subpath">路径。</param></member><member name="M:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator"><summary>
+            为给定的所有提供程序中的所有文件创建一个枚举器。
+            确保集合中的每个项都是唯一的。
+            </summary><returns>一个枚举器，用于遍历所有给定提供程序中的所有文件。</returns></member><member name="P:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.Exists"><summary>
+            获取一个值，该值指示是否存在任何给定的提供程序。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.CompositeFileProvider"><summary>
+            使用一组 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 查找文件。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.CompositeFileProvider.#ctor(Microsoft.Extensions.FileProviders.IFileProvider[])"><summary>使用一组文件提供程序对象初始化 <see cref="T:Microsoft.Extensions.FileProviders.CompositeFileProvider" /> 类的新实例。</summary><param name="fileProviders"><see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 对象的集合。</param></member><member name="M:Microsoft.Extensions.FileProviders.CompositeFileProvider.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileProviders.IFileProvider})"><summary>
+            使用文件提供程序对象的集合初始化 <see cref="T:Microsoft.Extensions.FileProviders.CompositeFileProvider" /> 类的新实例。
+            </summary><param name="fileProviders"><see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 对象的集合。</param></member><member name="M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetFileInfo(System.String)"><summary>
+            在给定路径定位文件。
+            </summary><param name="subpath">标识文件的路径。</param><returns>文件信息。调用者必须检查 <see cref="P:Microsoft.Extensions.FileProviders.IFileInfo.Exists" /> 属性。这是由提供的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的第一个现有 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" />；如果未找到任何现有文件，则返回未找到的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" />。</returns></member><member name="M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetDirectoryContents(System.String)"><summary>
+            枚举指定路径下的目录（如果存在）。
+            </summary><param name="subpath">标识目录的路径。</param><returns>目录的内容。调用方必须检查 Exists 属性。
+            内容是提供的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 内容的合并。
+            当有多个 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" /> 对象具有相同的 Name 属性时，结果中仅包含第一个。</returns></member><member name="M:Microsoft.Extensions.FileProviders.CompositeFileProvider.Watch(System.String)"><summary>
+            为指定的 <paramref name="pattern" /> 创建一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />。
+            </summary><param name="pattern">用于确定要监视哪些文件或文件夹的筛选器字符串。示例：\*\*/\*.cs、\*.\*、subFolder/\*\*/\*.cshtml。</param><returns>一个 <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" />，当匹配 <paramref name="pattern" /> 的文件被添加、修改或删除时会收到通知。
+当提供的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的更改令牌之一收到通知时，该更改令牌也会收到通知。</returns></member><member name="P:Microsoft.Extensions.FileProviders.CompositeFileProvider.FileProviders"><summary>
+            获取已配置的<see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />实例列表。
+            </summary></member></members>
+</doc>

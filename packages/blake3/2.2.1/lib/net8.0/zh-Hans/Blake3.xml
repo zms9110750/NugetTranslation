@@ -24,12 +24,7 @@
             从必须为32字节的输入数据创建一个哈希。
             </summary><param name="data">一个32字节的缓冲区。</param><returns>32字节的哈希。</returns></member><member name="M:Blake3.Hash.AsSpan"><summary>
             从哈希创建一个跨度。返回的跨度必须与所引用哈希的生命周期相同。
-            </summary><returns>跨度的哈希</returns></member><member name="T:Blake3.Hasher"><summary>
-            一种增量哈希状态，可以接受任意数量的写入。
-            </summary><remarks>
-            性能说明：当调用者的输入缓冲区较小时，<see cref="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})" /> 和 <see cref="M:Blake3.Hasher.UpdateWithJoin``1(System.ReadOnlySpan{``0})" /> 方法的性能较差。
-            请参阅下面它们的方法文档。16 KiB 的缓冲区足够大，可以充分利用当前所有支持的 SIMD 指令集。
-            </remarks></member><member name="F:Blake3.Hasher.LimitPreemptive"><summary>
+            </summary><returns>跨度的哈希</returns></member><member name="F:Blake3.Hasher.LimitPreemptive"><summary>
             我们采用1024字节的限制来切换到抢先版本，
             因为在最新版的x64 CPU上该操作大约需要1微秒，这与<see cref="T:System.Runtime.InteropServices.SuppressGCTransitionAttribute" />的文档更一致：
             `本机函数总是执行一个微不足道的时间（少于1微秒）。`
@@ -109,5 +104,9 @@
             为密钥派生函数构造一个新的Hasher。
             </summary><returns>Hasher的新实例</returns><remarks>
             返回的结构体需要显式释放。
+            </remarks></member><member name="T:Blake3.Hasher"><summary>
+            一个增量哈希状态，可以接受任意数量的写入。
+            </summary><remarks>
+            性能说明：当调用方的输入缓冲区较小时，<see cref="M:Blake3.Hasher.Update``1(System.ReadOnlySpan{``0})" /> 和 <see cref="M:Blake3.Hasher.UpdateWithJoin``1(System.ReadOnlySpan{``0})" /> 方法性能较差。 请参阅下面的方法文档。 16 KiB的缓冲区足够大，可以充分利用当前所有支持的SIMD指令集。
             </remarks></member></members>
 </doc>

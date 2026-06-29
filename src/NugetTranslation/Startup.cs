@@ -9,6 +9,7 @@ using Polly;
 using Polly.RateLimiting;
 using Polly.Retry;
 using Polly.Telemetry;
+using Polly.Timeout;
 using Serilog;
 using System.ClientModel;
 using System.CommandLine;
@@ -87,8 +88,11 @@ internal static class Startup
         {
             ShouldHandle = new PredicateBuilder<string>().HandleResult(x => x is null)
                 .Handle<XmlException>()
-                , MaxRetryAttempts = 6
+                .Handle<TimeoutException>()
+                , MaxRetryAttempts = 1
+            , Delay = TimeSpan.FromSeconds(10)
         });
+        rpb.AddTimeout(TimeSpan.FromSeconds(60));
         rpb.AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
         {
             PermitLimit = 200,

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Localization</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Localization.AssemblyWrapper"><summary>
+    此 API 支持基础结构，不应直接在你的代码中使用。此 API 可能在未来的版本中更改或移除。
+    </summary></member><member name="T:Microsoft.Extensions.Localization.IResourceStringProvider"><summary>
+            此 API 支持基础结构，不应直接从代码中使用。此 API 可能会在将来版本中更改或删除。
+            </summary></member><member name="T:Microsoft.Extensions.Localization.ResourceManagerStringProvider"><summary>
+            此 API 支持基础结构，不打算直接从你的代码中使用。
+            此 API 可能在未来版本中更改或移除。
+            </summary></member><member name="T:Microsoft.Extensions.Localization.IResourceNamesCache"><summary>
+            表示资源中字符串名称的缓存。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.IResourceNamesCache.GetOrAdd(System.String,System.Func{System.String,System.Collections.Generic.IList{System.String}})"><summary>
+            使用指定的函数将一组资源名称添加到缓存中（如果该名称尚不存在）。
+            </summary><param name="name">要为其添加字符串名称的资源名称。</param><param name="valueFactory">用于生成资源字符串名称的函数。</param><returns>资源的字符串名称。</returns></member><member name="T:Microsoft.Extensions.Localization.LocalizationOptions"><summary>
+            提供本地化的编程配置。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.LocalizationOptions.#ctor"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Localization.LocalizationOptions" />。
+            </summary></member><member name="P:Microsoft.Extensions.Localization.LocalizationOptions.ResourcesPath"><summary>
+            应用程序根目录下资源文件所在的相对路径。
+            </summary></member><member name="T:Microsoft.Extensions.Localization.ResourceLocationAttribute"><summary>
+            提供程序集的资源位置。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.ResourceLocationAttribute.#ctor(System.String)"><summary>
+    创建一个新的 <see cref="T:Microsoft.Extensions.Localization.ResourceLocationAttribute" />。
+    </summary><param name="resourceLocation">此程序集的资源位置。</param></member><member name="P:Microsoft.Extensions.Localization.ResourceLocationAttribute.ResourceLocation"><summary>
+            此程序集的资源位置。
+            </summary></member><member name="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer"><summary>
+            一个 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizer" />，它使用 <see cref="T:System.Resources.ResourceManager" /> 和
+            <see cref="T:System.Resources.ResourceReader" /> 来提供本地化字符串。
+            </summary><remarks>此类型是线程安全的。</remarks></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.#ctor(System.Resources.ResourceManager,System.Reflection.Assembly,System.String,Microsoft.Extensions.Localization.IResourceNamesCache,Microsoft.Extensions.Logging.ILogger)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。
+            </summary><param name="resourceManager">用于读取字符串的 <see cref="T:System.Resources.ResourceManager" />。</param><param name="resourceAssembly">包含字符串作为嵌入资源的 <see cref="T:System.Reflection.Assembly" />。</param><param name="baseName">包含字符串的嵌入资源的基础名称。</param><param name="resourceNamesCache">给定资源程序集名称的字符串列表缓存。</param><param name="logger">日志记录器的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.#ctor(System.Resources.ResourceManager,Microsoft.Extensions.Localization.AssemblyWrapper,System.String,Microsoft.Extensions.Localization.IResourceNamesCache,Microsoft.Extensions.Logging.ILogger)"><summary>
+            仅用于测试目的。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.#ctor(System.Resources.ResourceManager,Microsoft.Extensions.Localization.IResourceStringProvider,System.String,Microsoft.Extensions.Localization.IResourceNamesCache,Microsoft.Extensions.Logging.ILogger)"><summary>
+    仅用于测试目的。
+    </summary></member><member name="P:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.Item(System.String)"><inheritdoc /></member><member name="P:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.Item(System.String,System.Object[])"><inheritdoc /></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.GetAllStrings(System.Boolean)"><inheritdoc /></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.GetAllStrings(System.Boolean,System.Globalization.CultureInfo)"><summary>
+            返回指定区域中的所有字符串。
+            </summary><param name="includeParentCultures">是否在搜索资源时包括父区域。</param><param name="culture">要获取字符串的<see cref="T:System.Globalization.CultureInfo" />。</param><returns>字符串。</returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.GetStringSafely(System.String,System.Globalization.CultureInfo)"><summary>
+            从 <see cref="T:System.Resources.ResourceManager" /> 获取资源字符串，如果未找到匹配项，则返回 <c>null</c> 而不是引发异常。
+            </summary><param name="name">字符串资源的名称。</param><param name="culture">为其获取字符串的 <see cref="T:System.Globalization.CultureInfo" />。</param><returns>资源字符串，如果未找到则为 <c>null</c>。</returns></member><member name="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory"><summary>
+    一个创建 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" /> 实例的 <see cref="T:Microsoft.Extensions.Localization.IStringLocalizerFactory" />。
+  </summary><remarks><see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory" /> 提供了多种设置要使用的资源相对路径的方式。
+    它们按优先级顺序为：
+    <see cref="T:Microsoft.Extensions.Localization.ResourceLocationAttribute" /> -&gt; <see cref="P:Microsoft.Extensions.Localization.LocalizationOptions.ResourcesPath" /> -&gt; 项目根目录。
+  </remarks></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Localization.LocalizationOptions},Microsoft.Extensions.Logging.ILoggerFactory)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。
+            </summary><param name="localizationOptions"><see cref="T:Microsoft.Extensions.Options.IOptions`1" />。</param><param name="loggerFactory"><see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" />。</param></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetResourcePrefix(System.Reflection.TypeInfo)"><summary>
+            获取用于查找资源的资源前缀。
+            </summary><param name="typeInfo">
+            要查找的资源类型。
+            </param><returns>
+            资源查找的前缀。
+            </returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetResourcePrefix(System.Reflection.TypeInfo,System.String,System.String)"><summary>
+            获取用于查找资源的前缀。
+            </summary><param name="typeInfo">要查找的资源类型。</param><param name="baseNamespace">应用程序的基本命名空间。</param><param name="resourcesRelativePath">包含所有资源的文件夹。</param><returns>用于资源查找的前缀。</returns><remarks>
+            对于类型“Sample.Controllers.Home”，如果存在资源相对路径，则返回
+            “Sample.Resourcepath.Controllers.Home”；如果不存在，则返回“Sample.Controllers.Home”。
+            </remarks></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetResourcePrefix(System.String,System.String)"><summary>
+        获取用于查找资源的前缀。
+    </summary><param name="baseResourceName">要查找的资源的名称</param><param name="baseNamespace">应用程序的基本命名空间。</param><returns>用于查找资源的前缀。</returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.Create(System.Type)"><summary>
+        使用指定的 <see cref="T:System.Type" /> 的 <see cref="T:System.Reflection.Assembly" /> 和 <see cref="P:System.Type.FullName" /> 
+        创建一个 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。
+    </summary><param name="resourceSource">指定的 <see cref="T:System.Type" />。</param><returns>返回 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。</returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.Create(System.String,System.String)"><summary>
+            创建一个 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。
+            </summary><param name="baseName">要从中加载字符串的资源的基本名称。</param><param name="location">要从中加载资源的位置。</param><returns>返回 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。</returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.CreateResourceManagerStringLocalizer(System.Reflection.Assembly,System.String)"><summary>为给定输入创建一个 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。</summary><param name="assembly">要为其创建 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" /> 的程序集。</param><param name="baseName">要搜索的资源的基本名称。</param><returns>为给定的 <paramref name="assembly" /> 和 <paramref name="baseName" /> 返回一个 <see cref="T:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer" />。</returns><remarks>此方法为虚方法，仅用于测试目的。</remarks></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetResourcePrefix(System.String,System.String,System.String)"><summary>
+            获取用于查找资源的前缀。
+            </summary><param name="location">资源的常规位置。</param><param name="baseName">资源的基本名称。</param><param name="resourceLocation">资源在<paramref name="location" />中的位置。</param><returns>用于查找资源的前缀。</returns></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetResourceLocationAttribute(System.Reflection.Assembly)"><summary>从提供的<see cref="T:System.Reflection.Assembly" />中获取一个<see cref="T:Microsoft.Extensions.Localization.ResourceLocationAttribute" />。</summary><param name="assembly">要从中获取<see cref="T:Microsoft.Extensions.Localization.ResourceLocationAttribute" />的程序集。</param><returns>与给定<see cref="T:System.Reflection.Assembly" />关联的<see cref="T:Microsoft.Extensions.Localization.ResourceLocationAttribute" />。</returns><remarks>此方法受保护且为虚拟，仅用于测试目的。</remarks></member><member name="M:Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.GetRootNamespaceAttribute(System.Reflection.Assembly)"><summary>从所提供的<see cref="T:System.Reflection.Assembly" />中获取<see cref="T:Microsoft.Extensions.Localization.RootNamespaceAttribute" />。</summary><param name="assembly">要从其中获取<see cref="T:Microsoft.Extensions.Localization.RootNamespaceAttribute" />的程序集。</param><returns>与给定<see cref="T:System.Reflection.Assembly" />关联的<see cref="T:Microsoft.Extensions.Localization.RootNamespaceAttribute" />。</returns><remarks>此方法仅为测试目的而声明为受保护的和虚拟的。</remarks></member><member name="T:Microsoft.Extensions.Localization.ResourceNamesCache"><summary>
+            一个由 <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> 支持的 <see cref="T:Microsoft.Extensions.Localization.IResourceNamesCache" /> 实现。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.ResourceNamesCache.#ctor"><summary>
+            创建一个新的<see cref="T:Microsoft.Extensions.Localization.ResourceNamesCache" /></summary></member><member name="M:Microsoft.Extensions.Localization.ResourceNamesCache.GetOrAdd(System.String,System.Func{System.String,System.Collections.Generic.IList{System.String}})"><inheritdoc /></member><member name="T:Microsoft.Extensions.Localization.RootNamespaceAttribute"><summary>
+            提供程序集的根命名空间。当根命名空间与程序集名称不同时，本地化使用程序集的根命名空间来确定要查找的资源名称。
+            </summary></member><member name="M:Microsoft.Extensions.Localization.RootNamespaceAttribute.#ctor(System.String)"><summary>
+            创建一个新的 <see cref="T:Microsoft.Extensions.Localization.RootNamespaceAttribute" />。
+            </summary><param name="rootNamespace">此程序集的根命名空间。</param></member><member name="P:Microsoft.Extensions.Localization.RootNamespaceAttribute.RootNamespace"><summary>
+            此程序集的根命名空间。当根命名空间与程序集名称不同时，本地化使用程序集的根命名空间来确定要查找的资源名称。
+            </summary></member><member name="P:Microsoft.Extensions.Localization.Resources.Localization_MissingManifest"><summary>未找到清单'{0}'。</summary></member><member name="M:Microsoft.Extensions.Localization.Resources.FormatLocalization_MissingManifest(System.Object)"><summary>未找到清单 '{0}'。</summary></member><member name="P:Microsoft.Extensions.Localization.Resources.Localization_MissingManifest_Parent"><summary>当前区域性没有清单存在。</summary></member><member name="P:Microsoft.Extensions.Localization.Resources.Localization_TypeMustHaveTypeName"><summary>类型“{0}”必须具有非空类型名称。</summary></member><member name="M:Microsoft.Extensions.Localization.Resources.FormatLocalization_TypeMustHaveTypeName(System.Object)"><summary>类型“{0}”必须具有非空的类型名称。</summary></member><member name="T:Microsoft.Extensions.DependencyInjection.LocalizationServiceCollectionExtensions"><summary>
+            用于在 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中设置本地化服务的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.LocalizationServiceCollectionExtensions.AddLocalization(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加应用程序本地化所需的服务。
+            </summary><param name="services">要向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链式调用其他方法。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.LocalizationServiceCollectionExtensions.AddLocalization(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Localization.LocalizationOptions})"><summary>
+            添加应用程序本地化所需的服务。
+            </summary><param name="services">要向其添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="setupAction">
+            用于配置 <see cref="T:Microsoft.Extensions.Localization.LocalizationOptions" /> 的 <see cref="T:System.Action`1" />。
+            </param><returns>返回 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，以便可以链接更多调用。</returns></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果<paramref name="argument" />为 null，则引发<see cref="T:System.ArgumentNullException" />；如果为空，则引发<see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证既不为 null 也不为空的引用类型参数。</param><param name="paramName">与<paramref name="argument" />对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrWhiteSpace(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />；如果为空或空白，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证的引用类型参数，该参数必须不为 null、不为空且不为空白。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)"><summary>如果<paramref name="argument" />为null，则引发<see cref="T:System.ArgumentNullException" />。</summary><param name="argument">要验证为非null的引用类型参数。</param><param name="paramName"><paramref name="argument" />对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null 或为空，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证为非 null 且非空的 <see cref="T:System.String" /> 参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member></members>
+</doc>

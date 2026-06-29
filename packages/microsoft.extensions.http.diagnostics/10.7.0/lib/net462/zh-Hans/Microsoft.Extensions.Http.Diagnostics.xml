@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Http.Diagnostics</name>
+    </assembly>
+    <members><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应的类型不允许 null，也允许 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应类型允许，也不允许 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定输出可能为 null，即使相应的类型不允许它。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使相应类型允许，输出也不会为null。指定在调用返回时输入参数不为null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+    返回值条件。如果方法返回此值，则关联的参数可能为 <see langword="null" />。
+    </param></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许参数为 null，该参数也不会为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>初始化具有指定返回值条件的特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 <see langword="null" />。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数不为 null，则输出不为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化特性。</summary><param name="parameterName">关联的参数名称。如果指定参数的参数不为 null，则输出为非 null。</param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递了指定的值，则该方法将不会返回。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+    条件参数值。如果传递给关联参数的参数与此值匹配，则诊断工具会将方法之后的代码视为不可到达。
+    </param></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定方法或属性将确保列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化特性。</summary><param name="member">
+            承诺不为null的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员的列表初始化该特性。</summary><param name="members">
+            保证不为空的字段和属性成员的列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员的名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定方法或属性在返回指定的返回值条件时，将确保列出的字段和属性成员具有非 null 值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化该特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不会为 <see langword="null" />。
+            </param><param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值和字段及属性成员列表初始化该特性。</summary><param name="returnValue">
+    返回值条件。如果方法返回该值，则关联的参数将不为 <see langword="null" />。
+    </param><param name="members">
+    被承诺不为 null 的字段和属性成员列表。
+    </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute"><summary>
+            标记应使用特定调用方名称填充的参数。
+            </summary></member><member name="M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute" /> 类的新实例。
+            </summary><param name="parameterName">从中获取参数名称的函数参数。</param></member><member name="P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName"><summary>
+            获取应从中获取名称的函数参数的名称。
+            </summary></member><member name="T:System.Runtime.CompilerServices.SkipLocalsInitAttribute"><summary>
+            用于指示编译器不应在方法头中设置 <c>.locals init</c> 标志。
+            </summary><remarks>
+            此特性不安全，因为在某些情况下（例如，从未初始化的 stackalloc 内存中读取）它可能会向应用程序暴露未初始化的内存。如果直接应用于方法，则此特性适用于该方法及其下的所有嵌套函数（lambda 表达式、本地函数）。如果应用于类型或模块，则适用于其中嵌套的所有方法。此特性特意不允许应用于程序集。请改为在模块级别使用以应用于多个类型声明。
+            </remarks></member><member name="T:System.Threading.Tasks.TaskExtensions"><summary>
+            提供一组用于 <see cref="T:System.Threading.Tasks.Task" />的静态方法。
+            </summary></member><member name="M:System.Threading.Tasks.TaskExtensions.WaitAsync``1(System.Threading.Tasks.Task{``0},System.Threading.CancellationToken)"><summary>
+            获取一个 <see cref="T:System.Threading.Tasks.Task`1" />，该任务在 <paramref name="task" /> 完成或指定的 <paramref name="cancellationToken" /> 请求取消时完成。
+            </summary><typeparam name="TResult">任务结果的类型。</typeparam><param name="task">要等待完成的任务。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。</param><returns>表示异步等待的 <see cref="T:System.Threading.Tasks.Task`1" />。</returns></member><member name="T:System.Net.Http.HttpDiagnosticsHttpRequestMessageExtensions"><summary>
+            遥测实用工具的扩展。
+            </summary></member><member name="M:System.Net.Http.HttpDiagnosticsHttpRequestMessageExtensions.SetRequestMetadata(System.Net.Http.HttpRequestMessage,Microsoft.Extensions.Http.Diagnostics.RequestMetadata)"><summary>
+            用于遥测目的设置传出请求的元数据。
+            </summary><param name="request"><see cref="T:System.Net.Http.HttpRequestMessage" /> 对象。</param><param name="metadata">请求的元数据。</param></member><member name="M:System.Net.Http.HttpDiagnosticsHttpRequestMessageExtensions.GetRequestMetadata(System.Net.Http.HttpRequestMessage)"><summary>
+    获取用于遥测的出站请求的元数据。
+    </summary><param name="request"><see cref="T:System.Net.Http.HttpRequestMessage" /> 对象。</param><returns>请求元数据或 <see langword="null" />。</returns></member><member name="T:System.Net.HttpDiagnosticsHttpWebRequestExtensions"><summary>
+            遥测实用工具的扩展。
+            </summary></member><member name="M:System.Net.HttpDiagnosticsHttpWebRequestExtensions.SetRequestMetadata(System.Net.HttpWebRequest,Microsoft.Extensions.Http.Diagnostics.RequestMetadata)"><summary>
+            为传出请求设置元数据，用于遥测目的。
+            </summary><param name="request"><see cref="T:System.Net.HttpWebRequest" /> 对象。</param><param name="metadata">请求的元数据。</param></member><member name="M:System.Net.HttpDiagnosticsHttpWebRequestExtensions.GetRequestMetadata(System.Net.HttpWebRequest)"><summary>
+            获取传出请求的元数据以用于遥测目的。
+            </summary><param name="request"><see cref="T:System.Net.HttpWebRequest" /> 对象。</param><returns>请求元数据。</returns></member><member name="T:Microsoft.Shared.Collections.Empty"><summary>
+            定义用于优化空集合使用的静态方法。
+            </summary></member><member name="M:Microsoft.Shared.Collections.Empty.ReadOnlyCollection``1"><summary>
+            返回一个优化的空集合。
+            </summary><typeparam name="T">集合的类型。</typeparam><returns>返回一个高效的空集合静态实例。</returns></member><member name="M:Microsoft.Shared.Collections.Empty.Enumerable``1"><summary>
+    返回一个优化的空集合。
+    </summary><typeparam name="T">集合的类型。</typeparam><returns>返回一个空集合的高效静态实例。</returns></member><member name="M:Microsoft.Shared.Collections.Empty.ReadOnlyList``1"><summary>
+            返回一个优化的空集合。
+            </summary><typeparam name="T">集合的类型。</typeparam><returns>返回一个空列表的高效静态实例。</returns></member><member name="M:Microsoft.Shared.Collections.Empty.ReadOnlyDictionary``2"><summary>
+            返回一个优化的空字典。
+            </summary><typeparam name="TKey">字典的键类型。</typeparam><typeparam name="TValue">字典的值类型。</typeparam><returns>
+            返回一个空字典的高效静态实例。
+            </returns></member><member name="T:Microsoft.Shared.Collections.EmptyCollectionExtensions"><summary>
+            定义用于优化空集合使用的静态方法。
+            </summary></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(System.Collections.Generic.IReadOnlyCollection{``0})"><summary>
+            如果输入为 <see langword="null" /> 或为空，则返回优化的空集合，否则返回输入。
+            </summary><typeparam name="T">集合的类型。</typeparam><param name="collection">要检查是否为 <see langword="null" /> 或为空的集合。</param><returns>如果输入集合为 <see langword="null" /> 或为空，则返回空类型的静态实例，否则返回该集合。</returns><remarks>
+            在需要空集合时替换为静态集合有助于两个方面。首先，它允许原始空集合被垃圾回收，释放内存。其次，返回的空集合经过优化，在枚举集合时不会分配内存。
+            </remarks></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(System.Collections.Generic.ICollection{``0})"><summary>如果输入为<see langword="null" />或空，则返回一个优化的空集合，否则返回输入本身。</summary><typeparam name="T">集合的类型。</typeparam><param name="collection">要检查是否为<see langword="null" />或空的集合。</param><returns>如果输入集合为<see langword="null" />或空，则返回一个空类型的静态实例，否则返回该集合。</returns><remarks>每当需要一个空集合时，替换为静态集合在两个方面有所帮助。首先，它允许原始空集合被垃圾回收，从而释放内存。其次，返回的空集合经过优化，在枚举集合时不会分配内存。</remarks></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(System.Collections.Generic.IReadOnlyList{``0})"><summary>
+    如果输入为 <see langword="null" /> 或为空，则返回优化后的空集合，否则返回输入。
+    </summary><typeparam name="T">集合的类型。</typeparam><param name="list">要检查是否为 <see langword="null" /> 或空的集合。</param><returns>如果输入的集合为 <see langword="null" /> 或为空，则返回一个空类型的静态实例，否则返回该集合。</returns><remarks>
+    在需要空集合时替换为静态集合有两个好处。首先，它允许原始的空集合被垃圾回收，从而释放内存。其次，返回的空集合经过优化，在枚举集合时不会分配内存。
+    </remarks></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(System.Collections.Generic.IList{``0})"><summary>
+            如果输入为<see langword="null" />或为空，则返回一个经过优化的空列表，否则返回输入本身。
+            </summary><typeparam name="T">集合的类型。</typeparam><param name="list">要检查是否为<see langword="null" />或空的列表。</param><returns>如果输入集合为<see langword="null" />或为空，则返回空类型的静态实例，否则返回集合本身。</returns><remarks>
+            每当需要一个空集合时，使用静态列表进行替换有两大好处。首先，它允许原始空集合被垃圾回收，从而释放内存。其次，所返回的空集合经过了优化，在枚举时不会分配内存。
+            </remarks></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(``0[])"><summary>
+            如果输入为<see langword="null" />或空，则返回优化的空数组，否则返回输入。
+            </summary><typeparam name="T">数组的类型。</typeparam><param name="array">要检查是否为<see langword="null" />或空的数组。</param><returns>如果输入数组为<see langword="null" />或空，则返回空数组的静态实例，否则返回数组本身。</returns></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``1(System.Collections.Generic.IEnumerable{``0})"><summary>
+    如果输入为 <see langword="null" /> 或可确定为空，则返回优化的空集合，否则返回输入。
+    </summary><typeparam name="T">集合的类型。</typeparam><param name="enumerable">要检查是否为 <see langword="null" /> 或空的集合。</param><returns>如果输入集合为 <see langword="null" /> 或为空，则返回空类型的静态实例，否则返回该集合。</returns><remarks>
+    此方法不会枚举该集合。
+    </remarks></member><member name="M:Microsoft.Shared.Collections.EmptyCollectionExtensions.EmptyIfNull``2(System.Collections.Generic.IReadOnlyDictionary{``0,``1})"><summary>如果输入为<see langword="null" />或可被判定为空，则返回一个优化过的空字典；否则返回输入本身。</summary><typeparam name="TKey">字典的键类型。</typeparam><typeparam name="TValue">字典的值类型。</typeparam><param name="dictionary">要检查是否为<see langword="null" />或空的字典。</param><returns>如果输入字典为<see langword="null" />或空，则返回空类型的静态实例；否则返回字典本身。</returns><remarks>注意，此方法不会对字典进行枚举。</remarks></member><member name="T:Microsoft.Shared.Text.NumericExtensions"><summary>
+            用于增强基本数值类型的实用工具。
+            </summary></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int32)"><summary>
+            将整数格式化为固定区域性字符串。
+            </summary><param name="value">要格式化为字符串的值。</param><returns>整数值的字符串表示形式。</returns><remarks>
+            此方法与 <c>value.ToString(CultureInfo.InvariantCulture)</c> 完全相同，但速度更快，因为它维护了常见整数值的预格式化字符串。
+            </remarks></member><member name="M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int64)"><summary>
+            将 64 位整数格式化为固定字符串。
+            </summary><param name="value">要格式化为字符串的值。</param><returns>整数值的字符串表示形式。</returns><remarks>
+            此方法的工作方式与 <c>value.ToString(CultureInfo.InvariantCulture)</c> 相同，但速度更快，因为它为常见整数值维护了预格式化的字符串。
+            </remarks></member><member name="T:Microsoft.Shared.Diagnostics.AttachedDebugger"><summary>
+    始终附加的调试器。
+    </summary></member><member name="P:Microsoft.Shared.Diagnostics.AttachedDebugger.Instance"><summary>
+            获取 <see cref="T:Microsoft.Shared.Diagnostics.AttachedDebugger" /> 的缓存实例。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.AttachedDebugger.IsAttached"><inheritdoc /></member><member name="T:Microsoft.Shared.Diagnostics.DebuggerExtensions"><summary>
+            将调试器添加到 DI 容器。
+            </summary></member><member name="M:Microsoft.Shared.Diagnostics.DebuggerExtensions.AddSystemDebuggerState(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将系统调试器注册为 <see cref="T:Microsoft.Shared.Diagnostics.IDebuggerState" /> 接口。
+            </summary><param name="services">用于注册系统调试器的服务集合。</param><returns>传递的服务集合实例以进行进一步配置。</returns></member><member name="M:Microsoft.Shared.Diagnostics.DebuggerExtensions.AddAttachedDebuggerState(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将系统调试器注册为 <see cref="T:Microsoft.Shared.Diagnostics.IDebuggerState" /> 接口。
+            </summary><param name="services">用于注册系统调试器的服务集合。</param><returns>传递的服务集合实例，用于进一步配置。</returns></member><member name="M:Microsoft.Shared.Diagnostics.DebuggerExtensions.AddDetachedDebuggerState(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    将系统调试器注册为 <see cref="T:Microsoft.Shared.Diagnostics.IDebuggerState" /> 接口。
+    </summary><param name="services">要注册系统调试器的服务集合。</param><returns>传递的服务集合实例以供进一步配置。</returns></member><member name="T:Microsoft.Shared.Diagnostics.DebuggerState"><summary>
+    保存所有对测试编写有用的调试器状态。
+    </summary></member><member name="P:Microsoft.Shared.Diagnostics.DebuggerState.System"><summary>
+            获取一个根据环境动态改变其状态的调试器。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.DebuggerState.Attached"><summary>
+            获取始终附加的调试器。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.DebuggerState.Detached"><summary>
+        获取始终分离的调试器。
+    </summary></member><member name="T:Microsoft.Shared.Diagnostics.DetachedDebugger"><summary>
+            始终分离的调试器。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.DetachedDebugger.Instance"><summary>
+    获取 <see cref="T:Microsoft.Shared.Diagnostics.DetachedDebugger" /> 的缓存实例。
+    </summary></member><member name="P:Microsoft.Shared.Diagnostics.DetachedDebugger.IsAttached"><inheritdoc /></member><member name="T:Microsoft.Shared.Diagnostics.IDebuggerState"><summary>
+        抽象调试器存在以提高可测试性。
+    </summary></member><member name="P:Microsoft.Shared.Diagnostics.IDebuggerState.IsAttached"><summary>
+            获取一个指示是否附加了调试器的值。
+            </summary></member><member name="T:Microsoft.Shared.Diagnostics.SystemDebugger"><summary>
+            具有环境相关状态的调试器。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.SystemDebugger.Instance"><summary>
+            获取 <see cref="T:Microsoft.Shared.Diagnostics.SystemDebugger" /> 的缓存实例。
+            </summary></member><member name="P:Microsoft.Shared.Diagnostics.SystemDebugger.IsAttached"><inheritdoc /></member><member name="T:Microsoft.Shared.Pools.BufferWriter`1"><summary>
+    表示可以将<typeparamref name="T" />数据写入的输出接收器。
+    </summary><remarks>
+    此类类似于<c>System.Buffers.ArrayBufferWriter&lt;T&gt;</c>，不同之处在于<c>ArrayBufferWriter&lt;T&gt;.Clear</c>方法已被替换为<see cref="M:Microsoft.Shared.Pools.BufferWriter`1.Reset" />方法。当与值类型一起使用时，<see cref="M:Microsoft.Shared.Pools.BufferWriter`1.Reset" />不会将底层内存缓冲区清除为<c>default(T)</c>，这使得它快得多。此外，此类允许显式设置底层缓冲区的容量。
+    </remarks><typeparam name="T">将写入写入器的值类型。</typeparam></member><member name="P:Microsoft.Shared.Pools.BufferWriter`1.WrittenMemory"><summary>
+            获取到目前为止写入基础缓冲区的数据。
+            </summary><remarks>
+            每当缓冲区再次写入时，返回的值可能会变得过时。因此，您应该始终调用此属性以在读取缓冲区之前获取最新的值。
+            </remarks></member><member name="P:Microsoft.Shared.Pools.BufferWriter`1.WrittenSpan"><summary>
+            获取到目前为止写入到基础缓冲区的数据。
+            </summary><remarks>
+            只要缓冲区再次写入数据，返回的跨度就可能会变得过时。因此，在从缓冲区读取数据之前，你应该始终调用此属性以获取新的跨度。
+            </remarks></member><member name="P:Microsoft.Shared.Pools.BufferWriter`1.WrittenCount"><summary>
+            获取到目前为止写入底层缓冲区的数据量。
+            </summary></member><member name="P:Microsoft.Shared.Pools.BufferWriter`1.Capacity"><summary>
+            获取或设置底层缓冲区中的总空间量。
+            </summary><remarks>
+            当减少容量时，<see cref="P:Microsoft.Shared.Pools.BufferWriter`1.WrittenCount" />的值将被限制为新容量。
+            </remarks></member><member name="M:Microsoft.Shared.Pools.BufferWriter`1.Reset"><summary>
+            清除写入底层缓冲区的数据。
+            </summary><remarks>
+            在尝试重用之前，必须重置 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" />。如果 <typeparamref name="T" /> 是引用类型或包含引用类型，则此方法会将底层内存缓冲区清除为 default(T)，以确保垃圾回收器能够正确回收引用。如果 <typeparamref name="T" /> 是值类型且仅包含值类型，则此方法不会清除内存，因此完成速度会快得多。
+            </remarks></member><member name="M:Microsoft.Shared.Pools.BufferWriter`1.Advance(System.Int32)"><summary>
+    通知 <see cref="T:System.Buffers.IBufferWriter`1" /> 已向输出 <see cref="T:System.Span`1" />/<see cref="T:System.Memory`1" /> 写入了 <paramref name="count" /> 数量的数据。
+    </summary><param name="count">已使用的数据量。</param><exception cref="T:System.ArgumentOutOfRangeException">
+    当 <paramref name="count" /> 为负数或试图向前移动超过基础缓冲区的末尾时引发。
+    </exception><remarks>
+    在调用 <see cref="M:Microsoft.Shared.Pools.BufferWriter`1.Advance(System.Int32)" /> 后，您必须请求一个新的缓冲区才能继续写入更多数据，并且无法写入以前获取的缓冲区。
+    </remarks></member><member name="M:Microsoft.Shared.Pools.BufferWriter`1.GetMemory(System.Int32)"><summary>
+    返回一个 <see cref="T:System.Memory`1" /> 用于写入，其长度至少为请求的长度（由 <paramref name="sizeHint" /> 指定）。
+    </summary><exception cref="T:System.ArgumentException">
+    当 <paramref name="sizeHint" /> 为负数时引发。
+    </exception><remarks>
+    此方法永远不会返回空的 <see cref="T:System.Memory`1" />。
+    不保证连续调用会返回相同的缓冲区或相同大小的缓冲区。
+    在调用 <see cref="M:Microsoft.Shared.Pools.BufferWriter`1.Advance(System.Int32)" /> 以继续写入更多数据后，必须请求新的缓冲区，并且不能写入先前获取的缓冲区。
+    </remarks><param name="sizeHint">返回缓冲区的最小大小。如果此值为 0，则返回至少包含 1 个可用字节的缓冲区。</param><returns>可以写入的内存块。</returns></member><member name="M:Microsoft.Shared.Pools.BufferWriter`1.GetSpan(System.Int32)"><summary>
+    返回一个用于写入的 <see cref="T:System.Span`1" />，其长度至少为请求的长度（由 <paramref name="sizeHint" /> 指定）。
+    </summary><exception cref="T:System.ArgumentOutOfRangeException">
+    当 <paramref name="sizeHint" /> 为负数时抛出。
+    </exception><remarks>
+    此方法永远不会返回空的 <see cref="T:System.Span`1" />。
+    无法保证连续调用会返回相同的缓冲区或相同大小的缓冲区。
+    调用 <see cref="M:Microsoft.Shared.Pools.BufferWriter`1.Advance(System.Int32)" /> 后，必须请求新的缓冲区才能继续写入更多数据，并且不能写入先前获取的缓冲区。
+    </remarks><param name="sizeHint">返回缓冲区的最小大小。如果该值为 0，则返回一个至少包含 1 个可用字节的缓冲区。</param><returns>一个可供写入的内存块。</returns></member><member name="M:Microsoft.Shared.Pools.BufferWriterPool.CreateBufferWriterPool``1(System.Int32,System.Int32)"><summary>
+    创建 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" /> 实例的对象池。
+    </summary><typeparam name="T">由缓冲区写入器管理的对象类型。</typeparam><param name="maxCapacity">要保留在池中的最大项数。默认值为 1024。该值是一个建议，池可能会保留比此更多的对象。</param><param name="maxBufferWriterCapacity">要保留在池中的缓冲区写入器的最大容量。默认值为 256K。</param><returns>池。</returns></member><member name="P:Microsoft.Shared.Pools.BufferWriterPool.SharedBufferWriterPool"><summary>
+            获取 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" /> 实例的共享池。
+            </summary></member><member name="T:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1"><summary>
+            一个专为<see cref="T:Microsoft.Shared.Pools.BufferWriter`1" />设计的对象池策略。
+            </summary><typeparam name="T">要在缓冲区写入器中保存的对象类型。</typeparam></member><member name="F:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1.DefaultMaximumRetainedCapacity"><summary>
+            池中缓冲写入器实例的默认最大保留容量。
+            </summary></member><member name="M:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1.#ctor(System.Int32)"><summary>
+    初始化 <see cref="T:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1" /> 类的新实例。
+    </summary><param name="maximumRetainedCapacity">
+    池中保留的 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" /> 的最大容量。
+    如果返回池中的对象的容量超过此数字，则该对象实例不会添加到池中，并因此有资格进行垃圾回收。
+    </param></member><member name="P:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1.MaximumRetainedCapacity"><summary>
+        获取要保留在池中的 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" /> 的最大容量。
+    </summary><remarks>
+        如果返回给池的对象容量超过此数，则该对象实例将不会添加到池中，从而可以进行垃圾回收。默认最大保留容量为 256 * 1024 字节。
+    </remarks></member><member name="M:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1.Create"><summary>
+            创建 <see cref="T:Microsoft.Shared.Pools.BufferWriter`1" /> 的一个实例。
+            </summary><returns>新创建的实例。</returns></member><member name="M:Microsoft.Shared.Pools.BufferWriterPooledObjectPolicy`1.Return(Microsoft.Shared.Pools.BufferWriter{`0})"><summary>
+            在将对象返回到池之前执行任何需要的工作。
+            </summary><param name="obj">要返回到池的对象。</param><returns>如果对象应返回到池，则为true；否则为false。</returns></member><member name="T:Microsoft.Shared.Pools.ReturnableBufferWriter`1"><summary>表示一个可在释放时自动返回对象池的缓冲区写入器。</summary><typeparam name="T">缓冲区中元素的类型。</typeparam></member><member name="M:Microsoft.Shared.Pools.ReturnableBufferWriter`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{Microsoft.Shared.Pools.BufferWriter{`0}})"><summary>
+     初始化 <see cref="T:Microsoft.Shared.Pools.ReturnableBufferWriter`1" /> 结构的新实例。
+    </summary><param name="pool">要将缓冲区写入器返回到的对象池。</param></member><member name="P:Microsoft.Shared.Pools.ReturnableBufferWriter`1.Buffer"><summary>
+             获取缓冲区写入器。
+            </summary></member><member name="M:Microsoft.Shared.Pools.ReturnableBufferWriter`1.Dispose"><summary>
+             释放缓冲区写入器并将其返回到对象池。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Diagnostics.Constants"><summary>
+            各种遥测库使用的常见遥测常量。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Diagnostics.Constants.HttpWebConstants.RequestRouteHeader"><summary>
+            请求路由HTTP标头键。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Diagnostics.Constants.HttpWebConstants.RequestNameHeader"><summary>
+            请求名称 HTTP 标头键。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Diagnostics.Constants.HttpWebConstants.DependencyNameHeader"><summary>
+            依赖项名称 HTTP 标头键。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Diagnostics.DefaultHttpDependencyMetadataResolver"><summary><see cref="T:Microsoft.Extensions.Http.Diagnostics.HttpDependencyMetadataResolver" /> 的默认实现，它使用基本的基于前缀树的查找算法。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Diagnostics.DefaultHttpDependencyMetadataResolver.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Http.Diagnostics.IDownstreamDependencyMetadata})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Diagnostics.DefaultHttpDependencyMetadataResolver" /> 类的新实例。
+            </summary><param name="dependencyMetadata">用于请求解析的HTTP依赖项元数据的集合。</param></member><member name="T:Microsoft.Extensions.Http.Diagnostics.HttpDependencyMetadataResolver"><summary>
+            基于主机名、路径和方法模式解析HTTP请求的元数据。
+            </summary><remarks>
+            此类提供了一种高性能的方式来识别HTTP请求，通过使用专门的基于字典树的数据结构将它们映射到先前配置的元数据。
+            这使得能够高效地查找服务信息、操作名称以及其他用于遥测和策略应用的元数据。
+            </remarks></member><member name="M:Microsoft.Extensions.Http.Diagnostics.HttpDependencyMetadataResolver.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Http.Diagnostics.IDownstreamDependencyMetadata})"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Http.Diagnostics.HttpDependencyMetadataResolver" /> 类的新实例。
+            </summary><param name="dependencyMetadata">用于请求解析的 HTTP 依赖元数据的集合。</param><exception cref="T:System.ArgumentNullException"><paramref name="dependencyMetadata" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Diagnostics.HttpDependencyMetadataResolver.GetRequestMetadata(System.Net.Http.HttpRequestMessage)"><summary>
+            获取指定 <see cref="T:System.Net.Http.HttpRequestMessage" /> 实例的请求元数据。
+            </summary><param name="requestMessage">HTTP 请求消息。</param><returns>如果找到，则返回已解析的 <see cref="T:Microsoft.Extensions.Http.Diagnostics.RequestMetadata" />；否则返回 <see langword="null" />。</returns></member><member name="T:Microsoft.Extensions.Http.Latency.HttpClientLatencyTelemetryOptions"><summary>
+            配置HTTP客户端延迟遥测的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Latency.HttpClientLatencyTelemetryOptions.EnableDetailedLatencyBreakdown"><summary>
+            获取或设置一个值，该值指示是否收集 <see cref="T:System.Net.Http.HttpClient" /> 调用的详细延迟细分。
+            </summary><value>
+            默认值为 <see langword="true" />。
+            </value><remarks>
+            详细细分为 HTTP 操作添加检查点，例如连接打开和请求头发送。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Latency.Internal.HttpClientLatencyLogEnricher"><summary>
+        该富化程序为发出的HTTP请求附加检查点。
+        它还记录响应头中的服务器名称，以关联客户端和服务器之间的日志。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Latency.Internal.HttpLatencyTelemetryHandler"><summary>
+            此委托处理程序为请求创建一个 <see cref="T:Microsoft.Extensions.Diagnostics.Latency.ILatencyContext" />（如果尚未为请求创建）。
+            它还将客户端名称添加到传出请求标头，这有助于关联客户端和服务器的遥测。
+            </summary></member><member name="T:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames"><summary>
+    用于HTTP客户端日志记录标记的常量。
+    </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.Duration"><summary>
+            HTTP 请求持续时间。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.Host"><summary>
+            HTTP 主机。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.Method"><summary>
+            HTTP 方法。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.Path"><summary>
+            HTTP 路径。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.RequestBody"><summary>
+            HTTP 请求正文.
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.ResponseBody"><summary>
+            HTTP 响应正文。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.RequestHeaderPrefix"><summary>
+            HTTP 请求头前缀。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.ResponseHeaderPrefix"><summary>
+            HTTP 响应标头前缀。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.UrlQuery"><summary>
+            URL查询参数前缀。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.StatusCode"><summary>
+            HTTP 状态码。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.HttpClientLoggingTagNames.TagNames"><summary>
+            获取所有标签名称的列表。
+            </summary><returns>一个只读的<see cref="T:System.Collections.Generic.IReadOnlyList`1" />，包含所有标签名称。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.IHttpClientLogEnricher"><summary>
+            用于实现 HTTP 客户端请求的日志丰富器的接口。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientLogEnricher.Enrich(Microsoft.Extensions.Diagnostics.Enrichment.IEnrichmentTagCollector,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.Exception)"><summary>
+            丰富HTTP客户端请求日志。
+            </summary><param name="collector">要添加标签的标签收集器。</param><param name="request">与传出HTTP请求关联的<see cref="T:System.Net.Http.HttpRequestMessage" />对象。</param><param name="response">与传出HTTP请求关联的<see cref="T:System.Net.Http.HttpResponseMessage" />对象。</param><param name="exception">在传出HTTP请求处理过程中抛出的可选<see cref="T:System.Exception" />。</param><remarks>
+            根据HTTP请求的结果，
+            <paramref name="response" />和<paramref name="exception" />参数可能为<see langword="null" />。
+            </remarks></member><member name="F:Microsoft.Extensions.Http.Logging.Internal.HttpRequestBodyReader.RequestReadTimeout"><summary>
+            出于测试目的而公开。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.Internal.HttpResponseBodyReader.ResponseReadTimeout"><summary>
+    为测试目的而公开。
+    </summary></member><member name="T:Microsoft.Extensions.Http.Logging.Internal.IHttpHeadersReader"><summary>
+            读取 HTTP 标头的方法。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.IHttpHeadersReader.ReadRequestHeaders(System.Net.Http.HttpRequestMessage,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})"><summary>
+            读取 HTTP 请求头。
+            </summary><param name="request"><see cref="T:System.Net.Http.HttpRequestMessage" /> 实例，从中读取标头。</param><param name="destination">保存读取的标头的目标。</param></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.IHttpHeadersReader.ReadResponseHeaders(System.Net.Http.HttpResponseMessage,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})"><summary>
+            读取 HTTP 响应标头。
+            </summary><param name="response">一个<see cref="T:System.Net.Http.HttpResponseMessage" />实例，从中读取标头。</param><param name="destination">保存读取的标头的目标。</param></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.IHttpHeadersReader.RedactValue(System.String,Microsoft.Extensions.Compliance.Classification.DataClassification)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Compliance.Classification.DataClassification" /> 编辑值。
+            </summary><param name="value">需要编辑的值。</param><param name="classification">用于编辑值的 <see cref="T:Microsoft.Extensions.Compliance.Classification.DataClassification" /> 的实例。</param><returns>已编辑的值。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.Internal.IHttpRequestReader"><summary>
+            读取 <see cref="T:System.Net.Http.HttpResponseMessage" /> 或 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的方法。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.IHttpRequestReader.ReadResponseAsync(Microsoft.Extensions.Http.Logging.Internal.LogRecord,System.Net.Http.HttpResponseMessage,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)"><summary>
+            读取 <see cref="T:System.Net.Http.HttpResponseMessage" />。
+            </summary><param name="record">要填充的日志记录对象。</param><param name="response">HTTP 响应。</param><param name="responseHeadersBuffer">用于读取响应头的缓冲区。</param><param name="cancellationToken">用于取消操作的取消令牌。</param><returns>表示异步操作的任务。</returns></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.IHttpRequestReader.ReadRequestAsync(Microsoft.Extensions.Http.Logging.Internal.LogRecord,System.Net.Http.HttpRequestMessage,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)"><summary>
+            读取 <see cref="T:System.Net.Http.HttpRequestMessage" />。
+            </summary><param name="record">要填充的日志记录对象。</param><param name="request">HTTP 请求。</param><param name="requestHeadersBuffer">用于读取请求标头的缓冲区。</param><param name="cancellationToken">用于取消操作的取消标记。</param><returns>表示异步操作的任务。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.Internal.Log"><summary>
+    记录 <see cref="T:System.Net.Http.HttpRequestMessage" />、<see cref="T:System.Net.Http.HttpResponseMessage" /> 以及由于请求/响应错误导致的异常。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.Log.RequestReadError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Net.Http.HttpMethod,System.String,System.String)"><summary>
+            在“Error”级别记录“读取请求数据以填充请求的日志上下文时发生错误：{http.request.method} {server.address}/{url.path}”。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.Log.ResponseReadError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Net.Http.HttpMethod,System.String,System.String)"><summary>
+            记录"在读取响应数据以填充请求的记录器上下文时发生错误：{http.request.method} {server.address}/{url.path}" 在"错误"级别。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.Log.LoggerContextMissing(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Net.Http.HttpMethod,System.String)"><summary>
+            以“错误”级别记录“记录器无法读取其上下文，针对{RequestState}请求：{http.request.method} {server.address}”。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.Log.EnrichmentError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String,System.Net.Http.HttpMethod,System.String,System.String)"><summary>
+            记录“在丰富器'{Enricher}'中丰富记录器上下文时发生错误，请求: {http.request.method} {server.address}/{url.path}”，级别为“Error”。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.LoggerMessageStateExtensions.AddRequestHeaders(Microsoft.Extensions.Logging.LoggerMessageState,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Int32@)"><summary>
+    将请求头添加到 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" />。
+    </summary><param name="state">要填充的 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" />。</param><param name="items">包含请求头的列表。</param><param name="index">表示写入标记到 <paramref name="state" /> 时要使用的索引。</param><remarks><paramref name="index" /> 将被改变以指向下一个 <paramref name="state" /> 项。</remarks></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.LoggerMessageStateExtensions.AddResponseHeaders(Microsoft.Extensions.Logging.LoggerMessageState,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Int32@)"><summary>
+            向 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" /> 添加响应标头。
+            </summary><param name="state">要填充的 <see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" />。</param><param name="items">包含响应标头的列表。</param><param name="index">表示在将标签写入 <paramref name="state" /> 时要使用的索引。</param><remarks><paramref name="index" /> 将被修改以指向下一个 <paramref name="state" /> 项。</remarks></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.LoggerMessageStateExtensions.AddPathParameters(Microsoft.Extensions.Logging.LoggerMessageState,Microsoft.Extensions.Http.Diagnostics.HttpRouteParameter[],System.Int32,System.Int32@)"><summary>
+            将路径参数添加到<see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" />中。
+            </summary><param name="state">一个要填充的<see cref="T:Microsoft.Extensions.Logging.LoggerMessageState" />。</param><param name="parameters">一个包含路径参数的数组。</param><param name="paramsCount">路径参数的数量。</param><param name="index">表示在将标记写入<paramref name="state" />时使用的索引。</param><remarks><paramref name="index" />将被修改为指向下一个<paramref name="state" />项。</remarks></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.LoggingOptionsValidator.Validate(System.String,Microsoft.Extensions.Http.Logging.LoggingOptions)"><summary>
+    验证特定的命名选项实例（或当 <paramref name="name" /> 为 <see langword="null" /> 时验证所有实例）。
+    </summary><param name="name">要验证的选项实例的名称。</param><param name="options">选项实例。</param><returns>验证结果。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.Internal.LogRecord"><summary>
+            已解析的 HTTP 信息。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.Host"><summary>
+            获取或设置 HTTP 主机。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.Method"><summary>
+            获取或设置 HTTP 请求方法。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.Path"><summary>
+            获取或设置已解析的请求路径。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.Duration"><summary>
+            获取或设置 HTTP 请求的持续时间（毫秒）。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.StatusCode"><summary>
+            获取或设置 HTTP 响应状态代码。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.RequestHeaders"><summary>
+        获取或设置解析的请求头列表。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.ResponseHeaders"><summary>
+            获取或设置解析的标头列表。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.RequestBody"><summary>
+            获取或设置解析的请求正文。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.ResponseBody"><summary>
+            获取或设置解析的响应正文。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.EnrichmentTags"><summary>
+            获取或设置丰富属性。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.PathParameters"><summary>
+            获取或设置请求路径参数。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.PathParametersCount"><summary>
+            获取或设置请求路径参数的数量，用于 <see cref="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.PathParameters" />。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.Internal.LogRecord.QueryString"><summary>
+            获取或设置格式化的查询参数。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.OptionsExtensions.GetKeyedOrCurrent``1(Microsoft.Extensions.Options.IOptionsMonitor{``0},System.String)"><summary>
+            获取给定服务键的选项，如果服务键为 <see langword="null" />，则获取当前值。
+            </summary><typeparam name="TOptions">选项类型。</typeparam><param name="optionsMonitor">要从其加载选项对象的 <see cref="T:Microsoft.Extensions.Options.IOptionsMonitor`1" />。</param><param name="serviceKey">一个可选字符串，指定要获取的选项对象的名称。</param><returns><typeparamref name="TOptions" /> 实例。</returns></member><member name="M:Microsoft.Extensions.Http.Logging.Internal.ServiceProviderExtensions.GetRequiredOrKeyedRequiredService``1(System.IServiceProvider,System.String)"><summary>
+    从 <see cref="T:System.IServiceProvider" /> 获取键控服务，如果键为 <see langword="null" />，则获取非键控服务。
+    </summary><typeparam name="T">要获取的服务对象的类型。</typeparam><param name="provider">从中检索服务对象的 <see cref="T:System.IServiceProvider" />。</param><param name="serviceKey">一个可选的字符串，指定要获取的服务对象的键。</param><returns>类型为 <typeparamref name="T" /> 的服务对象。</returns><exception cref="T:System.InvalidOperationException">未注册类型为 <typeparamref name="T" /> 的服务。</exception></member><member name="T:Microsoft.Extensions.Http.Logging.LoggingOptions"><summary>
+            配置 HTTP 客户端请求日志记录的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.LogRequestStart"><summary>
+            获取或设置一个值，指示是否在任何进一步处理之前额外记录请求。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value><remarks>
+            启用后，每个传入请求将记录两个条目 - 一个用于请求，一个用于响应（如果可用）。禁用后，每个传入请求仅记录一个条目，其中包含请求和响应数据。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestQueryParametersDataClasses"><summary>
+            获取或设置要记录的 HTTP 请求查询参数集及其用于编校的相应数据分类。
+            </summary><value>
+            默认值为 <see cref="T:System.Collections.Generic.Dictionary`2" />。
+            </value><remarks>
+            如果为空，则不记录任何 HTTP 请求查询参数。如果数据类为 <see cref="P:Microsoft.Extensions.Compliance.Classification.DataClassification.None" />，则不执行任何编校。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.LogBody"><summary>获取或设置一个值，该值指示是否记录 HTTP 请求和响应正文。</summary><value>默认值为 <see langword="false" />。</value><remarks>避免在生产环境中启用此选项，因为它可能导致隐私信息泄露。</remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.BodySizeLimit"><summary>
+            获取或设置要读取的请求或响应正文的最大字节数。
+            </summary><value>
+            默认值约为 32K。
+            </value><remarks>
+            理想情况下，该数字应低于 85000 字节，以避免分配到 <see href="https://learn.microsoft.com/dotnet/standard/garbage-collection/large-object-heap">大型对象堆</see>上。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.BodyReadTimeout"><summary>
+            获取或设置等待读取请求或响应正文的最长时间。
+            </summary><value>
+            默认值为1秒。
+            </value><remarks>
+            该值应在1毫秒到1分钟之间。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestBodyContentTypes"><summary>
+    获取或设置被视为文本并因此可能序列化的HTTP请求内容类型列表。
+    </summary></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.ResponseBodyContentTypes"><summary>
+            获取或设置被视为文本因而可以序列化的 HTTP 响应内容类型列表。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestHeadersDataClasses"><summary>
+            获取或设置要记录的 HTTP 请求头集合及其相应的用于脱敏的数据分类。
+            </summary><value>
+            默认值为 <see cref="T:System.Collections.Generic.HashSet`1" />。
+            </value><remarks>
+            如果为空，则不记录任何 HTTP 请求头。
+            如果数据分类为 <see cref="P:Microsoft.Extensions.Compliance.Classification.DataClassification.None" />，则不进行任何脱敏。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.ResponseHeadersDataClasses"><summary>
+            获取或设置要记录的HTTP响应头的集合及其各自用于编辑的数据分类。
+            </summary><value>
+            默认值为 <see cref="T:System.Collections.Generic.HashSet`1" />。
+            </value><remarks>
+            如果数据类是 <see cref="P:Microsoft.Extensions.Compliance.Classification.DataClassification.None" />，则不进行编辑。如果为空，则不记录任何HTTP响应头。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestPathLoggingMode"><summary>
+        获取或设置一个值，指示应如何记录传出HTTP请求路径。
+    </summary><value>
+        默认值为 <see cref="F:Microsoft.Extensions.Http.Logging.OutgoingPathLoggingMode.Formatted" />。
+    </value><remarks>
+        仅当 <see cref="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestPathParameterRedactionMode" /> 选项未设置为
+        <see cref="F:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameterRedactionMode.None" /> 时，此选项才适用；
+        否则将忽略此设置并记录未进行修订的HTTP请求路径。
+    </remarks></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestPathParameterRedactionMode"><summary>
+            获取或设置一个值，指示应如何编辑传出HTTP请求路径参数。
+            </summary><value>
+            默认值为 <see cref="F:Microsoft.Extensions.Http.Diagnostics.HttpRouteParameterRedactionMode.Strict" />。
+            </value></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RouteParameterDataClasses"><summary>
+            获取或设置要修订的路由参数及其对应的数据分类，以应用适当的修订。
+            </summary></member><member name="P:Microsoft.Extensions.Http.Logging.LoggingOptions.LogContentHeaders"><summary>
+            获取或设置一个值，该值指示是否记录 HTTP 请求和响应内容头。
+            </summary><value>
+            默认值为 <see langword="false" />。
+            </value><remarks>
+            此属性控制是否启用 HTTP 请求和响应表示头的日志记录（例如 <c>Content-Type</c>）。
+            如果 <see cref="P:Microsoft.Extensions.Http.Logging.LoggingOptions.RequestHeadersDataClasses" /> 或 <see cref="P:Microsoft.Extensions.Http.Logging.LoggingOptions.ResponseHeadersDataClasses" />
+            不包含任何表示头，请保持此选项禁用，否则会对头日志记录产生不必要的小性能影响。
+            </remarks></member><member name="T:Microsoft.Extensions.Http.Logging.OutgoingPathLoggingMode"><summary>
+            决定如何记录传出 HTTP 路径的策略。
+            </summary></member><member name="F:Microsoft.Extensions.Http.Logging.OutgoingPathLoggingMode.Formatted"><summary>
+    HTTP 路径被格式化，例如以 /foo/bar/redactedUserId 的形式。
+    </summary></member><member name="F:Microsoft.Extensions.Http.Logging.OutgoingPathLoggingMode.Structured"><summary>
+            HTTP 路径未格式化，路由参数记录在花括号中，例如 /foo/bar/{userId} 的形式。
+            </summary></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpDiagnosticsServiceCollectionExtensions"><summary>
+        遥测实用工具的扩展。
+    </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpDiagnosticsServiceCollectionExtensions.AddDownstreamDependencyMetadata(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Http.Diagnostics.IDownstreamDependencyMetadata)"><summary>
+            添加依赖元数据。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 对象实例。</param><param name="downstreamDependencyMetadata">要添加的 DownstreamDependencyMetadata 对象。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpDiagnosticsServiceCollectionExtensions.AddDownstreamDependencyMetadata``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加依赖元数据。
+            </summary><typeparam name="T"><see cref="T:Microsoft.Extensions.Http.Diagnostics.IDownstreamDependencyMetadata" /> 要注册的实例。</typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 对象实例。</param><returns><paramref name="services" /> 的值。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpClientLatencyTelemetryExtensions"><summary>
+            用于添加HTTP客户端延迟遥测的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLatencyTelemetryExtensions.AddHttpClientLatencyTelemetry(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    添加一个 <see cref="T:System.Net.Http.DelegatingHandler" /> 来收集延迟信息并丰富所有HTTP客户端的传出请求日志。
+    </summary><remarks>
+    此扩展配置所有HTTP客户端的延迟信息收集。
+    </remarks><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLatencyTelemetryExtensions.AddHttpClientLatencyTelemetry(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            添加一个<see cref="T:System.Net.Http.DelegatingHandler" />以收集延迟信息并丰富所有 HTTP 客户端的传出请求日志。
+            </summary><remarks>
+            此扩展配置所有 HTTP 客户端的全局传出请求日志自动收集。
+            </remarks><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="section">用于配置<see cref="T:Microsoft.Extensions.Http.Latency.HttpClientLatencyTelemetryOptions" />的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLatencyTelemetryExtensions.AddHttpClientLatencyTelemetry(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Http.Latency.HttpClientLatencyTelemetryOptions})"><summary>
+                为所有 HTTP 客户端添加 <see cref="T:System.Net.Http.DelegatingHandler" /> 以收集延迟信息并丰富传出请求日志。
+            </summary><remarks>
+                此扩展为所有 HTTP 客户端全局配置传出请求日志的自动收集。
+            </remarks><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Latency.HttpClientLatencyTelemetryOptions" /> 的委托。</param><returns><paramref name="services" /> 的值。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions"><summary>
+            用于注册扩展的 HTTP 客户端日志记录功能的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    为指定的 <see cref="T:System.Net.Http.HttpClient" /> 添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于记录传出请求的日志。
+    </summary><param name="builder">该 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>返回 <paramref name="builder" /> 的值。</returns><remarks>
+    所有其他记录器都将被移除 - 包括默认的记录器，该默认记录器是通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的。此方法记录的信息将以键/值对的形式添加到日志状态中。
+    </remarks><exception cref="T:System.ArgumentNullException">参数 <paramref name="builder" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Boolean)"><summary>
+    添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" /> 来为指定名称的 <see cref="T:System.Net.Http.HttpClient" /> 发出的请求记录日志。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="wrapHandlersPipeline">
+    当 <see langword="true" /> 时，日志记录器放置在请求管道的开头，包装所有其他处理程序。
+    当 <see langword="false" /> 时，日志记录器放置在管道的末尾，就在主要消息处理程序之前。
+    </param><returns><paramref name="builder" /> 的值。</returns><remarks>
+    所有其他日志记录器都将被移除 - 包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认记录器。
+    此方法记录的信息以键/值对的形式添加到日志状态中。
+    </remarks><exception cref="T:System.ArgumentNullException">参数 <paramref name="builder" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            为指定的 <see cref="T:System.Net.Http.HttpClient" /> 添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，以发出传出请求的日志。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="section">用于配置 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" /> 的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="builder" /> 的值。</returns><remarks>
+            所有其他日志记录器都将被移除，包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认日志记录器。
+            此方法记录的信息将作为键/值对添加到日志状态中。
+            </remarks><exception cref="T:System.ArgumentNullException">任意参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.Configuration.IConfigurationSection,System.Boolean)"><summary>
+    添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于为指定的 <see cref="T:System.Net.Http.HttpClient" /> 发出传出请求的日志。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="section">用于配置 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" /> 的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><param name="wrapHandlersPipeline">
+    当 <see langword="true" /> 时，日志记录器放置在请求管道的开头，包装所有其他处理程序。
+    当 <see langword="false" /> 时，日志记录器放置在管道的末尾，紧接在主消息处理程序之前。
+    </param><returns><paramref name="builder" /> 的值。</returns><remarks>
+    所有其他日志记录器都将被移除 - 包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认日志记录器。
+    此方法记录的信息作为键/值对添加到日志状态中。
+    </remarks><exception cref="T:System.ArgumentNullException">任何参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.Http.Logging.LoggingOptions})"><summary>
+    添加一个<see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于为命名<see cref="T:System.Net.Http.HttpClient" />的传出请求发出日志。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configure">用于配置<see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" />的委托。</param><returns><paramref name="builder" />的值。</returns><remarks>
+    所有其他日志记录器都将被移除，包括通过<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />注册的默认日志记录器。
+    此方法记录的信息作为键/值对添加到日志状态中。
+    </remarks><exception cref="T:System.ArgumentNullException">任意参数为<see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingHttpClientBuilderExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.Http.Logging.LoggingOptions},System.Boolean)"><summary>
+    添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于为指定的 <see cref="T:System.Net.Http.HttpClient" /> 记录传出请求的日志。
+    </summary><param name="builder">该 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" /> 的委托。</param><param name="wrapHandlersPipeline">
+    如果 <see langword="true" />，记录器放置在请求管道的开头，包装所有其他处理程序；
+    如果 <see langword="false" />，记录器放置在管道的末尾，紧靠主消息处理程序之前。
+    </param><returns><paramref name="builder" /> 的值。</returns><remarks>
+    所有其他记录器均被移除，包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认记录器。
+    此方法记录的信息作为键/值对添加到日志状态。
+    </remarks><exception cref="T:System.ArgumentNullException">任意参数为 <see langword="null" />。</exception></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpClientLoggingServiceCollectionExtensions"><summary>
+            用于注册扩展的HTTP客户端日志记录功能的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingServiceCollectionExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于为使用 <see cref="T:System.Net.Http.IHttpClientFactory" /> 创建的所有 HTTP 客户端的传出请求记录日志。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </param><returns><paramref name="services" /> 的值。
+            </returns><remarks>
+            所有其他记录器都被移除 - 包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认记录器。
+            </remarks><exception cref="T:System.ArgumentNullException">
+            参数 <paramref name="services" /> 为 <see langword="null" />。
+            </exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingServiceCollectionExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationSection)"><summary>
+            添加一个<see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，用于为使用<see cref="T:System.Net.Http.IHttpClientFactory" />创建的所有HTTP客户端记录传出请求的日志。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="section">用于配置<see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" />的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />。</param><returns><paramref name="services" />的值。</returns><remarks>
+            所有其他记录器都将被移除 - 包括通过<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />注册的默认记录器。
+            </remarks><exception cref="T:System.ArgumentNullException">任何参数为<see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingServiceCollectionExtensions.AddExtendedHttpClientLogging(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Http.Logging.LoggingOptions})"><summary>
+            为所有通过 <see cref="T:System.Net.Http.IHttpClientFactory" /> 创建的 HTTP 客户端添加一个 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />，以记录传出请求的日志。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingOptions" /> 的委托。</param><returns><paramref name="services" /> 的值。</returns><remarks>
+            所有其他日志记录器都将被移除，包括通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的默认日志记录器。
+            </remarks><exception cref="T:System.ArgumentNullException">任意一个参数为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientLoggingServiceCollectionExtensions.AddHttpClientLogEnricher``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将 <typeparamref name="T" /> 类型的充实器实例添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中以丰富 <see cref="T:System.Net.Http.HttpClient" /> 日志。
+            </summary><typeparam name="T">充实器的类型。</typeparam><param name="services">要向其添加 <typeparamref name="T" /> 实例的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><paramref name="services" /> 的值。</returns></member><member name="T:Microsoft.Extensions.Telemetry.Internal.IHttpHeadersRedactor"><summary>
+            HTTP 标头编辑者。
+            </summary></member><member name="M:Microsoft.Extensions.Telemetry.Internal.IHttpHeadersRedactor.Redact(System.Collections.Generic.IEnumerable{System.String},Microsoft.Extensions.Compliance.Classification.DataClassification)"><summary>
+            对HTTP标头值进行修订，并将结果合并为一个<see cref="T:System.String" />。
+            </summary><param name="headerValues">HTTP标头值。</param><param name="classification">数据分类，用于获取适当的修订器<see cref="T:Microsoft.Extensions.Compliance.Redaction.Redactor" />来修订标头。</param><returns>返回路由的文本段和参数段。</returns></member><member name="M:Microsoft.Extensions.Telemetry.Internal.IHttpHeadersRedactor.Redact(System.String,Microsoft.Extensions.Compliance.Classification.DataClassification)"><summary>
+            对 HTTP 标头值进行编辑，结果会生成一个 <see cref="T:System.String" />。
+            </summary><param name="headerValue">HTTP 标头值。</param><param name="classification">用于获取适当的 <see cref="T:Microsoft.Extensions.Compliance.Redaction.Redactor" /> 以编辑标头的数据分类。</param><returns>返回路由的文本和参数段。</returns></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration)"><summary>注册一个配置实例，<typeparamref name="TOptions" /> 将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Bind``1(Microsoft.Extensions.Options.OptionsBuilder{``0},Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，<typeparamref name="TOptions" />将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"><summary>注册一个配置实例，TOptions将绑定到该实例。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.Configure``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Microsoft.Extensions.Configuration.BinderOptions})"><summary>注册一个配置实例，TOptions将与之绑定。</summary></member><member name="M:Microsoft.Extensions.Configuration.Binder.SourceGeneration.BindingExtensions.ValidateConfigurationKeys(System.Type,System.Lazy{System.Collections.Generic.HashSet{System.String}},Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Configuration.BinderOptions)"><summary>如果绑定器选项要求，则验证输入配置对象中没有未知键。</summary></member></members>
+</doc>

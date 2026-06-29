@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.DependencyInjection.AutoActivation</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+    定义用于引发异常的静态方法。
+    </summary><remarks>
+    主要目的是减少代码大小、提高性能并标准化异常消息。
+    </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />。
+            </summary><typeparam name="T">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的对象。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+    如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+    或者如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><typeparam name="TParameter">要进行 <see langword="null" /> 检查的参数类型。</typeparam><typeparam name="TMember">要进行 <see langword="null" /> 检查的成员类型。</typeparam><param name="argument">要进行 <see langword="null" /> 检查的参数。</param><param name="member">要进行 <see langword="null" /> 检查的对象成员。</param><param name="paramName">正在检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+        Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+        </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定成员为<see langword="null" />，则引发<see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为<see langword="null" />的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为<see langword="null" />的对象成员。</param><param name="paramName">正在检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" />的原始值。</returns><example><code language="csharp">
+            Throws.IfMemberNull(myObject, myObject.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+            如果指定的字符串为 <see langword="null" /> 或空白，则分别引发 <see cref="T:System.ArgumentNullException" /> 或 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为 <see langword="null" /> 或空白的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            如果字符串为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+            如果字符串为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为 <see langword="null" /> 或空的字符串。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+            如果参数的缓冲区大小小于所需缓冲区大小，则抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="bufferSize">实际缓冲区大小。</param><param name="requiredSize">所需缓冲区大小。</param><param name="paramName">要检查的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>如果枚举值无效，则引发<see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">要检查的参数。</param><param name="paramName">被检查的参数名称。</param><typeparam name="T">枚举的类型。</typeparam><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果集合为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要计算的集合。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+            引发 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            抛出一个 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">引起异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            抛出一个<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="actualValue">导致此异常的实参值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            抛出一个<see cref="T:System.ArgumentException" />异常。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+            引发一个 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的内部异常。</param><remarks>
+            如果 <paramref name="innerException" /> 不为 <see langword="null" />，当前异常会在处理内部异常的 catch 块中引发。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            引发 <see cref="T:System.InvalidOperationException" /> 异常。
+            </summary><param name="message">描述该错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            抛出 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于 min，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">应小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于 max，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于等于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于等于最小值的数字。</param><param name="min">必须小于等于参数的数字。</param><param name="paramName">被检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期要大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+  </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于0，则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>原始的<paramref name="argument" />值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字小于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">需要小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数值小于或等于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期数值小于或等于 min 的数字。</param><param name="min">必须小于或等于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+    如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数值。</param><param name="max">必须大于 argument 的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期该数字大于或等于最大值的数字。</param><param name="max">必须大于或等于该参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+                如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数值等于零，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">需要确保不为零的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定的数值小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于最小值的数值。</param><param name="min">必须小于参数的数值。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预计大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望其值大于或等于 max 的数字。</param><param name="max">必须大于或等于参数值的数字。</param><param name="paramName">被检查参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望数字大于或等于最大值。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+    如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">应该不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+    如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要检查是否小于最小值的数字。</param><param name="min">必须小于 argument 的值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在验证的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">要检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>如果指定的数字大于或等于 max，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">预期大于或等于 max 的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定范围内，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions"><summary>
+            用于在应用程序启动后自动激活单例的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.ActivateSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            在启动时强制执行单例激活，而不是在运行时。
+            </summary><typeparam name="TService">要激活的服务类型。</typeparam><param name="services">包含服务的服务集合。</param><returns><paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.ActivateSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)"><summary>
+    强制在启动时激活单例，而不是在运行时。
+    </summary><param name="services">包含服务的服务集合。</param><param name="serviceType">要激活的服务的类型。</param><returns><paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})"><summary>
+            添加一个自动激活的单例服务。
+            </summary><param name="services">用于添加服务的服务集合。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam><typeparam name="TImplementation">要使用的实现类型。</typeparam><returns>返回 <paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加自动激活的单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><typeparam name="TService">要添加的服务类型。</typeparam><typeparam name="TImplementation">要使用的实现类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})"><summary>
+            添加一个自动激活的单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            添加一个自动激活的单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><typeparam name="TService">要添加的服务类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)"><summary>
+            向指定的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 添加一个由 serviceType 指定的类型的自动激活单例服务。
+            </summary><param name="services">向其添加服务的服务集合。</param><param name="serviceType">要注册的服务类型及使用的实现。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})"><summary>
+    添加一个自动激活的单例服务。
+    </summary><param name="services">要向其添加服务的服务集合。</param><param name="serviceType">要注册的服务的类型。</param><param name="implementationFactory">创建服务的工厂。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)"><summary>
+    添加一个自动激活的单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务的类型。</param><param name="implementationType">服务的实现类型。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)"><summary>
+            尝试添加自动激活的单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务的类型。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)"><summary>
+    尝试添加一个自动激活的单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务的类型。</param><param name="implementationType">服务的实现类型。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})"><summary>
+    尝试添加自动激活的单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务类型。</param><param name="implementationFactory">创建服务的工厂。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    尝试添加一个自动激活的单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><typeparam name="TService">要添加的服务类型。</typeparam></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    尝试添加一个自动激活的单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><typeparam name="TService">要添加的服务的类型。</typeparam><typeparam name="TImplementation">要使用的实现的类型。</typeparam></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})"><summary>
+            尝试添加一个自动激活的单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.ActivateKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+    强制在启动时而非运行时激活键控单例。
+    </summary><typeparam name="TService">要激活的服务类型。</typeparam><param name="services">包含服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><returns><paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.ActivateKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)"><summary>
+        在启动时强制执行键控单例激活，而不是在运行时。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要激活的服务类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``1})"><summary>
+            添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam><typeparam name="TImplementation">要使用的实现类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+            添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><typeparam name="TService">要添加的服务类型。</typeparam><typeparam name="TImplementation">要使用的实现类型。</typeparam><returns><paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})"><summary>
+    添加一个自动激活的键控单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+    添加一个自动激活的键控单例服务。
+    </summary><param name="services">要将服务添加到的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><typeparam name="TService">要添加的服务的类型。</typeparam><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)"><summary>
+    添加一个自动激活的带键单例服务。
+    </summary><param name="services">要将服务添加到的服务集合。</param><param name="serviceType">要注册的服务类型和要使用的实现。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><returns><paramref name="services" />的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})"><summary>
+            添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationFactory">创建服务的工厂。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.AddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)"><summary>
+    添加一个自动激活的键控单例服务。
+    </summary><param name="services">要向其中添加服务的服务集合。</param><param name="serviceType">要注册的服务类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationType">服务的实现类型。</param><returns><paramref name="services" /> 的值。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)"><summary>
+            尝试添加自动激活的键控单例服务。
+            </summary><param name="services">服务集合，用于添加服务。</param><param name="serviceType">要注册的服务类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)"><summary>
+            尝试添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceType">要注册的服务的类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationType">服务的实现类型。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})"><summary>
+            尝试添加一个自动激活的键控单例服务。
+            </summary><param name="services">要向其中添加服务的服务集合。</param><param name="serviceType">要注册的服务类型。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationFactory">创建服务的工厂。</param></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+            尝试添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><typeparam name="TService">要添加的服务的类型。</typeparam></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)"><summary>
+    尝试添加一个自动激活的键控单例服务。
+    </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><typeparam name="TService">要添加的服务类型。</typeparam><typeparam name="TImplementation">要使用的实现类型。</typeparam></member><member name="M:Microsoft.Extensions.DependencyInjection.AutoActivationExtensions.TryAddActivatedKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})"><summary>
+            尝试添加一个自动激活的键控单例服务。
+            </summary><param name="services">要添加服务的服务集合。</param><param name="serviceKey">用于唯一标识特定服务的对象。</param><param name="implementationFactory">创建服务的工厂。</param><typeparam name="TService">要添加的服务类型。</typeparam></member></members>
+</doc>

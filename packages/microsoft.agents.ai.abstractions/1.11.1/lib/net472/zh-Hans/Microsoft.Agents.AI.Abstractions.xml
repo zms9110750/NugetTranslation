@@ -1,0 +1,1450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Agents.AI.Abstractions</name>
+    </assembly>
+    <members><member name="T:System.Diagnostics.UnreachableException"><summary>
+    当程序执行一条被认为不可达的指令时引发的异常。
+    </summary></member><member name="M:System.Diagnostics.UnreachableException.#ctor"><summary>
+            使用默认错误消息初始化 <see cref="T:System.Diagnostics.UnreachableException" /> 类的新实例。
+            </summary></member><member name="M:System.Diagnostics.UnreachableException.#ctor(System.String)"><summary>
+            使用指定的错误消息初始化 <see cref="T:System.Diagnostics.UnreachableException" /> 类的新实例。
+            </summary><param name="message">解释异常原因的错误消息。</param></member><member name="M:System.Diagnostics.UnreachableException.#ctor(System.String,System.Exception)"><summary>
+            使用指定的错误消息和对导致此异常的内部异常的引用来初始化 <see cref="T:System.Diagnostics.UnreachableException" /> 类的新实例。
+            </summary><param name="message">解释异常原因的错误消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应类型不允许，也允许 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应的类型允许，也不允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定输出可能为 null，即使相应的类型不允许为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指示即使相应类型允许 null，输出也不为 null。指示调用返回时输入参数不为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使相应的类型不允许，该参数也可能为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>初始化属性，使用指定的返回值条件。</summary><param name="returnValue">返回值条件。如果方法返回此值，则关联参数可能为 <see langword="null" />。</param></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许，该参数也不会为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数不会为 <see langword="null" />。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数不为 null，则输出也不为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化特性。</summary><param name="parameterName">
+            关联的参数名称。如果指定参数的参数值不为 null，则输出将不为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的 Boolean 参数被传递指定值，该方法将不会返回。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+            条件参数值。如果关联参数的参数与此值匹配，则方法之后的代码将被诊断视为不可达。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定该方法或属性将确保所列的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>使用字段或属性成员初始化该特性。</summary><param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员的列表初始化该特性。</summary><param name="members">
+            承诺非空的字段和属性成员的列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定方法或属性将确保在返回指定返回值条件时，所列出的字段和属性成员具有非空值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不会为 <see langword="null" />。
+            </param><param name="member">
+            承诺为非 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段与属性成员列表初始化该特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，关联参数将不会为 <see langword="null" />。
+            </param><param name="members">
+            保证不为 null 的字段和属性成员的列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.ExperimentalAttribute"><summary>
+            指示该 API 元素是实验性的，并且可能随时更改，恕不另行通知。
+            </summary></member><member name="M:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.ExperimentalAttribute" /> 类的新实例。
+            </summary><param name="diagnosticId">用于标记实验性API的人类可读说明。</param></member><member name="P:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.DiagnosticId"><summary>
+             获取编译器在报告应用此特性的 API 的使用情况时将使用的 ID。
+            </summary><value>唯一诊断 ID。</value><remarks>
+             诊断 ID 会显示在警告和错误的生成输出中。
+             <para>此属性表示可用于在需要时取消警告或错误的唯一 ID。</para></remarks></member><member name="P:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.UrlFormat"><summary>
+             获取或设置相应文档的 URL。
+             API 接受格式字符串而非实际 URL，以创建包含诊断 ID 的通用 URL。
+            </summary><value>表示对应文档 URL 的格式字符串。</value><remarks>格式字符串的示例是 <c>https://contoso.com/obsoletion-warnings/{0}</c>。</remarks></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"><summary>
+            指示指定<see cref="T:System.Type" />上的某些成员被动态访问，例如通过<see cref="N:System.Reflection" />。
+            </summary><remarks>
+            这允许工具了解在程序执行期间访问了哪些成员。
+
+            此特性适用于类型为<see cref="T:System.Type" />或<see cref="T:System.String" />的成员。
+
+            当此特性应用于类型为<see cref="T:System.String" />的位置时，假设该字符串表示完全限定的类型名称。
+
+            当此特性应用于类、接口或结构时，指定的成员可以在从调用该类、接口或结构的实例上的<see cref="M:System.Object.GetType" />返回的<see cref="T:System.Type" />实例上被动态访问。
+
+            如果此特性应用于方法，则将其视为特殊情况，并意味着该特性应应用于方法的 "this" 参数。因此，该特性仅可用于可分配给 System.Type 的类型的实例方法（或字符串，但没有任何方法会在那里使用它）。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)"><summary>
+            使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">动态访问的成员类型。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes"><summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定了动态访问的成员类型。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"><summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有 <see cref="T:System.FlagsAttribute" /> 属性，允许对其成员值进行按位组合。
+             </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None"><summary>
+            指定无成员。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor"><summary>
+            指定默认的无参数公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors"><summary>
+            指定所有公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors"><summary>
+        指定所有非公共构造函数。
+    </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods"><summary>
+            指定所有公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods"><summary>
+            指定所有非公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields"><summary>
+            指定所有公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields"><summary>
+            指定所有非公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes"><summary>
+            指定所有公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes"><summary>
+            指定所有非公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties"><summary>
+            指定所有公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties"><summary>
+            指定所有非公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents"><summary>
+            指定所有公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents"><summary>
+            指定所有非公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces"><summary>
+            指定由该类型实现的所有接口。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All"><summary>
+            指定所有成员。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute"><summary>
+    指示指定方法需要在运行时生成新代码，例如通过 <see cref="N:System.Reflection" />。
+    </summary><remarks>
+    这允许工具了解哪些方法在提前编译时调用是不安全的。
+    </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)"><summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute" /> 类的新实例。
+            </summary><param name="message">
+            包含动态代码使用情况信息的消息。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message"><summary>
+            获取包含有关动态代码使用情况的消息。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url"><summary>
+            获取或设置一个可选 URL，该 URL 包含关于该方法、
+            为何需要动态代码以及使用者有哪些处理选项的更多信息。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute"><summary>
+            指示指定的方法需要动态访问未静态引用的代码，例如通过 <see cref="N:System.Reflection" />。
+            </summary><remarks>
+            这允许工具在从应用程序中移除未引用的代码时了解哪些方法是不安全的调用。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)"><summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+            </summary><param name="message">
+            包含有关未引用代码使用情况的消息。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message"><summary>获取包含未引用代码使用信息的消息。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url"><summary>
+            获取或设置一个可选的 URL，其中包含有关该方法、为何需要未引用的代码以及使用者可采取哪些选项处理它的更多信息。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"><summary>
+            /// 抑制对特定规则违规的报告，允许在单个
+            代码工件上进行多次抑制。
+            </summary><remarks><see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 与
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" /> 不同，因为它没有
+            <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的新实例，指定工具的类别和分析规则的标识符。
+            </summary><param name="category">属性的类别。</param><param name="checkId">该属性所应用的分析规则的标识符。</param></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"><summary>
+            获取标识该属性分类的类别。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述了消息抑制属性所应用的工具或工具分析类别。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId"><summary>
+            获取要抑制的分析工具规则的标识符。
+            </summary><remarks>
+            将 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" /> 属性连接在一起，形成一个唯一的检查标识符。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope"><summary>
+        获取或设置与该属性相关的代码范围。
+    </summary><remarks>
+        Scope 属性是一个可选参数，用于指定该属性相关的元数据范围。
+    </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target"><summary>
+            获取或设置一个完全限定路径，该路径表示特性的目标。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是可选参数，用于标识特性的分析目标。
+            示例值为 "System.IO.Stream.ctor():System.Void"。
+            由于它是完全限定的，因此可能很长，特别是对于参数这样的目标。
+            分析工具用户界面应能够自动格式化该参数。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId"><summary>
+    获取或设置一个可选参数，该参数用于详细说明排除条件。
+  </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定在文字元数据目标不够精确时的附加排除条件。例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，此时可能需要抑制方法中某个语句的违规（该语句将引发规则冲突），而不是抑制方法中的所有语句。
+  </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification"><summary>
+    获取或设置禁止代码分析消息的理由。
+    </summary></member><member name="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute"><summary>
+            标记应使用特定调用方名称填充的参数。
+            </summary></member><member name="M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute" /> 类的新实例。
+            </summary><param name="parameterName">从中获取名称的函数参数。</param></member><member name="P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName"><summary>
+            获取应从中获取名称的函数参数的名称。
+            </summary></member><member name="T:System.Runtime.CompilerServices.RequiredMemberAttribute"><summary>指定某个类型具有必需的成员，或某个成员是必需的。</summary></member><member name="T:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute"><summary>
+            指示应用此特性的位置需要编译器对特定功能的支持。
+            </summary></member><member name="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName"><summary>
+        编译器功能的名称。
+    </summary></member><member name="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.IsOptional"><summary>
+            如果为 true，则当编译器不理解 <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName" /> 时，它可以选择允许访问应用了此特性的位置。
+            </summary></member><member name="F:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.RefStructs"><summary>
+            用于 C# ref struct 功能的 <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName" />。
+            </summary></member><member name="F:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.RequiredMembers"><summary>
+            用于 C# 必需成员功能的 <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName" />。
+            </summary></member><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+            定义用于抛出异常的静态方法。
+            </summary><remarks>
+            主要目的是减少代码大小、提高性能并标准化异常消息。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+            如果指定参数为<see langword="null" />，则引发<see cref="T:System.ArgumentNullException" />。
+            </summary><typeparam name="T">要检查<see langword="null" />的参数类型。</typeparam><param name="argument">要检查<see langword="null" />的对象。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+    如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><typeparam name="TParameter">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">正在检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+    Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+    </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定的成员是空引用（null），则引发 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为空的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为空的对象成员。</param><param name="paramName">被检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfMemberNull(myObject, myObject.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+    如果指定的字符串为 <see langword="null" /> 或空白，则分别引发 <see cref="T:System.ArgumentNullException" /> 或 <see cref="T:System.ArgumentException" />。
+    </summary><param name="argument">要检查是否为 <see langword="null" /> 或空白的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+    如果字符串为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果字符串为空，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><param name="argument">要检查 <see langword="null" /> 或空值的字符串。</param><param name="paramName">要检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+            当参数的缓冲区大小小于所需缓冲区大小时，抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="bufferSize">实际的缓冲区大小。</param><param name="requiredSize">所需的缓冲区大小。</param><param name="paramName">要检查的参数名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+    如果枚举值无效，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要评估的参数。</param><param name="paramName">被检查的参数名称。</param><typeparam name="T">枚举的类型。</typeparam><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果集合为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要计算的集合。</param><param name="paramName">正在检查的参数名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+            抛出<see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentNullException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。</summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="actualValue">导致此异常的参数的值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            抛出一个 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+            抛出<see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+            如果<paramref name="innerException" />不是<see langword="null" />，则当前异常在处理内部异常的catch块中引发。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            引发一个 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            抛出 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定数字大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">需要检查是否小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">要检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应为大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于 0，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">预期小于最小值的数值。</param><param name="min">必须小于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定数字大于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">要检查的数字，应大于或等于最大值。</param><param name="max">必须大于或等于参数值的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">需要大于或等于 max 的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期该数字不为零。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期应小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>如果指定的数值大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">期望大于最大值的数值。</param><param name="max">必须大于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">被检查参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于0，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不为零的数字。</param><param name="paramName">被检查的参数的名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数值大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">需要大于最大值的数值。</param><param name="max">必须大于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发一个<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要预期大于或等于 max 的数字。</param><param name="min">允许参数值范围的下限。</param><param name="max">允许参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+            如果指定的数字等于0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预计小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+        如果指定的数字大于 max，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+    </summary><param name="argument">期望大于 max 的数字。</param><param name="max">必须大于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。
+    </returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+    如果指定数字小于等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要检查是否小于等于最小值的数值。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+    如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">应大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary><param name="argument">预期要大于或等于最大值的数字。</param><param name="min">参数值所允许范围的下限。</param><param name="max">参数值所允许范围的上限。</param><param name="paramName">正在检查的参数名。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+        如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期不等于零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+    此存储库报告的各种诊断ID。
+    </summary></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+     此存储库支持的实验。
+    </summary></member><member name="T:Microsoft.Agents.AI.StructuredOutputSchemaUtilities"><summary>
+            用于处理结构化输出JSON模式的内部实用工具。
+            </summary></member><member name="M:Microsoft.Agents.AI.StructuredOutputSchemaUtilities.WrapNonObjectSchema(Microsoft.Extensions.AI.ChatResponseFormatJson)"><summary>
+            确保给定的响应格式在根目录具有对象架构，必要时包装非对象架构。
+            </summary><param name="responseFormat">要检查的响应格式。</param><returns>一个元组，包含（可能已包装的）响应格式以及是否发生了包装。</returns><exception cref="T:System.InvalidOperationException">响应格式没有有效的JSON架构。</exception></member><member name="M:Microsoft.Agents.AI.StructuredOutputSchemaUtilities.UnwrapResponseData(System.String)"><summary>
+            从之前由 <see cref="M:Microsoft.Agents.AI.StructuredOutputSchemaUtilities.WrapNonObjectSchema(Microsoft.Extensions.AI.ChatResponseFormatJson)" /> 包装的 JSON 对象中解包 <c>"data"</c> 属性。
+            </summary><param name="json">要解包的 JSON 字符串。</param><returns><c>"data"</c> 属性的原始 JSON 文本，如果未检测到包装，则为原始 JSON。</returns></member><member name="T:Microsoft.Agents.AI.AdditionalPropertiesExtensions"><summary>
+    包含扩展方法，用于以属性类型名称作为键来存储和检索属性。
+    </summary></member><member name="M:Microsoft.Agents.AI.AdditionalPropertiesExtensions.Add``1(Microsoft.Extensions.AI.AdditionalPropertiesDictionary,``0)"><summary>
+            使用属性类型名称作为键添加附加属性。
+            </summary><typeparam name="T">要添加的属性的类型</typeparam><param name="additionalProperties">附加属性字典</param><param name="value">要添加的值</param></member><member name="M:Microsoft.Agents.AI.AdditionalPropertiesExtensions.TryAdd``1(Microsoft.Extensions.AI.AdditionalPropertiesDictionary,``0)"><summary>
+            尝试使用属性的类型名称作为键来添加属性。
+            </summary><remarks>
+            此方法使用类型参数的完整名称作为键。如果键已存在，
+            则不更新值，方法返回 <see langword="false" />。
+            </remarks><typeparam name="T">要添加的属性的类型。</typeparam><param name="additionalProperties">附加属性字典。</param><param name="value">要添加的值。</param><returns>
+            如果成功添加值，则为 <see langword="true" />；如果键已存在，则为 <see langword="false" />。
+            </returns></member><member name="M:Microsoft.Agents.AI.AdditionalPropertiesExtensions.TryGetValue``1(Microsoft.Extensions.AI.AdditionalPropertiesDictionary,``0@)"><summary>
+    尝试使用属性类型的名称作为键，从附加属性字典中检索值。
+    </summary><remarks>
+    此方法在搜索字典时使用类型参数的全名作为键。
+    </remarks><typeparam name="T">要检索的属性的类型。</typeparam><param name="additionalProperties">包含附加属性的字典。</param><param name="value">
+    当此方法返回时，如果找到并成功转换为请求的类型，则包含从字典中检索的值；否则为 <typeparamref name="T" /> 的默认值。
+    </param><returns><see langword="true" /> 如果在字典中找到非 <see langword="null" /> 值并转换为请求的类型；否则为 <see langword="false" />。
+    </returns></member><member name="M:Microsoft.Agents.AI.AdditionalPropertiesExtensions.Contains``1(Microsoft.Extensions.AI.AdditionalPropertiesDictionary)"><summary>
+    确定附加属性字典是否包含一个以提供的类型名称作为键的属性。
+    </summary><typeparam name="T">要检查的属性的类型。</typeparam><param name="additionalProperties">附加属性字典。</param><returns><see langword="true" /> 如果字典包含一个以提供的类型名称作为键的属性；否则为 <see langword="false" />。
+    </returns></member><member name="M:Microsoft.Agents.AI.AdditionalPropertiesExtensions.Remove``1(Microsoft.Extensions.AI.AdditionalPropertiesDictionary)"><summary>
+    使用提供的类型名称作为键，从附加属性字典中移除一个属性。
+    </summary><typeparam name="T">要移除的属性的类型。</typeparam><param name="additionalProperties">附加属性字典。</param><returns><see langword="true" /> 如果属性成功移除；否则为 <see langword="false" />。
+    </returns></member><member name="T:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities"><summary>
+            提供Microsoft Agent框架内JSON序列化操作的实用方法和配置。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.DefaultOptions"><summary>
+            获取用于代理抽象类型JSON序列化操作的默认<see cref="T:System.Text.Json.JsonSerializerOptions" />实例。
+            </summary><remarks><para>
+            对于本机AOT或禁用<see cref="P:System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault" />的应用程序，此实例包括此库中包含的所有常见交换类型的源生成协定。
+            </para><para>
+            此外，它还启用以下设置：
+            <list type="number"><item><description>启用<see cref="F:System.Text.Json.JsonSerializerDefaults.Web" />默认值。</description></item><item><description>启用<see cref="F:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull" />作为属性的默认忽略条件。</description></item><item><description>启用<see cref="F:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString" />作为数字类型的默认数字处理。</description></item><item><description>
+            在转义JSON字符串时启用<see cref="P:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping" />。使用应用程序必须确保JSON输出在嵌入其他文档格式（如HTML和XML）之前被充分转义。
+            </description></item></list></para></remarks></member><member name="M:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.CreateDefaultOptions"><summary>
+            创建并配置代理抽象类型的默认 JSON 序列化选项。
+            </summary><returns>配置好的选项。</returns></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Boolean"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableBoolean"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentResponse"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentResponseArray"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentResponseUpdate"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentResponseUpdateArray"><summary>
+    为给定类型定义源生成的JSON序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentRunOptions"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentSessionStateBag"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AgentSessionStateBagValue"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.State"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AdditionalPropertiesDictionary"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AdditionalPropertiesDictionaryInt64"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AIAnnotation"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AIContent"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.AnnotatedRegion"><summary>
+   为给定类型定义源生成的 JSON 序列化协定元数据。
+   </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatFinishReason"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableChatFinishReason"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatMessage"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatResponseFormat"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatResponseFormatJson"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatResponseFormatText"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ChatRole"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableChatRole"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.CitationAnnotation"><summary>
+            定义给定类型的源生成的JSON序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.CodeInterpreterToolCallContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.CodeInterpreterToolResultContent"><summary>
+    为给定类型定义源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.DataContent"><summary>
+            定义给定类型的源生成 JSON 序列化合约元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ErrorContent"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.FunctionCallContent"><summary>
+            为给定类型定义源生成的JSON序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.FunctionResultContent"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.HostedFileContent"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.HostedVectorStoreContent"><summary>
+        定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ImageGenerationToolCallContent"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ImageGenerationToolResultContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.InputRequestContent"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.InputResponseContent"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.McpServerToolCallContent"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.McpServerToolResultContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ResponseContinuationToken"><summary>
+            定义给定类型的源生成的 JSON 序列化约定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.TextContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.TextReasoningContent"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.TextSpanAnnotatedRegion"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ToolApprovalRequestContent"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ToolApprovalResponseContent"><summary>
+        定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ToolCallContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ToolResultContent"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.UriContent"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.UsageContent"><summary>
+    定义给定类型的源生成JSON序列化合约元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.UsageDetails"><summary>
+            为给定类型定义源生成的 JSON 序列化契约元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.WebSearchToolCallContent"><summary>
+            定义给定类型的源生成JSON序列化合约元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.WebSearchToolResultContent"><summary>
+    为给定类型定义源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ConcurrentDictionaryStringAgentSessionStateBagValue"><summary>
+        定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IDictionaryStringObject"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IListAIAnnotation"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IListAIContent"><summary>
+            为给定类型定义源生成的JSON序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IListAnnotatedRegion"><summary>
+    为给定类型定义源生成的JSON序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IListChatMessage"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.IListString"><summary>
+    定义给定类型的源代码生成的JSON序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.ListChatMessage"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.DateTimeOffset"><summary>
+    定义给定类型的源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableDateTimeOffset"><summary>
+    为给定类型定义源生成的JSON序列化契约元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.JsonElement"><summary>
+            为给定类型定义源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableJsonElement"><summary>
+            定义给定类型的源生成的JSON序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Uri"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Int32"><summary>
+    为给定类型定义源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableInt32"><summary>
+    为给定类型定义源生成的 JSON 序列化契约元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Int64"><summary>
+            定义给定类型的源生成的 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.NullableInt64"><summary>
+    为给定类型定义源生成的 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Object"><summary>
+    定义给定类型的源生成 JSON 序列化协定元数据。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.String"><summary>
+            定义给定类型的源生成 JSON 序列化协定元数据。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.Default"><summary>
+            与默认 <see cref="T:System.Text.Json.JsonSerializerOptions" /> 实例关联的默认 <see cref="T:System.Text.Json.Serialization.JsonSerializerContext" />。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.GeneratedSerializerOptions"><summary>
+            与此上下文关联的源代码生成的选项。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.#ctor"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.#ctor(System.Text.Json.JsonSerializerOptions)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.AgentAbstractionsJsonUtilities.JsonContext.GetTypeInfo(System.Type)"><inheritdoc /></member><member name="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution"><summary>
+            表示特定运行中代理请求消息源的归属信息，包括组件类型和
+            标识符。
+            </summary><remarks>
+            使用此结构可以识别在代理运行期间哪个组件提供了消息。
+            这对于根据消息源过滤消息很有用，例如区分用户输入、中间件生成的消息和聊天历史记录。
+            </remarks></member><member name="F:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.AdditionalPropertiesKey"><summary>
+            提供用于在 <see cref="P:Microsoft.Extensions.AI.ChatMessage.AdditionalProperties" /> 中存储与代理请求消息关联的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" /> 的键。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.#ctor(Microsoft.Agents.AI.AgentRequestMessageSourceType,System.String)"><summary>
+            使用指定的源类型和标识符初始化 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" /> 结构的新实例。
+            </summary><param name="sourceType">提供消息的组件的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><param name="sourceId">提供消息的组件的唯一标识符。</param></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.SourceType"><summary>
+    获取为当前代理运行提供消息的组件类型。
+    </summary></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.SourceId"><summary>
+    获取为当前代理运行提供消息的组件的唯一标识符。
+    </summary></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.Equals(Microsoft.Agents.AI.AgentRequestMessageSourceAttribution)"><summary>
+            确定指定的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" /> 是否与当前实例相等。
+            </summary><param name="other">要与当前实例进行比较的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" />。</param><returns>如果指定的实例等于当前实例，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.Equals(System.Object)"><summary>
+            确定指定对象是否等于当前实例。
+            </summary><param name="obj">要与当前实例比较的对象。</param><returns>如果指定的对象等于当前实例，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.ToString"><summary>
+            返回当前实例的字符串表示形式。
+            </summary><returns>包含源类型和源标识符的字符串。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.GetHashCode"><summary>
+            返回当前实例的哈希代码。
+            </summary><returns>当前实例的哈希代码。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.op_Equality(Microsoft.Agents.AI.AgentRequestMessageSourceAttribution,Microsoft.Agents.AI.AgentRequestMessageSourceAttribution)"><summary>
+    确定两个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" /> 实例是否相等。
+    </summary><param name="left">要比较的第一个实例。</param><param name="right">要比较的第二个实例。</param><returns>如果实例相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution.op_Inequality(Microsoft.Agents.AI.AgentRequestMessageSourceAttribution,Microsoft.Agents.AI.AgentRequestMessageSourceAttribution)"><summary>
+        确定两个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceAttribution" /> 实例是否不相等。
+    </summary><param name="left">要比较的第一个实例。</param><param name="right">要比较的第二个实例。</param><returns>如果实例不相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Agents.AI.AgentRequestMessageSourceType"><summary>
+    表示代理请求消息的来源。
+    </summary><remarks>
+    特定代理运行的输入消息可能来自多种来源。
+    此类型有助于标识消息是来自代理管道外部，
+    是由中间件产生的，还是来自聊天历史记录。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" /> 结构的新实例。
+            </summary><param name="value">表示代理请求消息源的字符串值。</param></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.Value"><summary>
+            获取表示代理请求消息源的字符串值。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External"><summary>
+            消息来自代理管道外部（例如用户输入）。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.AIContextProvider"><summary>
+            该消息由中间件生成。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.ChatHistory"><summary>
+            消息来自聊天历史记录。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.Equals(Microsoft.Agents.AI.AgentRequestMessageSourceType)"><summary>
+            确定此实例和另一个指定的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" /> 对象是否具有相同的值。
+            </summary><param name="other">要与此实例进行比较的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><returns><see langword="true" /> 如果 <paramref name="other" /> 参数的值与此实例的值相同；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.Equals(System.Object)"><summary>
+            确定此实例与指定对象是否具有相同的值。
+            </summary><param name="obj">要与此实例进行比较的对象。</param><returns>如果 <paramref name="obj" /> 是一个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" /> 并且其值与此实例相同，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.ToString"><summary>
+            返回此实例的字符串表示形式。
+            </summary><returns>表示代理请求消息源的字符串值。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.GetHashCode"><summary>
+            返回此实例的哈希代码。
+            </summary><returns>一个32位有符号整数哈希代码。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.op_Equality(Microsoft.Agents.AI.AgentRequestMessageSourceType,Microsoft.Agents.AI.AgentRequestMessageSourceType)"><summary>
+    确定两个指定的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" /> 对象是否具有相同的值。
+    </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><returns><see langword="true" /> 如果 <paramref name="left" /> 的值与 <paramref name="right" /> 的值相同；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentRequestMessageSourceType.op_Inequality(Microsoft.Agents.AI.AgentRequestMessageSourceType,Microsoft.Agents.AI.AgentRequestMessageSourceType)"><summary>
+    确定两个指定的 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" /> 对象是否具有不同的值。
+    </summary><param name="left">要比较的第一个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><param name="right">要比较的第二个 <see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />。</param><returns>如果 <paramref name="left" /> 的值不同于 <paramref name="right" /> 的值，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="T:Microsoft.Agents.AI.AgentResponse"><summary>
+    表示对 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 运行请求的响应，包含有关交互的消息和元数据。
+    </summary><remarks><para><see cref="T:Microsoft.Agents.AI.AgentResponse" /> 提供一个或多个响应消息以及有关响应的元数据。典型的响应会包含一条消息，但在各种场景下，响应可能包含多条消息。例如，如果代理内部调用函数或工具、执行RAG检索或具有其他复杂逻辑，则代理的单个运行可能会生成多条消息，显示代理在生成代理结果过程中所做的中间进度。
+    </para><para>
+    要获取响应的文本结果，请使用 <see cref="P:Microsoft.Agents.AI.AgentResponse.Text" /> 属性，或直接对 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 调用 <see cref="M:Microsoft.Agents.AI.AgentResponse.ToString" />。
+    </para></remarks></member><member name="F:Microsoft.Agents.AI.AgentResponse._messages"><summary>响应消息。</summary></member><member name="M:Microsoft.Agents.AI.AgentResponse.#ctor"><summary>初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 类的新实例。</summary></member><member name="M:Microsoft.Agents.AI.AgentResponse.#ctor(Microsoft.Extensions.AI.ChatMessage)"><summary>初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 类的新实例。</summary><param name="message">要包含在此响应中的响应消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="message" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AgentResponse.#ctor(Microsoft.Extensions.AI.ChatResponse)"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 类的新实例，该实例来自现有的 <see cref="T:Microsoft.Extensions.AI.ChatResponse" />。
+            </summary><param name="response">用于填充此 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 的 <see cref="T:Microsoft.Extensions.AI.ChatResponse" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="response" /> 为 <see langword="null" />。</exception><remarks>
+            此构造函数创建一个代理响应，该响应包装现有的 <see cref="T:Microsoft.Extensions.AI.ChatResponse" />，保留所有元数据，并将原始响应存储在 <see cref="P:Microsoft.Agents.AI.AgentResponse.RawRepresentation" /> 中以便访问底层实现细节。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponse.#ctor(Microsoft.Agents.AI.AgentResponse)"><summary>
+            从现有的 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 类的新实例。
+            </summary><param name="response">从中复制属性的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="response" /> 为 <see langword="null" />。</exception><remarks>
+            此构造函数创建现有代理响应的副本，保留所有
+            元数据，并将原始响应存储在 <see cref="P:Microsoft.Agents.AI.AgentResponse.RawRepresentation" /> 中，以便访问
+            底层实现细节。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponse.#ctor(System.Collections.Generic.IList{Microsoft.Extensions.AI.ChatMessage})"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 类的新实例，使用指定的消息集合。
+            </summary><param name="messages">响应消息的集合，或 <see langword="null" /> 以创建空响应。</param></member><member name="P:Microsoft.Agents.AI.AgentResponse.Messages"><summary>
+    获取或设置此响应要表示的消息集合。
+    </summary><value>
+    表示代理响应的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的集合。如果底层集合为 <see langword="null" />，则访问此属性将创建一个空列表。
+    </value><remarks><para>
+    此属性提供对代理执行期间生成的所有消息的访问。虽然大多数响应包含单个助理消息，但复杂的代理行为可能会生成多条消息，显示中间步骤、函数调用或不同类型的内容。
+    </para><para>
+    该集合是可变的，可以在创建后进行修改。将此属性设置为 <see langword="null" /> 将导致后续访问返回一个空列表。
+    </para></remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.Text"><summary>
+            获取此响应中所有消息的连接文本内容。
+            </summary><value>
+            一个字符串，包含来自<see cref="P:Microsoft.Agents.AI.AgentResponse.Messages" />中所有消息中的所有<see cref="T:Microsoft.Extensions.AI.TextContent" />实例的组合文本，如果没有文本内容则为空字符串。
+            </value><remarks>
+            此属性提供了一种便捷的方式来访问文本响应，而无需遍历单个消息和内容项。非文本内容将被忽略。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.AgentId"><summary>
+    获取或设置生成此响应的代理的标识符。
+    </summary><value>
+    代理的唯一字符串标识符，如果未指定则为 <see langword="null" />。
+    </value><remarks>
+    此标识符有助于在多代理场景中跟踪哪个代理生成了响应，或用于调试和遥测目的。
+    </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.ResponseId"><summary>
+    获取或设置此特定响应的唯一标识符。
+    </summary><value>
+    此响应实例的唯一字符串标识符，或 <see langword="null" />（如果未分配）。
+    </value></member><member name="P:Microsoft.Agents.AI.AgentResponse.ContinuationToken"><summary>
+            获取或设置用于获取后台代理响应结果的继续标记。
+            </summary><remarks>
+            支持后台响应的<see cref="T:Microsoft.Agents.AI.AIAgent" />实现将返回继续标记，前提是在<see cref="P:Microsoft.Agents.AI.AgentRunOptions.AllowBackgroundResponses" />中允许后台响应且尚未获取响应的结果。如果响应已完成且结果已获取，该标记将为<see langword="null" />。
+            <para>
+            此属性应与<see cref="P:Microsoft.Agents.AI.AgentRunOptions.ContinuationToken" />结合使用，以继续轮询响应的完成状态。将此标记传递给后续对<see cref="M:Microsoft.Agents.AI.AIAgent.RunAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" />调用中的<see cref="P:Microsoft.Agents.AI.AgentRunOptions.ContinuationToken" />以轮询完成状态。
+            </para></remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.CreatedAt"><summary>
+            获取或设置指示此响应创建时的时间戳。
+            </summary><value>
+            一个<see cref="T:System.DateTimeOffset" />，表示生成响应的时间，
+            或如果未指定，则为<see langword="null" />。
+            </value><remarks>
+            创建时间戳对于审计、日志记录和理解代理交互的时间顺序很有用。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.FinishReason"><summary>
+            获取或设置代理响应完成的原因。
+            </summary><value>
+            一个 <see cref="T:Microsoft.Extensions.AI.ChatFinishReason" /> 值，指示响应完成的原因（例如，停止、长度、内容筛选、工具调用），
+            如果完成原因不可用，则为 <see langword="null" />。
+            </value><remarks><para>
+            此属性对于检测非正常完成特别有用，例如内容筛选或令牌限制截断，调用者可能需要对其进行特殊处理。
+            </para></remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.Usage"><summary>
+            获取或设置用于生成此响应的资源使用信息。
+            </summary><value>
+            一个包含令牌计数和其他使用指标的 <see cref="T:Microsoft.Extensions.AI.UsageDetails" /> 实例；
+            如果无法获取使用信息，则为 <see langword="null" />。
+            </value></member><member name="P:Microsoft.Agents.AI.AgentResponse.RawRepresentation"><summary>获取或设置来自底层实现的运行响应的原始表示。</summary><remarks>
+            如果创建了一个<see cref="T:Microsoft.Agents.AI.AgentResponse" />来表示来自另一个对象模型的某个底层对象，则此属性可用于存储该原始对象。这对于调试或允许使用者根据需要访问底层对象模型可能很有用。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse.AdditionalProperties"><summary>
+            获取或设置与此响应关联的附加属性。
+            </summary><value>
+            一个包含自定义属性的 <see cref="T:Microsoft.Extensions.AI.AdditionalPropertiesDictionary" />，如果没有附加属性，则为 <see langword="null" />。
+            </value><remarks>
+            附加属性提供了一种包含自定义元数据或提供程序特定信息的方式，这些信息不符合标准响应架构。这对于保存特定于实现的详细信息或使用自定义数据扩展响应很有用。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponse.ToString"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.AgentResponse.ToAgentResponseUpdates"><summary>
+            将此 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 转换为适用于流式处理场景的 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例集合。
+            </summary><returns>
+            一组 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例，它们共同表示与此响应相同的信息。
+            </returns><remarks><para>
+            此方法用于将完整响应转换回流式处理格式，这可能适用于需要统一处理流式和非流式代理响应的场景。
+            </para><para><see cref="P:Microsoft.Agents.AI.AgentResponse.Messages" /> 中的每条消息都成为一个单独的更新，如果存在使用信息，则将其作为附加更新包含在内。更新的顺序保留原始消息顺序。
+            </para></remarks></member><member name="T:Microsoft.Agents.AI.AgentResponseExtensions"><summary>
+            提供用于处理 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 和 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例的扩展方法。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.AsChatResponse(Microsoft.Agents.AI.AgentResponse)"><summary>
+    从 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 实例创建一个 <see cref="T:Microsoft.Extensions.AI.ChatResponse" />。
+    </summary><param name="response">要转换的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</param><returns>从指定的 <paramref name="response" /> 构建的 <see cref="T:Microsoft.Extensions.AI.ChatResponse" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="response" /> 为 <see langword="null" />。</exception><remarks>
+    如果 <paramref name="response" /> 的 <see cref="P:Microsoft.Agents.AI.AgentResponse.RawRepresentation" /> 已经是
+    <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> 实例，则直接返回该实例。
+    否则，将创建一个新的 <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> 并使用 <paramref name="response" /> 中的数据填充。
+    生成的实例是浅表副本；任何引用类型成员（例如 <see cref="P:Microsoft.Agents.AI.AgentResponse.Messages" />）将在这两个实例之间共享。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.AsChatResponseUpdate(Microsoft.Agents.AI.AgentResponseUpdate)"><summary>
+            从 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例创建一个 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" />。
+            </summary><param name="responseUpdate">要转换的 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />。</param><returns>从指定的 <paramref name="responseUpdate" /> 生成的 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="responseUpdate" /> 为 <see langword="null" />。</exception><remarks>
+            如果 <paramref name="responseUpdate" /> 的 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.RawRepresentation" /> 已经是
+            <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> 实例，则直接返回该实例。
+            否则，创建一个新的 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> 并使用 <paramref name="responseUpdate" /> 中的数据填充。
+            生成的实例是浅拷贝；任何引用类型成员（例如 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.Contents" />）
+            将在两个实例之间共享。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.AsChatResponseUpdatesAsync(System.Collections.Generic.IAsyncEnumerable{Microsoft.Agents.AI.AgentResponseUpdate})"><summary>
+    从 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例的异步可枚举集合创建 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> 实例的异步可枚举集合。
+    </summary><param name="responseUpdates">要转换的 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例序列。</param><returns>一个由 <paramref name="responseUpdates" /> 生成的 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> 实例的异步可枚举集合。</returns><exception cref="T:System.ArgumentNullException"><paramref name="responseUpdates" /> 为 <see langword="null" />。</exception><remarks>
+    每个 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 都通过 <see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.AsChatResponseUpdate(Microsoft.Agents.AI.AgentResponseUpdate)" /> 转换为 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" />。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.ToAgentResponse(System.Collections.Generic.IEnumerable{Microsoft.Agents.AI.AgentResponseUpdate})"><summary>
+    将一系列 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例合并为一个 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。
+    </summary><param name="updates">要合并为单个响应的一系列更新。</param><returns>一个 <see cref="T:Microsoft.Agents.AI.AgentResponse" />，表示所有更新的合并状态。</returns><exception cref="T:System.ArgumentNullException"><paramref name="updates" /> 为 <see langword="null" />。</exception><remarks>
+    在将 <paramref name="updates" /> 合并为单个 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 的过程中，该方法将尝试重建 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例。这包括使用 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.MessageId" /> 确定消息边界，以及在适用的情况下合并连续的 <see cref="T:Microsoft.Extensions.AI.AIContent" /> 项，例如，多个连续的 <see cref="T:Microsoft.Extensions.AI.TextContent" /> 实例可能合并为单个 <see cref="T:Microsoft.Extensions.AI.TextContent" />。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AgentResponseExtensions.ToAgentResponseAsync(System.Collections.Generic.IAsyncEnumerable{Microsoft.Agents.AI.AgentResponseUpdate},System.Threading.CancellationToken)"><summary>
+            异步将一系列 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例合并为一个 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。
+            </summary><param name="updates">要合并为单个响应的更新异步序列。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的任务。任务结果包含一个表示所有更新合并状态的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="updates" /> 为 <see langword="null" />。</exception><remarks><para>
+            此方法是 <see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.ToAgentResponse(System.Collections.Generic.IEnumerable{Microsoft.Agents.AI.AgentResponseUpdate})" /> 的异步版本。
+            它执行相同的合并逻辑，但操作于更新的异步枚举。
+            </para><para>
+            作为将 <paramref name="updates" /> 合并为单个 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 的一部分，该方法将尝试重新构造
+            <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例。这包括使用 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.MessageId" /> 来确定
+            消息边界，以及在适用情况下合并连续的 <see cref="T:Microsoft.Extensions.AI.AIContent" /> 项，例如多个连续的
+            <see cref="T:Microsoft.Extensions.AI.TextContent" /> 实例可以合并为单个 <see cref="T:Microsoft.Extensions.AI.TextContent" />。
+            </para></remarks></member><member name="T:Microsoft.Agents.AI.AgentResponseUpdate"><summary>
+            表示来自 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 的单个流式响应块。
+            </summary><remarks><para><see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 之所以如此命名，是因为它表示相互叠加以形成单个代理响应的更新。从概念上讲，它结合了流式输出中 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 和 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 的角色。
+            </para><para>
+            要获取此响应块的文本结果，请使用 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.Text" /> 属性，或直接在 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 上调用 <see cref="M:Microsoft.Agents.AI.AgentResponseUpdate.ToString" />。
+            </para><para><see cref="T:Microsoft.Agents.AI.AgentResponse" /> 和 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 之间的关系在 <see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.ToAgentResponseAsync(System.Collections.Generic.IAsyncEnumerable{Microsoft.Agents.AI.AgentResponseUpdate},System.Threading.CancellationToken)" /> 和 <see cref="M:Microsoft.Agents.AI.AgentResponse.ToAgentResponseUpdates" /> 中进行了规定，这两者支持双向转换。但请注意，所提供的转换可能是有损的，例如，如果多个更新具有不同的 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.RawRepresentation" /> 对象，而 <see cref="P:Microsoft.Agents.AI.AgentResponse.RawRepresentation" /> 中只有一个此类对象的可用插槽。
+            </para></remarks></member><member name="F:Microsoft.Agents.AI.AgentResponseUpdate._contents"><summary>响应更新内容项。</summary></member><member name="M:Microsoft.Agents.AI.AgentResponseUpdate.#ctor"><summary>初始化 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 类的新实例。</summary></member><member name="M:Microsoft.Agents.AI.AgentResponseUpdate.#ctor(System.Nullable{Microsoft.Extensions.AI.ChatRole},System.String)"><summary>初始化<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />类的新实例。</summary><param name="role">更新作者的角色。</param><param name="content">更新的文本内容。</param></member><member name="M:Microsoft.Agents.AI.AgentResponseUpdate.#ctor(System.Nullable{Microsoft.Extensions.AI.ChatRole},System.Collections.Generic.IList{Microsoft.Extensions.AI.AIContent})"><summary>初始化 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 类的新实例。</summary><param name="role">更新作者的角色。</param><param name="contents">更新的内容。</param></member><member name="M:Microsoft.Agents.AI.AgentResponseUpdate.#ctor(Microsoft.Extensions.AI.ChatResponseUpdate)"><summary>初始化 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 类的新实例。</summary><param name="chatResponseUpdate">用于初始化此 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 的 <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" />。</param></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.AuthorName"><summary>获取或设置响应更新的作者名称。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.Role"><summary>获取或设置响应更新的作者角色。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.Text"><summary>获取此更新的文本。</summary><remarks>
+            此属性连接 <see cref="T:Microsoft.Extensions.AI.TextContent" /> 对象在 <see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.Contents" /> 中的文本。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.Contents"><summary>获取或设置智能体运行响应更新内容项。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.RawRepresentation"><summary>获取或设置来自底层实现的响应更新的原始表示。</summary><remarks>
+            如果创建了一个<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />来表示来自另一个对象模型的某个底层对象，则可以使用此属性存储该原始对象。这对于调试或允许使用者根据需要访问底层对象模型可能很有用。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.AdditionalProperties"><summary>获取或设置更新的附加属性。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.AgentId"><summary>获取或设置生成响应的代理的ID。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.ResponseId"><summary>获取或设置此更新所属的响应的ID。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.MessageId"><summary>获取或设置此更新所属消息的ID。</summary><remarks>
+    单个流式响应可能由多个消息组成，每个消息可能由多个更新表示。此属性用于将这些更新分组到消息中。
+    
+    某些提供程序可能将流式响应视为单个消息，在这种情况下，此属性的值可能与响应ID相同。
+    
+    此值在 <see cref="M:Microsoft.Agents.AI.AgentResponseExtensions.ToAgentResponseAsync(System.Collections.Generic.IAsyncEnumerable{Microsoft.Agents.AI.AgentResponseUpdate},System.Threading.CancellationToken)" /> 将 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例分组到 <see cref="T:Microsoft.Agents.AI.AgentResponse" /> 实例时使用。
+    该值必须对每次对基础提供程序的调用是唯一的，并且必须由流式响应中相同逻辑消息的所有更新共享。
+  </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.CreatedAt"><summary>获取或设置响应更新的时间戳。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.ContinuationToken"><summary>
+            获取或设置续流标记，用于继续此更新所属的流式代理响应。
+            </summary><remarks>
+            支持后台响应的 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 实现将在每次更新时返回一个续流标记，前提是在 <see cref="P:Microsoft.Agents.AI.AgentRunOptions.AllowBackgroundResponses" /> 中允许后台响应；但对于最后一次更新，该标记将为 <see langword="null" />。
+            <para>
+            此属性应用于流恢复，其中应将最新接收到的更新的续流标记传递给后续对 <see cref="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" /> 的调用中的 <see cref="P:Microsoft.Agents.AI.AgentRunOptions.ContinuationToken" />，以便从中断点继续流式传输。
+            </para></remarks></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.FinishReason"><summary>
+            获取或设置代理响应结束的原因。
+            </summary><value>
+            一个<see cref="T:Microsoft.Extensions.AI.ChatFinishReason" />值，指示响应结束的原因（例如，stop、length、content filter、tool calls），如果结束原因不可用或尚未确定（流中间），则为<see langword="null" />。
+            </value></member><member name="M:Microsoft.Agents.AI.AgentResponseUpdate.ToString"><inheritdoc /></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.ContentForDebuggerDisplay"><summary>获取一个 <see cref="T:Microsoft.Extensions.AI.AIContent" /> 对象，用于在调试器显示中显示。</summary></member><member name="P:Microsoft.Agents.AI.AgentResponseUpdate.EllipsesForDebuggerDisplay"><summary>获取一个指示，用于调试器显示是否还有更多内容。</summary></member><member name="T:Microsoft.Agents.AI.AgentResponse`1"><summary>
+            表示指定类型 <typeparamref name="T" /> 对 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 运行请求的响应。
+            </summary><typeparam name="T">预期从代理获取的值的类型。</typeparam></member><member name="M:Microsoft.Agents.AI.AgentResponse`1.#ctor(Microsoft.Agents.AI.AgentResponse,System.Text.Json.JsonSerializerOptions)"><summary>
+    初始化 <see cref="T:Microsoft.Agents.AI.AgentResponse`1" /> 类的新实例。
+    </summary><param name="response">用于填充此 <see cref="T:Microsoft.Agents.AI.AgentResponse`1" /> 的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</param><param name="serializerOptions">在反序列化结果时要使用的 <see cref="T:System.Text.Json.JsonSerializerOptions" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="serializerOptions" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.AgentResponse`1.IsWrappedInObject"><summary>
+    获取或设置一个值，该值指示 JSON schema 是否具有额外的对象包装器。
+    </summary><remarks>
+    包装器对于任何非 JSON 对象类型的值是必需的，例如数字、枚举值和数组。
+    </remarks></member><member name="P:Microsoft.Agents.AI.AgentResponse`1.Result"><summary>
+            获取代理响应的结果值，作为 <typeparamref name="T" /> 的实例。
+            </summary></member><member name="T:Microsoft.Agents.AI.AgentRunContext"><summary>为正在进行的代理运行提供上下文。</summary></member><member name="M:Microsoft.Agents.AI.AgentRunContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IReadOnlyCollection{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentRunOptions)"><summary>
+    初始化 <see cref="T:Microsoft.Agents.AI.AgentRunContext" /> 类的新实例。
+    </summary><param name="agent">执行当前运行的 <see cref="T:Microsoft.Agents.AI.AIAgent" />。</param><param name="session">与当前运行关联的 <see cref="T:Microsoft.Agents.AI.AgentSession" />（如果有）。</param><param name="requestMessages">传入当前运行的请求消息。</param><param name="agentRunOptions">传递给当前运行的 <see cref="T:Microsoft.Agents.AI.AgentRunOptions" />。</param></member><member name="P:Microsoft.Agents.AI.AgentRunContext.Agent"><summary>获取正在执行当前运行的<see cref="T:Microsoft.Agents.AI.AIAgent" />。</summary></member><member name="P:Microsoft.Agents.AI.AgentRunContext.Session"><summary>获取与当前运行关联的<see cref="T:Microsoft.Agents.AI.AgentSession" />。</summary></member><member name="P:Microsoft.Agents.AI.AgentRunContext.RequestMessages"><summary>获取传递给当前运行的请求消息。</summary></member><member name="P:Microsoft.Agents.AI.AgentRunContext.RunOptions"><summary>获取传递给当前运行的 <see cref="T:Microsoft.Agents.AI.AgentRunOptions" />。</summary></member><member name="T:Microsoft.Agents.AI.AgentRunOptions"><summary>
+            提供用于控制代理运行行为的可选参数和配置设置。
+            </summary><remarks><para><see cref="T:Microsoft.Agents.AI.AIAgent" />的实现可能会提供<see cref="T:Microsoft.Agents.AI.AgentRunOptions" />的子类，其中包含特定于该代理类型的其他选项。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AgentRunOptions.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentRunOptions" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentRunOptions.#ctor(Microsoft.Agents.AI.AgentRunOptions)"><summary>
+            通过从指定选项中复制值来初始化 <see cref="T:Microsoft.Agents.AI.AgentRunOptions" /> 类的新实例。
+            </summary><param name="options">从中复制值的选项实例。</param><exception cref="T:System.ArgumentNullException"><paramref name="options" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.AgentRunOptions.ContinuationToken"><summary>
+            获取或设置继续令牌，用于恢复并获取由此令牌标识的代理响应的结果。
+            </summary><remarks>
+            此属性用于后台响应，如果<see cref="T:Microsoft.Agents.AI.AIAgent" />实现支持，则可以通过<see cref="P:Microsoft.Agents.AI.AgentRunOptions.AllowBackgroundResponses" />属性激活。
+            流式后台响应（例如由<see cref="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" />默认返回的响应）如果被中断，可以恢复。这意味着，从中断发生前的最新更新中获取的继续令牌（来自<see cref="P:Microsoft.Agents.AI.AgentResponseUpdate.ContinuationToken" />）可以传递给此属性，以从中断点恢复流。
+            非流式后台响应（例如由<see cref="M:Microsoft.Agents.AI.AIAgent.RunAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" />返回的响应）可以通过获取<see cref="P:Microsoft.Agents.AI.AgentResponse.ContinuationToken" />属性中的令牌，并在后续对<see cref="M:Microsoft.Agents.AI.AIAgent.RunAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" />的调用中通过此属性传递该令牌来轮询其完成状态。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentRunOptions.AllowBackgroundResponses"><summary>
+            获取或设置一个值，指示是否允许后台响应。
+            </summary><remarks><para>
+            后台响应允许在后台异步运行长时间运行的操作或任务，这些操作或任务可以由流式API恢复，并由非流式API轮询完成。
+            </para><para>
+            当此属性设置为true时，非流式API可以启动后台操作，并返回包含继续令牌的初始响应。后续对同一API的调用应使用继续令牌以轮询方式获取操作的最终结果。
+            </para><para>
+            当此属性设置为true时，流式API也可以启动后台操作，并开始流式传输响应更新，直到操作完成。如果流式连接中断，应从具有继续令牌的最后一个更新中获取继续令牌，并将其提供给同一流式API的后续调用，以从中断点恢复流，并继续接收更新直到操作完成。
+            </para><para>
+            此属性仅在与其一起使用的实现支持后台响应时生效。如果实现不支持后台响应，则将忽略此属性。
+            </para></remarks></member><member name="P:Microsoft.Agents.AI.AgentRunOptions.AdditionalProperties"><summary>
+            获取或设置与此选项关联的附加属性。
+            </summary><value>
+            一个 <see cref="T:Microsoft.Extensions.AI.AdditionalPropertiesDictionary" /> 包含自定义属性，
+            如果没有任何附加属性，则为 <see langword="null" />。
+            </value><remarks>
+            附加属性提供了一种包含自定义元数据或提供程序特定信息的方法，
+            这些信息不适合标准选项架构。这对于保留实现特定细节
+            或使用自定义数据扩展选项非常有用。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AgentRunOptions.ResponseFormat"><summary>
+            获取或设置响应格式。
+            </summary><remarks>
+            如果为 <see langword="null" />，则不指定响应格式，代理将使用其默认格式。
+            此属性可以设置为 <see cref="P:Microsoft.Extensions.AI.ChatResponseFormat.Text" /> 以指定响应应为非结构化文本，
+            设置为 <see cref="P:Microsoft.Extensions.AI.ChatResponseFormat.Json" /> 以指定响应应为结构化 JSON 数据，或者
+            设置为使用特定 JSON 架构构造的 <see cref="T:Microsoft.Extensions.AI.ChatResponseFormatJson" /> 实例，以请求响应符合该架构的结构化 JSON 数据。
+            是否以及如何满足该请求取决于代理实现。
+            如果代理实现不识别特定类型的 <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />，则可以忽略它。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentRunOptions.Clone"><summary>
+            生成当前<see cref="T:Microsoft.Agents.AI.AgentRunOptions" />实例的一个克隆。
+            </summary><returns>
+            当前<see cref="T:Microsoft.Agents.AI.AgentRunOptions" />实例的一个克隆。
+            </returns><remarks><para>
+            克隆将具有与原始实例相同的所有属性值。任何集合，例如<see cref="P:Microsoft.Agents.AI.AgentRunOptions.AdditionalProperties" />，都是浅克隆的，这意味着会创建一个新的集合实例，但集合中包含的任何引用都与原始实例共享。
+            </para><para>
+            派生类型应重写<see cref="M:Microsoft.Agents.AI.AgentRunOptions.Clone" />以返回派生类型的实例。
+            </para></remarks></member><member name="T:Microsoft.Agents.AI.AgentSession"><summary>
+    所有代理线程的基础抽象。
+    </summary><remarks><para>
+        一个 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 包含与代理特定对话的状态，可能包括：
+        <list type="bullet"><item><description>对话历史或对外部存储的对话历史的引用。</description></item><item><description>记忆或对外部存储的记忆的引用。</description></item><item><description>代理在对话中跨运行需要持久化的任何其他状态。</description></item></list></para><para>
+        一个 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 也可能附加行为，可能包括：
+        <list type="bullet"><item><description>自定义状态存储。</description></item><item><description>从对话中提取数据并注入数据。</description></item><item><description>聊天历史缩减，例如需要对消息进行摘要或截断以减小大小。</description></item></list>
+        一个 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 总是由 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 构造，以便 <see cref="T:Microsoft.Agents.AI.AIAgent" />
+        可以向 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 附加任何必要的行为。有关更多信息，请参阅 <see cref="M:Microsoft.Agents.AI.AIAgent.CreateSessionAsync(System.Threading.CancellationToken)" />
+        和 <see cref="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)" /> 方法。
+        </para><para>
+        由于这些行为，一个 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 可能不能在不同的代理之间重用，因为每个代理
+        可能向它创建的 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 添加不同的行为。
+        </para><para>
+        为了支持可能需要在应用程序重启或单独服务请求中存活的对话，一个 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 可以被序列化
+        和反序列化，以便可以保存在持久化存储中。
+        <see cref="T:Microsoft.Agents.AI.AIAgent" /> 提供了 <see cref="M:Microsoft.Agents.AI.AIAgent.SerializeSessionAsync(Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)" /> 方法来将会话序列化为
+        <see cref="T:System.Text.Json.JsonElement" />，并且可以使用 <see cref="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)" /> 方法
+        来反序列化会话。
+        </para><para><strong>安全注意事项：</strong>序列化的会话可能包含对话内容、会话标识符
+        以及其他潜在的敏感数据，包括个人身份信息 (PII)。开发人员应：
+        <list type="bullet"><item><description>将序列化的会话数据视为敏感数据，并通过适当的访问控制和静态加密安全地存储。</description></item><item><description>将会话从不受信任的来源恢复等同于接受不受信任的输入。受感染的存储后端
+        可能会更改消息角色以提高信任度，或注入影响 LLM 行为的对抗性内容。</description></item></list></para></remarks><seealso cref="T:Microsoft.Agents.AI.AIAgent" /><seealso cref="M:Microsoft.Agents.AI.AIAgent.CreateSessionAsync(System.Threading.CancellationToken)" /><seealso cref="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)" /></member><member name="M:Microsoft.Agents.AI.AgentSession.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 类的新实例。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSession.#ctor(Microsoft.Agents.AI.AgentSessionStateBag)"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 类的新实例。
+            </summary></member><member name="P:Microsoft.Agents.AI.AgentSession.StateBag"><summary>
+    获取与此会话关联的任何任意状态。
+    </summary><remarks>
+    存储在此 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" /> 中的数据将在序列化会话时包含在内。
+    除非经过适当加密，否则请避免在状态包中存储机密、凭据或高度敏感数据，
+    因为这些数据可能会被持久化到外部存储。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AgentSession.GetService(System.Type,System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 请求指定类型 <paramref name="serviceType" /> 的对象。</summary><param name="serviceType">正在请求的对象的类型。</param><param name="serviceKey">一个可选键，可用于帮助标识目标服务。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="serviceType" /> 为 <see langword="null" />。</exception><remarks>
+            此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 可能提供的强类型服务，
+            包括它本身或它可能包装的任何服务。例如，要访问实例可用的 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />，
+            可以使用 <see cref="M:Microsoft.Agents.AI.AgentSession.GetService(System.Type,System.Object)" /> 来请求它。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentSession.GetService``1(System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 请求一个类型为 <typeparamref name="TService" /> 的对象。</summary><typeparam name="TService">要检索的对象类型。</typeparam><param name="serviceKey">一个可选密钥，可用于帮助标识目标服务。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><remarks>
+            此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 提供的强类型服务，包括其自身或其可能包装的任何服务。
+            </remarks></member><member name="T:Microsoft.Agents.AI.AgentSessionExtensions"><summary>
+    提供用于 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 的扩展方法。
+  </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionExtensions.TryGetInMemoryChatHistory(Microsoft.Agents.AI.AgentSession,System.Collections.Generic.List{Microsoft.Extensions.AI.ChatMessage}@,System.String,System.Text.Json.JsonSerializerOptions)"><summary>
+            尝试检索与指定代理会话关联的内存中的聊天历史消息，如果代理使用 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 在会话中存储记忆。
+            </summary><remarks>
+            此方法仅在使用 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 且服务不需要服务内聊天历史存储时适用。
+            </remarks><param name="session">从中检索内存聊天历史的代理会话。</param><param name="messages">当该方法返回时，包含聊天历史消息列表（如果可用）；否则为 null。</param><param name="stateKey">用于标识会话状态包中聊天历史状态的可选密钥。如果为 null，则使用内存聊天历史的默认密钥。</param><param name="jsonSerializerOptions">访问会话状态时可选的 JSON 序列化器选项。如果为 null，则使用默认选项。</param><returns>如果找到并检索到内存中的聊天历史消息，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentSessionExtensions.SetInMemoryChatHistory(Microsoft.Agents.AI.AgentSession,System.Collections.Generic.List{Microsoft.Extensions.AI.ChatMessage},System.String,System.Text.Json.JsonSerializerOptions)"><summary>
+            为指定的代理会话设置内存中的聊天消息历史记录，替换任何现有消息。
+            </summary><remarks>
+            此方法仅适用于使用<see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" />且服务不需要在服务内存储聊天历史记录的情况。
+            如果设置了消息，但使用了不同的<see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />，或者聊天历史记录存储在底层AI服务中，则这些消息将被忽略。
+            </remarks><param name="session">将更新其内存聊天历史记录的代理会话。</param><param name="messages">要存储在会话内存中的聊天消息列表。替换指定状态键的任何现有消息。</param><param name="stateKey">用于标识会话状态包中内存聊天历史记录的键。如果为 null，则使用默认键。</param><param name="jsonSerializerOptions">访问或存储状态时使用的序列化程序选项。如果为 null，则应用默认选项。</param></member><member name="T:Microsoft.Agents.AI.AgentSessionStateBag"><summary>
+            提供线程安全的键值存储，用于管理会话范围的状态，支持类型安全的访问和JSON序列化选项。
+            </summary><remarks>
+            SessionState支持使用字符串键存储和检索与会话关联的对象。值可以通过类型安全的方式访问，并使用可配置的JSON序列化选项进行序列化或反序列化。此类专为并发访问设计，并且可以安全地在多个线程中使用。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.#ctor"><summary>
+        初始化 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" /> 类的新实例。
+    </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.String,Microsoft.Agents.AI.AgentSessionStateBagValue})"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" /> 类的新实例。
+            </summary><param name="state">初始状态字典。</param></member><member name="P:Microsoft.Agents.AI.AgentSessionStateBag.Count"><summary>
+    获取会话状态中包含的键值对的数量。
+    </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.TryGetValue``1(System.String,``0@,System.Text.Json.JsonSerializerOptions)"><summary>
+    尝试从会话状态中获取值。
+    </summary><typeparam name="T">要检索的值的类型。</typeparam><param name="key">从中检索值的键。</param><param name="value">如果找到并可转换为所需类型，则为该值；否则为 null。</param><param name="jsonSerializerOptions">用于序列化/反序列化值的 JSON 序列化器选项。</param><returns>如果成功检索到值，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.GetValue``1(System.String,System.Text.Json.JsonSerializerOptions)"><summary>
+            从会话状态获取值。
+            </summary><typeparam name="T">要获取的值的类型。</typeparam><param name="key">从中检索值的键。</param><param name="jsonSerializerOptions">用于序列化/反序列化值的 JSON 序列化器选项。</param><returns>检索到的值，如果未找到则为 null。</returns><exception cref="T:System.InvalidOperationException">值无法反序列化为所需类型。</exception></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.SetValue``1(System.String,``0,System.Text.Json.JsonSerializerOptions)"><summary>
+            在会话状态中设置一个值。
+            </summary><typeparam name="T">要设置的值的类型。</typeparam><param name="key">存储值所使用的键。</param><param name="value">要设置的值。</param><param name="jsonSerializerOptions">用于序列化值的 JSON 序列化器选项。</param></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.TryRemoveValue(System.String)"><summary>
+            尝试从会话状态中移除一个值。
+            </summary><param name="key">要移除的值的键。</param><returns><see langword="true" /> 如果值被成功移除；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.Serialize"><summary>将所有会话状态值序列化为一个JSON对象。</summary><returns>表示序列化会话状态的<see cref="T:System.Text.Json.JsonElement" />。</returns><exception cref="T:System.InvalidOperationException">当会话状态值未正确初始化时引发。</exception></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBag.Deserialize(System.Text.Json.JsonElement)"><summary>
+            将 JSON 对象反序列化为 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" /> 实例。
+            </summary><param name="jsonElement">要反序列化的元素。</param><returns>反序列化后的 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" />。</returns></member><member name="T:Microsoft.Agents.AI.AgentSessionStateBagJsonConverter"><summary>
+            自定义 JSON 转换器，用于 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" />，它序列化和反序列化内部字典内容，而不是容器对象的公共属性。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Microsoft.Agents.AI.AgentSessionStateBag,System.Text.Json.JsonSerializerOptions)"><inheritdoc /></member><member name="T:Microsoft.Agents.AI.AgentSessionStateBagValue"><summary>
+            用于在会话状态中存储值。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValue.#ctor(System.Text.Json.JsonElement)"><summary>
+            使用指定的值初始化 SessionStateValue 类的新实例。
+            </summary><param name="jsonValue">要与会话状态关联的序列化值。</param></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValue.#ctor(System.Object,System.Type,System.Text.Json.JsonSerializerOptions)"><summary>
+            使用指定的值初始化 SessionStateValue 类的新实例。
+            </summary><param name="deserializedValue">要与会话状态关联的值。可以是任何对象，包括 null。</param><param name="valueType">值的类型。</param><param name="jsonSerializerOptions">用于序列化值的 JSON 序列化器选项。</param></member><member name="P:Microsoft.Agents.AI.AgentSessionStateBagValue.JsonValue"><summary>
+            获取或设置与此实例关联的值。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValue.TryReadDeserializedValue``1(``0@,System.Text.Json.JsonSerializerOptions)"><summary>
+            尝试读取此会话状态值的反序列化值。
+            如果值无法反序列化为所需类型，或值未定义，则返回 false。
+            如果值为 null，则返回 true 并将 out 参数设置为 null。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValue.ReadDeserializedValue``1(System.Text.Json.JsonSerializerOptions)"><summary>
+            读取此会话状态值的反序列化值，如果该值无法反序列化为所需类型或未定义，则抛出异常。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValue.SetDeserialized``1(``0,System.Type,System.Text.Json.JsonSerializerOptions)"><summary>
+            设置此会话状态值的反序列化值，并相应地更新缓存。这不会直接更新JsonValue；JsonValue将在下次读取或对象序列化时更新。
+            </summary></member><member name="T:Microsoft.Agents.AI.AgentSessionStateBagValueJsonConverter"><summary>
+            用于 <see cref="T:Microsoft.Agents.AI.AgentSessionStateBagValue" /> 的自定义 JSON 转换器，它直接序列化和反序列化 <see cref="P:Microsoft.Agents.AI.AgentSessionStateBagValue.JsonValue" />，而不是将其包装在容器对象中。
+            </summary></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValueJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.AgentSessionStateBagValueJsonConverter.Write(System.Text.Json.Utf8JsonWriter,Microsoft.Agents.AI.AgentSessionStateBagValue,System.Text.Json.JsonSerializerOptions)"><inheritdoc /></member><member name="T:Microsoft.Agents.AI.AIAgent"><summary>
+    为所有AI代理提供基础抽象，定义代理交互和对话管理的核心接口。
+    </summary><remarks><see cref="T:Microsoft.Agents.AI.AIAgent" /> 作为实现能够参与对话和处理用户请求的AI代理的基础类。
+    一个代理实例可以参与多个并发对话，每个对话可能涉及多个代理协同工作。
+    <para><strong>安全注意事项：</strong><see cref="T:Microsoft.Agents.AI.AIAgent" /> 编排跨越信任边界的数据流——消息被发送到外部AI服务、上下文提供程序、聊天历史存储和函数工具。Agent Framework按原样传递消息，不进行验证或清理。开发人员必须注意：
+    <list type="bullet"><item><description>用户提供的消息可能包含旨在操纵LLM行为的提示注入尝试。</description></item><item><description>LLM响应应被视为不可信输出——它们可能包含幻觉、恶意有效负载（例如脚本、SQL）或受间接提示注入影响的内容。在HTML中呈现、作为代码执行或在数据库查询中使用之前，务必验证和清理LLM输出。</description></item><item><description>不同角色的消息具有不同的信任级别：<c>system</c>消息具有最高信任度且必须由开发人员控制；<c>user</c>、<c>assistant</c>和<c>tool</c>消息应被视为不可信。</description></item></list></para></remarks><summary>
+    为<see cref="T:Microsoft.Agents.AI.AIAgent" />提供结构化输出方法，使得能够以特定类型格式请求响应。
+    </summary></member><member name="P:Microsoft.Agents.AI.AIAgent.Id"><summary>
+            获取此代理实例的唯一标识符。
+            </summary><value>
+            代理的唯一字符串标识符。对于内存中的代理，默认为随机生成的 ID，而服务支持的代理通常使用支持服务分配的标识符。
+            </value><remarks>
+            代理标识符用于在多代理场景中进行跟踪、遥测和区分不同的代理实例。它们应在代理实例的整个生命周期内保持稳定。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AIAgent.IdCore"><summary>
+            获取代理的自定义标识符，可由派生类重写。
+            </summary><value>
+            表示代理标识符的字符串，如果应使用默认ID，则为 <see langword="null" />。
+            </value><remarks>
+            派生类可以重写此属性以提供自定义标识符。当返回 <see langword="null" /> 时，<see cref="P:Microsoft.Agents.AI.AIAgent.Id" /> 属性将使用默认的随机生成的标识符。
+            </remarks></member><member name="P:Microsoft.Agents.AI.AIAgent.Name"><summary>
+        获取代理的人类可读名称。
+    </summary><value>
+        代理的名称，如果未分配名称，则为 <see langword="null" />。
+    </value><remarks>
+        代理名称通常用于显示目的，并帮助用户在用户界面中识别代理的用途或功能。
+    </remarks></member><member name="P:Microsoft.Agents.AI.AIAgent.Description"><summary>
+    获取代理的目的、能力或行为的描述。
+    </summary><value>
+    一段描述性文本，解释代理的用途，如果无可用描述，则为 <see langword="null" />。
+    </value><remarks>
+    该描述有助于模型和用户理解代理的预期目的和能力，在多代理系统中尤其有用。
+    </remarks></member><member name="P:Microsoft.Agents.AI.AIAgent.CurrentRunContext"><summary>
+            获取或设置当前代理运行的 <see cref="T:Microsoft.Agents.AI.AgentRunContext" />。
+            </summary><remarks>
+            此值跨异步调用流动。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.GetService(System.Type,System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 请求指定类型 <paramref name="serviceType" /> 的对象。</summary><param name="serviceType">所请求对象的类型。</param><param name="serviceKey">一个可选键，可用于帮助标识目标服务。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="serviceType" /> 为 <see langword="null" />。</exception><remarks>
+            此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 提供的强类型服务，包括其自身或可能包装的任何服务。例如，要访问实例的 <see cref="T:Microsoft.Agents.AI.AIAgentMetadata" />，可以使用 <see cref="M:Microsoft.Agents.AI.AIAgent.GetService(System.Type,System.Object)" /> 请求它。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.GetService``1(System.Object)"><summary>询问<see cref="T:Microsoft.Agents.AI.AIAgent" />以获取类型为<typeparamref name="TService" />的对象。</summary><typeparam name="TService">要检索的对象的类型。</typeparam><param name="serviceKey">可用于帮助标识目标服务的可选键。</param><returns>找到的对象，否则为<see langword="null" />。</returns><remarks>
+            此方法的目的是允许检索可能由<see cref="T:Microsoft.Agents.AI.AIAgent" />提供的强类型服务，包括自身或其可能包装的任何服务。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.CreateSessionAsync(System.Threading.CancellationToken)"><summary>
+            创建一个与此代理兼容的新对话会话。
+            </summary><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的值任务。任务结果包含一个可供此代理使用的新<see cref="T:Microsoft.Agents.AI.AgentSession" />实例。</returns><remarks><para>
+            此方法创建一个新的对话会话，可用于维护与此代理交互的状态和上下文。每个会话代表一个独立的对话会话。
+            </para><para>
+            如果代理支持多种会话类型，则此方法返回默认或配置的会话类型。对于服务支持的代理，实际的会话创建可能会延迟到首次使用，以优化性能。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.CreateSessionCoreAsync(System.Threading.CancellationToken)"><summary>
+    会话创建逻辑的核心实现。
+    </summary><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的值任务。任务结果包含一个新的<see cref="T:Microsoft.Agents.AI.AgentSession" />实例，可供此代理使用。</returns><remarks>
+    这是实现必须重写的主要会话创建方法。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.SerializeSessionAsync(Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><summary>
+            将代理会话序列化为其 JSON 表示形式。
+            </summary><param name="session">要序列化的 <see cref="T:Microsoft.Agents.AI.AgentSession" />。</param><param name="jsonSerializerOptions">用于自定义序列化过程的可选设置。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的值任务。任务结果包含一个 <see cref="T:System.Text.Json.JsonElement" />，其中包含序列化的会话状态。</returns><exception cref="T:System.ArgumentNullException"><paramref name="session" /> 为 <see langword="null" />。</exception><exception cref="T:System.InvalidOperationException">此代理不支持 <paramref name="session" /> 的类型。</exception><remarks>
+            此方法可将对话会话保存到持久性存储，
+            允许在应用程序重新启动后恢复对话或在不同代理实例之间迁移对话。
+            使用 <see cref="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)" /> 恢复会话。
+            <para><strong>安全注意事项：</strong>序列化的会话可能包含对话内容、会话标识符
+            以及其他潜在敏感数据（包括个人身份信息）。请确保对序列化的会话数据应用
+            适当的访问控制和静态加密以进行安全存储。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.SerializeSessionCoreAsync(Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><summary>
+            会话序列化逻辑的核心实现。
+            </summary><param name="session">要序列化的<see cref="T:Microsoft.Agents.AI.AgentSession" />。</param><param name="jsonSerializerOptions">用于自定义序列化过程的可选设置。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的值任务。任务结果包含一个带有序列化会话状态的<see cref="T:System.Text.Json.JsonElement" />。</returns><remarks>
+            这是实现必须重写的主要会话序列化方法。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><summary>
+            从其JSON序列化表示中反序列化代理会话。
+            </summary><param name="serializedState">包含序列化会话状态的<see cref="T:System.Text.Json.JsonElement" />。</param><param name="jsonSerializerOptions">可选设置，用于自定义反序列化过程。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的值任务。任务结果包含一个已恢复的<see cref="T:Microsoft.Agents.AI.AgentSession" />实例，其状态来自<paramref name="serializedState" />。</returns><exception cref="T:System.ArgumentException"><paramref name="serializedState" />不是预期的格式。</exception><exception cref="T:System.Text.Json.JsonException">序列化数据无效或无法反序列化。</exception><remarks>
+            此方法允许从先前保存的状态中恢复对话会话，使对话可以在应用程序重启后继续，或在不同的代理实例之间迁移。
+            <para><strong>安全注意事项：</strong>从不受信任的来源恢复会话等同于接受不受信任的输入。序列化的会话可能包含对话内容、会话标识符和潜在的敏感数据。被破坏的存储后端可能会更改消息角色以提升信任度，或注入可能影响LLM行为的对抗性内容。请将序列化的会话数据视为敏感数据，并确保其安全存储和传输。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.DeserializeSessionCoreAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><summary>
+            会话反序列化逻辑的核心实现。
+            </summary><param name="serializedState">包含序列化会话状态的 <see cref="T:System.Text.Json.JsonElement" />。</param><param name="jsonSerializerOptions">用于自定义反序列化过程的可选设置。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的值任务。任务结果包含一个从 <paramref name="serializedState" /> 恢复的 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 实例。</returns><remarks>
+            这是实现必须重写的首要会话反序列化方法。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>  
+    运行代理而不发送任何消息，假设所有必需的指令已提供给代理或已在会话中。  
+    </summary><param name="session">  
+    用于此调用的对话会话。如果<see langword="null" />，则将创建一个新会话。  
+    会话将使用调用期间生成的任何响应消息进行更新。  
+    </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的<see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><remarks>  
+    当代理从会话中的先前消息或其初始配置中获得足够上下文，无需额外输入即可生成有意义的响应时，此重载非常有用。  
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync(System.String,Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用来自用户的文本消息运行代理。
+            </summary><param name="message">要发送给代理的用户消息。</param><param name="session">
+            用于此调用的对话会话。如果为 <see langword="null" />，则将创建一个新的会话。
+            会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><exception cref="T:System.ArgumentException"><paramref name="message" /> 为 <see langword="null" />、空字符串或仅包含空格。</exception><remarks>
+            提供的文本将在发送到代理之前被包装在带有 <see cref="P:Microsoft.Extensions.AI.ChatRole.User" /> 角色的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 中。
+            这是用于简单基于文本交互的便捷方法。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync(Microsoft.Extensions.AI.ChatMessage,Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用单个聊天消息运行代理。
+            </summary><param name="message">要发送给代理的聊天消息。</param><param name="session">
+            用于此调用的对话会话。如果 <see langword="null" />，则将创建一个新会话。
+            会话将使用输入消息以及调用期间生成的任何响应消息进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="message" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            运行代理（agent），使用聊天消息集合，提供所有其他重载委托的核心调用逻辑。
+            </summary><param name="messages">要发送给代理处理的消息集合。</param><param name="session">
+            用于此调用的对话会话。如果为 <see langword="null" />，则会创建一个新会话。
+            该会话将使用输入消息以及在调用过程中生成的任何响应消息进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><remarks><para>
+            此方法委托给 <see cref="M:Microsoft.Agents.AI.AIAgent.RunCoreAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" /> 来执行实际的代理调用。它处理消息集合，支持复杂的对话场景，包括多轮交互、函数调用和上下文丰富的对话。
+            </para><para>
+            消息按照提供的顺序进行处理，并成为对话历史的一部分。如果提供了会话，代理的响应也将添加到 <paramref name="session" /> 中。
+            </para><para><strong>安全注意事项：</strong> 代理框架不验证或清理消息内容——它会原样传递给底层AI服务。如果输入消息包含不受信任的用户内容，开发人员应意识到提示注入风险。系统角色消息必须由开发人员控制，绝不应包含最终用户输入。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunCoreAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+    使用聊天消息集合的代理调用逻辑的核心实现。
+    </summary><param name="messages">要发送给代理进行处理的消息集合。</param><param name="session">
+    用于此调用的对话会话。如果为 <see langword="null" />，则将创建一个新会话。
+    该会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+    </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse" />。</returns><remarks><para>
+    这是实现必须重写的主要调用方法。它处理消息集合，允许复杂的对话场景，包括多轮交互、函数调用和丰富上下文的对话。
+    </para><para>
+    消息按照提供的顺序进行处理，并成为对话历史的一部分。如果提供了会话，代理的响应也将添加到 <paramref name="session" />。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            以流模式运行代理，不提供新的输入消息，依赖现有的上下文和指令。
+            </summary><param name="session">
+            用于此调用的对话会话。如果为<see langword="null" />，则将创建一个新会话。会话将更新为在调用期间生成的任何响应消息。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示流响应的<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />实例的异步枚举。</returns></member><member name="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(System.String,Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用用户的文本消息以流式模式运行代理。
+            </summary><param name="message">要发送给代理的用户消息。</param><param name="session">
+            用于此调用的对话会话。如果<see langword="null" />，将创建新会话。该会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个包含<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />实例的异步可枚举对象，表示流式响应。</returns><exception cref="T:System.ArgumentException"><paramref name="message" />为<see langword="null" />、空字符串或仅包含空白字符。</exception><remarks>
+            提供的文本将包装在一个<see cref="T:Microsoft.Extensions.AI.ChatMessage" />中，该消息具有<see cref="P:Microsoft.Extensions.AI.ChatRole.User" />角色。流式调用在代理生成响应时提供实时更新。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(Microsoft.Extensions.AI.ChatMessage,Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用单条聊天消息以流式模式运行代理。
+            </summary><param name="message">要发送给代理的聊天消息。</param><param name="session">
+            用于此次调用的对话会话。如果 <see langword="null" />，则将创建一个新会话。
+            会话将使用输入消息以及在调用期间生成的任何响应消息进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个异步可枚举的 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例，表示流式响应。</returns><exception cref="T:System.ArgumentNullException"><paramref name="message" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AIAgent.RunStreamingAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用聊天消息集合以流式模式运行代理，提供核心流式调用逻辑。
+            </summary><param name="messages">要发送给代理进行处理的消息集合。</param><param name="session">
+            用于此调用的对话会话。如果为 <see langword="null" />，则将创建一个新会话。
+            会话将使用输入消息和调用期间生成的任何响应更新进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个异步可枚举的 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 实例，表示流式响应。</returns><remarks><para>
+            此方法委托给 <see cref="M:Microsoft.Agents.AI.AIAgent.RunCoreStreamingAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)" /> 来执行实际的流式调用。它在代理处理输入并生成响应时提供实时更新，从而实现更灵敏的用户体验。
+            </para><para>
+            每个 <see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" /> 代表完整响应的一部分，允许使用者显示部分结果、实现渐进式加载或向用户提供即时反馈。
+            </para><para><strong>安全注意事项：</strong> 代理框架不会验证或清理消息内容 — 它将原样传递到底层 AI 服务。如果输入消息包含不受信任的用户内容，开发人员应意识到提示注入风险。系统角色消息必须由开发人员控制，且绝不应包含最终用户输入。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunCoreStreamingAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用聊天消息集合的代理流式调用逻辑的核心实现。
+            </summary><param name="messages">要发送给代理进行处理的消息集合。</param><param name="session">
+            用于此调用的对话会话。如果为<see langword="null" />，则将创建一个新会话。
+            该会话将使用输入消息和调用期间生成的任何响应更新进行更新。
+            </param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />实例的异步可枚举集合，表示流式响应。</returns><remarks><para>
+            这是实现必须重写的主要流式调用方法。它在代理处理输入并生成响应时提供实时更新，从而实现更灵敏的用户体验。
+            </para><para>
+            每个<see cref="T:Microsoft.Agents.AI.AgentResponseUpdate" />代表完整响应的一部分，允许使用者显示部分结果、实现渐进加载或向用户提供即时反馈。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync``1(Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+    在假设所有必要的指令已经提供给代理或存在于会话中的情况下，运行没有消息的代理，并请求类型为 <typeparamref name="T" /> 的响应。
+    </summary><typeparam name="T">要请求的结构化输出的类型。</typeparam><param name="session">用于此调用的对话会话。如果为 <see langword="null" />，则将创建一个新会话。会话将使用调用期间生成的任何响应消息进行更新。</param><param name="serializerOptions">用于反序列化响应的可选 JSON 序列化器选项。</param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse`1" />。</returns><remarks>当代理拥有来自会话中先前消息或其初始配置的足够上下文，从而无需额外输入即可生成有意义的响应时，此重载非常有用。</remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync``1(System.String,Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+    使用用户的文本消息运行代理，请求指定类型 <typeparamref name="T" /> 的响应。
+    </summary><typeparam name="T">要请求的结构化输出的类型。</typeparam><param name="message">要发送给代理的用户消息。</param><param name="session">
+    用于此调用的对话会话。如果为 <see langword="null" />，则将创建一个新会话。会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+    </param><param name="serializerOptions">用于反序列化响应的可选 JSON 序列化器选项。</param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有代理输出的 <see cref="T:Microsoft.Agents.AI.AgentResponse`1" />。</returns><exception cref="T:System.ArgumentException"><paramref name="message" /> 为 <see langword="null" />、空字符串或仅包含空白字符。</exception><remarks>
+    提供的文本将被包装在具有 <see cref="P:Microsoft.Extensions.AI.ChatRole.User" /> 角色的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 中，然后发送给代理。这是一种用于简单基于文本交互的便捷方法。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync``1(Microsoft.Extensions.AI.ChatMessage,Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+            使用单条聊天消息运行代理，请求指定类型<typeparamref name="T" />的响应。
+            </summary><typeparam name="T">要请求的结构化输出的类型。</typeparam><param name="message">要发送给代理的聊天消息。</param><param name="session">
+            用于此调用的对话会话。如果<see langword="null" />，则将创建一个新会话。
+            该会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+            </param><param name="serializerOptions">用于反序列化响应的可选 JSON 序列化程序选项。</param><param name="options">用于控制代理调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个<see cref="T:Microsoft.Agents.AI.AgentResponse`1" />，其中包含代理的输出。</returns><exception cref="T:System.ArgumentNullException"><paramref name="message" />为<see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AIAgent.RunAsync``1(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><summary>
+    使用消息集合运行智能体，并请求指定类型<typeparamref name="T" />的响应。
+    </summary><typeparam name="T">要请求的结构化输出的类型。</typeparam><param name="messages">要发送给智能体进行处理的消息集合。</param><param name="session">
+    用于此次调用的对话会话。如果为<see langword="null" />，则会创建一个新会话。会话将使用输入消息和调用期间生成的任何响应消息进行更新。
+    </param><param name="serializerOptions">用于反序列化响应的可选JSON序列化器选项。</param><param name="options">用于控制智能体调用行为的可选配置参数。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含一个带有智能体输出的<see cref="T:Microsoft.Agents.AI.AgentResponse`1" />。</returns><remarks><para>
+    此方法处理消息集合，允许进行复杂的对话场景，包括多轮交互、函数调用和上下文丰富的对话。
+    </para><para>
+    消息按提供的顺序处理，并成为对话历史的一部分。如果提供了会话，智能体的响应也将添加到<paramref name="session" />中。
+    </para></remarks></member><member name="T:Microsoft.Agents.AI.AIAgentMetadata"><summary>
+    提供关于 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 实例的元数据信息。
+    </summary><remarks>
+    此类包含代理的描述信息，可用于标识、遥测和日志记录目的。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIAgentMetadata.#ctor(System.String)"><summary>
+        初始化 <see cref="T:Microsoft.Agents.AI.AIAgentMetadata" /> 类的新实例。
+    </summary><param name="providerName">
+        代理提供程序的名称（如果适用）。尽可能映射到 OpenTelemetry 生成式 AI 系统语义约定中定义的相应名称。
+    </param></member><member name="P:Microsoft.Agents.AI.AIAgentMetadata.ProviderName"><summary>
+            获取代理提供程序的名称。
+            </summary><value>
+            标识为代理提供支持的基础服务或实现的提供程序名称。
+            </value><remarks>
+            在可能的情况下，这会映射到
+            OpenTelemetry 语义约定中为生成式 AI 系统定义的相应名称。
+            </remarks></member><member name="T:Microsoft.Agents.AI.AIContext"><summary>
+    表示在代理调用期间可以动态提供给 AI 模型的额外上下文信息。
+    </summary><remarks><para><see cref="T:Microsoft.Agents.AI.AIContext" /> 用作上下文信息的容器，<see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 实例可以提供这些上下文信息以增强 AI 模型交互。此上下文会与代理的基本配置合并，然后再传递给底层 AI 模型。
+    </para><para>
+    上下文系统能够为代理能力提供动态的、运行时特定的增强，包括：
+    <list type="bullet"><item><description>从知识库添加相关背景信息</description></item><item><description>注入特定于任务的指令或指南</description></item><item><description>为当前交互提供专门的工具或功能</description></item><item><description>包含向 AI 通知当前情况的上下文消息</description></item></list></para><para>
+    默认情况下，上下文信息是短暂的，仅适用于当前调用，但通过 <see cref="P:Microsoft.Agents.AI.AIContext.Messages" /> 属性添加的消息将永久合并到对话历史记录中。
+    </para></remarks></member><member name="P:Microsoft.Agents.AI.AIContext.Instructions"><summary>
+    获取或设置要提供给AI模型用于当前调用的附加指令。
+  </summary><value>
+    指令文本，该文本将与任何现有的代理指令或系统提示结合使用，
+    如果没有要提供的附加指令，则为 <see langword="null" />。
+  </value><remarks><para>
+      这些指令是临时的，仅适用于当前的AI模型调用。它们与任何现有的代理指令、系统提示和对话历史结合，
+      为AI模型提供全面的上下文。
+    </para><para>
+      指令可用于：
+      <list type="bullet"><item><description>提供特定于上下文的行为指导</description></item><item><description>添加领域特定的知识或约束</description></item><item><description>修改当前交互中代理的角色或响应风格</description></item><item><description>包含情境感知信息</description></item></list></para></remarks></member><member name="P:Microsoft.Agents.AI.AIContext.Messages"><summary>
+    获取或设置用于当前调用的消息序列。
+    </summary><value>
+    用于当前调用的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例序列，如果不使用任何消息，则为 <see langword="null" />。
+    </value><remarks><para>
+    与 <see cref="P:Microsoft.Agents.AI.AIContext.Instructions" /> 和 <see cref="P:Microsoft.Agents.AI.AIContext.Tools" /> 不同，通过此属性添加的消息可能成为对话历史的永久部分。
+    如果聊天历史由底层 AI 服务管理，这些消息将成为聊天历史的一部分。
+    如果聊天历史是使用 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 管理的，则这些消息将传递给
+    <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 方法，
+    并且提供程序可以选择哪些消息永久添加到对话历史。
+    </para><para>
+    此属性可用于：
+    <list type="bullet"><item><description>注入相关历史上下文，例如记忆</description></item><item><description>注入相关背景信息，例如通过检索增强生成</description></item><item><description>添加提供持续上下文的系统消息</description></item></list></para></remarks></member><member name="P:Microsoft.Agents.AI.AIContext.Tools"><summary>
+            获取或设置一个工具或函数序列，使其可用于当前调用的 AI 模型。
+            </summary><value>
+            一个 <see cref="T:Microsoft.Extensions.AI.AITool" /> 实例序列，这些实例将在当前调用期间对 AI 模型可用，如果不提供额外工具，则为 <see langword="null" />。
+            </value><remarks><para>
+            这些工具是临时的，并且仅适用于当前的 AI 模型调用。任何现有工具都会作为输入提供给 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 实例，因此上下文提供程序可以根据当前上下文的需要选择修改或替换现有工具。生成的结果工具集随后传递给底层 AI 模型，该模型可以选择在生成响应时使用它们。
+            </para><para>
+            上下文特定的工具可以：
+            <list type="bullet"><item><description>根据用户意图或对话上下文提供专门功能</description></item><item><description>为特定类型的查询添加特定领域的能力</description></item><item><description>启用对与当前任务相关的外部服务或数据源的访问</description></item><item><description>提供针对当前对话状态定制的交互能力</description></item></list></para></remarks></member><member name="T:Microsoft.Agents.AI.AIContextProvider"><summary>
+    为在代理调用期间增强AI上下文的组件提供抽象基类。
+    </summary><remarks><para>
+    AI上下文提供器是一个通过以下方式参与代理调用生命周期的组件：
+    <list type="bullet"><item><description>监听对话中的更改</description></item><item><description>在调用期间向代理提供额外的上下文</description></item><item><description>提供额外的功能工具以增强能力</description></item><item><description>处理调用结果以进行状态管理或学习</description></item></list></para><para>
+    上下文提供器通过两阶段生命周期运行：在调用开始时通过
+    <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 调用以提供上下文，并在调用结束时通过
+    <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 选择性调用以处理结果。
+    </para><para><strong>安全注意事项：</strong>上下文提供器可以注入任何角色的消息，包括具有最高信任级别并直接影响LLM行为的<c>system</c>。开发者必须确保附加到代理的所有提供器都是可信的。代理框架不会验证或过滤提供器返回的数据——它按原样接受并合并到请求上下文中。如果提供器从外部源（例如向量数据库或内存服务）检索数据，请注意受损的数据源可能会引入旨在通过间接提示注入操纵LLM行为的对抗性内容。实现者应在返回之前验证和清理从外部源检索的数据。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.#ctor(System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}})"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 类的新实例。
+            </summary><param name="provideInputMessageFilter">一个可选的筛选器函数，用于在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 提供上下文之前对输入消息进行筛选。如果未设置，默认仅包含 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" /> 消息。</param><param name="storeInputRequestMessageFilter">一个可选的筛选器函数，用于在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 存储上下文之前对请求消息进行筛选。如果未设置，默认仅包含 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" /> 消息。</param><param name="storeInputResponseMessageFilter">一个可选的筛选器函数，用于在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 存储上下文之前对响应消息进行筛选。如果未设置，默认是一个无操作筛选器，包含所有响应消息。</param></member><member name="P:Microsoft.Agents.AI.AIContextProvider.ProvideInputMessageFilter"><summary>
+    获取在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 提供上下文之前应用于输入消息的筛选函数。
+    </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.StoreInputRequestMessageFilter"><summary>
+    获取在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 存储上下文之前应用于请求消息的筛选函数。
+    </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.StoreInputResponseMessageFilter"><summary>
+            获取在通过<see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />存储上下文之前应用于响应消息的筛选函数。
+            </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.StateKeys"><summary>
+            获取用于在<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中存储提供程序状态的键集。
+            </summary><remarks>
+            默认值是包含具体类型名称（例如 <c>"TextSearchProvider"</c>）的单元素集。
+            实现可以重写此属性以提供自定义键，例如，当同一会话中使用同一提供程序类型的多个实例，
+或当提供程序在多个键下存储状态时。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokingAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            在代理调用开始时调用以提供额外上下文。
+            </summary><param name="context">包含请求上下文，包括调用者提供的消息，这些消息将由代理用于此调用。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的任务。任务结果包含<see cref="T:Microsoft.Agents.AI.AIContext" />，其中包含供代理在此调用期间使用的其他上下文。</returns><remarks><para>
+            实现者此时可以加载任何所需的额外上下文，例如：
+            <list type="bullet"><item><description>从知识库检索相关信息</description></item><item><description>添加系统指令或提示</description></item><item><description>为当前调用提供函数工具</description></item><item><description>从对话历史注入上下文消息</description></item></list></para><para><strong>安全注意事项：</strong>从外部源（例如，向量数据库、内存服务或知识库）检索的数据可能包含旨在通过间接提示注入影响LLM行为的对抗性内容。实现者应验证数据完整性并考虑数据源的可靠性。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            在代理调用开始时调用以提供额外上下文。
+            </summary><param name="context">包含请求上下文，包括调用者提供的消息，这些消息将在此次调用中由代理使用。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的任务。任务结果包含一个 <see cref="T:Microsoft.Agents.AI.AIContext" />，其中包含代理在此次调用中要使用的额外上下文。</returns><remarks><para>
+            实现者可以加载此时所需的任何额外上下文，例如：
+            <list type="bullet"><item><description>从知识库检索相关信息</description></item><item><description>添加系统指令或提示</description></item><item><description>提供当前调用的函数工具</description></item><item><description>从对话历史中注入上下文消息</description></item></list></para><para>
+            此方法的默认实现使用配置的提供输入消息过滤器（默认仅包含 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" /> 消息）过滤输入消息，
+            然后调用 <see cref="M:Microsoft.Agents.AI.AIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 获取额外上下文，
+            将返回上下文中的任何消息标记为 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.AIContextProvider" /> 来源属性，
+            并将返回的上下文与原始（未过滤的）输入上下文合并（串联指令、消息和工具）。
+            对于大多数情况，重写 <see cref="M:Microsoft.Agents.AI.AIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 就足以提供额外上下文，
+            同时仍能受益于默认的过滤、合并和来源标记行为。
+            但是，对于需要对上下文过滤、合并或来源标记进行更多控制的情况，重写此方法允许您直接控制为此调用返回的完整 <see cref="T:Microsoft.Agents.AI.AIContext" />。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            当在派生类中重写时，提供额外的 AI 上下文以与当前调用的输入上下文合并。
+            </summary><remarks><para>
+            该方法从 <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 调用。
+            请注意，可以重写 <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 来直接控制上下文合并和源标记，在这种情况下，
+            实现者需要根据需要调用此方法来检索额外的上下文。
+            </para><para>
+            与 <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 相比，此方法仅返回与输入合并的额外上下文，
+            而 <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 负责返回调用所需的完全合并的 <see cref="T:Microsoft.Agents.AI.AIContext" />。
+            </para><para><strong>安全注意事项：</strong>此方法返回的任何消息、工具或指令将合并到 AI 请求上下文中。
+            如果数据是从外部或不受信任的源检索的，实现者应验证和清理这些数据，以防止间接提示注入攻击。
+            </para></remarks><param name="context">包含请求上下文，包括调用方提供的消息，这些消息将由代理用于此调用。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>
+            表示异步操作的任务。任务结果包含一个 <see cref="T:Microsoft.Agents.AI.AIContext" />，
+            其中包含要与输入上下文合并的额外上下文。
+            </returns></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokedAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+            在代理调用结束时调用，以处理调用结果。
+            </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及发生的任何异常。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。</returns><remarks><para>
+            实现者可以使用提供的<paramref name="context" />中的请求和响应消息来：
+            <list type="bullet"><item><description>根据对话结果更新状态</description></item><item><description>从用户消息中提取并存储记忆或偏好</description></item><item><description>记录或审计对话详情</description></item><item><description>执行清理或收尾任务</description></item></list></para><para>
+            通过<see cref="T:Microsoft.Agents.AI.AIContextProvider.InvokingContext" />和<see cref="T:Microsoft.Agents.AI.AIContextProvider.InvokedContext" />将<see cref="T:Microsoft.Agents.AI.AIContextProvider" />的引用传递给<see cref="T:Microsoft.Agents.AI.AgentSession" />，
+            允许其将状态存储在<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中。由于一个<see cref="T:Microsoft.Agents.AI.AIContextProvider" />用于多个不同的会话，因此它不应
+            在其自身的实例字段中存储任何特定于会话的信息。相反，任何特定于会话的状态都应存储在关联的<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中。
+            </para><para>
+            无论调用成功还是失败，都会调用此方法。
+            若要检查调用是否成功，请检查<see cref="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.InvokeException" />属性。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+            在代理调用结束时调用以处理调用结果。
+            </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及发生的任何异常。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。</returns><remarks><para>
+            实现者可以使用提供的<paramref name="context" />中的请求和响应消息来：
+            <list type="bullet"><item><description>基于对话结果更新内部状态</description></item><item><description>从用户消息中提取和存储记忆或偏好</description></item><item><description>记录或审计对话详细信息</description></item><item><description>执行清理或最终化任务</description></item></list></para><para>
+            无论调用成功还是失败都会调用此方法。要检查调用是否成功，请检查<see cref="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.InvokeException" />属性。
+            </para><para>
+            此方法的默认实现会跳过任何调用失败，使用配置的存储输入请求消息过滤器（默认仅包括<see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" />消息）过滤请求消息，使用配置的存储输入响应消息过滤器（默认为无操作，因此所有响应消息都会被处理）过滤响应消息，并调用<see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />来处理调用结果。
+            对于大多数场景，重写<see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />足以处理调用结果，同时仍然受益于默认的错误处理和过滤行为。
+            但是，对于需要对错误处理或消息过滤进行更多控制的场景，重写此方法允许您直接控制调用结果的处理。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+            在派生类中重写时，在代理调用结束时处理调用结果。
+            </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及任何发生的异常。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。</returns><remarks><para>
+            此方法从<see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />调用。
+            请注意，<see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />可以被重写以直接控制错误处理，在这种情况下，实现者需要根据需要调用此方法来处理调用结果。
+            </para><para>
+            与<see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />不同，此方法仅处理调用结果，
+            而<see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />还负责错误处理。
+            </para><para><see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" />的默认实现仅在调用成功时调用此方法。
+            </para><para><strong>安全考虑：</strong>正在处理/存储的消息可能包含个人身份信息（PII）和敏感的对话内容。
+            实现者应确保对存储后端进行适当的静态加密和访问控制。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.GetService(System.Type,System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 请求指定类型 <paramref name="serviceType" /> 的对象。</summary><param name="serviceType">被请求的对象类型。</param><param name="serviceKey">可用于帮助识别目标服务的可选键。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="serviceType" /> 为 <see langword="null" />。</exception><remarks>
+        此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 可能提供的强类型服务，
+        包括其自身或它可能包装的任何服务。这使得在需要访问特定提供程序实现或其内部服务的高级场景下变得更强。
+    </remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.GetService``1(System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 请求一个类型为 <typeparamref name="TService" /> 的对象。</summary><typeparam name="TService">要检索的对象的类型。</typeparam><param name="serviceKey">一个可选的键，可用于帮助识别目标服务。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><remarks>
+    此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 提供的强类型服务，包括其自身或可能包装的任何服务。这是 <see cref="M:Microsoft.Agents.AI.AIContextProvider.GetService(System.Type,System.Object)" /> 的便利重载。
+    </remarks></member><member name="T:Microsoft.Agents.AI.AIContextProvider.InvokingContext"><summary>
+            包含提供给<see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" />的上下文信息。
+            </summary><remarks>
+            此类提供在调用底层 AI 模型之前的调用上下文，包括将要使用的消息。上下文提供程序可以使用此信息来确定应为该调用提供哪些额外上下文。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokingContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AIContext)"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AIContextProvider.InvokingContext" /> 类的新实例。
+            </summary><param name="agent">正在被调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="aiContext">代理用于此调用的 AI 上下文。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" /> 或 <paramref name="aiContext" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.Agent"><summary>
+    获取正在被调用的代理。
+    </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.Session"><summary>
+            获取与代理调用关联的代理会话。
+            </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.AIContext"><summary>
+            获取当前调用正在构建的 <see cref="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.AIContext" />。上下文提供程序可以修改并返回，或返回一个新的 <see cref="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.AIContext" /> 实例，以为调用提供额外的上下文。
+            </summary><remarks><para>
+            如果在同一调用中使用了多个 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 实例，则每个 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 将接收由前一个 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 返回的上下文，允许它们在此基础上构建彼此的上下文。
+            </para><para>
+            调用管道中的第一个 <see cref="T:Microsoft.Agents.AI.AIContextProvider" /> 将接收一个已包含调用方提供的消息的 <see cref="P:Microsoft.Agents.AI.AIContextProvider.InvokingContext.AIContext" /> 实例，这些消息将由代理用于此调用。
+            </para><para>
+            如果正在使用 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />，它还可能包含来自聊天历史记录的消息。
+            </para></remarks></member><member name="T:Microsoft.Agents.AI.AIContextProvider.InvokedContext"><summary>
+            包含提供给 <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedCoreAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 的上下文信息。
+            </summary><remarks>
+            此类提供有关已完成代理调用的上下文信息，包括所使用的累积请求消息（用户输入、聊天历史记录以及由AI上下文提供程序提供的任何其他消息）
+            以及生成的响应消息。它还指示调用是成功还是失败。
+            </remarks></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokedContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage})"><summary>
+            为成功的调用初始化 <see cref="T:Microsoft.Agents.AI.AIContextProvider.InvokedContext" /> 类的新实例。
+            </summary><param name="agent">被调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="requestMessages">代理在此调用中使用的累积请求消息（用户输入、聊天历史以及 AI 上下文提供程序提供的任何其他消息）。</param><param name="responseMessages">在此调用期间生成的响应消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" />、<paramref name="requestMessages" /> 或 <paramref name="responseMessages" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.AIContextProvider.InvokedContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Exception)"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.AIContextProvider.InvokedContext" /> 类的新实例，用于失败的调用。
+            </summary><param name="agent">已调用的代理。</param><param name="session">与此代理调用关联的会话。</param><param name="requestMessages">代理在此调用中使用的累积请求消息（用户输入、聊天历史记录以及 AI 上下文提供程序提供的任何其他消息）。</param><param name="invokeException">导致调用失败的异常。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" />、<paramref name="requestMessages" /> 或 <paramref name="invokeException" /> 是 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.Agent"><summary>
+    获取正在被调用的代理。
+    </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.Session"><summary>
+            获取与代理调用关联的代理会话。
+            </summary></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.RequestMessages"><summary>
+            获取代理在此调用中使用的累积请求消息（用户输入、聊天历史以及AI上下文提供程序提供的任何其他消息）。
+            </summary><value>
+            一个包含 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的集合，表示代理在此调用中使用的所有消息。
+            </value></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.ResponseMessages"><summary>
+            如果调用成功，获取此次调用期间生成的响应消息集合。
+            </summary><value>
+            一个表示响应的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例集合，如果调用失败则为 <see langword="null" />。
+            </value></member><member name="P:Microsoft.Agents.AI.AIContextProvider.InvokedContext.InvokeException"><summary>
+            获取在调用期间引发的 <see cref="T:System.Exception" />（如果调用失败）。
+            </summary><value>
+            导致调用失败的异常；如果调用成功，则为 <see langword="null" />。
+            </value></member><member name="T:Microsoft.Agents.AI.ChatHistoryProvider"><summary>
+    提供抽象基类，用于从聊天历史中获取聊天消息以及向聊天历史添加聊天消息，以支持代理执行。
+    </summary><remarks><para><see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 定义了 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 可用于从聊天历史中检索消息并通知新产生消息的契约。实现负责管理消息的持久化、检索以及任何必要的优化策略，例如截断、摘要或归档。
+    </para><para>
+    主要职责包括：
+    <list type="bullet"><item><description>以适当的顺序和元数据保留存储聊天消息</description></item><item><description>按时间顺序检索消息以提供代理上下文</description></item><item><description>通过截断、摘要或其他策略管理存储限制</description></item></list></para><para><see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 通过 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext" /> 和 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext" /> 获取对 <see cref="T:Microsoft.Agents.AI.AgentSession" /> 的引用，从而允许将状态存储在 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" /> 中。由于 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 用于许多不同的会话，因此不应在其自己的实例字段中存储任何特定于会话的信息。相反，任何特定于会话的状态都应存储在关联的 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" /> 中。
+    </para><para><see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 仅适用于代理使用的底层 AI 服务不使用服务内聊天历史存储的场景。
+    </para><para><strong>安全注意事项：</strong> Agent Framework 不会验证或筛选提供程序在加载时返回的消息——它们按原样接受，并被视为与用户提供的消息相同。实现者必须确保只返回受信任的数据。如果底层存储受到损害，对抗性内容可能通过间接提示注入影响 LLM 行为——例如，注入的消息可能改变对话上下文或冒充不同的角色。存储在聊天历史中的消息可能包含 PII 和敏感的对话内容；实现者应考虑对存储后端进行静态加密和适当的访问控制。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.#ctor(System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}})"><summary>
+    初始化 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 类的新实例。
+    </summary><param name="provideOutputMessageFilter">一个可选的筛选器函数，用于在从聊天历史记录中检索消息时应用于消息。</param><param name="storeInputRequestMessageFilter">一个可选的筛选器函数，用于在将请求消息存储到聊天历史记录之前应用于消息。如果未设置，则默认为排除源类型为 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.ChatHistory" /> 的消息。</param><param name="storeInputResponseMessageFilter">一个可选的筛选器函数，用于在将响应消息存储到聊天历史记录之前应用于消息。如果未设置，则默认为包含所有响应消息的无操作筛选器。</param></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.StateKeys"><summary>
+    获取用于在<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中存储提供程序状态的键集。
+  </summary><remarks>
+    默认值是包含具体类型名称的单元素集（例如 <c>"InMemoryChatHistoryProvider"</c>）。
+    实现可以重写此属性以提供自定义键，例如当同一提供程序类型的多个实例用于同一会话时，或者当提供程序在多个键下存储状态时。
+  </remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+    在代理调用开始时调用，以提供下一次代理调用的消息。
+    </summary><param name="context">包含请求上下文，包括调用方提供的消息，这些消息将在此次调用中供代理使用。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>
+    表示异步操作的任务。任务结果包含 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的集合，这些实例将用于代理调用。
+    </returns><remarks><para>
+    如果总消息历史变得非常大，实现应该应用适当的策略来管理存储限制，例如：
+    <list type="bullet"><item><description>截断较旧的消息，同时保留最近上下文</description></item><item><description>总结消息组以保持关键上下文</description></item><item><description>实现消息保留的滑动窗口方法</description></item><item><description>在保持活动对话上下文的同时归档旧消息</description></item></list></para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            在代理调用开始时调用，为下一次代理调用提供消息。
+            </summary><param name="context">包含请求上下文，包括调用者提供的将用于此代理调用的消息。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>
+            表示异步操作的任务。任务结果包含一个<see cref="T:Microsoft.Extensions.AI.ChatMessage" />实例集合，这些实例将用于代理调用。
+            </returns><remarks><para>
+            如果总消息历史变得非常大，实现应应用适当的策略来管理存储约束，例如：
+            <list type="bullet"><item><description>截断较旧的消息，同时保留最近的上下文</description></item><item><description>汇总消息组以维护基本上下文</description></item><item><description>实现滑动窗口方法进行消息保留</description></item><item><description>归档旧消息，同时保持活跃对话上下文</description></item></list></para><para>
+            此方法的默认实现调用<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.ProvideChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" />来获取聊天历史消息，应用可选的检索输出筛选器，并将返回的消息与调用者提供的消息合并（聊天历史消息出现在前面），然后返回完整的消息列表用于调用。
+            对于大多数情况，重写<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.ProvideChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" />就足以返回所需的聊天历史消息，同时仍然受益于默认的合并和筛选行为。
+            但是，对于需要更多控制消息筛选、合并或源标记的场景，重写此方法允许您直接控制返回用于调用的全部消息集。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.ProvideChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            当在派生类中重写时，提供用于当前调用的聊天历史消息。
+            </summary><remarks><para>
+            此方法从 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 调用。
+            请注意，<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 可以被重写以直接控制消息过滤、合并和源标记，在这种情况下，
+            实现者需要根据情况调用此方法以检索未过滤/未合并的聊天历史消息。
+            </para><para>
+            与 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 相比，此方法仅返回要添加到请求中的附加消息，
+            而 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 负责返回用于调用的完整消息集（包括调用者提供的消息）。
+            </para><para>
+            消息按时间顺序返回，以维护适当的对话流程和代理的上下文。
+            最旧的消息首先出现在集合中，然后是较新的消息。
+            </para><para><strong>安全考虑：</strong>从存储加载的消息应像对待用户提供的消息一样谨慎对待。
+            受损的存储后端可能会改变消息角色以升级信任（例如，将 <c>user</c> 消息更改为 <c>system</c> 消息）或注入对 LLM 行为有影响的对立内容。
+            </para></remarks><param name="context">包含请求上下文，包括调用者提供的消息，代理将使用这些消息进行此调用。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>
+            表示异步操作的任务。任务结果包含按升序时间顺序（最旧在前）排列的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" />
+            实例集合。
+            </returns></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+    在代理调用结束时调用，以向聊天历史添加新消息。
+    </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及发生的任何异常。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步添加操作的任务。</returns><remarks><para>
+    消息应按照生成的顺序添加，以保持正确的时间顺序。<see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />负责保留消息顺序，并确保后续对<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" />的调用以正确的时间顺序返回消息。
+    </para><para>
+    实现可以在消息添加期间执行其他处理，例如：
+    <list type="bullet"><item><description>验证消息内容和元数据</description></item><item><description>应用存储优化或压缩</description></item><item><description>触发后台维护操作</description></item></list></para><para>
+    无论调用成功还是失败，都会调用此方法。要检查调用是否成功，请检查<see cref="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.InvokeException" />属性。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+            在代理调用结束时调用，用于向聊天历史中添加新消息。
+            </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及发生的任何异常。</param><param name="cancellationToken">用于监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步添加操作的任务。</returns><remarks><para>
+            消息应按照生成的顺序添加，以保持正确的时间顺序。
+            <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />负责维护消息顺序，并确保后续对
+            <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" />的调用按正确的时间顺序返回消息。
+            </para><para>
+            在添加消息时，实现可能会执行额外的处理，例如：
+            <list type="bullet"><item><description>验证消息内容和元数据</description></item><item><description>应用存储优化或压缩</description></item><item><description>触发后台维护操作</description></item></list></para><para>
+            无论调用成功还是失败，都会调用此方法。
+            要检查调用是否成功，请检查<see cref="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.InvokeException" />属性。
+            </para><para>
+            此方法的默认实现会跳过任何调用失败的执行，使用可选的存储输入请求和响应消息过滤器过滤消息，
+            并调用<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.StoreChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" />来存储新的聊天历史消息。
+            对于大多数场景，重写<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.StoreChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" />就足以存储聊天历史消息，同时仍然受益于默认的错误处理和过滤行为。
+            然而，对于需要更精细控制错误处理或消息过滤的场景，重写此方法允许您直接控制为调用存储的消息。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.StoreChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)"><summary>
+    当在派生类中重写时，在代理调用结束时向聊天历史添加新消息。
+    </summary><param name="context">包含调用上下文，包括请求消息、响应消息以及发生的任何异常。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步添加操作的任务。</returns><remarks><para>
+    消息应按照生成的顺序添加，以保持正确的时间顺序。
+    <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 负责保持消息顺序，并确保后续对 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 的调用按正确的时间顺序返回消息。
+    </para><para>
+    实现可以在添加消息期间执行额外的处理，例如：
+    <list type="bullet"><item><description>验证消息内容和元数据</description></item><item><description>应用存储优化或压缩</description></item><item><description>触发后台维护操作</description></item></list></para><para>
+    此方法由 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 调用。
+    请注意，<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 可被重写以直接控制消息筛选和错误处理，在这种情况下，实现者需要根据需要调用此方法来存储消息。
+    </para><para>
+    与 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 相比，此方法只存储消息，
+    而 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 还负责消息筛选和错误处理。
+    </para><para><see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 的默认实现仅在调用成功后调用此方法。
+    </para><para><strong>安全注意事项：</strong>存储的消息可能包含个人身份信息（PII）和敏感的对话内容。
+    实现者应确保存储后端具有适当的静态加密和访问控制。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.GetService(System.Type,System.Object)"><summary>请求 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 提供指定类型 <paramref name="serviceType" /> 的对象。</summary><param name="serviceType">正在请求的对象的类型。</param><param name="serviceKey">一个可选键，可用于帮助标识目标服务。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><exception cref="T:System.ArgumentNullException"><paramref name="serviceType" /> 为 <see langword="null" />。</exception><remarks>
+    此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 提供的强类型服务，
+    包括其自身或它可能包装的任何服务。
+    </remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.GetService``1(System.Object)"><summary>向 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 请求一个类型为 <typeparamref name="TService" /> 的对象。</summary><typeparam name="TService">要检索的对象的类型。</typeparam><param name="serviceKey">可用于帮助标识目标服务的可选键。</param><returns>找到的对象，否则为 <see langword="null" />。</returns><remarks>
+            此方法的目的是允许检索由 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 提供的强类型服务，
+            包括其自身或其可能包装的任何服务。
+            </remarks></member><member name="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext"><summary>
+            包含提供给 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 的上下文信息。
+            </summary><remarks>
+            此类提供有关调用的上下文，包括将要使用的新消息。
+            <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 可以使用此信息来确定应为调用提供哪些消息。
+            </remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage})"><summary>
+    使用指定的请求消息初始化 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext" /> 类的新实例。
+    </summary><param name="agent">被调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="requestMessages">代理用于此调用的消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="requestMessages" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext.Agent"><summary>
+            获取正在被调用的代理。
+            </summary></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext.Session"><summary>
+    获取与代理调用关联的代理会话。
+    </summary></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext.RequestMessages"><summary>
+    获取本次调用中代理将使用的消息。<see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 实例可以修改并返回，或返回一个新的消息列表以添加额外的消息。
+    </summary><value>
+    一个 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的集合，表示本次调用中代理将使用的消息。
+    </value><remarks><para>
+        如果在同一个调用中使用了多个 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 实例，每个 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 将接收前一个 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 返回的消息，从而允许它们基于彼此的上下文进行构建。
+        </para><para>
+        调用管道中的第一个 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 将接收调用者提供的消息。
+        </para></remarks></member><member name="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext"><summary>
+            包含提供给 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedCoreAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 的上下文信息。
+            </summary><remarks>
+            此类提供有关已完成代理调用的上下文，包括所使用的累积请求消息（用户输入、聊天历史记录以及 AI 上下文提供程序提供的任何其他消息）以及生成的响应消息。它还指示调用是成功还是失败。
+            </remarks></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage})"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext" /> 类的新实例，用于成功调用。
+            </summary><param name="agent">被调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="requestMessages">此调用中代理使用的累积请求消息（用户输入、聊天历史记录以及 AI 上下文提供程序提供的任何其他消息）。</param><param name="responseMessages">此调用期间生成的响应消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" />, <paramref name="requestMessages" /> 或 <paramref name="responseMessages" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Exception)"><summary>
+        初始化 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext" /> 类的新实例，用于失败的调用。
+    </summary><param name="agent">被调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="requestMessages">累积的请求消息（用户输入、聊天历史以及AI上下文提供程序提供的任何其他信息），代理在此调用中使用了这些消息。</param><param name="invokeException">导致调用失败的异常。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" />、<paramref name="requestMessages" /> 或 <paramref name="invokeException" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.Agent"><summary>
+    获取正在被调用的代理。
+    </summary></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.Session"><summary>
+    获取与代理调用关联的代理会话。
+    </summary></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.RequestMessages"><summary>
+            获取代理在此次调用中使用的累积请求消息（用户输入、聊天历史以及AI上下文提供者提供的任何其他消息）。
+            </summary><value>
+            一个表示调用者提供的新消息的<see cref="T:Microsoft.Extensions.AI.ChatMessage" />实例集合。
+            这不包括任何<see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />提供的消息。
+            </value></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.ResponseMessages"><summary>
+    获取在此调用成功时生成的响应消息集合。
+    </summary><value>
+    一个表示响应的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例集合，如果调用失败则为 <see langword="null" />。
+    </value></member><member name="P:Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext.InvokeException"><summary>
+    获取在调用期间抛出的 <see cref="T:System.Exception" />，如果调用失败。
+    </summary><value>
+    导致调用失败的异常，如果调用成功则为 <see langword="null" />。
+    </value></member><member name="T:Microsoft.Agents.AI.ChatMessageExtensions"><summary>
+            包含 <see cref="T:Microsoft.Extensions.AI.ChatMessage" />的扩展方法
+            </summary></member><member name="M:Microsoft.Agents.AI.ChatMessageExtensions.GetAgentRequestMessageSourceType(Microsoft.Extensions.AI.ChatMessage)"><summary>
+            获取在传递给代理运行的消息上下文中提供的<see cref="T:Microsoft.Extensions.AI.ChatMessage" />的源类型。
+            </summary><param name="message">我们需要其源类型的<see cref="T:Microsoft.Extensions.AI.ChatMessage" />。</param><returns>一个<see cref="T:Microsoft.Agents.AI.AgentRequestMessageSourceType" />值，指示<see cref="T:Microsoft.Extensions.AI.ChatMessage" />的源类型。如果未定义显式源，则默认为<see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" />。</returns></member><member name="M:Microsoft.Agents.AI.ChatMessageExtensions.GetAgentRequestMessageSourceId(Microsoft.Extensions.AI.ChatMessage)"><summary>
+            获取所提供的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 在传递给代理运行的消息上下文中的源 ID。
+            </summary><param name="message">我们需要其源 ID 的 <see cref="T:Microsoft.Extensions.AI.ChatMessage" />。</param><returns>一个 <see cref="T:System.String" /> 值，指示 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 的源 ID。如果未定义显式源 ID，则默认为 <see langword="null" />。</returns></member><member name="M:Microsoft.Agents.AI.ChatMessageExtensions.WithAgentRequestMessageSource(Microsoft.Extensions.AI.ChatMessage,Microsoft.Agents.AI.AgentRequestMessageSourceType,System.String)"><summary>
+            确保提供的消息在特定代理运行的上下文中被标记为提供的源类型和源ID。
+            </summary><param name="message">要标记的消息。</param><param name="sourceType">用于标记消息的源类型。</param><param name="sourceId">用于标记消息的源ID。</param><returns>标记后的消息。</returns><remarks>
+            如果消息已经用提供的源类型和源ID标记，则原样返回。否则，返回一个克隆的消息，并在AdditionalProperties中进行适当的标记。
+            </remarks></member><member name="T:Microsoft.Agents.AI.DelegatingAIAgent"><summary>
+            提供抽象基类，用于将操作委派给内部代理实例，同时允许扩展和自定义的AI代理。
+            </summary><remarks><para><see cref="T:Microsoft.Agents.AI.DelegatingAIAgent" /> 为 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 实现了装饰器模式，支持创建代理管道，每个层都可以在将核心操作委派给底层代理的同时添加功能。此模式对于构建可组合的代理架构至关重要。
+            </para><para>
+            默认实现提供透明的传递行为，将所有操作转发给内部代理。派生类可以重写特定方法以添加自定义行为，同时保持与代理接口的兼容性。
+            </para></remarks></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.#ctor(Microsoft.Agents.AI.AIAgent)"><summary>
+    使用指定的内部代理初始化 <see cref="T:Microsoft.Agents.AI.DelegatingAIAgent" /> 类的新实例。
+    </summary><param name="innerAgent">将处理核心操作的基础代理实例。</param><exception cref="T:System.ArgumentNullException"><paramref name="innerAgent" /> 为 <see langword="null" />。</exception><remarks>
+    内部代理充当委托链的基础。所有未由派生类重写的操作都将转发到此代理。
+    </remarks></member><member name="P:Microsoft.Agents.AI.DelegatingAIAgent.InnerAgent"><summary>
+        获取接收委托操作的内部代理实例。
+    </summary><value>
+        处理核心代理操作的底层 <see cref="T:Microsoft.Agents.AI.AIAgent" /> 实例。
+    </value><remarks>
+        派生类可以使用此属性访问内部代理，以实现自定义委托方案或转发操作并进行额外处理。
+    </remarks></member><member name="P:Microsoft.Agents.AI.DelegatingAIAgent.IdCore"><inheritdoc /></member><member name="P:Microsoft.Agents.AI.DelegatingAIAgent.Name"><inheritdoc /></member><member name="P:Microsoft.Agents.AI.DelegatingAIAgent.Description"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.GetService(System.Type,System.Object)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.CreateSessionCoreAsync(System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.SerializeSessionCoreAsync(Microsoft.Agents.AI.AgentSession,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.DeserializeSessionCoreAsync(System.Text.Json.JsonElement,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.RunCoreAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.DelegatingAIAgent.RunCoreStreamingAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)"><inheritdoc /></member><member name="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider"><summary>
+    提供 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 的内存实现，支持消息缩减。
+    </summary><remarks><para><see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 将聊天消息存储在 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />，提供与会话状态管理集成的快速访问和操作能力。
+    </para><para>
+    此 <see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" /> 在内存中维护所有消息。对于长时间运行的对话或高流量场景，请考虑使用消息缩减策略或替代存储实现。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.InMemoryChatHistoryProvider.#ctor(Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions)"><summary>
+    初始化 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 类的新实例。
+    </summary><param name="options">
+    可选配置选项，用于控制提供程序的行为，包括状态初始化、消息缩减和序列化设置。如果 <see langword="null" />，则使用默认设置。
+    </param></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProvider.StateKeys"><inheritdoc /></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProvider.ChatReducer"><summary>
+            获取用于处理或缩减聊天消息的聊天缩减器。如果为 null，则不会应用任何缩减逻辑。
+            </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProvider.ReducerTriggerEvent"><summary>
+            获取在此提供程序中触发缩减器调用的事件。
+            </summary></member><member name="M:Microsoft.Agents.AI.InMemoryChatHistoryProvider.GetMessages(Microsoft.Agents.AI.AgentSession)"><summary>
+            获取为指定会话存储的聊天消息。
+            </summary><param name="session">包含状态的代理会话。</param><returns>聊天消息列表，如果未找到状态则返回空列表。</returns></member><member name="M:Microsoft.Agents.AI.InMemoryChatHistoryProvider.SetMessages(Microsoft.Agents.AI.AgentSession,System.Collections.Generic.List{Microsoft.Extensions.AI.ChatMessage})"><summary>
+    设置指定会话的聊天消息。
+    </summary><param name="session">包含状态的代理会话。</param><param name="messages">要存储的消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="messages" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Agents.AI.InMemoryChatHistoryProvider.ProvideChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.InMemoryChatHistoryProvider.StoreChatHistoryAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)"><inheritdoc /></member><member name="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider.State"><summary>
+            表示一个 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 的状态，该状态存储在 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" /> 中。
+            </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProvider.State.Messages"><summary>
+            获取或设置聊天消息列表。
+            </summary></member><member name="T:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions"><summary>
+            表示 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 的配置选项。
+            </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.StateInitializer"><summary>
+    获取或设置一个可选的委托，该委托在首次调用时初始化提供程序状态。
+    如果为<see langword="null" />，则将使用创建一个空状态的默认初始化器。
+    </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ChatReducer"><summary>
+            获取或设置一个可选的 <see cref="T:Microsoft.Extensions.AI.IChatReducer" /> 实例，用于处理、精简或优化聊天消息。
+            这可用于实现消息摘要、截断或清理等策略。
+            </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ReducerTriggerEvent"><summary>
+            获取或设置消息缩减器应何时调用。
+            默认值为 <see cref="F:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ChatReducerTriggerEvent.BeforeMessagesRetrieval" />，即在为代理消费检索消息时应用缩减逻辑。
+            </summary><remarks>
+            消息缩减器通过实施策略来自动管理消息存储，在控制内存使用的同时保留重要的对话上下文。
+            </remarks></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.StateKey"><summary>
+            获取或设置一个可选键，用于在 <see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" /> 中存储状态。
+            如果为 <see langword="null" />，将使用默认键。
+            </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.JsonSerializerOptions"><summary>
+    获取或设置用于序列化此提供程序状态的可选 JSON 序列化程序选项。
+    这在聊天历史记录包含自定义 <see cref="T:Microsoft.Extensions.AI.AIContent" /> 类型并且需要源生成序列化程序，或者需要本机 AOT/剪裁的情况下很有用。
+    </summary></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.StorageInputRequestMessageFilter"><summary>
+    获取或设置一个可选的筛选器函数，该函数在将请求消息添加到存储之前应用于这些消息，于<see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" />期间。
+    </summary><value>
+    当为<see langword="null" />时，提供程序默认会排除源类型为<see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.ChatHistory" />的消息，以避免首先存储那些来自聊天历史记录的消息。根据您的需求，您可以提供一个不同的筛选器，该筛选器也可以排除来自例如AI上下文提供程序的消息。
+    </value></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.StorageInputResponseMessageFilter"><summary>
+            获取或设置一个可选的筛选器函数，在 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokedAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokedContext,System.Threading.CancellationToken)" /> 期间，该函数在响应消息添加到存储之前对其进行应用。
+            </summary><value>
+            当 <see langword="null" /> 时，存储前不对响应消息进行任何筛选。如果要避免持久化某些消息（例如，那些具有 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.ChatHistory" /> 源类型或由 AI 上下文提供程序生成的消息），请提供一个只返回您要保留的消息的筛选器。
+            </value></member><member name="P:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ProvideOutputMessageFilter"><summary>
+            获取或设置一个可选的筛选函数，该函数应用于此提供程序
+            在 <see cref="M:Microsoft.Agents.AI.ChatHistoryProvider.InvokingAsync(Microsoft.Agents.AI.ChatHistoryProvider.InvokingContext,System.Threading.CancellationToken)" /> 期间生成的消息。
+            </summary><remarks>
+            此筛选器仅应用于提供程序自身生成的消息（来自其内部存储）。
+            </remarks><value>
+            当 <see langword="null" /> 时，不应用任何筛选到输出消息。
+            </value></member><member name="T:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ChatReducerTriggerEvent"><summary>
+    定义可以在 <see cref="T:Microsoft.Agents.AI.InMemoryChatHistoryProvider" /> 中触发缩减器的事件。
+    </summary></member><member name="F:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ChatReducerTriggerEvent.AfterMessageAdded"><summary>
+            当新增消息时触发缩减器。
+            <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 仅在缩减器处理完成后完成。
+            </summary></member><member name="F:Microsoft.Agents.AI.InMemoryChatHistoryProviderOptions.ChatReducerTriggerEvent.BeforeMessagesRetrieval"><summary>
+            在从提供程序检索消息之前触发化简器。
+            化简器会在消息返回给调用方之前处理这些消息。
+            </summary></member><member name="T:Microsoft.Agents.AI.MessageAIContextProvider"><summary>
+    提供一个抽象基类，用于在代理调用期间通过提供额外的聊天消息来增强AI上下文的组件。
+    </summary><remarks><para>
+    消息AI上下文提供者是一个通过以下方式参与代理调用生命周期的组件：
+    <list type="bullet"><item><description>监听对话中的变化</description></item><item><description>在调用期间向代理提供额外消息</description></item><item><description>处理调用结果以进行状态管理或学习</description></item></list></para><para>
+    上下文提供者通过两阶段生命周期运作：它们在调用开始时通过
+    <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokingAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 被调用以提供上下文，并可选地在调用结束时通过
+    <see cref="M:Microsoft.Agents.AI.AIContextProvider.InvokedAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 被调用以处理结果。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.#ctor(System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage}})"><summary>
+            初始化 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 类的新实例。
+            </summary><param name="provideInputMessageFilter">一个可选的筛选器函数，在通过 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.ProvideMessagesAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 提供消息之前应用于输入消息。如果未设置，则默认仅包含 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" /> 消息。</param><param name="storeInputRequestMessageFilter">一个可选的筛选器函数，在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 存储消息之前应用于请求消息。如果未设置，则默认仅包含 <see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" /> 消息。</param><param name="storeInputResponseMessageFilter">一个可选的筛选器函数，在通过 <see cref="M:Microsoft.Agents.AI.AIContextProvider.StoreAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokedContext,System.Threading.CancellationToken)" /> 存储消息之前应用于响应消息。如果未设置，则默认包含所有响应消息（无筛选）。</param></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.ProvideAIContextAsync(Microsoft.Agents.AI.AIContextProvider.InvokingContext,System.Threading.CancellationToken)"><inheritdoc /></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+    在代理调用开始时调用，以提供额外的消息。
+    </summary><param name="context">包含请求上下文，包括调用方提供的消息，这些消息将用于本次调用的代理。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>表示异步操作的任务。任务结果包含 <see cref="T:System.Collections.Generic.IEnumerable`1" />，将在本次调用中供代理使用。</returns><remarks><para>
+        实现者可以在此刻加载任何需要的额外消息，例如：
+        <list type="bullet"><item><description>从知识库检索相关信息</description></item><item><description>添加系统指令或提示</description></item><item><description>从对话历史中注入上下文消息</description></item></list></para></remarks></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+    在代理调用开始时调用，以提供额外的消息。
+    </summary><param name="context">包含请求上下文，包括调用方提供的消息，这些消息将由代理用于此调用。</param><param name="cancellationToken">监视取消请求的<see cref="T:System.Threading.CancellationToken" />。默认值为<see cref="P:System.Threading.CancellationToken.None" />。</param><returns>一个表示异步操作的任务。任务结果包含<see cref="T:System.Collections.Generic.IEnumerable`1" />，供代理在此调用期间使用。</returns><remarks><para>
+    实现者此时可以加载任何所需的额外消息，例如：
+    <list type="bullet"><item><description>从知识库中检索相关信息</description></item><item><description>添加系统指令或提示</description></item><item><description>注入来自对话历史的上下文消息</description></item></list></para><para>
+    此方法的默认实现使用配置的提供输入消息筛选器（默认仅包含<see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.External" />消息）筛选输入消息，
+    然后调用<see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.ProvideMessagesAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" />获取额外消息，
+    为任何消息添加<see cref="P:Microsoft.Agents.AI.AgentRequestMessageSourceType.AIContextProvider" />源归属，
+    并将返回的消息与原始（未筛选）输入消息合并。
+    对于大多数场景，重写<see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.ProvideMessagesAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" />就足以提供额外消息，
+    同时仍然受益于默认的筛选、合并和源标注行为。
+    但是，对于需要对消息筛选、合并或源标注进行更多控制的场景，重写此方法允许您直接控制为调用返回的完整<see cref="T:System.Collections.Generic.IEnumerable`1" />。
+    </para></remarks></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.ProvideMessagesAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)"><summary>
+            当在派生类中重写时，提供要合并到当前调用的输入消息中的附加消息。
+            </summary><remarks><para>
+            此方法从 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 调用。
+            请注意，可以重写 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 以直接控制消息合并和源标记，在这种情况下，由实现者根据需要调用此方法来检索附加消息。
+            </para><para>
+            与 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 不同，此方法仅返回要合并到输入中的附加消息，
+            而 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 负责返回调用完全合并后的 <see cref="T:System.Collections.Generic.IEnumerable`1" />。
+            </para></remarks><param name="context">包含请求上下文，包括调用方提供的、代理将在此调用中使用的消息。</param><param name="cancellationToken">用于监视取消请求的 <see cref="T:System.Threading.CancellationToken" />。默认值为 <see cref="P:System.Threading.CancellationToken.None" />。</param><returns>
+            表示异步操作的任务。任务结果包含一个 <see cref="T:System.Collections.Generic.IEnumerable`1" />，
+            其中包含要合并到输入消息中的附加消息。
+            </returns></member><member name="T:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext"><summary>
+    包含提供给 <see cref="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingCoreAsync(Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext,System.Threading.CancellationToken)" /> 的上下文信息。
+    </summary><remarks>
+    此类提供在调用底层AI模型之前的调用上下文信息，包括将要使用的消息。消息AI上下文提供者可以使用此信息来确定应为调用提供哪些附加消息。
+    </remarks></member><member name="M:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext.#ctor(Microsoft.Agents.AI.AIAgent,Microsoft.Agents.AI.AgentSession,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage})"><summary>
+            使用指定的请求消息初始化 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext" /> 类的新实例。
+            </summary><param name="agent">正在调用的代理。</param><param name="session">与代理调用关联的会话。</param><param name="requestMessages">在此调用中代理要使用的消息。</param><exception cref="T:System.ArgumentNullException"><paramref name="agent" /> 或 <paramref name="requestMessages" /> 为 <see langword="null" />。</exception></member><member name="P:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext.Agent"><summary>
+            获取正在被调用的代理。
+            </summary></member><member name="P:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext.Session"><summary>
+            获取与代理调用关联的代理会话。
+            </summary></member><member name="P:Microsoft.Agents.AI.MessageAIContextProvider.InvokingContext.RequestMessages"><summary>
+    获取代理将用于此调用的消息。 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 实例可以修改并返回，或者返回新的消息列表来为此调用添加额外的消息。
+    </summary><value>
+    一个 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的集合，表示代理将用于此调用的消息。
+    </value><remarks><para>
+    如果在同一个调用中使用多个 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 实例，每个 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 将接收前一个 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 返回的消息，从而使它们能够基于彼此的上下文进行构建。
+    </para><para>
+    调用管道中的第一个 <see cref="T:Microsoft.Agents.AI.MessageAIContextProvider" /> 将接收调用者提供的消息。
+    </para></remarks></member><member name="T:Microsoft.Agents.AI.ProviderSessionState`1"><summary>
+    提供针对提供程序的强类型状态管理，支持在<see cref="T:Microsoft.Agents.AI.AgentSession" />的<see cref="T:Microsoft.Agents.AI.AgentSessionStateBag" />中读写提供程序特定的状态。
+    </summary><typeparam name="TState">要维护的状态的类型。必须是引用类型。</typeparam><remarks><para>
+        此类封装了使用可配置键和JSON序列化选项在会话的StateBag中初始化、检索和持久化提供程序状态的逻辑。它旨在作为组成字段用在提供程序实现（例如<see cref="T:Microsoft.Agents.AI.AIContextProvider" />或<see cref="T:Microsoft.Agents.AI.ChatHistoryProvider" />子类）中，以避免在提供程序类型层次结构中重复状态管理逻辑。
+        </para><para>
+        状态存储在<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中，使用<see cref="P:Microsoft.Agents.AI.ProviderSessionState`1.StateKey" />属性作为键，使多个提供程序能够维护同一会话中的独立状态。
+        </para></remarks></member><member name="M:Microsoft.Agents.AI.ProviderSessionState`1.#ctor(System.Func{Microsoft.Agents.AI.AgentSession,`0},System.String,System.Text.Json.JsonSerializerOptions)"><summary>
+    初始化 <see cref="T:Microsoft.Agents.AI.ProviderSessionState`1" /> 类的新实例。
+    </summary><param name="stateInitializer">用于在会话的 StateBag 中尚未存在状态时初始化状态的函数。</param><param name="stateKey">用于在会话的 StateBag 中存储状态的键。</param><param name="jsonSerializerOptions">用于状态的 JSON 序列化和反序列化的选项。</param></member><member name="P:Microsoft.Agents.AI.ProviderSessionState`1.StateKey"><summary>
+    获取用于在<see cref="P:Microsoft.Agents.AI.AgentSession.StateBag" />中存储提供程序状态的键。
+    </summary></member><member name="M:Microsoft.Agents.AI.ProviderSessionState`1.GetOrInitializeState(Microsoft.Agents.AI.AgentSession)"><summary>
+    从会话的 StateBag 中获取状态，如果不存在，则使用状态初始化器进行初始化。
+    </summary><param name="session">包含 StateBag 的代理会话。</param><returns>提供程序状态。</returns></member><member name="M:Microsoft.Agents.AI.ProviderSessionState`1.SaveState(Microsoft.Agents.AI.AgentSession,`0)"><summary>
+            使用配置的状态键和JSON序列化程序选项将指定状态保存到会话的StateBag中。
+            如果会话为null，此方法不执行任何操作。
+            </summary><param name="session">包含StateBag的代理会话。</param><param name="state">要保存的状态。</param></member><member name="T:Microsoft.Extensions.AI.AIContentExtensions"><summary>用于处理 <see cref="T:Microsoft.Extensions.AI.AIContent" /> 的内部扩展。</summary></member><member name="M:Microsoft.Extensions.AI.AIContentExtensions.ConcatText(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.AIContent})"><summary>连接列表中所有<see cref="T:Microsoft.Extensions.AI.TextContent" />实例的文本。</summary></member><member name="M:Microsoft.Extensions.AI.AIContentExtensions.ConcatText(System.Collections.Generic.IList{Microsoft.Extensions.AI.ChatMessage})"><summary>将列表中所有 <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> 实例的 <see cref="P:Microsoft.Extensions.AI.ChatMessage.Text" /> 连接起来。</summary><remarks>在每个非空文本之间添加一个换行符分隔符。</remarks></member></members>
+</doc>

@@ -26,7 +26,18 @@ public static class Translator
         openAiListener.ShouldListenTo = source => source.Name.StartsWith("OpenAI.");
         openAiListener.Sample = (ref ActivityCreationOptions<ActivityContext> options) => ActivitySamplingResult.AllData;
         openAiListener.ActivityStopped = activity =>
-            Log.Logger.Debug("[OpenAI] {Name}，耗时 {Duration:F2}ms", activity.DisplayName, activity.Duration.TotalMilliseconds);
+        {
+            Log.Logger.Debug("[OpenAI] {Name}，耗时 {Duration:F2}ms，标签: {@Tags}",
+                activity.DisplayName, activity.Duration.TotalMilliseconds,
+                activity.Tags?.ToDictionary(t => t.Key, t => t.Value));
+
+            foreach (var evt in activity.Events ?? [])
+            {
+                Log.Logger.Verbose("[OpenAI] 事件: {Name} @ {Time:F1}ms，标签: {@Tags}",
+                    evt.Name, (evt.Timestamp - activity.StartTimeUtc).TotalMilliseconds,
+                    evt.Tags?.ToDictionary(t => t.Key, t => t.Value));
+            }
+        };
         ActivitySource.AddActivityListener(openAiListener);
 
         var build = new ServiceCollection();
@@ -44,7 +55,7 @@ public static class Translator
         Log.Logger = new LoggerConfiguration()
                    .Enrich.FromLogContext()
                    .WriteTo.Console()
-                   .MinimumLevel.Debug()
+                   .MinimumLevel.Verbose()
                    .CreateLogger();
 
 
@@ -73,8 +84,8 @@ public static class Translator
         Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .WriteTo.Console()
-            .WriteTo.File(Path.Combine("../log", $"{packageId.ToLower()}@{targetVersion}.log"))
-            .MinimumLevel.Debug()
+            .WriteTo.File(Path.Combine("../log", $"{packageId.ToLower()}@{targetVersion}.log"), buffered: false)
+            .MinimumLevel.Verbose()
             .CreateLogger();
 
         #endregion
@@ -142,13 +153,7 @@ public static class Translator
                       {
                           Log.Logger.Debug("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
 
-                          var apiSw = System.Diagnostics.Stopwatch.StartNew();
-                          var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions)
-                          .WaitAsync(TimeSpan.FromSeconds(60), cance);
-                          apiSw.Stop();
-
-                          Log.Logger.Debug("API 返回，耗时 {Duration:F2}s，Member: {Member}",
-                              apiSw.Elapsed.TotalSeconds, member.Attribute("name")?.Value ?? "default");
+                          var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions);
 
                           // 统计 token 用量（无论后续验证是否通过，API 已经消费了）
                           var usage = completion.Value.Usage;

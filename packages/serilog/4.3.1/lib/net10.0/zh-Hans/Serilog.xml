@@ -1,0 +1,1612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Serilog</name>
+    </assembly>
+    <members><member name="M:Serilog.Capturing.PropertyValueConverter.BuildArrayValue(System.Array,System.Int32[],System.Int32,Serilog.Parsing.Destructuring)"><summary>
+            递归遍历多维数组并构建嵌套的SequenceValue表示。
+            </summary><param name="array">要遍历的多维数组。</param><param name="indices">表示每个维度中当前位置的索引数组。</param><param name="dimension">当前正在处理的维度。</param><param name="destructuring">解构策略。</param><returns>表示数组结构和元素的LogEventPropertyValue。</returns></member><member name="M:Serilog.Capturing.PropertyBinder.ConstructProperties(Serilog.Events.MessageTemplate,System.ReadOnlySpan{System.Object})"><summary>
+            基于提供的值的有序列表创建属性。
+            </summary><param name="messageTemplate">参数应用的模板。</param><param name="messageTemplateParameters">与消息模板中表示的属性相对应的对象。</param><returns>属性列表；如果模板格式不正确，则为空。</returns></member><member name="P:Serilog.Capturing.TrimConfiguration.IsStructureValueSupported"><summary>
+            如果结构值类型在日志记录时被Serilog特殊处理，则为true。主要示例是匿名类型，它们具有特殊的编译器生成形式。如果此开关被禁用，Serilog将无法解构匿名类型，但仍然能够将它们作为标量值记录。
+            </summary></member><member name="T:Serilog.Configuration.BatchingOptions"><summary>
+            用于 <see cref="T:Serilog.Core.Sinks.Batching.BatchingSink" /> 的初始化选项。
+            </summary></member><member name="P:Serilog.Configuration.BatchingOptions.EagerlyEmitFirstEvent"><summary>
+            急切地发出包含第一个接收到的事件的批次，无论目标批次大小或批次时间如何。这有助于在交互式运行/调试应用程序时感知“活跃性”。默认值为 <c>true</c>。
+            </summary></member><member name="P:Serilog.Configuration.BatchingOptions.BatchSizeLimit"><summary>
+            单个批次中包含的最大事件数。默认值为<c>1000</c>。
+            </summary></member><member name="P:Serilog.Configuration.BatchingOptions.BufferingTimeLimit"><summary>
+    事件批次之间的最大延迟。默认值为两秒。如果在达到缓冲时间限制之前可以填满一批，则无需等待即可发出。
+    </summary></member><member name="P:Serilog.Configuration.BatchingOptions.QueueLimit"><summary>
+            接收器内部队列中可以容纳的最大事件数，如果队列无限制则为<c>null</c>。默认值为<c>100000</c>。当超过此限制时，事件将被丢弃。
+            </summary></member><member name="P:Serilog.Configuration.BatchingOptions.RetryTimeLimit"><summary>
+    接收器将保持重试失败批处理的最大时间。默认值为十分钟。降低此值以减少高负载场景中的缓冲。
+    </summary></member><member name="T:Serilog.Configuration.ILoggerSettings"><summary>
+            在对记录器配置应用设置的类型上实现。
+            </summary></member><member name="M:Serilog.Configuration.ILoggerSettings.Configure(Serilog.LoggerConfiguration)"><summary>
+            将设置应用于记录器配置。
+            </summary><param name="loggerConfiguration">要应用设置的记录器配置。</param></member><member name="T:Serilog.Configuration.LoggerAuditSinkConfiguration"><summary>
+            控制审计接收器配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerAuditSinkConfiguration.Sink(Serilog.Core.ILogEventSink,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+    将审核日志事件记录到指定的 <see cref="T:Serilog.Core.ILogEventSink" />。
+  </summary><param name="logEventSink">
+    接收器。
+  </param><param name="restrictedToMinimumLevel">
+    通过接收器的事件的最低级别。当指定了 <paramref name="levelSwitch" /> 时忽略。
+  </param><param name="levelSwitch">
+    一个允许在运行时更改通过的最低级别的开关。
+  </param><returns>
+    允许方法链式调用的配置对象。
+  </returns></member><member name="M:Serilog.Configuration.LoggerAuditSinkConfiguration.Sink``1(Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将审计日志事件发送到指定的 <see cref="T:Serilog.Core.ILogEventSink" />。
+            </summary><typeparam name="TSink">接收器。</typeparam><param name="restrictedToMinimumLevel">传递给接收器的事件的最低级别。当指定了 <paramref name="levelSwitch" /> 时忽略。</param><param name="levelSwitch">允许在运行时更改传递的最低级别的开关。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerAuditSinkConfiguration.Logger(System.Action{Serilog.LoggerConfiguration},Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将事件审核记录到子记录器中，在该子记录器中可进行进一步处理。通过子记录器的事件将受父记录器中启用的筛选器约束，并由其富化器丰富。子记录器不能用于以更详细的级别记录，但可以以较不详细的级别记录。
+            </summary><param name="configureLogger">配置子记录器的操作。</param><param name="restrictedToMinimumLevel">传递给接收器的事件的最低级别。指定<paramref name="levelSwitch" />时忽略此参数。</param><param name="levelSwitch">允许在运行时更改传递的最低级别的开关。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerAuditSinkConfiguration.Logger(Serilog.ILogger,Serilog.Events.LogEventLevel)"><summary>
+            将事件审核记录到子日志记录器，在此可以进行进一步处理。通过子日志记录器的事件将受到父级中活动的筛选器的约束和扩充器的丰富。子日志记录器不能用于记录更详细的级别，但可以使用较不详细的级别。
+            </summary><param name="logger">子日志记录器。当父日志记录器被释放时，它<em>不会</em>自动关闭。</param><param name="restrictedToMinimumLevel">通过接收器传递的事件的最低级别。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="T:Serilog.Configuration.LoggerDestructuringConfiguration"><summary>
+            控制模板参数解构配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.AsScalar(System.Type)"><summary>
+    将指定类型的对象视为标量值，即在解构复杂类型时也不要将其分解为属性。
+    </summary><param name="scalarType">要视为标量的类型。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="scalarType" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.AsScalar``1"><summary>
+    将指定类型的对象视为标量值，即在解构复杂类型时不将其分解为属性。
+  </summary><typeparam name="TScalar">要视为标量的类型。</typeparam><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.With(Serilog.Core.IDestructuringPolicy[])"><summary>
+            当解构对象时，使用提供的策略转换实例。
+            </summary><param name="destructuringPolicies">解构时应用的策略。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="destructuringPolicies" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentException">当 <paramref name="destructuringPolicies" /> 的任意元素为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.With``1"><summary>
+            当解构对象时，使用提供的策略转换实例。
+            </summary><typeparam name="TDestructuringPolicy">解构时应用的策略。</typeparam><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.AsDictionary``1"><summary>
+            将指定类型的实例捕获为字典。
+            默认情况下，只有具体实例化才被视为类似字典。
+            </summary><typeparam name="T">字典类型。</typeparam><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.ByTransforming``1(System.Func{``0,System.Object})"><summary>
+            在对对象进行解构时，使用提供的函数转换指定类型的实例。
+            </summary><param name="transformation">将 <typeparamref name="TValue" /> 的实例映射到替代表示的函数。</param><typeparam name="TValue">要转换的值的类型。</typeparam><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="transformation" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.ByTransformingWhere``1(System.Func{System.Type,System.Boolean},System.Func{``0,System.Object})"><summary>
+            在进行对象解构时，如果谓词返回 true，则使用提供的函数转换指定类型的实例。请注意避免在谓词中进行任何密集工作，因为它会显著减慢管道速度。
+            </summary><param name="predicate">用于确定转换是否适用于特定值类型的谓词</param><param name="transformation">将 <typeparamref name="TValue" /> 实例映射到替代表示的函数。</param><typeparam name="TValue">要转换的值类型。</typeparam><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="predicate" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="transformation" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.ToMaximumDepth(System.Int32)"><summary>
+            在解构对象时，深度将限制为10个属性遍历深度，以防止
+            在意外传递递归/循环结构时空间膨胀。若要
+            更改此限制，请传递新的最大深度。
+            </summary><param name="maximumDestructuringDepth">要使用的最大深度。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentOutOfRangeException">当 <paramref name="maximumDestructuringDepth" /> 为负值时</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.ToMaximumStringLength(System.Int32)"><summary>
+    在解构对象时，字符串值可以限制为指定长度，从而避免有效负载膨胀。限制单独应用于每个值，字符串长度之和可以超过限制。
+    </summary><param name="maximumStringLength">最大字符串长度。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentOutOfRangeException">当 <paramref name="maximumStringLength" /> 小于 2 时</exception></member><member name="M:Serilog.Configuration.LoggerDestructuringConfiguration.ToMaximumCollectionCount(System.Int32)"><summary>
+            当解构对象时，集合将被限制为指定数量，从而避免有效载荷膨胀。限制分别应用于每个集合，集合长度总和可以超过限制。适用于所有 <see cref="T:System.Collections.IEnumerable" />，包括字典。
+            </summary><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentOutOfRangeException">当 <paramref name="maximumCollectionCount" /> 小于 1 时</exception></member><member name="T:Serilog.Configuration.LoggerEnrichmentConfiguration"><summary>
+            控制增强配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.With(Serilog.Core.ILogEventEnricher[])"><summary>指定一个或多个丰富器，这些丰富器可以动态地将属性添加到日志事件中。</summary><param name="enrichers">应用于通过记录器的所有事件的事件丰富器。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="enrichers" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentException">当 <paramref name="enrichers" /> 的任何元素为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.With``1"><summary>
+            指定一个可能动态向日志事件添加属性的富化器。
+            </summary><typeparam name="TEnricher">应用于通过记录器的所有事件的富化器类型。</typeparam><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.WithProperty(System.String,System.Object,System.Boolean)"><summary>
+    在所有记录到记录器的事件中包含指定的属性值。
+    </summary><param name="name">要添加的属性的名称。</param><param name="value">要添加的属性值。</param><param name="destructureObjects">如果为 <see langword="true" />，未知类型的对象将作为结构进行记录；否则将使用 <see cref="M:System.Object.ToString" /> 进行转换。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.FromLogContext"><summary>
+            使用来自<see cref="T:Serilog.Context.LogContext" />的属性丰富日志事件。
+            </summary><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException"></exception><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.When(System.Func{Serilog.Events.LogEvent,System.Boolean},System.Action{Serilog.Configuration.LoggerEnrichmentConfiguration})"><summary>
+    仅在 <paramref name="condition" /> 计算结果为 <c>true</c> 时应用一个增强器。
+    </summary><param name="condition">一个谓词，当提供的 <see cref="T:Serilog.Events.LogEvent" /> 应该被增强时，计算结果为 <c>true</c>。</param><param name="configureEnricher">配置被包装的增强器的操作。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="condition" /> 为 <code>null</code></exception><exception cref="T:System.ArgumentNullException">当 <paramref name="configureEnricher" /> 为 <code>null</code></exception></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.AtLevel(Serilog.Events.LogEventLevel,System.Action{Serilog.Configuration.LoggerEnrichmentConfiguration})"><summary>
+            仅将增强器应用于级别大于或等于 <paramref name="enrichFromLevel" /> 的事件（<see cref="T:Serilog.Events.LogEventLevel" />）。
+            </summary><param name="enrichFromLevel">增强器应用的起始级别。</param><param name="configureEnricher">配置包装的增强器的操作。</param><returns>允许方法链式调用的配置对象。</returns><remarks>此方法允许将附加信息附加到例如警告和错误，这些信息在较低级别收集或存储可能过于昂贵。</remarks><exception cref="T:System.ArgumentNullException">当 <paramref name="configureEnricher" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.AtLevel(Serilog.Core.LoggingLevelSwitch,System.Action{Serilog.Configuration.LoggerEnrichmentConfiguration})"><summary>
+    仅将丰富器应用于<see cref="T:Serilog.Events.LogEventLevel" />大于或等于<paramref name="levelSwitch" />指定级别的事件。
+    </summary><param name="levelSwitch">指定丰富器应用级别起点的<see cref="T:Serilog.Core.LoggingLevelSwitch" />。</param><param name="configureEnricher">配置包装丰富器的操作。</param><returns>允许方法链式调用的配置对象。</returns><remarks>此方法允许将附加信息附加到例如警告和错误等事件，这些信息在较低级别收集或存储可能过于昂贵。</remarks><exception cref="T:System.ArgumentNullException">当<paramref name="configureEnricher" />为<code>null</code>时</exception></member><member name="M:Serilog.Configuration.LoggerEnrichmentConfiguration.Wrap(Serilog.Configuration.LoggerEnrichmentConfiguration,System.Func{Serilog.Core.ILogEventEnricher,Serilog.Core.ILogEventEnricher},System.Action{Serilog.Configuration.LoggerEnrichmentConfiguration})"><summary>
+            用于包装接收器的辅助方法。
+            </summary><param name="loggerEnrichmentConfiguration">父级丰富配置。</param><param name="wrapEnricher">一个函数，允许包装在<paramref name="configureWrappedEnricher" />中添加的<see cref="T:Serilog.Core.ILogEventEnricher" />。</param><param name="configureWrappedEnricher">一个操作，用于配置要包装在<paramref name="wrapEnricher" />中的丰富器。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="loggerEnrichmentConfiguration" />为<code>null</code>时</exception><exception cref="T:System.ArgumentNullException">当<paramref name="wrapEnricher" />为<code>null</code>时</exception><exception cref="T:System.ArgumentNullException">当<paramref name="configureWrappedEnricher" />为<code>null</code>时</exception></member><member name="T:Serilog.Configuration.LoggerFilterConfiguration"><summary>
+    控制筛选器配置。
+    </summary></member><member name="M:Serilog.Configuration.LoggerFilterConfiguration.With(Serilog.Core.ILogEventFilter[])"><summary>
+            根据提供的筛选器从流中筛选出日志事件。
+            </summary><param name="filters">要应用的筛选器。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="filters" /> 为 <code>null</code>时</exception><exception cref="T:System.ArgumentException">当 <paramref name="filters" /> 的任意元素为 <code>null</code>时</exception></member><member name="M:Serilog.Configuration.LoggerFilterConfiguration.With``1"><summary>
+            根据提供的过滤器从流中过滤掉日志事件。
+            </summary><typeparam name="TFilter">要应用的过滤器。</typeparam><returns>允许方法链的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerFilterConfiguration.ByExcluding(System.Func{Serilog.Events.LogEvent,System.Boolean})"><summary>
+            根据谓词排除日志事件。
+            </summary><param name="exclusionPredicate">当事件应被排除（静默）时返回 true 的函数。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerFilterConfiguration.ByIncludingOnly(System.Func{Serilog.Events.LogEvent,System.Boolean})"><summary>
+            筛选日志事件，仅包含那些与谓词匹配的事件。
+            </summary><param name="inclusionPredicate">当事件应被包含（发出）时返回 true 的函数。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="T:Serilog.Configuration.LoggerMinimumLevelConfiguration"><summary>
+            控制接收器配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Is(Serilog.Events.LogEventLevel)"><summary>
+            设置事件传递到接收器的最低级别。
+            </summary><param name="minimumLevel">要设置的最低级别。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.ControlledBy(Serilog.Core.LoggingLevelSwitch)"><summary>
+            设置由提供的开关动态控制的最低级别。
+            </summary><param name="levelSwitch">开关。</param><returns>允许方法链的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="levelSwitch" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Verbose"><summary>
+            关于正在运行的代码块，
+            您可能想知道的所有信息。
+            </summary><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Debug"><summary>
+            不一定从外部可观察到的内部系统事件。
+            </summary><returns>允许方法链的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Information"><summary>
+            操作智能的生命线——事情发生。
+            </summary><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Warning"><summary>
+            服务已降级或处于危险中。
+            </summary><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Error"><summary>
+            功能不可用，不变量被破坏
+            或数据丢失。
+            </summary><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Fatal"><summary>
+            如果您有寻呼机，当发生这些情况之一时它会响。
+            </summary><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Override(System.String,Serilog.Core.LoggingLevelSwitch)"><summary>
+            重写来自特定命名空间或类型名称的事件的最低级别。
+            此 API 不支持配置子记录器（通过 <see cref="M:Serilog.Configuration.LoggerSinkConfiguration.Logger(Serilog.ILogger,Serilog.Events.LogEventLevel)" /> 创建）。请改用 <see cref="P:Serilog.LoggerConfiguration.Filter" /> 或 <see cref="M:Serilog.Configuration.LoggerSinkConfiguration.Conditional(System.Func{Serilog.Events.LogEvent,System.Boolean},System.Action{Serilog.Configuration.LoggerSinkConfiguration})" />。
+            您也可以考虑使用 https://github.com/serilog/serilog-filters-expressions。
+            </summary><param name="source">要设置覆盖的（部分）命名空间或类型名称。</param><param name="levelSwitch">控制匹配源的记录器的开关。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="source" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentException">当修剪后的 <paramref name="source" /> 为空时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="levelSwitch" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerMinimumLevelConfiguration.Override(System.String,Serilog.Events.LogEventLevel)"><summary>
+            覆盖来自特定命名空间或类型名称的事件的最低级别。
+            此API不支持配置子记录器（通过<see cref="M:Serilog.Configuration.LoggerSinkConfiguration.Logger(Serilog.ILogger,Serilog.Events.LogEventLevel)" />创建）。应使用<see cref="P:Serilog.LoggerConfiguration.Filter" />或<see cref="M:Serilog.Configuration.LoggerSinkConfiguration.Conditional(System.Func{Serilog.Events.LogEvent,System.Boolean},System.Action{Serilog.Configuration.LoggerSinkConfiguration})" />代替。
+            您也可以考虑使用 https://github.com/serilog/serilog-filters-expressions。
+            </summary><param name="source">要设置覆盖的（部分）命名空间或类型名称。</param><param name="minimumLevel">应用于匹配源的记录器的最低级别。</param><returns>支持方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="source" />为<code>null</code>时</exception></member><member name="T:Serilog.Configuration.LoggerSettingsConfiguration"><summary>
+            允许其他设置源驱动记录器配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerSettingsConfiguration.Settings(Serilog.Configuration.ILoggerSettings)"><summary>
+    将外部设置应用于记录器配置。
+    </summary><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="settings" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerSettingsConfiguration.KeyValuePairs(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})"><summary>
+    将Serilog键值设置格式中指定的设置应用于记录器配置。
+    </summary><param name="settings">描述记录器设置的键值对列表。</param><returns>允许方法链式调用的配置对象。</returns><remarks>在存在重复键的情况下，将保留该键的最后一个值，而忽略先前的值。</remarks><exception cref="T:System.ArgumentNullException">当 <paramref name="settings" /> 为 <code>null</code> 时。</exception></member><member name="T:Serilog.Configuration.LoggerSinkConfiguration"><summary>
+            控制接收器配置。
+            </summary></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Sink(Serilog.Core.ILogEventSink,Serilog.Events.LogEventLevel)"><summary>
+            将日志事件写入<see cref="T:Serilog.Core.ILogEventSink" />。
+            </summary><param name="logEventSink">接收器。</param><param name="restrictedToMinimumLevel">通过该接收器的事件的最低级别。</param><seealso cref="M:Serilog.Configuration.LoggerSinkConfiguration.Sink(Serilog.Core.ILogEventSink,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)" /><returns>允许方法链式调用的配置对象。</returns><remarks>指定了<paramref name="restrictedToMinimumLevel" />的接收器配置方法还应指定<see cref="T:Serilog.Core.LoggingLevelSwitch" />。</remarks></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Sink(Serilog.Core.ILogEventSink,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+    将日志事件写入到一个<see cref="T:Serilog.Core.ILogEventSink" />。
+    </summary><param name="logEventSink">接收器。</param><param name="restrictedToMinimumLevel">通过接收器的事件的最低级别。当指定<paramref name="levelSwitch" />时忽略。</param><param name="levelSwitch">允许在运行时更改通过的最低级别的开关。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Sink``1(Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+    将日志事件写入指定的 <see cref="T:Serilog.Core.ILogEventSink" />。
+    </summary><typeparam name="TSink">接收器。</typeparam><param name="restrictedToMinimumLevel">通过接收器的事件的最低级别。当指定<paramref name="levelSwitch" />时忽略。</param><param name="levelSwitch">允许在运行时更改通过最低级别的开关。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Sink(Serilog.Core.IBatchedLogEventSink,Serilog.Configuration.BatchingOptions,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将日志事件写入 <see cref="T:Serilog.Core.IBatchedLogEventSink" />。事件将在内部缓冲，并
+            分批写入接收器。
+            </summary><param name="batchedLogEventSink">用于接收事件的分批接收器。</param><param name="batchingOptions">控制批处理大小和缓冲时间的选项。</param><param name="restrictedToMinimumLevel">通过接收器的事件的最低级别。指定 <paramref name="levelSwitch" /> 时忽略此参数。</param><param name="levelSwitch">一个开关，允许在运行时更改通过的最低级别。</param><returns>允许方法链式调用的配置对象。</returns></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Logger(System.Action{Serilog.LoggerConfiguration},Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将日志事件写入子记录器，以便在其中进行进一步处理。通过子记录器的事件将受到父级中活动的筛选器的约束，并由父级中活动的增富器丰富。子记录器不能用于更详细的日志级别，但可以用于更简略的级别。
+            </summary><param name="configureLogger">配置子记录器的操作。</param><param name="restrictedToMinimumLevel">通过接收器的事件的记录级别下限。当指定 <paramref name="levelSwitch" /> 时忽略。</param><param name="levelSwitch">允许在运行时更改传递最低级别的开关。可以为 <code>null</code>。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="configureLogger" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Logger(Serilog.ILogger,Serilog.Events.LogEventLevel)"><summary>将日志事件写入子记录器，以便进一步处理。通过子记录器的事件将受到父记录器中活动的过滤器的约束，并由富化器丰富。子记录器不能用于以更详细的级别进行记录，但可以以较不详细的级别进行记录。</summary><param name="logger">子记录器。当父记录器被释放时，这<em>不会</em>自动关闭。</param><param name="restrictedToMinimumLevel">通过接收器的事件的最低级别。</param><returns>允许方法链式调用的配置对象</returns><exception cref="T:System.ArgumentNullException">当<paramref name="logger" />为<code>null</code>时</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Logger(Serilog.ILogger,System.Boolean,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+            将日志事件写入子记录器，以便进行进一步处理。通过子记录器的事件将受到父级中启用的过滤器和丰富器的约束和增强。子记录器不能用于记录更详细的级别，但可以用于记录较不详细的级别。
+            </summary><param name="logger">子记录器。</param><param name="attemptDispose">是否在父记录器被释放时自动关闭子记录器。</param><param name="restrictedToMinimumLevel">通过接收器的事件的最低级别。</param><param name="levelSwitch">一个开关，允许在运行时更改通过的最低级别。可以是 <code>null</code>。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="logger" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Conditional(System.Func{Serilog.Events.LogEvent,System.Boolean},System.Action{Serilog.Configuration.LoggerSinkConfiguration})"><summary>
+            仅当<paramref name="condition" />的计算结果为<c>true</c>时写入接收器。
+            </summary><param name="condition">一个谓词，当提供的<see cref="T:Serilog.Events.LogEvent" />应写入配置的接收器时，其计算结果为<c>true</c>。</param><param name="configureSink">一个配置包装接收器的操作。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="condition" />为<code>null</code>时。</exception><exception cref="T:System.ArgumentNullException">当<paramref name="configureSink" />为<code>null</code>时。</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Wrap(Serilog.Configuration.LoggerSinkConfiguration,System.Func{Serilog.Core.ILogEventSink,Serilog.Core.ILogEventSink},System.Action{Serilog.Configuration.LoggerSinkConfiguration},Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)"><summary>
+    用于构造包装接收器的辅助方法。
+    </summary><param name="loggerSinkConfiguration">父接收器配置。</param><param name="wrapSink">一个函数，允许包装在<paramref name="configureWrappedSink" />中添加的<see cref="T:Serilog.Core.ILogEventSink" />。</param><param name="configureWrappedSink">一个配置要在<paramref name="wrapSink" />中包装的接收器的操作。</param><param name="restrictedToMinimumLevel">传递给接收器的事件的最低级别。当指定了<paramref name="levelSwitch" />时忽略。</param><param name="levelSwitch">一个开关，允许在运行时更改直通最低级别。可以为<code>null</code>。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="loggerSinkConfiguration" />为<code>null</code>时。</exception><exception cref="T:System.ArgumentNullException">当<paramref name="wrapSink" />为<code>null</code>时。</exception><exception cref="T:System.ArgumentNullException">当<paramref name="configureWrappedSink" />为<code>null</code>时。</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.Wrap(System.Func{Serilog.Core.ILogEventSink,Serilog.Core.ILogEventSink},System.Action{Serilog.Configuration.LoggerSinkConfiguration})"><summary>
+            用于构造包装接收器的辅助方法。与 <see cref="M:Serilog.Configuration.LoggerSinkConfiguration.CreateSink(System.Action{Serilog.Configuration.LoggerSinkConfiguration})" /> 相比，建议使用此方法，因为它会在包装器不可释放时将 <see cref="M:System.IDisposable.Dispose" /> 委托给被包装的接收器。
+            </summary><param name="wrapSink">一个函数，允许包装在 <paramref name="configureWrappedSink" /> 中添加的 <see cref="T:Serilog.Core.ILogEventSink" /></param><param name="configureWrappedSink">一个操作，配置要包装在 <paramref name="wrapSink" /> 中的接收器</param><returns>包装器，或将处理调用包装器的接收器。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="wrapSink" /> 为 <code>null</code> 时。</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="configureWrappedSink" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.CreateSink(System.Action{Serilog.Configuration.LoggerSinkConfiguration})"><summary>
+            在记录器管道外部构造接收器的辅助方法。
+            </summary><param name="configure">一个配置一个或多个接收器的操作。</param><returns>如果只配置了一个接收器，它将从<see cref="M:Serilog.Configuration.LoggerSinkConfiguration.CreateSink(System.Action{Serilog.Configuration.LoggerSinkConfiguration})" />返回。如果配置了零个或多个接收器，它们将被组合在聚合包装器中。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="configure" />为<code>null</code>时。</exception></member><member name="T:Serilog.Context.LogContext"><summary>
+            存储可以附加到日志事件的环境属性。要配置，请使用 <see cref="M:Serilog.Configuration.LoggerEnrichmentConfiguration.FromLogContext" /> 方法。
+            </summary><example>
+            配置：
+            <code lang="C#">
+            var log = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                ...
+            </code>
+            用法：
+            <code lang="C#">
+            using (LogContext.PushProperty("MessageId", message.Id))
+            {
+                Log.Information("The MessageId property will be attached to this event");
+            }
+            </code></example><remarks>上下文的范围是当前逻辑线程，使用 AsyncLocal（因此可以跨 async/await 调用保持）。</remarks></member><member name="M:Serilog.Context.LogContext.PushProperty(System.String,System.Object,System.Boolean)"><summary>
+    将一个属性推送到上下文中，返回一个 <see cref="T:System.IDisposable" />，稍后必须使用它来移除该属性，以及可能已推送到其上方且尚未弹出的任何其他属性。该属性必须从同一线程/逻辑调用上下文中弹出。
+    </summary><param name="name">属性的名称。</param><param name="value">属性的值。</param><returns>用于稍后从上下文中移除属性的句柄。</returns><param name="destructureObjects">如果 <see langword="true" />，并且值是非基本类型、非数组类型，那么该值将被转换为结构；否则，未知类型将被转换为标量，通常存储为字符串。</param><returns>必须按顺序释放的令牌，以将属性从堆栈中弹出。</returns></member><member name="M:Serilog.Context.LogContext.Push(Serilog.Core.ILogEventEnricher)"><summary>
+            将一个富化器推送到日志上下文中，返回一个 <see cref="T:System.IDisposable" />，该对象之后必须用于移除该属性以及可能已压入其上方但尚未弹出的任何其他属性。该属性必须从同一线程/逻辑调用上下文中弹出。
+            </summary><param name="enricher">要推送到日志上下文上的富化器</param><returns>一个令牌，必须依次释放以将属性从堆栈中弹出。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="enricher" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Context.LogContext.Push(Serilog.Core.ILogEventEnricher[])"><summary>
+            将多个富化器推送到上下文中，返回一个 <see cref="T:System.IDisposable" />，
+            随后必须使用该对象移除该属性以及可能在其之上推送但尚未弹出的任何其他属性。
+            该属性必须从同一线程/逻辑调用上下文中弹出。
+            </summary><seealso cref="T:Serilog.Core.Enrichers.PropertyEnricher" />。
+            <param name="enrichers">要推送到日志上下文中的富化器</param><returns>一个必须按顺序释放的令牌，以将属性弹出堆栈。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="enrichers" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Context.LogContext.Push(System.Collections.Generic.IEnumerable{Serilog.Core.ILogEventEnricher})"><summary>
+            将多个富化器推入上下文，并返回一个<see cref="T:System.IDisposable" />，
+            以后必须用该对象移除该属性，以及可能在其上推入但尚未弹出的任何其他属性。
+            该属性必须从同一线程/逻辑调用上下文中弹出。
+            </summary><seealso cref="T:Serilog.Core.Enrichers.PropertyEnricher" />。
+            <param name="enrichers">要推入日志上下文的富化器</param><returns>一个必须按顺序释放的令牌，以将属性从堆栈中弹出。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="enrichers" />为<code>null</code>时</exception></member><member name="M:Serilog.Context.LogContext.Clone"><summary>
+            获取一个表示当前<see cref="T:Serilog.Context.LogContext" />内容的扩充器。当需要时，它可以被推回到不同位置/线程的上下文中。
+            </summary><returns>一个表示当前<see cref="T:Serilog.Context.LogContext" />内容的扩充器。</returns></member><member name="M:Serilog.Context.LogContext.Suspend"><summary>
+            从 <see cref="T:Serilog.Context.LogContext" /> 中移除所有扩充器，返回一个 <see cref="T:System.IDisposable" />，
+            后续必须使用该对象来恢复在调用 <see cref="M:Serilog.Context.LogContext.Suspend" /> 之前堆栈上的扩充器。
+            </summary><returns>一个必须释放的令牌，用于将属性恢复回堆栈。</returns></member><member name="M:Serilog.Context.LogContext.Reset"><summary>
+            从当前异步作用域的 <see cref="T:Serilog.Context.LogContext" /> 中移除所有富化器。
+            </summary></member><member name="T:Serilog.Core.Constants"><summary>
+            核心日志管道及关联类型中使用的常量。
+            </summary></member><member name="F:Serilog.Core.Constants.SourceContextPropertyName"><summary>
+            当应用<code>ForContext&lt;T&gt;()</code>及其重载时，所包含在发出的日志事件中的属性名称。
+            </summary></member><member name="T:Serilog.Core.Enrichers.PropertyEnricher"><summary>
+        向日志事件添加新的属性富化器。
+    </summary></member><member name="M:Serilog.Core.Enrichers.PropertyEnricher.#ctor(System.String,System.Object,System.Boolean)"><summary>创建一个新的属性充实器。</summary><param name="name">属性的名称。</param><param name="value">属性的值。</param><param name="destructureObjects">如果 <see langword="true" />，并且该值是非原始、非数组类型，则会将值转换为结构；否则，未知类型将转换为标量，通常作为字符串存储。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="name" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentException">当 <paramref name="name" /> 为空或仅包含空白时</exception></member><member name="M:Serilog.Core.Enrichers.PropertyEnricher.Enrich(Serilog.Events.LogEvent,Serilog.Core.ILogEventPropertyFactory)"><summary>
+            丰富日志事件。
+            </summary><param name="logEvent">要丰富的日志事件。</param><param name="propertyFactory">用于创建要添加到事件的新属性的工厂。</param><exception cref="T:System.ArgumentNullException">当<paramref name="logEvent" />为<code>null</code>时</exception><exception cref="T:System.ArgumentNullException">当<paramref name="propertyFactory" />为<code>null</code>时</exception></member><member name="T:Serilog.Core.IBatchedLogEventSink"><summary>
+            一个以批处理方式接受事件的接收器。许多接收器通过批量处理事件获得性能优势，例如将多个事件合并为单个网络请求发送到远程收集器。由于使用批处理时客户端应用程序无法等待每个事件被刷新，因此批处理接收器通常异步工作，以在发送批次时节省本地资源。
+            </summary><seealso cref="T:Serilog.Core.ILogEventSink" /></member><member name="M:Serilog.Core.IBatchedLogEventSink.EmitBatchAsync(System.Collections.Generic.IReadOnlyCollection{Serilog.Events.LogEvent})"><summary>
+            异步发出一个批次的日志事件。
+            </summary><param name="batch">要发出的事件批次。</param><remarks>当批次失败时，实现者应允许异常传播。批处理基础结构负责异常处理、诊断和重试。</remarks></member><member name="M:Serilog.Core.IBatchedLogEventSink.OnEmptyBatchAsync"><summary>
+            允许接收器执行定期工作，而无需额外的线程或定时器（从而避免了额外的刷新/关闭复杂性）。
+            </summary></member><member name="T:Serilog.Core.IDestructuringPolicy"><summary>
+            确定在解构时如何将提供的值表示为复杂日志事件属性。
+            </summary></member><member name="M:Serilog.Core.IDestructuringPolicy.TryDestructure(System.Object,Serilog.Core.ILogEventPropertyValueFactory,Serilog.Events.LogEventPropertyValue@)"><summary>
+            如果支持，则解构提供的值。
+            </summary><param name="value">要解构的值。</param><param name="propertyValueFactory">递归应用策略以解构其他值。</param><param name="result">解构后的值，或为 null。</param><returns>如果值可以在此策略下解构，则为 True。</returns></member><member name="T:Serilog.Core.ILogEventEnricher"><summary>
+    在日志记录期间应用，以向日志事件添加附加信息。
+    </summary></member><member name="M:Serilog.Core.ILogEventEnricher.Enrich(Serilog.Events.LogEvent,Serilog.Core.ILogEventPropertyFactory)"><summary>
+            丰富日志事件。
+            </summary><param name="logEvent">要丰富的日志事件。</param><param name="propertyFactory">用于创建要添加到事件的新属性的工厂。</param></member><member name="T:Serilog.Core.ILogEventFilter"><summary>
+            提供日志事件流的筛选功能。
+            </summary></member><member name="M:Serilog.Core.ILogEventFilter.IsEnabled(Serilog.Events.LogEvent)"><summary>
+            如果提供的事件已启用，则返回 true。否则，<see langword="false" />。
+            </summary><param name="logEvent">要测试的事件。</param><returns>如果此筛选器启用了该事件，则为 <see langword="true" />。如果返回 <see langword="false" />，则不会发出该事件。</returns></member><member name="T:Serilog.Core.ILogEventPropertyFactory"><summary>
+            从常规 .NET 对象创建日志事件属性，根据需要
+            应用策略。
+            </summary></member><member name="M:Serilog.Core.ILogEventPropertyFactory.CreateProperty(System.String,System.Object,System.Boolean)"><summary>
+            使用指定的名称和值构造一个 <see cref="T:Serilog.Events.LogEventProperty" />。
+            </summary><param name="name">属性的名称。</param><param name="value">属性的值。</param><param name="destructureObjects">如果 <see langword="true" />，并且该值是非基元、非数组类型，则该值将转换为结构；否则，未知类型将转换为标量，通常以字符串形式存储。</param><returns>创建的 <see cref="T:Serilog.Events.LogEventProperty" /> 实例。</returns></member><member name="T:Serilog.Core.ILogEventPropertyValueFactory"><summary>
+            支持根据常规 .NET 对象进行策略驱动的 <see cref="T:Serilog.Events.LogEventPropertyValue" /> 构造。
+            </summary></member><member name="M:Serilog.Core.ILogEventPropertyValueFactory.CreatePropertyValue(System.Object,System.Boolean)"><summary>
+            给定一个 .NET 对象和解构策略，创建一个 <see cref="T:Serilog.Events.LogEventPropertyValue" />。
+            </summary><param name="value">属性的值。</param><param name="destructureObjects">如果<see langword="true" />，且该值是非基本类型、非数组类型，则该值将被转换为结构；否则，未知类型将被转换为标量，这些标量通常存储为字符串。</param><returns>该值。</returns></member><member name="T:Serilog.Core.ILogEventSink"><summary>
+            日志事件接收器。
+            </summary><seealso cref="T:Serilog.Core.ILogEventSink" /></member><member name="M:Serilog.Core.ILogEventSink.Emit(Serilog.Events.LogEvent)"><summary>
+    将提供的日志事件发送到接收器。
+    </summary><param name="logEvent">要写入的日志事件。</param><seealso cref="T:Serilog.Core.IBatchedLogEventSink" /><remarks>实现者应在事件发送失败时允许异常传播。记录器将处理异常并适当地生成诊断信息。</remarks></member><member name="T:Serilog.Core.ILoggingFailureListener"><summary>
+            实现者可以被告知Serilog管道中的各种故障条件。
+            </summary></member><member name="M:Serilog.Core.ILoggingFailureListener.OnLoggingFailed(System.Object,Serilog.Core.LoggingFailureKind,System.String,System.Collections.Generic.IReadOnlyCollection{Serilog.Events.LogEvent},System.Exception)"><summary>
+            日志功能出现故障。通常，故障会传达将日志事件写入接收器时所遇到的错误。
+            </summary><param name="sender">生成或观察到故障的对象。</param><param name="kind">故障类型的指示。</param><param name="message">故障的描述。</param><param name="events">与故障关联的事件。</param><param name="exception">触发故障的异常（如果有的话）。</param></member><member name="T:Serilog.Core.IScalarConversionPolicy"><summary>确定一个简单值如何作为不可变的 <see cref="T:Serilog.Events.ScalarValue" /> 在日志管道中传递。</summary></member><member name="M:Serilog.Core.IScalarConversionPolicy.TryConvertToScalar(System.Object,Serilog.Events.ScalarValue@)"><summary>
+        如果支持，将提供的值转换为不可变标量。
+    </summary><param name="value">要转换的值。</param><param name="result">转换后的值，或 null。</param><returns>如果值可以在此策略下转换，则为 true。</returns></member><member name="T:Serilog.Core.ISetLoggingFailureListener"><summary>
+            由可以通过 <see cref="T:Serilog.Core.ILoggingFailureListener" /> 报告故障的接收器实现。
+            </summary></member><member name="M:Serilog.Core.ISetLoggingFailureListener.SetFailureListener(Serilog.Core.ILoggingFailureListener)"><summary>
+            设置接收器用于报告失败的（单个）失败侦听器。此方法必须仅在初始化期间、在初始化线程上、在日志记录开始之前调用。
+            </summary><param name="failureListener">用于报告失败的侦听器。</param></member><member name="T:Serilog.Core.Logger"><summary>
+    Serilog 核心日志记录管道。必须释放 <see cref="T:Serilog.Core.Logger" /> 以刷新其中缓冲的任何事件。大多数应用程序代码应依赖于 <see cref="T:Serilog.ILogger" />，而不是此类。
+    </summary></member><member name="M:Serilog.Core.Logger.ForContext(Serilog.Core.ILogEventEnricher)"><summary>
+            创建一个通过提供的丰富器来丰富日志事件的记录器。
+            </summary><param name="enricher">在上下文中应用的丰富器。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Core.Logger.ForContext(System.Collections.Generic.IEnumerable{Serilog.Core.ILogEventEnricher})"><summary>
+    创建一个通过提供的丰富器来丰富日志事件的记录器。
+    </summary><param name="enrichers">在此上下文中应用的丰富器。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Core.Logger.ForContext(System.String,System.Object,System.Boolean)"><summary>
+            创建一个日志记录器，使用指定的属性来丰富日志事件。
+            </summary><param name="propertyName">属性的名称。必须为非空。</param><param name="value">属性值。</param><param name="destructureObjects">如果 <see langword="true" />，则值将尽可能序列化为结构化对象；如果 <see langword="false" />，则将对象记录为标量或简单数组。</param><returns>一个将按指定方式丰富日志事件的日志记录器。</returns></member><member name="M:Serilog.Core.Logger.ForContext(System.Type)"><summary>
+            创建一个将日志事件标记为来自指定源类型的记录器。
+            </summary><param name="source">在上下文中生成日志消息的类型。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Core.Logger.ForContext``1"><summary>
+            创建一个标记日志事件来自指定
+            源类型的记录器。
+            </summary><typeparam name="TSource">在此上下文中生成日志消息的类型。</typeparam><returns>一个将按照指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Core.Logger.Write(Serilog.Events.LogEventLevel,System.String)"><summary>
+    使用指定级别写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.Core.Logger.Write``1(Serilog.Events.LogEventLevel,System.String,``0)"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write``2(Serilog.Events.LogEventLevel,System.String,``0,``1)"><summary>使用指定的级别写入日志事件。</summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.Core.Logger.Write``3(Serilog.Events.LogEventLevel,System.String,``0,``1,``2)"><summary>
+            使用指定的级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板的对象。</param><param name="propertyValue1">按位置格式化到消息模板的对象。</param><param name="propertyValue2">按位置格式化到消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write(Serilog.Events.LogEventLevel,System.String,System.Object[])"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate"></param><param name="propertyValues"></param></member><member name="M:Serilog.Core.Logger.IsEnabled(Serilog.Events.LogEventLevel)"><summary>
+            确定指定级别及更高级别的事件是否会传递到日志接收器。
+            </summary><param name="level">要检查的级别。</param><returns>如果启用该级别，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Serilog.Core.Logger.Write(Serilog.Events.LogEventLevel,System.Exception,System.String)"><summary>
+            使用指定级别和相关异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.Core.Logger.Write``1(Serilog.Events.LogEventLevel,System.Exception,System.String,``0)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write``2(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1)"><summary>
+        使用指定的级别和关联异常写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write``3(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1,``2)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write(Serilog.Events.LogEventLevel,System.Exception,System.String,System.Object[])"><summary>
+    使用指定的级别和关联的异常写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Core.Logger.Write(Serilog.Events.LogEvent)"><summary>
+            将事件写入日志。
+            </summary><param name="logEvent">要写入的事件。</param></member><member name="M:Serilog.Core.Logger.Verbose(System.String)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Verbose" />级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Verbose("凝视太空，思考我们是否孤独。");
+            </example></member><member name="M:Serilog.Core.Logger.Verbose``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Verbose("Staring into space, wondering if we're alone.");
+            </example></member><member name="M:Serilog.Core.Logger.Verbose``3(System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose(System.String,System.Object[])"><summary>
+            写入具有 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别的日志事件以及关联的异常。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+            Log.Verbose("Staring into space, wondering if we're alone.");
+            </example></member><member name="M:Serilog.Core.Logger.Verbose(System.Exception,System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和相关异常写入一个日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Verbose(ex, "凝视着太空，想知道这颗彗星从哪里来。");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Verbose(ex, "凝视太空，想知道这颗彗星从哪里来。");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose``2(System.Exception,System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+    Log.Verbose(ex, "迷失在太空中，想知道这颗彗星来自哪里。");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件，并包含关联的异常。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Verbose(ex, "凝视着太空，想知道这颗彗星从哪里来。");
+    </example></member><member name="M:Serilog.Core.Logger.Verbose(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联的异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </example></member><member name="M:Serilog.Core.Logger.Debug(System.String)"><summary>
+            写入一个 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Core.Logger.Debug``1(System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Core.Logger.Debug``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Core.Logger.Debug``3(System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+    Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+    </example></member><member name="M:Serilog.Core.Logger.Debug(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和相关异常写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按照位置格式化为消息模板的对象。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Core.Logger.Debug(System.Exception,System.String)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Debug" />级别及关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </example></member><member name="M:Serilog.Core.Logger.Debug``1(System.Exception,System.String,``0)"><summary>
+            写入一个日志事件，级别为 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 并包含相关异常。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </example></member><member name="M:Serilog.Core.Logger.Debug``2(System.Exception,System.String,``0,``1)"><summary>
+        写入一个日志事件，该事件具有 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+        Log.Debug(ex, "吞下一个普通异常。");
+    </example></member><member name="M:Serilog.Core.Logger.Debug``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别及相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Debug(ex, "吞下一个普通的异常。");
+    </example></member><member name="M:Serilog.Core.Logger.Debug(System.Exception,System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">位置格式化为消息模板的对象。</param><example>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </example></member><member name="M:Serilog.Core.Logger.Information(System.String)"><summary>
+            写入一个日志事件，其级别为 <see cref="F:Serilog.Events.LogEventLevel.Information" />。
+            </summary><param name="messageTemplate">用于描述事件的消息模板。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Information``1(System.String,``0)"><summary>
+    写入一条 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+    Log.Information("处理了 {RecordCount} 条记录，耗时 {TimeMS} 毫秒。", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Core.Logger.Information``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Information``3(System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式设置到消息模板中的对象。</param><param name="propertyValue1">按位置格式设置到消息模板中的对象。</param><param name="propertyValue2">按位置格式设置到消息模板中的对象。</param><example>
+    Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Core.Logger.Information(System.String,System.Object[])"><summary>
+            写入具有 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Information(System.Exception,System.String)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Information" />级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Information``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Core.Logger.Information``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Information``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    写入具有 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常的日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Core.Logger.Information(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和相关异常编写日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Core.Logger.Warning(System.String)"><summary>
+            写入一个<see cref="F:Serilog.Events.LogEventLevel.Warning" />级别的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Warning``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">根据位置格式化到消息模板中的对象。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Warning``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">位置格式化为消息模板的对象。</param><param name="propertyValue1">位置格式化为消息模板的对象。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Warning``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Warning(System.String,System.Object[])"><summary>
+    写入具有 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Warning(System.Exception,System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Warning``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Warning``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">根据位置格式化为消息模板的对象。</param><param name="propertyValue1">根据位置格式化为消息模板的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Warning``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Warning(System.Exception,System.String,System.Object[])"><summary>
+        写入一个日志事件，其级别为 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 并关联异常。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+        Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Error(System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Error``1(System.String,``0)"><summary>
+    写入具有 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Error``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Error``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+            Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Error(System.String,System.Object[])"><summary>
+    写入一个带有 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Error(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Error``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">根据位置格式化为消息模板的对象。</param><example>
+    Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Core.Logger.Error``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Error(ex, "失败 {ErrorCount} 条记录。", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Error``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Error(System.Exception,System.String,System.Object[])"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常的日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Error(ex, "失败 {ErrorCount} 条记录。", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Core.Logger.Fatal(System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Fatal("Process terminating.");
+    </example></member><member name="M:Serilog.Core.Logger.Fatal``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Fatal("Process terminating.");
+    </example></member><member name="M:Serilog.Core.Logger.Fatal``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+    Log.Fatal("Process terminating.");
+    </example></member><member name="M:Serilog.Core.Logger.Fatal``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Fatal("Process terminating.");
+            </example></member><member name="M:Serilog.Core.Logger.Fatal(System.String,System.Object[])"><summary>使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和相关异常写入日志事件。</summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>Log.Fatal("进程终止。");</example></member><member name="M:Serilog.Core.Logger.Fatal(System.Exception,System.String)"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和相关异常的日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Core.Logger.Fatal``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Core.Logger.Fatal``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入一个日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+            Log.Fatal(ex, "进程终止。");
+            </example></member><member name="M:Serilog.Core.Logger.Fatal``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Core.Logger.Fatal(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Core.Logger.BindMessageTemplate(System.String,System.Object[],Serilog.Events.MessageTemplate@,System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty}@)"><summary>
+            使用配置的标量转换和析构规则将一组属性绑定到消息模板。如果模板或值无效，则返回 false（<c>ILogger</c> 方法从不引发异常）。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><param name="parsedTemplate">模板的内部表示，可用于将<paramref name="boundProperties" />呈现为文本。</param><param name="boundProperties">从模板和<paramref name="propertyValues" />中捕获的属性。</param><example>
+            MessageTemplate template;
+            IEnumerable&lt;LogEventProperty&gt; properties&gt;;
+            if (Log.BindMessageTemplate("Hello, {Name}!", new[] { "World" }, out template, out properties)
+            {
+                var propsByName = properties.ToDictionary(p =&gt; p.Name, p =&gt; p.Value);
+                Console.WriteLine(template.Render(propsByName, null));
+                // 输出: "Hello, World!"
+            }
+            </example></member><member name="M:Serilog.Core.Logger.BindProperty(System.String,System.Object,System.Boolean,Serilog.Events.LogEventProperty@)"><summary>
+    使用配置的标量转换和解构规则将属性值绑定到其捕获的表示形式。
+    </summary><param name="propertyName">属性的名称。不能为空。</param><param name="value">属性值。</param><param name="destructureObjects">如果<see langword="true" />，该值将尽可能序列化为结构化对象；如果<see langword="false" />，该对象将被记录为标量或简单数组。</param><param name="property">生成的属性。</param><returns>如果属性可以绑定，则为 true；否则为 false（<summary>ILogger</summary> 方法从不引发异常）。</returns></member><member name="M:Serilog.Core.Logger.Dispose"><summary>
+            关闭并刷新日志管道。
+            </summary></member><member name="M:Serilog.Core.Logger.DisposeAsync"><summary>
+            关闭并刷新日志管道。
+            </summary></member><member name="P:Serilog.Core.Logger.None"><summary>
+            一个 <see cref="T:Serilog.ILogger" /> 实例，它高效地忽略所有方法调用。
+            </summary></member><member name="T:Serilog.Core.LoggingFailureKind"><summary>
+            描述日志记录失败的原因。
+            </summary></member><member name="F:Serilog.Core.LoggingFailureKind.Temporary"><summary>
+    发生了故障；情况可能会自行解决，如果有任何事件与故障相关，报告接收器将重试日志记录。
+    </summary></member><member name="F:Serilog.Core.LoggingFailureKind.Permanent"><summary>
+            发生了故障；与该故障相关的任何事件将不会被报告接收器重试。
+            </summary></member><member name="F:Serilog.Core.LoggingFailureKind.Final"><summary>
+            已发生故障；报告接收器将离线，并且不会尝试重试。
+            </summary></member><member name="T:Serilog.Core.LoggingLevelSwitch"><summary>
+            动态控制日志记录级别。
+            </summary></member><member name="M:Serilog.Core.LoggingLevelSwitch.#ctor(Serilog.Events.LogEventLevel)"><summary>
+            创建一个处于初始最低级别的 <see cref="T:Serilog.Core.LoggingLevelSwitch" />。
+            </summary><param name="initialMinimumLevel">开关设置的初始级别。</param></member><member name="E:Serilog.Core.LoggingLevelSwitch.MinimumLevelChanged"><summary>
+            当 <see cref="P:Serilog.Core.LoggingLevelSwitch.MinimumLevel" /> 发生变化时引发此事件。请注意，该事件在锁定状态下引发，
+            因此要小心事件处理程序以避免陷入死锁。
+            </summary></member><member name="P:Serilog.Core.LoggingLevelSwitch.MinimumLevel"><summary>
+            当前最低日志级别，低于该级别
+            不应生成任何事件。
+            </summary></member><member name="T:Serilog.Core.LoggingLevelSwitchChangedEventArgs"><summary><see cref="E:Serilog.Core.LoggingLevelSwitch.MinimumLevelChanged" /> 事件的事件参数。
+            </summary></member><member name="M:Serilog.Core.LoggingLevelSwitchChangedEventArgs.#ctor(Serilog.Events.LogEventLevel,Serilog.Events.LogEventLevel)"><summary>
+            创建一个 <see cref="T:Serilog.Core.LoggingLevelSwitchChangedEventArgs" /> 的实例，指定旧级别和新级别。
+            </summary><param name="oldLevel">旧级别。</param><param name="newLevel">新级别。</param></member><member name="P:Serilog.Core.LoggingLevelSwitchChangedEventArgs.OldLevel"><summary>
+            旧级别。
+            </summary></member><member name="P:Serilog.Core.LoggingLevelSwitchChangedEventArgs.NewLevel"><summary>
+            新级别。
+            </summary></member><member name="T:Serilog.Core.MessageTemplateFormatMethodAttribute"><summary>
+             指示标记的方法使用消息模板和（可选）参数记录数据。应在构造函数中指定包含消息模板的参数名称。
+             </summary><example><code>
+             [MessageTemplateFormatMethod("messageTemplate")]
+             public void Information(string messageTemplate, params object[] propertyValues)
+             {
+                 // Do something
+             }
+            
+             public void Foo()
+             {
+                 Information("Hello, {Name}!") // Warning: Nonexistent argument in message template.
+             }
+             </code></example></member><member name="M:Serilog.Core.MessageTemplateFormatMethodAttribute.#ctor(System.String)"><summary>
+            初始化 <see cref="T:Serilog.Core.MessageTemplateFormatMethodAttribute" /> 类的新实例。
+            </summary><param name="messageTemplateParameterName">消息模板参数的名称。</param></member><member name="P:Serilog.Core.MessageTemplateFormatMethodAttribute.MessageTemplateParameterName"><summary>
+            获取消息模板参数的名称。
+            </summary><value>消息模板参数的名称。</value></member><member name="T:Serilog.Core.Sinks.Batching.BatchingSink"><summary>
+            将日志事件缓冲为批处理，以进行后台刷新。
+            </summary></member><member name="M:Serilog.Core.Sinks.Batching.BatchingSink.#ctor(Serilog.Core.IBatchedLogEventSink,Serilog.Configuration.BatchingOptions)"><summary>
+    构造一个 <see cref="T:Serilog.Core.Sinks.Batching.BatchingSink" />。
+    </summary><param name="batchedSink">一个 <see cref="T:Serilog.Core.IBatchedLogEventSink" />，用于发送日志事件批次。批次和空批次通知不会并发发送。当 <see cref="T:Serilog.Core.Sinks.Batching.BatchingSink" /> 被释放时，如果可能，它将释放此对象。</param><param name="options">控制接收器行为的选项。</param></member><member name="M:Serilog.Core.Sinks.Batching.BatchingSink.Emit(Serilog.Events.LogEvent)"><summary>
+            将提供的日志事件发送到接收器。如果接收器正在被释放或
+            应用程序域已卸载，则忽略该事件。
+            </summary><param name="logEvent">要发出的日志事件。</param><exception cref="T:System.ArgumentNullException">事件为 null。</exception><remarks>
+            接收器实现约定：任何已完成 Emit() 方法的事件
+            在接收器释放时将刷新（或尝试刷新，
+            具体取决于应用程序域状态）。
+            </remarks></member><member name="M:Serilog.Core.Sinks.Batching.BatchingSink.SetFailureListener(Serilog.Core.ILoggingFailureListener)"><inheritdoc /></member><member name="M:Serilog.Core.Sinks.Batching.BatchingSink.Dispose"><inheritdoc /></member><member name="M:Serilog.Core.Sinks.Batching.BatchingSink.DisposeAsync"><inheritdoc /></member><member name="T:Serilog.Core.Sinks.Batching.FailureAwareBatchScheduler"><summary>
+            管理 <see cref="T:Serilog.Core.Sinks.Batching.BatchingSink" /> 的重连周期和瞬时故障响应。
+            在正常操作期间，此类型的对象将仅反映配置的批处理传输周期。
+            当可用性波动时，该类跟踪失败尝试次数，每次增加尝试重新连接前的间隔（直至设定的最大值），并在预定点指示应丢弃当前批次或整个等待队列。
+            这有两个目的——首先，负载较重的接收器在重新上线时可能需要暂时减少流量。其次，发送方需要同时考虑错误批次（第一个故障响应）和过度生产（第二个，丢弃队列响应）。结合起来，这些应提供合理的传递努力，但最终保护发送方免受内存耗尽的影响。
+            </summary></member><member name="T:Serilog.Core.Sinks.SecondaryLoggerSink"><summary>
+    将日志事件转发到另一个日志管道。复制事件，以便对副本所做的更改不会影响原始事件。
+  </summary><remarks>
+    属性字典被复制，但字典中的值（类型为<see cref="T:Serilog.Events.LogEventProperty" />）预期是不可变的。
+  </remarks></member><member name="T:Serilog.Data.LogEventPropertyValueRewriter`1"><summary>
+            一个用于重写带有修改的值的访问器的基类。例如，实现可能会删除所有具有特定名称的结构属性，应用大小/长度限制，或将一种类型的标量属性转换为另一种类型的标量属性。
+            </summary><typeparam name="TState"></typeparam></member><member name="M:Serilog.Data.LogEventPropertyValueRewriter`1.VisitScalarValue(`0,Serilog.Events.ScalarValue)"><summary>
+    访问 <see cref="T:Serilog.Events.ScalarValue" /> 值。
+    </summary><param name="state">操作状态。</param><param name="scalar">要访问的值。</param><returns>访问 <paramref name="scalar" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="scalar" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Data.LogEventPropertyValueRewriter`1.VisitSequenceValue(`0,Serilog.Events.SequenceValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.SequenceValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="sequence">要访问的值。</param><returns>访问 <paramref name="sequence" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="sequence" /> 为 <code>null</code></exception></member><member name="M:Serilog.Data.LogEventPropertyValueRewriter`1.VisitStructureValue(`0,Serilog.Events.StructureValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.StructureValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="structure">要访问的值。</param><returns>访问 <paramref name="structure" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="structure" /> 为 <code>null</code></exception></member><member name="M:Serilog.Data.LogEventPropertyValueRewriter`1.VisitDictionaryValue(`0,Serilog.Events.DictionaryValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.DictionaryValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="dictionary">要访问的值。</param><returns>访问 <paramref name="dictionary" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="dictionary" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Data.LogEventPropertyValueRewriter`1.VisitUnsupportedValue(`0,Serilog.Events.LogEventPropertyValue)"><summary>
+            访问不受支持类型的值，返回原值。
+            </summary><param name="state">操作状态。</param><param name="value">要访问的值。</param><returns>访问 <paramref name="value" /> 的结果。</returns></member><member name="T:Serilog.Data.LogEventPropertyValueVisitor`2"><summary>
+    一个抽象基类，用于访问以<see cref="T:Serilog.Events.LogEventPropertyValue" />格式存储的数据的访问器。子类通过重写适当的方法，可以搜索、转换或打印被访问的值结构。
+    </summary><remarks>
+    无状态，旨在允许同一个访问器实例无分配地访问多个值。
+    </remarks><typeparam name="TState">在访问过程中传递的状态对象的类型。</typeparam><typeparam name="TResult">访问节点生成的结果的类型。</typeparam></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.Visit(`0,Serilog.Events.LogEventPropertyValue)"><summary>
+            访问根节点类型。此方法委托给适合该值的具体Visit*Value()方法。
+            </summary><param name="state">操作状态。</param><param name="value">要访问的值。</param><returns>访问<paramref name="value" />的结果。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="value" />是<code>null</code>时</exception></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.VisitScalarValue(`0,Serilog.Events.ScalarValue)"><summary>访问一个 <see cref="T:Serilog.Events.ScalarValue" /> 值。</summary><param name="state">操作状态。</param><param name="scalar">要访问的值。</param><returns>访问 <paramref name="scalar" /> 的结果。</returns></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.VisitSequenceValue(`0,Serilog.Events.SequenceValue)"><summary>
+            访问 <see cref="T:Serilog.Events.SequenceValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="sequence">要访问的值。</param><returns>访问 <paramref name="sequence" /> 的结果。</returns></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.VisitStructureValue(`0,Serilog.Events.StructureValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.StructureValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="structure">要访问的值。</param><returns>访问 <paramref name="structure" /> 的结果。</returns></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.VisitDictionaryValue(`0,Serilog.Events.DictionaryValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.DictionaryValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="dictionary">要访问的值。</param><returns>访问 <paramref name="dictionary" /> 的结果。</returns></member><member name="M:Serilog.Data.LogEventPropertyValueVisitor`2.VisitUnsupportedValue(`0,Serilog.Events.LogEventPropertyValue)"><summary>
+            访问不受支持类型的值。当未重写时，始终引发 <see cref="T:System.NotSupportedException" />。
+            </summary><param name="state">操作状态。</param><param name="value">要访问的值。</param><returns>访问 <paramref name="value" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="value" /> 为 <code>null</code> 时。</exception><exception cref="T:System.NotSupportedException">始终。</exception></member><member name="T:Serilog.Debugging.LoggingFailedException"><summary>
+            可能由日志事件接收器在发生故障时抛出。
+            不应在异常会传播给调用者的情况下使用。
+            </summary></member><member name="M:Serilog.Debugging.LoggingFailedException.#ctor(System.String)"><summary>
+            构造一个<see cref="T:Serilog.Debugging.LoggingFailedException" />以传达日志记录失败。
+            </summary><param name="message">描述日志记录失败的消息。</param></member><member name="T:Serilog.Debugging.SelfLog"><summary>
+            Serilog 自身生成的简单信息源，例如在内部引发和捕获异常时。
+            </summary></member><member name="M:Serilog.Debugging.SelfLog.Enable(System.IO.TextWriter)"><summary>
+            设置自身日志消息的输出机制。
+            </summary><param name="output">一个同步的<see cref="T:System.IO.TextWriter" />，自身日志消息将被写入其中。</param><exception cref="T:System.ArgumentNullException">当<paramref name="output" />为<code>null</code>时</exception></member><member name="M:Serilog.Debugging.SelfLog.Enable(System.Action{System.String})"><summary>
+            设置自日志消息的输出机制。
+            </summary><param name="output">一个用于接收自日志消息的操作。</param>
+            // ReSharper disable once MemberCanBePrivate.Global
+            <exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Debugging.SelfLog.Disable"><summary>
+            清除输出机制并禁用自日志事件。
+            </summary>
+            // ReSharper disable once MemberCanBePrivate.Global
+        </member><member name="M:Serilog.Debugging.SelfLog.WriteLine(System.String,System.Object,System.Object,System.Object)"><summary>
+            将消息写入自身日志。
+            </summary><param name="format">包含消息的标准.NET格式字符串。</param><param name="arg0">第一个参数（如果提供）。</param><param name="arg1">第二个参数（如果提供）。</param><param name="arg2">第三个参数（如果提供）。</param><remarks>
+            此名称是历史遗留的；由于它被第三方接收器包使用，删除看似合理的"Line"后缀并不值得引起破坏。
+            </remarks></member><member name="P:Serilog.Debugging.SelfLog.FailureListener"><summary>
+            一个 <see cref="T:Serilog.Core.ILoggingFailureListener" />，它将诊断信息写入 <see cref="T:Serilog.Debugging.SelfLog" />。默认情况下，支持故障侦听器的接收器应使用此实例。
+            </summary></member><member name="T:Serilog.Events.DictionaryValue"><summary>
+            一个表示为从键到值的映射的值。
+            </summary></member><member name="P:Serilog.Events.DictionaryValue.Elements"><summary>
+            字典映射。
+            </summary></member><member name="M:Serilog.Events.DictionaryValue.Render(System.IO.TextWriter,System.String,System.IFormatProvider)"><summary>
+            将值呈现到输出。
+            </summary><param name="output">输出。</param><param name="format">应用于值的格式字符串，或为null。</param><param name="formatProvider">应用于值的格式提供程序，或为null以使用默认值。</param><seealso cref="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)" />。
+            <exception cref="T:System.ArgumentNullException">当<paramref name="output" />为<code>null</code>时</exception></member><member name="T:Serilog.Events.EventProperty"><summary>
+            与 <see cref="T:Serilog.Events.LogEvent" /> 关联的属性。
+            </summary><remarks>此类型当前是内部的，我们正在考虑日志管道的未来方向，但将来它应该变为公共的。</remarks></member><member name="F:Serilog.Events.EventProperty.None"><summary>
+            没有属性。
+            </summary></member><member name="P:Serilog.Events.EventProperty.Name"><summary>
+            属性的名称。
+            </summary></member><member name="P:Serilog.Events.EventProperty.Value"><summary>
+            属性的值。
+            </summary></member><member name="M:Serilog.Events.EventProperty.#ctor(System.String,Serilog.Events.LogEventPropertyValue)"><summary>
+            使用指定的名称和值构造一个<see cref="T:Serilog.Events.LogEventProperty" />。
+            </summary><param name="name">属性的名称。</param><param name="value">属性的值。</param><exception cref="T:System.ArgumentNullException">当<paramref name="name" />为<code>null</code>时</exception><exception cref="T:System.ArgumentException">当<paramref name="name" />为空或仅包含空白时</exception><exception cref="T:System.ArgumentNullException">当<paramref name="value" />为<code>null</code>时</exception></member><member name="M:Serilog.Events.EventProperty.Deconstruct(System.String@,Serilog.Events.LogEventPropertyValue@)"><summary>
+            允许将属性解构为名称/值对。
+            </summary><param name="name">属性的名称。</param><param name="value">属性的值。</param></member><member name="M:Serilog.Events.EventProperty.Equals(System.Object)"><inheritdoc /></member><member name="M:Serilog.Events.EventProperty.Equals(Serilog.Events.EventProperty)"><summary>指示此实例和指定的 <see cref="T:Serilog.Events.EventProperty" /> 是否相等。</summary><param name="other">要与当前实例进行比较的 <see cref="T:Serilog.Events.EventProperty" />。</param><returns>如果 <paramref name="other" /> 和此实例表示相同的值，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Serilog.Events.EventProperty.GetHashCode"><inheritdoc /></member><member name="F:Serilog.Events.LevelAlias.Minimum"><summary>
+            事件的最低级别。
+            </summary></member><member name="F:Serilog.Events.LevelAlias.Maximum"><summary>
+            事件最高级别。
+            </summary></member><member name="F:Serilog.Events.LevelAlias.Off"><summary>
+            当用作“最低”级别时，将导致没有事件被发出的值。
+            </summary><remarks>使用此值构造 <see cref="T:Serilog.Events.LogEvent" /> 永远是不正确的。</remarks></member><member name="T:Serilog.Events.LogEvent"><summary>
+            一个日志事件。
+            </summary></member><member name="M:Serilog.Events.LogEvent.#ctor(System.DateTimeOffset,Serilog.Events.LogEventLevel,System.Exception,Serilog.Events.MessageTemplate,System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty})"><summary>
+            构造一个新的 <seealso cref="T:Serilog.Events.LogEvent" />。
+            </summary><param name="timestamp">事件发生的时间。</param><param name="level">事件的级别。</param><param name="exception">与事件关联的异常，或为 null。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="properties">与事件关联的属性，包括在 <paramref name="messageTemplate" /> 中呈现的那些属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="messageTemplate" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Events.LogEvent.#ctor(System.DateTimeOffset,Serilog.Events.LogEventLevel,System.Exception,Serilog.Events.MessageTemplate,System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty},System.Diagnostics.ActivityTraceId,System.Diagnostics.ActivitySpanId)"><summary>
+        构造一个新的 <seealso cref="T:Serilog.Events.LogEvent" />。
+    </summary><param name="timestamp">事件发生的时间。</param><param name="level">事件的级别。</param><param name="exception">与事件关联的异常，如果没有则为 null。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="properties">与事件关联的属性，包括在 <paramref name="messageTemplate" /> 中呈现的属性。</param><param name="traceId">创建事件时处于活动状态的跟踪的 ID（如果有的话）。</param><param name="spanId">创建事件时处于活动状态的跨度 ID（如果有的话）。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="messageTemplate" /> 为 <code>null</code></exception><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code></exception></member><member name="P:Serilog.Events.LogEvent.Timestamp"><summary>
+            事件发生的时间。
+            </summary></member><member name="P:Serilog.Events.LogEvent.Level"><summary>
+            事件的级别。
+            </summary></member><member name="P:Serilog.Events.LogEvent.TraceId"><summary>
+            创建事件时处于活动状态的跟踪的 ID（如果有）。
+            </summary></member><member name="P:Serilog.Events.LogEvent.SpanId"><summary>
+            事件创建时处于活动状态的跨度ID（如果有）。
+            </summary></member><member name="P:Serilog.Events.LogEvent.MessageTemplate"><summary>
+            描述事件的消息模板。
+            </summary></member><member name="M:Serilog.Events.LogEvent.RenderMessage(System.IO.TextWriter,System.IFormatProvider)"><summary>
+    根据与事件关联的属性，将消息模板呈现到指定的输出。
+    </summary><param name="output">输出。</param><param name="formatProvider">提供特定于区域设置的格式信息，或为 null。</param></member><member name="M:Serilog.Events.LogEvent.RenderMessage(System.IFormatProvider)"><summary>
+            根据事件关联的属性呈现消息模板，并返回结果。
+            </summary><param name="formatProvider">提供区域特定的格式信息，或为 null。</param></member><member name="P:Serilog.Events.LogEvent.Properties"><summary>
+            与该事件关联的属性，包括那些在<see cref="P:Serilog.Events.LogEvent.MessageTemplate" />中呈现的属性。
+            </summary></member><member name="P:Serilog.Events.LogEvent.Exception"><summary>
+            与事件关联的异常，或 null。
+            </summary></member><member name="M:Serilog.Events.LogEvent.AddOrUpdateProperty(Serilog.Events.LogEventProperty)"><summary>
+    如果该属性不存在，则添加到事件中，否则更新其值。
+    </summary><param name="property">要添加或更新的属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="property" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Events.LogEvent.AddOrUpdateProperty(Serilog.Events.EventProperty@)"><summary>
+    如果事件中尚未存在该属性，则添加该属性；否则，更新其值。
+    </summary><param name="property">要添加或更新的属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="property" /> 为 <code>default</code> 时</exception></member><member name="M:Serilog.Events.LogEvent.AddPropertyIfAbsent(Serilog.Events.LogEventProperty)"><summary>
+    如果尚未存在，则向事件添加属性。
+    </summary><param name="property">要添加的属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="property" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Events.LogEvent.AddPropertyIfAbsent(Serilog.Events.EventProperty@)"><summary>
+    如果尚未存在，则向事件添加属性。
+    </summary><param name="property">要添加的属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="property" /> 为 <code>default</code></exception></member><member name="M:Serilog.Events.LogEvent.AddPropertyIfAbsent(Serilog.Core.ILogEventPropertyFactory,System.String,System.Object,System.Boolean)"><summary>
+    如果事件中尚不存在该属性，则向事件添加一个属性。
+  </summary><param name="factory">用于创建要添加到事件的属性的工厂。</param><param name="name">属性的名称。</param><param name="value">属性的值。</param><param name="destructureObjects">如果值为 <see langword="true" />，并且该值是非基本类型、非数组类型，则该值将转换为结构；否则，未知类型将转换为标量，通常作为字符串存储。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="factory" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Events.LogEvent.RemovePropertyIfPresent(System.String)"><summary>
+            如果事件中存在属性，则将其移除。否则不执行任何操作。
+            </summary><param name="propertyName">要移除的属性名称。</param></member><member name="M:Serilog.Events.LogEvent.UnstableAssembleFromParts(System.DateTimeOffset,Serilog.Events.LogEventLevel,System.Exception,Serilog.Events.MessageTemplate,System.Collections.Generic.Dictionary{System.String,Serilog.Events.LogEventPropertyValue},System.Diagnostics.ActivityTraceId,System.Diagnostics.ActivitySpanId)"><summary>
+            使用预分配的内部字段值构造一个 <see cref="T:Serilog.Events.LogEvent" />。通常情况下，<see cref="T:Serilog.Events.LogEvent" /> 构造函数会分配一个字典来支持 <see cref="P:Serilog.Events.LogEvent.Properties" />，以避免意外共享。在许多集成场景中，这是不必要的，会导致额外的不可忽视的 <see cref="T:System.Collections.Generic.Dictionary`2" /> 分配。此方法允许专门的调用者避免这种开销。
+            </summary><remarks>
+            由于此方法公开的参数本质上与 <see cref="T:Serilog.Events.LogEvent" /> 的内部字段一一对应，因此参数列表可能会在 Serilog 的主要版本之间发生变化。
+            </remarks><param name="timestamp">事件发生的时间。</param><param name="level">事件的级别。</param><param name="exception">与事件关联的异常，或 null。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="properties">与事件关联的属性，包括在 <paramref name="messageTemplate" /> 中呈现的那些属性。</param><param name="traceId">创建事件时处于活动状态的跟踪的 ID（如果有）。</param><param name="spanId">创建事件时处于活动状态的范围的 ID（如果有）。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="messageTemplate" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code> 时</exception><returns>一个构造好的 <see cref="T:Serilog.Events.LogEvent" />。</returns></member><member name="T:Serilog.Events.LogEventLevel"><summary>
+            指定日志事件的含义和相对重要性。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Verbose"><summary>
+            你可能想知道的关于正在运行的代码块的一切。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Debug"><summary>
+            内部系统事件，不一定能从外部观察到。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Information"><summary>
+            操作智能的命脉——事情发生了。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Warning"><summary>
+            服务降级或受到威胁。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Error"><summary>
+            功能不可用，不变量被破坏
+            或数据丢失。
+            </summary></member><member name="F:Serilog.Events.LogEventLevel.Fatal"><summary>
+    如果你有寻呼机，当这些事件之一发生时，它会响。
+    </summary></member><member name="T:Serilog.Events.LogEventProperty"><summary>
+            与 <see cref="T:Serilog.Events.LogEvent" /> 关联的属性。
+            </summary></member><member name="M:Serilog.Events.LogEventProperty.#ctor(System.String,Serilog.Events.LogEventPropertyValue)"><summary>
+            构建一个具有指定名称和值的<see cref="T:Serilog.Events.LogEventProperty" />。
+            </summary><param name="name">属性的名称。</param><param name="value">属性的值。</param><exception cref="T:System.ArgumentNullException">当<paramref name="name" />为<code>null</code>时。</exception><exception cref="T:System.ArgumentException">当<paramref name="name" />为空或仅包含空白时。</exception><exception cref="T:System.ArgumentNullException">当<paramref name="value" />为<code>null</code>时。</exception></member><member name="M:Serilog.Events.LogEventProperty.#ctor(Serilog.Events.EventProperty)"><summary>从现有的 <see cref="T:Serilog.Events.EventProperty" /> 实例构造一个 <see cref="T:Serilog.Events.LogEventProperty" />。</summary><param name="property">现有属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="property" /> 为 <code>default</code></exception></member><member name="P:Serilog.Events.LogEventProperty.Name"><summary>
+            属性的名称。
+            </summary></member><member name="P:Serilog.Events.LogEventProperty.Value"><summary>
+            属性的值。
+            </summary></member><member name="M:Serilog.Events.LogEventProperty.IsValidName(System.String)"><summary>
+            测试 <paramref name="name" /> 以确定它是否为有效的属性名称。
+            </summary><param name="name">要检查的名称。</param><returns><see langword="true" /> 如果名称有效；否则，<see langword="false" />。</returns></member><member name="M:Serilog.Events.LogEventProperty.EnsureValidName(System.String)"><exception cref="T:System.ArgumentNullException">当 <paramref name="name" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentException">当 <paramref name="name" /> 为空或仅包含空白时</exception></member><member name="T:Serilog.Events.LogEventPropertyValue"><summary>
+            与 <see cref="T:Serilog.Events.LogEventProperty" /> 关联的值。分为标量、序列和结构值，以指导序列化为各种格式。
+            </summary></member><member name="M:Serilog.Events.LogEventPropertyValue.Render(System.IO.TextWriter,System.String,System.IFormatProvider)"><summary>
+            将值呈现到输出。
+            </summary><param name="output">输出。</param><param name="format">应用于值的格式字符串，或为 null。</param><param name="formatProvider">应用于值的格式提供程序，或为 null 以使用默认值。</param><seealso cref="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)" />.
+        </member><member name="M:Serilog.Events.LogEventPropertyValue.ToString"><summary>
+            返回表示当前对象的字符串。
+            </summary><returns>
+            表示当前对象的字符串。
+            </returns><filterpriority>2</filterpriority></member><member name="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)"><summary>
+            使用指定的格式格式化当前实例的值。
+            </summary><returns>
+            当前实例的值采用指定的格式。
+            </returns><param name="format">要使用的格式。- 或 - 一个空引用（在 Visual Basic 中为 Nothing），以使用为 <see cref="T:System.IFormattable" /> 实现类型定义的默认格式。 </param><param name="formatProvider">用于格式化值的提供程序。- 或 - 一个空引用（在 Visual Basic 中为 Nothing），以从操作系统的当前区域设置获取数值格式信息。 </param><filterpriority>2</filterpriority></member><member name="T:Serilog.Events.MessageTemplate"><summary>
+    表示传递给日志记录方法的消息模板。给定属性列表后，模板可以随后以文本形式呈现模板。
+    </summary></member><member name="P:Serilog.Events.MessageTemplate.Empty"><summary>
+            表示空消息模板。
+            </summary></member><member name="M:Serilog.Events.MessageTemplate.#ctor(System.Collections.Generic.IEnumerable{Serilog.Parsing.MessageTemplateToken})"><summary>
+            使用手动定义的文本和属性标记构造消息模板。
+            </summary><param name="tokens">定义模板的文本和属性标记。</param></member><member name="M:Serilog.Events.MessageTemplate.#ctor(System.String,System.Collections.Generic.IEnumerable{Serilog.Parsing.MessageTemplateToken})"><summary>
+    使用手动定义的文本和属性令牌构造消息模板。
+    </summary><param name="text">模板的完整文本；Serilog内部使用以避免不必要的字符串连接。</param><param name="tokens">定义模板的文本和属性令牌。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="text" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="tokens" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Events.MessageTemplate.GetElementsOfTypeToArray``1(Serilog.Parsing.MessageTemplateToken[])"><summary>
+            类似于 <see cref="M:System.Linq.Enumerable.OfType``1(System.Collections.IEnumerable)" />，但速度更快。
+            </summary></member><member name="P:Serilog.Events.MessageTemplate.Text"><summary>
+            描述模板的原始文本。
+            </summary></member><member name="M:Serilog.Events.MessageTemplate.ToString"><summary>
+            将模板呈现为字符串。
+            </summary><returns>模板的字符串表示形式。</returns></member><member name="P:Serilog.Events.MessageTemplate.Tokens"><summary>
+            从模板解析的令牌。
+            </summary></member><member name="M:Serilog.Events.MessageTemplate.Render(System.Collections.Generic.IReadOnlyDictionary{System.String,Serilog.Events.LogEventPropertyValue},System.IFormatProvider)"><summary>
+            将消息模板转换为文本消息，给定与消息模板中的令牌匹配的属性。
+            </summary><param name="properties">与模板令牌匹配的属性。</param><param name="formatProvider">提供特定于区域性的格式化信息，或为 null。</param><returns>从模板和属性创建的消息。如果属性与模板不匹配，则模板将以不完整的替换形式返回。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code></exception></member><member name="M:Serilog.Events.MessageTemplate.Render(System.Collections.Generic.IReadOnlyDictionary{System.String,Serilog.Events.LogEventPropertyValue},System.IO.TextWriter,System.IFormatProvider)"><summary>
+            将消息模板转换为文本消息，利用匹配消息模板中标记的属性。
+            </summary><param name="properties">匹配模板标记的属性。</param><param name="output">从模板和属性创建的消息。如果属性与模板不匹配，则返回的模板将包含不完整的替换。</param><param name="formatProvider">提供区域性特定的格式信息，或为 null。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="T:Serilog.Events.ScalarValue"><summary>
+    对应于简单标量类型的属性值。
+    </summary></member><member name="P:Serilog.Events.ScalarValue.Null"><summary>
+            表示 <see langword="null" />的标量值。
+            </summary></member><member name="M:Serilog.Events.ScalarValue.#ctor(System.Object)"><summary>
+            使用指定的值构造一个 <see cref="T:Serilog.Events.ScalarValue" />。
+            </summary><param name="value">该值，可能为 <code>null</code>。</param></member><member name="P:Serilog.Events.ScalarValue.Value"><summary>
+            该值，可以为<code>null</code>。
+            </summary></member><member name="M:Serilog.Events.ScalarValue.Render(System.IO.TextWriter,System.String,System.IFormatProvider)"><summary>
+            将值呈现到输出。
+            </summary><param name="output">输出。</param><param name="format">应用于值的格式字符串，或为 null。</param><param name="formatProvider">应用于值的格式提供程序；如果为 null，则使用默认提供程序。</param><seealso cref="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)" />。
+            <exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code></exception></member><member name="M:Serilog.Events.ScalarValue.Render(System.Object,System.IO.TextWriter,System.String,System.IFormatProvider)"><exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Events.ScalarValue.Equals(System.Object)"><summary>
+        确定此实例是否等于 <paramref name="obj" />。
+    </summary><param name="obj">要比较的实例。</param><returns>如果实例相等，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Serilog.Events.ScalarValue.GetHashCode"><summary>
+            获取表示该值的哈希代码。
+            </summary><returns>实例的哈希代码。</returns></member><member name="T:Serilog.Events.SequenceValue"><summary>
+            以一个有序值序列表示的值。
+            </summary></member><member name="P:Serilog.Events.SequenceValue.Empty"><summary>
+            空的值序列。
+            </summary></member><member name="M:Serilog.Events.SequenceValue.#ctor(System.Collections.Generic.IEnumerable{Serilog.Events.LogEventPropertyValue})"><summary>
+        使用提供的 <paramref name="elements" /> 创建一个 <see cref="T:Serilog.Events.SequenceValue" />。
+    </summary><param name="elements">序列的元素。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="elements" /> 为 <code>null</code></exception></member><member name="P:Serilog.Events.SequenceValue.Elements"><summary>
+            序列的元素。
+            </summary></member><member name="M:Serilog.Events.SequenceValue.Render(System.IO.TextWriter,System.String,System.IFormatProvider)"><summary>
+    将值呈现到输出。
+    </summary><param name="output">输出。</param><param name="format">应用于值的格式字符串，或 null。</param><param name="formatProvider">应用于值的格式提供程序，或 null 以使用默认值。</param><seealso cref="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)" />.
+    <exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时。</exception></member><member name="T:Serilog.Events.StructureValue"><summary>
+    一个表示为名称-值属性集合的值。
+    </summary></member><member name="M:Serilog.Events.StructureValue.#ctor(System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty},System.String)"><summary>
+            使用提供的属性构造一个 <see cref="T:Serilog.Events.StructureValue" />。
+            </summary><param name="typeTag">可选地，描述结构“类型”的一块元数据。可以是 <code>null</code>。</param><param name="properties">结构的属性。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code> 时</exception></member><member name="P:Serilog.Events.StructureValue.TypeTag"><summary>
+        描述结构“类型”的元数据片段，或者为 null。
+    </summary></member><member name="P:Serilog.Events.StructureValue.Properties"><summary>
+            结构的属性。
+            </summary><remarks>
+            不呈现为字典，因为字典构建相对昂贵；仅在结构体为关注对象时构建字典更经济。
+            </remarks></member><member name="M:Serilog.Events.StructureValue.Render(System.IO.TextWriter,System.String,System.IFormatProvider)"><summary>
+    将值呈现到输出中。
+    </summary><param name="output">输出。</param><param name="format">应用于值的格式字符串，或 null。</param><param name="formatProvider">应用于值的格式提供程序，或为 null 则使用默认值。</param><seealso cref="M:Serilog.Events.LogEventPropertyValue.ToString(System.String,System.IFormatProvider)" />。
+    <exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="T:Serilog.Filters.Matching"><summary>
+            可应用于日志事件的谓词
+            </summary></member><member name="M:Serilog.Filters.Matching.FromSource``1"><summary>
+    匹配来自指定源类型的事件。
+    </summary><typeparam name="TSource">源类型。</typeparam><returns>用于匹配事件的谓词。</returns></member><member name="M:Serilog.Filters.Matching.FromSource(System.String)"><summary>
+    匹配来自指定源类型或命名空间以及嵌套类型或命名空间的事件。
+    </summary><param name="source">一个点分隔的源类型或命名空间标识符。</param><returns>一个匹配由源发出的日志事件的函数。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="source" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Filters.Matching.WithProperty(System.String)"><summary>
+            匹配具有指定属性的事件，不考虑其值。
+            </summary><param name="propertyName">要匹配的属性的名称。</param><returns>用于匹配事件的谓词。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="propertyName" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Filters.Matching.WithProperty(System.String,System.Object)"><summary>
+            匹配具有指定属性值的事件。
+            </summary><param name="propertyName">要匹配的属性的名称。</param><param name="scalarValue">要匹配的属性值；必须是标量类型。允许为Null。</param><returns>用于匹配事件的谓词。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="propertyName" />为<code>null</code>时</exception></member><member name="M:Serilog.Filters.Matching.WithProperty``1(System.String,System.Func{``0,System.Boolean})"><summary>
+    匹配具有指定属性值的事件。
+    </summary><param name="propertyName">要匹配的属性的名称。</param><param name="predicate">用于测试的谓词 </param><typeparam name="TScalar">要匹配的标量值的类型。</typeparam><returns>用于匹配事件的谓词。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="propertyName" /> 为 <code>null</code>时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="predicate" /> 为 <code>null</code>时</exception></member><member name="T:Serilog.Formatting.Display.LevelOutputFormat"><summary>
+            实现 {Level} 元素。
+            现在可以对其应用固定宽度以及大小写规则。
+            宽度通过像 "u3" (大写三个字符),
+            "w1" (一个小写字符) 或 "t4" (标题大小写四个字符) 这样的格式来设置。
+            </summary></member><member name="M:Serilog.Formatting.Display.MessageTemplateTextFormatter.#ctor(System.String,System.IFormatProvider)"><summary>
+        构造一个 <see cref="T:Serilog.Formatting.Display.MessageTemplateTextFormatter" />。
+    </summary><param name="outputTemplate">描述输出消息的消息模板。</param><param name="formatProvider">提供区域性特定的格式化信息，或为 null。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="outputTemplate" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Formatting.Display.MessageTemplateTextFormatter.Format(Serilog.Events.LogEvent,System.IO.TextWriter)"><summary>
+        将日志事件格式化到输出中。
+    </summary><param name="logEvent">要格式化的事件。</param><param name="output">输出。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="logEvent" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="T:Serilog.Formatting.Display.OutputProperties"><summary>
+            描述基于标准消息模板的输出格式字符串中可用的属性。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.MessagePropertyName"><summary>
+    从日志事件呈现的消息。
+    </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.TimestampPropertyName"><summary>
+            日志事件的时间戳。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.UtcTimestampPropertyName"><summary>
+            日志事件的UTC时间戳。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.LevelPropertyName"><summary>
+            日志事件的级别。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.TraceIdPropertyName"><summary>
+            在日志事件创建时处于活动状态的跟踪的ID（如果有）。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.SpanIdPropertyName"><summary>
+            日志事件创建时处于活动状态的跨度 ID（如果有）。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.NewLinePropertyName"><summary>
+            新行。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.ExceptionPropertyName"><summary>
+            与日志事件相关的异常。
+            </summary></member><member name="F:Serilog.Formatting.Display.OutputProperties.PropertiesPropertyName"><summary>
+            日志事件的属性。
+            </summary></member><member name="T:Serilog.Formatting.ITextFormatter"><summary>
+            以文本表示形式格式化日志事件。
+            </summary></member><member name="M:Serilog.Formatting.ITextFormatter.Format(Serilog.Events.LogEvent,System.IO.TextWriter)"><summary>
+            将日志事件格式化为输出。
+            </summary><param name="logEvent">要格式化的事件。</param><param name="output">输出。</param></member><member name="T:Serilog.Formatting.Json.JsonFormatter"><summary>
+            以简单的JSON结构格式化日志事件。此类的实例可由多个线程同时安全访问。
+            </summary><remarks>新代码应优先使用来自<c>Serilog.Formatting.Compact</c>的格式化程序，或来自<c>Serilog.Expressions</c>的<c>ExpressionTemplate</c>。</remarks></member><member name="M:Serilog.Formatting.Json.JsonFormatter.#ctor(System.String,System.Boolean,System.IFormatProvider)"><summary>
+    构造一个 <see cref="T:Serilog.Formatting.Json.JsonFormatter" />。
+    </summary><param name="closingDelimiter">一个字符串，在每个日志事件格式化后写入。如果为 null，则使用 <see cref="P:System.Environment.NewLine" />。</param><param name="renderMessage">如果为 <see langword="true" />，消息将被渲染并作为名为 RenderedMessage 的属性写入输出。</param><param name="formatProvider">提供区域性特定的格式信息，或为 null。</param></member><member name="M:Serilog.Formatting.Json.JsonFormatter.Format(Serilog.Events.LogEvent,System.IO.TextWriter)"><summary>
+            将日志事件格式化为输出。
+            </summary><param name="logEvent">要格式化的事件。</param><param name="output">输出。</param><exception cref="T:System.ArgumentNullException">当<paramref name="logEvent" />为<code>null</code>时</exception><exception cref="T:System.ArgumentNullException">当<paramref name="output" />为<code>null</code>时</exception></member><member name="T:Serilog.Formatting.Json.JsonValueFormatter"><summary>
+            将Serilog的结构化属性值格式转换为JSON。
+            </summary></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.#ctor(System.String)"><summary>
+            构造一个 <see cref="T:Serilog.Formatting.Json.JsonFormatter" />。
+            </summary><param name="typeTagName">当序列化结构化（对象）值时，要在生成的 JSON 中用于 Serilog 的 <see cref="P:Serilog.Events.StructureValue.TypeTag" /> 字段的属性名称。如果为 null，则不写入类型标记字段。默认值为 "_typeTag"。</param></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.Format(Serilog.Events.LogEventPropertyValue,System.IO.TextWriter)"><summary>
+            将 <paramref name="value" /> 格式化为 JSON 并写入 <paramref name="output" />。
+            </summary><param name="value">要格式化的值</param><param name="output">输出</param></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.VisitScalarValue(System.IO.TextWriter,Serilog.Events.ScalarValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.ScalarValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="scalar">要访问的值。</param><returns>访问 <paramref name="scalar" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="scalar" /> 为 <code>null</code> 时。</exception></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.VisitSequenceValue(System.IO.TextWriter,Serilog.Events.SequenceValue)"><summary>
+            访问 <see cref="T:Serilog.Events.SequenceValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="sequence">要访问的值。</param><returns>访问 <paramref name="sequence" /> 的结果。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="sequence" /> 为 <code>null</code></exception></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.VisitStructureValue(System.IO.TextWriter,Serilog.Events.StructureValue)"><summary>
+            访问 <see cref="T:Serilog.Events.StructureValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="structure">要访问的值。</param><returns>访问 <paramref name="structure" /> 的结果。</returns></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.VisitDictionaryValue(System.IO.TextWriter,Serilog.Events.DictionaryValue)"><summary>
+            访问一个 <see cref="T:Serilog.Events.DictionaryValue" /> 值。
+            </summary><param name="state">操作状态。</param><param name="dictionary">要访问的值。</param><returns>访问 <paramref name="dictionary" /> 的结果。</returns></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.FormatLiteralValue(System.Object,System.IO.TextWriter)"><summary>
+            将一个文本值作为单个 JSON 值写入，例如数字或字符串。重写此方法以支持更多值类型。不要通过此方法写入数组/结构体——活动解构策略此时已指示该值应为标量。
+            </summary><param name="value">要写入的值。</param><param name="output">输出。</param></member><member name="M:Serilog.Formatting.Json.JsonValueFormatter.WriteQuotedJsonString(System.String,System.IO.TextWriter)"><summary>
+            写入有效的 JSON 字符串文本，必要时进行转义。
+            </summary><param name="str">要写入的字符串值。</param><param name="output">输出。</param></member><member name="T:Serilog.ILogger"><summary>
+    Serilog 日志记录的核心 API，用于写入日志事件。
+    </summary><example><code>
+    var log = new LoggerConfiguration()
+        .WriteTo.Console()
+        .CreateLogger();
+   
+    var thing = "World";
+    log.Information("Hello, {Thing}!", thing);
+    </code></example><remarks><see cref="T:Serilog.ILogger" />（及其静态兄弟 <see cref="T:Serilog.Log" />）上的方法保证永远不会抛出异常。所有其他类型上的方法可能会抛出异常。
+    </remarks></member><member name="M:Serilog.ILogger.ForContext(Serilog.Core.ILogEventEnricher)"><summary>
+            创建一个通过提供的丰富器来丰富日志事件的记录器。
+            </summary><param name="enricher">应用于上下文中的丰富器。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.ILogger.ForContext(System.Collections.Generic.IEnumerable{Serilog.Core.ILogEventEnricher})"><summary>
+            创建一个通过提供的扩充器来丰富日志事件的记录器。
+            </summary><param name="enrichers">在此上下文中应用的扩充器。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.ILogger.ForContext(System.String,System.Object,System.Boolean)"><summary>
+            创建一个记录器，用于使用指定的属性丰富日志事件。
+            </summary><param name="propertyName">属性的名称。必须非空。</param><param name="value">属性值。</param><param name="destructureObjects">如果<see langword="true" />，则值将尽可能序列化为结构化对象；如果<see langword="false" />，则对象将记录为标量或简单数组。</param><returns>一个记录器，将按指定方式丰富日志事件。</returns></member><member name="M:Serilog.ILogger.ForContext``1"><summary>
+            创建一个将日志事件标记为来自指定源类型的记录器。
+            </summary><typeparam name="TSource">在上下文中生成日志消息的类型。</typeparam><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.ILogger.ForContext(System.Type)"><summary>
+            创建一个标记日志事件来自指定源类型的记录器。
+            </summary><param name="source">生成上下文中日志消息的类型。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.ILogger.Write(Serilog.Events.LogEvent)"><summary>
+            将事件写入日志。
+            </summary><param name="logEvent">要写入的事件。</param></member><member name="M:Serilog.ILogger.Write(Serilog.Events.LogEventLevel,System.String)"><summary>
+            使用指定的级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.ILogger.Write``1(Serilog.Events.LogEventLevel,System.String,``0)"><summary>
+    使用指定级别写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.ILogger.Write``2(Serilog.Events.LogEventLevel,System.String,``0,``1)"><summary>
+            使用指定的级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.ILogger.Write``3(Serilog.Events.LogEventLevel,System.String,``0,``1,``2)"><summary>
+            写入具有指定级别的日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.ILogger.Write(Serilog.Events.LogEventLevel,System.String,System.Object[])"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate"></param><param name="propertyValues"></param></member><member name="M:Serilog.ILogger.Write(Serilog.Events.LogEventLevel,System.Exception,System.String)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.ILogger.Write``1(Serilog.Events.LogEventLevel,System.Exception,System.String,``0)"><summary>
+            使用指定的级别和关联的异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.ILogger.Write``2(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.ILogger.Write``3(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1,``2)"><summary>
+    使用指定的级别和相关异常写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.ILogger.Write(Serilog.Events.LogEventLevel,System.Exception,System.String,System.Object[])"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">在消息模板中按位置格式化的对象。</param></member><member name="M:Serilog.ILogger.IsEnabled(Serilog.Events.LogEventLevel)"><summary>确定是否将指定级别的事件传递到日志接收器。</summary><param name="level">要检查的级别。</param><returns>如果启用了该级别，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Serilog.ILogger.Verbose(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Verbose("凝视着太空，想着我们是否孤独。");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Verbose("Staring into space, wondering if we're alone.");
+            </code></example></member><member name="M:Serilog.ILogger.Verbose``3(System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板中的对象。</param><param name="propertyValue1">按位置格式化为消息模板中的对象。</param><param name="propertyValue2">按位置格式化为消息模板中的对象。</param><example><code>
+    Log.Verbose("凝视太空，思索我们是否独自一人。");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose(System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </code></example></member><member name="M:Serilog.ILogger.Verbose``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </code></example></member><member name="M:Serilog.ILogger.Verbose``2(System.Exception,System.String,``0,``1)"><summary>
+    写入具有 <see cref="F:Serilog.Events.LogEventLevel.Verbose">详细</see> 级别和相关异常的日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别及相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Verbose(ex, "凝视太空，想知道这颗彗星来自哪里。");
+    </code></example></member><member name="M:Serilog.ILogger.Verbose(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </code></example></member><member name="M:Serilog.ILogger.Debug(System.String)"><summary>
+            写入一个具有<see cref="F:Serilog.Events.LogEventLevel.Debug" />级别的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </code></example></member><member name="M:Serilog.ILogger.Debug``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+    </code></example></member><member name="M:Serilog.ILogger.Debug``2(System.String,``0,``1)"><summary>
+    使用<see cref="F:Serilog.Events.LogEventLevel.Debug" />级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+    </code></example></member><member name="M:Serilog.ILogger.Debug``3(System.String,``0,``1,``2)"><summary>
+    以<see cref="F:Serilog.Events.LogEventLevel.Debug" />级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+    </code></example></member><member name="M:Serilog.ILogger.Debug(System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+    </code></example></member><member name="M:Serilog.ILogger.Debug(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联的异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </code></example></member><member name="M:Serilog.ILogger.Debug``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与该事件相关的异常。</param><param name="messageTemplate">描述该事件的消息模板。</param><param name="propertyValue">根据位置格式化为消息模板的对象。</param><example><code>
+    Log.Debug(ex, "忽略一个平凡的异常。");
+    </code></example></member><member name="M:Serilog.ILogger.Debug``2(System.Exception,System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </code></example></member><member name="M:Serilog.ILogger.Debug``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和相关异常编写日志事件。
+    </summary><param name="exception">与该事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </code></example></member><member name="M:Serilog.ILogger.Debug(System.Exception,System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </code></example></member><member name="M:Serilog.ILogger.Information(System.String)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Information" />级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information``1(System.String,``0)"><summary>
+    写入一个级别为 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </code></example></member><member name="M:Serilog.ILogger.Information``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </code></example></member><member name="M:Serilog.ILogger.Information``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </code></example></member><member name="M:Serilog.ILogger.Information``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            写入一个日志事件，级别为<see cref="F:Serilog.Events.LogEventLevel.Information" />并包含相关异常。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </code></example></member><member name="M:Serilog.ILogger.Information(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别编写日志事件，并关联异常。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">在消息模板中按位置格式化的对象。</param><example><code>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </code></example></member><member name="M:Serilog.ILogger.Warning(System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Warning``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Warning``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning(System.String,System.Object[])"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联的异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Warning``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    写入一个日志事件，其级别为<see cref="F:Serilog.Events.LogEventLevel.Warning" />，并包含关联的异常。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+</code></example></member><member name="M:Serilog.ILogger.Warning(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件关联的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error(System.String)"><summary>
+    写入具有 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Error``1(System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">对象按位置格式化到消息模板中。</param><example><code>
+            Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Error``3(System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Error(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error(System.Exception,System.String)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Error" />级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联的异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+    Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+    </code></example></member><member name="M:Serilog.ILogger.Error``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Error(System.Exception,System.String,System.Object[])"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常的日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </code></example></member><member name="M:Serilog.ILogger.Fatal(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Fatal("Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal``1(System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Fatal("Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Fatal("Process terminating.");
+    </code></example></member><member name="M:Serilog.ILogger.Fatal``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Fatal("Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联的异常写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Fatal("Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal(System.Exception,System.String)"><summary>
+            写入具有<see cref="F:Serilog.Events.LogEventLevel.Fatal" />级别和相关异常的日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example><code>
+            Log.Fatal(ex, "Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Fatal(ex, "Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example><code>
+    Log.Fatal(ex, "Process terminating.");
+    </code></example></member><member name="M:Serilog.ILogger.Fatal``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example><code>
+            Log.Fatal(ex, "Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.Fatal(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example><code>
+            Log.Fatal(ex, "Process terminating.");
+            </code></example></member><member name="M:Serilog.ILogger.BindMessageTemplate(System.String,System.Object[],Serilog.Events.MessageTemplate@,System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty}@)"><summary>
+            使用配置的标量转换和解构规则将一组属性绑定到消息模板。
+            如果模板或值无效，则返回 false（<c>ILogger</c> 方法从不引发异常）。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><param name="parsedTemplate">模板的内部表示，可用于将 <paramref name="boundProperties" /> 渲染为文本。</param><param name="boundProperties">从模板和 <paramref name="propertyValues" /> 捕获的属性。</param><example><code>
+            MessageTemplate template;
+            IEnumerable&lt;LogEventProperty&gt; properties;
+            if (Log.BindMessageTemplate("Hello, {Name}!", new[] { "World" }, out template, out properties)
+            {
+                var propsByName = properties.ToDictionary(p =&gt; p.Name, p =&gt; p.Value);
+                Console.WriteLine(template.Render(propsByName, null));
+                // -&gt; "Hello, World!"
+            }
+            </code></example></member><member name="M:Serilog.ILogger.BindProperty(System.String,System.Object,System.Boolean,Serilog.Events.LogEventProperty@)"><summary>
+    使用配置的标量转换和解构规则将属性值绑定到其捕获的表示。
+  </summary><param name="propertyName">属性的名称。不能为空。</param><param name="value">属性值。</param><param name="destructureObjects">如果为<see langword="true" />，则值将尽可能序列化为结构化对象；如果为<see langword="false" />，则对象将记录为标量或简单数组。</param><param name="property">生成的属性。</param><returns>如果可以绑定属性，则为true；否则为false（<summary>ILogger</summary>方法从不引发异常）。</returns></member><member name="T:Serilog.Log"><summary>
+一个可选的日志记录静态入口点，可以被应用程序的不同部分轻松引用。要配置<see cref="T:Serilog.Log" />，请将Logger静态属性设置为一个记录器实例。
+  </summary><example>
+Log.Logger = new LoggerConfiguration()
+    .WithConsoleSink()
+    .CreateLogger();
+
+var thing = "World";
+Log.Logger.Information("Hello, {Thing}!", thing);
+  </example><remarks><see cref="T:Serilog.Log" />（及其动态类型对应的<see cref="T:Serilog.ILogger" />）上的方法保证永远不会引发异常。所有其他类型上的方法可能会引发异常。
+  </remarks></member><member name="P:Serilog.Log.Logger"><summary>
+            全局共享的日志记录器。
+            </summary><exception cref="T:System.ArgumentNullException">当 <paramref name="value" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Log.CloseAndFlush"><summary>
+    将 <see cref="P:Serilog.Log.Logger" /> 重置为默认值，并在可能的情况下释放原始资源
+    </summary></member><member name="M:Serilog.Log.CloseAndFlushAsync"><summary>
+            重置 <see cref="P:Serilog.Log.Logger" /> 为默认值并在可能的情况下释放原始对象
+            </summary></member><member name="M:Serilog.Log.ForContext(Serilog.Core.ILogEventEnricher)"><summary>
+            创建一个通过提供的丰富器来丰富日志事件的记录器。
+            </summary><param name="enricher">在此上下文中应用的丰富器。</param><returns>一个将按指定方式丰富日志事件的日志记录器。</returns></member><member name="M:Serilog.Log.ForContext(Serilog.Core.ILogEventEnricher[])"><summary>
+            创建一个记录器，它通过提供的丰富器来丰富日志事件。
+            </summary><param name="enrichers">应用于上下文的丰富器。</param><returns>一个将按照指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Log.ForContext(System.String,System.Object,System.Boolean)"><summary>
+            创建一个记录器，使用指定的属性丰富日志事件。
+            </summary><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Log.ForContext``1"><summary>
+    创建一个记录器，将日志事件标记为来自指定的源类型。
+    </summary><typeparam name="TSource">在此上下文中生成日志消息的类型。</typeparam><returns>一个将按指定方式丰富日志事件的记录器。</returns></member><member name="M:Serilog.Log.ForContext(System.Type)"><summary>
+            创建一个记录器，将日志事件标记为来自指定的源类型。
+            </summary><param name="source">在上下文中生成日志消息的类型。</param><returns>一个记录器，将按指定方式丰富日志事件。</returns></member><member name="M:Serilog.Log.Write(Serilog.Events.LogEvent)"><summary>
+    将事件写入日志。
+    </summary><param name="logEvent">要写入的事件。</param></member><member name="M:Serilog.Log.Write(Serilog.Events.LogEventLevel,System.String)"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.Log.Write``1(Serilog.Events.LogEventLevel,System.String,``0)"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按照位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Log.Write``2(Serilog.Events.LogEventLevel,System.String,``0,``1)"><summary>
+            写入具有指定级别的日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.Log.Write``3(Serilog.Events.LogEventLevel,System.String,``0,``1,``2)"><summary>
+            使用指定级别写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Log.Write(Serilog.Events.LogEventLevel,System.String,System.Object[])"><summary>
+    使用指定的级别写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.Log.Write(Serilog.Events.LogEventLevel,System.Exception,System.String)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param></member><member name="M:Serilog.Log.Write``1(Serilog.Events.LogEventLevel,System.Exception,System.String,``0)"><summary>
+    使用指定的级别和相关异常写入日志事件。
+    </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Log.Write``2(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1)"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.Log.Write``3(Serilog.Events.LogEventLevel,System.Exception,System.String,``0,``1,``2)"><summary>
+    使用指定级别和关联异常编写日志事件。
+    </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">位置格式化到消息模板中的对象。</param><param name="propertyValue1">位置格式化到消息模板中的对象。</param><param name="propertyValue2">位置格式化到消息模板中的对象。</param></member><member name="M:Serilog.Log.Write(Serilog.Events.LogEventLevel,System.Exception,System.String,System.Object[])"><summary>
+            使用指定的级别和关联异常写入日志事件。
+            </summary><param name="level">事件的级别。</param><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param></member><member name="M:Serilog.Log.IsEnabled(Serilog.Events.LogEventLevel)"><summary>
+    确定指定级别的事件是否将通过日志接收器传递。
+    </summary><param name="level">要检查的级别。</param><returns>如果启用了该级别，则为<see langword="true" />；否则为<see langword="false" />。</returns></member><member name="M:Serilog.Log.Verbose(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Verbose("Staring into space, wondering if we're alone.");
+            </example></member><member name="M:Serilog.Log.Verbose``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </example></member><member name="M:Serilog.Log.Verbose``2(System.String,``0,``1)"><summary>
+    写入一个日志事件，级别为<see cref="F:Serilog.Events.LogEventLevel.Verbose" />。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+    Log.Verbose("Staring into space, wondering if we're alone.");
+    </example></member><member name="M:Serilog.Log.Verbose``3(System.String,``0,``1,``2)"><summary>
+    写入一个<see cref="F:Serilog.Events.LogEventLevel.Verbose" />级别的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Verbose("凝视着太空，想知道我们是否孤独。");
+    </example></member><member name="M:Serilog.Log.Verbose(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Verbose("Staring into space, wondering if we're alone.");
+            </example></member><member name="M:Serilog.Log.Verbose(System.Exception,System.String)"><summary>
+    使用<see cref="F:Serilog.Events.LogEventLevel.Verbose" />级别和关联的异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+    </example></member><member name="M:Serilog.Log.Verbose``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+    Log.Verbose(ex, "凝视太空，想知道这颗彗星来自哪里。");
+    </example></member><member name="M:Serilog.Log.Verbose``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" /> 级别和关联异常编写日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </example></member><member name="M:Serilog.Log.Verbose``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Verbose" />级别及相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </example></member><member name="M:Serilog.Log.Verbose(System.Exception,System.String,System.Object[])"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Verbose" />级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化到消息模板中的对象。</param><example>
+            Log.Verbose(ex, "Staring into space, wondering where this comet came from.");
+            </example></member><member name="M:Serilog.Log.Debug(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Log.Debug``1(System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+            Log.Debug("在 {StartedAt} 启动。", DateTime.Now);
+            </example></member><member name="M:Serilog.Log.Debug``2(System.String,``0,``1)"><summary>使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。</summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>Log.Debug("Starting up at {StartedAt}.", DateTime.Now);</example></member><member name="M:Serilog.Log.Debug``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Log.Debug(System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Debug("Starting up at {StartedAt}.", DateTime.Now);
+            </example></member><member name="M:Serilog.Log.Debug(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </example></member><member name="M:Serilog.Log.Debug``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </example></member><member name="M:Serilog.Log.Debug``2(System.Exception,System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </example></member><member name="M:Serilog.Log.Debug``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+    Log.Debug(ex, "Swallowing a mundane exception.");
+    </example></member><member name="M:Serilog.Log.Debug(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Debug" /> 级别和关联的异常编写日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Debug(ex, "Swallowing a mundane exception.");
+            </example></member><member name="M:Serilog.Log.Information(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Information``1(System.String,``0)"><summary>
+            写入一个日志事件，级别为 <see cref="F:Serilog.Events.LogEventLevel.Information" />。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Information``2(System.String,``0,``1)"><summary>
+            使用<see cref="F:Serilog.Events.LogEventLevel.Information" />级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">位置格式化为消息模板的对象。</param><param name="propertyValue1">位置格式化为消息模板的对象。</param><example>
+            Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Information``3(System.String,``0,``1,``2)"><summary>
+    写入一条级别为<see cref="F:Serilog.Events.LogEventLevel.Information" />的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+    Log.Information("Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Log.Information(System.String,System.Object[])"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Information("已处理 {RecordCount} 条记录，耗时 {TimeMS} 毫秒。", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Information(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Information``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联的异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Log.Information``2(System.Exception,System.String,``0,``1)"><summary>
+    使用<see cref="F:Serilog.Events.LogEventLevel.Information" />级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><example>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Log.Information``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和关联的异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+    </example></member><member name="M:Serilog.Log.Information(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Information" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按照位置格式化为消息模板的对象。</param><example>
+            Log.Information(ex, "Processed {RecordCount} records in {TimeMS}.", records.Length, sw.ElapsedMilliseconds);
+            </example></member><member name="M:Serilog.Log.Warning(System.String)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Log.Warning``1(System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化为消息模板的对象。</param><example>
+            Log.Warning("跳过了 {SkipCount} 条记录。", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Warning``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">位置格式化为消息模板的对象。</param><param name="propertyValue1">位置格式化为消息模板的对象。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Log.Warning``3(System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+            Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Warning(System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">位置格式化为消息模板的对象。</param><example>
+    Log.Warning("Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Log.Warning(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Warning``1(System.Exception,System.String,``0)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Warning``2(System.Exception,System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Warning``3(System.Exception,System.String,``0,``1,``2)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+    Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+    </example></member><member name="M:Serilog.Log.Warning(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Warning" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">根据位置格式化为消息模板的对象。</param><example>
+            Log.Warning(ex, "Skipped {SkipCount} records.", skippedRecords.Length);
+            </example></member><member name="M:Serilog.Log.Error(System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Log.Error``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error``2(System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述该事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+    Log.Error("失败 {ErrorCount} 条记录。", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error``3(System.String,``0,``1,``2)"><summary>
+    写入一个级别为 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板的对象。</param><param name="propertyValue1">按位置格式化到消息模板的对象。</param><param name="propertyValue2">按位置格式化到消息模板的对象。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error(System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+    Log.Error("Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error(System.Exception,System.String)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常编写日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Log.Error``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error``2(System.Exception,System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联的异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+    Log.Error(ex, "Failed {ErrorCount} records.", brokenRecords.Length);
+    </example></member><member name="M:Serilog.Log.Error``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和关联异常编写日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><param name="propertyValue2">按位置格式化为消息模板的对象。</param><example>
+            Log.Error(ex, "失败 {ErrorCount} 条记录。", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Log.Error(System.Exception,System.String,System.Object[])"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Error" /> 级别和相关异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Error(ex, "失败 {ErrorCount} 条记录。", brokenRecords.Length);
+            </example></member><member name="M:Serilog.Log.Fatal(System.String)"><summary>
+            写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别的日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><example>
+            Log.Fatal("Process terminating.");
+            </example></member><member name="M:Serilog.Log.Fatal``1(System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Fatal("Process terminating.");
+    </example></member><member name="M:Serilog.Log.Fatal``2(System.String,``0,``1)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+            Log.Fatal("Process terminating.");
+            </example></member><member name="M:Serilog.Log.Fatal``3(System.String,``0,``1,``2)"><summary>
+    写入具有<see cref="F:Serilog.Events.LogEventLevel.Fatal" />级别的日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化到消息模板中的对象。</param><param name="propertyValue1">按位置格式化到消息模板中的对象。</param><param name="propertyValue2">按位置格式化到消息模板中的对象。</param><example>
+    Log.Fatal("Process terminating.");
+    </example></member><member name="M:Serilog.Log.Fatal(System.String,System.Object[])"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别写入日志事件。
+    </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按照位置格式化为消息模板的对象。</param><example>
+    Log.Fatal("进程终止。");
+    </example></member><member name="M:Serilog.Log.Fatal(System.Exception,System.String)"><summary>
+    写入一个具有 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和相关异常的日志事件。
+    </summary><param name="exception">与该事件相关的异常。</param><param name="messageTemplate">描述该事件的消息模板。</param><example>
+    Log.Fatal(ex, "进程终止。");
+    </example></member><member name="M:Serilog.Log.Fatal``1(System.Exception,System.String,``0)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue">按位置格式化到消息模板中的对象。</param><example>
+    Log.Fatal(ex, "Process terminating.");
+    </example></member><member name="M:Serilog.Log.Fatal``2(System.Exception,System.String,``0,``1)"><summary>
+    使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+    </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">按位置格式化为消息模板的对象。</param><param name="propertyValue1">按位置格式化为消息模板的对象。</param><example>
+    Log.Fatal(ex, "Process terminating.");
+    </example></member><member name="M:Serilog.Log.Fatal``3(System.Exception,System.String,``0,``1,``2)"><summary>
+            使用 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和关联异常写入日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValue0">位置格式化到消息模板中的对象。</param><param name="propertyValue1">位置格式化到消息模板中的对象。</param><param name="propertyValue2">位置格式化到消息模板中的对象。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Log.Fatal(System.Exception,System.String,System.Object[])"><summary>
+            写入具有 <see cref="F:Serilog.Events.LogEventLevel.Fatal" /> 级别和相关异常的日志事件。
+            </summary><param name="exception">与事件相关的异常。</param><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><example>
+            Log.Fatal(ex, "Process terminating.");
+            </example></member><member name="M:Serilog.Log.BindMessageTemplate(System.String,System.Object[],Serilog.Events.MessageTemplate@,System.Collections.Generic.IEnumerable{Serilog.Events.LogEventProperty}@)"><summary>
+            使用配置的标量转换和解构规则将一组属性绑定到消息模板。如果模板或值无效，则返回false（<summary>ILogger</summary>方法从不引发异常）。
+            </summary><param name="messageTemplate">描述事件的消息模板。</param><param name="propertyValues">按位置格式化为消息模板的对象。</param><param name="parsedTemplate">模板的内部表示，可用于将<paramref name="boundProperties" />呈现为文本。</param><param name="boundProperties">从模板和<paramref name="propertyValues" />捕获的属性。</param><example>
+            MessageTemplate template;
+            IEnumerable&lt;LogEventProperty&gt; properties&gt;;
+            if (Log.BindMessageTemplate("Hello, {Name}!", new[] { "World" }, out template, out properties)
+            {
+                var propsByName = properties.ToDictionary(p =&gt; p.Name, p =&gt; p.Value);
+                Console.WriteLine(template.Render(propsByName, null));
+                // -&gt; "你好，世界！"
+            }
+            </example></member><member name="M:Serilog.Log.BindProperty(System.String,System.Object,System.Boolean,Serilog.Events.LogEventProperty@)"><summary>使用配置的标量转换和解构规则将属性值绑定到其捕获的表示形式。</summary><param name="propertyName">属性的名称。必须非空。</param><param name="value">属性值。</param><param name="destructureObjects">如果 <see langword="true" />，则该值将尽可能序列化为结构化对象；如果 <see langword="false" />，则该对象将记录为标量或简单数组。</param><param name="property">结果属性。</param><returns>如果属性可绑定，则为 True；否则为 false (<summary>ILogger</summary> 方法从不引发异常)。</returns></member><member name="T:Serilog.LoggerConfiguration"><summary>
+            用于创建<see cref="T:Serilog.ILogger" />实例的配置对象。
+            </summary></member><member name="M:Serilog.LoggerConfiguration.#ctor"><summary>
+            构造一个 <see cref="T:Serilog.LoggerConfiguration" />。
+            </summary></member><member name="P:Serilog.LoggerConfiguration.WriteTo"><summary>
+            配置日志事件将发送到的接收器。
+            </summary></member><member name="P:Serilog.LoggerConfiguration.AuditTo"><summary>
+            配置用于审计的接收器（sinks），而不是常规（安全）的日志记录。使用审计时，接收器和任何中间过滤器的异常会传播回调用方。大多数调用方应改用<see cref="P:Serilog.LoggerConfiguration.WriteTo" />。
+            </summary><remarks>
+            并非所有接收器都兼容事务性审计要求（许多接收器会使用异步批处理来提高写入吞吐量和降低延迟）。接收器需要扩展<see cref="T:Serilog.Configuration.LoggerAuditSinkConfiguration" />以选择加入审计支持，尽管通用的<see cref="M:Serilog.Configuration.LoggerAuditSinkConfiguration.Sink(Serilog.Core.ILogEventSink,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)" />方法允许将任何接收器类适配为审计用途。
+            </remarks></member><member name="P:Serilog.LoggerConfiguration.MinimumLevel"><summary>
+            配置事件传递到接收器的最低级别。如果
+            未指定，仅 <see cref="F:Serilog.Events.LogEventLevel.Information" />
+            级别及以上的事件将通过。
+            </summary><returns>允许方法链的配置对象。</returns></member><member name="P:Serilog.LoggerConfiguration.Enrich"><summary>
+            配置 <see cref="T:Serilog.Events.LogEvent" /> 的丰富化。丰富器可以添加、删除和
+            修改与事件关联的属性。
+            </summary></member><member name="P:Serilog.LoggerConfiguration.Filter"><summary>
+            配置对<see cref="T:Serilog.Events.LogEvent" />的全局过滤。
+            </summary></member><member name="P:Serilog.LoggerConfiguration.Destructure"><summary>
+            配置消息模板参数的解构。
+            </summary></member><member name="P:Serilog.LoggerConfiguration.ReadFrom"><summary>
+            将外部设置应用于记录器配置。
+            </summary></member><member name="M:Serilog.LoggerConfiguration.CreateLogger"><summary>
+            使用配置的接收器、增强器和最小级别创建记录器。
+            </summary><returns>记录器。</returns><remarks>要在程序关闭之前释放接收器持有的资源，可以将返回的记录器转换为 <see cref="T:System.IDisposable" /> 并进行释放。</remarks><exception cref="T:System.InvalidOperationException">当记录器已创建时。</exception></member><member name="T:Serilog.LoggerExtensions"><summary>
+            扩展 <see cref="T:Serilog.ILogger" /> 以提供其他方法。
+            </summary></member><member name="M:Serilog.LoggerExtensions.ForContext``1(Serilog.ILogger,Serilog.Events.LogEventLevel,System.String,``0,System.Boolean)"><summary>
+    创建一个在指定级别启用时丰富日志事件的记录器。
+    </summary><typeparam name="TValue">属性值的类型。</typeparam><param name="logger">记录器。</param><param name="level">用于确定是否使用属性丰富日志的日志事件级别。</param><param name="propertyName">属性的名称。不能为空。</param><param name="value">属性值。</param><param name="destructureObjects">如果 <see langword="true" />，则值将尽可能序列化为结构化对象；如果 <see langword="false" />，则对象将记录为标量或简单数组。</param><returns>一个将按指定方式丰富日志事件的记录器。</returns><exception cref="T:System.ArgumentNullException">当 <paramref name="logger" /> 为 <code>null</code> 时</exception></member><member name="T:Serilog.Parsing.Alignment"><summary>
+            表示在呈现属性时应用的对齐设置的结构体。
+            </summary></member><member name="M:Serilog.Parsing.Alignment.#ctor(Serilog.Parsing.AlignmentDirection,System.Int32)"><summary>
+            初始化 <see cref="T:Serilog.Parsing.Alignment" /> 类的新实例。
+            </summary><param name="direction">文本对齐方向。</param><param name="width">文本的宽度，以字符为单位。</param></member><member name="P:Serilog.Parsing.Alignment.Direction"><summary>
+            文本对齐方向。
+            </summary></member><member name="P:Serilog.Parsing.Alignment.Width"><summary>
+            文本的宽度。
+            </summary></member><member name="T:Serilog.Parsing.AlignmentDirection"><summary>
+            定义对齐方向。
+            </summary></member><member name="F:Serilog.Parsing.AlignmentDirection.Left"><summary>
+            文本将左对齐。
+            </summary></member><member name="F:Serilog.Parsing.AlignmentDirection.Right"><summary>
+            文本将右对齐。
+            </summary></member><member name="T:Serilog.Parsing.Destructuring"><summary>指示记录器如何存储有关提供的参数的信息。</summary></member><member name="F:Serilog.Parsing.Destructuring.Default"><summary>
+            将已知类型和对象转换为标量，将数组转换为序列。
+            </summary></member><member name="F:Serilog.Parsing.Destructuring.Stringify"><summary>
+            将所有类型转换为标量字符串。在名称前添加'$'。
+            </summary></member><member name="F:Serilog.Parsing.Destructuring.Destructure"><summary>
+    将已知类型转换为标量，将对象和集合解构为序列和结构。在名称前添加 '@'。
+    </summary></member><member name="T:Serilog.Parsing.MessageTemplateParser"><summary>
+            将消息模板字符串解析为文本或属性标记的序列。
+            </summary></member><member name="M:Serilog.Parsing.MessageTemplateParser.#ctor"><summary>
+            构造一个 <see cref="T:Serilog.Parsing.MessageTemplateParser" />。
+            </summary></member><member name="M:Serilog.Parsing.MessageTemplateParser.Parse(System.String)"><summary>解析提供的消息模板。</summary><param name="messageTemplate">要解析的消息模板。</param><returns>一个文本或属性标记的序列。当模板在语法上无效时，将返回文本标记。解析器将尽力提取有效的属性标记，即使在存在解析问题的情况下。</returns><exception cref="T:System.ArgumentNullException">当<paramref name="messageTemplate" />为<code>null</code>时</exception></member><member name="T:Serilog.Parsing.MessageTemplateToken"><summary>
+            从消息模板字符串解析的元素。
+            </summary></member><member name="P:Serilog.Parsing.MessageTemplateToken.Length"><summary>
+        令牌的长度。
+    </summary></member><member name="M:Serilog.Parsing.MessageTemplateToken.Render(System.Collections.Generic.IReadOnlyDictionary{System.String,Serilog.Events.LogEventPropertyValue},System.IO.TextWriter,System.IFormatProvider)"><summary>
+            将令牌呈现到输出。
+            </summary><param name="properties">可能由令牌表示的属性。</param><param name="output">呈现字符串的输出。</param><param name="formatProvider">提供特定于区域性的格式设置信息，或为 null。</param></member><member name="T:Serilog.Parsing.PropertyToken"><summary>
+    表示日志事件属性的消息模板令牌。
+    </summary></member><member name="M:Serilog.Parsing.PropertyToken.#ctor(System.String,System.String,System.String,System.Nullable{Serilog.Parsing.Alignment}@,Serilog.Parsing.Destructuring)"><summary>
+            构造一个 <see cref="T:Serilog.Parsing.PropertyToken" />。
+            </summary><param name="propertyName">属性的名称。</param><param name="rawText">出现在消息模板中的标记。</param><param name="format">应用于属性的格式（如果有的话）。</param><param name="alignment">应用于属性的对齐方式（如果有的话）。</param><param name="destructuring">应用于属性的解构策略（如果有的话）。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="propertyName" /> 为 <code>null</code></exception><exception cref="T:System.ArgumentNullException">当 <paramref name="rawText" /> 为 <code>null</code></exception></member><member name="P:Serilog.Parsing.PropertyToken.Length"><summary>
+            令牌的长度。
+            </summary></member><member name="M:Serilog.Parsing.PropertyToken.Render(System.Collections.Generic.IReadOnlyDictionary{System.String,Serilog.Events.LogEventPropertyValue},System.IO.TextWriter,System.IFormatProvider)"><summary>
+            将令牌呈现到输出。
+            </summary><param name="properties">可能由令牌表示的属性。</param><param name="output">呈现字符串的输出。</param><param name="formatProvider">提供区域性特定的格式化信息，或为空。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="properties" /> 为 <code>null</code> 时</exception><exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="P:Serilog.Parsing.PropertyToken.PropertyName"><summary>
+            属性名称。
+            </summary></member><member name="P:Serilog.Parsing.PropertyToken.Destructuring"><summary>
+            应用于属性的解构策略。
+            </summary></member><member name="P:Serilog.Parsing.PropertyToken.Format"><summary>
+            应用于属性的格式。
+            </summary></member><member name="P:Serilog.Parsing.PropertyToken.Alignment"><summary>
+            应用于属性的对齐方式。
+            </summary></member><member name="P:Serilog.Parsing.PropertyToken.IsPositional"><summary>
+            如果属性名是位置索引，则为<see langword="true" />；否则为<see langword="false" />。
+            </summary></member><member name="M:Serilog.Parsing.PropertyToken.TryGetPositionalValue(System.Int32@)"><summary>
+            尝试获取属性名称表示的整数值。
+            </summary><param name="position">整数值（如果存在）。</param><returns>如果属性是位置性的，则为True；否则为False。</returns></member><member name="M:Serilog.Parsing.PropertyToken.Equals(System.Object)"><summary>
+            确定指定的 <see cref="T:System.Object" /> 是否与当前的 <see cref="T:System.Object" /> 相等。
+            </summary><returns>
+            如果指定的对象与当前对象相等，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns><param name="obj">要与当前对象进行比较的对象。</param><filterpriority>2</filterpriority></member><member name="M:Serilog.Parsing.PropertyToken.GetHashCode"><summary>
+            作为特定类型的哈希函数。
+            </summary><returns>
+            当前 <see cref="T:System.Object" /> 的哈希代码。
+            </returns><filterpriority>2</filterpriority></member><member name="M:Serilog.Parsing.PropertyToken.ToString"><summary>
+            返回表示当前对象的字符串。
+            </summary><returns>
+            返回表示当前对象的字符串。
+            </returns><filterpriority>2</filterpriority></member><member name="T:Serilog.Parsing.TextToken"><summary>
+            表示字面文本的消息模板令牌。
+            </summary></member><member name="M:Serilog.Parsing.TextToken.#ctor(System.String)"><summary>
+    构造一个 <see cref="T:Serilog.Parsing.TextToken" />。
+    </summary><param name="text">标记的文本。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="text" /> 为 <code>null</code> 时</exception></member><member name="P:Serilog.Parsing.TextToken.Length"><summary>
+            令牌的长度。
+            </summary></member><member name="M:Serilog.Parsing.TextToken.Render(System.Collections.Generic.IReadOnlyDictionary{System.String,Serilog.Events.LogEventPropertyValue},System.IO.TextWriter,System.IFormatProvider)"><summary>
+            将令牌呈现到输出。
+            </summary><param name="properties">可能由令牌表示的属性。</param><param name="output">呈现字符串的输出。</param><param name="formatProvider">提供特定于区域设置的格式化信息，或为 null。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="output" /> 为 <code>null</code> 时</exception></member><member name="M:Serilog.Parsing.TextToken.Equals(System.Object)"><summary>
+        确定指定的 <see cref="T:System.Object" /> 是否等于当前的 <see cref="T:System.Object" />。
+    </summary><returns>
+        如果指定的对象等于当前对象，则为 <see langword="true" />；否则为 <see langword="false" />。
+    </returns><param name="obj">要与当前对象进行比较的对象。</param><filterpriority>2</filterpriority></member><member name="M:Serilog.Parsing.TextToken.GetHashCode"><summary>
+            用作特定类型的哈希函数。
+            </summary><returns>
+            当前 <see cref="T:System.Object" /> 的哈希代码。
+            </returns><filterpriority>2</filterpriority></member><member name="M:Serilog.Parsing.TextToken.ToString"><summary>
+            返回表示当前对象的字符串。
+            </summary><returns>
+            返回表示当前对象的字符串。
+            </returns><filterpriority>2</filterpriority></member><member name="P:Serilog.Parsing.TextToken.Text"><summary>
+            标记的文本。
+            </summary></member><member name="M:Serilog.Rendering.Casing.Format(System.String,System.String)"><summary>
+            当提供了<paramref name="format" />时，对<paramref name="value" />应用大写或小写。当没有提供格式或格式无效时返回<paramref name="value" />。
+            </summary><returns>已应用格式的所提供的<paramref name="value" />。</returns></member><member name="M:Serilog.Rendering.Padding.Apply(System.IO.TextWriter,System.String,System.Nullable{Serilog.Parsing.Alignment}@)"><summary>
+            当提供了<paramref name="alignment" />时，将提供的值写入输出，并应用基于方向的填充。
+            </summary></member><member name="M:Serilog.Rendering.Padding.Apply(System.IO.TextWriter,System.Text.StringBuilder,System.Nullable{Serilog.Parsing.Alignment}@)"><summary>
+            将提供的值写入输出，当提供了<paramref name="alignment" />时应用基于方向的填充。
+            这是上述方法的完整副本，允许直接将<see cref="T:System.Text.StringBuilder" />写入提供的<paramref name="output" />，而无需在调用方调用<see cref="M:System.Text.StringBuilder.ToString" />。
+            </summary></member><member name="T:Serilog.Rendering.ReusableStringWriter"><summary>
+            提供可重用的StringWriter以减少内存分配的类
+            </summary></member><member name="F:Serilog.Rendering.ReusableStringWriter.StringBuilderCapacityThreshold"><summary>
+            保留供下次使用的StringBuilder的最大容量。
+            </summary></member><member name="M:Serilog.Rendering.ReusableStringWriter.GetOrCreate(System.IFormatProvider)"><summary>
+            获取已经创建的 StringWriter（如果存在），否则创建一个新的。
+            </summary><param name="formatProvider"></param></member><member name="M:Serilog.Rendering.ReusableStringWriter.Dispose(System.Boolean)"><summary>
+            清理此实例并准备在未来重复使用。
+            </summary></member><member name="T:Serilog.Settings.KeyValuePairs.SurrogateConfigurationMethods"><summary>
+    包含Serilog配置API的“伪扩展”方法。
+    默认情况下，设置知道如何查找扩展方法，但有些配置实际上是“常规”方法调用，否则找不到。
+
+    此静态类包含可用于替代的内部方法。
+
+    另请参阅 <seealso cref="T:Serilog.Settings.KeyValuePairs.CallableConfigurationMethodFinder" /></summary></member><member name="T:Serilog.Events.LevelAlias"><summary>
+    用于 <see cref="T:Serilog.Events.LogEventLevel" /> 的描述性别名。
+    </summary><remarks>这些别名不会作为枚举的成员出现，因为重复的基础值在使用 <see cref="M:System.Object.ToString" /> 呈现枚举值时会导致问题。</remarks></member><member name="M:Serilog.Context.LogContext.Push(System.ReadOnlySpan{Serilog.Core.ILogEventEnricher})"><summary>
+            将多个扩充器推送到上下文中，返回一个必须稍后用于移除属性的<see cref="T:System.IDisposable" />，以及任何可能已推送到其上但尚未弹出的其他属性。必须从同一线程/逻辑调用上下文中弹出该属性。
+            </summary><seealso cref="T:Serilog.Core.Enrichers.PropertyEnricher" />。
+            <param name="enrichers">要推送到日志上下文中的扩充器</param><returns>一个必须按顺序释放的令牌，以将属性从堆栈中弹出。</returns></member><member name="M:Serilog.Events.DictionaryValue.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{Serilog.Events.ScalarValue,Serilog.Events.LogEventPropertyValue}})"><summary>
+            创建一个 <see cref="T:Serilog.Events.DictionaryValue" />，使用提供的 <paramref name="elements" />。
+            </summary><param name="elements">字典中表示的键值映射。</param><exception cref="T:System.ArgumentNullException">当 <paramref name="elements" /> 为 <code>null</code> 时。</exception></member><member name="T:Serilog.Formatting.Display.MessageTemplateTextFormatter"><summary>
+        一个 <see cref="T:Serilog.Formatting.ITextFormatter" />，它支持 Serilog 消息模板格式。格式化日志事件以供显示，与渲染其中的数据相比，具有不同的要求和期望。为此，该格式化程序覆盖了一些行为：首先，字符串始终以字面形式输出（不加引号），除非对其应用了其他格式。其次，没有匹配属性的标记将被跳过，而不是作为原始文本写入。
+    </summary><remarks>新代码应优先使用来自 <c>Serilog.Expressions</c> 的 <c>ExpressionTemplate</c>。</remarks></member><member name="M:Serilog.Configuration.LoggerSinkConfiguration.FallbackChain(System.Action{Serilog.Configuration.LoggerSinkConfiguration},System.Action{Serilog.Configuration.LoggerSinkConfiguration},System.Action{Serilog.Configuration.LoggerSinkConfiguration}[])"><summary>
+            写入一个接收器，如果该接收器无法记录事件，则写入第二个接收器。如果有必要，还可以向链中添加更多接收器。
+            </summary><param name="configureSink">用于配置第一个尝试的接收器的回调。该回调的参数支持与<c>WriteTo</c>配置对象相同的语法。</param><param name="configureFallback">用于配置第二个接收器的回调。</param><param name="configureSubsequentFallbacks">用于在回退链中配置更多接收器的其他回调。</param><returns>允许方法链式调用的配置对象。</returns><exception cref="T:System.ArgumentNullException">当任何参数为<code>null</code>时。</exception><remarks>
+            回退机制依赖于目标接收器要么 a) 在失败时同步抛出异常，要么 b) 实现 <see cref="T:Serilog.Core.ISetLoggingFailureListener" /> 接口。
+            </remarks></member></members>
+</doc>

@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Http</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.Http.HttpClientFactoryOptions"><summary>
+            提供用于配置默认 <see cref="T:System.Net.Http.IHttpClientFactory" /> 的选项。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HttpMessageHandlerBuilderActions"><summary>
+            获取用于配置 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 的操作列表。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HttpClientActions"><summary>
+            获取用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的操作列表。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HandlerLifetime"><summary>
+            获取或设置一个 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例可被重用的时间长度。每个命名客户端都可以有自己的配置处理程序生存期值。此属性的默认值为两分钟。将生存期设置为 <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" /> 以禁用处理程序过期。
+            </summary><remarks><para><see cref="T:System.Net.Http.IHttpClientFactory" /> 的默认实现将池化工厂创建的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例以减少资源消耗。此设置配置处理程序在被计划从池中移除并释放之前可以池化的时间量。
+            </para><para>
+            处理程序的池化是可取的，因为每个处理程序通常管理自己的基础HTTP连接；创建超过必要数量的处理程序可能会导致连接延迟。某些处理程序还会无限期保持连接打开，这可能会阻止处理程序对DNS更改做出反应。应理解应用程序对网络环境变化做出反应的需求来选择 <see cref="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HandlerLifetime" /> 的值。
+            </para><para>
+            处理程序的过期不会立即释放该处理程序。过期的处理程序会被放置在一个单独的池中，该池会间隔处理，仅当处理程序变得不可达时才释放它们。使用长时间生存的 <see cref="T:System.Net.Http.HttpClient" /> 实例将阻止释放基础 <see cref="T:System.Net.Http.HttpMessageHandler" />，直到所有引用都被垃圾回收。
+            </para></remarks></member><member name="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.ShouldRedactHeaderValue"><summary>
+            获取或设置一个 <see cref="T:System.Func`2" />，用于确定是否在记录日志前编辑 HTTP 标头值。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.SuppressHandlerScope"><summary><para>
+            获取或设置一个值，该值指示 <see cref="T:System.Net.Http.IHttpClientFactory" /> 在生成 <see cref="T:System.Net.Http.HttpMessageHandler" /> 时是否会创建一个依赖注入范围。如果为 <c>false</c>（默认），则将创建一个范围，否则不会创建范围。
+            </para><para>
+            提供此选项是为了与现有应用程序兼容。建议在新的应用程序中使用默认设置。
+            </para></summary><remarks><para>
+            默认情况下，<see cref="T:System.Net.Http.IHttpClientFactory" /> 在每次创建 <see cref="T:System.Net.Http.HttpMessageHandler" /> 时都会创建一个依赖注入范围。所创建的范围具有与消息处理程序相同的生存期，并在消息处理程序释放时释放。
+            </para><para>
+            当执行属于 <see cref="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HttpMessageHandlerBuilderActions" /> 的操作时，将通过 <see cref="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Services" /> 向它们提供范围的 <see cref="T:System.IServiceProvider" />。这包括从依赖注入中检索消息处理程序，例如使用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddHttpMessageHandler``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 注册的处理程序。
+            </para></remarks></member><member name="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder"><summary>
+            用于配置 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例的生成器抽象。
+            </summary><remarks><see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 在服务集合中注册为瞬态服务。
+            调用方应为每个要创建的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 检索一个新实例。
+            实现者应期望每个实例仅使用一次。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Name"><summary>
+            获取或设置正在创建的<see cref="T:System.Net.Http.HttpClient" />的名称。
+            </summary><remarks><see cref="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Name" />由<see cref="T:System.Net.Http.IHttpClientFactory" />基础结构设置，仅为了单元测试目的而公共。在测试场景之外设置<see cref="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Name" />可能会产生不可预知的结果。
+            </remarks></member><member name="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.PrimaryHandler"><summary>
+            获取或设置主 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.AdditionalHandlers"><summary>
+            获取用于配置 <see cref="T:System.Net.Http.HttpClient" /> 管道的其他 <see cref="T:System.Net.Http.DelegatingHandler" /> 实例的列表。
+            </summary></member><member name="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Services"><summary>
+            获取一个<see cref="T:System.IServiceProvider" />，可用于从依赖项注入容器解析服务。
+            </summary><remarks>
+            此属性对<see cref="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.SuppressHandlerScope" />的值敏感。如果<c>true</c>，此属性将引用应用程序的根服务提供程序。如果<c>false</c>（默认值），此属性将引用范围服务提供程序，该提供程序具有与正在创建的处理程序相同的生存期。
+            </remarks></member><member name="M:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Build"><summary>
+        创建一个 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+    </summary><returns>
+        一个由 <see cref="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.PrimaryHandler" /> 和 <see cref="P:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.AdditionalHandlers" /> 生成的 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+    </returns></member><member name="M:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.CreateHandlerPipeline(System.Net.Http.HttpMessageHandler,System.Collections.Generic.IEnumerable{System.Net.Http.DelegatingHandler})"><summary>
+            通过将<paramref name="additionalHandlers" /> 一个接一个地与<paramref name="primaryHandler" /> 链接在链的末端，构造一个<see cref="T:System.Net.Http.HttpMessageHandler" /> 实例。生成的管道由<see cref="T:System.Net.Http.IHttpClientFactory" /> 基础结构使用，以创建带有自定义消息处理程序的<see cref="T:System.Net.Http.HttpClient" /> 实例。也可以使用<see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 而不是<see cref="T:System.Net.Http.IHttpClientFactory" /> 来访问生成的管道。
+            </summary><param name="primaryHandler">一个<see cref="T:System.Net.Http.HttpMessageHandler" /> 实例，位于处理程序链的底部，实际处理 HTTP 传输操作。</param><param name="additionalHandlers">一个有序的<see cref="T:System.Net.Http.DelegatingHandler" /> 实例列表，作为发送<see cref="T:System.Net.Http.HttpRequestMessage" /> 和接收<see cref="T:System.Net.Http.HttpResponseMessage" /> 的一部分被调用。处理程序以自上而下的方式调用。也就是说，对于出站请求消息，第一个条目首先被调用，但对于入站响应消息，它是最后一个被调用的。</param><returns>HTTP 消息处理程序链。</returns><exception cref="T:System.ArgumentNullException"><paramref name="primaryHandler" /> 或 <paramref name="additionalHandlers" /> 为 <see langword="null" />。</exception><exception cref="T:System.InvalidOperationException"><paramref name="additionalHandlers" /> 包含一个 <see langword="null" /> 条目。
+            - 或 -
+            <c>DelegatingHandler.InnerHandler</c> 属性必须为 <see langword="null" />。提供给 <c>HttpMessageHandlerBuilder</c> 的 <c>DelegatingHandler</c> 实例不能重复使用或缓存。</exception></member><member name="T:Microsoft.Extensions.Http.IHttpMessageHandlerBuilderFilter"><summary>
+            由 <see cref="T:Microsoft.Extensions.Http.DefaultHttpClientFactory" /> 用于在调用 <see cref="M:Microsoft.Extensions.Http.HttpMessageHandlerBuilder.Build" /> 之前立即对 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 应用额外的初始化配置。
+            </summary></member><member name="M:Microsoft.Extensions.Http.IHttpMessageHandlerBuilderFilter.Configure(System.Action{Microsoft.Extensions.Http.HttpMessageHandlerBuilder})"><summary>
+            将额外的初始化应用于 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /></summary><param name="next">一个委托，它将运行下一个 <see cref="T:Microsoft.Extensions.Http.IHttpMessageHandlerBuilderFilter" />。</param><returns>配置后的 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" />。</returns></member><member name="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1"><summary>
+            一个用于创建针对给定逻辑名称具有自定义配置的类型化客户端实例的组件的工厂抽象。
+            </summary><typeparam name="TClient">要创建的类型化客户端的类型。</typeparam><remarks><para><see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 是支持
+            <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)" /> 和
+            <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 功能的基础结构。此类型
+            极少在应用程序代码中直接使用，应使用 <see cref="M:System.IServiceProvider.GetService(System.Type)" /> 替代
+            来检索类型化客户端。
+            </para><para>
+            默认的 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 可以通过调用
+            <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)" />
+            在 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中注册。
+            默认的 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 将在服务集合中注册为单例
+            开放泛型服务。
+            </para><para>
+            默认的 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 使用类型激活来创建类型化客户端实例。类型化
+            客户端类型不会直接从 <see cref="T:System.IServiceProvider" /> 检索。详细信息请参阅
+            <see cref="M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(System.IServiceProvider,System.Type,System.Object[])" />。
+            </para></remarks><example>
+            此示例显示了定义类型化客户端类的基本模式。
+            <code>
+            class ExampleClient
+            {
+                private readonly HttpClient _httpClient;
+                private readonly ILogger _logger;
+            
+                // typed clients can use constructor injection to access additional services
+                public ExampleClient(HttpClient httpClient, ILogger&lt;ExampleClient&gt; logger)
+                {
+                    _httpClient = httpClient;
+                    _logger = logger;
+                }
+            
+                // typed clients can expose the HttpClient for application code to call directly
+                public HttpClient HttpClient =&gt; _httpClient;
+            
+                // typed clients can also define methods that abstract usage of the HttpClient
+                public async Task SendHelloRequest()
+                {
+                    var response = await _httpClient.GetAsync("/helloworld");
+                    response.EnsureSuccessStatusCode();
+                }
+            }
+            </code></example><example>
+            此示例显示了如何从 ASP.NET Core 中间件中使用类型化客户端。
+            <code>
+            // in Startup.cs
+            public void Configure(IApplicationBuilder app, ExampleClient exampleClient)
+            {
+                app.Run(async (context) =&gt;
+                {
+                    var response = await _exampleClient.GetAsync("/helloworld");
+                    await context.Response.WriteAsync("Remote server said: ");
+                    await response.Content.CopyToAsync(context.Response.Body);
+                });
+            }
+            </code></example><example>
+            此示例显示了如何从 ASP.NET Core MVC 控制器中使用类型化客户端。
+            <code>
+            // in Controllers/HomeController.cs
+            public class HomeController : ControllerBase(IApplicationBuilder app, ExampleClient exampleClient)
+            {
+                private readonly ExampleClient _exampleClient;
+            
+                public HomeController(ExampleClient exampleClient)
+                {
+                    _exampleClient = exampleClient;
+                }
+            
+                public async Task&lt;IActionResult&gt; Index()
+                {
+                    var response = await _exampleClient.GetAsync("/helloworld");
+                    var text = await response.Content.ReadAsStringAsync();
+                    return Content("Remote server said: " + text, "text/plain");
+                };
+            }
+            </code></example></member><member name="M:Microsoft.Extensions.Http.ITypedHttpClientFactory`1.CreateClient(System.Net.Http.HttpClient)"><summary>
+            根据关联的 <see cref="T:System.Net.Http.HttpClient" /> 创建一个类型化客户端。
+            </summary><param name="httpClient">
+            由 <see cref="T:System.Net.Http.IHttpClientFactory" /> 为与 <typeparamref name="TClient" /> 关联的命名客户端创建的 <see cref="T:System.Net.Http.HttpClient" />。
+            </param><returns><typeparamref name="TClient" /> 的一个实例。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger"><summary>
+            为 <see cref="T:System.Net.Http.IHttpClientFactory" /> 返回的命名 <see cref="T:System.Net.Http.HttpClient" /> 实例提供异步自定义 HTTP 请求日志记录的抽象。
+            </summary><remarks><para>
+            异步方法（例如 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />）将在异步代码路径中调用（例如
+            <see cref="M:System.Net.Http.HttpClient.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />），而它们的
+            继承自 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientLogger" /> 的同步对应方法（例如 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" />）
+            将在相应的同步代码路径中调用。
+            </para><para>
+            实现接口的用户可以决定是否使用 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 或任何其他方式，以及具体记录什么内容。
+            但是，实现应注意访问某些 <see cref="T:System.Net.Http.HttpRequestMessage" /> 或
+            <see cref="T:System.Net.Http.HttpResponseMessage" /> 属性（例如从内容流中读取）可能产生的不良副作用；如果可能，应避免此类行为。
+            </para><para>
+            日志记录实现也不应引发任何异常，因为日志记录中未处理的异常会导致请求失败。
+            </para></remarks></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><summary>
+            在发送 HTTP 请求之前记录日志。
+            </summary><param name="request">将发送的 HTTP 请求消息。</param><param name="cancellationToken">用于取消操作的取消令牌。</param><returns>表示异步操作的任务对象。操作的结果是一个上下文对象，该对象将传递给相应的 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)" /> 或 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestFailedAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.Exception,System.TimeSpan,System.Threading.CancellationToken)" />。如果实现不需要上下文对象，则可以为 <see langword="null" />。</returns></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)"><summary>
+            收到HTTP响应后记录日志。
+            </summary><param name="context">先前由<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />返回的上下文对象。</param><param name="request">已发送的HTTP请求消息。</param><param name="response">已接收的HTTP响应消息。</param><param name="elapsed">自调用<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />以来经过的时间。</param><param name="cancellationToken">用于取消操作的取消令牌。</param><returns>表示异步操作的任务对象。</returns></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestFailedAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.Exception,System.TimeSpan,System.Threading.CancellationToken)"><summary>
+            记录在发送 HTTP 请求时发生的异常。
+            </summary><param name="context">先前由 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> 返回的上下文对象。</param><param name="request">已发送的 HTTP 请求消息。</param><param name="response">如果可用，则为已收到的 HTTP 响应消息，否则为 <see langword="null" />。</param><param name="exception">处理 HTTP 请求期间发生的异常。</param><param name="elapsed">自调用 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> 以来经过的时间。</param><param name="cancellationToken">用于取消操作的取消标记。</param><returns>表示异步操作的任务对象。</returns></member><member name="T:Microsoft.Extensions.Http.Logging.IHttpClientLogger"><summary>
+            用于自定义HTTP请求日志记录的抽象，适用于由<see cref="T:System.Net.Http.IHttpClientFactory" />返回的命名<see cref="T:System.Net.Http.HttpClient" />实例。
+            </summary><remarks><para>
+            实现该接口的用户自行决定是否使用<see cref="T:Microsoft.Extensions.Logging.ILogger" />或其他方式，以及具体记录哪些内容。
+            但是，实现应注意访问某些<see cref="T:System.Net.Http.HttpRequestMessage" />或<see cref="T:System.Net.Http.HttpResponseMessage" />属性可能产生的不良副作用，
+            例如从内容流中读取数据；如果可能，应避免此类行为。
+            </para><para>
+            日志记录实现也不应引发任何异常，因为日志记录中未处理的异常会导致请求失败。
+            </para></remarks></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)"><summary>
+    在发送HTTP请求之前记录。
+  </summary><param name="request">将要发送的HTTP请求消息。</param><returns>一个上下文对象，将传递给相应的 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)" /> 或 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestFailed(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.Exception,System.TimeSpan)" />。如果实现不需要上下文对象，则可以为 <see langword="null" />。</returns></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)"><summary>
+        在收到 HTTP 响应后记录日志。
+    </summary><param name="context">先前由 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" /> 返回的上下文对象。</param><param name="request">发送的 HTTP 请求消息。</param><param name="response">接收到的 HTTP 响应消息。</param><param name="elapsed">自调用 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" /> 以来经过的时间。</param></member><member name="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestFailed(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.Exception,System.TimeSpan)"><summary>
+            记录发送HTTP请求时发生的异常。
+            </summary><param name="context">先前由<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" />返回的上下文对象。</param><param name="request">已发送的HTTP请求消息。</param><param name="response">如果可用，则为收到的HTTP响应消息；否则为<see langword="null" />。</param><param name="exception">处理HTTP请求期间发生的异常。</param><param name="elapsed">自调用<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" />以来经过的时间。</param></member><member name="T:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler"><summary>
+            处理HTTP请求生命周期的日志记录。
+            </summary></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.#ctor(Microsoft.Extensions.Logging.ILogger)"><summary>
+    使用指定的记录器初始化 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler" /> 类的新实例。
+    </summary><param name="logger">用于记录日志的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="logger" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.#ctor(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Http.HttpClientFactoryOptions)"><summary>
+            使用指定的记录器和选项初始化<see cref="T:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler" />类的新实例。
+            </summary><param name="logger">要记录到的<see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="options">用于配置<see cref="T:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler" />实例的<see cref="T:Microsoft.Extensions.Http.HttpClientFactoryOptions" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="logger" />或<paramref name="options" />为<see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><inheritdoc /><remarks>记录发送的 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的请求和响应。</remarks></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.Send(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><inheritdoc /><remarks>记录发送的 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的请求和响应。</remarks></member><member name="T:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler"><summary>
+    处理在日志作用域内 HTTP 请求生命周期的日志记录。
+    </summary></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.#ctor(Microsoft.Extensions.Logging.ILogger)"><summary>
+    使用指定的记录器初始化 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler" /> 类的新实例。
+    </summary><param name="logger">用于日志记录的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="logger" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.#ctor(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Http.HttpClientFactoryOptions)"><summary>
+            使用指定的记录器和选项初始化 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler" /> 类的新实例。
+            </summary><param name="logger">用于记录日志的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />。</param><param name="options">用于配置 <see cref="T:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler" /> 实例的 <see cref="T:Microsoft.Extensions.Http.HttpClientFactoryOptions" />。</param><exception cref="T:System.ArgumentNullException"><paramref name="logger" /> 或 <paramref name="options" /> 为 <see langword="null" />。</exception></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><inheritdoc /><remarks>记录所发送的 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的请求和响应。</remarks></member><member name="M:Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.Send(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"><inheritdoc /><remarks>记录发送的 <see cref="T:System.Net.Http.HttpRequestMessage" /> 的请求和响应。</remarks></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions"><summary>
+            配置 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigureHttpClient(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{System.Net.Http.HttpClient})"><summary>
+    添加一个委托，用于配置命名的<see cref="T:System.Net.Http.HttpClient" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureClient">用于配置<see cref="T:System.Net.Http.HttpClient" />的委托。</param><returns>可用于配置客户端的<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigureHttpClient(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            添加一个委托，该委托将用于配置命名的 <see cref="T:System.Net.Http.HttpClient" />。
+            </summary><param name="builder">该 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureClient">一个用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks>
+            提供给 <paramref name="configureClient" /> 的 <see cref="T:System.IServiceProvider" /> 将是同一应用程序的根服务提供程序实例。
+            </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.DelegatingHandler})"><summary>
+    添加一个委托，该委托将用于为命名的 <see cref="T:System.Net.Http.HttpClient" /> 创建额外的消息处理程序。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureHandler">用于创建 <see cref="T:System.Net.Http.DelegatingHandler" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><paramref name="configureHandler" /> 委托应在每次调用时返回消息处理程序的新实例。
+    </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.IServiceProvider,System.Net.Http.DelegatingHandler})"><summary>
+            添加一个委托，用于为命名的 <see cref="T:System.Net.Http.HttpClient" /> 创建额外的消息处理程序。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureHandler">用于创建 <see cref="T:System.Net.Http.DelegatingHandler" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para><paramref name="configureHandler" /> 委托应在每次调用时返回消息处理程序的新实例。
+            </para><para>
+            提供给 <paramref name="configureHandler" /> 的 <see cref="T:System.IServiceProvider" /> 参数将是对作用域服务提供程序的引用，该服务提供程序共享正在构造的处理程序的生命周期。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddHttpMessageHandler``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+            为命名的 <see cref="T:System.Net.Http.HttpClient" /> 从依赖注入容器添加一个额外的消息处理程序。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><typeparam name="THandler"><see cref="T:System.Net.Http.DelegatingHandler" /> 的类型。处理程序类型必须注册为瞬时服务。
+            </typeparam><remarks><para><typeparamref name="THandler" /> 将从范围服务提供程序中进行解析，该提供程序与正在构造的处理程序共享生存期。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpMessageHandler})"><summary>
+            添加一个委托，该委托将用于为命名的 <see cref="T:System.Net.Http.HttpClient" /> 配置主 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureHandler">一个用于创建 <see cref="T:System.Net.Http.HttpMessageHandler" /> 的委托。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks>
+            每次调用 <paramref name="configureHandler" /> 委托时，它应返回消息处理程序的新实例。
+            </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.IServiceProvider,System.Net.Http.HttpMessageHandler})"><summary>
+    添加一个委托，该委托将用于为命名的<see cref="T:System.Net.Http.HttpClient" />配置主<see cref="T:System.Net.Http.HttpMessageHandler" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+    </param><param name="configureHandler">
+    用于创建<see cref="T:System.Net.Http.HttpMessageHandler" />的委托。
+    </param><returns>
+    可用于配置客户端的<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+    </returns><remarks><para><paramref name="configureHandler" /> 委托应在每次调用时返回消息处理程序的新实例。
+    </para><para>
+    提供给<paramref name="configureHandler" />的<see cref="T:System.IServiceProvider" />参数将是作用域服务提供程序的引用，该服务提供程序与正在构造的处理程序的生存期共享。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    从依赖注入容器为命名的 <see cref="T:System.Net.Http.HttpClient" /> 配置主要 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><typeparam name="THandler"><see cref="T:System.Net.Http.DelegatingHandler" /> 的类型。处理程序类型必须注册为暂时性服务。
+    </typeparam><remarks><para><typeparamref name="THandler" /> 将从范围服务提供程序中进行解析，该提供程序与正在构造的处理程序共享生存期。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{System.Net.Http.HttpMessageHandler,System.IServiceProvider})"><summary>
+    添加一个委托，用于为指定的 <see cref="T:System.Net.Http.HttpClient" /> 配置主要 <see cref="T:System.Net.Http.HttpMessageHandler" />。
+    </summary><param name="builder">一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureHandler">用于配置先前设置或默认的主要 <see cref="T:System.Net.Http.HttpMessageHandler" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    提供给 <paramref name="configureHandler" /> 的 <see cref="T:System.IServiceProvider" /> 参数将是一个作用域服务提供程序的引用，该服务提供程序与正在构造的处理程序共享生存期。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigureHttpMessageHandlerBuilder(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.Http.HttpMessageHandlerBuilder})"><summary>
+            添加一个委托，该委托将用于使用 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 为命名的 <see cref="T:System.Net.Http.HttpClient" /> 配置消息处理程序。
+            </summary><param name="builder">用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureBuilder">用于配置 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 的委托。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.UseSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{System.Net.Http.SocketsHttpHandler,System.IServiceProvider})"><summary>
+    添加或更新 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 作为命名 <see cref="T:System.Net.Http.HttpClient" /> 的主处理程序。如果提供，还会添加一个用于配置主 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 的委托。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+    </param><param name="configureHandler">
+    用于配置主 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 的可选委托。
+    </param><returns>
+    可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+    </returns><remarks><para>
+    如果之前在调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpMessageHandler})" /> 或 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.UseSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder})" /> 时已经将主处理程序设置为 <see cref="T:System.Net.Http.SocketsHttpHandler" />，那么传递的 <paramref name="configureHandler" /> 委托将应用于现有实例。否则，将创建一个新的 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 实例。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.UseSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder})"><summary>
+            添加或更新 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 作为命名 <see cref="T:System.Net.Http.HttpClient" /> 的主处理程序，
+            并使用 <see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" /> 进行配置。
+            </summary><param name="builder">用于配置的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureBuilder">用于在 <see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" /> 上设置主 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 配置的委托，
+            该配置将在创建主处理程序时应用。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            如果以前通过调用，例如，
+            <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpMessageHandler})" /> 或
+            <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.UseSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder})" /> 已经将主处理程序设置为
+            <see cref="T:System.Net.Http.SocketsHttpHandler" />，则在 <see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" /> 上设置的配置将应用于现有实例。
+            否则，将创建一个新的 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 实例。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+            配置 <typeparamref name="TClient" /> 类型与 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 关联的命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为暂时性服务注册到服务集合中。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><param name="builder">要配置的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 生成器。</param><remarks><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过将 <typeparamref name="TClient" /> 作为服务类型提供，从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中检索。
+            </para><para>
+            调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 将注册一个类型化客户端绑定，该绑定使用 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 创建 <typeparamref name="TClient" />。
+            </para><para>
+            类型化客户端的服务依赖项将从用于解析类型化客户端的同一服务提供程序中解析。无法访问绑定到消息处理程序的范围中的服务，该范围是独立管理的。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``2(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    配置 <typeparamref name="TClient" /> 类型与 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 关联的命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。创建的实例将为 <typeparamref name="TImplementation" /> 类型。
+    </summary><typeparam name="TClient">
+    类型化客户端的声明类型。指定的类型将作为瞬态服务在服务集合中注册。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+    </typeparam><typeparam name="TImplementation">
+    类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+    </typeparam><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><remarks><para>
+    使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构建的 <typeparamref name="TClient" /> 实例可以通过提供 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" /> (及相关方法) 中检索。
+    </para><para>
+    调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``2(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 将注册一个类型化客户端绑定，该绑定使用 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 创建 <typeparamref name="TImplementation" />。
+    </para><para>
+    类型化客户端的服务依赖项将从用于解析类型化客户端的同一服务提供程序中解析。无法从绑定到消息处理程序的作用域访问服务，该作用域是独立管理的。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpClient,``0})"><summary>
+            配置 <typeparamref name="TClient" /> 类型与关联于 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为暂时性服务注册到服务集合中。
+            </typeparam><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="factory">用于构造类型化客户端的工厂函数。</param><remarks><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过将 <typeparamref name="TClient" /> 作为服务类型，从 <see cref="M:System.IServiceProvider.GetService(System.Type)" /> （及相关方法）中检索。
+            </para><para>
+            调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpClient,``0})" /> 将注册一个类型化客户端绑定，该绑定使用提供的工厂函数创建 <typeparamref name="TClient" />。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpClient,System.IServiceProvider,``0})"><summary>
+    配置 <typeparamref name="TClient" /> 类型与关联于 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+    </summary><typeparam name="TClient">
+    类型化客户端的类型。指定的类型将作为临时服务注册到服务集合中。
+    </typeparam><param name="builder">表示 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="factory">用于构造类型化客户端的工厂函数。</param><remarks><para>
+    使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过提供 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索。
+    </para><para>
+    调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddTypedClient``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.Net.Http.HttpClient,System.IServiceProvider,``0})" /> 将使用提供的工厂函数注册创建 <typeparamref name="TClient" /> 的类型化客户端绑定。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RedactLoggedHeaders(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.String,System.Boolean})"><summary>
+            设置 <see cref="T:System.Func`2" />，该委托根据 HTTP 标头名称决定是否在日志记录前隐藏相应的 HTTP 标头值。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+            </param><param name="shouldRedactHeaderValue"><see cref="T:System.Func`2" />，用于根据 HTTP 标头名称决定是否在日志记录前隐藏相应的 HTTP 标头值。
+            </param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+            </returns><remarks>
+            提供的 <paramref name="shouldRedactHeaderValue" /> 谓词会在日志记录时针对每个标头名称进行求值。如果该谓词返回 <see langword="true" />，则标头值将在日志中替换为标记值 <c>*</c>；否则将记录标头值。
+            </remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RedactLoggedHeaders(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Collections.Generic.IEnumerable{System.String})"><summary>
+            设置在记录日志前应遮盖值的HTTP标头名称集合。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+            </param><param name="redactedLoggedHeaderNames">
+            应在记录日志前遮盖值的HTTP标头名称集合。
+            </param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。
+            </returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.SetHandlerLifetime(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.TimeSpan)"><summary>
+            设置 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例可以重复使用的时长。每个命名
+            客户端可以拥有其自己配置的处理程序生存期值。默认值为两分钟。将生存期设置为
+            <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" /> 可禁用处理程序过期。
+            </summary><remarks><para><see cref="T:System.Net.Http.IHttpClientFactory" /> 的默认实现将池化由工厂创建的 <see cref="T:System.Net.Http.HttpMessageHandler" />
+            实例，以减少资源消耗。此设置配置处理程序在被计划从池中移除并释放之前，可以在池中保留的时间量。
+            </para><para>
+            处理程序池化是可取的，因为每个处理程序通常会管理自己的底层 HTTP 连接；创建
+            过多不必要的处理程序可能导致连接延迟。某些处理程序还会无限期地保持连接打开，
+            这可能会阻止处理程序响应 DNS 更改。<paramref name="handlerLifetime" /> 值的选择应基于
+            应用程序对网络环境变化做出响应需求的理解。
+            </para><para>
+            处理程序过期不会立即释放处理程序。过期的处理程序被放置在一个单独的池中，
+            该池会定期处理，只有在处理程序变得不可达时才释放它们。使用长时间存活的
+            <see cref="T:System.Net.Http.HttpClient" /> 实例将阻止底层 <see cref="T:System.Net.Http.HttpMessageHandler" /> 被
+            释放，直到所有引用都被垃圾回收。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigureAdditionalHttpMessageHandlers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{System.Collections.Generic.IList{System.Net.Http.DelegatingHandler},System.IServiceProvider})"><summary>
+            添加一个委托，该委托将用于通过 <see cref="T:Microsoft.Extensions.Http.HttpMessageHandlerBuilder" /> 为指定名称的 <see cref="T:System.Net.Http.HttpClient" /> 配置附加消息处理程序。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="configureAdditionalHandlers">用于配置一系列 <see cref="T:System.Net.Http.DelegatingHandler" /> 的委托。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddAsKeyed(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.DependencyInjection.ServiceLifetime)"><summary>
+            使用客户端的名称作为键，以及<paramref name="lifetime" />参数中提供的生存期，将命名的<see cref="T:System.Net.Http.HttpClient" />和相关的处理程序管道<see cref="T:System.Net.Http.HttpMessageHandler" />注册为键控服务。默认情况下，生存期为<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="lifetime">已注册的键控服务的生存期。</param><returns>一个可用于配置客户端的<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            从DI作为键控服务解析的命名客户端的行为类似于使用<see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" />创建的客户端。这意味着该客户端将在<see cref="P:Microsoft.Extensions.Http.HttpClientFactoryOptions.HandlerLifetime" />期间继续重复使用相同的<see cref="T:System.Net.Http.HttpMessageHandler" />实例，并且将继续使用处理程序的独立DI范围，而不是其解析出的范围。
+            </para><para>
+            警告：将客户端注册为键控<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />服务将导致<see cref="T:System.Net.Http.HttpClient" />和<see cref="T:System.Net.Http.HttpMessageHandler" />实例被DI捕获，因为两者都实现了<see cref="T:System.IDisposable" />。如果在<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />服务中多次解析客户端，这可能会导致内存泄漏。
+            </para><para>
+            警告：如果出现以下情况：（1）键控<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" /><see cref="T:System.Net.Http.HttpClient" />注册，（2）将键控<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" /><see cref="T:System.Net.Http.HttpClient" />注入到<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />服务中，或者（3）长时间运行的应用范围，<see cref="T:System.Net.Http.HttpClient" />实例将被单一实例或长时间运行的范围捕获，因此它们将无法参与处理程序轮换，这可能导致DNS更改丢失。（这与类型化客户端类似的问题，类型化客户端注册为<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />服务。）
+            </para><para>
+            如果对同名构建器调用两次，则键控服务的生存期将更新为最新使用的<see cref="T:Microsoft.Extensions.DependencyInjection.ServiceLifetime" />值。
+            </para><para>
+            如果对类型化客户端调用，则只有相关的命名客户端和处理程序将注册为键控。类型化客户端本身将继续注册为暂时性服务。
+            </para><para>
+            如果与<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.ConfigureHttpClientDefaults(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder})" />结合使用，则使用键<see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" />，因此任何命名的<see cref="T:System.Net.Http.HttpClient" />实例都将作为键控服务解析（除非通过<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAsKeyed(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />显式选择退出键控注册）。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAsKeyed(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+    移除指定名称的 <see cref="T:System.Net.Http.HttpClient" /> 和 <see cref="T:System.Net.Http.HttpMessageHandler" /> 的键控注册。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    如果与 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.ConfigureHttpClientDefaults(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder})" /> 结合使用，
+    它只会影响之前的“全局”<see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" /> 注册，而不会影响通过 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddAsKeyed(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,Microsoft.Extensions.DependencyInjection.ServiceLifetime)" /> 为特定名称注册的客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.IServiceProvider,Microsoft.Extensions.Http.Logging.IHttpClientLogger},System.Boolean)"><summary>
+            添加一个委托，该委托将用于为命名的 <see cref="T:System.Net.Http.HttpClient" /> 创建额外的日志记录器。自定义日志记录器将由专用的日志记录 DelegatingHandler 在每个对应的命名 <see cref="T:System.Net.Http.HttpClient" /> 的请求中调用。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="httpClientLoggerFactory">一个用于创建自定义日志记录器的委托。该日志记录器应实现 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientLogger" /> 或 <see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />。</param><param name="wrapHandlersPipeline">指示带有自定义日志记录器的日志记录处理程序是添加到额外处理程序链的顶部还是底部。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            如果 <paramref name="wrapHandlersPipeline" /> 为 `true`，则 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" /> 和
+            <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> 将在链中所有其他额外处理程序之前执行。<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)" /> 和
+            <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)" /> 将在所有其他额外处理程序之后执行，本质上包装了整个管道。
+            </para><para>
+            如果 <paramref name="wrapHandlersPipeline" /> 为 `false`，则 <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" /> 和
+            <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" /> 将在链中所有其他额外处理程序之后、主处理程序之前执行。<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)" /> 和
+            <see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)" /> 将在所有其他额外处理程序之前、主处理程序之后执行。
+            </para><para>
+            提供给 <paramref name="httpClientLoggerFactory" /> 的 <see cref="T:System.IServiceProvider" /> 参数将引用一个作用域服务提供程序，该提供程序与正在构造的处理程序链共享生存期。
+            </para><para>
+            如果多次调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.IServiceProvider,Microsoft.Extensions.Http.Logging.IHttpClientLogger},System.Boolean)" />，则会添加多个日志记录器。如果在调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Func{System.IServiceProvider,Microsoft.Extensions.Http.Logging.IHttpClientLogger},System.Boolean)" /> 之前未调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAllLoggers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />，则除了默认日志记录器之外，还会添加新的日志记录器。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Boolean)"><summary>
+            添加一个委托，该委托将用于为命名<see cref="T:System.Net.Http.HttpClient" />创建附加记录器。在每个相应命名<see cref="T:System.Net.Http.HttpClient" />的请求上，自定义记录器将从专用的日志记录DelegatingHandler中调用。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><param name="wrapHandlersPipeline">是否将带有自定义记录器的日志记录处理程序添加到附加处理程序链的顶部还是底部。</param><returns>可用于配置客户端的<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><typeparam name="TLogger">自定义记录器的服务类型，按其注册到DI中的方式。记录器应实现<see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientLogger" />或<see cref="T:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger" />。</typeparam><remarks><para>
+            如果<paramref name="wrapHandlersPipeline" />为`true`，则<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" />和<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />将在链中所有其他附加处理程序之前执行。<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)" />和<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)" />将在所有其他附加处理程序之后执行，本质上是包装整个管道。
+            </para><para>
+            如果<paramref name="wrapHandlersPipeline" />为`false`，则<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStart(System.Net.Http.HttpRequestMessage)" />和<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStartAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />将在链中所有其他附加处理程序之后、主处理程序之前执行。<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientLogger.LogRequestStop(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan)" />和<see cref="M:Microsoft.Extensions.Http.Logging.IHttpClientAsyncLogger.LogRequestStopAsync(System.Object,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpResponseMessage,System.TimeSpan,System.Threading.CancellationToken)" />将在所有其他附加处理程序之前、主处理程序之后执行。
+            </para><para><typeparamref name="TLogger" />将从共享所构造的处理程序链的生命周期的作用域服务提供程序中解析。
+            </para><para>
+            如果多次调用<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Boolean)" />，则会添加多个记录器。如果在调用<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddLogger``1(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Boolean)" />之前未调用<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAllLoggers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" />，则会除默认记录器之外添加新的记录器。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAllLoggers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+            移除之前为命名 <see cref="T:System.Net.Http.HttpClient" /> 添加的所有记录器，包括默认记录器。
+            </summary><param name="builder">一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.AddDefaultLogger(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)"><summary>
+            如果之前通过调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.RemoveAllLoggers(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)" /> 移除了默认日志记录，则为指定的 <see cref="T:System.Net.Http.HttpClient" /> 添加回默认日志记录。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns></member><member name="T:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions"><summary>
+            为<see cref="T:System.Net.Http.IHttpClientFactory" />配置<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />的扩展方法。
+            </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+    将<see cref="T:System.Net.Http.IHttpClientFactory" />和相关服务添加到<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />中。
+    </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.ConfigureHttpClientDefaults(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.DependencyInjection.IHttpClientBuilder})"><summary>
+        添加一个委托，该委托将用于配置所有 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configure">用于配置 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> 的委托。</param><returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+    将<see cref="T:System.Net.Http.IHttpClientFactory" />和相关服务添加到<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置一个具名的<see cref="T:System.Net.Http.HttpClient" />。
+    </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的<see cref="T:System.Net.Http.HttpClient" />的逻辑名称。</param><returns>一个<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />，可用于配置客户端。</returns><remarks><para>
+    应用所提供的配置的<see cref="T:System.Net.Http.HttpClient" />实例可以使用<see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" />并通过提供匹配的名称来检索。
+    </para><para>
+    使用<see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />作为名称来配置默认客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})"><summary>
+  将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 及相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置一个命名的 <see cref="T:System.Net.Http.HttpClient" />。
+  </summary><param name="services">要添加到的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    应用所提供的配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例可以通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索。
+    </para><para>
+    使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置一个命名的 <see cref="T:System.Net.Http.HttpClient" />。
+            </summary><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。客户端名称
+            将设置为 <typeparamref name="TClient" /> 的类型名称。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为瞬态服务注册到服务集合中。
+            有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><param name="services">一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />，可用于配置客户端。</returns><remarks><para>
+            通过提供配置进行操作的 <see cref="T:System.Net.Http.HttpClient" /> 实例可以使用
+            <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称进行检索。
+            </para><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例
+            可以通过从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中提供
+            <typeparamref name="TClient" /> 作为服务类型进行检索。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。客户端名称将
+            设为 <typeparamref name="TClient" /> 的类型名称。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为
+            暂时服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。指定的类型将由
+            <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            可以通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            通过将 <typeparamref name="TClient" /> 作为服务类型提供，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索使用适当 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+            将<see cref="T:System.Net.Http.IHttpClientFactory" />和相关服务添加到<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />中，并配置
+            <typeparamref name="TClient" />类型与命名<see cref="T:System.Net.Http.HttpClient" />之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为临时服务。有关编写类型化客户端的更多详细信息，请参阅
+            <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的<see cref="T:System.Net.Http.HttpClient" />的逻辑名称。</param><returns>可用于配置客户端的<see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            可以使用<see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" />并提供匹配的名称来检索应用了所提供配置的
+            <see cref="T:System.Net.Http.HttpClient" />实例。
+            </para><para>
+            通过将<typeparamref name="TClient" />作为服务类型，可以从<see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中检索
+            使用相应<see cref="T:System.Net.Http.HttpClient" />构造的<typeparamref name="TClient" />实例。
+            </para><para>
+            使用<see cref="F:Microsoft.Extensions.Options.Options.DefaultName" />作为名称来配置默认客户端。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)"><summary>
+  将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置 <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+  </summary><typeparam name="TClient">
+  类型化客户端的类型。指定的类型将作为瞬态服务注册到服务集合中。有关编写类型化客户端的更多详细信息，请参见 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+  </typeparam><typeparam name="TImplementation">
+  类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+  </typeparam><param name="services">用于添加服务的 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    可以通过 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </para><para>
+    使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过将 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（以及相关方法）中获取。
+    </para><para>
+    使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.Net.Http.HttpClient})"><summary>
+    将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置 <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。客户端名称将被设置为 <typeparamref name="TClient" /> 的类型名称。
+    </summary><typeparam name="TClient">
+    类型化客户端的类型。指定的类型将在服务集合中注册为暂时性服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+    </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </para><para>
+    通过将 <typeparamref name="TClient" /> 作为服务类型提供，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索使用适当 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            添加 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置
+            一个绑定在 <typeparamref name="TClient" /> 类型和一个命名的 <see cref="T:System.Net.Http.HttpClient" /> 之间。客户端名称将
+            设置为 <typeparamref name="TClient" /> 的类型名称。
+            </summary><typeparam name="TClient">
+            类型化客户端（typed client）的类型。指定的类型将在服务集合中注册为
+            瞬时服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>一个可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            应用了提供的配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例可以通过使用
+            <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来获取。
+            </para><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构建的 <typeparamref name="TClient" /> 实例
+            可以通过提供 <typeparamref name="TClient" /> 作为服务类型，从 <see cref="M:System.IServiceProvider.GetService(System.Type)" /> （和相关方法）中获取。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.Net.Http.HttpClient})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。客户端名称将
+            设置为 <typeparamref name="TClient" /> 的类型名称。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为临时服务注册到服务集合中。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            应用所提供的配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并通过提供匹配的名称来检索。
+            </para><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过提供 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中检索。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。客户端名称将
+            设置为 <typeparamref name="TClient" /> 的类型名称。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为暂时性服务注册到服务集合中。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />，可用于配置客户端。</returns><remarks><para>
+            可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para><typeparamref name="TClient" /> 实例使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 进行构造，可以通过将 <typeparamref name="TClient" /> 作为服务类型，从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（以及相关方法）中检索。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})"><summary>
+    将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 及相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置 <typeparamref name="TClient" /> 类型与具名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+    </summary><typeparam name="TClient">
+    类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+    </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    可以通过 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </para><para>
+    通过提供 <typeparamref name="TClient" /> 作为服务类型，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索使用适当 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+    </para><para>
+    使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，
+            请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            可以通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的
+            <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            可以通过将 <typeparamref name="TClient" /> 作为服务类型，从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索使用相应
+            <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+            </para><para>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.Net.Http.HttpClient})"><summary>
+    将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 及相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置 <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+    </summary><typeparam name="TClient">
+    类型化客户端的类型。指定的类型将在服务集合中注册为暂时性服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+    </typeparam><typeparam name="TImplementation">
+    类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+    </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    可以通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </para><para>
+    通过提供 <typeparamref name="TClient" /> 作为服务类型，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）检索使用相应 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+    </para><para>
+    使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Action{System.IServiceProvider,System.Net.Http.HttpClient})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置 <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。指定的类型将由 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" /> 实例化。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="configureClient">用于配置 <see cref="T:System.Net.Http.HttpClient" /> 的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称，可以检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            通过将 <typeparamref name="TClient" /> 作为服务类型提供，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（以及相关方法）检索使用适当 <see cref="T:System.Net.Http.HttpClient" /> 构建的 <typeparamref name="TClient" /> 实例。
+            </para><para>
+            使用 <see cref="F:Microsoft.Extensions.Options.Options.DefaultName" /> 作为名称来配置默认客户端。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.Net.Http.HttpClient,``1})"><summary>
+    将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置 <typeparamref name="TClient" /> 类型和命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+    </summary><typeparam name="TClient">
+    类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+    </typeparam><typeparam name="TImplementation">
+    类型化客户端的实现类型。
+    </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="factory">用于创建 <typeparamref name="TClient" /> 实例的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+    可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+    </para><para>
+    通过提供 <typeparamref name="TClient" /> 作为服务类型，可以从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（以及相关方法）检索使用适当 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例。
+    </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Func{System.Net.Http.HttpClient,``1})"><summary>
+            添加 <see cref="T:System.Net.Http.IHttpClientFactory" /> 及相关服务到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置
+            <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </param><param name="name">
+            要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。
+            </param><param name="factory">
+            用于创建 <typeparamref name="TClient" /> 实例的委托。
+            </param><returns>
+            一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />，可用于配置客户端。
+            </returns><remarks><para>
+            可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            使用合适的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过提供 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中检索。
+            </para><typeparamref name="TImplementation"></typeparamref></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.Net.Http.HttpClient,System.IServiceProvider,``1})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中，并配置 <typeparamref name="TClient" /> 类型与命名的 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将作为瞬态服务注册到服务集合中。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。
+            </param><param name="factory">
+            用于创建 <typeparamref name="TClient" /> 实例的委托。
+            </param><returns>
+            一个 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />，可用于配置客户端。
+            </returns><remarks><para>
+            应用所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例可以通过使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索。
+            </para><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过将 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）获取。
+            </para></remarks></member><member name="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Func{System.Net.Http.HttpClient,System.IServiceProvider,``1})"><summary>
+            将 <see cref="T:System.Net.Http.IHttpClientFactory" /> 和相关服务添加到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />，并配置 <typeparamref name="TClient" /> 类型与命名 <see cref="T:System.Net.Http.HttpClient" /> 之间的绑定。
+            </summary><typeparam name="TClient">
+            类型化客户端的类型。指定的类型将在服务集合中注册为瞬态服务。有关编写类型化客户端的更多详细信息，请参阅 <see cref="T:Microsoft.Extensions.Http.ITypedHttpClientFactory`1" />。
+            </typeparam><typeparam name="TImplementation">
+            类型化客户端的实现类型。
+            </typeparam><param name="services"><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />。</param><param name="name">要配置的 <see cref="T:System.Net.Http.HttpClient" /> 的逻辑名称。</param><param name="factory">用于创建 <typeparamref name="TClient" /> 实例的委托。</param><returns>可用于配置客户端的 <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />。</returns><remarks><para>
+            可以使用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 并提供匹配的名称来检索应用了所提供配置的 <see cref="T:System.Net.Http.HttpClient" /> 实例。
+            </para><para>
+            使用适当的 <see cref="T:System.Net.Http.HttpClient" /> 构造的 <typeparamref name="TClient" /> 实例可以通过将 <typeparamref name="TClient" /> 作为服务类型从 <see cref="M:System.IServiceProvider.GetService(System.Type)" />（及相关方法）中检索。
+            </para></remarks></member><member name="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder"><summary>
+            一个用于配置由 <see cref="T:System.Net.Http.IHttpClientFactory" /> 返回的命名 <see cref="T:System.Net.Http.HttpClient" /> 实例的生成器。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder.Name"><summary>
+            获取由此生成器配置的客户端名称。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder.Services"><summary>
+            获取应用程序服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder"><summary>
+            为通过 <see cref="T:System.Net.Http.IHttpClientFactory" /> 返回的已命名 <see cref="T:System.Net.Http.HttpClient" /> 实例配置 <see cref="T:System.Net.Http.SocketsHttpHandler" />。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder.Name"><summary>
+            获取此生成器所配置的处理程序的客户端名称。
+            </summary></member><member name="P:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder.Services"><summary>
+            获取应用程序服务集合。
+            </summary></member><member name="T:Microsoft.Extensions.DependencyInjection.SocketsHttpHandlerBuilderExtensions"><summary>
+    为由 <see cref="T:System.Net.Http.IHttpClientFactory" /> 返回的命名 <see cref="T:System.Net.Http.HttpClient" /> 实例配置 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.DependencyInjection.SocketsHttpHandlerBuilderExtensions.Configure(Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder,System.Action{System.Net.Http.SocketsHttpHandler,System.IServiceProvider})"><summary>
+    添加一个委托，该委托将用于为命名的 <see cref="T:System.Net.Http.HttpClient" /> 配置主 <see cref="T:System.Net.Http.SocketsHttpHandler" />。
+    </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" />。</param><param name="configure">一个用于修改 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 的委托。</param><returns>一个可用于配置处理程序的 <see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" />。</returns></member><member name="M:Microsoft.Extensions.DependencyInjection.SocketsHttpHandlerBuilderExtensions.Configure(Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder,Microsoft.Extensions.Configuration.IConfiguration)"><summary>
+            使用 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> 为命名的 <see cref="T:System.Net.Http.HttpClient" /> 配置主 <see cref="T:System.Net.Http.SocketsHttpHandler" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" />。</param><param name="configuration">包含 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 属性的配置。</param><returns>可用于配置处理程序的 <see cref="T:Microsoft.Extensions.DependencyInjection.ISocketsHttpHandlerBuilder" />。</returns><remarks><para>
+            将仅解析 <see cref="T:System.Net.Http.SocketsHttpHandler" /> 的简单类型（如 `bool`、`int`、<see cref="T:System.Enum" /> 或 <see cref="T:System.TimeSpan" />）属性。
+            </para><para>
+            将忽略 <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> 中的所有不匹配属性。
+            </para></remarks></member><member name="M:Microsoft.Extensions.Internal.TypeNameHelper.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)"><summary>
+            美化打印类型名称。
+            </summary><param name="type">类型 <see cref="T:System.Type" />。</param><param name="fullName">如果为 <c>true</c>，则打印完全限定名称。</param><param name="includeGenericParameterNames">如果为 <c>true</c>，则包含泛型参数名称。</param><param name="includeGenericParameters">如果为 <c>true</c>，则包含泛型参数。</param><param name="nestedTypeDelimiter">在嵌套类型名称中用作分隔符的字符。</param><returns>经过美化打印的类型名称。</returns></member><member name="T:System.Net.Http.HttpClientFactoryExtensions"><summary><see cref="T:System.Net.Http.IHttpClientFactory" /> 的扩展方法。
+            </summary></member><member name="M:System.Net.Http.HttpClientFactoryExtensions.CreateClient(System.Net.Http.IHttpClientFactory)"><summary>
+            使用默认配置创建一个新的<see cref="T:System.Net.Http.HttpClient" />。
+            </summary><param name="factory"><see cref="T:System.Net.Http.IHttpClientFactory" />。</param><returns>一个使用默认配置配置的<see cref="T:System.Net.Http.HttpClient" />。</returns></member><member name="T:System.Net.Http.HttpMessageHandlerFactoryExtensions"><summary>
+            针对 <see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 的扩展方法。
+            </summary></member><member name="M:System.Net.Http.HttpMessageHandlerFactoryExtensions.CreateHandler(System.Net.Http.IHttpMessageHandlerFactory)"><summary>
+            使用默认配置创建一个新的<see cref="T:System.Net.Http.HttpMessageHandler" />。
+            </summary><param name="factory"><see cref="T:System.Net.Http.IHttpMessageHandlerFactory" />。
+            </param><returns>
+            一个使用默认配置的<see cref="T:System.Net.Http.HttpMessageHandler" />。
+            </returns></member><member name="T:System.Net.Http.IHttpClientFactory"><summary>
+            一个工厂抽象，用于创建具有给定逻辑名称的自定义配置的<see cref="T:System.Net.Http.HttpClient" />实例的组件。
+            </summary><remarks>
+            默认的<see cref="T:System.Net.Http.IHttpClientFactory" />可以通过调用<see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)" />在<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />中注册。
+            默认的<see cref="T:System.Net.Http.IHttpClientFactory" />将在服务集合中注册为单例。
+            </remarks></member><member name="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)"><summary>使用与 <paramref name="name" /> 指定的逻辑名称相对应的配置，创建并配置一个 <see cref="T:System.Net.Http.HttpClient" /> 实例。</summary><param name="name">要创建的客户端的逻辑名称。</param><returns>一个新的 <see cref="T:System.Net.Http.HttpClient" /> 实例。</returns><remarks><para>每次调用 <see cref="M:System.Net.Http.IHttpClientFactory.CreateClient(System.String)" /> 都保证返回一个新的 <see cref="T:System.Net.Http.HttpClient" /> 实例。通常不需要释放 <see cref="T:System.Net.Http.HttpClient" />，因为 <see cref="T:System.Net.Http.IHttpClientFactory" /> 会跟踪并释放由 <see cref="T:System.Net.Http.HttpClient" /> 使用的资源。</para><para>调用者还可以根据需要自由修改返回的 <see cref="T:System.Net.Http.HttpClient" /> 实例的公共属性。</para></remarks></member><member name="T:System.Net.Http.IHttpMessageHandlerFactory"><summary>
+    一个工厂抽象，组件可通过它为给定的逻辑名称创建具有自定义配置的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例。
+    </summary><remarks>
+    可以通过调用 <see cref="M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)" /> 将默认的 <see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 注册到 <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> 中。默认的 <see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 将在服务集合中作为单例注册。
+    </remarks></member><member name="M:System.Net.Http.IHttpMessageHandlerFactory.CreateHandler(System.String)"><summary>
+            使用与 <paramref name="name" /> 指定的逻辑名称对应的配置创建并配置一个 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例。
+            </summary><param name="name">要创建的消息处理程序的逻辑名称。</param><returns>一个新的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例。</returns><remarks><para>
+            默认的 <see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 实现可能会缓存底层的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 实例以提高性能。
+            </para><para>
+            默认的 <see cref="T:System.Net.Http.IHttpMessageHandlerFactory" /> 实现还管理所创建的处理程序的生命周期，因此释放此方法返回的 <see cref="T:System.Net.Http.HttpMessageHandler" /> 可能无效。
+            </para></remarks></member><member name="P:System.SR.HttpMessageHandlerBuilder_AdditionalHandlerIsNull"><summary>“{0}”不得包含空条目。</summary></member><member name="P:System.SR.HttpMessageHandlerBuilder_AdditionHandlerIsInvalid"><summary>属性“{0}”必须为 null。提供给“{2}”的“{1}”实例不得重复使用或缓存。{3}处理程序：“{4}”</summary></member><member name="P:System.SR.HttpMessageHandlerBuilder_PrimaryHandlerIsNull"><summary>“{0}”不能为 null。</summary></member><member name="P:System.SR.HandlerLifetime_InvalidValue"><summary>处理程序生存期必须至少为1秒。</summary></member><member name="P:System.SR.SocketsHttpHandlerBuilder_PrimaryHandlerIsInvalid"><summary>“{0}”必须为“{1”。{2}处理程序: “{3}”</summary></member><member name="P:System.SR.TypedClient_NoHttpClientCtor"><summary>无法找到类型 '{0}' 的合适构造函数。类型化客户端必须提供一个以 'System.Net.Http.HttpClient' 作为参数的构造函数。</summary></member></members>
+</doc>

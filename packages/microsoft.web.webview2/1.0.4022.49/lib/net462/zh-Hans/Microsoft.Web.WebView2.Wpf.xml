@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Web.WebView2.Wpf</name>
+    </assembly>
+    <members><member name="T:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties"><summary>
+            此类是一个捆绑了用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> 和 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 实例的最常用参数的类。
+            其主要目的是设置为 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" />，以便在隐式初始化期间自定义 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 使用的环境和/或控制器。
+            它也是一个方便的 WPF 集成工具，允许将常用的环境/控制器参数作为依赖属性，并在标记中创建和使用。
+            </summary><remarks>
+            此类并非旨在包含所有可能的环境或控制器自定义选项。
+            如果您需要完全控制 WebView2 控件使用的环境和/或控制器，则需要通过
+            创建自己的环境（使用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />）和/或控制器选项（使用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerOptions" />）并将它们传递给 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 来显式初始化控件。
+            *在* 您将 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" /> 属性设置为任何内容之前。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.#ctor"><summary>
+            使用所有属性的默认数据创建 <see cref="T:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties" /> 的新实例。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolderProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder" /> 属性的 WPF 依赖属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.BrowserExecutableFolder"><summary>获取或设置当使用此实例创建环境时，作为 browserExecutableFolder 参数传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> 的值。</summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolderProperty"><summary>
+            为 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder" /> 属性提供支持的 WPF 依赖项属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.UserDataFolder"><summary>
+            当使用此实例创建环境时，获取或设置要作为 userDataFolder 参数传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> 的值。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.LanguageProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language" /> 属性的 WPF 依赖属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.Language"><summary>
+            获取或设置一个值，该值用于 CoreWebView2EnvironmentOptions 参数的 Language 属性，该参数在使用此实例创建环境时传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AdditionalBrowserArgumentsProperty"><summary>支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AdditionalBrowserArguments" /> 属性的 WPF 依赖项属性。</summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AdditionalBrowserArguments"><summary>
+            获取或设置在使用此实例创建环境时，传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> 的 CoreWebView2EnvironmentOptions 参数的 AdditionalBrowserArguments 属性所使用的值。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AreBrowserExtensionsEnabledProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AreBrowserExtensionsEnabled" /> 属性的 WPF 依赖属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.AreBrowserExtensionsEnabled"><summary>
+            获取或设置一个值，该值用于在使用此实例创建环境时传递给<see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />的CoreWebView2EnvironmentOptions参数的AreBrowserExtensionsEnabled属性。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ProfileNameProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ProfileName" /> 属性的 WPF 依赖项属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ProfileName"><summary>
+            获取或设置当使用此实例创建控制器时传递给 CreateCoreWebView2ControllerWithOptionsAsync 的 CoreWebView2ControllerOptions 参数的 ProfileName 属性的值。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.IsInPrivateModeEnabledProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.IsInPrivateModeEnabled" /> 属性的 WPF 依赖属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.IsInPrivateModeEnabled"><summary>
+            获取或设置一个值，该值用于传递给 CreateCoreWebView2ControllerWithOptionsAsync 的 CoreWebView2ControllerOptions 参数的 IsInPrivateModeEnabled 属性，以便在使用此实例创建控制器时使用。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ScriptLocaleProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ScriptLocale" /> 属性的 WPF DependencyProperty。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.ScriptLocale"><summary>
+    获取或设置当使用此实例创建控制器时传递给 CreateCoreWebView2ControllerWithOptionsAsync 的 CoreWebView2ControllerOptions 参数的 ScriptLocale 属性所使用的值。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.CreateEnvironmentAsync"><summary>
+            使用此实例属性的当前值创建一个<see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />。
+            </summary><returns>一个任务，它将在完成时提供创建的环境，如果未设置与环境相关的选项，则返回 null。</returns><remarks>
+            只要此实例上的其他属性未更改，重复调用此方法将返回与早期调用相同的任务/环境。如果更改了某个其他属性，则下一次调用此方法将返回不同的任务/环境。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.CoreWebView2CreationProperties.CreateCoreWebView2ControllerOptions(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><summary>
+    使用此实例属性的当前值创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />。
+    </summary><returns>
+    返回一个 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" /> 对象，如果未设置任何与控制器相关的属性，则返回 null。
+    </returns><exception cref="T:System.NullReferenceException">
+    如果参数 environment 为 null，则引发该异常。
+    </exception></member><member name="T:Microsoft.Web.WebView2.Wpf.Direct3DHelper"><summary>
+    此类提供了在WebView2 WPF控件中使用Direct3D的辅助方法。它包括创建Direct3D9和Direct3D11设备、创建纹理、复制资源以及获取共享句柄等方法。这些方法用于GraphicsItemD3DImage类中，以与Direct3D对象和资源进行交互。
+    </summary><remarks>
+    该类包含用于从非托管代码调用Direct3D函数的PInvoke声明。它还定义了与Direct3D对象交互所需的几个COM接口和结构。注意：此类仅供WebView2 WPF控件内部使用，应用程序开发人员不应直接使用。
+    </remarks></member><member name="T:Microsoft.Web.WebView2.Wpf.GraphicsItemD3DImage"><summary>
+            此类是一个<see cref="T:System.Windows.Interop.D3DImage" />，用于捕获提供的<see cref="T:Windows.UI.Composition.ContainerVisual" />（WebView2视觉对象）的内容。
+            </summary></member><member name="T:Microsoft.Web.WebView2.Wpf.ImplicitInitGate"><summary>
+            跟踪阻止隐式初始化的条件以及是否已请求隐式初始化。
+            该类比是一组门，要么打开（允许隐式初始化），要么关闭（将需要等待）。
+            所有子门必须在隐式初始化进行之前打开。
+            如果在门打开时请求隐式初始化，则立即发生。
+            如果在门关闭时请求，则会在门打开时发生。
+            </summary><remarks>
+            将来扩展此类应该相当简单：
+            * 添加新的子门以进一步限制何时可以进行隐式初始化
+            * 支持在下次门打开时存储和调用多个操作，而不是仅一个操作
+            </remarks></member><member name="P:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.ISupportInitializeOpen"><summary>
+    跟踪关于<see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.BeginInit" />/<see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.EndInit" />的子门是打开还是关闭。
+    此子门仅在调用`BeginInit`之后并在等数量的`EndInit`调用之前关闭。
+    </summary><remarks>
+    我们不希望在这些调用之间发生隐式初始化，
+    因为隐式初始化是设置Source属性的副作用，
+    并且在此期间设置属性的副作用应该延迟到`EndInit`。
+    </remarks></member><member name="P:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.ISupportInitializeCount"><summary>
+            在没有调用 <see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.EndInit" /> 的情况下，调用 <see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.BeginInit" /> 的次数。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.SyncContextOpen"><summary>
+    跟踪一个有关 <see cref="P:System.Threading.SynchronizationContext.Current" /> 的子门是打开还是关闭。
+    如果 `SynchronizationContext.Current == null`，则此子门关闭。
+    </summary><remarks>
+    没有 `SynchronizationContext`，初始化将无法工作，因为否则 `await` 可能会在另一个线程上恢复。
+    据我所知，到目前为止，这仅发生在运行线程的事件循环开始之前。
+    一旦事件循环运行，`SynchronizationContext` 确保 `await` 在同一事件循环（即同一线程）中恢复。
+    虽然这是一个罕见的边缘情况，但可以在应用程序的事件循环开始之前创建带有 `WebView2` 的 `Window`。
+    此子门处理该边缘情况。
+    </remarks></member><member name="P:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.PendingInitAction"><summary>
+            一个操作，将在下次门打开时触发初始化（且仅一次）。
+            </summary><remarks>
+            这基本上跟踪在门关闭时是否已请求隐式初始化。如果此值非null，则它应该是一个调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 的委托。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.BeginInit"><summary>
+            关闭闸门，直到 <see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.EndInit" /> 被调用相同的次数。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.EndInit"><summary>
+            在相同次数的调用后，打开由 <see cref="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.BeginInit" /> 关闭的门。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.OnSynchronizationContextExists(System.Object,System.Windows.RoutedEventArgs)"><summary>
+        一个处理程序，应附加到指示 <see cref="P:System.Threading.SynchronizationContext.Current" /> 存在的事件上。
+        我现在知道的最佳事件是 <see cref="E:System.Windows.FrameworkElement.Loaded" />。
+        当调用该处理程序时，gate 将重新评估其状态，并可能允许任何挂起的初始化操作。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.RunWhenOpen(System.Action)"><summary>
+    在门打开时运行指定的操作。
+    </summary><remarks>
+    如果门当前是打开的，则立即运行该操作。
+    否则，操作将在下次发现门打开时运行。
+    该操作只运行一次；在门第二次/再次打开时不会再次运行。
+    如果门关闭并且已有另一个操作在等待，则新操作*覆盖*当前操作（即当前存储的操作将永远不会运行）。
+    要“忘记”当前存储的操作，请传递 `null`。
+    </remarks><param name="initAction">要在门打开时运行的操作，或为 null 以清除先前指定的操作。</param></member><member name="M:Microsoft.Web.WebView2.Wpf.ImplicitInitGate.OnDataChanged"><summary>
+            检查我们的整体打开/关闭状态，并在适当时运行任何待处理的操作。
+            </summary></member><member name="T:Microsoft.Web.WebView2.Wpf.IWebView2"><summary>
+            WebView2 WPF 控件的公共接口。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties"><summary>
+            获取或设置一个选项包，这些选项在控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 初始化期间使用。
+            在控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 初始化开始后，设置此属性将不起作用（将保留旧值）。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </summary><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2"><summary>
+            访问底层<see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> COM API的完整功能。
+            在初始化完成前返回<c>null</c>。
+            有关初始化概述，请参阅<see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" />类文档。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果调用线程不是创建此对象的线程（通常是 UI 线程），则会引发此异常。有关详细信息，请参阅<see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能会引发此异常。我们考虑将来为此情况抛出不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用了<see cref="M:System.IDisposable.Dispose" />，则会引发此异常。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.SourceChanged"><summary>
+            对 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" />的包装。
+            此事件与 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> 之间的唯一区别是传递给处理程序的第一个参数。
+            此事件的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，而 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> 的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 实例。
+            </summary><see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.NavigationStarting"><summary>
+            是 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> 的包装器。
+此事件与 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> 之间的唯一区别是传递给处理程序的第一个参数。
+此事件的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，而 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> 的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 实例。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.NavigationCompleted"><summary><see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> 的包装。
+            此事件与 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> 之间的唯一区别是传递给处理程序的第一个参数。
+            此事件的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，而 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> 的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 实例。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.ZoomFactorChanged"><summary>
+    当 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.ZoomFactor" /> 属性更改时引发此事件。
+    此事件直接公开 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" />。
+    </summary><seealso cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.ZoomFactor" /><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.ContentLoading"><summary>
+            围绕 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> 的包装器。
+            此事件与 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> 之间的唯一区别是传递给处理程序的第一个参数。
+            此事件的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，而 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> 的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 实例。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.WebMessageReceived"><summary>
+            一个围绕 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /> 的包装器。
+            此事件与 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /> 的唯一区别在于传递给处理程序的第一个参数。
+            此事件的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，而 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /> 的处理程序将接收 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 实例。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /></member><member name="E:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2InitializationCompleted"><summary>
+            此事件在以下情况下触发：
+            1）当控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 已完成初始化（无论初始化是如何触发的）但在用于任何操作之前，或者
+            2）如果初始化失败。
+            如果您需要对 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 执行一次性设置操作（例如添加事件处理程序、配置设置、安装文档创建脚本、添加主机对象），并且希望这些操作影响其所有用途，则应处理此事件。
+            有关初始化的概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </summary><remarks>
+            此发送者将是 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件，如果 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs.IsSuccess" /> 为 <c>true</c>，则其 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 属性现在将首次有效（即非 null）。
+            在此事件首次报告初始化成功后，不太可能再次触发，除非初始化之后进行的导航失败。
+            </remarks><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><summary>
+            显式触发控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 的初始化。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类的文档。
+            </summary><param name="environment">
+            一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />，应用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />。
+            创建自己的环境可以控制影响 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化的多个选项。
+            如果向此方法传递环境，它将覆盖 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 属性上指定的任何设置。
+            如果传递 <c>null</c>（默认值）且尚未设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 值，则将自动创建和使用默认环境。
+            </param><param name="controllerOptions">
+            一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />，应用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />。
+            创建自己的控制器选项可以控制影响 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化的多个选项。
+            如果向此方法传递 controllerOptions，它将覆盖 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 属性上指定的任何设置。
+            如果传递 <c>null</c>（默认值）且尚未设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 值，则将自动创建和使用默认的 controllerOptions。
+            </param><returns>
+            一个表示后台初始化过程的 Task。
+            任务完成时，<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 属性将可用（即非 null）。
+            请注意，控件的 <see cref="E:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2InitializationCompleted" /> 事件将在任务完成之前被调用。
+            </returns><remarks>
+            除非之前的初始化已经失败，否则使用相同参数多次调用此方法将不起作用（忽略任何指定的环境），并返回与第一次调用相同的 Task。
+            除非之前的初始化已经失败，否则在通过设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.Source" /> 属性隐式触发初始化后，如果未提供环境，调用此方法将不起作用，只是返回一个表示正在进行初始化的 Task，除非之前的初始化已经失败。
+            除非之前的初始化已经失败，否则在初始化开始后使用不同的环境调用此方法将导致 <see cref="T:System.ArgumentException" />。例如，如果你通过设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.Source" /> 属性开始初始化，然后使用新环境调用此方法；或者你通过 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 开始初始化，然后使用新环境调用此方法；或者你使用一个环境开始初始化，然后调用此方法且未指定环境，则可能发生这种情况。
+            当之前的初始化失败后调用此方法时，它将再次触发控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 初始化。
+            请注意，尽管此方法是异步的并返回 Task，但它必须像大多数 UI 控件的公共功能一样在 UI 线程上调用。
+            <para>
+            以下总结了可能的错误值以及这些错误发生的原因。
+            <list type="table"><listheader><description>错误值</description><description>说明</description></listheader><item><description><c>HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)</c></description><description>在 browserExecutableFolder 中使用了 *\\Edge\\Application* 路径。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_INVALID_STATE)</c></description><description>指定的选项与共享浏览器进程中当前正在运行的 WebView 的选项不匹配。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_INVALID_WINDOW_HANDLE)</c></description><description>由于宿主 HWND parentWindow 无效，WebView2 初始化失败。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_DISK_FULL)</c></description><description>由于达到已安装运行时版本的最大数量，WebView2 初始化失败。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_PRODUCT_UNINSTALLED</c></description><description>如果 WebView 依赖于已安装的 WebView2 Runtime 版本且该版本已被卸载。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)</c></description><description>找不到 Edge 安装。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_FILE_EXISTS)</c></description><description>无法创建用户数据文件夹，因为已存在同名文件。</description></item><item><description><c>E_ACCESSDENIED</c></description><description>无法创建用户数据文件夹，访问被拒绝。</description></item><item><description><c>E_FAIL</c></description><description>Edge 运行时无法启动。</description></item></list></para></remarks><exception cref="T:System.ArgumentException">
+            如果使用与初始化时不同的环境调用此方法，则抛出。有关更多信息，请参阅备注。
+            </exception><exception cref="T:System.InvalidOperationException">
+            如果调用线程不是创建此对象的线程（通常为 UI 线程），则抛出。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果 <see cref="P:System.Threading.SynchronizationContext.Current" /> 为 null（可能表示应用程序的事件循环尚未启动），也可能抛出。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能抛出。我们正在考虑将来为此情况抛出另一种类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用了 <see cref="M:System.IDisposable.Dispose" />，则抛出。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><summary>
+            显式触发控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 的初始化。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </summary><param name="environment">
+            一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />，应用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />。
+            创建自己的环境可以让你控制影响 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化的多个选项。
+            如果你向此方法传递一个环境，它将覆盖 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 属性上指定的任何设置。
+            如果你传递 <c>null</c> 且 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 没有设置值，则将自动创建并使用默认环境。
+            </param><returns>
+            一个表示后台初始化过程的 Task。
+            当该任务完成时，<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 属性将可供使用（即非 null）。
+            请注意，控件的 <see cref="E:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2InitializationCompleted" /> 事件将在该任务完成之前被调用。
+            </returns><remarks>
+            除非先前的初始化已失败，否则使用相同参数多次调用此方法将不起作用（任何指定的环境都将被忽略），并返回与第一次调用相同的 Task。
+            除非先前的初始化已失败，否则在通过设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.Source" /> 属性隐式触发初始化后调用此方法，如果未给出环境，将不起作用，并仅返回一个表示已在进行中的初始化的 Task，除非先前的初始化已失败。
+            除非先前的初始化已失败，否则在初始化开始后使用不同的环境调用此方法将导致 <see cref="T:System.ArgumentException" />。例如，如果你通过设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.Source" /> 属性开始初始化，然后使用新环境调用此方法；或者你通过 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" /> 开始初始化，然后使用新环境调用此方法；或者你使用一个环境开始初始化，然后调用此方法时未指定环境，都可能导致此情况。
+            当先前的初始化失败后调用此方法时，它将再次触发控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 的初始化。
+            请注意，即使此方法是异步的并返回 Task，它仍必须在 UI 线程上调用，就像大多数 UI 控件的大多数公共功能一样。
+            </remarks><exception cref="T:System.ArgumentException">
+            如果此方法使用的环境与初始化时不同，则引发此异常。有关更多信息，请参阅备注。
+            </exception><exception cref="T:System.InvalidOperationException">
+            如果调用线程不是创建此对象的线程（通常是 UI 线程），则引发此异常。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果 <see cref="P:System.Threading.SynchronizationContext.Current" /> 为 null，也可能引发此异常，这通常表示应用程序的事件循环尚未启动。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能引发此异常。对于这种情况，我们正在考虑将来抛出不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">
+            如果已对控件调用 <see cref="M:System.IDisposable.Dispose" />，则引发此异常。
+            </exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.BeginInit"><summary>
+            ISupportInitialize 模式的实现。防止控件隐式初始化其 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" />，直到调用 <see cref="M:Microsoft.Web.WebView2.Wpf.IWebView2.EndInit" />。不会*阻止* CoreWebView2 的显式初始化（即 <see cref="M:Microsoft.Web.WebView2.Wpf.IWebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />）。主要用于交互式 UI 设计器。
+            </summary><remarks>
+            注意，ISupportInitialize 中的 "Initialize" 以及 BeginInit/EndInit 中的 "Init" 的含义与此控件初始化其 CoreWebView2（显式或隐式）的具体概念有所不同，且更通用。此 ISupportInitialize 模式是一种在控件上批量设置属性初始值的通用方法，在所有值设置完毕（即调用 EndInit）之前不会触发任何依赖的副作用。对于此控件，需要避免的一个特定副作用是在设置 Source 属性时触发 CoreWebView2 的隐式初始化。例如，正常情况下，如果你在设置 Source 之后设置 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CreationProperties" />，则设置给 CreationProperties 的数据会被忽略，因为隐式初始化已经开始。但是，如果你在 BeginInit 和 EndInit 调用之间设置这两个属性（顺序相同），则 CoreWebView2 的隐式初始化将延迟到 EndInit 时，因此即使 CreationProperties 在 Source 之后设置，其数据也仍然会被使用。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.EndInit"><summary>
+            ISupportInitialize模式的实现。
+            自对应的<see cref="M:Microsoft.Web.WebView2.Wpf.IWebView2.BeginInit" />调用以来被延迟的所有功能。
+            主要用于交互式UI设计人员。
+            </summary><remarks>
+            有关更多信息，请参阅<see cref="M:Microsoft.Web.WebView2.Wpf.IWebView2.BeginInit" />的文档。
+            </remarks></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.Source"><summary>
+            WebView 当前正在显示（或一旦其 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 初始化完成后将显示）的顶级 <see cref="T:System.Uri" />。
+            一般来说，获取此属性等同于获取 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.Source" /> 属性，而设置此属性（为不同的值）等同于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Navigate(System.String)" /> 方法。
+            </summary><remarks>
+            在 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化完成之前获取此属性将检索上次设置的 Uri，如果没有设置过，则为 null（默认值）。
+            在 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化完成之前设置此属性将导致初始化在后台开始（如果尚未进行），之后 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 将导航到指定的 <see cref="T:System.Uri" />。
+            此属性永远不能设置回 null 或相对 <see cref="T:System.Uri" />。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </remarks><exception cref="T:System.ObjectDisposedException">如果已在控件上调用 <see cref="M:System.IDisposable.Dispose" />，则抛出。</exception><exception cref="T:System.NotImplementedException">如果属性设置为 <c>null</c>，则抛出。</exception><exception cref="T:System.ArgumentException">如果属性设置为相对 <see cref="T:System.Uri" />（即 <see cref="P:System.Uri.IsAbsoluteUri" /> 属性为 <c>false</c> 的 <see cref="T:System.Uri" />），则抛出。</exception><seealso cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.CanGoBack"><summary>
+            如果 WebView 可以导航到导航历史记录中的上一个页面，则返回 <c>true</c>。
+            包装 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2" /> 的 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" /> 属性。
+            如果 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 尚未初始化，则返回 <c>false</c>。
+            </summary><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" /></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.CanGoForward"><summary>
+            如果 WebView 可以导航到导航历史记录中的下一页，则返回 <c>true</c>。
+            此属性是对 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" /> 属性（属于 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" />）的包装。
+            如果 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 尚未初始化，则返回 <c>false</c>。
+            </summary><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" /></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.ZoomFactor"><summary>
+            WebView 的缩放因子。
+            此属性直接公开 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" />，有关详细信息，请参阅其文档。
+            如果在 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化之前获取此属性，将检索最后一次设置的值，如果没有设置过，则返回 <c>1.0</c>（默认值）。
+            在 CoreWebView2 初始化之前对此属性设置的最新值将在初始化后设置到该属性上。
+            </summary><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactor" /></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.DefaultBackgroundColor"><summary>
+            WebView的默认背景颜色。
+            此属性直接公开 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.DefaultBackgroundColor" />，有关更多信息，请参阅其文档。
+            在 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 初始化之前获取此属性将检索最后设置的值，如果没有设置，则返回 <c>Color.White</c>（默认值）。
+            在 CoreWebView2Controller 初始化之前设置到此属性的最新值将在初始化后设置到它上。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.DesignModeForegroundColor"><summary>
+            设计模式中使用的前景色。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.IWebView2.AllowExternalDrop"><summary>
+            WebView 的 AllowExternalDrop 属性。
+            此属性直接公开 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2Controller.AllowExternalDrop" />，有关更多信息，请参阅其文档。
+            在 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 初始化之前获取此属性将检索上次设置的值，如果没有设置过，则返回 <c>true</c>（默认值）。
+            在 CoreWebView2Controller 初始化之前设置到此属性的最新值将在初始化后设置到它上面。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.GoBack"><summary>
+            将WebView导航到导航历史中的上一页。
+            等效于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" />
+            如果 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 尚未初始化，则不执行任何操作。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果调用线程不是创建此对象的线程（通常是 UI 线程），则抛出。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能抛出。我们正在考虑将来为此情况抛出不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用了 <see cref="M:System.IDisposable.Dispose" />，则抛出。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.GoForward"><summary>
+            将WebView导航到导航历史记录中的下一页。等同于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" />。如果 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 尚未初始化，则不执行任何操作。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果调用线程不是创建此对象的线程（通常是UI线程），则会引发此异常。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。如果浏览器进程意外崩溃并使控件处于无效状态，也可能引发此异常。我们正在考虑将来为此情况抛出不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用 <see cref="M:System.IDisposable.Dispose" />，则会引发此异常。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.Reload"><summary>
+            重新加载当前页面。
+            等效于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" />。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 尚未初始化，或者调用线程不是创建此对象的线程（通常是 UI 线程），则抛出。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能抛出。我们正在考虑将来为此情况抛出不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已在控件上调用 <see cref="M:System.IDisposable.Dispose" />，则抛出。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.Stop"><summary>
+            停止所有导航和挂起的资源获取。
+            等效于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" />。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 尚未初始化，或调用线程不是创建此对象的线程（通常是 UI 线程），则会引发此异常。更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能引发此异常。我们正在考虑在未来为此情况引发不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用 <see cref="M:System.IDisposable.Dispose" />，则会引发此异常。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.NavigateToString(System.String)"><summary>
+            导航到作为新文档源HTML的htmlContent。等同于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" />。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果<see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" />尚未初始化，或者调用线程不是创建此对象的线程（通常是UI线程），则引发。有关详细信息，请参阅<see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。如果浏览器进程意外崩溃并使控件处于无效状态，也可能会引发。我们正在考虑将来为此情况引发不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已对控件调用了<see cref="M:System.IDisposable.Dispose" />，则引发。</exception><remarks><c>htmlContent</c>参数的总大小不能超过2 MB（2 * 1024 * 1024字节）。新页面的源为<c>about:blank</c>。</remarks><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.ExecuteScriptAsync(System.String)"><summary>
+            从WebView中呈现的当前顶级文档中的javaScript参数执行JavaScript代码。
+            等同于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" />。
+            </summary><exception cref="T:System.InvalidOperationException">
+            如果 <see cref="P:Microsoft.Web.WebView2.Wpf.IWebView2.CoreWebView2" /> 尚未初始化，或者调用线程不是创建此对象的线程（通常是UI线程），则引发。有关更多信息，请参阅 <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能引发。我们正在考虑将来为此情况引发不同类型的异常。
+            </exception><exception cref="T:System.ObjectDisposedException">如果已在控件上调用 <see cref="M:System.IDisposable.Dispose" />，则引发。</exception><seealso cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" /><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2.Focus"><summary>
+            尝试将焦点设置到WebView2控件。
+            等效于调用<see cref="M:System.Windows.UIElement.Focus" />。
+            如果键盘焦点和逻辑焦点都已设置到此元素，则返回<c>true</c>；
+            如果只有逻辑焦点设置到此元素，或者对此方法的调用未能强制更改焦点，则返回<c>false</c>。
+            </summary></member><member name="T:Microsoft.Web.WebView2.Wpf.IWebView2Private"><summary>
+    定义特定于WebView2 WPF控件的内部操作，分离无法在不同类型控件之间共享的特定于控件的逻辑。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2Private.InitializeController(System.IntPtr,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><summary>
+            使用特定于控件类型的操作初始化WebView2控制器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.IWebView2Private.UninitializeController"><summary>
+            取消注册特定于控件类型的控制器处理程序。
+            </summary></member><member name="T:Microsoft.Web.WebView2.Wpf.WebView2"><summary>
+             一个用于在 WPF 应用程序中嵌入 Web 内容的控件。
+             </summary><remarks>
+             此控件实质上是围绕 [WebView2 COM API](https://aka.ms/webview2) 的包装。您可以通过访问
+             <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 属性直接访问基础 ICoreWebView2 接口及其所有功能。一些最常见的 COM
+             功能也可以直接通过控件上的包装方法/属性/事件来访问。
+            
+             创建时，控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 属性将是
+             <c>null</c>。这是因为创建 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 是一项
+             昂贵的操作，涉及启动 Edge 浏览器进程等。有两种方法可以导致创建 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" />：
+             <list type="bullet"><item><description>
+             调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 方法。这被称为显式初始化。
+             </description></item><item><description>
+             设置 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" /> 属性（例如，可以通过标记完成）。这被称为隐式初始化。
+             两种方法都会在后台开始初始化，并立即返回给调用者，而不会等待完成。
+             要指定关于初始化过程的选项，可以将您自己的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> 传递给 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />，或者在初始化之前设置控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" /> 属性。
+             </description></item></list>
+            
+             当初始化完成时（无论它是如何触发的，也无论是否成功），将按顺序发生以下事情：
+             <list type="number"><item><description>
+             控件的 <see cref="E:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2InitializationCompleted" /> 事件
+             将被触发。如果您需要在使用 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 之前对其执行一次性设置操作，则应在该事件的处理程序中执行。
+             </description></item><item><description>
+             如果初始化成功并且已将 URI 设置到 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" /> 属性，则控件将开始在后台导航到该 URI（即，这些步骤将继续，而无需等待导航完成）。
+             </description></item><item><description>
+             从 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 返回的 Task 将完成。
+             </description></item></list>
+            
+             有关初始化过程中涉及的任何方法/属性/事件的更多详细信息，请参阅其特定文档。
+            
+             因为控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 是一个非常重量级的对象（可能负责多个正在运行的进程和数兆字节的磁盘空间），控件实现了 <see cref="T:System.IDisposable" /> 以提供显式的释放方式。
+             调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.Dispose(System.Boolean)" /> 将释放 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" />
+             及其底层资源（除了其他 WebView 也正在使用的任何资源），并将 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 重置为 <c>null</c>。调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.Dispose(System.Boolean)" /> 后，<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 无法重新初始化，任何尝试使用需要它的功能都将引发 <see cref="T:System.ObjectDisposedException" />。
+            
+             在控件内发生的加速键按键（例如 Ctrl+P）将触发标准按键事件，如 OnKeyDown。您可以通过将其 EventArgs 的 Handled 属性设置为 true 来抑制控件对加速键按键的默认实现（例如，Ctrl+P 情况下的打印）。另请注意，在执行这些处理程序时，底层浏览器进程会被阻塞，因此：
+             <list type="number"><item><description>您应避免在这些处理程序中执行大量工作。</description></item><item><description>
+             由于无法与浏览器进程通信，如果在此类处理程序中调用某些 WebView2 和 CoreWebView2 API，可能会引发错误。
+             </description></item></list>
+             如果您需要执行大量工作并/或响应加速键调用 WebView2 API，则考虑启动后台任务或将工作排队以便稍后在 UI 线程上执行。
+            
+             请注意，此控件扩展了 <see cref="T:System.Windows.Interop.HwndHost" /> 以便嵌入存在于 WPF 生态系统之外的窗口。这对控件的输入和输出行为以及它从 <see cref="T:System.Windows.UIElement" /> 和 <see cref="T:System.Windows.FrameworkElement" /> “继承”的功能有一些影响。
+             有关更多信息，请参阅 <see cref="T:System.Windows.Interop.HwndHost" /> 和 [WPF/Win32 互操作](/dotnet/framework/wpf/advanced/wpf-and-win32-interoperation#hwnds-inside-wpf) 文档。
+             </remarks><seealso cref="T:System.Windows.Interop.HwndHost" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.#ctor"><summary>
+            创建一个 WebView2 控件的新实例。
+            请注意，在初始化之前，控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" /> 将为 null。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 类文档。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.CreationPropertiesProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary><seealso cref="T:System.Windows.DependencyProperty" /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.BuildWindowCore(System.Runtime.InteropServices.HandleRef)"><summary>
+            这是从 <see cref="T:System.Windows.Interop.HwndHost" /> 重写的，被调用来指示我们创建自己的 HWND。
+            </summary><param name="hwndParent">我们应该用作我们创建的窗口的父窗口的 HWND。</param><returns>我们创建的 HWND。</returns><seealso cref="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)"><summary>
+    此方法重写自 <see cref="T:System.Windows.Interop.HwndHost" />，并被调用以指示我们销毁我们的HWND。
+    </summary><param name="hwnd">我们需要销毁的HWND。</param><seealso cref="M:System.Windows.Interop.HwndHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)"><summary>
+    这是从<see cref="T:System.Windows.Interop.HwndHost" />重写的方法，用于向我们提供发送到我们hwnd的Win32消息。
+    </summary><param name="hwnd">接收消息的窗口（应始终与我们的<see cref="P:System.Windows.Interop.HwndHost.Handle" />匹配）。</param><param name="msg">指示正在接收的消息。有关WM_*常量的值，请参阅Win32文档。</param><param name="wParam">随消息提供的“wParam”数据。其含义因消息而异。</param><param name="lParam">随消息提供的“lParam”数据。其含义因消息而异。</param><param name="handled">如果为true，则该消息将不会转发给任何（更多）<see cref="E:System.Windows.Interop.HwndHost.MessageHook" />处理程序。</param><returns>返回值因消息而异。</returns><seealso cref="M:System.Windows.Interop.HwndHost.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnGotFocus(System.Windows.RoutedEventArgs)"><summary>
+            我们重写 <see cref="M:System.Windows.UIElement.OnGotFocus(System.Windows.RoutedEventArgs)" /> 以防止焦点事件传播。
+            我们期望来自 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_GotFocus(System.Object,System.Object)" /> 引发的事件。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnLostFocus(System.Windows.RoutedEventArgs)"><summary>
+    我们重写 <see cref="M:System.Windows.UIElement.OnLostFocus(System.Windows.RoutedEventArgs)" /> 以防止焦点事件传播。
+    我们期望由 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_LostFocus(System.Object,System.Object)" /> 引发的事件。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            绘制时的重写
+            </summary><param name="dc">通过<see cref="T:System.Windows.Media.DrawingContext" />处理绘制的工具。</param></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2InitializationCompleted"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.Microsoft#Web#WebView2#Wpf#IWebView2Private#InitializeController(System.IntPtr,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.Microsoft#Web#WebView2#Wpf#IWebView2Private#UninitializeController"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.Dispose(System.Boolean)"><summary>
+            根据典型的 <see cref="T:System.IDisposable" /> 模式实现，由基类调用此方法。
+            我们通过释放所有底层 COM 资源（包括 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" />）来实现。
+            </summary><param name="disposing">如果调用者显式调用 Dispose，则为 true；如果对象正在被终结，则为 false。</param></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.BeginInit"><summary>
+    ISupportInitialize 模式的实现。
+    阻止控件隐式初始化其 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CoreWebView2" />，直到调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EndInit" />。
+    不*阻止* CoreWebView2 的显式初始化（即 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />）。
+    主要供交互式 UI 设计器使用。
+    </summary><remarks>
+    请注意，ISupportInitialize 中的“Initialize”以及 BeginInit/EndInit 中的“Init”的含义与此控件初始化其 CoreWebView2（显式或隐式）的特定概念不同，并且更为通用。
+    此 ISupportInitialize 模式是一种通用方法，用于在控件上批量设置属性为其初始值，而不会触发任何相关的副作用，直到所有值都设置完毕（即直到调用 EndInit）。
+    对于此控件，要避免的一个特定副作用是在设置 Source 属性时触发 CoreWebView2 的隐式初始化。
+    例如，通常如果你在设置 Source 之后设置 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CreationProperties" />，则设置到 CreationProperties 的数据会被忽略，因为隐式初始化已经开始。
+    但是，如果你在 BeginInit 和 EndInit 调用之间设置这两个属性（以相同顺序），则 CoreWebView2 的隐式初始化会延迟到 EndInit，所以即使 CreationProperties 设置在 Source 之后，设置到 CreationProperties 的数据仍然会被使用。
+    </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.EndInit"><summary>
+            ISupportInitialize 模式的实现。
+            调用自对 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.BeginInit" /> 的相应调用以来延迟的任何功能。
+            主要用于交互式 UI 设计器。
+            </summary><remarks>
+            有关更多信息，请参阅 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.BeginInit" /> 的文档。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.ReparentController(System.IntPtr,System.Boolean)"><summary>
+            将控制器的 ParentWindow 更改为给定的 HWND，同时执行任何其他必要的关联工作。
+            </summary><param name="hwnd">要设置为控制器父级的新 HWND。IntPtr.Zero 表示控制器将没有父级，并且 CoreWebView2 将被隐藏。</param><param name="sync">是否根据需要调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.SyncControllerWithParentWindow" />。默认为 true。如果传递 false，则应在需要时自行调用它。</param><remarks>
+            重新设置控制器的父级并不像更改其 ParentWindow 属性那么简单，此方法的存在是为了确保同时完成任何其他需要完成的工作。
+            SyncControllerWithParentWindow 没有直接集成到此方法中的原因是，有时我们希望在不重新设置父级的情况下调用同步功能（例如在初始化期间）。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.SyncControllerWithParentWindow"><summary>
+    同步控制器与其父 HWND 之间的视觉/窗口信息。每当新的非 null HWND 被设置为控制器的父窗口时（包括首次创建控制器时），都应调用此方法。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnWindowPositionChanged(System.Windows.Rect)"><summary>
+            此方法重写自 <see cref="T:System.Windows.Interop.HwndHost" />，并在控件位置发生变化时调用。
+            HwndHost 负责更新我们创建的 HWND。
+            我们需要做的是移动我们的 CoreWebView2 以匹配新的位置。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.SourceProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.Source" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.Source"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.SourceChanged"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.NavigationStarting"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.NavigationCompleted"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.CanGoBackProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoBack" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoBack"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.CanGoForwardProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoForward" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.CanGoForward"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.TabIntoCore(System.Windows.Input.TraversalRequest)"><summary>
+            此方法是从<see cref="T:System.Windows.Interop.HwndHost" />重写的，用于通知我们因 Tab 键切换导致焦点移入我们的控件/窗口。
+由于 WPF 无法管理焦点向非 WPF HWND 的转换，它将转换委托给我们处理。
+因此，我们的工作只需将焦点放置到我们的外部 HWND 中。
+            </summary><param name="request">关于焦点移动方式的信息。</param><returns><c>true</c> 表示我们处理了导航，<c>false</c> 表示我们没有处理导航</returns></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyDown(System.Windows.Input.KeyEventArgs)"><summary>
+此方法重写自<see cref="T:System.Windows.UIElement" />，并用于处理按键输入。
+WPF实际上不应通过键盘事件调用此方法，因为我们承载的是一个非WPF窗口。
+当我们的窗口获得焦点时，Windows会直接将输入发送给它，而不是发送到WPF的顶级窗口和输入系统。
+只有当我们显式地将加速键输入从CoreWebView2转发到WPF时（在CoreWebView2Controller_AcceleratorKeyPressed中），才应调用此重写。
+即使在这种情况下，KeyDownEvent之所以被触发，也是因为我们的PreviewKeyDownEvent实现显式地触发了它，这与WPF的常用机制一致。
+过程如下：
+<list type="number"><item><description>CoreWebView2Controller_AcceleratorKeyPressed</description></item><item><description>PreviewKeyDownEvent</description></item><item><description>KeyDownEvent</description></item><item><description>OnKeyDown</description></item></list>
+。
+</summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyUp(System.Windows.Input.KeyEventArgs)"><summary>
+            请参阅 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyDown(System.Windows.Input.KeyEventArgs)" />。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)"><summary>
+            这是 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> 的“预览”（即隧道）版本，因此它实际上先发生。
+            与 OnKeyDown 类似，只有当我们明确地从 CoreWebView2 转发按键时，才会调用此方法。
+            为了模拟 WPF 的标准输入处理，当我们收到此事件时，我们会转而触发标准冒泡 KeyDownEvent。
+            这样，WPF 树中的其他元素会看到与 WPF 本身处理按键时触发的同一对标准输入事件。
+            </summary><seealso cref="M:Microsoft.Web.WebView2.Wpf.WebView2.OnKeyDown(System.Windows.Input.KeyEventArgs)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)"><summary>
+  参见<see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />。
+  </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.ZoomFactorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.ZoomFactor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.ZoomFactor"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.ZoomFactorChanged"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.DefaultBackgroundColorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.DefaultBackgroundColor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.DefaultBackgroundColor"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.AllowExternalDropProperty"><summary>
+            支持 <see cref="F:Microsoft.Web.WebView2.Wpf.WebView2.AllowExternalDropProperty" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.AllowExternalDrop"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2.DesignModeForegroundColorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2.DesignModeForegroundColor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.DesignModeForegroundColor"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.GoBack"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.GoForward"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.Reload"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.Stop"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.NavigateToString(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.ContentLoading"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2.ExecuteScriptAsync(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2.WebMessageReceived"><inheritdoc /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2.IsInDesignMode"><summary>
+            当我们在设计模式且不应创建基础 CoreWebView2 时为 True。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.CreationPropertiesProperty"><summary>
+            该 WPF <see cref="T:System.Windows.DependencyProperty" /> 作为 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CreationProperties" /> 属性的后备存储。
+            </summary><seealso cref="T:System.Windows.DependencyProperty" /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CreationProperties"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            设计模式绘制内容。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2InitializationCompleted"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_ProcessFailed(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs)"><summary>
+            这是我们 CoreWebView2 的 ProcessFailedEvent 事件的事件处理程序。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base._implicitInitGate"><summary>
+        这是一个“门”，它控制是否可以进行隐式初始化。
+        如果在门关闭时触发了隐式初始化，
+        则应将初始化延迟到门打开。
+        当我们想要触发隐式初始化时，我们通过这个门路由调用。
+        如果门打开，则初始化将继续。
+        如果门关闭，它将记住在门打开时触发初始化。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.BeginInit"><summary>
+            ISupportInitialize模式的实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.EndInit"><summary>
+            ISupportInitialize 模式的实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.SetCurrentValueFromCore(System.Windows.DependencyProperty,System.Object)"><summary>
+更新我们的一个依赖项属性，以匹配来自<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2" />的新值。
+它既设置值，又记住（在_propertyChangingFromCore中）该值来自CoreWebView2而不是调用者，
+允许属性的“on changed”处理程序根据新值的来源改变其行为。
+它仅旨在在通知我们新属性值的CoreWebView2事件处理程序中调用。
+它本质上只是继承的SetCurrentValue的包装器，它还维护了_propertyChangingFromCore。
+有关更多背景信息，请参阅<see cref="F:Microsoft.Web.WebView2.Wpf.WebView2Base._propertyChangingFromCore" />上的注释。
+还有一点值得明确说明的是，它包装的是SetCurrentValue而不是SetValue，
+以避免覆盖指定属性上设置的所有OneWay绑定。
+请查看链接https://stackoverflow.com/q/4230698以获取有关SetValue和SetCurrentValue之间差异的更多信息。
+    </summary><param name="property">由于CoreWebView2中等效更改而要更改的属性。</param><param name="value">来自CoreWebView2的新值。</param></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.IsPropertyChangingFromCore(System.Windows.DependencyProperty)"><summary>
+            检查给定属性当前是否正在更新以匹配 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2" /> 中的等效更改。
+            此方法只能在属性的“on changed”处理程序中调用；在其他任何时候调用都没有意义。
+            它用于确定属性是正在更改以匹配 CoreWebView2，还是因为调用方设置了它。
+            通常这用于决定是否需要将新值向下传播到 CoreWebView2。
+            有关更多背景信息，请参阅 <see cref="F:Microsoft.Web.WebView2.Wpf.WebView2Base._propertyChangingFromCore" /> 上的注释。
+            </summary><param name="property">要检查的属性。</param><returns>如果该属性正在更改以匹配 CoreWebView2，则为 True；如果该属性由调用方更改，则为 False。</returns></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.UIElement_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            这是我们基础 UIElement 的 IsVisibleChanged 事件的处理程序。
+            当 IsVisible 更改时，它会按预期触发，并且 IsVisible 反映了控件的实际当前可见性状态。
+            我们只需将此信息传递给我们的 CoreWebView2Controller，以便在控件不可见时节省一些工作。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.SourceProperty"><summary>
+            该 WPF <see cref="T:System.Windows.DependencyProperty" /> 支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.Source" /> 属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.Source"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.SourcePropertyValid(System.Object)"><summary>
+    这是 WPF 调用的回调，用于验证潜在的新 Source 值。
+    </summary><returns>
+    如果值有效则为 true，否则为 false。
+    如果我们返回 false，则 WPF 应通过引发 <see cref="T:System.ArgumentException" /> 来响应。
+    </returns><remarks>
+    注意，遗憾的是我们不能在此处将 null 视为无效，因为在初始化之前 null 是有效的。
+    </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.SourcePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            这是当 WPF 的 Source 属性值发生更改时 WPF 调用的回调。
+            这可能是由以下任一方式触发的：
+            1) 调用方设置 Source 以编程方式触发导航。
+            2) CoreWebView 更改了其自身的源，而我们只是更新依赖属性以匹配。
+            我们使用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.IsPropertyChangingFromCore(System.Windows.DependencyProperty)" /> 来区分这两种情况。
+            </summary></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.SourceChanged"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_SourceChanged(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs)"><summary>
+            这是我们的 CoreWebView2 的 SourceChanged 事件的事件处理程序。
+            不出所料，当 CoreWebView2 的源 URI 被更改时，它会触发。
+            请注意，这有两种不同的触发条件：
+            1) CoreWebView2 被指示以编程方式导航（可能由我们指示，请参阅 SourcePropertyChanged）。
+            2) 用户与 CoreWebView2 进行了交互，例如点击了一个链接。
+            在上述任何一种情况下，此事件可能会由于例如重定向而触发多次。
+            除了传播到我们自己的事件之外，我们只需要更新我们的 WPF Source 属性以匹配 CoreWebView2 的 Source 属性。
+            </summary></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.NavigationStarting"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_NavigationStarting(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs)"><summary>
+    这是我们的CoreWebView2的NavigationStarting事件的事件处理程序。我们只需要将事件传播到WPF。
+    </summary></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.NavigationCompleted"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_NavigationCompleted(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs)"><summary>
+            这是我们CoreWebView2的NavigationCompleted事件的事件处理程序。
+            我们只需将该事件传播到WPF。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_HistoryChanged(System.Object,System.Object)"><summary>
+    这是我们的 CoreWebView2 的 HistoryChanged 事件的事件处理程序。
+    我们处理它是为了更新我们的 WPF 的 CanGoBack 和 CanGoForward 属性。
+    </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoBackProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoBack" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoBack"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoForwardProperty"><summary>
+    支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoForward" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+    </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.CanGoForward"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_MoveFocusRequested(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs)"><summary>
+            这是我们的 CoreWebView2Controller 的 MoveFocusRequested 事件的事件处理程序。
+            当 CoreWebView2Controller 拥有焦点但希望将焦点移动到应用中的其他位置时，会触发此事件。
+            例如，当用户使用 Tab 键移过 CoreWebView2 中的最后一个项目，焦点需要返回到其他应用程序控件时，就会发生这种情况。
+            因此，我们的工作只是告诉 WPF 将焦点移到下一个控件上。
+            请注意，我们没有将此事件作为标准的 WPF 路由事件向外传播，因为我们已经在此实现了它的目的。
+            如果控件的用户希望跟踪焦点移入/移出控件的情况，他们应该使用标准的 WPF 事件。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_GotFocus(System.Object,System.Object)"><summary>
+    这是我们 CoreWebView2Controller 的 GotFocus 事件的事件处理程序。
+    我们只需要将事件传播到 WPF。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_LostFocus(System.Object,System.Object)"><summary>
+    这是我们的 CoreWebView2Controller 的 LostFocus 事件的处理程序。
+    我们只需要将该事件传播到 WPF。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_AcceleratorKeyPressed(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs)"><summary>
+            这是我们的 CoreWebView2Controller 的 AcceleratorKeyPressed 事件的事件处理程序。
+            此方法用于通知我们可能具有特殊行为的按键（例如 Esc、回车、功能键、带修饰键的字母）。
+            WPF 无法检测到此输入，因为 Windows 直接将其发送到 Win32 CoreWebView2Controller 控件。
+            我们通过生成标准 WPF 键输入事件来实现此功能，允许调用者如果需要，可以像通常的 WPF 方式一样处理输入。
+            如果没有处理 WPF 键事件，那么我们将允许默认的 CoreWebView2Controller 逻辑（如果有）来处理它。
+            在可能的选项中，此实现应为调用者提供最大的灵活性。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.ZoomFactorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.ZoomFactor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" /> 依赖项属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.ZoomFactor"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoerceZoomFactorPropertyChanged(System.Windows.DependencyObject,System.Object)"><summary>
+    这是一个WPF在我们的WPF ZoomFactor属性值更改时调用的回调。
+    这可能是由以下任一原因触发：
+    1) 调用者设置ZoomFactor以更改CoreWebView2的缩放。
+    2) CoreWebView2更改了自己的ZoomFactor，而我们只是更新依赖属性以匹配。
+    我们使用<see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.IsPropertyChangingFromCore(System.Windows.DependencyProperty)" />来区分这两种情况。
+    </summary></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.ZoomFactorChanged"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_ZoomFactorChanged(System.Object,System.Object)"><summary>
+            这是我们 CoreWebView2Controller 的 ZoomFactorChanged 事件的事件处理程序。
+            毫无疑问，当 CoreWebView2Controller 的 ZoomFactor 发生更改时，它将触发。
+            请注意，有两种不同的触发器：
+            1) 值以编程方式更改（可能由我们更改，请参见 ZoomFactorPropertyChanged）。
+            2) 用户与 CoreWebView2 交互，例如 CTRL + 鼠标滚轮。
+            除了传播到我们自己的事件之外，我们只需要更新 WPF ZoomFactor 属性以匹配 CoreWebView2Controller 的 ZoomFactor。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.DefaultBackgroundColorProperty"><summary>
+            支持<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.DefaultBackgroundColor" />属性的WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.DefaultBackgroundColor"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.DefaultBackgroundColorPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            当WPF的DefaultBackgroundColor属性值更改时，WPF将调用此回调。
+            由于CoreWebView2Controller本身不会更新此属性，仅当调用方设置DefaultBackgroundColor时才会触发。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.AllowExternalDropProperty"><summary>
+            作为 <see cref="F:Microsoft.Web.WebView2.Wpf.WebView2Base.AllowExternalDropProperty" /> 属性后盾的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.AllowExternalDrop"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.AllowExternalDropPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            这是当我们的WPF AllowExternalDrop属性的值发生变化时，WPF调用的回调。
+            由于CoreWebView2Controller本身不更新此属性，因此仅当调用方设置AllowExternalDrop时才会触发此事件。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2Base.DesignModeForegroundColorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2Base.DesignModeForegroundColor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2Base.DesignModeForegroundColor"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.GoBack"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.GoForward"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.Reload"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.Stop"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.NavigateToString(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.ContentLoading"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_ContentLoading(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs)"><summary>
+            这是我们CoreWebView2的ContentLoading事件的事件处理程序。
+我们只需要将该事件传播到WPF。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.ExecuteScriptAsync(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2Base.WebMessageReceived"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2_WebMessageReceived(System.Object,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs)"><summary>这是CoreWebView2的WebMessageReceived事件的事件处理程序。我们只需要将此事件传播到WPF。</summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.TabInto(System.Windows.Input.TraversalRequest)"><summary>
+            根据 <seealso cref="T:System.Windows.Input.TraversalRequest" /> 将焦点移动到 CoreWebView2Controller。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.OnGotKeyboardFocus(System.Object,System.Windows.Input.KeyboardFocusChangedEventArgs)"><summary>
+            这是 <see cref="E:System.Windows.UIElement.GotKeyboardFocus" /> 事件的事件处理程序。当接收到键盘焦点时，它会通知我们。我们通过将键盘焦点传递给底层的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 来处理。我们绝不想进入控件实际拥有键盘焦点的状态。
+            </summary><param name="sender">接收键盘焦点的控件。</param><param name="e">来自底层 GotKeyboardFocus 事件的参数。</param><remarks>
+            对于 WebView2 控件，我们实际上有可能在不调用此方法的情况下接收键盘焦点。一种已知情况是当拥有焦点的父窗口被停用，然后重新激活时。我们在 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)" /> 中处理这种情况。
+            </remarks><seealso cref="M:Microsoft.Web.WebView2.Wpf.WebView2.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.Focus"><summary>
+            实现<see cref="M:System.Windows.UIElement.Focus" />模式。
+            开发人员不应在此处访问WebView2Base类。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2Base.Dispose"><summary><see cref="T:System.IDisposable" /> 模式的实现。
+            应仅在 m_element 的 Dispose() 期间调用。
+            当调用此方法时，表示所有与控制相关的资源都已释放，并且我们可以安全地将该控件从字典中移除。
+            </summary></member><member name="T:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl"><summary>
+             WebView2 控件的可视化托管版本。
+             </summary><remarks>
+             此控件实际上是
+             <see href="https://aka.ms/webview2">WebView2 COM API</see> 的包装。您可以通过访问
+             <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 属性直接访问底层
+             ICoreWebView2 接口及其所有功能。一些最常见的 COM
+             功能也可以通过控件上的包装方法/属性/事件直接访问。
+            
+             创建时，控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 属性将为
+             <c>null</c>。这是因为创建 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 是一项
+             昂贵的操作，涉及诸如启动 Edge 浏览器进程之类的事情。有两种方法可以导致 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 被创建：
+             <list type="bullet"><item><description>
+             调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 方法。这被称为显式初始化。
+             </description></item><item><description>
+             设置 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Source" /> 属性（例如，可以从标记中完成）。这被称为隐式初始化。
+             两种选项都将在后台启动初始化并立即返回调用方，无需等待完成。
+             要指定初始化过程的选项，您可以将自己的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> 传递给 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />，或者在初始化之前设置控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CreationProperties" /> 属性。
+             </description></item></list>
+            
+             当初始化完成时（无论它是如何触发的，或者是否成功），将按以下顺序发生以下事情：
+             <list type="number"><item><description>
+             将调用控件的 <see cref="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2InitializationCompleted" /> 事件。如果您需要在使用 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 之前对其执行一次性设置操作，则应在该事件的处理程序中执行。
+             </description></item><item><description>
+             如果初始化成功并且已将 Uri 设置到 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Source" /> 属性，则控件将在后台开始导航到该 Uri（即这些步骤将继续进行，无需等待导航完成）。
+             </description></item><item><description>
+             从 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 返回的 Task 将完成。
+             </description></item></list>
+            
+             有关初始化过程中涉及的任何方法/属性/事件的更多详细信息，请参阅其特定文档。
+            
+             由于控件的 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 是一个非常重量级的对象（可能负责多个正在运行的进程和数兆字节的磁盘空间），因此该控件实现了 <see cref="T:System.IDisposable" />，以提供一种显式的释放方法。
+             调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Dispose" /> 将释放 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" />
+             及其底层资源（除非也正在被其他 WebView 使用的资源），并将 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 重置为 <c>null</c>。在调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Dispose" /> 之后，<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" /> 无法重新初始化，任何需要使用它的功能的尝试都将引发 <see cref="T:System.ObjectDisposedException" />。
+            
+             在控件内发生的快捷键按键（例如 Ctrl+P）将触发标准的按键事件，如 OnKeyDown。您可以通过将其 EventArgs 的 Handled 属性设置为 true 来抑制控件的快捷键按键默认实现（例如在 Ctrl+P 的情况下是打印）。还需注意，在这些处理程序执行时，底层浏览器进程会被阻塞，因此：
+             <list type="number"><item><description>您应避免在这些处理程序中执行大量工作。</description></item><item><description>
+             如果在此类处理程序中调用某些 WebView2 和 CoreWebView2 API，可能会因无法与浏览器进程通信而引发错误。
+             </description></item></list>
+             如果您需要执行大量工作且/或在响应快捷键时调用 WebView2 API，请考虑启动后台任务或将工作排队以便稍后在 UI 线程上执行。
+            
+             此控件扩展了 <see cref="T:System.Windows.Controls.Control" />，以便使用模板托管显示 WebView 内容的图像。这对控件的输入和输出行为以及它从 <see cref="T:System.Windows.UIElement" /> 和 <see cref="T:System.Windows.FrameworkElement" />“继承”的功能有一些影响。
+            
+             <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl" /> 的内容由 <see cref="T:System.Windows.Controls.Image" /> 呈现。
+             默认情况下，WebView2CompositionControl 的 <see cref="P:System.Windows.FrameworkElement.UseLayoutRounding" /> 设置为 true。这可以防止 <see cref="T:System.Windows.Controls.Image" /> 在特定尺寸下变得模糊，但会禁用抗锯齿。如果要保留抗锯齿，请将其设置为 false。
+            
+             请注意，<see cref="T:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl" /> 使用 [GraphicsCaptureSession](/uwp/api/windows.graphics.capture.graphicscapturesession) 从底层浏览器进程捕获屏幕内容。因此，与标准 <see cref="T:Microsoft.Web.WebView2.Wpf.WebView2" /> 控件相比，您可能会体验到较低的帧速率，并且受 DRM 保护的内容将无法正常播放或显示。
+            
+             </remarks><seealso cref="T:System.Windows.Controls.Control" /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.PartImageName"><summary>
+            用于表示 WebView2 的图像的 TemplatePart 名称常量。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl._image"><summary>
+        图像控件用于显示WebView2的内容。
+    </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl._d3dImage"><summary>
+            用于从 WebView 视觉中捕获并作为图像源的组件。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnApplyTemplate"><summary><see cref="M:System.Windows.FrameworkElement.OnApplyTemplate" /> 接口。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.#cctor"><summary>
+    WebView2CompositionControl 类的静态构造函数。
+    </summary><remarks>
+    此静态构造函数负责覆盖 WebView2CompositionControl 类实例的默认样式键属性。
+    它使用 WebView2CompositionControl 类型作为默认样式键来设置元数据。
+    请参阅 href="https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.defaultstylekey?view=netframework-4.8.1"/&gt;
+    </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.#ctor"><summary>
+            创建一个新的WebView2Composition控件实例。
+            请注意，在初始化之前，该控件的<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" />将为null。
+            有关初始化概述，请参阅<see cref="T:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl" />类文档。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.WebView2CompositionControl_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)"><summary>
+            这是WPF控件的SizeChanged事件的事件处理程序。
+            我们使用CoreWebView2Controller.NotifyParentWindowPositionChanged来通知我们的浏览器我们的
+            大小和相对位置已更改。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.WebView2CompositionControl_LocationChanged(System.Object,System.EventArgs)"><summary>
+            这是WPF控件的LocationChange事件的事件处理程序。
+            我们使用CoreWebView2Controller.NotifyParentWindowPositionChanged来通知浏览器我们的位置已更改。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.InitializeCoreDispatcher"><summary>
+            初始化调度器队列。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.GetHostHwnd"><summary>
+            返回宿主窗口的HWND，首先尝试Window，然后回退到HwndSource。
+            这使得当控件在HwndSource内托管且没有
+            WPF窗口祖先（例如Visual Studio工具窗口）时也能工作。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.HwndSourceHook(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)"><summary>
+            用于 HwndSource 托管场景的消息钩子。监听
+            WM_WINDOWPOSCHANGED 以通知浏览器宿主已移动。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2Controller_CursorChanged(System.Object,System.Object)"><summary>
+            这是我们的CoreWebView2CompositionController的CursorChanged事件的事件处理程序。
+            我们使用CursorInteropHelper从提供的Win32句柄中获取WPF光标。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)"><summary>
+            将指针事件发送到 WebView2 控件。
+            </summary><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendPointerInput(Microsoft.Web.WebView2.Core.CoreWebView2PointerEventKind,Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnTouchDown(System.Windows.Input.TouchEventArgs)"><summary>
+            这是WPF控件的OnTouchDown事件的事件处理程序。我们使用CoreWebView2CompositionController.SendPointerInput将触摸输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnTouchMove(System.Windows.Input.TouchEventArgs)"><summary>
+            这是WPF控件的OnTouchMove事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendPointerInput将触摸输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnTouchUp(System.Windows.Input.TouchEventArgs)"><summary>
+            这是WPF控件的OnTouchUp事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendPointerInput将触摸输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.GetMouseEventVirtualKeys(System.Windows.Input.MouseEventArgs)"><summary>
+            用于获取鼠标事件的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys" /> 的辅助函数。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)"><summary>
+    将鼠标事件发送到 WebView2 控件。
+    </summary><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2CompositionController.SendMouseInput(Microsoft.Web.WebView2.Core.CoreWebView2MouseEventKind,Microsoft.Web.WebView2.Core.CoreWebView2MouseEventVirtualKeys,System.UInt32,System.Drawing.Point)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMouseMove(System.Windows.Input.MouseEventArgs)"><summary>
+            这是WPF控件的OnMouseMove事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendMouseInput将鼠标输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)"><summary>
+            这是WPF控件的OnMouseDown事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendMouseInput将鼠标输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)"><summary>
+            这是WPF控件OnMouseUp事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendMouseInput将鼠标输入发送到我们的浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)"><summary>
+            这是WPF控件的OnMouseWheel事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendMouseInput将输入发送到浏览器。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)"><summary>
+            这是WPF控件的OnMouseDoubleClick事件的事件处理程序。
+            我们使用CoreWebView2CompositionController.SendMouseInput将输入发送到我们的浏览器。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CreationPropertiesProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CreationProperties" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary><seealso cref="T:System.Windows.DependencyProperty" /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CreationProperties"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            重写以进行绘制
+            </summary><param name="dc">通过 <see cref="T:System.Windows.Media.DrawingContext" /> 处理绘制的工具。</param></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2InitializationCompleted"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Microsoft#Web#WebView2#Wpf#IWebView2Private#InitializeController(System.IntPtr,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Microsoft#Web#WebView2#Wpf#IWebView2Private#UninitializeController"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Dispose"><summary><see cref="T:System.IDisposable" /> 模式的实现。
+    这将释放我们所有的底层COM资源。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.BeginInit"><summary>
+            ISupportInitialize 模式的实现。
+            阻止控件隐式初始化其 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2" />，直到调用 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EndInit" /> 为止。
+            并不阻止 CoreWebView2 的显式初始化（即 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />）。
+            主要用于交互式 UI 设计器。
+            </summary><remarks>
+            请注意，ISupportInitialize 中的“Initialize”以及 BeginInit/EndInit 中的“Init”的含义与控件初始化其 CoreWebView2（显式或隐式）的特定概念有所不同且更为通用。
+            这种 ISupportInitialize 模式是一种将控件上的属性批量设置为其初始值的通用方法，在所有值都设置完毕（即调用 EndInit）之前，不会触发任何依赖的副作用。
+            对于此控件，需要避免的一个特定副作用是在设置 Source 属性时触发 CoreWebView2 的隐式初始化。
+            例如，通常如果您在设置 Source 之后设置 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CreationProperties" />，则设置到 CreationProperties 的数据会被忽略，因为隐式初始化已经开始。
+            但是，如果在调用 BeginInit 和 EndInit 之间设置这两个属性（按相同顺序），则 CoreWebView2 的隐式初始化会延迟到 EndInit，因此设置到 CreationProperties 的数据仍会被使用，即使它是在 Source 之后设置的。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.EndInit"><summary>
+    ISupportInitialize 模式的实现。
+    调用自对应 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.BeginInit" /> 调用以来延迟的任何功能。
+    主要供交互式 UI 设计人员使用。
+    </summary><remarks>
+    有关详细信息，请参阅 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.BeginInit" /> 的文档。
+    </remarks></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.SourceProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Source" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Source"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.SourceChanged"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.NavigationStarting"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.NavigationCompleted"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoBackProperty"><summary>
+    为 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoBack" /> 属性提供支持的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+    </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoBack"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoForwardProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoForward" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CanGoForward"><inheritdoc /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.KeyboardInputSite"><summary>
+            WebView2Composition 控件仅需要 IKeyboardInputSink:TabInto 来获取 Tab 遍历的方向。WebView2Composition 未实现 KeyboardInputSite。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnGotFocus(System.Windows.RoutedEventArgs)"><summary>
+            我们重写 <see cref="M:System.Windows.UIElement.OnGotFocus(System.Windows.RoutedEventArgs)" /> 以防止焦点事件传播。
+            我们期望从 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_GotFocus(System.Object,System.Object)" /> 引发的事件。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnLostFocus(System.Windows.RoutedEventArgs)"><summary>
+            我们重写 <see cref="M:System.Windows.UIElement.OnLostFocus(System.Windows.RoutedEventArgs)" /> 以防止焦点事件传播。
+            我们期望事件从 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2Base.CoreWebView2Controller_LostFocus(System.Object,System.Object)" /> 引发。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2Controller_GotFocus(System.Object,System.Object)"><summary>
+            这是我们 CoreWebView2Controller 的 GotFocus 事件的事件处理程序。
+            用于记录控件当前是否具有焦点。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.CoreWebView2Controller_LostFocus(System.Object,System.Object)"><summary>
+            这是我们CoreWebView2Controller的Lost事件的事件处理程序。
+            我们只需将此事件传播到WPF。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.HasFocusWithin"><summary>
+            IKeyboardInputSink:HasFocusWithin 接口。
+            指示 WebView 是否具有焦点。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)"><summary>
+            IKeyboardInputSink:OnMnemonic 接口。
+            未由WebView2实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.RegisterKeyboardInputSink(System.Windows.Interop.IKeyboardInputSink)"><summary>
+            IKeyboardInputSink:RegisterKeyboardInputSink 接口。
+            WebView2 未实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.TabInto(System.Windows.Input.TraversalRequest)"><summary>
+            IKeyboardInputSink:TabInto 接口。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.TranslateAccelerator(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)"><summary>
+            IKeyboardInputSink:TranslateAccelerator 接口。
+            未由 WebView2 实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.TranslateChar(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)"><summary>
+            IKeyboardInputSink:TranslateChar 接口。
+            WebView2 未实现。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnKeyDown(System.Windows.Input.KeyEventArgs)"><summary>
+            这是从 <see cref="T:System.Windows.UIElement" /> 重写的，用于处理按键输入。
+            WPF 不应实际响应键盘事件调用此方法，因为焦点在控制器的 HWND 上。
+            当控制器的 HWND 获得焦点时，WPF 不知道控制器的 HWND 属于此控件，因此不会为此控件和 WPF 主窗口触发键盘事件。
+            此重写仅在显式将加速器键输入从 CoreWebView2 转发到 WPF 时（在 CoreWebView2Controller_AcceleratorKeyPressed 中）才应被调用。
+            即使如此，此 KeyDownEvent 也仅在我们 PreviewKeyDownEvent 实现显式触发它时才会被触发，这与 WPF 的常规系统一致。
+            因此过程如下：
+            <list type="number"><item><description>CoreWebView2Controller_AcceleratorKeyPressed</description></item><item><description>PreviewKeyDownEvent</description></item><item><description>KeyDownEvent</description></item><item><description>OnKeyDown</description></item></list>
+            。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnKeyUp(System.Windows.Input.KeyEventArgs)"><summary>
+            请参阅 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnKeyDown(System.Windows.Input.KeyEventArgs)" />。
+            </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)"><summary>
+            这里是“预览”（即隧道）版本的<see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnKeyDown(System.Windows.Input.KeyEventArgs)" />，因此它实际上首先发生。
+            与OnKeyDown类似，仅当我们显式地从CoreWebView2转发按键时才会调用此方法。
+            为了模仿WPF的标准输入处理，当我们接收到此事件时，我们会转而触发标准冒泡的KeyDownEvent。
+            这样，WPF树中的其他元素就能看到与WPF自己处理按键时触发的相同标准输入事件对。
+            </summary><seealso cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnKeyDown(System.Windows.Input.KeyEventArgs)" /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)"><summary>
+            参见 <see cref="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />。
+            </summary></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ZoomFactorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ZoomFactor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ZoomFactor"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ZoomFactorChanged"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DefaultBackgroundColorProperty"><summary>
+            支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DefaultBackgroundColor" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DefaultBackgroundColor"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.AllowExternalDropProperty"><summary>
+            支持 <see cref="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.AllowExternalDropProperty" /> 属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.AllowExternalDrop"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DesignModeForegroundColorProperty"><summary>
+            支持<see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DesignModeForegroundColor" />属性的 WPF <see cref="T:System.Windows.DependencyProperty" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.DesignModeForegroundColor"><inheritdoc /></member><member name="F:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.FpsDividerProperty"><summary>
+            WPF <see cref="T:System.Windows.DependencyProperty" /> 支持 <see cref="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.FpsDivider" /> 属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.FpsDivider"><summary>
+    获取或设置 WebViewCompositionControl 渲染帧率的分频器。
+    </summary><remarks>
+    FpsDivider 属性影响渲染帧率的分频方式。例如，如果内容的默认渲染帧率为每秒60帧（fps），则将 FpsDivider 设置为2可将帧率降低到30 fps。此属性适用于降低渲染负载并提高性能，适用于不需要高帧率的场景。
+    </remarks></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.FpsDividerChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+    这是当我们的WPF FpsDivider属性的值更改时，WPF调用的回调。我们通过设置GraphicsItemD3DImage的FpsDivider来实现它。
+    </summary></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.GoBack"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.GoForward"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Reload"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.Stop"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.NavigateToString(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ContentLoading"><inheritdoc /></member><member name="M:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.ExecuteScriptAsync(System.String)"><inheritdoc /></member><member name="E:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.WebMessageReceived"><inheritdoc /></member><member name="P:Microsoft.Web.WebView2.Wpf.WebView2CompositionControl.IsInDesignMode"><summary>
+            当处于设计模式时为 true，且不应创建底层 CoreWebView2。
+            </summary></member></members>
+</doc>

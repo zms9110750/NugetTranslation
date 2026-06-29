@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Web.WebView2.WinForms</name>
+    </assembly>
+    <members><member name="T:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties"><summary>
+            此类是用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> 和 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 实例的最常用参数的集合。
+            其主要目的是设置为 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" />，以便在隐式初始化期间自定义 <see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" /> 使用的环境和/或控制器。
+            </summary><remarks>
+            此类并非旨在包含所有可能的环境或控制器自定义选项。
+            如果您需要完全控制 WebView2 控件使用的环境和/或控制器，则需显式地初始化控件：
+            创建自己的环境（使用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />）和/或控制器选项（使用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateCoreWebView2ControllerOptions" />），并将其传递给 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" />
+            *在*将 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性设置为任何值*之前*。
+            有关初始化概述，请参阅 <see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" /> 类文档。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.#ctor"><summary>
+            使用所有属性的默认数据创建 <see cref="T:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties" /> 的新实例。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.BrowserExecutableFolder"><summary>
+    获取或设置一个值，该值在使用此实例创建环境时作为<see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />的browserExecutableFolder参数传递。
+    </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.UserDataFolder"><summary>
+            获取或设置要作为 userDataFolder 参数传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> 的值，当使用此实例创建环境时。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.Language"><summary>
+            获取或设置一个值，该值用于在使用此实例创建环境时传递给<see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />的CoreWebView2EnvironmentOptions参数的Language属性。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.ProfileName"><summary>
+            获取或设置在使用此实例创建控制器时，传递给 CreateCoreWebView2ControllerWithOptionsAsync 的 CoreWebView2ControllerOptions 参数的 ProfileName 属性所使用的值。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.AdditionalBrowserArguments"><summary>
+            获取或设置要作为 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" /> 的 AdditionalBrowserArguments 参数传递的值，该 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions" /> 会在使用此实例创建环境时传递给 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" />。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.IsInPrivateModeEnabled"><summary>
+    获取或设置一个值，该值用于在使用此实例创建控制器时，传递给 CreateCoreWebView2ControllerWithOptionsAsync 的 CoreWebView2ControllerOptions 参数的 IsInPrivateModeEnabled 属性。
+    </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.CreateEnvironmentAsync"><summary>
+            使用此实例属性的当前值创建一个 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />。
+            </summary><returns>一个任务，在完成时将提供创建的环境，如果没有设置与环境相关的选项，则为 null。</returns><remarks>
+            只要此实例上的任何其他属性没有更改，重复调用此方法将返回与先前调用相同的任务/环境。如果更改了其他属性，则下次调用此方法将返回不同的任务/环境。
+            </remarks></member><member name="M:Microsoft.Web.WebView2.WinForms.CoreWebView2CreationProperties.CreateCoreWebView2ControllerOptions(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><summary>
+            使用此实例属性的当前值创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />。
+            </summary><returns>返回 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" /> 对象，如果没有设置与控制器相关的属性，则为 null。</returns><exception cref="T:System.NullReferenceException">如果参数 environment 为 null，则引发此异常。</exception></member><member name="T:Microsoft.Web.WebView2.WinForms.WebView2"><summary>
+            用于在WinForms中嵌入WebView2的控件。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.#ctor"><summary>
+             创建一个新的 WebView2 WinForms 控件。
+             构造后，<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 属性为 <c>null</c>。
+             调用 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 来初始化底层的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />。
+             </summary><remarks>
+             此控件实际上是 WebView2 COM API 的包装器，你可以在此处找到其文档：https://aka.ms/webview2
+             你可以通过访问 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 属性直接访问底层的 ICoreWebView2 接口及其所有功能。
+             一些最常见的 COM 功能也可以通过控件上的包装方法/属性/事件直接访问。
+            
+             创建时，控件的 CoreWebView2 属性将为 null。
+             这是因为创建 CoreWebView2 是一项开销很大的操作，涉及启动 Edge 浏览器进程等过程。
+             有两种方法可以创建 CoreWebView2：
+             1) 调用 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 方法。这称为显式初始化。
+             2) 设置 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性。这称为隐式初始化。
+             任一选项都会在后台启动初始化，并立即返回调用方，无需等待初始化完成。
+             若要指定初始化的选项，可以将自己的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" /> 传递给 EnsureCoreWebView2Async，也可以在初始化之前设置控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" /> 属性。
+            
+             初始化完成后（无论以何种方式触发），将按顺序发生以下事情：
+             1) 控件的 <see cref="E:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2InitializationCompleted" /> 事件将被调用。如果您需要在 CoreWebView2 使用之前对其执行一次性设置操作，则应在该事件的处理程序中执行此操作。
+             2) 如果已为 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性设置了 URI，则控件将开始在后台导航到该 URI（即，这些步骤将继续，无需等待导航完成）。
+             3) 从 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 返回的 Task 将完成。
+            
+             有关初始化过程中涉及的任何方法/属性/事件的更多详细信息，请参阅其特定文档。
+            
+             在控件中发生的加速器按键（例如 Ctrl+P）将触发标准的按键事件，例如 OnKeyDown。您可以通过将其 EventArgs 的 Handled 属性设置为 true 来抑制控件对加速器按键的默认实现（例如，在 Ctrl+P 情况下打印）。另请注意，当这些处理程序执行时，底层浏览器进程会被阻塞，因此：
+             <list type="number"><item>
+             您应避免在这些处理程序中执行大量工作。
+             </item><item>
+             由于无法与浏览器进程通信，如果在此类处理程序中调用，某些 WebView2 和 CoreWebView2 API 可能会引发错误。
+             </item></list>
+             如果您需要在响应加速器键时执行大量工作和/或调用 WebView2 API，则考虑启动后台任务或将工作排队，以便稍后在 UI 线程上执行。
+             </remarks></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.Dispose(System.Boolean)"><summary>
+            清理正在使用的任何资源。
+            </summary><param name="disposing"><c>true</c> 如果应释放托管资源，则为 <c>true</c>；否则为 <c>false</c>。</param></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.OnPaint(System.Windows.Forms.PaintEventArgs)"><summary>
+            重写基类的OnPaint事件以在设计师模式下执行自定义操作
+            </summary><param name="e">作为源的图形设备</param></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.WndProc(System.Windows.Forms.Message@)"><summary>
+            重写基类的 WndProc 方法以处理特定的窗口消息。
+            </summary><param name="m">包含 HWND 窗口消息和参数的 Message 对象。</param></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties"><summary>
+            获取或设置一个选项包，这些选项在控件的<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />初始化期间使用。
+            在控件的CoreWebView2初始化开始后，此属性无法修改（将抛出异常）。
+            </summary><exception cref="T:System.InvalidOperationException">如果控件的CoreWebView2初始化已经开始，则抛出。</exception></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><summary>
+    显式触发控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 的初始化。
+    </summary><param name="environment">
+    一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />，应用于创建 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />。
+    创建自己的环境可以让你控制影响 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 初始化方式的一些选项。
+    如果传递 <c>null</c>（默认值），则会自动创建并使用默认环境。
+    </param><param name="controllerOptions">
+    一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions" />，应用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" />。
+    创建自己的控制器选项可以让你控制影响 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2" /> 初始化方式的一些选项。
+    如果你向此方法传递 controllerOptions，它将覆盖 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" /> 属性中指定的任何设置。
+    如果传递 <c>null</c>（默认值）并且没有为 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" /> 设置值，则将自动创建并使用默认的 controllerOptions。
+    </param><returns>
+    一个表示后台初始化过程的 Task。
+    当任务完成时，<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 属性将可供使用（即非 null）。
+    请注意，控件的 <see cref="E:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2InitializationCompleted" /> 事件将在任务完成之前或在异常时被调用。
+    </returns><remarks>
+    除非之前的初始化已经失败，否则使用相同参数多次调用此方法将无效（任何指定的环境都会被忽略）并返回与第一次调用相同的 Task。
+    除非之前的初始化已经失败，否则在通过设置 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性隐式触发初始化后调用此方法，如果没有给定环境，将无效，并简单地返回一个表示已在进行中的 Task。
+    除非之前的初始化已经失败，否则在初始化开始后使用不同的环境调用此方法将导致 <see cref="T:System.ArgumentException" />。例如，如果你通过设置 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性开始初始化，然后使用新环境调用此方法；如果你使用 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" /> 开始初始化，然后使用新环境调用此方法；或者如果你使用一个环境开始初始化，然后未指定环境调用此方法，都可能发生这种情况。
+    当之前的初始化失败后调用此方法时，它将再次触发控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 的初始化。
+    请注意，尽管此方法是异步的并返回一个 Task，但它仍必须在 UI 线程上调用，就像大多数 UI 控件的大多数公共功能一样。
+    <para>
+    以下总结了可能的错误值以及这些错误发生的原因的描述。
+    <list type="table"><listheader><description>错误值</description><description>描述</description></listheader><item><description><c>HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)</c></description><description>在 browserExecutableFolder 中使用了 *\\Edge\\Application* 路径。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_INVALID_STATE)</c></description><description>指定的选项与共享浏览器进程中当前正在运行的 WebView 的选项不匹配。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_INVALID_WINDOW_HANDLE)</c></description><description>由于无效的主机 HWND parentWindow，WebView2 初始化失败。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_DISK_FULL)</c></description><description>由于达到已安装运行时版本的最大数量，WebView2 初始化失败。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_PRODUCT_UNINSTALLED</c></description><description>如果 WebView 依赖于已安装的 WebView2 运行时版本并且该版本已被卸载。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)</c></description><description>找不到 Edge 安装。</description></item><item><description><c>HRESULT_FROM_WIN32(ERROR_FILE_EXISTS)</c></description><description>无法创建用户数据文件夹，因为同名文件已存在。</description></item><item><description><c>E_ACCESSDENIED</c></description><description>无法创建用户数据文件夹，访问被拒绝。</description></item><item><description><c>E_FAIL</c></description><description>Edge 运行时无法启动。</description></item></list></para></remarks><exception cref="T:System.ArgumentException">
+    如果使用与初始化时不同的环境调用此方法，则引发此异常。有关更多信息，请参阅备注。
+    </exception><exception cref="T:System.InvalidOperationException">
+    如果此 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 实例已被释放，或者调用线程不是创建此对象的线程（通常是 UI 线程），则引发此异常。有关更多信息，请参阅 <see cref="P:System.Windows.Forms.Control.InvokeRequired" />。
+    如果浏览器进程意外崩溃并使控件处于无效状态，也可能会引发此异常。我们考虑将来针对这种情况抛出不同类型的异常。
+    </exception></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment)"><summary>
+            显式触发控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 的初始化。
+            </summary><param name="environment">
+            一个预先创建的 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Environment" />，用于创建 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />。
+            创建自己的环境可以让您控制影响 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 初始化方式的多个选项。
+            如果传递 <c>null</c>，则将自动创建并使用默认环境。
+            </param><returns>
+            表示后台初始化过程的 Task。
+            当任务完成时，<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 属性将可供使用（即非 null）。
+            请注意，控件的 <see cref="E:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2InitializationCompleted" /> 事件将在任务完成之前或发生异常时被调用。
+            </returns><remarks>
+            除非之前的初始化已经失败，否则使用相同参数额外调用此方法将不起作用（忽略任何指定的环境），并返回与第一次调用相同的 Task。
+            除非之前的初始化已经失败，否则在通过设置 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性隐式触发初始化后调用此方法，如果未指定环境，将不起作用，并且只是返回一个表示已在进行的初始化的 Task。
+            除非之前的初始化已经失败，否则在初始化开始后使用不同的环境调用此方法将导致 <see cref="T:System.ArgumentException" />。例如，如果您通过设置 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性开始初始化，然后使用新环境调用此方法；或者如果您通过 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CreationProperties" /> 开始初始化，然后使用新环境调用此方法；或者如果您用一种环境开始初始化，然后未指定环境调用此方法，则可能发生这种情况。
+            当之前的初始化失败后调用此方法时，它将再次触发控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 的初始化。
+            请注意，尽管此方法是异步的并返回一个 Task，但它仍然必须在 UI 线程上调用，就像大多数 UI 控件的大多数公共功能一样。
+            </remarks><exception cref="T:System.ArgumentException">
+            如果使用与初始化时不同的环境调用此方法，则引发。有关更多信息，请参阅备注。
+            </exception><exception cref="T:System.InvalidOperationException">
+            如果此 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 实例已被释放，或者调用线程不是创建此对象的线程（通常是 UI 线程），则引发。有关更多信息，请参阅 <see cref="P:System.Windows.Forms.Control.InvokeRequired" />。
+            如果浏览器进程意外崩溃并使控件处于无效状态，也可能引发。我们正在考虑将来为此情况引发不同类型的异常。
+            </exception></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.InitCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)"><summary>
+            这是实现实际后台初始化任务的私有函数。
+            如果控件已初始化或已释放，则不能调用。
+            </summary><param name="environment">
+            用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 的环境。
+            如果该参数为 null，则使用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateAsync(System.String,System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)" /> 及其默认参数创建默认环境。
+            </param><param name="controllerOptions">
+            用于创建 <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Controller" /> 的 controllerOptions。
+            如果该参数为 null，则使用其默认参数创建默认的 controllerOptions。
+            </param><returns>表示后台初始化过程的任务。</returns><remarks>在此处添加的所有事件处理程序都需要在 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.Dispose(System.Boolean)" /> 中移除。</remarks></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.CreateParams"><summary>
+            受保护的 CreateParams 属性。用于为窗体的 HWND 设置自定义窗口样式。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.OnVisibleChanged(System.EventArgs)"><summary>
+            受保护的 VisibilityChanged 处理程序。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.OnSizeChanged(System.EventArgs)"><summary>
+            受保护的 SizeChanged 处理程序。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.Select(System.Boolean,System.Boolean)"><summary>
+            受保护的Select方法：重写此方法以在WebView控件激活时捕获Tab键方向
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.ProcessDialogKey(System.Windows.Forms.Keys)"><summary>处理对话框键。</summary><param name="keyData">表示要处理的键的 <see cref="T:System.Windows.Forms.Keys" /> 值之一。</param><returns>如果控件处理了该键，则为 <see langword="true" />；否则为 <see langword="false" />。</returns></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.OnGotFocus(System.EventArgs)"><summary>
+            受保护的 OnGotFocus 处理程序。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.OnParentChanged(System.EventArgs)"><summary>
+    受保护的 OnParentChanged 处理程序。
+    </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.IsInitialized"><summary>
+            如果初始化成功完成并且控件尚未释放，则为 true。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.GetSitedParentSite(System.Windows.Forms.Control)"><summary>
+            递归获取父控件
+            </summary><param name="control">要获取其父控件的控件</param><returns>根父控件</returns></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2"><summary>
+            底层的 CoreWebView2。使用此属性可以对 WebView2 内容执行比 WebView2 公开的更多操作。此值在初始化之前为 null，并且一旦控件被释放，对象本身的行为将是未定义的。您可以通过 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.EnsureCoreWebView2Async(Microsoft.Web.WebView2.Core.CoreWebView2Environment,Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions)" /> 方法强制初始化底层的 CoreWebView2。
+            </summary><exception cref="T:System.InvalidOperationException">如果调用线程不是创建此对象的线程（通常是 UI 线程），则引发。有关更多信息，请参阅 <see cref="P:System.Windows.Forms.Control.InvokeRequired" />。</exception></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.ZoomFactor"><summary>
+            WebView 的缩放因子。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.AllowExternalDrop"><summary>
+            启用/禁用外部拖放。
+            </summary></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.Source"><summary>
+            Source 属性是 WebView2 顶层文档的 URI。
+            设置 Source 相当于调用 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Navigate(System.String)" />。
+            设置 Source 将触发 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 的初始化（如果尚未初始化）。
+            Source 的默认值为 <c>null</c>，表示 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化。
+            </summary><exception cref="T:System.ArgumentException">指定的值不是绝对 <see cref="T:System.Uri" />。</exception><exception cref="T:System.NotImplementedException">指定的值为 <c>null</c> 且控件已初始化。</exception><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Navigate(System.String)" /></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.CanGoForward"><summary>
+            如果WebView可以通过<see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.GoForward" />方法导航到导航历史中的下一页，则返回true。
+            这等同于<see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" />。
+            如果基础<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />尚未初始化，则此属性为<c>false</c>。
+            </summary><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoForward" /></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.CanGoBack"><summary>
+            如果 webview 可以通过 <see cref="M:Microsoft.Web.WebView2.WinForms.WebView2.GoBack" /> 方法导航到导航历史中的上一页，则返回 <c>true</c>。
+            这等同于 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" />。
+            如果基础 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化，则该属性为 <c>false</c>。
+            </summary><seealso cref="P:Microsoft.Web.WebView2.Core.CoreWebView2.CanGoBack" /></member><member name="P:Microsoft.Web.WebView2.WinForms.WebView2.DefaultBackgroundColor"><summary>
+            WebView 的默认背景颜色。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.ExecuteScriptAsync(System.String)"><summary>
+            在<see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" />的顶层文档中执行提供的脚本。
+            这等同于<see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" />。
+            </summary><exception cref="T:System.InvalidOperationException">底层的<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />尚未初始化。</exception><exception cref="T:System.InvalidOperationException">当浏览器进程意外退出并使此控件处于无效状态时抛出。我们正在考虑将来为此情况抛出一个不同类型的异常。</exception><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.ExecuteScriptAsync(System.String)" /></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.Reload"><summary>
+            重新加载 <see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" /> 的顶级文档。
+            这等价于 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" />。
+            </summary><exception cref="T:System.InvalidOperationException">底层 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化。</exception><exception cref="T:System.InvalidOperationException">当浏览器进程意外终止并导致此控件处于无效状态时抛出。我们未来考虑为此情况抛出不同类型的异常。</exception><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Reload" /></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.GoForward"><summary>
+            在导航历史记录中导航到下一页。
+            这等同于 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" />。
+            如果底层的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化，此方法不执行任何操作。
+            </summary><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoForward" /></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.GoBack"><summary>
+    导航到导航历史中的上一页。
+    这等同于 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" />。
+    如果基础的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化，此方法不执行任何操作。
+    </summary><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.GoBack" /></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.NavigateToString(System.String)"><summary>
+            将提供的HTML作为<see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" />的顶级文档呈现。
+            这等同于<see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" />。
+            </summary><exception cref="T:System.InvalidOperationException">底层的<see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" />尚未初始化。</exception><exception cref="T:System.InvalidOperationException">当浏览器进程意外退出并将此控件置于无效状态时引发。我们正在考虑将来为此情况引发不同类型的异常。</exception><remarks><c>htmlContent</c>参数的总大小不能超过2 MB（2 * 1024 * 1024字节）。新页面的来源是<c>about:blank</c>。</remarks><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.NavigateToString(System.String)" /></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.Stop"><summary>
+            停止 <see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" /> 中任何正在进行的导航。
+            这等同于 <see cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" />。
+            如果基础的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 尚未初始化，此方法不执行任何操作。
+            </summary><seealso cref="M:Microsoft.Web.WebView2.Core.CoreWebView2.Stop" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2InitializationCompleted"><summary>
+    此事件在以下两种情况下触发：1) 控件的 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.CoreWebView2" /> 已完成初始化（无论触发方式或是否成功），但在其被用于任何操作之前；或者 2) 初始化失败。
+    如果你需要对 CoreWebView2 执行一次性的设置操作，并且希望这些操作影响其所有使用场景，则应处理此事件（例如，添加事件处理程序、配置设置、安装文档创建脚本、添加宿主对象）。
+    </summary><remarks>
+    如果 <see cref="P:Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs.IsSuccess" /> 为 true，则此发送方将是 WebView2 控件，其 CoreWebView2 属性现在将第一次变为有效（即非 null）。
+    在初始化成功报告之后，如果后续导航失败，则此事件不太可能第二次触发。
+    </remarks></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.NavigationStarting"><summary>
+            NavigationStarting 在 <see cref="T:Microsoft.Web.WebView2.WinForms.WebView2" /> 的顶级文档开始新导航之前触发。此事件等同于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationStarting" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.NavigationCompleted"><summary>
+            NavigationCompleted 在顶级文档的导航完成渲染后触发，无论成功与否。此事件等同于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.NavigationCompleted" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.WebMessageReceived"><summary>
+            WebMessageReceived 在 Web 内容通过 <c>chrome.webview.postMessage</c> 向应用主机发送消息后触发。
+            这相当于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.WebMessageReceived" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.SourceChanged"><summary>
+            SourceChanged 在 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.Source" /> 属性更改后触发。这可能发生在导航过程中，或者页面中的脚本更改了文档的 URI。
+            这相当于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.SourceChanged" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.ContentLoading"><summary>
+            ContentLoading 在导航开始到新 URI 并且该 URI 的内容开始呈现后调度。这等效于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2.ContentLoading" /></member><member name="E:Microsoft.Web.WebView2.WinForms.WebView2.ZoomFactorChanged"><summary>
+            当 <see cref="P:Microsoft.Web.WebView2.WinForms.WebView2.ZoomFactor" /> 属性更改时，ZoomFactorChanged 会触发。
+            这等同于 <see cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" /> 事件。
+            </summary><seealso cref="E:Microsoft.Web.WebView2.Core.CoreWebView2Controller.ZoomFactorChanged" /></member><member name="F:Microsoft.Web.WebView2.WinForms.WebView2.components"><summary>
+            必需的设计器变量。
+            </summary></member><member name="M:Microsoft.Web.WebView2.WinForms.WebView2.InitializeComponent"><summary>
+            设计器支持所需的方法 - 请不要使用代码编辑器修改此方法的内容。
+            </summary></member></members>
+</doc>

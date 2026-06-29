@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.FileProviders.Embedded</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider"><summary>
+    使用指定程序集中的嵌入资源查找文件。
+    此文件提供程序区分大小写。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.#ctor(System.Reflection.Assembly)"><summary>
+            使用指定的程序集初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 类的新实例，并将基命名空间默认为程序集名称。
+            </summary><param name="assembly">包含嵌入资源的程序集。</param></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String)"><summary>
+            使用指定的程序集和基命名空间初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 类的新实例。
+            </summary><param name="assembly">包含嵌入资源的程序集。</param><param name="baseNamespace">包含嵌入资源的基命名空间。</param></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetFileInfo(System.String)"><summary>
+            在给定路径上定位文件。
+            </summary><param name="subpath">标识文件的路径。</param><returns>
+            文件信息。调用者必须检查 Exists 属性。如果未找到文件，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundFileInfo" />。
+            </returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetDirectoryContents(System.String)"><summary>
+    枚举给定路径中的目录（如果存在）。此文件提供程序使用平面目录结构。基础命名空间下的所有内容都被视为一个目录。
+    </summary><param name="subpath">标识目录的路径</param><returns>
+    目录的内容。调用方必须检查 Exists 属性。如果没有找到与 <paramref name="subpath" /> 匹配的资源，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" />。
+    </returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.Watch(System.String)"><summary>
+            嵌入文件不会更改。
+            </summary><param name="pattern">此参数将被忽略。</param><returns>一个 <see cref="T:Microsoft.Extensions.FileProviders.NullChangeToken" /></returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.IsValidEverettIdFirstChar(System.Char)"><summary>
+            该字符是否是有效的第一个Everett标识符字符？
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.IsValidEverettIdChar(System.Char)"><summary>
+    该字符是否为有效的Everett标识符字符？
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettSubFolderIdentifier(System.Text.StringBuilder,System.String)"><summary>
+    将文件夹子名称转换为与Everett兼容的标识符
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettFolderIdentifier(System.Text.StringBuilder,System.String)"><summary>
+            将文件夹名称转换为 Everett 兼容的标识符
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettIdentifier(System.String)"><summary>
+            此方法是为了与Everett兼容而提供的，Everett曾用于将资源名称的部分转换为有效的标识符。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo"><summary>
+    表示嵌入在程序集中的文件。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.#ctor(System.Reflection.Assembly,System.String,System.String,System.DateTimeOffset)"><summary>
+            使用 <paramref name="resourcePath" /> 作为基路径为程序集初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 的新实例
+            </summary><param name="assembly">包含嵌入资源的程序集</param><param name="resourcePath">嵌入资源的路径</param><param name="name">此实例的任意名称</param><param name="lastModified">用于 <see cref="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.LastModified" /> 的 <see cref="T:System.DateTimeOffset" /></param></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Exists"><summary>
+            始终为 true。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Length"><summary>
+            嵌入资源的长度（以字节为单位）
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.PhysicalPath"><summary>
+            始终为 null。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Name"><summary>
+            嵌入文件的名称
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.LastModified"><summary>
+            当 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 创建时的 UTC 时间
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.IsDirectory"><summary>
+            始终为 false.
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.CreateReadStream"><inheritdoc /></member><member name="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider"><summary>
+        一个嵌入式文件提供程序，它使用程序集中编译的清单来重建嵌入文件在嵌入程序集时的原始路径。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly)"><summary>初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。</summary><param name="assembly">包含嵌入文件的程序集。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。
+            </summary><param name="assembly">包含嵌入文件的程序集。</param><param name="root">从清单根目录到用作提供程序根目录的相对路径。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String,System.DateTimeOffset)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。
+            </summary><param name="assembly">包含嵌入式文件的程序集。</param><param name="root">从清单根目录到供此提供程序用作根目录的相对路径。</param><param name="lastModified">要在由此 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" /> 实例上使用的 LastModified 日期。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String,System.String,System.DateTimeOffset)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 类的新实例。
+    </summary><param name="assembly">包含嵌入文件的程序集。</param><param name="root">用作提供程序根目录的清单根目录的相对路径。</param><param name="manifestName">包含清单的嵌入资源的名称。</param><param name="lastModified">用于此 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" /> 实例上的 LastModified 日期。</param></member><member name="P:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Assembly"><summary>
+            获取此提供程序的 <see cref="P:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Assembly" />。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.GetDirectoryContents(System.String)"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.GetFileInfo(System.String)"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Watch(System.String)"><inheritdoc /></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />。</summary><param name="argument">要验证为非 null 的引用类型参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null 或为空，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证为非 null 且非空的 <see cref="T:System.String" /> 参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />；如果为空，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证的引用类型参数，确保其既不为 null 也不为空。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrWhiteSpace(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />；如果为空或空白，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证的引用类型参数，确保其不为 null、不为空且不为空白。</param><param name="paramName"><paramref name="argument" /> 所对应的参数名称。</param></member></members>
+</doc>

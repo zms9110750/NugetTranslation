@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.FileProviders.Embedded</name>
+    </assembly>
+    <members><member name="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider"><summary>
+    使用指定程序集中的嵌入资源查找文件。
+    此文件提供程序区分大小写。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.#ctor(System.Reflection.Assembly)"><summary>
+            使用指定的程序集初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 类的新实例，并将基命名空间默认为程序集名称。
+            </summary><param name="assembly">包含嵌入资源的程序集。</param></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String)"><summary>
+            使用指定的程序集和基命名空间初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 类的新实例。
+            </summary><param name="assembly">包含嵌入资源的程序集。</param><param name="baseNamespace">包含嵌入资源的基命名空间。</param></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetFileInfo(System.String)"><summary>
+            在给定路径上定位文件。
+            </summary><param name="subpath">标识文件的路径。</param><returns>
+            文件信息。调用者必须检查 Exists 属性。如果未找到文件，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundFileInfo" />。
+            </returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetDirectoryContents(System.String)"><summary>
+    枚举给定路径中的目录（如果存在）。此文件提供程序使用平面目录结构。基础命名空间下的所有内容都被视为一个目录。
+    </summary><param name="subpath">标识目录的路径</param><returns>
+    目录的内容。调用方必须检查 Exists 属性。如果没有找到与 <paramref name="subpath" /> 匹配的资源，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" />。
+    </returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.Watch(System.String)"><summary>
+            嵌入文件不会更改。
+            </summary><param name="pattern">此参数将被忽略。</param><returns>一个 <see cref="T:Microsoft.Extensions.FileProviders.NullChangeToken" /></returns></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.IsValidEverettIdFirstChar(System.Char)"><summary>
+            该字符是否是有效的第一个Everett标识符字符？
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.IsValidEverettIdChar(System.Char)"><summary>
+    该字符是否为有效的Everett标识符字符？
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettSubFolderIdentifier(System.Text.StringBuilder,System.String)"><summary>
+    将文件夹子名称转换为与Everett兼容的标识符
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettFolderIdentifier(System.Text.StringBuilder,System.String)"><summary>
+            将文件夹名称转换为 Everett 兼容的标识符
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.MakeValidEverettIdentifier(System.String)"><summary>
+            此方法是为了与Everett兼容而提供的，Everett曾用于将资源名称的部分转换为有效的标识符。
+            </summary></member><member name="T:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo"><summary>
+    表示嵌入在程序集中的文件。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.#ctor(System.Reflection.Assembly,System.String,System.String,System.DateTimeOffset)"><summary>
+            使用 <paramref name="resourcePath" /> 作为基路径为程序集初始化 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 的新实例
+            </summary><param name="assembly">包含嵌入资源的程序集</param><param name="resourcePath">嵌入资源的路径</param><param name="name">此实例的任意名称</param><param name="lastModified">用于 <see cref="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.LastModified" /> 的 <see cref="T:System.DateTimeOffset" /></param></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Exists"><summary>
+            始终为 true。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Length"><summary>
+            嵌入资源的长度（以字节为单位）
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.PhysicalPath"><summary>
+            始终为 null。
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.Name"><summary>
+            嵌入文件的名称
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.LastModified"><summary>
+            当 <see cref="T:Microsoft.Extensions.FileProviders.EmbeddedFileProvider" /> 创建时的 UTC 时间
+            </summary></member><member name="P:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.IsDirectory"><summary>
+            始终为 false.
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.Embedded.EmbeddedResourceFileInfo.CreateReadStream"><inheritdoc /></member><member name="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider"><summary>
+        一个嵌入式文件提供程序，它使用程序集中编译的清单来重建嵌入文件在嵌入程序集时的原始路径。
+    </summary></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly)"><summary>初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。</summary><param name="assembly">包含嵌入文件的程序集。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。
+            </summary><param name="assembly">包含嵌入文件的程序集。</param><param name="root">从清单根目录到用作提供程序根目录的相对路径。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String,System.DateTimeOffset)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 的新实例。
+            </summary><param name="assembly">包含嵌入式文件的程序集。</param><param name="root">从清单根目录到供此提供程序用作根目录的相对路径。</param><param name="lastModified">要在由此 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" /> 实例上使用的 LastModified 日期。</param></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.#ctor(System.Reflection.Assembly,System.String,System.String,System.DateTimeOffset)"><summary>
+    初始化 <see cref="T:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider" /> 类的新实例。
+    </summary><param name="assembly">包含嵌入文件的程序集。</param><param name="root">用作提供程序根目录的清单根目录的相对路径。</param><param name="manifestName">包含清单的嵌入资源的名称。</param><param name="lastModified">用于此 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" /> 返回的 <see cref="T:Microsoft.Extensions.FileProviders.IFileInfo" /> 实例上的 LastModified 日期。</param></member><member name="P:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Assembly"><summary>
+            获取此提供程序的 <see cref="P:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Assembly" />。
+            </summary></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.GetDirectoryContents(System.String)"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.GetFileInfo(System.String)"><inheritdoc /></member><member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Watch(System.String)"><inheritdoc /></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />。</summary><param name="argument">要验证为非 null 的引用类型参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null 或为空，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证为非 null 且非空的 <see cref="T:System.String" /> 参数。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />；如果为空，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证的引用类型参数，确保其既不为 null 也不为空。</param><param name="paramName">与 <paramref name="argument" /> 对应的参数名称。</param></member><member name="M:Microsoft.AspNetCore.Shared.ArgumentThrowHelper.ThrowIfNullOrWhiteSpace(System.String,System.String)"><summary>如果 <paramref name="argument" /> 为 null，则引发 <see cref="T:System.ArgumentNullException" />；如果为空或空白，则引发 <see cref="T:System.ArgumentException" />。</summary><param name="argument">要验证的引用类型参数，确保其不为 null、不为空且不为空白。</param><param name="paramName"><paramref name="argument" /> 所对应的参数名称。</param></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute"><summary>指示指定方法需要在运行时生成新代码的能力，例如通过 <see cref="N:System.Reflection" />。</summary><remarks>这使得工具能够理解在提前编译时哪些方法是不安全的调用。</remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)"><summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute" /> 
+            类的新实例。
+            </summary><param name="message">
+            包含有关动态代码使用情况的消息。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message"><summary>
+            获取包含动态代码使用情况信息的消息。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url"><summary>
+            获取或设置一个可选的 URL，其中包含有关该方法的更多信息、为什么需要动态代码以及使用者有哪些选项可以处理它。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute"><summary>
+    指示指定的方法需要动态访问未静态引用的代码，例如通过 <see cref="N:System.Reflection" />。
+  </summary><remarks>
+    这使得工具能够在从应用程序中删除未引用的代码时，了解哪些方法是不安全调用的。
+  </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)"><summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+            </summary><param name="message">
+            包含有关未引用代码使用情况的消息。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message"><summary>
+            获取包含未引用代码使用情况的消息。
+            </summary></member><member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url"><summary>
+            获取或设置一个可选 URL，该 URL 包含有关该方法的更多信息、需要未引用代码的原因以及使用者可用的处理选项。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute"><summary>
+            禁止报告特定的规则冲突，允许在单个代码项目上进行多次禁止。
+            </summary><remarks><see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 与
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" /> 不同，因为它没有
+            <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)"><summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的新实例，
+            指定工具类别和分析规则标识符。
+            </summary><param name="category">属性的类别。</param><param name="checkId">特性所应用的分析规则的标识符。</param></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category"><summary>
+            获取标识属性分类的类别。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述消息抑制属性所适用的工具或工具分析类别。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId"><summary>
+            获取要抑制的分析工具规则标识符。
+            </summary><remarks>
+            将 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" /> 属性串联起来，构成唯一的检查标识符。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope"><summary>
+            获取或设置与该特性相关的代码的作用域。
+            </summary><remarks>
+            Scope 属性是一个可选参数，用于指定该特性相关的元数据作用域。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target"><summary>
+    获取或设置一个完全限定路径，该路径表示该特性的目标。
+    </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是一个可选参数，用于标识该特性的分析目标。示例值为 "System.IO.Stream.ctor():System.Void"。由于它是完全限定的，因此可能很长，特别是对于参数等目标。分析工具用户界面应能够自动对参数进行格式化。
+    </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId"><summary>
+        获取或设置一个可选参数，用于扩展排除条件。
+    </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定当文本元数据目标不够精确时的额外排除条件。
+        例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，但可能需要只抑制方法中某个会导致规则冲突的语句的违规，而不是方法中的所有语句。
+    </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification"><summary>
+            获取或设置取消代码分析消息的理由。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute"><summary>
+            声明一个成员对另一个成员的依赖。
+            </summary><remarks>
+            这可用于通知工具链一个依赖关系，该依赖关系仅从元数据和IL中不明确，例如通过反射依赖的成员。
+            </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)"><summary>
+            使用调用方同一类型上指定成员签名的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例进行初始化。
+            </summary><param name="memberSignature">所依赖的成员的签名。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)"><summary>
+            使用指定成员签名（位于某类型上）初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberSignature">依赖的成员签名。</param><param name="type">包含 <paramref name="memberSignature" /> 的 <see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)"><summary>
+    使用程序集中类型上成员的指定签名，初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+    </summary><param name="memberSignature">所依赖的成员的签名。</param><param name="typeName">包含指定成员的类型的全名。</param><param name="assemblyName">包含指定成员的类型的程序集名称。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)"><summary>
+            使用指定 <see cref="T:System.Type" /> 上的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">依赖的成员类型。</param><param name="type">包含指定成员的 <see cref="T:System.Type" />。</param></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)"><summary>
+            使用程序集中类型的指定成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类
+            的新实例。
+            </summary><param name="memberTypes">所依赖的成员类型。</param><param name="typeName">包含指定成员的类型的完整名称。</param><param name="assemblyName">包含指定成员类型的程序集名称。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature"><summary>
+                获取所依赖成员的签名。
+            </summary><remarks>
+                要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效的字符串，要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能两者同时成立。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes"><summary>
+            获取指定所依赖成员类型的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能同时满足这两个条件。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type"><summary>
+            获取包含指定成员的 <see cref="T:System.Type" />。
+            </summary><remarks>
+            如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定使用方的类型。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName"><summary>
+    获取包含指定成员的类型全名。
+    </summary><remarks>
+    如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定为使用者类型。
+    </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName"><summary>
+            获取指定类型的程序集名称。
+            </summary><remarks><see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" /> 仅在指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" /> 时有效。
+            </remarks></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition"><summary>
+            获取或设置依赖项适用的条件，例如"DEBUG"。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute"><summary>
+             指示指定 <see cref="T:System.Type" /> 上的某些成员被动态访问，
+             例如通过 <see cref="N:System.Reflection" />。
+             </summary><remarks>
+             这允许工具了解在程序执行期间哪些成员正在被访问。
+             
+             此属性对类型为 <see cref="T:System.Type" /> 或 <see cref="T:System.String" /> 的成员有效。
+             
+             当此属性应用于类型为 <see cref="T:System.String" /> 的位置时，假定该字符串表示完全限定的类型名称。
+             
+             当此属性应用于类、接口或结构时，指定的成员可以在从对该类、接口或结构的实例调用 <see cref="M:System.Object.GetType" /> 返回的 <see cref="T:System.Type" /> 实例上动态访问。
+             
+             如果该属性应用于方法，它将被视为特殊情况，意味着该属性应应用于方法的"this"参数。因此，该属性应仅用于可分配给 System.Type（或 string，但方法不会在那里使用它）的类型上的实例方法。
+             </remarks></member><member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)"><summary>
+            使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+            </summary><param name="memberTypes">动态访问的成员类型。</param></member><member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes"><summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定了动态访问的成员类型。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes"><summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有 <see cref="T:System.FlagsAttribute" /> 属性，允许对其成员值进行按位组合。
+             </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None"><summary>
+            指定无成员。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor"><summary>
+            指定默认的无参数公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors"><summary>
+            指定所有公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors"><summary>
+            指定所有非公共构造函数。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods"><summary>
+            指定所有公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods"><summary>
+            指定所有非公共方法。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields"><summary>
+            指定所有公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields"><summary>
+            指定所有非公共字段。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes"><summary>
+            指定所有公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes"><summary>
+            指定所有非公共嵌套类型。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties"><summary>
+    指定所有公共属性。
+    </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties"><summary>
+            指定所有非公共属性。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents"><summary>
+            指定所有公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents"><summary>
+            指定所有非公共事件。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces"><summary>
+            指定该类型实现的所有接口。
+            </summary></member><member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All"><summary>
+            指定所有成员。
+            </summary></member><member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute"><summary>指定即使相应的类型不允许，也允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute"><summary>指定即使相应类型允许，也不允许将 null 作为输入。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute"><summary>指定即使对应的类型禁止为 null，输出也可能为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute"><summary>指定即使相应类型允许为空，输出也不会为 null。指定调用返回时输入参数不为 null。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute"><summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许，参数也不会为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)"><summary>使用指定的返回值条件初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"><summary>获取返回值的条件。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute"><summary>指定如果命名参数不为 null，则输出不为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)"><summary>使用关联的参数名称初始化属性。</summary><param name="parameterName">
+            关联的参数名称。如果为指定参数传递的参数为非 null，则输出为非 null。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName"><summary>获取关联的参数名。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute"><summary>应用于在任何情况下都不会返回的方法。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute"><summary>指定如果关联的布尔参数传递了指定的值，则该方法将不返回。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)"><summary>使用指定的参数值初始化特性。</summary><param name="parameterValue">
+            条件参数值。如果传递给关联参数的参数与此值匹配，则诊断工具将视方法之后的代码为不可达。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue"><summary>获取条件参数值。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute"><summary>指定该方法或属性将确保列出的字段和属性成员具有非 null 值。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)"><summary>初始化包含字段或属性成员的属性。</summary><param name="member">
+            确保不为null的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])"><summary>使用字段和属性成员的列表初始化特性。</summary><param name="members">承诺不为 null 的字段和属性成员的列表。</param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members"><summary>获取字段或属性成员名称。</summary></member><member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute"><summary>指定当返回指定的返回值条件时，方法或属性将确保列出的字段和属性成员不为 null。</summary></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)"><summary>使用指定的返回值条件和字段或属性成员初始化该特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param><param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param></member><member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])"><summary>使用指定的返回值条件和字段及属性成员列表初始化特性。</summary><param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param><param name="members">
+            承诺不为 null 的字段和属性成员列表。
+            </param></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue"><summary>获取返回值条件。</summary></member><member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members"><summary>获取字段或属性成员名称。</summary></member></members>
+</doc>

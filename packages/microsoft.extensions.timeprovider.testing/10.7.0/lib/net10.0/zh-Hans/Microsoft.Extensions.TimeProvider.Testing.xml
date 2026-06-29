@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.TimeProvider.Testing</name>
+    </assembly>
+    <members><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds"><summary>
+             此存储库报告的各种诊断 ID。
+            </summary><remarks>
+             添加新的诊断 ID 时，请向根 <c>Directory.Build.targets</c> 文件添加相应的抑制，并向 <c>docs/list-of-diagnostics.md</c> 添加文档条目。
+            </remarks></member><member name="T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments"><summary>
+             此仓库支持的实验。
+            </summary></member><member name="T:Microsoft.Shared.Diagnostics.Throw"><summary>
+    定义用于引发异常的静态方法。
+    </summary><remarks>
+    主要目的是减少代码量、提高性能，并标准化异常消息。
+    </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)"><summary>
+    如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />。
+    </summary><typeparam name="T">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的对象。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)"><summary>
+            如果指定的参数为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；如果指定的成员为 <see langword="null" />，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><typeparam name="TParameter">要检查是否为 <see langword="null" /> 的参数类型。</typeparam><typeparam name="TMember">要检查是否为 <see langword="null" /> 的成员类型。</typeparam><param name="argument">要检查是否为 <see langword="null" /> 的参数。</param><param name="member">要检查是否为 <see langword="null" /> 的对象成员。</param><param name="paramName">被检查的参数的名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+            Throws.IfNullOrMemberNull(myObject, myObject?.MyProperty)
+            </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)"><summary>
+    如果指定的成员为 null，则引发 <see cref="T:System.ArgumentException" />。
+    </summary><typeparam name="TParameter">参数类型。</typeparam><typeparam name="TMember">要检查是否为 null 的成员类型。</typeparam><param name="argument">成员所属的参数。</param><param name="member">要检查是否为 null 的对象成员。</param><param name="paramName">正在检查的参数名称。</param><param name="memberName">成员的名称。</param><returns><paramref name="member" /> 的原始值。</returns><example><code language="csharp">
+    Throws.IfMemberNull(myObject, myObject.MyProperty)
+    </code></example></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)"><summary>
+            如果指定的字符串为 <see langword="null" /> 或空白，则分别引发 <see cref="T:System.ArgumentNullException" /> 或 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查 <see langword="null" /> 或空白的字符串。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)"><summary>
+            如果字符串为 <see langword="null" />，则引发 <see cref="T:System.ArgumentNullException" />；
+            如果字符串为空，则引发 <see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要检查是否为 <see langword="null" /> 或空的字符串。</param><param name="paramName">所检查参数的名称。</param><returns><paramref name="argument" /> 参数的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)"><summary>
+    当参数的缓冲区大小小于所需的缓冲区大小时，会引发 <see cref="T:System.ArgumentException" />。
+    </summary><param name="bufferSize">实际缓冲区大小。</param><param name="requiredSize">所需缓冲区大小。</param><param name="paramName">要检查的参数名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)"><summary>
+    如果枚举值无效，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">要评估的参数。</param><param name="paramName">正在检查的参数的名称。</param><typeparam name="T">枚举的类型。</typeparam><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)"><summary>
+            如果集合为<see langword="null" />，则引发<see cref="T:System.ArgumentNullException" />；如果为空，则引发<see cref="T:System.ArgumentException" />。
+            </summary><param name="argument">要计算的集合。</param><param name="paramName">正在检查的参数名称。</param><typeparam name="T">集合中对象的类型。</typeparam><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)"><summary>
+        抛出 <see cref="T:System.ArgumentNullException" /> 异常。
+    </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)"><summary>
+    抛出 <see cref="T:System.ArgumentNullException" /> 异常。
+    </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)"><summary>
+            引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="paramName">导致异常的参数的名称。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)"><summary>
+            引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)"><summary>
+    抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="paramName">导致异常的参数名称。</param><param name="actualValue">导致此异常的参数值。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)"><summary>
+            引发一个 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数的名称。</param><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)"><summary>
+            抛出 <see cref="T:System.ArgumentException" />。
+            </summary><param name="paramName">导致异常的参数名称。</param><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param><remarks>
+            如果 <paramref name="innerException" /> 不是 <see langword="null" />，则在处理内部异常的 catch 块中抛出当前异常。
+            </remarks></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)"><summary>
+            引发一个 <see cref="T:System.InvalidOperationException" />。
+            </summary><param name="message">描述错误的消息。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)"><summary>
+            引发 <see cref="T:System.InvalidOperationException" />。
+    </summary><param name="message">描述错误的消息。</param><param name="innerException">导致当前异常的异常。</param></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字小于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+    如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于或等于 max 的数字。</param><param name="min">参数允许范围的下限。</param><param name="max">参数允许范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)"><summary>
+            如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">要检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定的数字小于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+    </summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定数字大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">被检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)"><summary>
+    如果指定数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)"><summary>
+            如果指定的数字不在指定的范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)"><summary>如果指定的数字小于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。</summary><param name="argument">预期小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)"><summary>
+            如果指定数字不在指定范围内，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于或等于 max 的数字。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)"><summary>
+            如果指定的数字等于0，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于 min，则引发 <see cref="T:System.ArgumentOutOfRangeException" /> 异常。
+            </summary><param name="argument">应小于 min 的数字。</param><param name="min">必须小于 argument 的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)"><summary>
+    如果指定数字大于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数字。</param><param name="max">必须大于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">预期要小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字大于或等于最大值，则抛出 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">要验证其大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)"><summary>
+            如果指定的数字不在指定范围内，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望大于等于max的数字。</param><param name="min">参数值允许范围的下限。</param><param name="max">参数值允许范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)"><summary>
+    如果指定的数字等于0，则引发<see cref="T:System.ArgumentOutOfRangeException" />异常。
+    </summary><param name="argument">预期不为零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns>参数<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)"><summary>
+    如果指定的数字小于最小值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望小于最小值的数字。</param><param name="min">必须小于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)"><summary>
+    如果指定的数值大于最大值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">预期大于最大值的数值。</param><param name="max">必须大于参数的数值。</param><param name="paramName">正在检查的参数名称。</param><returns>返回 <paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)"><summary>
+            如果指定的数字小于或等于最小值，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">应小于或等于最小值的数字。</param><param name="min">必须小于或等于参数的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)"><summary>
+    如果指定数字大于或等于最大值，则引发<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望大于或等于最大值的数字。</param><param name="max">必须大于或等于参数的数字。</param><param name="paramName">正在检查的参数名称。</param><returns><paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)"><summary>
+    如果指定的数字不在指定的范围内，则抛出<see cref="T:System.ArgumentOutOfRangeException" />。
+    </summary><param name="argument">期望的数字应大于或等于max。</param><param name="min">允许的参数值范围的下限。</param><param name="max">允许的参数值范围的上限。</param><param name="paramName">正在检查的参数名称。</param><returns>返回<paramref name="argument" />的原始值。</returns></member><member name="M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)"><summary>
+            如果指定的数字等于 0，则引发 <see cref="T:System.ArgumentOutOfRangeException" />。
+            </summary><param name="argument">期望不等于零的数字。</param><param name="paramName">正在检查的参数的名称。</param><returns><paramref name="argument" /> 的原始值。</returns></member><member name="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider"><summary>
+            表示一个合成时间提供程序，可用于在测试中启用确定性行为。
+            </summary></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.#ctor"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> 类的新实例。
+            </summary><remarks>
+            这会创建一个时间初始设置为 2000 年 1 月 1 日午夜的时间提供程序。
+            该提供程序设置为在每次读取时不会自动推进时间。
+            </remarks></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.#ctor(System.DateTimeOffset)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> 类的新实例。
+            </summary><param name="startDateTime">提供程序报告的初始时间和日期。</param><remarks>
+            提供程序被设置为不会在每次读取时自动推进时间。
+            </remarks></member><member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.Start"><summary>
+            获取此提供程序的开始日期和时间。
+            </summary></member><member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.AutoAdvanceAmount"><summary>
+            获取或设置每次读取时钟时时间前进的时间量。
+            </summary><remarks>
+            此属性默认为 <see cref="F:System.TimeSpan.Zero" />。
+            </remarks><exception cref="T:System.ArgumentOutOfRangeException">时间值小于 <see cref="F:System.TimeSpan.Zero" />。</exception></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetUtcNow"><inheritdoc /></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.SetUtcNow(System.DateTimeOffset)"><summary>
+            在UTC时区中推进日期和时间。
+            </summary><param name="value">在UTC时区中的日期和时间。</param><exception cref="T:System.ArgumentOutOfRangeException">提供的时间值在当前时间之前。</exception><remarks>
+            此方法仅推进时间。如果将时间向前设置为超出任何未完成计时器的触发点，这些计时器将立即触发。
+            这与 <see cref="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.AdjustTime(System.DateTimeOffset)" /> 方法不同，后者对计时器没有影响。
+            </remarks></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.Advance(System.TimeSpan)"><summary>
+    按指定量推进时间。
+  </summary><param name="delta">推进时钟的时间量。</param><remarks>
+    推进时间会影响从此提供程序创建的计时器，以及所有直接或间接使用此提供程序作为时间源的其他操作。而当使用<see cref="P:System.TimeProvider.System" />时，时间在硬件中自动前进，但对于假时间提供程序，应用程序负责通过调用此方法显式地执行此操作。
+  </remarks><exception cref="T:System.ArgumentOutOfRangeException">时间值小于<see cref="F:System.TimeSpan.Zero" />。</exception></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.AdjustTime(System.DateTimeOffset)"><summary>
+            设置UTC时区的日期和时间。
+            </summary><param name="value">UTC时区的日期和时间。</param><remarks>
+            此方法更新当前时间，对未完成的计时器没有影响。这类似于真实系统中系统时间发生变化时的情况。
+            </remarks></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetTimestamp"><inheritdoc /></member><member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.LocalTimeZone"><inheritdoc /></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.SetLocalTimeZone(System.TimeZoneInfo)"><summary>
+            设置本地时区。
+            </summary><param name="localTimeZone">本地时区。</param></member><member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.TimestampFrequency"><summary>
+        获取每秒从 <see cref="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetTimestamp" /> 增加的量。
+    </summary><remarks>
+        这固定为 <see cref="F:System.TimeSpan.TicksPerSecond" /> 的值。
+    </remarks></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.ToString"><summary>
+            返回此提供程序对当前时间的字符串表示形式。
+            </summary><returns>一个字符串，表示此提供程序的当前时间。</returns></member><member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.CreateTimer(System.Threading.TimerCallback,System.Object,System.TimeSpan,System.TimeSpan)"><inheritdoc /></member></members>
+</doc>

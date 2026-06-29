@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Configuration.Xml</name>
+    </assembly>
+    <members><member name="P:Microsoft.Extensions.Configuration.Xml.XmlConfigurationElement.SiblingName"><summary>
+            ElementName 和 Name 的组合，用作检测同级元素的依据。
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.Xml.XmlConfigurationElement.ChildrenBySiblingName"><summary>
+            此元素的子元素
+            </summary></member><member name="P:Microsoft.Extensions.Configuration.Xml.XmlConfigurationElement.SingleChild"><summary>
+            性能优化：对于只有一个子元素的元素，不要初始化字典和列表。
+            </summary></member><member name="T:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider"><summary>
+    提供从 XML 文件获取的配置键值对。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Xml.XmlConfigurationSource)"><summary>
+            使用指定的源初始化新实例。
+            </summary><param name="source">源设置。</param></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider.Load(System.IO.Stream)"><summary>
+            从流中加载XML数据。
+            </summary><param name="stream">要读取的流。</param></member><member name="T:Microsoft.Extensions.Configuration.Xml.XmlConfigurationSource"><summary>
+    一个基于XML文件的<see cref="T:Microsoft.Extensions.Configuration.FileConfigurationSource" />。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源生成 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor"><summary>
+            加密和解密XML。
+            </summary></member><member name="F:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor.Instance"><summary>
+            访问单例解密器实例。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor.#ctor"><summary>
+            初始化 XmlDocumentDecryptor 类的新实例。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor.CreateDecryptingXmlReader(System.IO.Stream,System.Xml.XmlReaderSettings)"><summary>
+            创建一个可透明解密数据的<see cref="T:System.Xml.XmlReader" />。
+            </summary><param name="input">用于读取XML配置数据的输入<see cref="T:System.IO.Stream" />。</param><param name="settings">新<see cref="T:System.Xml.XmlReader" />实例的设置。</param><returns>一个可透明解密数据的<see cref="T:System.Xml.XmlReader" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor.DecryptDocumentAndCreateXmlReader(System.Xml.XmlDocument)"><summary>
+            创建一个可以解密加密XML文档的读取器。
+            </summary><param name="document">文档。</param><returns>一个可以读取文档的XmlReader。</returns></member><member name="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider"><summary>
+            提供从 XML 流中获取的配置键值对。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationSource)"><summary>
+            初始化 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider" /> 类的新实例。
+            </summary><param name="source"><see cref="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationSource" />。</param></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider.Read(System.IO.Stream,Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor)"><summary>
+            将 XML 值流读入键/值字典。
+            </summary><param name="stream">XML 数据流。</param><param name="decryptor">用于解密的 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlDocumentDecryptor" />。</param><returns>从流中读取的 <see cref="T:System.Collections.Generic.IDictionary`2" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider.Load(System.IO.Stream)"><summary>
+            从流中加载XML配置键/值对到提供程序。
+            </summary><param name="stream">从中加载ini配置数据的<see cref="T:System.IO.Stream" />。</param></member><member name="T:Microsoft.Extensions.Configuration.Xml.Prefix"><summary>
+    以无需使用string.Join的方式构建配置键的帮助类
+    </summary></member><member name="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationSource"><summary>
+            将 XML 文件表示为 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />。
+            </summary></member><member name="M:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)"><summary>
+            为此源生成 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider" />。
+            </summary><param name="builder"><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><returns>一个 <see cref="T:Microsoft.Extensions.Configuration.Xml.XmlStreamConfigurationProvider" />。</returns></member><member name="T:Microsoft.Extensions.Configuration.XmlConfigurationExtensions"><summary>
+    用于添加<see cref="T:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider" />的扩展方法。
+    </summary></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)"><summary>
+            将位于<paramref name="path" />处的XML配置提供程序添加到<paramref name="builder" />。
+            </summary><param name="builder">要添加到的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于存储在<paramref name="builder" />的<see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" />中的基路径的路径。</param><returns>返回的<see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean)"><summary>
+    将位于 <paramref name="path" /> 的 XML 配置提供程序添加到 <paramref name="builder" />。
+    </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><param name="optional">如果文件是可选的，则为 <see langword="true" />。</param><returns><see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean,System.Boolean)"><summary>
+            将位于 <paramref name="path" /> 的 XML 配置提供程序添加到 <paramref name="builder" />。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><param name="optional">如果文件是可选的，则为 <see langword="true" />。</param><param name="reloadOnChange">是否在文件更改时重新加载配置。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.FileProviders.IFileProvider,System.String,System.Boolean,System.Boolean)"><summary>
+            向 <paramref name="builder" /> 添加 XML 配置源。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="provider">用于访问文件的 <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider" />。</param><param name="path">相对于存储在 <paramref name="builder" /> 的 <see cref="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Properties" /> 中的基路径的路径。</param><param name="optional">如果文件是可选的，则为 <see langword="true" />。</param><param name="reloadOnChange">是否在文件更改时重新加载配置。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.Xml.XmlConfigurationSource})"><summary>
+    将XML配置源添加到 <paramref name="builder" />。
+    </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="configureSource">配置源。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="M:Microsoft.Extensions.Configuration.XmlConfigurationExtensions.AddXmlStream(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.IO.Stream)"><summary>
+            向 <paramref name="builder" /> 添加一个 XML 配置源。
+            </summary><param name="builder">要添加到的 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</param><param name="stream">从中读取 XML 配置数据的 <see cref="T:System.IO.Stream" />。</param><returns>返回 <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder" />。</returns></member><member name="P:System.SR.Error_InvalidFilePath"><summary>文件路径必须是非空字符串。</summary></member><member name="P:System.SR.Error_KeyIsDuplicated"><summary>发现重复的键'{0}'。{1}</summary></member><member name="P:System.SR.Error_NamespaceIsNotSupported"><summary>不支持 XML 命名空间。{0}</summary></member><member name="P:System.SR.Error_UnsupportedNodeType"><summary>发现不支持的节点类型“{0}”。{1}</summary></member><member name="P:System.SR.Msg_LineInfo"><summary>第{0}行，第{1}列。</summary></member></members>
+</doc>
