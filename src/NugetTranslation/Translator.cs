@@ -55,7 +55,7 @@ public static class Translator
         Log.Logger = new LoggerConfiguration()
                    .Enrich.FromLogContext()
                    .WriteTo.Console()
-                   .MinimumLevel.Verbose()
+                   .MinimumLevel.Information()
                    .CreateLogger();
 
 
@@ -85,7 +85,7 @@ public static class Translator
             .Enrich.FromLogContext()
             .WriteTo.Console()
             .WriteTo.File(Path.Combine("../log", $"{packageId.ToLower()}@{targetVersion}.log"), buffered: false)
-            .MinimumLevel.Verbose()
+            .MinimumLevel.Information()
             .CreateLogger();
 
         #endregion
