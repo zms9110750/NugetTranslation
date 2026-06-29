@@ -7,6 +7,7 @@ using OpenAI;
 using OpenAI.Chat;
 using Polly;
 using Serilog;
+using System.Diagnostics;
 using System.IO.Compression;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -19,6 +20,15 @@ public static class Translator
 {
     public static async Task Run(string packageId, string packageVersion, string language)
     {
+        // 启用 OpenAI SDK 遥测
+        AppContext.SetSwitch("OpenAI.Experimental.EnableOpenTelemetry", true);
+        using var openAiListener = new ActivityListener();
+        openAiListener.ShouldListenTo = source => source.Name.StartsWith("OpenAI.");
+        openAiListener.Sample = (ref ActivityCreationOptions<ActivityContext> options) => ActivitySamplingResult.AllData;
+        openAiListener.ActivityStopped = activity =>
+            Log.Logger.Debug("[OpenAI] {Name}，耗时 {Duration:F2}ms", activity.DisplayName, activity.Duration.TotalMilliseconds);
+        ActivitySource.AddActivityListener(openAiListener);
+
         var build = new ServiceCollection();
         build.AddChatClient();
         var cacheDir = Path.GetFullPath(Path.Combine("..", "cache", language));
@@ -131,8 +141,14 @@ public static class Translator
                     var resert = await cache.GetOrSetAsync(member.ToString(), ct => pipeline.ExecuteAsync(async (CancellationToken cance) =>
                       {
                           Log.Logger.Debug("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
+
+                          var apiSw = System.Diagnostics.Stopwatch.StartNew();
                           var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions)
                           .WaitAsync(TimeSpan.FromSeconds(60), cance);
+                          apiSw.Stop();
+
+                          Log.Logger.Debug("API 返回，耗时 {Duration:F2}s，Member: {Member}",
+                              apiSw.Elapsed.TotalSeconds, member.Attribute("name")?.Value ?? "default");
 
                           // 统计 token 用量（无论后续验证是否通过，API 已经消费了）
                           var usage = completion.Value.Usage;

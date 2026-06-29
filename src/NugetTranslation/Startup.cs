@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using NeoSmart.Caching.Sqlite;
 using NuGet.Protocol;
 using NuGet.Protocol.Core.Types;
@@ -7,6 +8,8 @@ using OpenAI.Chat;
 using Polly;
 using Polly.RateLimiting;
 using Polly.Retry;
+using Polly.Telemetry;
+using Serilog;
 using System.ClientModel;
 using System.CommandLine;
 using System.Reflection;
@@ -91,6 +94,13 @@ internal static class Startup
             PermitLimit = 200,
             QueueLimit = 200
         }));
+
+        // Polly 遥测：让 Polly 自行输出格式化的执行日志（耗时、重试次数、结果）
+        rpb.ConfigureTelemetry(new TelemetryOptions
+        {
+            LoggerFactory = LoggerFactory.Create(builder => builder.AddSerilog(Log.Logger))
+        });
+
         services.AddSingleton(rpb.Build());
         return services;
     }
