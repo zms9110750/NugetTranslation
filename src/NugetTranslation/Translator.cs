@@ -25,8 +25,7 @@ public static class Translator
         using var openAiListener = new ActivityListener();
         openAiListener.ShouldListenTo = source => source.Name.StartsWith("OpenAI.");
         openAiListener.Sample = (ref ActivityCreationOptions<ActivityContext> options) => ActivitySamplingResult.AllData;
-        openAiListener.ActivityStopped = activity =>
-        {
+        openAiListener.ActivityStopped = activity => {
             Log.Logger.Debug("[OpenAI] {Name}，耗时 {Duration:F2}ms，标签: {@Tags}",
                 activity.DisplayName, activity.Duration.TotalMilliseconds,
                 activity.Tags?.ToDictionary(t => t.Key, t => t.Value));
@@ -144,57 +143,97 @@ public static class Translator
             long totalInputTokens = 0, totalOutputTokens = 0;
             long totalCalls = 0;
             var concurrency = new SemaphoreSlim(200);
-            var tasks = memberList.Select(async member =>
-            {
+            var tasks = memberList.Select(async member => {
                 await concurrency.WaitAsync();
                 try
                 {
                     var resert = await cache.GetOrSetAsync(member.ToString(), ct => pipeline.ExecuteAsync(async (CancellationToken cance) =>
-                      {
-                          Log.Logger.Debug("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
+                    {
+                        Log.Logger.Debug("缓存缺失: {Member}", member.Attribute("name")?.Value ?? "default");
 
-                          var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions);
+                        var completion = await chatClient.CompleteChatAsync([sysmsg, member.ToString()], chatOptions);
 
-                          // 统计 token 用量（无论后续验证是否通过，API 已经消费了）
-                          var usage = completion.Value.Usage;
-                          if (usage != null)
-                          {
-                              Interlocked.Add(ref totalInputTokens, usage.InputTokenCount);
-                              Interlocked.Add(ref totalOutputTokens, usage.OutputTokenCount);
-                              var calls = Interlocked.Increment(ref totalCalls);
-                              if (calls % 100 == 0)
-                              {
-                                  var cost = (totalInputTokens / 1_000_000m * 1m) + (totalOutputTokens / 1_000_000m * 2m);
-                                  Log.Logger.Information("已处理 {Calls} 条翻译，累计输入 {In} tokens，输出 {Out} tokens，估算费用 {Cost:F2} 元", calls, totalInputTokens, totalOutputTokens, cost);
-                              }
-                          }
+                        // 统计 token 用量（无论后续验证是否通过，API 已经消费了）
+                        var usage = completion.Value.Usage;
+                        if (usage != null)
+                        {
+                            Interlocked.Add(ref totalInputTokens, usage.InputTokenCount);
+                            Interlocked.Add(ref totalOutputTokens, usage.OutputTokenCount);
+                            var calls = Interlocked.Increment(ref totalCalls);
+                            if (calls % 100 == 0)
+                            {
+                                var cost = (totalInputTokens / 1_000_000m * 1m) + (totalOutputTokens / 1_000_000m * 2m);
+                                Log.Logger.Information("已处理 {Calls} 条翻译，累计输入 {In} tokens，输出 {Out} tokens，估算费用 {Cost:F2} 元", calls, totalInputTokens, totalOutputTokens, cost);
+                            }
+                        }
 
-                          var text = completion.Value.Content[0].Text;
-                          if (regex.Match(text) is { Success: true, Groups.Count: > 1 } match)
-                          {
-                              text = match.Groups[1].Value;
-                          }
-                          text = text.Trim();
+                        var text = completion.Value.Content[0].Text;
+                        if (regex.Match(text) is { Success: true, Groups.Count: > 1 } match)
+                        {
+                            text = match.Groups[1].Value;
+                        }
+                        text = text.Trim();
 
-                          XElement e;
-                          try
-                          {
-                              e = XElement.Parse(text);
-                          }
-                          catch (Exception)
-                          {
-                              Log.Logger.Debug("无法解析翻译结果为XML，原文: {Original}, 翻译结果: {Translation}", member.ToString(), text);
-                              throw;
-                          }
-                          if ((string?)e.Attribute("name") != (string?)member.Attribute("name"))
-                          {
-                              Log.Logger.Warning("翻译结果的成员名称与原文不匹配，原文: {Original}, 翻译结果: {Translation}", member.ToString(), text);
-                              throw new XmlException("翻译结果的XML格式不正确");
-                          }
+                        XElement e;
+                        try
+                        {
+                            e = XElement.Parse(text);
+                        }
+                        catch (Exception)
+                        {
+                            Log.Logger.Debug("无法解析翻译结果为XML，原文: {Original}, 翻译结果: {Translation}", member.ToString(), text);
+                            throw;
+                        }
+                        if ((string?)e.Attribute("name") != (string?)member.Attribute("name"))
+                        {
+                            var correctName = (string?)member.Attribute("name");
+                            var wrongName = (string?)e.Attribute("name");
+                            Log.Logger.Warning("翻译结果的成员名称与原文不匹配，原文: {Original}, 翻译结果: {Translation}", member.ToString(), text);
 
-                          return text;
+                            // 带历史消息重试：告诉 AI 哪里错了
+                            var fixMsg = ChatMessage.CreateUserMessage(
+                                $"你的输出 member name 不匹配。\n" +
+                                $"正确的 name 应为: {correctName}\n" +
+                                $"你的输出 name 是: {wrongName}\n" +
+                                $"请重新翻译，保持 member name 不变。");
+                            var retryCompletion = await chatClient.CompleteChatAsync(
+                                [sysmsg, member.ToString(), text, fixMsg], chatOptions);
 
-                      }, ct).AsTask(), tags: [member.Attribute("name")?.Value ?? "default"], token: CancellationToken.None);
+                            var retryText = retryCompletion.Value.Content[0].Text;
+                            if (regex.Match(retryText) is { Success: true, Groups.Count: > 1 } retryMatch)
+                                retryText = retryMatch.Groups[1].Value;
+                            retryText = retryText.Trim();
+
+                            // 统计重试的 token
+                            var retryUsage = retryCompletion.Value.Usage;
+                            if (retryUsage != null)
+                            {
+                                Interlocked.Add(ref totalInputTokens, retryUsage.InputTokenCount);
+                                Interlocked.Add(ref totalOutputTokens, retryUsage.OutputTokenCount);
+                            }
+
+                            XElement retryE;
+                            try
+                            {
+                                retryE = XElement.Parse(retryText);
+                            }
+                            catch (Exception)
+                            {
+                                Log.Logger.Debug("重试仍然无法解析为XML，原文: {Original}, 重试结果: {Translation}", member.ToString(), retryText);
+                                throw;
+                            }
+                            if ((string?)retryE.Attribute("name") != (string?)member.Attribute("name"))
+                            {
+                                Log.Logger.Error("重试后成员名称仍然不匹配，放弃。原文: {Original}, 重试结果: {Translation}", member.ToString(), retryText);
+                                throw new XmlException("翻译结果的XML格式不正确");
+                            }
+
+                            return retryText;
+                        }
+
+                        return text;
+
+                    }, ct).AsTask(), tags: [member.Attribute("name")?.Value ?? "default"], token: CancellationToken.None);
                     var e = XElement.Parse(resert);
                     lock (membersTranslate)
                     {
