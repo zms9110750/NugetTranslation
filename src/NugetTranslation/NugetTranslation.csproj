@@ -12,16 +12,14 @@
       <_Parameter1>CacheRebuilder</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
-
-  <PropertyGroup Condition="'$(Configuration)'=='Local'">
-    <DefineConstants>LOCAL</DefineConstants>
-  </PropertyGroup>
+ 
   <ItemGroup>
     <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.11.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
     <PackageReference Include="Polly.RateLimiting" Version="8.7.0" />
     <PackageReference Include="Polly.Extensions" Version="8.4.2" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.12" />
     <PackageReference Include="System.CommandLine" Version="2.0.9" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="10.0.0" />
     <PackageReference Include="NuGet.Protocol" Version="7.6.0" />
@@ -32,5 +30,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.9" Condition="'$(Configuration)'=='Local'" />
     <None Include=".github/workflows/*.yaml" Link="workflows/%(Filename)%(Extension)" />
     <None Include=".github/workflows/*.yml" Link="workflows/%(Filename)%(Extension)" />
+    <Content Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

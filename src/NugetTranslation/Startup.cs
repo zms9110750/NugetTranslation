@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using NeoSmart.Caching.Sqlite;
 using NuGet.Protocol;
 using NuGet.Protocol.Core.Types;
@@ -9,13 +10,9 @@ using Polly;
 using Polly.RateLimiting;
 using Polly.Retry;
 using Polly.Telemetry;
-using Polly.Timeout;
 using Serilog;
 using System.ClientModel;
-using System.CommandLine;
-using System.Reflection;
 using System.Text.Json;
-using System.Threading;
 using System.Threading.RateLimiting;
 using System.Xml;
 using ZiggyCreatures.Caching.Fusion;
@@ -28,10 +25,10 @@ namespace NugetTranslation;
 internal static class Startup
 {
     /// <summary>
-    /// ×¢²áFusionCacheÎªHybridCache²¢Ê¹ÓÃSqliteÎª¶ş¼¶»º´æ
+    /// æ³¨å†ŒFusionCacheä¸ºHybridCacheå¹¶ä½¿ç”¨Sqliteä¸ºäºŒçº§ç¼“å­˜
     /// </summary>
-    /// <param name="services">·şÎñÈİÆ÷</param> 
-    /// <param name="cachePath">»º´æÂ·¾¶</param>
+    /// <param name="services">æœåŠ¡å®¹å™¨</param> 
+    /// <param name="cachePath">ç¼“å­˜è·¯å¾„</param>
     public static IFusionCacheBuilder AddFusionCacheAndSqliteCache(this IServiceCollection services, string cachePath = "cache.sqlite.db", JsonSerializerOptions? jsonOptions = null)
     {
         return services
@@ -39,16 +36,33 @@ internal static class Startup
             .AddSqliteCache(cachePath)
             .AddFusionCacheSystemTextJsonSerializer(jsonOptions)
             .AddFusionCache()
-            .WithDefaultEntryOptions(options =>
-            {
+            .WithDefaultEntryOptions(options => {
                 options.DistributedCacheDuration = TimeSpan.FromDays(365 * 1000);
             })
             .TryWithAutoSetup()
             .AsHybridCache();
     }
 
-    /// <summary>×¢²á<see cref="ChatClient"/></summary>
-    /// <remarks>Debug ´Ó UserSecrets ¶ÁÈ¡£»Release ´Ó»·¾³±äÁ¿¶ÁÈ¡</remarks>
+    /// <summary>æ³¨å†Œå‘½åFusionCacheã€‚</summary>
+    public static IFusionCacheBuilder AddFusionCacheAndSqliteCache(this IServiceCollection services, string name, string cachePath, JsonSerializerOptions? jsonOptions = null)
+    {
+        services.AddMemoryCache();
+        services.AddFusionCacheSystemTextJsonSerializer(jsonOptions);
+
+        var sqliteCache = new SqliteCache(
+            Options.Create(new SqliteCacheOptions { CachePath = cachePath }));
+
+        return services
+            .AddFusionCache(name)
+            .WithDistributedCache(sqliteCache)
+            .WithDefaultEntryOptions(options => {
+                options.DistributedCacheDuration = TimeSpan.FromDays(365 * 1000);
+            })
+            .AsHybridCache();
+    }
+
+    /// <summary>æ³¨å†Œ<see cref="ChatClient"/></summary>
+    /// <remarks>Debug ä» UserSecrets è¯»å–ï¼›Release ä»ç¯å¢ƒå˜é‡è¯»å–</remarks>
     public static IServiceCollection AddChatClient(this IServiceCollection services, string? model = null, string? apiKey = null, string? endpoint = null)
     {
 #if LOCAL
@@ -72,36 +86,35 @@ internal static class Startup
         return services.AddSingleton(new ChatClient(model, new ApiKeyCredential(apiKey), new OpenAIClientOptions { Endpoint = new Uri(endpoint) }));
     }
 
-    /// <summary>×¢²á<see cref="SourceRepository"/>µÄÍøÂç»ñÈ¡¡£</summary> 
+    /// <summary>æ³¨å†Œ<see cref="SourceRepository"/>çš„ç½‘ç»œè·å–ã€‚</summary> 
     public static IServiceCollection AddSourceRepository(this IServiceCollection services, string url = "https://api.nuget.org/v3/index.json")
     {
         return services.AddSingleton(Repository.Factory.GetCoreV3(url));
     }
-    /// <summary>×¢²á<see cref="SourceRepository"/>µÄÍøÂç»ñÈ¡¡£</summary> 
-    /// <param name="replenishmentRatePerSecond">Ã¿ÃëÁîÅÆ²¹³äÁ¿</param>
-    /// <param name="maxBurst">×î¸ßÍ»·¢Á¿£¨ÁîÅÆÍ°ÈİÁ¿£©</param>
-    /// <param name="expectedCompletionTimeInSeconds">ÆÚÍûÍê³ÉÊ±¼ä£¨Ãë£©</param>
+    /// <summary>æ³¨å†Œ<see cref="SourceRepository"/>çš„ç½‘ç»œè·å–ã€‚</summary> 
+    /// <param name="replenishmentRatePerSecond">æ¯ç§’ä»¤ç‰Œè¡¥å……é‡</param>
+    /// <param name="maxBurst">æœ€é«˜çªå‘é‡ï¼ˆä»¤ç‰Œæ¡¶å®¹é‡ï¼‰</param>
+    /// <param name="expectedCompletionTimeInSeconds">æœŸæœ›å®Œæˆæ—¶é—´ï¼ˆç§’ï¼‰</param>
     public static IServiceCollection AddPolly(this IServiceCollection services, int replenishmentRatePerSecond = 10, int maxBurst = 100, TimeSpan expectedCompletionTimeInSeconds = default)
     {
         var rpb = new ResiliencePipelineBuilder<string>();
-        rpb.AddRetry(new RetryStrategyOptions<string>
-        {
+        rpb.AddRetry(new RetryStrategyOptions<string> {
             ShouldHandle = new PredicateBuilder<string>().HandleResult(x => x is null)
                 .Handle<XmlException>()
                 .Handle<TimeoutException>()
-                , MaxRetryAttempts = 1
-            , Delay = TimeSpan.FromSeconds(10)
+                ,
+            MaxRetryAttempts = 1
+            ,
+            Delay = TimeSpan.FromSeconds(10)
         });
         rpb.AddTimeout(TimeSpan.FromSeconds(60));
-        rpb.AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
-        {
+        rpb.AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions {
             PermitLimit = 200,
             QueueLimit = 200
         }));
 
-        // Polly Ò£²â£ºÈÃ Polly ×ÔĞĞÊä³ö¸ñÊ½»¯µÄÖ´ĞĞÈÕÖ¾£¨ºÄÊ±¡¢ÖØÊÔ´ÎÊı¡¢½á¹û£©
-        rpb.ConfigureTelemetry(new TelemetryOptions
-        {
+        // Polly é¥æµ‹ï¼šè®© Polly è‡ªè¡Œè¾“å‡ºæ ¼å¼åŒ–çš„æ‰§è¡Œæ—¥å¿—ï¼ˆè€—æ—¶ã€é‡è¯•æ¬¡æ•°ã€ç»“æœï¼‰
+        rpb.ConfigureTelemetry(new TelemetryOptions {
             LoggerFactory = LoggerFactory.Create(builder => builder.AddSerilog(Log.Logger))
         });
 
@@ -110,13 +123,13 @@ internal static class Startup
     }
 
     /// <summary>
-    /// ¹¹½¨¶à²ãÏŞÁ÷²ßÂÔ¹ÜµÀ
+    /// æ„å»ºå¤šå±‚é™æµç­–ç•¥ç®¡é“
     /// </summary>
-    /// <param name="builder">¹ÜµÀ¹¹½¨Æ÷</param>
-    /// <param name="replenishmentRatePerSecond">Ã¿ÃëÁîÅÆ²¹³äÁ¿</param>
-    /// <param name="maxBurst">×î¸ßÍ»·¢Á¿£¨ÁîÅÆÍ°ÈİÁ¿£©</param>
-    /// <param name="expectedCompletionTimeInSeconds">ÆÚÍûÍê³ÉÊ±¼ä£¨Ãë£©</param>
-    /// <returns>ÅäÖÃºÃµÄµ¯ĞÔ¹ÜµÀ</returns>
+    /// <param name="builder">ç®¡é“æ„å»ºå™¨</param>
+    /// <param name="replenishmentRatePerSecond">æ¯ç§’ä»¤ç‰Œè¡¥å……é‡</param>
+    /// <param name="maxBurst">æœ€é«˜çªå‘é‡ï¼ˆä»¤ç‰Œæ¡¶å®¹é‡ï¼‰</param>
+    /// <param name="expectedCompletionTimeInSeconds">æœŸæœ›å®Œæˆæ—¶é—´ï¼ˆç§’ï¼‰</param>
+    /// <returns>é…ç½®å¥½çš„å¼¹æ€§ç®¡é“</returns>
     public static ResiliencePipelineBuilder<T> AddRateLimiterAndRetry<T>(this ResiliencePipelineBuilder<T> builder,
         int replenishmentRatePerSecond, int maxBurst = 0,
        TimeSpan expectedCompletionTimeInSeconds = default)
@@ -130,21 +143,18 @@ internal static class Startup
             expectedCompletionTimeInSeconds = TimeSpan.FromSeconds(maxBurst / replenishmentRatePerSecond);
         }
         return builder
-            // ×îÍâ²ã£ºÎŞÏŞÖØÊÔ£¨²¶»ñËùÓĞÏŞÁ÷´íÎó£©
-            .AddRetry(new RetryStrategyOptions<T>
-            {
+            // æœ€å¤–å±‚ï¼šæ— é™é‡è¯•ï¼ˆæ•è·æ‰€æœ‰é™æµé”™è¯¯ï¼‰
+            .AddRetry(new RetryStrategyOptions<T> {
                 ShouldHandle = new PredicateBuilder<T>().Handle<RateLimiterRejectedException>(),
                 MaxRetryAttempts = 6,
                 Delay = TimeSpan.FromSeconds(maxBurst) / replenishmentRatePerSecond
             })
-            // ÖĞ¼ä²ã£º²¢·¢ÏŞÁ÷Æ÷£¨´ø¿ÉÑ¡µÄÅÅ¶Ó£©
-            .AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions
-            {
+            // ä¸­é—´å±‚ï¼šå¹¶å‘é™æµå™¨ï¼ˆå¸¦å¯é€‰çš„æ’é˜Ÿï¼‰
+            .AddRateLimiter(new ConcurrencyLimiter(new ConcurrencyLimiterOptions {
                 PermitLimit = (int)(maxBurst / expectedCompletionTimeInSeconds.TotalSeconds + replenishmentRatePerSecond) + 1,
                 QueueLimit = (int)(replenishmentRatePerSecond * expectedCompletionTimeInSeconds.TotalSeconds) + 1
             }))
-            .AddRateLimiter(new TokenBucketRateLimiter(new TokenBucketRateLimiterOptions
-            {
+            .AddRateLimiter(new TokenBucketRateLimiter(new TokenBucketRateLimiterOptions {
                 TokenLimit = maxBurst,
                 ReplenishmentPeriod = TimeSpan.FromSeconds(1) / replenishmentRatePerSecond,
                 TokensPerPeriod = 1
