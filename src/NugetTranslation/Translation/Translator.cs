@@ -1,7 +1,7 @@
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
-using OpenAI.Chat;
 using Serilog;
+using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -34,8 +34,7 @@ internal sealed class Translator
         var result = new ParseResult(original);
 
         // —— 创建 agent ——
-        var tool = AIFunctionFactory.Create(
-            (string translatedText) => result.TrySet(translatedText),
+        var tool = AIFunctionFactory.Create(result.TrySet,
             name: "ValidateTranslation",
             description: "验证 AI 的翻译结果是否符合 XML 格式，name 属性是否正确");
 
@@ -45,8 +44,8 @@ internal sealed class Translator
                 你是一个翻译器。目标语言代码：{{_language}}。
                 你仅翻译 XML、JSON 等配置文件中的文本内容（如 summary、param、returns 等标签内的文字），
                 不翻译格式标签、属性名、属性值中的标识符。
-                你的输出必须保持 XML 格式和结构不变。
-                翻译完成后调用 ValidateTranslation 工具进行验证。
+                你必须调用 ValidateTranslation 工具，把你的翻译内容作为参数。
+                工具会验证和使用你的翻译格式。你不需要输出对话内容。
                 """,
             name: "Translator",
             tools: [tool]);
@@ -65,18 +64,23 @@ internal sealed class Translator
         // —— 构造会话 ——
         var session = await built.CreateSessionAsync(ct);
 
+        var messages = new List<ChatMessage>();
         if (!string.IsNullOrEmpty(readme))
         {
-            await built.RunAsync(
-                [OpenAI.Chat.ChatMessage.CreateUserMessage(
-                    $"你即将翻译 C# XML 文档注释。为了了解上下文，这是这个库的 Readme 内容：\n{readme}")],
-                session, null, ct);
+            messages.Add(new ChatMessage(ChatRole.User,
+                [
+                    new TextContent($"这是包的 Readme，帮助了解上下文：\n{readme}"),
+                    new TextContent($"这是你要翻译的内容：\n{memberXml}")
+                ]));
+        }
+        else
+        {
+            messages.Add(new ChatMessage(ChatRole.User,
+                [new TextContent($"这是你要翻译的内容：\n{memberXml}")]));
         }
 
         // —— 单次翻译（agent 内部自动处理 AI→tool→AI 重试） ——
-        var chatCompletion = await built.RunAsync(
-            [OpenAI.Chat.ChatMessage.CreateUserMessage($"这是你要翻译的内容：\n{memberXml}")],
-            session, null, ct);
+        var chatCompletion = await built.RunAsync(messages, session, null, ct);
 
         // 取 token 用量
         if (chatCompletion?.Usage is { } tokenUsage)
@@ -114,7 +118,7 @@ internal sealed class Translator
         }
 
         /// <summary>验证并设置翻译结果。成功返回 null，失败返回错误消息字符串。</summary>
-        public string? TrySet(string raw)
+        public string? TrySet([Description("AI 生成的翻译后 XML 文本")] string raw)
         {
             // 去除 markdown fence（断言正则，直接取 Value）
             var match = FenceRegex.Match(raw);

@@ -27,19 +27,20 @@ internal static class Startup
     /// <summary>
     /// 注册FusionCache为HybridCache并使用Sqlite为二级缓存
     /// </summary>
-    /// <param name="services">服务容器</param> 
-    /// <param name="cachePath">缓存路径</param>
     public static IFusionCacheBuilder AddFusionCacheAndSqliteCache(this IServiceCollection services, string cachePath = "cache.sqlite.db", JsonSerializerOptions? jsonOptions = null)
     {
+        services.AddMemoryCache();
+        services.AddFusionCacheSystemTextJsonSerializer(jsonOptions);
+
+        var sqliteCache = new SqliteCache(
+            Options.Create(new SqliteCacheOptions { CachePath = cachePath }));
+
         return services
-            .AddMemoryCache()
-            .AddSqliteCache(cachePath)
-            .AddFusionCacheSystemTextJsonSerializer(jsonOptions)
             .AddFusionCache()
+            .WithDistributedCache(sqliteCache)
             .WithDefaultEntryOptions(options => {
                 options.DistributedCacheDuration = TimeSpan.FromDays(365 * 1000);
             })
-            .TryWithAutoSetup()
             .AsHybridCache();
     }
 

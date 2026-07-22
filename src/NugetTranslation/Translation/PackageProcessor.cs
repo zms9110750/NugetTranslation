@@ -13,7 +13,8 @@ internal sealed class PackageProcessor
     private readonly IFusionCacheProvider _cacheProvider;
     private readonly Translator _translator;
     private static readonly TiktokenTokenizer _tokenizer = TiktokenTokenizer.CreateForEncoding("cl100k_base");
-    private long _totalInputTokens, _totalOutputTokens;
+    private long _totalInputTokens, _totalOutputTokens, _cacheHitTokens;
+    private int _done, _total;
 
     public PackageProcessor(IFusionCacheProvider cacheProvider, Translator translator)
     {
@@ -56,19 +57,23 @@ internal sealed class PackageProcessor
             estimatedTokens += _tokenizer.CountTokens(key, considerPreTokenization: true, considerNormalization: true);
 
         Log.Logger.Information(
-            "{Pkg} 缺失 {Count} 条数据，预测为 {Tokens:F3}M token",
-            packageId, missingSet.Count, estimatedTokens / 1_000_000.0);
+            "{Pkg}@{Ver} 缺失 {Count} 条数据，预测为 {Tokens:F3}M token",
+            packageId, targetVersion, missingSet.Count, estimatedTokens / 1_000_000.0);
 
         // 4. 并发翻译
         if (missingSet.Count > 0)
         {
+            _total = missingSet.Count;
             var semaphore = new SemaphoreSlim(500, 500);
             var tasks = missingSet.Select(key => TranslateOneAsync(key, cache, semaphore));
             await Task.WhenAll(tasks);
 
             Log.Logger.Information(
-                "{Pkg} 翻译完成，输入 {In} tok，输出 {Out} tok",
-                packageId, _totalInputTokens, _totalOutputTokens);
+                "{Pkg} 翻译完成，输入 {In:F3}M tok，输出 {Out:F3}M tok，命中 {Cache:F3}M tok",
+                packageId,
+                _totalInputTokens / 1_000_000.0,
+                _totalOutputTokens / 1_000_000.0,
+                _cacheHitTokens / 1_000_000.0);
         }
 
         // 5. 替换输出
@@ -81,8 +86,9 @@ internal sealed class PackageProcessor
             foreach (var member in members)
             {
                 var maybe = await cache.TryGetAsync<string>(member.ToString());
-                if (maybe.HasValue && maybe.Value is { } cached)
-                    translated.Add(XElement.Parse(cached));
+                if (!maybe.HasValue || maybe.Value is null)
+                    throw new InvalidOperationException($"缓存缺失: {member.Attribute("name")?.Value}");
+                translated.Add(XElement.Parse(maybe.Value, LoadOptions.PreserveWhitespace));
             }
 
             members[0].Parent?.ReplaceWith(translated);
@@ -96,29 +102,58 @@ internal sealed class PackageProcessor
         }
     }
 
-    private int _done;
-
     /// <summary>翻译一条 member，并发安全。</summary>
     private async Task TranslateOneAsync(string key, IFusionCache cache, SemaphoreSlim semaphore)
     {
         await semaphore.WaitAsync();
         try
         {
-            await cache.GetOrSetAsync(key, async ct =>
-            {
-                var result = await _translator.TranslateMemberAsync(key, readme: null, ct);
-                var usage = _translator.LastUsage;
-                if (usage is not null)
-                {
-                    Interlocked.Add(ref _totalInputTokens, usage.InputTokenCount ?? 0);
-                    Interlocked.Add(ref _totalOutputTokens, usage.OutputTokenCount ?? 0);
-                }
-                return result.ToString();
-            });
+            var nameAttr = XElement.Parse(key).Attribute("name")?.Value ?? "";
+            bool wasCached = true;
 
-            var done = Interlocked.Increment(ref _done);
-            if (done % 100 == 0)
-                Log.Logger.Information("翻译进度: {Done}", done);
+            try
+            {
+                await cache.GetOrSetAsync(key,
+                    async ct =>
+                    {
+                        wasCached = false;
+                        var result = await _translator.TranslateMemberAsync(key, readme: null, ct);
+                        var usage = _translator.LastUsage;
+                        if (usage is not null)
+                        {
+                            Interlocked.Add(ref _totalInputTokens, usage.InputTokenCount ?? 0);
+                            Interlocked.Add(ref _totalOutputTokens, usage.OutputTokenCount ?? 0);
+                        }
+                        return result.ToString();
+                    },
+                    MaybeValue<string>.None,
+                    (FusionCacheEntryOptions?)null,
+                    tags: [nameAttr],
+                    CancellationToken.None);
+            }
+            catch (Exception ex)
+            {
+                Log.Logger.Error("翻译失败 [{Name}]: {Error}", nameAttr, ex.Message);
+            }
+
+            var processed = Interlocked.Increment(ref _done);
+
+            if (wasCached)
+            {
+                var savedTokens = _tokenizer.CountTokens(key,
+                    considerPreTokenization: true, considerNormalization: true);
+                Interlocked.Add(ref _cacheHitTokens, savedTokens);
+            }
+
+            if (processed % 100 == 0)
+            {
+                Log.Logger.Information(
+                    "当前完成 {Done}/{Total}，消耗token:命中 {Cache:F3}M，输入 {In:F3}M：输出 {Out:F3}M",
+                    processed, _total,
+                    _cacheHitTokens / 1_000_000.0,
+                    _totalInputTokens / 1_000_000.0,
+                    _totalOutputTokens / 1_000_000.0);
+            }
         }
         finally
         {

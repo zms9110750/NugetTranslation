@@ -18,7 +18,7 @@ namespace NugetTranslation.Commands.Tree.Translate;
 
 internal static class TranslateCommand
 {
-    public static readonly Argument<string[]> PackArg = new("pack") { Description = "包名@版本，如 foo@1.0 或 foo（版本默认为 *）" };
+    public static readonly Argument<string[]> PackArg = new("pack") { Description = "包名@版本" };
 
     public static Command Create()
     {
@@ -40,7 +40,6 @@ internal static class TranslateCommand
             return;
         }
 
-        // —— 配置 ——
         var config = ConfigLoader.Instance ?? throw new InvalidOperationException("配置未加载");
         var profile = flags is not null ? config[flags] : null;
         var ai = profile?.Ai ?? throw new InvalidOperationException("AI 配置未找到");
@@ -51,21 +50,18 @@ internal static class TranslateCommand
             new ApiKeyCredential(ai.Key.Resolve()),
             new OpenAIClientOptions { Endpoint = new Uri(ai.Url.Resolve()) });
 
-        // —— 解析版本 ——
         var repo = Repository.Factory.GetCoreV3("https://api.nuget.org/v3/index.json");
         var cacheContext = new SourceCacheContext();
         var findResource = await repo.GetResourceAsync<FindPackageByIdResource>();
 
         var packages = await ParseSpecsAsync(rawSpecs, findResource, cacheContext);
 
-        // —— 日志 ——
         Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .WriteTo.Console()
             .MinimumLevel.Information()
             .CreateLogger();
 
-        // —— 注册命名缓存 + 全局 DI ——
         var services = new ServiceCollection();
         services.AddSingleton(new Translator(chatClient, code));
         services.AddSingleton(NullLogger.Instance);
@@ -73,42 +69,48 @@ internal static class TranslateCommand
         var cacheDir = Path.GetFullPath(Path.Combine("..", "cache", code));
         Directory.CreateDirectory(cacheDir);
         foreach (var id in packages.Keys)
-        {
             services.AddFusionCacheAndSqliteCache(id.ToLower(), Path.Combine(cacheDir, id.ToLower() + ".db"));
-        }
-
-        services.AddTransient<PackageProcessor>();
 
         using var sp = services.BuildServiceProvider();
 
-        // —— 逐版本翻译 ——
-        foreach (var (id, versions) in packages)
+        // 收集所有 (包, 版本) 对，并发下载
+        var allPairs = packages
+            .SelectMany(kv => kv.Value.Select(v => (PackageId: kv.Key, Version: v)))
+            .ToList();
+
+        var downloadSemaphore = new SemaphoreSlim(50, 50);
+
+        async Task ProcessOneAsync(string packageId, NuGetVersion version)
         {
-            foreach (var ver in versions)
+            Console.WriteLine($"===== 翻译: {packageId}@{version} =====");
+
+            try
             {
-                Console.WriteLine($"\n===== 翻译: {id}@{ver} =====");
+                Log.Logger = new LoggerConfiguration()
+                    .Enrich.FromLogContext()
+                    .WriteTo.Console()
+                    .WriteTo.File(Path.Combine("../log", $"{packageId.ToLower()}@{version}.log"), buffered: false)
+                    .MinimumLevel.Information()
+                    .CreateLogger();
 
-                try
-                {
-                    Log.Logger = new LoggerConfiguration()
-                        .Enrich.FromLogContext()
-                        .WriteTo.Console()
-                        .WriteTo.File(Path.Combine("../log", $"{id.ToLower()}@{ver}.log"), buffered: false)
-                        .MinimumLevel.Information()
-                        .CreateLogger();
+                await downloadSemaphore.WaitAsync();
+                ZipArchive zip;
+                try { zip = await DownloadPackageAsync(packageId, version, findResource, cacheContext); }
+                finally { downloadSemaphore.Release(); }
 
-                    var zip = await DownloadPackageAsync(id, ver, findResource, cacheContext);
-                    var processor = sp.GetRequiredService<PackageProcessor>();
-                    await processor.ProcessAsync(id, ver, zip, code);
+                var processor = sp.GetRequiredService<PackageProcessor>();
+                await processor.ProcessAsync(packageId, version, zip, code);
 
-                    Console.WriteLine($"  ?? {id}@{ver} 完成");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"  ?? {id}@{ver}: {ex.GetType().Name}: {ex.Message}");
-                }
+                Console.WriteLine($"  OK {packageId}@{version}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"  NG {packageId}@{version}: {ex.GetType().Name}: {ex.Message}");
             }
         }
+
+        var tasks = allPairs.Select(p => ProcessOneAsync(p.PackageId, p.Version));
+        await Task.WhenAll(tasks);
     }
 
     static async Task<Dictionary<string, HashSet<NuGetVersion>>> ParseSpecsAsync(string[] rawSpecs, FindPackageByIdResource findResource, SourceCacheContext cacheContext)
@@ -122,6 +124,18 @@ internal static class TranslateCommand
             var id = at < 0 ? s : s[..at];
             var verSpec = at < 0 ? "*" : s[(at + 1)..];
 
+            // 格式校验
+            if (at >= 0 && string.IsNullOrWhiteSpace(verSpec))
+            {
+                Console.Error.WriteLine($"格式错误: \"{s}\"，应为 packname 或 packname@版本规范");
+                continue;
+            }
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                Console.Error.WriteLine($"格式错误: \"{s}\"，包名不能为空");
+                continue;
+            }
+
             if (!allVersions.TryGetValue(id, out IEnumerable<NuGetVersion>? available))
             {
                 available = await findResource.GetAllVersionsAsync(
@@ -132,48 +146,55 @@ internal static class TranslateCommand
             var range = VersionRange.Parse(verSpec);
             IEnumerable<NuGetVersion> matched;
 
-            if (range.MaxVersion is null)
+            // 用 NuGet API 判断：IsFloating 为浮点版本（*、1.3.* 等），取最佳匹配一个
+            // 以 [ 或 ( 开头为手写范围版本，匹配全部
+            // 其余为裸版本号（1.0 等），取最佳匹配一个
+            if (range.IsFloating)
             {
                 var best = range.FindBestMatch(available);
                 matched = best is not null ? [best] : [];
             }
-            else
+            else if (verSpec.StartsWith('[') || verSpec.StartsWith('('))
             {
                 var includePrerelease = range.MinVersion?.IsPrerelease == true
                                      || range.MaxVersion?.IsPrerelease == true;
                 matched = available.Where(v => range.Satisfies(v)
                                             && (includePrerelease || !v.IsPrerelease));
             }
-
-            if (result.TryGetValue(id, out var set))
-            {
-                set.UnionWith(matched);
-            }
             else
             {
-                result[id] = new HashSet<NuGetVersion>(matched);
+                var best = range.FindBestMatch(available);
+                matched = best is not null ? [best] : [];
             }
+
+            if (result.TryGetValue(id, out var set))
+                set.UnionWith(matched);
+            else
+                result[id] = new HashSet<NuGetVersion>(matched);
         }
 
         return result;
     }
 
-    /// <summary>下载指定包的 .nupkg 文件，返回 ZipArchive。同时同步解压到 packages/{包名}/{版本}/ 作为本地副本。</summary>
     static async Task<ZipArchive> DownloadPackageAsync(string packageId, NuGetVersion version,
         FindPackageByIdResource findResource, SourceCacheContext cacheContext)
     {
         var ms = new MemoryStream();
         var ok = await findResource.CopyNupkgToStreamAsync(packageId, version, ms, cacheContext, NullLogger.Instance, CancellationToken.None);
         if (!ok)
-        {
             throw new InvalidOperationException($"下载失败: {packageId}@{version}");
-        }
 
         var zip = await ZipArchive.CreateAsync(ms, ZipArchiveMode.Read, false, System.Text.Encoding.UTF8);
 
-        // 同步解压到磁盘作为本地副本（已有且 sha256 一致则跳过）
         var baseDir = Path.Combine(packageId.ToLower(), version.ToString());
         using var sha256 = SHA256.Create();
+        byte[] HashStream(Stream s)
+        {
+            var pos = s.Position;
+            var h = sha256.ComputeHash(s);
+            s.Position = pos;
+            return h;
+        }
 
         foreach (var entry in zip.Entries)
         {
@@ -188,22 +209,13 @@ internal static class TranslateCommand
                 using var existing = fi.OpenRead();
                 using var entryStream = entry.Open();
                 if (HashStream(existing).AsSpan().SequenceEqual(HashStream(entryStream)))
-                {
                     continue;
-                }
             }
 
             fi.Directory.Create();
             entry.ExtractToFile(fi.FullName, overwrite: true);
         }
-        return zip;
 
-        byte[] HashStream(Stream s)
-        {
-            var pos = s.Position;
-            var h = sha256.ComputeHash(s);
-            s.Position = pos;
-            return h;
-        }
+        return zip;
     }
 }

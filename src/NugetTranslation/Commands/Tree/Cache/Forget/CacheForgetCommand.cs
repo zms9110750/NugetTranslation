@@ -1,5 +1,6 @@
-using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.DependencyInjection;
 using System.CommandLine;
+using ZiggyCreatures.Caching.Fusion;
 
 namespace NugetTranslation.Commands.Tree.Cache.Forget;
 
@@ -15,7 +16,7 @@ internal static class CacheForgetCommand
         return cmd;
     }
 
-    static void Handle(ParseResult ctx)
+    static async Task Handle(ParseResult ctx)
     {
         var code = ctx.GetValue(Root.Code)!;
         var items = ctx.GetValue(PackNameArg);
@@ -40,6 +41,14 @@ internal static class CacheForgetCommand
 
             var pkgId = item[..at];
             var memberName = item[(at + 1)..];
+
+            // 安全检查：空白或通配符 * 跳过
+            if (string.IsNullOrWhiteSpace(memberName) || memberName == "*")
+            {
+                Console.WriteLine($"  ⛔ 跳过: {item}（name 为空白或通配符，禁止删除）");
+                continue;
+            }
+
             var dbPath = Path.Combine(cacheDir, $"{pkgId.ToLower()}.db");
 
             if (!File.Exists(dbPath))
@@ -48,29 +57,17 @@ internal static class CacheForgetCommand
                 continue;
             }
 
-            using var conn = new SqliteConnection($"Data Source={dbPath}");
-            conn.Open();
+            // 使用 FusionCache tag 删除（而非原始 SQL）
+            var services = new ServiceCollection();
+            Startup.AddFusionCacheAndSqliteCache(services, dbPath);
+            using var sp = services.BuildServiceProvider();
+            var cache = sp.GetRequiredService<IFusionCache>();
 
-            using var cmd = conn.CreateCommand();
-            cmd.CommandText = "DELETE FROM cache WHERE key LIKE @pattern";
-            cmd.Parameters.AddWithValue("@pattern", $"%name=\"{memberName}\"%");
-            var removed = cmd.ExecuteNonQuery();
-
-            if (removed > 0)
-            {
-                totalRemoved += (int)removed;
-                Console.WriteLine($"  🗑️ {pkgId}: 删除 {removed} 条匹配 \"{memberName}\"");
-            }
-            else
-            {
-                Console.WriteLine($"  - {pkgId}: 无匹配 \"{memberName}\"");
-            }
-
-            using var walCmd = conn.CreateCommand();
-            walCmd.CommandText = "PRAGMA wal_checkpoint(TRUNCATE);";
-            walCmd.ExecuteNonQuery();
+            await cache.RemoveByTagAsync(memberName);
+            Console.WriteLine($"  🗑️ {pkgId}: 已按 tag \"{memberName}\" 删除");
+            totalRemoved++;
         }
 
-        Console.WriteLine($"\n删除完成，共移除 {totalRemoved} 条缓存");
+        Console.WriteLine($"\n删除完成，共处理 {totalRemoved} 条");
     }
 }

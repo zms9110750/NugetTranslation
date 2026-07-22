@@ -50,7 +50,7 @@ internal static class CacheBuildCommand
             }
 
             var services = new ServiceCollection();
-            var cachePath = Path.GetFullPath(Path.Combine("..", "cache", code, $"{pkgName}.db"));
+            var cachePath = Path.GetFullPath(Path.Combine("..", "cache", code, $"{pkgName.ToLower()}.db"));
             Directory.CreateDirectory(Path.GetDirectoryName(cachePath)!);
             Startup.AddFusionCacheAndSqliteCache(services, cachePath);
             using var sp = services.BuildServiceProvider();
@@ -86,7 +86,7 @@ internal static class CacheBuildCommand
                         continue;
                     }
 
-                    await cache.SetAsync(origMember.ToString(), zhMember.ToString());
+                    await cache.SetAsync(origMember.ToString(), zhMember.ToString(), tags: [name]);
                     pkgWritten++;
                 }
             }
