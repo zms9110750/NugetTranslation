@@ -107,7 +107,7 @@ internal static class TranslateCommand
         }
 
         if (hasError)
-            Environment.ExitCode = 1;
+            throw new InvalidOperationException("部分翻译失败");
     }
 
     static async Task<Dictionary<string, HashSet<NuGetVersion>>> ParseSpecsAsync(string[] rawSpecs, FindPackageByIdResource findResource, SourceCacheContext cacheContext)
