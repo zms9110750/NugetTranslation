@@ -57,6 +57,7 @@ internal static class TranslateCommand
         var packages = await ParseSpecsAsync(rawSpecs, findResource, cacheContext);
 
         var logLevel = profile?.LogLevel ?? Serilog.Events.LogEventLevel.Information;
+        var hasError = false;
         Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .WriteTo.Console()
@@ -100,9 +101,13 @@ internal static class TranslateCommand
                 catch (Exception ex)
                 {
                     Console.WriteLine($"  NG {id}@{ver}: {ex.GetType().Name}: {ex.Message}");
+                    hasError = true;
                 }
             }
         }
+
+        if (hasError)
+            Environment.ExitCode = 1;
     }
 
     static async Task<Dictionary<string, HashSet<NuGetVersion>>> ParseSpecsAsync(string[] rawSpecs, FindPackageByIdResource findResource, SourceCacheContext cacheContext)
