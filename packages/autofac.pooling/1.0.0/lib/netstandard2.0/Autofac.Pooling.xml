@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Autofac.Pooling</name>
+    </assembly>
+    <members>
+        <member name="T:Autofac.Pooling.AutofacPooledObjectPolicy`1">
+            <summary>
+            Provides the <see cref="T:Microsoft.Extensions.ObjectPool.IPooledObjectPolicy`1"/> needed for creating/returning objects in the pool in an Autofac way.
+            </summary>
+            <typeparam name="TPooledObject">The type of object being pooled.</typeparam>
+        </member>
+        <member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.#ctor(Autofac.Core.Service,Autofac.ILifetimeScope,Autofac.Pooling.IPooledRegistrationPolicy{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.AutofacPooledObjectPolicy`1"/> class.
+            </summary>
+            <param name="poolInstanceService">The pooled instance service used to resolve a new instance of the pooled items.</param>
+            <param name="poolOwningScope">The owning scope of the pool.</param>
+            <param name="registrationPolicy">The registration policy for the pool.</param>
+        </member>
+        <member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Return(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1">
+            <summary>
+            Provides the default <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/>.
+            </summary>
+            <typeparam name="TPooledObject">The type of object being pooled.</typeparam>
+        </member>
+        <member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1"/> class.
+            </summary>
+            <param name="maximumRetained">The maximum number of instances that should be retained in the pool.</param>
+        </member>
+        <member name="P:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.MaximumRetained">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Return(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.IPooledComponent">
+            <summary>
+            Components implementing this interface are aware that they are pooled, so will be notified when they are retrieved from the pool,
+            and when they are returned to the pool.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})">
+            <summary>
+            Invoked when this instance is retrieved from the pool. Any dependencies retrieved using the provided <see cref="T:Autofac.IComponentContext"/>
+            MUST be discarded in <see cref="M:Autofac.Pooling.IPooledComponent.OnReturnToPool"/>, otherwise memory leaks may occur.
+            </summary>
+            <param name="context">The component context for the current resolve request.</param>
+            <param name="parameters">The parameters to the resolve request.</param>
+        </member>
+        <member name="M:Autofac.Pooling.IPooledComponent.OnReturnToPool">
+             <summary>
+             <para>
+             Invoked when this instance is being returned to the pool. Any dependencies retrieved in <see cref="M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})"/> should
+             be discarded in this method.
+             </para>
+            
+             <para>
+             If the maximum pool capacity has been reached (or a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/> decides not to return the instance to the pool),
+             this method will be invoked, but then the object will not be put back in
+             the pool (and may be disposed if the component implements <see cref="T:System.IDisposable"/>).
+             </para>
+             </summary>
+        </member>
+        <member name="T:Autofac.Pooling.IPooledRegistrationPolicy`1">
+            <summary>
+            Defines the interface for a custom pooled registration policy, that defines what happens when an instance is retrieved from the pool, and
+            what happens when the instance is returned to the pool.
+            </summary>
+            <typeparam name="TPooledObject">The type of object being pooled.</typeparam>
+        </member>
+        <member name="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained">
+            <summary>
+            Gets a value indicating the maximum number of items that will be retained in the pool. This is not a limit on the number of
+            objects that can be created, it's the threshold past which any objects returned to the pool will be discarded.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.IPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})">
+            <summary>
+            Invoked when an instance of <typeparamref name="TPooledObject"/> is requested. The policy can invoke <paramref name="getFromPool"/> to
+            retrieve an instance from the pool. Equally, it could decide to ignore the pool, and just return a custom instance.
+            </summary>
+            <param name="context">The current component context.</param>
+            <param name="parameters">The set of parameters for the resolve request accessing the pool.</param>
+            <param name="getFromPool">A callback that will retrieve an item from the underlying pool of objects.</param>
+        </member>
+        <member name="M:Autofac.Pooling.IPooledRegistrationPolicy`1.Return(`0)">
+            <summary>
+            Invoked when an object is about to be returned into the pool. This method should be used to clean up the state of the object
+            after being used (resetting connections, releasing temporary resources, etc).
+            </summary>
+            <param name="pooledObject">The pooled object.</param>
+            <returns>
+            True if the object should be returned to the pool.
+            False if it should not be placed back in the pool (and will be disposed immediately if it implements <see cref="T:System.IDisposable"/>).
+            </returns>
+        </member>
+        <member name="T:Autofac.Pooling.PoolActivator`1">
+            <summary>
+            An activator for creating new <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1"/> instances.
+            </summary>
+            <typeparam name="TLimit">The limit type of the objects in the pool.</typeparam>
+        </member>
+        <member name="M:Autofac.Pooling.PoolActivator`1.#ctor(Autofac.Core.Service,Autofac.Pooling.IPooledRegistrationPolicy{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.PoolActivator`1"/> class.
+            </summary>
+            <param name="pooledInstanceService">The service used to resolve new instances of the pooled registration.</param>
+            <param name="policy">The pool policy.</param>
+        </member>
+        <member name="P:Autofac.Pooling.PoolActivator`1.LimitType">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolActivator`1.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.PooledInstanceTracker`1">
+            <summary>
+            Tracking class that that will return the wrapped instance to the provided pool when it is disposed.
+            </summary>
+            <typeparam name="TPooledObject">The type of the object being pooled.</typeparam>
+        </member>
+        <member name="M:Autofac.Pooling.PooledInstanceTracker`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.PooledInstanceTracker`1"/> class.
+            </summary>
+            <param name="pool">The pool.</param>
+            <param name="instance">The instance to wrap.</param>
+        </member>
+        <member name="P:Autofac.Pooling.PooledInstanceTracker`1.Instance">
+            <summary>
+            Gets the wrapped instance.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.PooledInstanceTracker`1.Dispose">
+            <summary>
+            Disposes the container, returning the instance to the pool.
+            </summary>
+        </member>
+        <member name="T:Autofac.Pooling.PooledInstanceUnpackMiddleware`1">
+            <summary>
+            Middleware for extracting the requested instance from the pool instance container.
+            </summary>
+            <typeparam name="TLimit">The limit type of the registration that has been pooled.</typeparam>
+        </member>
+        <member name="P:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Phase">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Execute(Autofac.Core.Resolving.Pipeline.ResolveRequestContext,System.Action{Autofac.Core.Resolving.Pipeline.ResolveRequestContext})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.PooledLifetime">
+            <summary>
+            Lifetime wrapper to help us detect if we finished registering in a pooled configuration.
+            </summary>
+        </member>
+        <member name="T:Autofac.Pooling.PoolGetActivator`1">
+            <summary>
+            Activator that resolves the object pool and retrieves from that rather than creating a new instance.
+            </summary>
+            <typeparam name="TLimit">The limit type of the objects in the pool.</typeparam>
+        </member>
+        <member name="M:Autofac.Pooling.PoolGetActivator`1.#ctor(Autofac.Pooling.PoolService,Autofac.Pooling.IPooledRegistrationPolicy{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.PoolGetActivator`1"/> class.
+            </summary>
+            <param name="poolService">The service used to access the pool.</param>
+            <param name="registrationPolicy">The registration policy for the pool.</param>
+        </member>
+        <member name="P:Autofac.Pooling.PoolGetActivator`1.LimitType">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolGetActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolGetActivator`1.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.PoolGetActivatorResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolGetActivatorResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolGetActivatorResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolGetActivatorResources.PolicyMustReturnInstance">
+            <summary>
+              Looks up a localized string similar to The custom pool policy provided by {0} did not return an instance of {1} when requested..
+            </summary>
+        </member>
+        <member name="T:Autofac.Pooling.PoolService">
+            <summary>
+            Defines a service used to access an <see cref="T:Microsoft.Extensions.ObjectPool.ObjectPool`1"/>, ensuring that each pooled item registration gets a different pool.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.PoolService.#ctor(Autofac.Core.IComponentRegistration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Autofac.Pooling.PoolService"/> class.
+            </summary>
+            <param name="pooledItemRegistration">The registration for the pooled item.</param>
+        </member>
+        <member name="P:Autofac.Pooling.PoolService.Description">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolService.Equals(Autofac.Pooling.PoolService)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolService.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Autofac.Pooling.PoolService.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:Autofac.Pooling.PoolServiceResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolServiceResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolServiceResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.PoolServiceResources.Description">
+            <summary>
+              Looks up a localized string similar to Pool of {0}.
+            </summary>
+        </member>
+        <member name="T:Autofac.Pooling.RegistrationExtensions">
+            <summary>
+            Provides registration methods for setting up pooled instances.
+            </summary>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2})">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within a single <see cref="T:Autofac.ILifetimeScope"/>
+             will return the same, shared instance, retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             </summary>
+             <remarks>
+             <para>
+             The size of the pool created with this method defaults to twice the number of processors (<see cref="P:System.Environment.ProcessorCount"/> x 2).
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+            
+             <para>
+             If a component needs to perform behaviour when it is retrieved from or returned to the pool, it can implement <see cref="T:Autofac.Pooling.IPooledComponent"/>,
+             or use the overload of this method that accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/>.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32)">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within a single <see cref="T:Autofac.ILifetimeScope"/>
+             will return the same, shared instance, retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             </summary>
+             <remarks>
+             <para>
+             The size of the pool created with this method is equal to <paramref name="maximumRetainedInstances"/>.
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+            
+             <para>
+             If a component needs to perform behaviour when it is retrieved from or returned to the pool, it can implement <see cref="T:Autofac.Pooling.IPooledComponent"/>,
+             or use the overload of this method that accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/>.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <param name="maximumRetainedInstances">The maximum number of instances to retain in the pool.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0})">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within a single <see cref="T:Autofac.ILifetimeScope"/>
+             will return the same, shared instance, retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             </summary>
+             <remarks>
+             <para>
+             This method accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/> that provides fine-grained control of the retrieval
+             of instances from the pool, and allows the implementer to choose whether or not the instance should even be returned to the pool.
+             </para>
+            
+             <para>
+             The size of the pool created with this method is equal to the <see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained"/> value on the
+             <paramref name="poolPolicy"/>.
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <param name="poolPolicy">A custom policy for controlling pool behaviour.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Object[])">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within
+             a <see cref="T:Autofac.ILifetimeScope"/> tagged with any of the provided tags value gets the same, shared instance,
+             retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             Dependent components in lifetime scopes that are children of the tagged scope will
+             share the parent's instance. If no appropriately tagged scope can be found in the
+             hierarchy an <see cref="T:Autofac.Core.DependencyResolutionException"/> is thrown.
+             </summary>
+             <remarks>
+             <para>
+             The size of the pool created with this method defaults to twice the number of processors (<see cref="P:System.Environment.ProcessorCount"/> x 2).
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+            
+             <para>
+             If a component needs to perform behaviour when it is retrieved from or returned to the pool, it can implement <see cref="T:Autofac.Pooling.IPooledComponent"/>,
+             or use the overload of this method that accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/>.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <param name="lifetimeScopeTags">Tags applied to matching lifetime scopes.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32,System.Object[])">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within
+             a <see cref="T:Autofac.ILifetimeScope"/> tagged with any of the provided tags value gets the same, shared instance,
+             retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             Dependent components in lifetime scopes that are children of the tagged scope will
+             share the parent's instance. If no appropriately tagged scope can be found in the
+             hierarchy an <see cref="T:Autofac.Core.DependencyResolutionException"/> is thrown.
+             </summary>
+             <remarks>
+             <para>
+             The size of the pool created with this method is equal to <paramref name="maximumRetainedInstances"/>.
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+            
+             <para>
+             If a component needs to perform behaviour when it is retrieved from or returned to the pool, it can implement <see cref="T:Autofac.Pooling.IPooledComponent"/>,
+             or use the overload of this method that accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/>.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <param name="maximumRetainedInstances">The maximum number of instances to retain in the pool.</param>
+             <param name="lifetimeScopeTags">Tags applied to matching lifetime scopes.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0},System.Object[])">
+             <summary>
+             Configure the component so that every dependent component or manual resolve within
+             a <see cref="T:Autofac.ILifetimeScope"/> tagged with any of the provided tags value gets the same, shared instance,
+             retrieved from a single pool of instances shared by all lifetime scopes.
+             When the scope ends, the instance will be returned to the pool.
+             Dependent components in lifetime scopes that are children of the tagged scope will
+             share the parent's instance. If no appropriately tagged scope can be found in the
+             hierarchy an <see cref="T:Autofac.Core.DependencyResolutionException"/> is thrown.
+             </summary>
+             <remarks>
+             <para>
+             This method accepts a custom <see cref="T:Autofac.Pooling.IPooledRegistrationPolicy`1"/> that provides fine-grained control of the retrieval
+             of instances from the pool, and allows the implementer to choose whether or not the instance should even be returned to the pool.
+             </para>
+            
+             <para>
+             The size of the pool created with this method is equal to the <see cref="P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained"/> value on the
+             <paramref name="poolPolicy"/>.
+             If more instances are requested than the pool size, those instances may not be returned to the pool, but will instead be disposed/discarded.
+             </para>
+             </remarks>
+             <typeparam name="TLimit">Registration limit type.</typeparam>
+             <typeparam name="TActivatorData">Activator data type.</typeparam>
+             <typeparam name="TSingleRegistrationStyle">Registration style.</typeparam>
+             <param name="registration">The registration.</param>
+             <param name="poolPolicy">A custom policy for controlling pool behaviour.</param>
+             <param name="lifetimeScopeTags">Tags applied to matching lifetime scopes.</param>
+             <returns>The registration builder.</returns>
+        </member>
+        <member name="T:Autofac.Pooling.RegistrationExtensionsResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.RegistrationExtensionsResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.RegistrationExtensionsResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.RegistrationExtensionsResources.CannotUseProvidedInstances">
+            <summary>
+              Looks up a localized string similar to Pooled registrations cannot be used with provided instances. Use a typed registration or a delegate registration instead..
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.RegistrationExtensionsResources.OnReleaseNotSupported">
+            <summary>
+              Looks up a localized string similar to It is not possible to use custom OnRelease events for pooled registrations. Instead, either provide a custom IPooledRegistrationPolicy to handle items being returned to pool, or implement IPooledComponent on the component&apos;s type..
+            </summary>
+        </member>
+        <member name="P:Autofac.Pooling.RegistrationExtensionsResources.RequiresCallbackContainer">
+            <summary>
+              Looks up a localized string similar to You can only specified a pooled registration for registrations that have a callback container attached (e.g., one that was made with a standard ContainerBuilder extension method)..
+            </summary>
+        </member>
+    </members>
+</doc>
