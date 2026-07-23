@@ -1,0 +1,1257 @@
+2026-06-28 19:54:36.650 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 19:54:36.652 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 19:54:36.653 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 19:54:36.654 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 19:54:36.655 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 19:54:36.677 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase
+2026-06-28 19:54:36.677 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase.#ctor
+2026-06-28 19:54:36.678 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase.EnumerateFileSystemInfos
+2026-06-28 19:54:36.678 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase.GetDirectory(System.String)
+2026-06-28 19:54:36.679 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase.GetFile(System.String)
+2026-06-28 19:54:36.679 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper
+2026-06-28 19:54:36.679 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.#ctor(System.IO.DirectoryInfo)
+2026-06-28 19:54:36.679 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.EnumerateFileSystemInfos
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.GetDirectory(System.String)
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.GetFile(System.String)
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.FullName
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.Name
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper.ParentDirectory
+2026-06-28 19:54:36.680 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase
+2026-06-28 19:54:36.684 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase.#ctor
+2026-06-28 19:54:36.684 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoWrapper
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoWrapper.#ctor(System.IO.FileInfo)
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoWrapper.FullName
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoWrapper.Name
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoWrapper.ParentDirectory
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase
+2026-06-28 19:54:36.685 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase.#ctor
+2026-06-28 19:54:36.686 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase.FullName
+2026-06-28 19:54:36.686 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase.Name
+2026-06-28 19:54:36.686 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase.ParentDirectory
+2026-06-28 19:54:36.686 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch
+2026-06-28 19:54:36.686 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.#ctor(System.String,System.String)
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.Equals(Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch)
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.Equals(System.Object)
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.GetHashCode
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.Path
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch.Stem
+2026-06-28 19:54:36.687 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.EnumerateFileSystemInfos
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.GetDirectory(System.String)
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.GetFile(System.String)
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.FullName
+2026-06-28 19:54:36.688 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.Name
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.InMemoryDirectoryInfo.ParentDirectory
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.ILinearPattern
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.ILinearPattern.Segments
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment.Match(System.String)
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment.CanProduceStem
+2026-06-28 19:54:36.689 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.IPattern
+2026-06-28 19:54:36.690 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPattern.CreatePatternContextForExclude
+2026-06-28 19:54:36.690 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPattern.CreatePatternContextForInclude
+2026-06-28 19:54:36.690 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext
+2026-06-28 19:54:36.690 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext.Declare(System.Action{Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment,System.Boolean})
+2026-06-28 19:54:36.690 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext.PopDirectory
+2026-06-28 19:54:36.691 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext.PushDirectory(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.691 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.691 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.IPatternContext.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.691 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern
+2026-06-28 19:54:36.691 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern.Contains
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern.EndsWith
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern.Segments
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern.StartsWith
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileSystemGlobbing.Internal.IPattern},System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileSystemGlobbing.Internal.IPattern},Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase,System.StringComparison)
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute
+2026-06-28 19:54:36.692 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.CurrentPathSegment
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.CurrentPathSegment.#ctor
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.CurrentPathSegment.Match(System.String)
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.CurrentPathSegment.CanProduceStem
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.#ctor(System.String,System.StringComparison)
+2026-06-28 19:54:36.693 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.Equals(System.Object)
+2026-06-28 19:54:36.694 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.GetHashCode
+2026-06-28 19:54:36.694 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.Match(System.String)
+2026-06-28 19:54:36.694 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.CanProduceStem
+2026-06-28 19:54:36.694 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.LiteralPathSegment.Value
+2026-06-28 19:54:36.694 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.ParentPathSegment
+2026-06-28 19:54:36.695 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.ParentPathSegment.#ctor
+2026-06-28 19:54:36.695 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.ParentPathSegment.Match(System.String)
+2026-06-28 19:54:36.695 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.ParentPathSegment.CanProduceStem
+2026-06-28 19:54:36.695 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.RecursiveWildcardSegment
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.RecursiveWildcardSegment.#ctor
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.RecursiveWildcardSegment.Match(System.String)
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.RecursiveWildcardSegment.CanProduceStem
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.MatchAll
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.#ctor(System.String,System.Collections.Generic.List{System.String},System.String,System.StringComparison)
+2026-06-28 19:54:36.696 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.Match(System.String)
+2026-06-28 19:54:36.697 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.BeginsWith
+2026-06-28 19:54:36.697 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.CanProduceStem
+2026-06-28 19:54:36.697 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.Contains
+2026-06-28 19:54:36.697 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PathSegments.WildcardPathSegment.EndsWith
+2026-06-28 19:54:36.698 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1
+2026-06-28 19:54:36.698 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.Frame
+2026-06-28 19:54:36.699 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.#ctor
+2026-06-28 19:54:36.699 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.Declare(System.Action{Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment,System.Boolean})
+2026-06-28 19:54:36.699 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.IsStackEmpty
+2026-06-28 19:54:36.699 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.PopDirectory
+2026-06-28 19:54:36.700 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.PushDataFrame(`0)
+2026-06-28 19:54:36.700 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.PushDirectory(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.700 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.700 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContext`1.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.700 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear
+2026-06-28 19:54:36.701 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.ILinearPattern)
+2026-06-28 19:54:36.701 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.CalculateStem(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.701 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.IsLastSegment
+2026-06-28 19:54:36.701 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.PushDirectory(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.701 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.702 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.TestMatchingSegment(System.String)
+2026-06-28 19:54:36.702 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.Pattern
+2026-06-28 19:54:36.702 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData
+2026-06-28 19:54:36.703 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData.InStem
+2026-06-28 19:54:36.703 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData.IsNotApplicable
+2026-06-28 19:54:36.703 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData.SegmentIndex
+2026-06-28 19:54:36.703 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData.Stem
+2026-06-28 19:54:36.704 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinear.FrameData.StemItems
+2026-06-28 19:54:36.704 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearExclude
+2026-06-28 19:54:36.704 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearExclude.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.ILinearPattern)
+2026-06-28 19:54:36.704 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearExclude.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.705 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearInclude
+2026-06-28 19:54:36.705 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearInclude.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.ILinearPattern)
+2026-06-28 19:54:36.705 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearInclude.Declare(System.Action{Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment,System.Boolean})
+2026-06-28 19:54:36.705 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextLinearInclude.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.708 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged
+2026-06-28 19:54:36.708 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern)
+2026-06-28 19:54:36.708 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.CalculateStem(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.709 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.IsEndingGroup
+2026-06-28 19:54:36.709 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.IsStartingGroup
+2026-06-28 19:54:36.709 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.PopDirectory
+2026-06-28 19:54:36.709 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.PushDirectory(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.710 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileInfoBase)
+2026-06-28 19:54:36.710 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.TestMatchingGroup(Microsoft.Extensions.FileSystemGlobbing.Abstractions.FileSystemInfoBase)
+2026-06-28 19:54:36.710 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.TestMatchingSegment(System.String)
+2026-06-28 19:54:36.711 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.Pattern
+2026-06-28 19:54:36.711 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData
+2026-06-28 19:54:36.711 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.BacktrackAvailable
+2026-06-28 19:54:36.712 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.InStem
+2026-06-28 19:54:36.712 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.IsNotApplicable
+2026-06-28 19:54:36.712 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.SegmentGroup
+2026-06-28 19:54:36.713 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.SegmentGroupIndex
+2026-06-28 19:54:36.723 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.SegmentIndex
+2026-06-28 19:54:36.723 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.Stem
+2026-06-28 19:54:36.723 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRagged.FrameData.StemItems
+2026-06-28 19:54:36.728 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedExclude
+2026-06-28 19:54:36.729 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedExclude.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern)
+2026-06-28 19:54:36.729 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedExclude.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.729 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedInclude
+2026-06-28 19:54:36.729 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedInclude.#ctor(Microsoft.Extensions.FileSystemGlobbing.Internal.IRaggedPattern)
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedInclude.Declare(System.Action{Microsoft.Extensions.FileSystemGlobbing.Internal.IPathSegment,System.Boolean})
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternContexts.PatternContextRaggedInclude.Test(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns.PatternBuilder
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns.PatternBuilder.#ctor
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns.PatternBuilder.#ctor(System.StringComparison)
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns.PatternBuilder.Build(System.String)
+2026-06-28 19:54:36.730 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns.PatternBuilder.ComparisonType
+2026-06-28 19:54:36.731 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternTestResult
+2026-06-28 19:54:36.731 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternTestResult.Failed
+2026-06-28 19:54:36.731 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternTestResult.Success(System.String)
+2026-06-28 19:54:36.731 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternTestResult.IsSuccessful
+2026-06-28 19:54:36.732 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.Internal.PatternTestResult.Stem
+2026-06-28 19:54:36.732 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Matcher
+2026-06-28 19:54:36.732 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.#ctor
+2026-06-28 19:54:36.732 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.#ctor(System.StringComparison,System.Boolean)
+2026-06-28 19:54:36.733 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.#ctor(System.StringComparison)
+2026-06-28 19:54:36.733 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.AddExclude(System.String)
+2026-06-28 19:54:36.733 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.AddInclude(System.String)
+2026-06-28 19:54:36.733 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoBase)
+2026-06-28 19:54:36.734 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions
+2026-06-28 19:54:36.734 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.AddExcludePatterns(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.Collections.Generic.IEnumerable{System.String}[])
+2026-06-28 19:54:36.734 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.AddIncludePatterns(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.Collections.Generic.IEnumerable{System.String}[])
+2026-06-28 19:54:36.734 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.GetResultsInFullPath(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.String)
+2026-06-28 19:54:36.734 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.Match(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.Collections.Generic.IEnumerable{System.String})
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.Match(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.String,System.Collections.Generic.IEnumerable{System.String})
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.Match(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.String,System.String)
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.MatcherExtensions.Match(Microsoft.Extensions.FileSystemGlobbing.Matcher,System.String)
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.PatternMatchingResult
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.PatternMatchingResult.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch},System.Boolean)
+2026-06-28 19:54:36.737 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileSystemGlobbing.PatternMatchingResult.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileSystemGlobbing.FilePatternMatch})
+2026-06-28 19:54:36.738 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.PatternMatchingResult.Files
+2026-06-28 19:54:36.738 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileSystemGlobbing.PatternMatchingResult.HasMatches
+2026-06-28 19:54:40.309 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 19:54:40.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 19:54:40.920 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 19:54:41.176 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 19:54:41.761 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 19:54:42.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 19:54:42.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 19:54:42.352 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 19:54:42.500 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 19:54:42.556 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 19:54:42.659 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 19:54:42.865 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 19:54:42.907 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 19:54:42.908 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 19:54:43.171 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 19:54:43.179 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 19:54:43.282 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 19:54:43.288 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 19:54:43.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 19:54:43.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 19:54:43.377 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 19:54:43.401 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 19:54:43.409 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 19:54:43.426 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 19:54:43.479 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 19:54:43.583 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 19:54:43.609 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 19:54:43.786 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 19:54:43.792 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 19:54:43.802 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 19:54:43.993 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 19:54:44.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 19:54:44.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 19:54:44.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 19:54:44.195 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 19:54:44.195 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 19:54:44.202 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 19:54:44.244 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 19:54:44.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 19:54:44.298 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 19:54:44.306 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 19:54:44.318 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 19:54:44.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 19:54:44.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 19:54:44.503 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 19:54:44.606 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 19:54:44.606 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 19:54:44.735 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 19:54:44.810 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 19:54:44.914 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 19:54:44.914 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 19:54:44.914 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 19:54:44.933 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 19:54:45.014 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 19:54:45.028 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 19:54:45.118 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 19:54:45.219 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 19:54:45.234 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 19:54:45.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 19:54:45.325 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 19:54:45.363 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 19:54:45.527 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 19:54:45.568 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 19:54:45.677 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 19:54:45.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 19:54:45.834 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 19:54:45.936 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 19:54:46.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 19:54:46.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 19:54:46.140 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 19:54:46.146 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 19:54:46.346 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 19:54:46.346 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 19:54:46.351 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 19:54:46.385 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 19:54:46.449 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 19:54:46.455 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 19:54:46.653 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 19:54:46.653 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 19:54:46.755 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 19:54:46.756 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 19:54:46.756 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 19:54:46.775 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 19:54:46.868 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 19:54:46.868 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 19:54:46.878 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 19:54:46.960 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 19:54:46.960 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 19:54:46.992 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 19:54:47.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 19:54:47.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 19:54:47.370 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 19:54:47.370 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 19:54:47.472 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 19:54:47.472 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 19:54:47.831 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 19:54:47.892 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 19:54:47.931 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 19:54:48.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 19:54:48.086 +08:00 [INF] 已处理 100 条翻译，累计输入 22974 tokens，输出 63836 tokens，估算费用 0.15 元
+2026-06-28 19:54:48.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 19:54:48.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 19:54:48.191 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 19:54:48.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 19:54:48.297 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 19:54:48.414 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 19:54:48.604 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 19:54:48.803 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 19:54:49.014 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 19:54:49.110 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 19:54:49.141 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 19:54:49.417 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 19:54:49.526 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 19:54:49.741 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 19:54:49.772 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 19:54:49.871 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 19:54:49.936 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 19:54:50.135 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 19:54:50.142 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 19:54:50.238 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 19:54:50.238 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 19:54:50.365 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 19:54:50.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 19:54:50.587 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 19:54:50.592 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 19:54:50.649 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 19:54:50.667 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 19:54:50.850 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 19:54:50.959 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 19:54:51.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 19:54:51.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 19:54:51.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 19:54:51.210 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 19:54:51.261 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 19:54:51.395 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 19:54:51.494 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 19:54:51.568 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 19:54:51.670 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 19:54:51.815 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 19:54:51.876 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 19:54:52.232 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 19:54:52.390 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 19:54:52.797 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 19:54:53.209 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 19:54:53.217 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 19:54:53.821 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 19:54:54.252 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 19:54:54.744 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 19:54:54.845 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 19:54:54.845 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 19:54:55.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 19:54:55.165 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 19:54:55.387 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 19:54:55.489 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 19:54:55.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 19:54:55.870 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 19:54:56.278 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 19:54:56.630 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 19:54:56.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 19:54:56.996 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 19:54:57.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 19:54:57.435 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 19:54:57.713 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 19:54:57.853 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 19:54:58.226 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 19:54:58.479 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 19:54:59.164 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 19:55:00.173 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 19:55:00.763 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 19:55:01.500 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 19:55:01.850 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 19:55:02.761 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 19:55:02.884 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 19:55:05.903 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 19:55:06.826 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 19:55:07.849 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 19:55:17.375 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:12:52.032 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:12:52.033 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:12:52.034 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:12:52.035 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:12:52.035 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:12:52.041 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 20:12:52.041 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 20:12:52.042 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 20:12:52.042 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 20:12:52.042 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 20:12:52.042 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileSystemGlobbing.Abstractions.DirectoryInfoWrapper
+2026-06-28 20:12:52.043 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 20:12:52.043 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 20:12:52.043 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 20:12:52.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 20:12:52.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 20:12:52.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 20:12:52.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 20:12:52.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 20:12:52.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 20:12:52.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 20:12:52.046 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 20:12:52.046 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 20:12:52.046 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 20:12:52.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 20:12:52.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 20:12:52.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 20:12:52.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 20:12:52.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 20:12:52.048 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 20:12:52.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 20:12:52.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 20:12:52.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 20:12:52.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 20:12:52.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 20:12:52.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 20:12:52.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 20:12:52.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 20:12:52.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 20:12:52.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 20:12:52.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 20:12:52.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 20:12:52.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 20:12:52.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 20:12:52.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 20:12:52.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 20:12:52.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 20:12:52.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 20:12:52.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 20:12:52.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 20:12:52.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 20:12:52.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 20:12:52.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 20:12:52.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 20:12:52.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 20:12:52.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 20:12:52.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 20:12:52.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 20:12:52.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 20:12:52.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 20:12:52.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 20:12:52.060 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 20:12:52.060 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 20:12:52.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 20:12:52.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 20:12:52.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 20:12:52.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 20:12:52.062 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 20:12:52.062 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 20:12:52.064 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 20:12:52.064 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 20:12:52.065 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 20:12:52.065 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 20:12:52.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 20:12:52.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 20:12:52.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 20:12:52.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 20:12:52.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 20:12:52.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 20:12:52.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 20:12:52.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 20:12:52.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 20:12:52.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 20:12:52.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 20:12:52.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 20:12:52.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 20:12:52.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 20:12:52.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 20:12:52.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 20:12:52.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 20:12:52.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 20:12:52.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 20:12:52.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 20:12:52.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 20:12:52.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 20:12:52.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 20:12:52.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 20:12:52.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 20:12:52.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 20:12:52.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 20:12:52.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 20:12:52.082 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 20:12:52.083 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 20:12:52.085 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 20:12:52.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 20:12:52.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 20:12:52.089 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 20:12:52.090 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 20:12:52.092 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 20:12:52.113 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 20:12:52.115 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 20:12:52.115 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 20:12:52.116 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 20:12:52.117 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 20:12:52.117 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 20:12:52.118 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 20:12:52.118 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 20:12:52.118 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 20:12:52.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 20:12:52.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 20:12:52.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 20:12:52.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 20:12:52.120 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 20:12:52.121 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 20:12:52.122 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 20:12:52.122 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 20:12:52.122 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 20:12:52.122 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 20:12:52.123 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 20:12:52.123 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 20:12:52.123 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 20:12:52.123 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 20:12:52.124 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 20:12:52.124 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 20:12:52.124 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 20:12:52.125 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 20:12:52.125 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 20:12:52.126 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 20:12:52.126 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 20:12:52.126 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 20:12:52.126 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 20:12:52.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 20:12:52.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 20:12:52.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 20:12:52.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:13:31.155 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 177/177
+2026-06-28 20:13:31.155 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 238 tokens，输出 3445 tokens，估算费用 0.01 元
+2026-06-28 20:13:31.158 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.filesystemglobbing\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:13:31.162 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 20:13:31.162 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 20:13:31.162 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 20:13:31.162 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 20:13:31.163 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 20:13:31.163 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 20:13:31.163 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 20:13:31.163 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 20:13:31.163 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 20:13:31.165 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 20:13:31.166 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 20:13:31.166 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 20:13:31.166 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 20:13:31.166 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 20:13:31.166 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 20:13:31.167 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 20:13:31.168 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 20:13:31.168 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 20:13:31.176 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 20:13:31.177 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 20:13:31.177 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 20:13:31.178 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 20:13:31.179 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 20:13:31.180 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 20:13:31.181 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 20:13:31.182 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 20:13:31.183 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 20:13:31.184 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 20:13:31.185 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 20:13:31.186 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 20:13:31.187 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 20:13:31.187 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 20:13:31.189 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 20:13:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 20:13:31.191 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 20:13:31.192 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 20:13:31.193 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 20:13:31.193 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 20:13:31.193 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 20:13:31.193 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 20:13:31.193 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 20:13:31.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 20:13:31.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 20:13:31.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 20:13:31.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 20:13:31.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 20:13:31.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 20:13:31.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 20:13:31.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 20:13:31.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 20:13:31.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 20:13:31.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:13:31.198 +08:00 [INF] lib/net462/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 177/177
+2026-06-28 20:13:31.199 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.filesystemglobbing\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 20:13:31.200 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 20:13:31.201 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 20:13:31.202 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 20:13:31.204 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 20:13:31.205 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:13:31.206 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 177/177
+2026-06-28 20:13:31.207 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.filesystemglobbing\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 20:13:31.208 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 20:13:31.209 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 20:13:31.210 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 20:13:31.211 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 20:13:31.212 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 20:13:31.215 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 20:13:31.216 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 20:13:31.216 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 20:13:31.216 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 20:13:31.216 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:13:31.216 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 177/177
+2026-06-28 20:13:31.217 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.filesystemglobbing\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 1/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 2/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 3/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 4/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 5/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 6/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 7/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 8/177
+2026-06-28 20:13:31.217 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 9/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 10/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 11/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 12/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 13/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 14/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 15/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 16/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 17/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 18/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 19/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 20/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 21/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 22/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 23/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 24/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 25/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 26/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 27/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 28/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 29/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 30/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 31/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 32/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 33/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 34/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 35/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 36/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 37/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 38/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 39/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 40/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 41/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 42/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 43/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 44/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 45/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 46/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 47/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 48/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 49/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 50/177
+2026-06-28 20:13:31.218 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 51/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 52/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 53/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 54/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 55/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 56/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 57/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 58/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 59/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 60/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 61/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 62/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 63/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 64/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 65/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 66/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 67/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 68/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 69/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 70/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 71/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 72/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 73/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 74/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 75/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 76/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 77/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 78/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 79/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 80/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 81/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 82/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 83/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 84/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 85/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 86/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 87/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 88/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 89/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 90/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 91/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 92/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 93/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 94/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 95/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 96/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 97/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 98/177
+2026-06-28 20:13:31.219 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 99/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 100/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 101/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 102/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 103/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 104/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 105/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 106/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 107/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 108/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 109/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 110/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 111/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 112/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 113/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 114/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 115/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 116/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 117/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 118/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 119/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 120/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 121/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 122/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 123/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 124/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 125/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 126/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 127/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 128/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 129/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 130/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 131/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 132/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 133/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 134/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 135/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 136/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 137/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 138/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 139/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 140/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 141/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 142/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 143/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 144/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 145/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 146/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 147/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 148/177
+2026-06-28 20:13:31.220 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 149/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 150/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 151/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 152/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 153/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 154/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 155/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 156/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 157/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 158/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 159/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 160/177
+2026-06-28 20:13:31.221 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 161/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 162/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 163/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 164/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 165/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 166/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 167/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 168/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 169/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 170/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 171/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 172/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 173/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 174/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 175/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 176/177
+2026-06-28 20:13:31.222 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml 进度: 177/177
+2026-06-28 20:13:31.225 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.filesystemglobbing\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.FileSystemGlobbing.xml
+2026-06-28 20:13:31.225 +08:00 [INF] ===== 包 microsoft.extensions.filesystemglobbing 完成 =====

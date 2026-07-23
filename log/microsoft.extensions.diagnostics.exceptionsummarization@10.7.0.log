@@ -1,0 +1,482 @@
+2026-06-28 19:22:48.922 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 19:22:48.926 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 19:22:48.927 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 19:22:48.928 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 19:22:48.935 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 19:22:48.956 +08:00 [DBG] 缓存缺失: T:Microsoft.Shared.Diagnostics.Throw
+2026-06-28 19:22:48.956 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)
+2026-06-28 19:22:48.957 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)
+2026-06-28 19:22:48.959 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)
+2026-06-28 19:22:48.959 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)
+2026-06-28 19:22:48.959 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)
+2026-06-28 19:22:48.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)
+2026-06-28 19:22:48.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)
+2026-06-28 19:22:48.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)
+2026-06-28 19:22:48.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)
+2026-06-28 19:22:48.961 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)
+2026-06-28 19:22:48.961 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)
+2026-06-28 19:22:48.961 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)
+2026-06-28 19:22:48.961 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)
+2026-06-28 19:22:48.961 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)
+2026-06-28 19:22:48.962 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)
+2026-06-28 19:22:48.962 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)
+2026-06-28 19:22:48.962 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.962 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.962 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.963 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.963 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+2026-06-28 19:22:48.963 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)
+2026-06-28 19:22:48.963 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)
+2026-06-28 19:22:48.963 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)
+2026-06-28 19:22:48.964 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)
+2026-06-28 19:22:48.964 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)
+2026-06-28 19:22:48.964 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)
+2026-06-28 19:22:48.964 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)
+2026-06-28 19:22:48.967 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)
+2026-06-28 19:22:48.968 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)
+2026-06-28 19:22:48.969 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)
+2026-06-28 19:22:48.969 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)
+2026-06-28 19:22:48.969 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)
+2026-06-28 19:22:48.970 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)
+2026-06-28 19:22:48.970 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)
+2026-06-28 19:22:48.970 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)
+2026-06-28 19:22:48.971 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)
+2026-06-28 19:22:48.971 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)
+2026-06-28 19:22:48.971 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)
+2026-06-28 19:22:48.972 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)
+2026-06-28 19:22:48.972 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)
+2026-06-28 19:22:48.972 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)
+2026-06-28 19:22:48.972 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)
+2026-06-28 19:22:48.972 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)
+2026-06-28 19:22:48.973 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)
+2026-06-28 19:22:48.973 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)
+2026-06-28 19:22:48.973 +08:00 [DBG] 缓存缺失: T:Microsoft.Shared.Text.NumericExtensions
+2026-06-28 19:22:48.973 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int32)
+2026-06-28 19:22:48.973 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Text.NumericExtensions.ToInvariantString(System.Int64)
+2026-06-28 19:22:48.974 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummarizationBuilderExtensions
+2026-06-28 19:22:48.974 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummarizationBuilderExtensions.AddHttpProvider(Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder)
+2026-06-28 19:22:48.974 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary
+2026-06-28 19:22:48.974 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.#ctor(System.String,System.String,System.String)
+2026-06-28 19:22:48.975 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.ExceptionType
+2026-06-28 19:22:48.975 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.Description
+2026-06-28 19:22:48.975 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.AdditionalDetails
+2026-06-28 19:22:48.975 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.GetHashCode
+2026-06-28 19:22:48.975 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.ToString
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.Equals(System.Object)
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.Equals(Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary)
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.op_Equality(Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary,Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary)
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.op_Inequality(Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary,Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary)
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.HttpExceptionSummaryProvider
+2026-06-28 19:22:48.976 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder
+2026-06-28 19:22:48.977 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder.Services
+2026-06-28 19:22:48.977 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder.AddProvider``1
+2026-06-28 19:22:48.977 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizer
+2026-06-28 19:22:48.977 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizer.Summarize(System.Exception)
+2026-06-28 19:22:48.977 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummaryProvider
+2026-06-28 19:22:48.978 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummaryProvider.Describe(System.Exception,System.String@)
+2026-06-28 19:22:48.978 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummaryProvider.SupportedExceptionTypes
+2026-06-28 19:22:48.978 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummaryProvider.Descriptions
+2026-06-28 19:22:48.978 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ExceptionSummarizationServiceCollectionExtensions
+2026-06-28 19:22:48.978 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ExceptionSummarizationServiceCollectionExtensions.AddExceptionSummarizer(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 19:22:48.979 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ExceptionSummarizationServiceCollectionExtensions.AddExceptionSummarizer(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder})
+2026-06-28 19:22:53.941 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 1/77
+2026-06-28 19:22:53.943 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 2/77
+2026-06-28 19:22:54.346 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 3/77
+2026-06-28 19:22:55.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 4/77
+2026-06-28 19:22:55.368 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 5/77
+2026-06-28 19:22:55.585 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 6/77
+2026-06-28 19:22:55.882 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 7/77
+2026-06-28 19:22:55.882 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 8/77
+2026-06-28 19:22:55.883 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 9/77
+2026-06-28 19:22:55.997 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 10/77
+2026-06-28 19:22:56.119 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 11/77
+2026-06-28 19:22:56.701 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 12/77
+2026-06-28 19:22:56.701 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 13/77
+2026-06-28 19:22:57.155 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 14/77
+2026-06-28 19:22:57.314 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 15/77
+2026-06-28 19:22:57.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 16/77
+2026-06-28 19:22:57.519 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 17/77
+2026-06-28 19:22:57.621 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 18/77
+2026-06-28 19:22:57.635 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 19/77
+2026-06-28 19:22:57.645 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 20/77
+2026-06-28 19:22:57.725 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 21/77
+2026-06-28 19:22:57.725 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 22/77
+2026-06-28 19:22:57.751 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 23/77
+2026-06-28 19:22:57.835 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 24/77
+2026-06-28 19:22:58.967 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 25/77
+2026-06-28 19:22:59.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 26/77
+2026-06-28 19:22:59.362 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 27/77
+2026-06-28 19:22:59.385 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 28/77
+2026-06-28 19:22:59.502 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 29/77
+2026-06-28 19:23:00.197 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 30/77
+2026-06-28 19:23:00.285 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 31/77
+2026-06-28 19:23:00.905 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 32/77
+2026-06-28 19:23:01.308 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 33/77
+2026-06-28 19:23:02.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 34/77
+2026-06-28 19:23:02.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 35/77
+2026-06-28 19:23:02.333 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 36/77
+2026-06-28 19:23:02.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 37/77
+2026-06-28 19:23:02.484 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 38/77
+2026-06-28 19:23:02.662 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 39/77
+2026-06-28 19:23:03.358 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 40/77
+2026-06-28 19:23:03.359 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 41/77
+2026-06-28 19:23:04.403 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 42/77
+2026-06-28 19:23:04.483 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 43/77
+2026-06-28 19:23:05.200 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 44/77
+2026-06-28 19:23:05.518 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 45/77
+2026-06-28 19:23:06.127 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 46/77
+2026-06-28 19:23:06.341 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 47/77
+2026-06-28 19:23:07.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 48/77
+2026-06-28 19:23:07.658 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 49/77
+2026-06-28 19:23:08.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 50/77
+2026-06-28 19:23:08.787 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 51/77
+2026-06-28 19:23:08.987 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 52/77
+2026-06-28 19:23:09.910 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 53/77
+2026-06-28 19:23:09.931 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 54/77
+2026-06-28 19:23:12.060 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 55/77
+2026-06-28 19:23:12.479 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 56/77
+2026-06-28 19:23:12.709 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 57/77
+2026-06-28 19:23:12.982 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 58/77
+2026-06-28 19:23:13.528 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 59/77
+2026-06-28 19:23:15.746 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 60/77
+2026-06-28 19:23:16.678 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 61/77
+2026-06-28 19:23:17.315 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 62/77
+2026-06-28 19:23:21.275 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 63/77
+2026-06-28 19:23:21.429 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 64/77
+2026-06-28 19:23:26.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 65/77
+2026-06-28 19:23:27.933 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 66/77
+2026-06-28 19:23:29.672 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 67/77
+2026-06-28 19:23:34.179 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 68/77
+2026-06-28 19:23:34.998 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 69/77
+2026-06-28 19:23:43.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 70/77
+2026-06-28 19:23:45.358 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 71/77
+2026-06-28 19:23:47.694 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 72/77
+2026-06-28 20:09:22.899 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:22.900 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:22.901 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:22.903 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:22.908 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:22.916 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 1/77
+2026-06-28 20:09:22.916 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 2/77
+2026-06-28 20:09:22.916 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 3/77
+2026-06-28 20:09:22.917 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 4/77
+2026-06-28 20:09:22.917 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 5/77
+2026-06-28 20:09:22.918 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 6/77
+2026-06-28 20:09:22.918 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 7/77
+2026-06-28 20:09:22.918 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 8/77
+2026-06-28 20:09:22.919 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 9/77
+2026-06-28 20:09:22.919 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 10/77
+2026-06-28 20:09:22.924 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 11/77
+2026-06-28 20:09:22.925 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 12/77
+2026-06-28 20:09:22.925 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 13/77
+2026-06-28 20:09:22.926 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 14/77
+2026-06-28 20:09:22.926 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 15/77
+2026-06-28 20:09:22.926 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 16/77
+2026-06-28 20:09:22.927 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 17/77
+2026-06-28 20:09:22.927 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 18/77
+2026-06-28 20:09:22.927 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 19/77
+2026-06-28 20:09:22.928 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 20/77
+2026-06-28 20:09:22.928 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 21/77
+2026-06-28 20:09:22.929 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 22/77
+2026-06-28 20:09:22.929 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 23/77
+2026-06-28 20:09:22.929 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 24/77
+2026-06-28 20:09:22.930 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 25/77
+2026-06-28 20:09:22.930 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 26/77
+2026-06-28 20:09:22.931 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 27/77
+2026-06-28 20:09:22.931 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)
+2026-06-28 20:09:22.932 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 28/77
+2026-06-28 20:09:22.941 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 29/77
+2026-06-28 20:09:22.942 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 30/77
+2026-06-28 20:09:22.943 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 31/77
+2026-06-28 20:09:22.943 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 32/77
+2026-06-28 20:09:22.943 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 33/77
+2026-06-28 20:09:22.944 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 34/77
+2026-06-28 20:09:22.944 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 35/77
+2026-06-28 20:09:22.944 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 36/77
+2026-06-28 20:09:22.945 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 37/77
+2026-06-28 20:09:22.946 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)
+2026-06-28 20:09:22.946 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 38/77
+2026-06-28 20:09:22.947 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 39/77
+2026-06-28 20:09:22.949 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 40/77
+2026-06-28 20:09:22.949 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 41/77
+2026-06-28 20:09:22.950 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 42/77
+2026-06-28 20:09:22.950 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 43/77
+2026-06-28 20:09:22.950 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)
+2026-06-28 20:09:22.951 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 44/77
+2026-06-28 20:09:22.951 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 45/77
+2026-06-28 20:09:22.951 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 46/77
+2026-06-28 20:09:22.951 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 47/77
+2026-06-28 20:09:22.952 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 48/77
+2026-06-28 20:09:22.952 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 49/77
+2026-06-28 20:09:22.952 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummarizationBuilderExtensions.AddHttpProvider(Microsoft.Extensions.Diagnostics.ExceptionSummarization.IExceptionSummarizationBuilder)
+2026-06-28 20:09:22.957 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 50/77
+2026-06-28 20:09:22.957 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 51/77
+2026-06-28 20:09:22.958 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 52/77
+2026-06-28 20:09:22.958 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 53/77
+2026-06-28 20:09:22.959 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 54/77
+2026-06-28 20:09:22.959 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 55/77
+2026-06-28 20:09:22.960 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 56/77
+2026-06-28 20:09:22.960 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 57/77
+2026-06-28 20:09:22.960 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary.Equals(Microsoft.Extensions.Diagnostics.ExceptionSummarization.ExceptionSummary)
+2026-06-28 20:09:22.962 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 58/77
+2026-06-28 20:09:22.962 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 59/77
+2026-06-28 20:09:22.962 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 60/77
+2026-06-28 20:09:22.963 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 61/77
+2026-06-28 20:09:22.963 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 62/77
+2026-06-28 20:09:22.963 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 63/77
+2026-06-28 20:09:22.964 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 64/77
+2026-06-28 20:09:22.964 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 65/77
+2026-06-28 20:09:22.964 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 66/77
+2026-06-28 20:09:22.964 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 67/77
+2026-06-28 20:09:22.965 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 68/77
+2026-06-28 20:09:22.965 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 69/77
+2026-06-28 20:09:22.965 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 70/77
+2026-06-28 20:09:22.966 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 71/77
+2026-06-28 20:09:22.966 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 72/77
+2026-06-28 20:09:31.916 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 73/77
+2026-06-28 20:09:34.685 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 74/77
+2026-06-28 20:09:34.786 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 75/77
+2026-06-28 20:09:34.892 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 76/77
+2026-06-28 20:09:51.886 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 77/77
+2026-06-28 20:09:51.886 +08:00 [INF] 文件完成，本文件翻译 5 条，累计输入 1552 tokens，输出 7502 tokens，估算费用 0.02 元
+2026-06-28 20:09:51.887 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.diagnostics.exceptionsummarization\10.7.0\lib\net10.0\zh-Hans\Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml
+2026-06-28 20:09:51.893 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 20:09:51.893 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 20:09:51.893 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 20:09:51.894 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 20:09:51.894 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 20:09:51.895 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:09:51.896 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 20:09:51.897 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 20:09:51.897 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:09:51.898 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 20:09:51.898 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 20:09:51.898 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 20:09:51.899 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 20:09:51.899 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 20:09:51.899 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 20:09:51.902 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 20:09:51.903 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 20:09:51.904 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 20:09:51.908 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 20:09:51.908 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 20:09:51.908 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 20:09:51.908 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 20:09:51.909 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 20:09:51.909 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 20:09:51.909 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 20:09:51.909 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 20:09:51.910 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute
+2026-06-28 20:09:51.910 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)
+2026-06-28 20:09:51.910 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes
+2026-06-28 20:09:51.910 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes
+2026-06-28 20:09:51.910 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None
+2026-06-28 20:09:51.911 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor
+2026-06-28 20:09:51.911 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors
+2026-06-28 20:09:51.911 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors
+2026-06-28 20:09:51.912 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods
+2026-06-28 20:09:51.912 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods
+2026-06-28 20:09:51.913 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields
+2026-06-28 20:09:51.913 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields
+2026-06-28 20:09:51.914 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes
+2026-06-28 20:09:51.914 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes
+2026-06-28 20:09:51.915 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties
+2026-06-28 20:09:51.917 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties
+2026-06-28 20:09:51.917 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents
+2026-06-28 20:09:51.918 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents
+2026-06-28 20:09:51.919 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces
+2026-06-28 20:09:51.919 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All
+2026-06-28 20:09:51.919 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute
+2026-06-28 20:09:51.919 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)
+2026-06-28 20:09:51.920 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)
+2026-06-28 20:09:51.920 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)
+2026-06-28 20:09:51.920 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)
+2026-06-28 20:09:51.920 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)
+2026-06-28 20:09:51.921 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature
+2026-06-28 20:09:51.925 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes
+2026-06-28 20:09:51.926 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type
+2026-06-28 20:09:51.927 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName
+2026-06-28 20:09:51.927 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName
+2026-06-28 20:09:51.928 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition
+2026-06-28 20:09:51.928 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.RequiresAssemblyFilesAttribute
+2026-06-28 20:09:51.930 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.RequiresAssemblyFilesAttribute.#ctor
+2026-06-28 20:09:51.930 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.RequiresAssemblyFilesAttribute.#ctor(System.String)
+2026-06-28 20:09:51.931 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresAssemblyFilesAttribute.Message
+2026-06-28 20:09:51.932 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresAssemblyFilesAttribute.Url
+2026-06-28 20:09:51.932 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute
+2026-06-28 20:09:51.933 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)
+2026-06-28 20:09:51.933 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message
+2026-06-28 20:09:51.934 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url
+2026-06-28 20:09:51.935 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute
+2026-06-28 20:09:51.935 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)
+2026-06-28 20:09:51.935 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message
+2026-06-28 20:09:51.936 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url
+2026-06-28 20:09:51.936 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute
+2026-06-28 20:09:51.937 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)
+2026-06-28 20:09:51.937 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category
+2026-06-28 20:09:51.937 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId
+2026-06-28 20:09:51.937 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope
+2026-06-28 20:09:51.937 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target
+2026-06-28 20:09:51.946 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId
+2026-06-28 20:09:51.946 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification
+2026-06-28 20:09:51.947 +08:00 [DBG] 缓存缺失: T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute
+2026-06-28 20:09:51.947 +08:00 [DBG] 缓存缺失: M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)
+2026-06-28 20:09:51.947 +08:00 [DBG] 缓存缺失: P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName
+2026-06-28 20:09:51.947 +08:00 [DBG] 缓存缺失: T:System.Runtime.CompilerServices.SkipLocalsInitAttribute
+2026-06-28 20:09:51.947 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 1/160
+2026-06-28 20:09:51.947 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 2/160
+2026-06-28 20:09:51.947 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 3/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 4/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 5/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 6/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 7/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 8/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 9/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 10/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 11/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 12/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 13/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 14/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 15/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 16/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 17/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 18/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 19/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 20/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 21/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 22/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 23/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 24/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 25/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 26/160
+2026-06-28 20:09:51.948 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 27/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 28/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 29/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 30/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 31/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 32/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 33/160
+2026-06-28 20:09:51.949 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 34/160
+2026-06-28 20:09:51.950 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 35/160
+2026-06-28 20:09:51.950 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 36/160
+2026-06-28 20:09:51.950 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 37/160
+2026-06-28 20:09:51.950 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 38/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 39/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 40/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 41/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 42/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 43/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 44/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 45/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 46/160
+2026-06-28 20:09:51.960 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 47/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 48/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 49/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 50/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 51/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 52/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 53/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 54/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 55/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 56/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 57/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 58/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 59/160
+2026-06-28 20:09:51.961 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 60/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 61/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 62/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 63/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 64/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 65/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 66/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 67/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 68/160
+2026-06-28 20:09:51.962 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 69/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 70/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 71/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 72/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 73/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 74/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 75/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 76/160
+2026-06-28 20:09:51.963 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 77/160
+2026-06-28 20:09:56.495 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 78/160
+2026-06-28 20:09:56.582 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 79/160
+2026-06-28 20:09:56.893 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 80/160
+2026-06-28 20:09:56.894 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 81/160
+2026-06-28 20:09:56.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 82/160
+2026-06-28 20:09:57.097 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 83/160
+2026-06-28 20:09:57.229 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 84/160
+2026-06-28 20:09:57.336 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 85/160
+2026-06-28 20:09:57.401 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 86/160
+2026-06-28 20:09:57.402 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 87/160
+2026-06-28 20:09:57.515 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 88/160
+2026-06-28 20:09:57.608 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 89/160
+2026-06-28 20:09:57.709 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 90/160
+2026-06-28 20:09:57.914 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 91/160
+2026-06-28 20:09:57.926 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 92/160
+2026-06-28 20:09:58.119 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 93/160
+2026-06-28 20:09:58.253 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 94/160
+2026-06-28 20:09:58.333 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 95/160
+2026-06-28 20:09:58.425 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 96/160
+2026-06-28 20:09:58.529 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 97/160
+2026-06-28 20:09:58.533 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 98/160
+2026-06-28 20:09:58.632 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 99/160
+2026-06-28 20:09:59.051 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 100/160
+2026-06-28 20:09:59.245 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 101/160
+2026-06-28 20:09:59.758 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 102/160
+2026-06-28 20:09:59.775 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 103/160
+2026-06-28 20:10:00.167 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 104/160
+2026-06-28 20:10:00.209 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 105/160
+2026-06-28 20:10:00.925 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 106/160
+2026-06-28 20:10:01.293 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 107/160
+2026-06-28 20:10:01.334 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 108/160
+2026-06-28 20:10:01.600 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 109/160
+2026-06-28 20:10:01.808 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 110/160
+2026-06-28 20:10:02.968 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 111/160
+2026-06-28 20:10:03.137 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 112/160
+2026-06-28 20:10:03.446 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 113/160
+2026-06-28 20:10:03.764 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 114/160
+2026-06-28 20:10:03.959 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 115/160
+2026-06-28 20:10:03.969 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 116/160
+2026-06-28 20:10:04.164 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 117/160
+2026-06-28 20:10:04.164 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 118/160
+2026-06-28 20:10:04.264 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 119/160
+2026-06-28 20:10:04.882 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 120/160
+2026-06-28 20:10:05.185 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 121/160
+2026-06-28 20:10:05.301 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 122/160
+2026-06-28 20:10:06.003 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 123/160
+2026-06-28 20:10:06.618 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 124/160
+2026-06-28 20:10:06.749 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 125/160
+2026-06-28 20:10:07.437 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 126/160
+2026-06-28 20:10:07.542 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 127/160
+2026-06-28 20:10:07.647 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 128/160
+2026-06-28 20:10:08.259 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 129/160
+2026-06-28 20:10:08.259 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 130/160
+2026-06-28 20:10:08.512 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 131/160
+2026-06-28 20:10:10.820 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 132/160
+2026-06-28 20:10:14.849 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 133/160
+2026-06-28 20:10:16.762 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 134/160
+2026-06-28 20:10:17.582 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 135/160
+2026-06-28 20:10:20.033 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 136/160
+2026-06-28 20:10:20.134 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 137/160
+2026-06-28 20:10:20.647 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 138/160
+2026-06-28 20:10:21.270 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 139/160
+2026-06-28 20:10:22.081 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 140/160
+2026-06-28 20:10:23.104 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 141/160
+2026-06-28 20:10:23.434 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 142/160
+2026-06-28 20:10:25.182 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 143/160
+2026-06-28 20:10:26.998 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 144/160
+2026-06-28 20:10:28.736 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 145/160
+2026-06-28 20:10:30.580 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 146/160
+2026-06-28 20:10:33.037 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 147/160
+2026-06-28 20:10:35.187 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 148/160
+2026-06-28 20:10:40.205 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 149/160
+2026-06-28 20:10:40.552 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 150/160
+2026-06-28 20:10:40.736 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 151/160
+2026-06-28 20:10:44.097 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 152/160
+2026-06-28 20:10:46.678 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 153/160
+2026-06-28 20:10:47.886 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 154/160
+2026-06-28 20:10:50.856 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 155/160
+2026-06-28 20:10:51.379 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.ExceptionSummarization.xml 进度: 156/160

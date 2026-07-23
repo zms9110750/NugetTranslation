@@ -1,0 +1,203 @@
+2026-06-28 19:56:39.533 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:56:39.534 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:56:39.540 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:56:39.559 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.IStringLocalizer
+2026-06-28 19:56:39.560 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.IStringLocalizer.Item(System.String)
+2026-06-28 19:56:39.560 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.IStringLocalizer.Item(System.String,System.Object[])
+2026-06-28 19:56:39.561 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.IStringLocalizer.GetAllStrings(System.Boolean)
+2026-06-28 19:56:39.561 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.IStringLocalizerFactory
+2026-06-28 19:56:39.561 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.IStringLocalizerFactory.Create(System.Type)
+2026-06-28 19:56:39.562 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.IStringLocalizerFactory.Create(System.String,System.String)
+2026-06-28 19:56:39.562 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.IStringLocalizer`1
+2026-06-28 19:56:39.563 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.LocalizedString
+2026-06-28 19:56:39.566 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String)
+2026-06-28 19:56:39.566 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String,System.Boolean)
+2026-06-28 19:56:39.566 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.LocalizedString.#ctor(System.String,System.String,System.Boolean,System.String)
+2026-06-28 19:56:39.567 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.LocalizedString.op_Implicit(Microsoft.Extensions.Localization.LocalizedString)~System.String
+2026-06-28 19:56:39.567 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.LocalizedString.Name
+2026-06-28 19:56:39.567 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.LocalizedString.Value
+2026-06-28 19:56:39.567 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.LocalizedString.ResourceNotFound
+2026-06-28 19:56:39.568 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.LocalizedString.SearchedLocation
+2026-06-28 19:56:39.568 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.LocalizedString.ToString
+2026-06-28 19:56:39.568 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.StringLocalizerExtensions
+2026-06-28 19:56:39.569 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetString(Microsoft.Extensions.Localization.IStringLocalizer,System.String)
+2026-06-28 19:56:39.569 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetString(Microsoft.Extensions.Localization.IStringLocalizer,System.String,System.Object[])
+2026-06-28 19:56:39.569 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.StringLocalizerExtensions.GetAllStrings(Microsoft.Extensions.Localization.IStringLocalizer)
+2026-06-28 19:56:39.574 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Localization.StringLocalizer`1
+2026-06-28 19:56:39.575 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.StringLocalizer`1.#ctor(Microsoft.Extensions.Localization.IStringLocalizerFactory)
+2026-06-28 19:56:39.575 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.StringLocalizer`1.Item(System.String)
+2026-06-28 19:56:39.575 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Localization.StringLocalizer`1.Item(System.String,System.Object[])
+2026-06-28 19:56:39.576 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Localization.StringLocalizer`1.GetAllStrings(System.Boolean)
+2026-06-28 19:56:39.576 +08:00 [DBG] 缓存缺失: M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(System.Object,System.String)
+2026-06-28 19:56:39.576 +08:00 [DBG] 缓存缺失: M:Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)
+2026-06-28 19:56:45.547 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 1/29
+2026-06-28 19:56:45.642 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 2/29
+2026-06-28 19:56:45.881 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 3/29
+2026-06-28 19:56:46.157 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 4/29
+2026-06-28 19:56:46.984 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 5/29
+2026-06-28 19:56:47.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 6/29
+2026-06-28 19:56:47.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 7/29
+2026-06-28 19:56:47.486 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 8/29
+2026-06-28 19:56:47.833 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 9/29
+2026-06-28 19:56:47.997 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 10/29
+2026-06-28 19:56:48.883 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 11/29
+2026-06-28 19:56:51.275 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 12/29
+2026-06-28 19:56:51.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 13/29
+2026-06-28 19:56:51.583 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 14/29
+2026-06-28 19:56:52.000 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 15/29
+2026-06-28 19:56:53.424 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 16/29
+2026-06-28 19:56:53.785 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 17/29
+2026-06-28 19:56:55.369 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 18/29
+2026-06-28 19:56:55.779 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 19/29
+2026-06-28 19:56:59.467 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 20/29
+2026-06-28 19:57:00.493 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 21/29
+2026-06-28 19:57:01.237 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 22/29
+2026-06-28 19:57:02.141 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 23/29
+2026-06-28 19:57:06.019 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 24/29
+2026-06-28 19:57:08.185 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 25/29
+2026-06-28 19:57:08.308 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 26/29
+2026-06-28 19:57:08.893 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 27/29
+2026-06-28 19:57:09.647 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 28/29
+2026-06-28 19:57:17.285 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 29/29
+2026-06-28 19:57:17.285 +08:00 [INF] 文件完成，本文件翻译 29 条，累计输入 7094 tokens，输出 41610 tokens，估算费用 0.09 元
+2026-06-28 19:57:17.286 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.localization.abstractions\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:57:17.287 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 1/55
+2026-06-28 19:57:17.287 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 2/55
+2026-06-28 19:57:17.287 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 3/55
+2026-06-28 19:57:17.294 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 4/55
+2026-06-28 19:57:17.294 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 5/55
+2026-06-28 19:57:17.295 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 6/55
+2026-06-28 19:57:17.295 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 7/55
+2026-06-28 19:57:17.297 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 8/55
+2026-06-28 19:57:17.297 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 9/55
+2026-06-28 19:57:17.297 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 10/55
+2026-06-28 19:57:17.298 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 11/55
+2026-06-28 19:57:17.298 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 12/55
+2026-06-28 19:57:17.298 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 13/55
+2026-06-28 19:57:17.298 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 14/55
+2026-06-28 19:57:17.298 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 15/55
+2026-06-28 19:57:17.299 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 16/55
+2026-06-28 19:57:17.299 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 17/55
+2026-06-28 19:57:17.299 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 18/55
+2026-06-28 19:57:17.299 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 19/55
+2026-06-28 19:57:17.299 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 20/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 21/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 22/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 23/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 24/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 25/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 26/55
+2026-06-28 19:57:17.300 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 27/55
+2026-06-28 19:57:17.301 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 28/55
+2026-06-28 19:57:17.301 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 29/55
+2026-06-28 19:57:17.301 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 19:57:17.301 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 19:57:17.301 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 19:57:17.302 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 19:57:17.302 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 19:57:17.302 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 19:57:17.303 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 19:57:17.303 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 19:57:17.303 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 19:57:17.304 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 19:57:17.304 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 19:57:17.304 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 19:57:17.308 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 19:57:17.310 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 19:57:17.310 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 19:57:17.310 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 19:57:17.311 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 19:57:17.311 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 19:57:17.311 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 19:57:17.312 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 19:57:17.312 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 19:57:17.312 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 19:57:17.313 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 19:57:17.314 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 19:57:17.314 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 19:57:17.315 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 19:57:21.179 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 30/55
+2026-06-28 19:57:21.735 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 31/55
+2026-06-28 19:57:21.904 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 32/55
+2026-06-28 19:57:23.226 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 33/55
+2026-06-28 19:57:23.837 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 34/55
+2026-06-28 19:57:24.145 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 35/55
+2026-06-28 19:57:24.348 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 36/55
+2026-06-28 19:57:24.759 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 37/55
+2026-06-28 19:57:25.270 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 38/55
+2026-06-28 19:57:25.476 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 39/55
+2026-06-28 19:57:26.130 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 40/55
+2026-06-28 19:57:26.643 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 41/55
+2026-06-28 19:57:26.843 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 42/55
+2026-06-28 19:57:27.319 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 43/55
+2026-06-28 19:57:27.627 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 44/55
+2026-06-28 19:57:27.627 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 45/55
+2026-06-28 19:57:28.035 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 46/55
+2026-06-28 19:57:28.780 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 47/55
+2026-06-28 19:57:29.266 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 48/55
+2026-06-28 19:57:29.677 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 49/55
+2026-06-28 19:57:31.930 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 50/55
+2026-06-28 19:57:35.314 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 51/55
+2026-06-28 19:57:47.953 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 52/55
+2026-06-28 19:57:50.632 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 53/55
+2026-06-28 19:58:00.006 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 54/55
+2026-06-28 19:58:00.397 +08:00 [INF] lib/net462/Microsoft.Extensions.Localization.Abstractions.xml 进度: 55/55
+2026-06-28 19:58:00.397 +08:00 [INF] 文件完成，本文件翻译 26 条，累计输入 5655 tokens，输出 32392 tokens，估算费用 0.07 元
+2026-06-28 19:58:00.398 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.localization.abstractions\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:58:00.399 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 1/55
+2026-06-28 19:58:00.399 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 2/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 3/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 4/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 5/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 6/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 7/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 8/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 9/55
+2026-06-28 19:58:00.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 10/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 11/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 12/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 13/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 14/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 15/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 16/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 17/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 18/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 19/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 20/55
+2026-06-28 19:58:00.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 21/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 22/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 23/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 24/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 25/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 26/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 27/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 28/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 29/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 30/55
+2026-06-28 19:58:00.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 31/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 32/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 33/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 34/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 35/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 36/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 37/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 38/55
+2026-06-28 19:58:00.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 39/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 40/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 41/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 42/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 43/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 44/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 45/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 46/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 47/55
+2026-06-28 19:58:00.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 48/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 49/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 50/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 51/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 52/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 53/55
+2026-06-28 19:58:00.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 54/55
+2026-06-28 19:58:00.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml 进度: 55/55
+2026-06-28 19:58:00.411 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.localization.abstractions\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.Localization.Abstractions.xml
+2026-06-28 19:58:00.411 +08:00 [INF] ===== 包 microsoft.extensions.localization.abstractions 完成 =====

@@ -1,0 +1,5 @@
+2026-07-23 12:45:18.422 +08:00 [INF] ZiggyCreatures.FusionCache@2.2.0 缺失 11 条数据，预测为 0.002M token
+2026-07-23 12:45:30.673 +08:00 [INF] ZiggyCreatures.FusionCache 翻译完成，输入 0.007M tok，输出 0.008M tok，命中 0.000M tok
+2026-07-23 12:45:30.764 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.2.0\lib\net8.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:45:30.805 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.2.0\lib\net9.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:45:30.845 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.2.0\lib\netstandard2.0\zh-Hans\ZiggyCreatures.FusionCache.xml

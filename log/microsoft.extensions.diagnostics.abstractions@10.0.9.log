@@ -1,0 +1,334 @@
+2026-06-28 19:21:47.486 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 19:21:47.487 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 19:21:47.488 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 19:21:47.489 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 19:21:47.490 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 19:21:47.520 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder
+2026-06-28 19:21:47.521 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder.Services
+2026-06-28 19:21:47.521 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener
+2026-06-28 19:21:47.521 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Name
+2026-06-28 19:21:47.521 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.Initialize(Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource)
+2026-06-28 19:21:47.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.InstrumentPublished(System.Diagnostics.Metrics.Instrument,System.Object@)
+2026-06-28 19:21:47.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.MeasurementsCompleted(System.Diagnostics.Metrics.Instrument,System.Object)
+2026-06-28 19:21:47.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener.GetMeasurementHandlers
+2026-06-28 19:21:47.522 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule
+2026-06-28 19:21:47.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope,System.Boolean)
+2026-06-28 19:21:47.523 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.MeterName
+2026-06-28 19:21:47.523 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.InstrumentName
+2026-06-28 19:21:47.523 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.ListenerName
+2026-06-28 19:21:47.523 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.Scopes
+2026-06-28 19:21:47.523 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.InstrumentRule.Enable
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.IObservableInstrumentsSource.RecordObservableInstruments
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.ByteHandler
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.ShortHandler
+2026-06-28 19:21:47.524 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.IntHandler
+2026-06-28 19:21:47.525 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.LongHandler
+2026-06-28 19:21:47.525 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.FloatHandler
+2026-06-28 19:21:47.525 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.DoubleHandler
+2026-06-28 19:21:47.525 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.DecimalHandler
+2026-06-28 19:21:47.525 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.MeterScope
+2026-06-28 19:21:47.526 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.None
+2026-06-28 19:21:47.526 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Global
+2026-06-28 19:21:47.526 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.Diagnostics.Metrics.MeterScope.Local
+2026-06-28 19:21:47.526 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions
+2026-06-28 19:21:47.526 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener``1(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.ClearListeners(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String)
+2026-06-28 19:21:47.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 19:21:47.528 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)
+2026-06-28 19:21:47.528 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 19:21:47.528 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String)
+2026-06-28 19:21:47.529 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 19:21:47.531 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions
+2026-06-28 19:21:47.532 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions.Rules
+2026-06-28 19:21:47.532 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Internal.TypeNameHelper.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)
+2026-06-28 19:21:52.838 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 1/44
+2026-06-28 19:21:53.144 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 2/44
+2026-06-28 19:21:54.032 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 3/44
+2026-06-28 19:21:54.159 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 4/44
+2026-06-28 19:21:54.441 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 5/44
+2026-06-28 19:21:55.101 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 6/44
+2026-06-28 19:21:56.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 7/44
+2026-06-28 19:21:56.593 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 8/44
+2026-06-28 19:21:57.208 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 9/44
+2026-06-28 19:21:57.514 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 10/44
+2026-06-28 19:21:57.616 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 11/44
+2026-06-28 19:21:57.958 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 12/44
+2026-06-28 19:21:59.253 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 13/44
+2026-06-28 19:22:00.611 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 14/44
+2026-06-28 19:22:00.995 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 15/44
+2026-06-28 19:22:01.816 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 16/44
+2026-06-28 19:22:02.735 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 17/44
+2026-06-28 19:22:03.145 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 18/44
+2026-06-28 19:22:03.145 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 19/44
+2026-06-28 19:22:03.247 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 20/44
+2026-06-28 19:22:03.966 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 21/44
+2026-06-28 19:22:04.199 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 22/44
+2026-06-28 19:22:05.133 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 23/44
+2026-06-28 19:22:06.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 24/44
+2026-06-28 19:22:09.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 25/44
+2026-06-28 19:22:11.235 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 26/44
+2026-06-28 19:22:15.125 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 27/44
+2026-06-28 19:22:17.276 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 28/44
+2026-06-28 19:22:17.583 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 29/44
+2026-06-28 19:22:17.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 30/44
+2026-06-28 19:22:20.042 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 31/44
+2026-06-28 19:22:22.818 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 32/44
+2026-06-28 19:22:27.107 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 33/44
+2026-06-28 19:22:27.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 34/44
+2026-06-28 19:22:30.485 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 35/44
+2026-06-28 19:22:30.934 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 36/44
+2026-06-28 19:22:40.010 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 37/44
+2026-06-28 19:22:40.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 38/44
+2026-06-28 19:22:42.468 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 39/44
+2026-06-28 20:07:41.421 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:07:41.423 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:07:41.424 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:07:41.425 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:07:41.425 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:07:41.430 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 1/44
+2026-06-28 20:07:41.435 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 2/44
+2026-06-28 20:07:41.436 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 3/44
+2026-06-28 20:07:41.436 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 4/44
+2026-06-28 20:07:41.436 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 5/44
+2026-06-28 20:07:41.437 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 6/44
+2026-06-28 20:07:41.437 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 7/44
+2026-06-28 20:07:41.437 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 8/44
+2026-06-28 20:07:41.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 9/44
+2026-06-28 20:07:41.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 10/44
+2026-06-28 20:07:41.439 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 11/44
+2026-06-28 20:07:41.439 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 12/44
+2026-06-28 20:07:41.444 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 13/44
+2026-06-28 20:07:41.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 14/44
+2026-06-28 20:07:41.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 15/44
+2026-06-28 20:07:41.446 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 16/44
+2026-06-28 20:07:41.446 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 17/44
+2026-06-28 20:07:41.447 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 18/44
+2026-06-28 20:07:41.447 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Diagnostics.Metrics.MeasurementHandlers.ByteHandler
+2026-06-28 20:07:41.447 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 19/44
+2026-06-28 20:07:41.448 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 20/44
+2026-06-28 20:07:41.448 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 21/44
+2026-06-28 20:07:41.449 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 22/44
+2026-06-28 20:07:41.452 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 23/44
+2026-06-28 20:07:41.452 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 24/44
+2026-06-28 20:07:41.452 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 25/44
+2026-06-28 20:07:41.453 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 26/44
+2026-06-28 20:07:41.453 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 27/44
+2026-06-28 20:07:41.453 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 28/44
+2026-06-28 20:07:41.454 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 29/44
+2026-06-28 20:07:41.454 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 30/44
+2026-06-28 20:07:41.455 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 31/44
+2026-06-28 20:07:41.455 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 32/44
+2026-06-28 20:07:41.455 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.EnableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)
+2026-06-28 20:07:41.456 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 33/44
+2026-06-28 20:07:41.456 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 34/44
+2026-06-28 20:07:41.456 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 35/44
+2026-06-28 20:07:41.457 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String)
+2026-06-28 20:07:41.457 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 20:07:41.458 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 36/44
+2026-06-28 20:07:41.458 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.DisableMetrics(Microsoft.Extensions.Diagnostics.Metrics.MetricsOptions,System.String,System.String,System.String,Microsoft.Extensions.Diagnostics.Metrics.MeterScope)
+2026-06-28 20:07:41.458 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 37/44
+2026-06-28 20:07:41.459 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 38/44
+2026-06-28 20:07:41.459 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 39/44
+2026-06-28 20:07:54.141 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 40/44
+2026-06-28 20:08:09.398 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 41/44
+2026-06-28 20:08:16.759 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 42/44
+2026-06-28 20:08:17.396 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 43/44
+2026-06-28 20:08:20.979 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 44/44
+2026-06-28 20:08:20.979 +08:00 [INF] 文件完成，本文件翻译 5 条，累计输入 1829 tokens，输出 15331 tokens，估算费用 0.03 元
+2026-06-28 20:08:20.980 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.diagnostics.abstractions\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Diagnostics.Abstractions.xml
+2026-06-28 20:08:20.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 1/118
+2026-06-28 20:08:20.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 2/118
+2026-06-28 20:08:20.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 3/118
+2026-06-28 20:08:20.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 4/118
+2026-06-28 20:08:20.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 5/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 6/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 7/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 8/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 9/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 10/118
+2026-06-28 20:08:20.982 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 11/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 12/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 13/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 14/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 15/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 16/118
+2026-06-28 20:08:20.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 17/118
+2026-06-28 20:08:20.984 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 18/118
+2026-06-28 20:08:20.984 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 19/118
+2026-06-28 20:08:20.985 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 20/118
+2026-06-28 20:08:20.985 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 21/118
+2026-06-28 20:08:20.985 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 22/118
+2026-06-28 20:08:20.986 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 23/118
+2026-06-28 20:08:20.986 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 24/118
+2026-06-28 20:08:20.986 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 25/118
+2026-06-28 20:08:20.987 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 26/118
+2026-06-28 20:08:20.987 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 27/118
+2026-06-28 20:08:20.987 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 28/118
+2026-06-28 20:08:20.987 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 29/118
+2026-06-28 20:08:20.987 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 30/118
+2026-06-28 20:08:20.988 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 31/118
+2026-06-28 20:08:20.988 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 32/118
+2026-06-28 20:08:20.988 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 33/118
+2026-06-28 20:08:20.988 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 34/118
+2026-06-28 20:08:20.992 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 35/118
+2026-06-28 20:08:20.992 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 36/118
+2026-06-28 20:08:20.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 37/118
+2026-06-28 20:08:20.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 38/118
+2026-06-28 20:08:20.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 39/118
+2026-06-28 20:08:20.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 40/118
+2026-06-28 20:08:20.994 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 41/118
+2026-06-28 20:08:20.994 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 42/118
+2026-06-28 20:08:20.994 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 43/118
+2026-06-28 20:08:20.994 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 44/118
+2026-06-28 20:08:20.994 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute
+2026-06-28 20:08:20.995 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)
+2026-06-28 20:08:20.996 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes
+2026-06-28 20:08:20.996 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes
+2026-06-28 20:08:20.997 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None
+2026-06-28 20:08:20.997 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor
+2026-06-28 20:08:20.998 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors
+2026-06-28 20:08:20.998 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors
+2026-06-28 20:08:20.998 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods
+2026-06-28 20:08:20.998 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods
+2026-06-28 20:08:20.999 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields
+2026-06-28 20:08:20.999 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields
+2026-06-28 20:08:20.999 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes
+2026-06-28 20:08:21.000 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes
+2026-06-28 20:08:21.000 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties
+2026-06-28 20:08:21.002 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties
+2026-06-28 20:08:21.003 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents
+2026-06-28 20:08:21.003 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents
+2026-06-28 20:08:21.004 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces
+2026-06-28 20:08:21.004 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructorsWithInherited
+2026-06-28 20:08:21.004 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethodsWithInherited
+2026-06-28 20:08:21.004 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFieldsWithInherited
+2026-06-28 20:08:21.004 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypesWithInherited
+2026-06-28 20:08:21.005 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicPropertiesWithInherited
+2026-06-28 20:08:21.005 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEventsWithInherited
+2026-06-28 20:08:21.005 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructorsWithInherited
+2026-06-28 20:08:21.005 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypesWithInherited
+2026-06-28 20:08:21.005 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllConstructors
+2026-06-28 20:08:21.006 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllMethods
+2026-06-28 20:08:21.006 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllFields
+2026-06-28 20:08:21.006 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllNestedTypes
+2026-06-28 20:08:21.007 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllProperties
+2026-06-28 20:08:21.007 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllEvents
+2026-06-28 20:08:21.008 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All
+2026-06-28 20:08:21.008 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 20:08:21.008 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 20:08:21.008 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 20:08:21.009 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 20:08:21.012 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 20:08:21.013 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:08:21.013 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 20:08:21.013 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 20:08:21.014 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:08:21.014 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 20:08:21.014 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 20:08:21.014 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 20:08:21.015 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 20:08:21.015 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 20:08:21.016 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 20:08:21.016 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 20:08:21.016 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 20:08:21.017 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 20:08:21.018 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 20:08:21.019 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 20:08:21.020 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 20:08:21.020 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 20:08:21.020 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 20:08:21.021 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 20:08:21.022 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 20:08:21.035 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 20:08:21.037 +08:00 [DBG] 缓存缺失: T:System.Runtime.CompilerServices.CompilerLoweringPreserveAttribute
+2026-06-28 20:08:21.037 +08:00 [DBG] 缓存缺失: M:System.Runtime.CompilerServices.CompilerLoweringPreserveAttribute.#ctor
+2026-06-28 20:08:21.037 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 20:08:21.038 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 20:08:21.039 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 20:08:21.039 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 20:08:21.040 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 20:08:21.041 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 20:08:21.041 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 20:08:21.043 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 20:08:21.043 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 20:08:21.043 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 20:08:21.044 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 20:08:21.044 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 20:08:24.566 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 45/118
+2026-06-28 20:08:25.046 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 46/118
+2026-06-28 20:08:25.756 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 47/118
+2026-06-28 20:08:25.756 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 48/118
+2026-06-28 20:08:26.164 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 49/118
+2026-06-28 20:08:26.575 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 50/118
+2026-06-28 20:08:26.676 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 51/118
+2026-06-28 20:08:26.676 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 52/118
+2026-06-28 20:08:26.676 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 53/118
+2026-06-28 20:08:26.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 54/118
+2026-06-28 20:08:26.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 55/118
+2026-06-28 20:08:26.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 56/118
+2026-06-28 20:08:26.890 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 57/118
+2026-06-28 20:08:26.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 58/118
+2026-06-28 20:08:26.983 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 59/118
+2026-06-28 20:08:27.023 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 60/118
+2026-06-28 20:08:27.222 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 61/118
+2026-06-28 20:08:27.290 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 62/118
+2026-06-28 20:08:27.314 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 63/118
+2026-06-28 20:08:27.495 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 64/118
+2026-06-28 20:08:27.809 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 65/118
+2026-06-28 20:08:27.925 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 66/118
+2026-06-28 20:08:28.048 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 67/118
+2026-06-28 20:08:28.238 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 68/118
+2026-06-28 20:08:28.356 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 69/118
+2026-06-28 20:08:28.622 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 70/118
+2026-06-28 20:08:28.663 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 71/118
+2026-06-28 20:08:28.723 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 72/118
+2026-06-28 20:08:28.845 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 73/118
+2026-06-28 20:08:29.031 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 74/118
+2026-06-28 20:08:29.175 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 75/118
+2026-06-28 20:08:29.363 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 76/118
+2026-06-28 20:08:29.441 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 77/118
+2026-06-28 20:08:29.441 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 78/118
+2026-06-28 20:08:29.458 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 79/118
+2026-06-28 20:08:30.056 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 80/118
+2026-06-28 20:08:30.363 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 81/118
+2026-06-28 20:08:30.672 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 82/118
+2026-06-28 20:08:30.790 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 83/118
+2026-06-28 20:08:31.190 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 84/118
+2026-06-28 20:08:31.283 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 85/118
+2026-06-28 20:08:31.306 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 86/118
+2026-06-28 20:08:31.489 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 87/118
+2026-06-28 20:08:32.012 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 88/118
+2026-06-28 20:08:32.106 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 89/118
+2026-06-28 20:08:32.207 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 90/118
+2026-06-28 20:08:32.626 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 91/118
+2026-06-28 20:08:33.039 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 92/118
+2026-06-28 20:08:33.127 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 93/118
+2026-06-28 20:08:33.127 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 94/118
+2026-06-28 20:08:33.575 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 95/118
+2026-06-28 20:08:33.641 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 96/118
+2026-06-28 20:08:33.742 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 97/118
+2026-06-28 20:08:33.742 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 98/118
+2026-06-28 20:08:34.284 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 99/118
+2026-06-28 20:08:34.356 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 100/118
+2026-06-28 20:08:35.199 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 101/118
+2026-06-28 20:08:35.289 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 102/118
+2026-06-28 20:08:37.839 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 103/118
+2026-06-28 20:08:38.154 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 104/118
+2026-06-28 20:08:38.865 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 105/118
+2026-06-28 20:08:39.681 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 106/118
+2026-06-28 20:08:42.039 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 107/118
+2026-06-28 20:08:46.064 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 108/118
+2026-06-28 20:08:46.440 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 109/118
+2026-06-28 20:08:47.156 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 110/118
+2026-06-28 20:08:47.889 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 111/118
+2026-06-28 20:08:58.727 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 112/118
+2026-06-28 20:08:59.976 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 113/118
+2026-06-28 20:09:07.943 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 114/118
+2026-06-28 20:09:08.677 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 115/118
+2026-06-28 20:09:11.651 +08:00 [INF] lib/net462/Microsoft.Extensions.Diagnostics.Abstractions.xml 进度: 116/118

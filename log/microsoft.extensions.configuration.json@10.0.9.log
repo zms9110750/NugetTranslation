@@ -1,0 +1,177 @@
+2026-06-28 19:42:05.587 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:05.605 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:05.608 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:05.610 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:05.613 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:05.614 +08:00 [INF] 正在提取文件: lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 19:42:06.090 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.JsonConfigurationExtensions
+2026-06-28 19:42:06.189 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)
+2026-06-28 19:42:06.190 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean)
+2026-06-28 19:42:06.191 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean,System.Boolean)
+2026-06-28 19:42:06.192 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.FileProviders.IFileProvider,System.String,System.Boolean,System.Boolean)
+2026-06-28 19:42:06.193 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.Json.JsonConfigurationSource})
+2026-06-28 19:42:06.194 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonStream(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.IO.Stream)
+2026-06-28 19:42:06.195 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider
+2026-06-28 19:42:06.196 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Json.JsonConfigurationSource)
+2026-06-28 19:42:06.197 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(System.IO.Stream)
+2026-06-28 19:42:06.198 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.Json.JsonConfigurationSource
+2026-06-28 19:42:06.199 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 19:42:06.201 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider
+2026-06-28 19:42:06.202 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource)
+2026-06-28 19:42:06.203 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationProvider.Load(System.IO.Stream)
+2026-06-28 19:42:06.204 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource
+2026-06-28 19:42:06.205 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.Json.JsonStreamConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 19:42:06.206 +08:00 [DBG] 缓存缺失: P:System.SR.Error_InvalidFilePath
+2026-06-28 19:42:06.207 +08:00 [DBG] 缓存缺失: P:System.SR.Error_InvalidTopLevelJSONElement
+2026-06-28 19:42:06.207 +08:00 [DBG] 缓存缺失: P:System.SR.Error_JSONParseError
+2026-06-28 19:42:06.208 +08:00 [DBG] 缓存缺失: P:System.SR.Error_KeyIsDuplicated
+2026-06-28 19:42:06.211 +08:00 [DBG] 缓存缺失: P:System.SR.Error_UnsupportedJSONToken
+2026-06-28 19:42:11.103 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 1/22
+2026-06-28 19:42:12.276 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 2/22
+2026-06-28 19:42:12.487 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 3/22
+2026-06-28 19:42:12.903 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 4/22
+2026-06-28 19:42:13.505 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 5/22
+2026-06-28 19:42:14.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 6/22
+2026-06-28 19:42:14.630 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 7/22
+2026-06-28 19:42:15.551 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 8/22
+2026-06-28 19:42:17.343 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 9/22
+2026-06-28 19:42:18.522 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 10/22
+2026-06-28 19:42:18.935 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 11/22
+2026-06-28 19:42:20.557 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 12/22
+2026-06-28 19:42:20.595 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 13/22
+2026-06-28 19:42:25.691 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 14/22
+2026-06-28 19:42:28.355 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 15/22
+2026-06-28 19:42:28.970 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 16/22
+2026-06-28 19:42:35.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 17/22
+2026-06-28 19:42:42.995 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 18/22
+2026-06-28 19:42:50.579 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 19/22
+2026-06-28 19:42:50.579 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 20/22
+2026-06-28 19:43:05.832 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 21/22
+2026-06-28 20:04:08.987 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:08.988 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:08.989 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:08.994 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:08.994 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:08.995 +08:00 [INF] 正在提取文件: lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:09.001 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 1/22
+2026-06-28 20:04:09.001 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 2/22
+2026-06-28 20:04:09.002 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 3/22
+2026-06-28 20:04:09.002 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 4/22
+2026-06-28 20:04:09.002 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.FileProviders.IFileProvider,System.String,System.Boolean,System.Boolean)
+2026-06-28 20:04:09.002 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 5/22
+2026-06-28 20:04:09.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 6/22
+2026-06-28 20:04:09.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 7/22
+2026-06-28 20:04:09.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 8/22
+2026-06-28 20:04:09.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 9/22
+2026-06-28 20:04:09.004 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 10/22
+2026-06-28 20:04:09.004 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 11/22
+2026-06-28 20:04:09.004 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 12/22
+2026-06-28 20:04:09.004 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 13/22
+2026-06-28 20:04:09.005 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 14/22
+2026-06-28 20:04:09.005 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 15/22
+2026-06-28 20:04:09.005 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 16/22
+2026-06-28 20:04:09.005 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 17/22
+2026-06-28 20:04:09.005 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 18/22
+2026-06-28 20:04:09.006 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 19/22
+2026-06-28 20:04:09.006 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 20/22
+2026-06-28 20:04:09.010 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 21/22
+2026-06-28 20:04:39.766 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.Json.xml 进度: 22/22
+2026-06-28 20:04:39.766 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 423 tokens，输出 3126 tokens，估算费用 0.01 元
+2026-06-28 20:04:39.767 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.configuration.json\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Configuration.Json.xml
+2026-06-28 20:04:39.768 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 1/60
+2026-06-28 20:04:39.768 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 2/60
+2026-06-28 20:04:39.769 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 3/60
+2026-06-28 20:04:39.769 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 4/60
+2026-06-28 20:04:39.771 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 5/60
+2026-06-28 20:04:39.771 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 6/60
+2026-06-28 20:04:39.772 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 7/60
+2026-06-28 20:04:39.772 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 8/60
+2026-06-28 20:04:39.772 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 9/60
+2026-06-28 20:04:39.772 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 10/60
+2026-06-28 20:04:39.772 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 11/60
+2026-06-28 20:04:39.773 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 12/60
+2026-06-28 20:04:39.773 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 13/60
+2026-06-28 20:04:39.773 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 14/60
+2026-06-28 20:04:39.773 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 15/60
+2026-06-28 20:04:39.773 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 16/60
+2026-06-28 20:04:39.774 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 17/60
+2026-06-28 20:04:39.778 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 18/60
+2026-06-28 20:04:39.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 19/60
+2026-06-28 20:04:39.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 20/60
+2026-06-28 20:04:39.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 21/60
+2026-06-28 20:04:39.780 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 22/60
+2026-06-28 20:04:39.780 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 20:04:39.780 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 20:04:39.781 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 20:04:39.781 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 20:04:39.782 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 20:04:39.783 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 20:04:39.784 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 20:04:39.784 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 20:04:39.785 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 20:04:39.785 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 20:04:39.785 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 20:04:39.786 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 20:04:39.786 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 20:04:39.786 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 20:04:39.786 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 20:04:39.786 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 20:04:39.787 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:04:39.787 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 20:04:39.787 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 20:04:39.787 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:04:39.788 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 20:04:39.788 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 20:04:39.788 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 20:04:39.788 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 20:04:39.788 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 20:04:39.789 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 20:04:39.789 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 20:04:39.789 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 20:04:39.789 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 20:04:39.789 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 20:04:39.790 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 20:04:39.790 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 20:04:39.795 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 20:04:39.796 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 20:04:39.796 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 20:04:39.796 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 20:04:39.796 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 20:04:39.796 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 20:04:45.902 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 23/60
+2026-06-28 20:04:46.331 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 24/60
+2026-06-28 20:04:46.619 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 25/60
+2026-06-28 20:04:46.732 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 26/60
+2026-06-28 20:04:46.932 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 27/60
+2026-06-28 20:04:47.356 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 28/60
+2026-06-28 20:04:47.438 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 29/60
+2026-06-28 20:04:47.580 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 30/60
+2026-06-28 20:04:47.647 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 31/60
+2026-06-28 20:04:47.647 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 32/60
+2026-06-28 20:04:47.648 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 33/60
+2026-06-28 20:04:47.848 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 34/60
+2026-06-28 20:04:48.265 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 35/60
+2026-06-28 20:04:48.580 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 36/60
+2026-06-28 20:04:48.581 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 37/60
+2026-06-28 20:04:48.582 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 38/60
+2026-06-28 20:04:48.769 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 39/60
+2026-06-28 20:04:49.834 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 40/60
+2026-06-28 20:04:50.621 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 41/60
+2026-06-28 20:04:50.921 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 42/60
+2026-06-28 20:04:51.255 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 43/60
+2026-06-28 20:04:52.072 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 44/60
+2026-06-28 20:04:52.519 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 45/60
+2026-06-28 20:04:52.569 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 46/60
+2026-06-28 20:04:53.733 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 47/60
+2026-06-28 20:04:53.819 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 48/60
+2026-06-28 20:04:55.129 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 49/60
+2026-06-28 20:04:55.639 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 50/60
+2026-06-28 20:04:56.980 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 51/60
+2026-06-28 20:05:02.183 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 52/60
+2026-06-28 20:05:02.417 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 53/60
+2026-06-28 20:05:03.739 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 54/60
+2026-06-28 20:05:04.046 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 55/60
+2026-06-28 20:05:04.951 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 56/60
+2026-06-28 20:05:06.012 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 57/60
+2026-06-28 20:05:14.085 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 58/60
+2026-06-28 20:05:22.703 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.Json.xml 进度: 59/60

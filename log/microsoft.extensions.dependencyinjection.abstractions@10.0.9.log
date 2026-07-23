@@ -1,0 +1,1422 @@
+2026-06-28 17:23:05.688 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.708 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.710 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.712 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.713 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.714 +08:00 [INF] 正在提取文件: lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:23:05.946 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ActivatorUtilities
+2026-06-28 17:23:06.074 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(System.IServiceProvider,System.Type,System.Object[])
+2026-06-28 17:23:06.075 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(System.Type,System.Type[])
+2026-06-28 17:23:06.076 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])
+2026-06-28 17:23:06.077 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance``1(System.IServiceProvider,System.Object[])
+2026-06-28 17:23:06.078 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetServiceOrCreateInstance``1(System.IServiceProvider)
+2026-06-28 17:23:06.079 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetServiceOrCreateInstance(System.IServiceProvider,System.Type)
+2026-06-28 17:23:06.080 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperNullReferenceException
+2026-06-28 17:23:06.080 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ActivatorUtilitiesConstructorAttribute
+2026-06-28 17:23:06.081 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.AsyncServiceScope
+2026-06-28 17:23:06.082 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.AsyncServiceScope.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScope)
+2026-06-28 17:23:06.083 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.AsyncServiceScope.ServiceProvider
+2026-06-28 17:23:06.084 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.AsyncServiceScope.Dispose
+2026-06-28 17:23:06.088 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.AsyncServiceScope.DisposeAsync
+2026-06-28 17:23:06.089 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions
+2026-06-28 17:23:06.090 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.091 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyInjection.ServiceDescriptor})
+2026-06-28 17:23:06.093 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.093 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyInjection.ServiceDescriptor})
+2026-06-28 17:23:06.094 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.095 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.095 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.096 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.096 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.097 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.097 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.098 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.098 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.099 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.100 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.101 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.105 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.105 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.106 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.107 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.108 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.108 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,``0)
+2026-06-28 17:23:06.110 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.111 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.112 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyInjection.ServiceDescriptor})
+2026-06-28 17:23:06.113 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.Replace(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.114 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.RemoveAll``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.114 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.RemoveAll(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.115 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.116 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.116 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.117 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.121 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.122 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.123 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.124 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.125 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.126 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.126 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.127 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.128 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.128 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.129 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.130 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.130 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.131 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,``0)
+2026-06-28 17:23:06.132 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.132 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.RemoveAllKeyed``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.133 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.RemoveAllKeyed(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.134 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.FromKeyedServicesAttribute
+2026-06-28 17:23:06.135 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.FromKeyedServicesAttribute.#ctor(System.Object)
+2026-06-28 17:23:06.138 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.FromKeyedServicesAttribute.#ctor
+2026-06-28 17:23:06.155 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.FromKeyedServicesAttribute.Key
+2026-06-28 17:23:06.156 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.FromKeyedServicesAttribute.LookupMode
+2026-06-28 17:23:06.156 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider
+2026-06-28 17:23:06.157 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetKeyedService(System.Type,System.Object)
+2026-06-28 17:23:06.158 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IKeyedServiceProvider.GetRequiredKeyedService(System.Type,System.Object)
+2026-06-28 17:23:06.159 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.KeyedService
+2026-06-28 17:23:06.159 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey
+2026-06-28 17:23:06.180 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+2026-06-28 17:23:06.182 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1
+2026-06-28 17:23:06.182 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.183 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1.CreateServiceProvider(`0)
+2026-06-28 17:23:06.184 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceProviderIsKeyedService
+2026-06-28 17:23:06.190 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceProviderIsKeyedService.IsKeyedService(System.Type,System.Object)
+2026-06-28 17:23:06.191 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceProviderIsService
+2026-06-28 17:23:06.191 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceProviderIsService.IsService(System.Type)
+2026-06-28 17:23:06.192 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceScope
+2026-06-28 17:23:06.192 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.IServiceScope.ServiceProvider
+2026-06-28 17:23:06.193 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+2026-06-28 17:23:06.194 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory.CreateScope
+2026-06-28 17:23:06.194 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ISupportRequiredService
+2026-06-28 17:23:06.195 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ISupportRequiredService.GetRequiredService(System.Type)
+2026-06-28 17:23:06.195 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ObjectFactory
+2026-06-28 17:23:06.196 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ObjectFactory`1
+2026-06-28 17:23:06.197 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceCollection
+2026-06-28 17:23:06.197 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceCollection.Count
+2026-06-28 17:23:06.198 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceCollection.IsReadOnly
+2026-06-28 17:23:06.198 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceCollection.Item(System.Int32)
+2026-06-28 17:23:06.199 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.Clear
+2026-06-28 17:23:06.199 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.Contains(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.200 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.CopyTo(Microsoft.Extensions.DependencyInjection.ServiceDescriptor[],System.Int32)
+2026-06-28 17:23:06.204 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.Remove(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.205 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.GetEnumerator
+2026-06-28 17:23:06.206 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.IndexOf(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.206 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.Insert(System.Int32,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:23:06.207 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.RemoveAt(System.Int32)
+2026-06-28 17:23:06.208 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollection.MakeReadOnly
+2026-06-28 17:23:06.209 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions
+2026-06-28 17:23:06.210 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.211 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.212 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.213 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.214 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.214 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.215 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.216 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.217 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.217 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.221 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.222 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.223 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.224 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.224 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:23:06.225 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.229 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.230 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:23:06.231 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:23:06.232 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.233 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.233 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.234 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,``0)
+2026-06-28 17:23:06.238 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.239 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.240 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.241 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.241 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.242 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.244 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.245 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.246 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.247 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.247 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.248 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.249 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.250 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.256 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.257 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.257 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.258 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:23:06.259 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:23:06.260 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.260 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.261 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Object)
+2026-06-28 17:23:06.262 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,``0)
+2026-06-28 17:23:06.274 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceDescriptor
+2026-06-28 17:23:06.274 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:06.275 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Object,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:06.276 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Object)
+2026-06-28 17:23:06.276 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Object,System.Object)
+2026-06-28 17:23:06.277 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Func{System.IServiceProvider,System.Object},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:06.278 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.#ctor(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:06.278 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Lifetime
+2026-06-28 17:23:06.279 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ServiceKey
+2026-06-28 17:23:06.279 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ServiceType
+2026-06-28 17:23:06.280 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ImplementationType
+2026-06-28 17:23:06.281 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedImplementationType
+2026-06-28 17:23:06.281 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ImplementationInstance
+2026-06-28 17:23:06.282 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedImplementationInstance
+2026-06-28 17:23:06.284 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ImplementationFactory
+2026-06-28 17:23:06.288 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedImplementationFactory
+2026-06-28 17:23:06.288 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.IsKeyedService
+2026-06-28 17:23:06.289 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ToString
+2026-06-28 17:23:06.290 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient``2
+2026-06-28 17:23:06.291 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient``2(System.Object)
+2026-06-28 17:23:06.291 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient(System.Type,System.Type)
+2026-06-28 17:23:06.292 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient(System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.293 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient``2(System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.293 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient``2(System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.294 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient``1(System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.295 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient``1(System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.296 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient(System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.297 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.298 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped``2
+2026-06-28 17:23:06.299 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped``2(System.Object)
+2026-06-28 17:23:06.355 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped(System.Type,System.Type)
+2026-06-28 17:23:06.355 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped(System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.356 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped``2(System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.357 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped``2(System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.358 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped``1(System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.359 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped``1(System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.359 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped(System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.360 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.361 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton``2
+2026-06-28 17:23:06.361 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``2(System.Object)
+2026-06-28 17:23:06.362 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(System.Type,System.Type)
+2026-06-28 17:23:06.363 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton(System.Type,System.Object,System.Type)
+2026-06-28 17:23:06.364 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton``2(System.Func{System.IServiceProvider,``1})
+2026-06-28 17:23:06.364 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``2(System.Object,System.Func{System.IServiceProvider,System.Object,``1})
+2026-06-28 17:23:06.365 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton``1(System.Func{System.IServiceProvider,``0})
+2026-06-28 17:23:06.366 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``1(System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:23:06.367 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:23:06.367 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:23:06.370 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton``1(``0)
+2026-06-28 17:23:06.371 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``1(System.Object,``0)
+2026-06-28 17:23:11.405 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 1/246
+2026-06-28 17:23:11.407 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 2/246
+2026-06-28 17:23:11.407 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 3/246
+2026-06-28 17:23:11.408 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton(System.Type,System.Object,System.Object)
+2026-06-28 17:23:11.408 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(System.Type,System.Object)
+2026-06-28 17:23:11.409 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Describe(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:11.556 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 4/246
+2026-06-28 17:23:11.557 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.DescribeKeyed(System.Type,System.Object,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:11.740 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 5/246
+2026-06-28 17:23:11.740 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Describe(System.Type,System.Func{System.IServiceProvider,System.Object},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:13.159 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 6/246
+2026-06-28 17:23:13.160 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.DescribeKeyed(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:23:13.373 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 7/246
+2026-06-28 17:23:13.373 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceKeyAttribute
+2026-06-28 17:23:13.433 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 8/246
+2026-06-28 17:23:13.433 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceKeyLookupMode
+2026-06-28 17:23:13.458 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 9/246
+2026-06-28 17:23:13.459 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceKeyLookupMode.InheritKey
+2026-06-28 17:23:13.663 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 10/246
+2026-06-28 17:23:13.663 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceKeyLookupMode.NullKey
+2026-06-28 17:23:13.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 11/246
+2026-06-28 17:23:13.698 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceKeyLookupMode.ExplicitKey
+2026-06-28 17:23:13.754 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 12/246
+2026-06-28 17:23:13.755 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceLifetime
+2026-06-28 17:23:14.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 13/246
+2026-06-28 17:23:14.073 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton
+2026-06-28 17:23:14.080 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 14/246
+2026-06-28 17:23:14.080 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped
+2026-06-28 17:23:14.212 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 15/246
+2026-06-28 17:23:14.212 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient
+2026-06-28 17:23:14.228 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 16/246
+2026-06-28 17:23:14.229 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions
+2026-06-28 17:23:14.329 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 17/246
+2026-06-28 17:23:14.330 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)
+2026-06-28 17:23:14.380 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 18/246
+2026-06-28 17:23:14.380 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService(System.IServiceProvider,System.Type,System.Object)
+2026-06-28 17:23:14.589 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 19/246
+2026-06-28 17:23:14.589 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetRequiredKeyedService(System.IServiceProvider,System.Type,System.Object)
+2026-06-28 17:23:14.688 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 20/246
+2026-06-28 17:23:14.689 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetRequiredKeyedService``1(System.IServiceProvider,System.Object)
+2026-06-28 17:23:14.789 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 21/246
+2026-06-28 17:23:14.789 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)
+2026-06-28 17:23:14.856 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 22/246
+2026-06-28 17:23:14.856 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices(System.IServiceProvider,System.Type,System.Object)
+2026-06-28 17:23:14.982 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 23/246
+2026-06-28 17:23:14.982 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions
+2026-06-28 17:23:15.026 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 24/246
+2026-06-28 17:23:15.027 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService``1(System.IServiceProvider)
+2026-06-28 17:23:15.546 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 25/246
+2026-06-28 17:23:15.546 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(System.IServiceProvider,System.Type)
+2026-06-28 17:23:16.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 26/246
+2026-06-28 17:23:16.058 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService``1(System.IServiceProvider)
+2026-06-28 17:23:16.223 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 27/246
+2026-06-28 17:23:16.224 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)
+2026-06-28 17:23:16.350 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 28/246
+2026-06-28 17:23:16.350 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices(System.IServiceProvider,System.Type)
+2026-06-28 17:23:16.593 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 29/246
+2026-06-28 17:23:16.594 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.CreateScope(System.IServiceProvider)
+2026-06-28 17:23:16.653 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 30/246
+2026-06-28 17:23:16.654 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.CreateAsyncScope(System.IServiceProvider)
+2026-06-28 17:23:16.673 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 31/246
+2026-06-28 17:23:16.673 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 32/246
+2026-06-28 17:23:16.673 +08:00 [DBG] 缓存缺失: P:System.SR.AmbiguousConstructorMatch
+2026-06-28 17:23:16.673 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.CreateAsyncScope(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+2026-06-28 17:23:17.114 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 33/246
+2026-06-28 17:23:17.114 +08:00 [DBG] 缓存缺失: P:System.SR.CannotResolveService
+2026-06-28 17:23:17.331 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 34/246
+2026-06-28 17:23:17.331 +08:00 [DBG] 缓存缺失: P:System.SR.NoConstructorMatch
+2026-06-28 17:23:17.433 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 35/246
+2026-06-28 17:23:17.434 +08:00 [DBG] 缓存缺失: P:System.SR.NoServiceRegistered
+2026-06-28 17:23:17.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 36/246
+2026-06-28 17:23:17.438 +08:00 [DBG] 缓存缺失: P:System.SR.ServiceCollectionReadOnly
+2026-06-28 17:23:17.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 37/246
+2026-06-28 17:23:17.706 +08:00 [DBG] 缓存缺失: P:System.SR.TryAddIndistinguishableTypeToEnumerable
+2026-06-28 17:23:17.822 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 38/246
+2026-06-28 17:23:17.822 +08:00 [DBG] 缓存缺失: P:System.SR.MultipleCtorsMarkedWithAttribute
+2026-06-28 17:23:17.861 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 39/246
+2026-06-28 17:23:17.861 +08:00 [DBG] 缓存缺失: P:System.SR.MarkedCtorMissingArgumentTypes
+2026-06-28 17:23:17.910 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 40/246
+2026-06-28 17:23:17.911 +08:00 [DBG] 缓存缺失: P:System.SR.CannotCreateAbstractClasses
+2026-06-28 17:23:17.966 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 41/246
+2026-06-28 17:23:17.966 +08:00 [DBG] 缓存缺失: P:System.SR.MultipleCtorsFoundWithBestLength
+2026-06-28 17:23:18.170 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 42/246
+2026-06-28 17:23:18.170 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 43/246
+2026-06-28 17:23:18.170 +08:00 [DBG] 缓存缺失: P:System.SR.UnableToResolveService
+2026-06-28 17:23:18.171 +08:00 [DBG] 缓存缺失: P:System.SR.CtorNotLocated
+2026-06-28 17:23:18.207 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 44/246
+2026-06-28 17:23:18.208 +08:00 [DBG] 缓存缺失: P:System.SR.MultipleCtorsFound
+2026-06-28 17:23:18.233 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 45/246
+2026-06-28 17:23:18.234 +08:00 [DBG] 缓存缺失: P:System.SR.KeyedServicesNotSupported
+2026-06-28 17:23:18.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 46/246
+2026-06-28 17:23:18.250 +08:00 [DBG] 缓存缺失: P:System.SR.NonKeyedDescriptorMisuse
+2026-06-28 17:23:18.340 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 47/246
+2026-06-28 17:23:18.423 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 48/246
+2026-06-28 17:23:18.456 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 49/246
+2026-06-28 17:23:18.508 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 50/246
+2026-06-28 17:23:18.512 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 51/246
+2026-06-28 17:23:18.597 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 52/246
+2026-06-28 17:23:18.612 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 53/246
+2026-06-28 17:23:18.750 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 54/246
+2026-06-28 17:23:19.025 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 55/246
+2026-06-28 17:23:19.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 56/246
+2026-06-28 17:23:19.097 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 57/246
+2026-06-28 17:23:19.134 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 58/246
+2026-06-28 17:23:19.271 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 59/246
+2026-06-28 17:23:19.295 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 60/246
+2026-06-28 17:23:19.411 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 61/246
+2026-06-28 17:23:19.532 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 62/246
+2026-06-28 17:23:19.532 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 63/246
+2026-06-28 17:23:19.717 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 64/246
+2026-06-28 17:23:19.780 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 65/246
+2026-06-28 17:23:19.780 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 66/246
+2026-06-28 17:23:19.828 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 67/246
+2026-06-28 17:23:19.875 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 68/246
+2026-06-28 17:23:20.090 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 69/246
+2026-06-28 17:23:20.115 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 70/246
+2026-06-28 17:23:20.207 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 71/246
+2026-06-28 17:23:20.235 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 72/246
+2026-06-28 17:23:20.322 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 73/246
+2026-06-28 17:23:20.331 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 74/246
+2026-06-28 17:23:20.364 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 75/246
+2026-06-28 17:23:20.631 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 76/246
+2026-06-28 17:23:20.813 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 77/246
+2026-06-28 17:23:20.906 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 78/246
+2026-06-28 17:23:20.947 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 79/246
+2026-06-28 17:23:21.022 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 80/246
+2026-06-28 17:23:21.142 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 81/246
+2026-06-28 17:23:21.144 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 82/246
+2026-06-28 17:23:21.286 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 83/246
+2026-06-28 17:23:21.296 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 84/246
+2026-06-28 17:23:21.365 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 85/246
+2026-06-28 17:23:21.603 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 86/246
+2026-06-28 17:23:21.625 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 87/246
+2026-06-28 17:23:21.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 88/246
+2026-06-28 17:23:21.944 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 89/246
+2026-06-28 17:23:22.350 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 90/246
+2026-06-28 17:23:22.368 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 91/246
+2026-06-28 17:23:22.412 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 92/246
+2026-06-28 17:23:22.476 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 93/246
+2026-06-28 17:23:22.502 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 94/246
+2026-06-28 17:23:22.529 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 95/246
+2026-06-28 17:23:22.590 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 96/246
+2026-06-28 17:23:22.640 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 97/246
+2026-06-28 17:23:22.784 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 98/246
+2026-06-28 17:23:22.897 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 99/246
+2026-06-28 17:23:22.928 +08:00 [INF] 已处理 100 条翻译，累计输入 28933 tokens，输出 98903 tokens，估算费用 0.23 元
+2026-06-28 17:23:22.929 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 100/246
+2026-06-28 17:23:22.935 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 101/246
+2026-06-28 17:23:23.016 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 102/246
+2026-06-28 17:23:23.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 103/246
+2026-06-28 17:23:23.340 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 104/246
+2026-06-28 17:23:23.460 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 105/246
+2026-06-28 17:23:23.614 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 106/246
+2026-06-28 17:23:23.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 107/246
+2026-06-28 17:23:23.709 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 108/246
+2026-06-28 17:23:23.807 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 109/246
+2026-06-28 17:23:24.195 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 110/246
+2026-06-28 17:23:24.245 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 111/246
+2026-06-28 17:23:24.369 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 112/246
+2026-06-28 17:23:24.501 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 113/246
+2026-06-28 17:23:24.554 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 114/246
+2026-06-28 17:23:24.728 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 115/246
+2026-06-28 17:23:24.986 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 116/246
+2026-06-28 17:23:25.087 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 117/246
+2026-06-28 17:23:25.699 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 118/246
+2026-06-28 17:23:25.826 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 119/246
+2026-06-28 17:23:25.869 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 120/246
+2026-06-28 17:23:25.893 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 121/246
+2026-06-28 17:23:26.463 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 122/246
+2026-06-28 17:23:26.681 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 123/246
+2026-06-28 17:23:26.792 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 124/246
+2026-06-28 17:23:26.881 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 125/246
+2026-06-28 17:23:27.109 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 126/246
+2026-06-28 17:23:27.186 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 127/246
+2026-06-28 17:23:27.259 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 128/246
+2026-06-28 17:23:27.282 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 129/246
+2026-06-28 17:23:27.432 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 130/246
+2026-06-28 17:23:27.794 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 131/246
+2026-06-28 17:23:27.950 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 132/246
+2026-06-28 17:23:28.083 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 133/246
+2026-06-28 17:23:28.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 134/246
+2026-06-28 17:23:28.511 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 135/246
+2026-06-28 17:23:28.737 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 136/246
+2026-06-28 17:23:28.818 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 137/246
+2026-06-28 17:23:29.189 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 138/246
+2026-06-28 17:23:29.203 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 139/246
+2026-06-28 17:23:29.400 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 140/246
+2026-06-28 17:23:29.422 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 141/246
+2026-06-28 17:23:29.433 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 142/246
+2026-06-28 17:23:29.623 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 143/246
+2026-06-28 17:23:29.880 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 144/246
+2026-06-28 17:23:30.104 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 145/246
+2026-06-28 17:23:31.241 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 146/246
+2026-06-28 17:23:31.323 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 147/246
+2026-06-28 17:23:31.646 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 148/246
+2026-06-28 17:23:31.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 149/246
+2026-06-28 17:23:31.801 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 150/246
+2026-06-28 17:23:31.927 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 151/246
+2026-06-28 17:23:32.242 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 152/246
+2026-06-28 17:23:32.267 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 153/246
+2026-06-28 17:23:32.390 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 154/246
+2026-06-28 17:23:32.921 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 155/246
+2026-06-28 17:23:33.017 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 156/246
+2026-06-28 17:23:33.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 157/246
+2026-06-28 17:23:33.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 158/246
+2026-06-28 17:23:33.814 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 159/246
+2026-06-28 17:23:33.976 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 160/246
+2026-06-28 17:23:34.040 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 161/246
+2026-06-28 17:23:34.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 162/246
+2026-06-28 17:23:35.231 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 163/246
+2026-06-28 17:23:35.233 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 164/246
+2026-06-28 17:23:35.662 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 165/246
+2026-06-28 17:23:35.681 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 166/246
+2026-06-28 17:23:35.690 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 167/246
+2026-06-28 17:23:35.950 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 168/246
+2026-06-28 17:23:36.276 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 169/246
+2026-06-28 17:23:36.849 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 170/246
+2026-06-28 17:23:37.631 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 171/246
+2026-06-28 17:23:38.342 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 172/246
+2026-06-28 17:23:38.566 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 173/246
+2026-06-28 17:23:38.620 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 174/246
+2026-06-28 17:23:38.783 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 175/246
+2026-06-28 17:23:38.865 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 176/246
+2026-06-28 17:23:39.929 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 177/246
+2026-06-28 17:23:40.021 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 178/246
+2026-06-28 17:23:40.374 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 179/246
+2026-06-28 17:23:40.901 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 180/246
+2026-06-28 17:23:41.018 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 181/246
+2026-06-28 17:23:41.710 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 182/246
+2026-06-28 17:23:42.101 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 183/246
+2026-06-28 17:23:43.871 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 184/246
+2026-06-28 17:23:44.655 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 185/246
+2026-06-28 17:23:44.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 186/246
+2026-06-28 17:23:45.407 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 187/246
+2026-06-28 17:23:45.656 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 188/246
+2026-06-28 17:23:46.258 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 189/246
+2026-06-28 17:23:46.554 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 190/246
+2026-06-28 17:23:47.542 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 191/246
+2026-06-28 17:23:49.101 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 192/246
+2026-06-28 17:23:49.298 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 193/246
+2026-06-28 17:23:49.916 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 194/246
+2026-06-28 17:23:50.558 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 195/246
+2026-06-28 17:23:50.911 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 196/246
+2026-06-28 17:23:50.956 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 197/246
+2026-06-28 17:23:51.352 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 198/246
+2026-06-28 17:23:52.063 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 199/246
+2026-06-28 17:23:52.741 +08:00 [INF] 已处理 200 条翻译，累计输入 62230 tokens，输出 353754 tokens，估算费用 0.77 元
+2026-06-28 17:23:52.742 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 200/246
+2026-06-28 17:23:53.222 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 201/246
+2026-06-28 17:23:53.253 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 202/246
+2026-06-28 17:23:55.354 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 203/246
+2026-06-28 17:23:56.645 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 204/246
+2026-06-28 17:23:56.942 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 205/246
+2026-06-28 17:23:58.783 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 206/246
+2026-06-28 17:24:00.223 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 207/246
+2026-06-28 17:24:01.446 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 208/246
+2026-06-28 17:24:01.824 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 209/246
+2026-06-28 17:24:02.267 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 210/246
+2026-06-28 17:24:02.617 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 211/246
+2026-06-28 17:24:02.782 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 212/246
+2026-06-28 17:24:04.473 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 213/246
+2026-06-28 17:24:04.557 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 214/246
+2026-06-28 17:24:04.666 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 215/246
+2026-06-28 17:24:04.806 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 216/246
+2026-06-28 17:24:08.691 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 217/246
+2026-06-28 17:24:14.654 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 218/246
+2026-06-28 17:44:15.712 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.728 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.730 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.731 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.732 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.733 +08:00 [INF] 正在提取文件: lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 17:44:15.988 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 1/246
+2026-06-28 17:44:15.995 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 2/246
+2026-06-28 17:44:15.996 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 3/246
+2026-06-28 17:44:16.020 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])
+2026-06-28 17:44:16.130 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 4/246
+2026-06-28 17:44:16.131 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 5/246
+2026-06-28 17:44:16.131 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 6/246
+2026-06-28 17:44:16.132 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 7/246
+2026-06-28 17:44:16.132 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 8/246
+2026-06-28 17:44:16.133 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 9/246
+2026-06-28 17:44:16.134 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 10/246
+2026-06-28 17:44:16.134 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 11/246
+2026-06-28 17:44:16.135 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 12/246
+2026-06-28 17:44:16.135 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 13/246
+2026-06-28 17:44:16.136 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 14/246
+2026-06-28 17:44:16.136 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 15/246
+2026-06-28 17:44:16.137 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 16/246
+2026-06-28 17:44:16.138 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 17/246
+2026-06-28 17:44:16.139 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 18/246
+2026-06-28 17:44:16.140 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 19/246
+2026-06-28 17:44:16.143 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 20/246
+2026-06-28 17:44:16.143 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 21/246
+2026-06-28 17:44:16.144 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:44:16.146 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:44:16.147 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 22/246
+2026-06-28 17:44:16.147 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+2026-06-28 17:44:16.149 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 23/246
+2026-06-28 17:44:16.149 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 17:44:16.150 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 24/246
+2026-06-28 17:44:16.151 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 25/246
+2026-06-28 17:44:16.151 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 26/246
+2026-06-28 17:44:16.152 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 27/246
+2026-06-28 17:44:16.152 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 28/246
+2026-06-28 17:44:16.153 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 29/246
+2026-06-28 17:44:16.153 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 30/246
+2026-06-28 17:44:16.153 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:44:16.155 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 31/246
+2026-06-28 17:44:16.155 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 32/246
+2026-06-28 17:44:16.156 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+2026-06-28 17:44:16.157 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyInjection.ServiceDescriptor})
+2026-06-28 17:44:16.160 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 33/246
+2026-06-28 17:44:16.160 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 34/246
+2026-06-28 17:44:16.161 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 35/246
+2026-06-28 17:44:16.162 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 36/246
+2026-06-28 17:44:16.163 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 37/246
+2026-06-28 17:44:16.163 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 38/246
+2026-06-28 17:44:16.164 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 39/246
+2026-06-28 17:44:16.165 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 40/246
+2026-06-28 17:44:16.165 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 41/246
+2026-06-28 17:44:16.166 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 42/246
+2026-06-28 17:44:16.167 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 43/246
+2026-06-28 17:44:16.168 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 44/246
+2026-06-28 17:44:16.168 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 45/246
+2026-06-28 17:44:16.169 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 46/246
+2026-06-28 17:44:16.170 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:44:16.171 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 47/246
+2026-06-28 17:44:16.172 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 48/246
+2026-06-28 17:44:16.172 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object})
+2026-06-28 17:44:16.178 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 49/246
+2026-06-28 17:44:16.178 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 50/246
+2026-06-28 17:44:16.179 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 51/246
+2026-06-28 17:44:16.180 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 52/246
+2026-06-28 17:44:16.181 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 53/246
+2026-06-28 17:44:16.182 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 54/246
+2026-06-28 17:44:16.182 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 55/246
+2026-06-28 17:44:16.183 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 56/246
+2026-06-28 17:44:16.184 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 57/246
+2026-06-28 17:44:16.184 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 58/246
+2026-06-28 17:44:16.185 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 59/246
+2026-06-28 17:44:16.185 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 60/246
+2026-06-28 17:44:16.186 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 61/246
+2026-06-28 17:44:16.187 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 62/246
+2026-06-28 17:44:16.188 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 63/246
+2026-06-28 17:44:16.188 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 64/246
+2026-06-28 17:44:16.189 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 65/246
+2026-06-28 17:44:16.189 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 66/246
+2026-06-28 17:44:16.192 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 67/246
+2026-06-28 17:44:16.193 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 68/246
+2026-06-28 17:44:16.194 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 69/246
+2026-06-28 17:44:16.195 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 70/246
+2026-06-28 17:44:16.195 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 71/246
+2026-06-28 17:44:16.196 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 72/246
+2026-06-28 17:44:16.196 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyInjection.IServiceScope
+2026-06-28 17:44:16.197 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 73/246
+2026-06-28 17:44:16.198 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 74/246
+2026-06-28 17:44:16.198 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory.CreateScope
+2026-06-28 17:44:16.200 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 75/246
+2026-06-28 17:44:16.200 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 76/246
+2026-06-28 17:44:16.201 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 77/246
+2026-06-28 17:44:16.202 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 78/246
+2026-06-28 17:44:16.202 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 79/246
+2026-06-28 17:44:16.203 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 80/246
+2026-06-28 17:44:16.204 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 81/246
+2026-06-28 17:44:16.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 82/246
+2026-06-28 17:44:16.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 83/246
+2026-06-28 17:44:16.206 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 84/246
+2026-06-28 17:44:16.207 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 85/246
+2026-06-28 17:44:16.209 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 86/246
+2026-06-28 17:44:16.220 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 87/246
+2026-06-28 17:44:16.220 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 88/246
+2026-06-28 17:44:16.221 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 89/246
+2026-06-28 17:44:16.221 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 90/246
+2026-06-28 17:44:16.222 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 91/246
+2026-06-28 17:44:16.223 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 92/246
+2026-06-28 17:44:16.225 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 93/246
+2026-06-28 17:44:16.226 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 94/246
+2026-06-28 17:44:16.227 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 95/246
+2026-06-28 17:44:16.227 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 96/246
+2026-06-28 17:44:16.228 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 97/246
+2026-06-28 17:44:16.228 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:44:16.230 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 98/246
+2026-06-28 17:44:16.231 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 99/246
+2026-06-28 17:44:16.231 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 100/246
+2026-06-28 17:44:16.232 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 101/246
+2026-06-28 17:44:16.233 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 102/246
+2026-06-28 17:44:16.233 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 17:44:16.235 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 103/246
+2026-06-28 17:44:16.235 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})
+2026-06-28 17:44:16.236 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+2026-06-28 17:44:16.237 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 104/246
+2026-06-28 17:44:16.239 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 105/246
+2026-06-28 17:44:16.239 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 106/246
+2026-06-28 17:44:16.242 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 107/246
+2026-06-28 17:44:16.243 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})
+2026-06-28 17:44:16.244 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 108/246
+2026-06-28 17:44:16.245 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 109/246
+2026-06-28 17:44:16.246 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 110/246
+2026-06-28 17:44:16.247 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 111/246
+2026-06-28 17:44:16.248 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 112/246
+2026-06-28 17:44:16.249 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 113/246
+2026-06-28 17:44:16.249 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 114/246
+2026-06-28 17:44:16.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 115/246
+2026-06-28 17:44:16.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 116/246
+2026-06-28 17:44:16.251 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 117/246
+2026-06-28 17:44:16.252 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 118/246
+2026-06-28 17:44:16.252 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 119/246
+2026-06-28 17:44:16.253 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 120/246
+2026-06-28 17:44:16.254 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 121/246
+2026-06-28 17:44:16.254 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)
+2026-06-28 17:44:16.256 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 122/246
+2026-06-28 17:44:16.256 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 123/246
+2026-06-28 17:44:16.260 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 124/246
+2026-06-28 17:44:16.260 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 125/246
+2026-06-28 17:44:16.261 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 126/246
+2026-06-28 17:44:16.262 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+2026-06-28 17:44:16.263 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 127/246
+2026-06-28 17:44:16.263 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:44:16.265 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 128/246
+2026-06-28 17:44:16.266 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 129/246
+2026-06-28 17:44:16.267 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 130/246
+2026-06-28 17:44:16.267 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 131/246
+2026-06-28 17:44:16.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 132/246
+2026-06-28 17:44:16.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 133/246
+2026-06-28 17:44:16.270 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 134/246
+2026-06-28 17:44:16.271 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 135/246
+2026-06-28 17:44:16.272 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 136/246
+2026-06-28 17:44:16.273 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 137/246
+2026-06-28 17:44:16.274 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 138/246
+2026-06-28 17:44:16.276 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 139/246
+2026-06-28 17:44:16.277 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 140/246
+2026-06-28 17:44:16.277 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 141/246
+2026-06-28 17:44:16.278 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 142/246
+2026-06-28 17:44:16.278 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 143/246
+2026-06-28 17:44:16.279 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 144/246
+2026-06-28 17:44:16.279 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 145/246
+2026-06-28 17:44:16.280 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 146/246
+2026-06-28 17:44:16.281 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 147/246
+2026-06-28 17:44:16.281 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 148/246
+2026-06-28 17:44:16.281 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 149/246
+2026-06-28 17:44:16.282 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 150/246
+2026-06-28 17:44:16.282 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient(System.Type,System.Type)
+2026-06-28 17:44:16.284 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 151/246
+2026-06-28 17:44:16.284 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 152/246
+2026-06-28 17:44:16.285 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 153/246
+2026-06-28 17:44:16.286 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 154/246
+2026-06-28 17:44:16.287 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 155/246
+2026-06-28 17:44:16.287 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 156/246
+2026-06-28 17:44:16.288 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 157/246
+2026-06-28 17:44:16.289 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 158/246
+2026-06-28 17:44:16.290 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 159/246
+2026-06-28 17:44:16.293 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 160/246
+2026-06-28 17:44:16.293 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped(System.Type,System.Object,System.Type)
+2026-06-28 17:44:16.294 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 161/246
+2026-06-28 17:44:16.295 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 162/246
+2026-06-28 17:44:16.296 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped``1(System.Func{System.IServiceProvider,``0})
+2026-06-28 17:44:16.297 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 163/246
+2026-06-28 17:44:16.298 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 164/246
+2026-06-28 17:44:16.299 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 165/246
+2026-06-28 17:44:16.299 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 166/246
+2026-06-28 17:44:16.300 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``2(System.Object)
+2026-06-28 17:44:16.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 167/246
+2026-06-28 17:44:16.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 168/246
+2026-06-28 17:44:16.302 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 169/246
+2026-06-28 17:44:16.303 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 170/246
+2026-06-28 17:44:16.304 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 171/246
+2026-06-28 17:44:16.304 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton``1(System.Object,System.Func{System.IServiceProvider,System.Object,``0})
+2026-06-28 17:44:16.305 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 172/246
+2026-06-28 17:44:16.307 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 173/246
+2026-06-28 17:44:16.310 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 174/246
+2026-06-28 17:44:16.310 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 175/246
+2026-06-28 17:44:16.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 176/246
+2026-06-28 17:44:16.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 177/246
+2026-06-28 17:44:16.312 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Describe(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:44:16.313 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 178/246
+2026-06-28 17:44:16.314 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 179/246
+2026-06-28 17:44:16.315 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceDescriptor.DescribeKeyed(System.Type,System.Object,System.Func{System.IServiceProvider,System.Object,System.Object},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+2026-06-28 17:44:16.316 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 180/246
+2026-06-28 17:44:16.317 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 181/246
+2026-06-28 17:44:16.317 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 182/246
+2026-06-28 17:44:16.318 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 183/246
+2026-06-28 17:44:16.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 184/246
+2026-06-28 17:44:16.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 185/246
+2026-06-28 17:44:16.320 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 186/246
+2026-06-28 17:44:16.321 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 187/246
+2026-06-28 17:44:16.322 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 188/246
+2026-06-28 17:44:16.322 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 189/246
+2026-06-28 17:44:16.323 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 190/246
+2026-06-28 17:44:16.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 191/246
+2026-06-28 17:44:16.327 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetRequiredKeyedService(System.IServiceProvider,System.Type,System.Object)
+2026-06-28 17:44:16.328 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 192/246
+2026-06-28 17:44:16.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 193/246
+2026-06-28 17:44:16.335 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 194/246
+2026-06-28 17:44:16.335 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 195/246
+2026-06-28 17:44:16.335 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 196/246
+2026-06-28 17:44:16.336 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 197/246
+2026-06-28 17:44:16.336 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 198/246
+2026-06-28 17:44:16.337 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 199/246
+2026-06-28 17:44:16.337 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 200/246
+2026-06-28 17:44:16.338 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 201/246
+2026-06-28 17:44:16.338 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 202/246
+2026-06-28 17:44:16.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 203/246
+2026-06-28 17:44:16.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 204/246
+2026-06-28 17:44:16.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 205/246
+2026-06-28 17:44:16.340 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 206/246
+2026-06-28 17:44:16.343 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 207/246
+2026-06-28 17:44:16.343 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 208/246
+2026-06-28 17:44:16.344 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 209/246
+2026-06-28 17:44:16.344 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 210/246
+2026-06-28 17:44:16.345 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 211/246
+2026-06-28 17:44:16.345 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 212/246
+2026-06-28 17:44:16.346 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 213/246
+2026-06-28 17:44:16.346 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 214/246
+2026-06-28 17:44:16.347 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 215/246
+2026-06-28 17:44:16.347 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 216/246
+2026-06-28 17:44:16.348 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 217/246
+2026-06-28 17:44:16.348 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 218/246
+2026-06-28 17:44:24.210 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 219/246
+2026-06-28 17:44:24.788 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 220/246
+2026-06-28 17:44:25.145 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 221/246
+2026-06-28 17:44:26.204 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 222/246
+2026-06-28 17:44:26.835 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 223/246
+2026-06-28 17:44:27.046 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 224/246
+2026-06-28 17:44:27.936 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 225/246
+2026-06-28 17:44:29.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 226/246
+2026-06-28 17:44:30.503 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 227/246
+2026-06-28 17:44:32.153 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 228/246
+2026-06-28 17:44:36.133 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 229/246
+2026-06-28 17:44:38.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 230/246
+2026-06-28 17:44:38.178 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 231/246
+2026-06-28 17:44:41.662 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 232/246
+2026-06-28 17:44:43.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 233/246
+2026-06-28 17:44:43.812 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 234/246
+2026-06-28 17:44:43.911 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 235/246
+2026-06-28 17:44:45.289 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 236/246
+2026-06-28 17:44:46.517 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 237/246
+2026-06-28 17:44:47.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 238/246
+2026-06-28 17:44:49.657 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 239/246
+2026-06-28 17:44:58.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 240/246
+2026-06-28 17:45:02.172 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 241/246
+2026-06-28 17:45:02.255 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 242/246
+2026-06-28 18:01:50.933 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:50.949 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:50.950 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:50.951 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:50.952 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:50.953 +08:00 [INF] 正在提取文件: lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:01:51.174 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 1/246
+2026-06-28 18:01:51.178 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 2/246
+2026-06-28 18:01:51.179 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 3/246
+2026-06-28 18:01:51.198 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory``1(System.Type[])
+2026-06-28 18:01:51.283 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 4/246
+2026-06-28 18:01:51.283 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 5/246
+2026-06-28 18:01:51.284 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 6/246
+2026-06-28 18:01:51.284 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 7/246
+2026-06-28 18:01:51.284 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 8/246
+2026-06-28 18:01:51.285 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 9/246
+2026-06-28 18:01:51.285 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 10/246
+2026-06-28 18:01:51.287 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 11/246
+2026-06-28 18:01:51.290 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 12/246
+2026-06-28 18:01:51.290 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 13/246
+2026-06-28 18:01:51.291 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 14/246
+2026-06-28 18:01:51.292 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 15/246
+2026-06-28 18:01:51.292 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 16/246
+2026-06-28 18:01:51.293 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 17/246
+2026-06-28 18:01:51.293 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 18/246
+2026-06-28 18:01:51.293 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 19/246
+2026-06-28 18:01:51.294 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 20/246
+2026-06-28 18:01:51.294 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 21/246
+2026-06-28 18:01:51.295 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 22/246
+2026-06-28 18:01:51.295 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 23/246
+2026-06-28 18:01:51.296 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 24/246
+2026-06-28 18:01:51.296 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 25/246
+2026-06-28 18:01:51.297 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 26/246
+2026-06-28 18:01:51.297 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})
+2026-06-28 18:01:51.298 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 27/246
+2026-06-28 18:01:51.299 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 28/246
+2026-06-28 18:01:51.299 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 29/246
+2026-06-28 18:01:51.300 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 30/246
+2026-06-28 18:01:51.300 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 31/246
+2026-06-28 18:01:51.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 32/246
+2026-06-28 18:01:51.301 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 33/246
+2026-06-28 18:01:51.301 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+2026-06-28 18:01:51.302 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 34/246
+2026-06-28 18:01:51.306 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 35/246
+2026-06-28 18:01:51.307 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 36/246
+2026-06-28 18:01:51.308 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 37/246
+2026-06-28 18:01:51.309 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 38/246
+2026-06-28 18:01:51.309 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 39/246
+2026-06-28 18:01:51.309 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 40/246
+2026-06-28 18:01:51.310 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 41/246
+2026-06-28 18:01:51.310 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 42/246
+2026-06-28 18:01:51.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 43/246
+2026-06-28 18:01:51.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 44/246
+2026-06-28 18:01:51.312 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 45/246
+2026-06-28 18:01:51.312 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 46/246
+2026-06-28 18:01:51.312 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 47/246
+2026-06-28 18:01:51.313 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 48/246
+2026-06-28 18:01:51.313 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 49/246
+2026-06-28 18:01:51.314 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 50/246
+2026-06-28 18:01:51.314 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 51/246
+2026-06-28 18:01:51.315 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 52/246
+2026-06-28 18:01:51.315 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 53/246
+2026-06-28 18:01:51.315 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 54/246
+2026-06-28 18:01:51.316 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 55/246
+2026-06-28 18:01:51.316 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 56/246
+2026-06-28 18:01:51.317 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 57/246
+2026-06-28 18:01:51.317 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 58/246
+2026-06-28 18:01:51.318 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 59/246
+2026-06-28 18:01:51.318 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 60/246
+2026-06-28 18:01:51.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 61/246
+2026-06-28 18:01:51.322 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 62/246
+2026-06-28 18:01:51.323 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 63/246
+2026-06-28 18:01:51.323 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 64/246
+2026-06-28 18:01:51.324 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 65/246
+2026-06-28 18:01:51.324 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 66/246
+2026-06-28 18:01:51.325 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 67/246
+2026-06-28 18:01:51.325 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 68/246
+2026-06-28 18:01:51.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 69/246
+2026-06-28 18:01:51.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 70/246
+2026-06-28 18:01:51.326 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 71/246
+2026-06-28 18:01:51.327 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 72/246
+2026-06-28 18:01:51.327 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 73/246
+2026-06-28 18:01:51.327 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 74/246
+2026-06-28 18:01:51.328 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 75/246
+2026-06-28 18:01:51.328 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 76/246
+2026-06-28 18:01:51.329 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 77/246
+2026-06-28 18:01:51.329 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 78/246
+2026-06-28 18:01:51.329 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 79/246
+2026-06-28 18:01:51.330 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 80/246
+2026-06-28 18:01:51.330 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 81/246
+2026-06-28 18:01:51.330 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 82/246
+2026-06-28 18:01:51.331 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 83/246
+2026-06-28 18:01:51.331 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 84/246
+2026-06-28 18:01:51.332 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 85/246
+2026-06-28 18:01:51.332 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 86/246
+2026-06-28 18:01:51.332 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 87/246
+2026-06-28 18:01:51.333 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 88/246
+2026-06-28 18:01:51.333 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 89/246
+2026-06-28 18:01:51.333 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 90/246
+2026-06-28 18:01:51.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 91/246
+2026-06-28 18:01:51.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 92/246
+2026-06-28 18:01:51.335 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 93/246
+2026-06-28 18:01:51.335 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 94/246
+2026-06-28 18:01:51.336 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 95/246
+2026-06-28 18:01:51.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 96/246
+2026-06-28 18:01:51.340 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 97/246
+2026-06-28 18:01:51.340 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 98/246
+2026-06-28 18:01:51.341 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 99/246
+2026-06-28 18:01:51.341 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 100/246
+2026-06-28 18:01:51.342 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 101/246
+2026-06-28 18:01:51.349 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 102/246
+2026-06-28 18:01:51.350 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 103/246
+2026-06-28 18:01:51.350 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 104/246
+2026-06-28 18:01:51.351 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 105/246
+2026-06-28 18:01:51.351 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 106/246
+2026-06-28 18:01:51.351 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 107/246
+2026-06-28 18:01:51.352 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 108/246
+2026-06-28 18:01:51.353 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 109/246
+2026-06-28 18:01:51.356 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 110/246
+2026-06-28 18:01:51.356 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 111/246
+2026-06-28 18:01:51.357 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 112/246
+2026-06-28 18:01:51.358 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 113/246
+2026-06-28 18:01:51.358 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 114/246
+2026-06-28 18:01:51.358 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1})
+2026-06-28 18:01:51.359 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 115/246
+2026-06-28 18:01:51.360 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 116/246
+2026-06-28 18:01:51.360 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 117/246
+2026-06-28 18:01:51.361 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 118/246
+2026-06-28 18:01:51.361 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 119/246
+2026-06-28 18:01:51.362 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 120/246
+2026-06-28 18:01:51.362 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 121/246
+2026-06-28 18:01:51.363 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 122/246
+2026-06-28 18:01:51.363 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 123/246
+2026-06-28 18:01:51.363 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 124/246
+2026-06-28 18:01:51.364 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 125/246
+2026-06-28 18:01:51.364 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 126/246
+2026-06-28 18:01:51.365 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 127/246
+2026-06-28 18:01:51.365 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 128/246
+2026-06-28 18:01:51.366 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 129/246
+2026-06-28 18:01:51.366 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 130/246
+2026-06-28 18:01:51.367 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 131/246
+2026-06-28 18:01:51.367 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 132/246
+2026-06-28 18:01:51.367 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 133/246
+2026-06-28 18:01:51.368 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 134/246
+2026-06-28 18:01:51.368 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 135/246
+2026-06-28 18:01:51.369 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 136/246
+2026-06-28 18:01:51.371 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 137/246
+2026-06-28 18:01:51.373 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 138/246
+2026-06-28 18:01:51.373 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 139/246
+2026-06-28 18:01:51.374 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 140/246
+2026-06-28 18:01:51.375 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 141/246
+2026-06-28 18:01:51.375 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 142/246
+2026-06-28 18:01:51.375 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 143/246
+2026-06-28 18:01:51.376 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 144/246
+2026-06-28 18:01:51.376 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 145/246
+2026-06-28 18:01:51.377 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 146/246
+2026-06-28 18:01:51.377 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 147/246
+2026-06-28 18:01:51.378 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 148/246
+2026-06-28 18:01:51.378 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 149/246
+2026-06-28 18:01:51.378 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 150/246
+2026-06-28 18:01:51.379 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 151/246
+2026-06-28 18:01:51.379 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 152/246
+2026-06-28 18:01:51.380 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 153/246
+2026-06-28 18:01:51.380 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 154/246
+2026-06-28 18:01:51.380 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 155/246
+2026-06-28 18:01:51.381 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 156/246
+2026-06-28 18:01:51.381 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 157/246
+2026-06-28 18:01:51.382 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 158/246
+2026-06-28 18:01:51.382 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 159/246
+2026-06-28 18:01:51.382 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 160/246
+2026-06-28 18:01:51.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 161/246
+2026-06-28 18:01:51.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 162/246
+2026-06-28 18:01:51.383 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 163/246
+2026-06-28 18:01:51.384 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 164/246
+2026-06-28 18:01:51.384 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 165/246
+2026-06-28 18:01:51.384 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 166/246
+2026-06-28 18:01:51.385 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 167/246
+2026-06-28 18:01:51.385 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 168/246
+2026-06-28 18:01:51.386 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 169/246
+2026-06-28 18:01:51.389 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 170/246
+2026-06-28 18:01:51.390 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 171/246
+2026-06-28 18:01:51.390 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 172/246
+2026-06-28 18:01:51.391 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 173/246
+2026-06-28 18:01:51.391 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 174/246
+2026-06-28 18:01:51.392 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 175/246
+2026-06-28 18:01:51.392 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 176/246
+2026-06-28 18:01:51.392 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 177/246
+2026-06-28 18:01:51.393 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 178/246
+2026-06-28 18:01:51.393 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 179/246
+2026-06-28 18:01:51.394 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 180/246
+2026-06-28 18:01:51.394 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 181/246
+2026-06-28 18:01:51.394 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 182/246
+2026-06-28 18:01:51.395 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 183/246
+2026-06-28 18:01:51.395 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 184/246
+2026-06-28 18:01:51.396 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 185/246
+2026-06-28 18:01:51.396 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 186/246
+2026-06-28 18:01:51.397 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 187/246
+2026-06-28 18:01:51.397 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 188/246
+2026-06-28 18:01:51.398 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 189/246
+2026-06-28 18:01:51.398 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 190/246
+2026-06-28 18:01:51.399 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 191/246
+2026-06-28 18:01:51.399 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 192/246
+2026-06-28 18:01:51.399 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 193/246
+2026-06-28 18:01:51.400 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 194/246
+2026-06-28 18:01:51.400 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 195/246
+2026-06-28 18:01:51.401 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 196/246
+2026-06-28 18:01:51.401 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 197/246
+2026-06-28 18:01:51.401 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 198/246
+2026-06-28 18:01:51.402 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 199/246
+2026-06-28 18:01:51.403 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 200/246
+2026-06-28 18:01:51.406 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 201/246
+2026-06-28 18:01:51.407 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 202/246
+2026-06-28 18:01:51.408 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 203/246
+2026-06-28 18:01:51.408 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 204/246
+2026-06-28 18:01:51.409 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 205/246
+2026-06-28 18:01:51.409 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 206/246
+2026-06-28 18:01:51.409 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 207/246
+2026-06-28 18:01:51.410 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 208/246
+2026-06-28 18:01:51.410 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 209/246
+2026-06-28 18:01:51.410 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 210/246
+2026-06-28 18:01:51.411 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 211/246
+2026-06-28 18:01:51.411 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 212/246
+2026-06-28 18:01:51.411 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 213/246
+2026-06-28 18:01:51.412 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 214/246
+2026-06-28 18:01:51.413 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 215/246
+2026-06-28 18:01:51.413 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 216/246
+2026-06-28 18:01:51.414 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 217/246
+2026-06-28 18:01:51.414 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 218/246
+2026-06-28 18:01:51.414 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 219/246
+2026-06-28 18:01:51.415 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 220/246
+2026-06-28 18:01:51.415 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 221/246
+2026-06-28 18:01:51.416 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 222/246
+2026-06-28 18:01:51.416 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 223/246
+2026-06-28 18:01:51.416 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 224/246
+2026-06-28 18:01:51.417 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 225/246
+2026-06-28 18:01:51.417 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 226/246
+2026-06-28 18:01:51.417 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 227/246
+2026-06-28 18:01:51.418 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 228/246
+2026-06-28 18:01:51.418 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 229/246
+2026-06-28 18:01:51.419 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 230/246
+2026-06-28 18:01:51.419 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 231/246
+2026-06-28 18:01:51.420 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 232/246
+2026-06-28 18:01:51.422 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 233/246
+2026-06-28 18:01:51.427 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 234/246
+2026-06-28 18:01:51.427 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 235/246
+2026-06-28 18:01:51.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 236/246
+2026-06-28 18:01:51.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 237/246
+2026-06-28 18:01:51.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 238/246
+2026-06-28 18:01:51.429 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 239/246
+2026-06-28 18:01:51.429 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 240/246
+2026-06-28 18:01:51.429 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 241/246
+2026-06-28 18:01:51.430 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 242/246
+2026-06-28 18:02:10.925 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 243/246
+2026-06-28 18:02:12.179 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 244/246
+2026-06-28 18:02:21.635 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 245/246
+2026-06-28 18:02:42.992 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 246/246
+2026-06-28 18:02:42.992 +08:00 [INF] 文件完成，本文件翻译 4 条，累计输入 1531 tokens，输出 10820 tokens，估算费用 0.02 元
+2026-06-28 18:02:42.997 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencyinjection.abstractions\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+2026-06-28 18:02:43.026 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 1/332
+2026-06-28 18:02:43.026 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 2/332
+2026-06-28 18:02:43.027 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 3/332
+2026-06-28 18:02:43.027 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 4/332
+2026-06-28 18:02:43.028 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 5/332
+2026-06-28 18:02:43.028 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 6/332
+2026-06-28 18:02:43.028 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 7/332
+2026-06-28 18:02:43.028 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 8/332
+2026-06-28 18:02:43.029 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 9/332
+2026-06-28 18:02:43.029 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 10/332
+2026-06-28 18:02:43.029 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 11/332
+2026-06-28 18:02:43.029 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 12/332
+2026-06-28 18:02:43.030 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 13/332
+2026-06-28 18:02:43.030 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 14/332
+2026-06-28 18:02:43.030 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 15/332
+2026-06-28 18:02:43.030 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 16/332
+2026-06-28 18:02:43.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 17/332
+2026-06-28 18:02:43.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 18/332
+2026-06-28 18:02:43.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 19/332
+2026-06-28 18:02:43.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 20/332
+2026-06-28 18:02:43.032 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 21/332
+2026-06-28 18:02:43.032 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 22/332
+2026-06-28 18:02:43.032 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 23/332
+2026-06-28 18:02:43.032 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 24/332
+2026-06-28 18:02:43.033 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 25/332
+2026-06-28 18:02:43.033 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 26/332
+2026-06-28 18:02:43.033 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 27/332
+2026-06-28 18:02:43.034 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 28/332
+2026-06-28 18:02:43.034 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 29/332
+2026-06-28 18:02:43.034 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 30/332
+2026-06-28 18:02:43.035 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 31/332
+2026-06-28 18:02:43.035 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 32/332
+2026-06-28 18:02:43.035 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 33/332
+2026-06-28 18:02:43.035 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 34/332
+2026-06-28 18:02:43.036 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 35/332
+2026-06-28 18:02:43.036 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 36/332
+2026-06-28 18:02:43.036 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 37/332
+2026-06-28 18:02:43.036 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 38/332
+2026-06-28 18:02:43.037 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 39/332
+2026-06-28 18:02:43.037 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 40/332
+2026-06-28 18:02:43.037 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 41/332
+2026-06-28 18:02:43.038 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 42/332
+2026-06-28 18:02:43.038 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 43/332
+2026-06-28 18:02:43.040 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 44/332
+2026-06-28 18:02:43.042 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 45/332
+2026-06-28 18:02:43.042 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 46/332
+2026-06-28 18:02:43.043 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 47/332
+2026-06-28 18:02:43.043 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 48/332
+2026-06-28 18:02:43.043 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 49/332
+2026-06-28 18:02:43.044 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 50/332
+2026-06-28 18:02:43.044 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 51/332
+2026-06-28 18:02:43.044 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 52/332
+2026-06-28 18:02:43.045 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 53/332
+2026-06-28 18:02:43.045 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 54/332
+2026-06-28 18:02:43.045 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 55/332
+2026-06-28 18:02:43.045 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 56/332
+2026-06-28 18:02:43.046 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 57/332
+2026-06-28 18:02:43.046 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 58/332
+2026-06-28 18:02:43.046 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 59/332
+2026-06-28 18:02:43.046 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 60/332
+2026-06-28 18:02:43.047 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 61/332
+2026-06-28 18:02:43.047 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 62/332
+2026-06-28 18:02:43.047 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 63/332
+2026-06-28 18:02:43.047 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 64/332
+2026-06-28 18:02:43.048 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 65/332
+2026-06-28 18:02:43.048 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 66/332
+2026-06-28 18:02:43.048 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 67/332
+2026-06-28 18:02:43.048 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 68/332
+2026-06-28 18:02:43.049 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 69/332
+2026-06-28 18:02:43.049 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 70/332
+2026-06-28 18:02:43.049 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 71/332
+2026-06-28 18:02:43.049 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 72/332
+2026-06-28 18:02:43.049 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 73/332
+2026-06-28 18:02:43.050 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 74/332
+2026-06-28 18:02:43.050 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 75/332
+2026-06-28 18:02:43.050 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 76/332
+2026-06-28 18:02:43.050 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 77/332
+2026-06-28 18:02:43.051 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 78/332
+2026-06-28 18:02:43.051 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 79/332
+2026-06-28 18:02:43.051 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 80/332
+2026-06-28 18:02:43.051 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 81/332
+2026-06-28 18:02:43.051 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 82/332
+2026-06-28 18:02:43.052 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 83/332
+2026-06-28 18:02:43.052 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 84/332
+2026-06-28 18:02:43.052 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 85/332
+2026-06-28 18:02:43.052 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 86/332
+2026-06-28 18:02:43.053 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 87/332
+2026-06-28 18:02:43.053 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 88/332
+2026-06-28 18:02:43.053 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 89/332
+2026-06-28 18:02:43.053 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 90/332
+2026-06-28 18:02:43.054 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 91/332
+2026-06-28 18:02:43.054 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 92/332
+2026-06-28 18:02:43.054 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 93/332
+2026-06-28 18:02:43.054 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 94/332
+2026-06-28 18:02:43.054 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 95/332
+2026-06-28 18:02:43.058 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 96/332
+2026-06-28 18:02:43.059 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 97/332
+2026-06-28 18:02:43.059 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 98/332
+2026-06-28 18:02:43.059 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 99/332
+2026-06-28 18:02:43.060 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 100/332
+2026-06-28 18:02:43.060 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 101/332
+2026-06-28 18:02:43.061 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 102/332
+2026-06-28 18:02:43.061 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 103/332
+2026-06-28 18:02:43.061 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 104/332
+2026-06-28 18:02:43.061 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 105/332
+2026-06-28 18:02:43.062 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 106/332
+2026-06-28 18:02:43.062 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 107/332
+2026-06-28 18:02:43.062 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 108/332
+2026-06-28 18:02:43.062 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 109/332
+2026-06-28 18:02:43.063 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 110/332
+2026-06-28 18:02:43.063 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 111/332
+2026-06-28 18:02:43.063 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 112/332
+2026-06-28 18:02:43.064 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 113/332
+2026-06-28 18:02:43.064 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 114/332
+2026-06-28 18:02:43.064 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 115/332
+2026-06-28 18:02:43.064 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 116/332
+2026-06-28 18:02:43.065 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 117/332
+2026-06-28 18:02:43.065 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 118/332
+2026-06-28 18:02:43.065 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 119/332
+2026-06-28 18:02:43.066 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 120/332
+2026-06-28 18:02:43.066 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 121/332
+2026-06-28 18:02:43.066 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 122/332
+2026-06-28 18:02:43.066 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 123/332
+2026-06-28 18:02:43.067 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 124/332
+2026-06-28 18:02:43.067 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 125/332
+2026-06-28 18:02:43.067 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 126/332
+2026-06-28 18:02:43.068 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 127/332
+2026-06-28 18:02:43.068 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 128/332
+2026-06-28 18:02:43.068 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 129/332
+2026-06-28 18:02:43.068 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 130/332
+2026-06-28 18:02:43.069 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 131/332
+2026-06-28 18:02:43.069 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 132/332
+2026-06-28 18:02:43.069 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 133/332
+2026-06-28 18:02:43.070 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 134/332
+2026-06-28 18:02:43.070 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 135/332
+2026-06-28 18:02:43.070 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 136/332
+2026-06-28 18:02:43.071 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 137/332
+2026-06-28 18:02:43.071 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 138/332
+2026-06-28 18:02:43.071 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 139/332
+2026-06-28 18:02:43.075 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 140/332
+2026-06-28 18:02:43.075 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 141/332
+2026-06-28 18:02:43.076 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 142/332
+2026-06-28 18:02:43.079 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 143/332
+2026-06-28 18:02:43.079 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 144/332
+2026-06-28 18:02:43.080 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 145/332
+2026-06-28 18:02:43.080 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 146/332
+2026-06-28 18:02:43.080 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 147/332
+2026-06-28 18:02:43.081 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 148/332
+2026-06-28 18:02:43.081 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 149/332
+2026-06-28 18:02:43.081 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 150/332
+2026-06-28 18:02:43.081 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 151/332
+2026-06-28 18:02:43.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 152/332
+2026-06-28 18:02:43.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 153/332
+2026-06-28 18:02:43.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 154/332
+2026-06-28 18:02:43.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 155/332
+2026-06-28 18:02:43.083 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 156/332
+2026-06-28 18:02:43.083 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 157/332
+2026-06-28 18:02:43.083 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 158/332
+2026-06-28 18:02:43.083 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 159/332
+2026-06-28 18:02:43.083 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 160/332
+2026-06-28 18:02:43.084 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 161/332
+2026-06-28 18:02:43.084 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 162/332
+2026-06-28 18:02:43.084 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 163/332
+2026-06-28 18:02:43.084 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 164/332
+2026-06-28 18:02:43.084 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 165/332
+2026-06-28 18:02:43.085 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 166/332
+2026-06-28 18:02:43.085 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 167/332
+2026-06-28 18:02:43.085 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 168/332
+2026-06-28 18:02:43.085 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 169/332
+2026-06-28 18:02:43.086 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 170/332
+2026-06-28 18:02:43.086 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 171/332
+2026-06-28 18:02:43.086 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 172/332
+2026-06-28 18:02:43.086 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 173/332
+2026-06-28 18:02:43.087 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 174/332
+2026-06-28 18:02:43.087 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 175/332
+2026-06-28 18:02:43.087 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 176/332
+2026-06-28 18:02:43.088 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 177/332
+2026-06-28 18:02:43.090 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 178/332
+2026-06-28 18:02:43.092 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 179/332
+2026-06-28 18:02:43.092 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 180/332
+2026-06-28 18:02:43.093 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 181/332
+2026-06-28 18:02:43.093 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 182/332
+2026-06-28 18:02:43.093 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 183/332
+2026-06-28 18:02:43.094 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 184/332
+2026-06-28 18:02:43.094 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 185/332
+2026-06-28 18:02:43.094 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 186/332
+2026-06-28 18:02:43.095 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 187/332
+2026-06-28 18:02:43.095 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 188/332
+2026-06-28 18:02:43.095 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 189/332
+2026-06-28 18:02:43.096 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 190/332
+2026-06-28 18:02:43.096 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 191/332
+2026-06-28 18:02:43.096 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 192/332
+2026-06-28 18:02:43.097 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 193/332
+2026-06-28 18:02:43.097 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 194/332
+2026-06-28 18:02:43.097 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 195/332
+2026-06-28 18:02:43.098 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 196/332
+2026-06-28 18:02:43.098 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 197/332
+2026-06-28 18:02:43.098 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 198/332
+2026-06-28 18:02:43.099 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 199/332
+2026-06-28 18:02:43.099 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 200/332
+2026-06-28 18:02:43.099 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 201/332
+2026-06-28 18:02:43.099 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 202/332
+2026-06-28 18:02:43.100 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 203/332
+2026-06-28 18:02:43.100 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 204/332
+2026-06-28 18:02:43.100 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 205/332
+2026-06-28 18:02:43.101 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 206/332
+2026-06-28 18:02:43.101 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 207/332
+2026-06-28 18:02:43.101 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 208/332
+2026-06-28 18:02:43.101 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 209/332
+2026-06-28 18:02:43.101 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 210/332
+2026-06-28 18:02:43.102 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 211/332
+2026-06-28 18:02:43.102 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 212/332
+2026-06-28 18:02:43.102 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 213/332
+2026-06-28 18:02:43.102 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 214/332
+2026-06-28 18:02:43.103 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 215/332
+2026-06-28 18:02:43.103 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 216/332
+2026-06-28 18:02:43.103 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 217/332
+2026-06-28 18:02:43.103 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 218/332
+2026-06-28 18:02:43.104 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 219/332
+2026-06-28 18:02:43.104 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 220/332
+2026-06-28 18:02:43.105 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 221/332
+2026-06-28 18:02:43.106 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 222/332
+2026-06-28 18:02:43.108 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 223/332
+2026-06-28 18:02:43.108 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 224/332
+2026-06-28 18:02:43.109 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 225/332
+2026-06-28 18:02:43.109 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 226/332
+2026-06-28 18:02:43.110 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 227/332
+2026-06-28 18:02:43.110 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 228/332
+2026-06-28 18:02:43.110 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 229/332
+2026-06-28 18:02:43.111 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 230/332
+2026-06-28 18:02:43.111 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute
+2026-06-28 18:02:43.111 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)
+2026-06-28 18:02:43.112 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes
+2026-06-28 18:02:43.113 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes
+2026-06-28 18:02:43.113 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None
+2026-06-28 18:02:43.114 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor
+2026-06-28 18:02:43.114 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors
+2026-06-28 18:02:43.115 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors
+2026-06-28 18:02:43.116 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods
+2026-06-28 18:02:43.116 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods
+2026-06-28 18:02:43.117 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields
+2026-06-28 18:02:43.118 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields
+2026-06-28 18:02:43.119 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes
+2026-06-28 18:02:43.120 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes
+2026-06-28 18:02:43.121 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties
+2026-06-28 18:02:43.125 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties
+2026-06-28 18:02:43.126 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents
+2026-06-28 18:02:43.127 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents
+2026-06-28 18:02:43.128 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces
+2026-06-28 18:02:43.129 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructorsWithInherited
+2026-06-28 18:02:43.130 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethodsWithInherited
+2026-06-28 18:02:43.131 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFieldsWithInherited
+2026-06-28 18:02:43.132 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypesWithInherited
+2026-06-28 18:02:43.132 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicPropertiesWithInherited
+2026-06-28 18:02:43.133 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEventsWithInherited
+2026-06-28 18:02:43.134 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructorsWithInherited
+2026-06-28 18:02:43.135 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypesWithInherited
+2026-06-28 18:02:43.136 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllConstructors
+2026-06-28 18:02:43.137 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllMethods
+2026-06-28 18:02:43.138 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllFields
+2026-06-28 18:02:43.142 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllNestedTypes
+2026-06-28 18:02:43.143 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllProperties
+2026-06-28 18:02:43.144 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.AllEvents
+2026-06-28 18:02:43.145 +08:00 [DBG] 缓存缺失: F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All
+2026-06-28 18:02:43.146 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute
+2026-06-28 18:02:43.147 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)
+2026-06-28 18:02:43.147 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.ExcludeStatics
+2026-06-28 18:02:43.148 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message
+2026-06-28 18:02:43.162 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url
+2026-06-28 18:02:43.163 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute
+2026-06-28 18:02:43.163 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)
+2026-06-28 18:02:43.164 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category
+2026-06-28 18:02:43.165 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId
+2026-06-28 18:02:43.166 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope
+2026-06-28 18:02:43.166 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target
+2026-06-28 18:02:43.167 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId
+2026-06-28 18:02:43.168 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification
+2026-06-28 18:02:43.169 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 18:02:43.170 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 18:02:43.170 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 18:02:43.171 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 18:02:43.175 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 18:02:43.176 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:02:43.177 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 18:02:43.178 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 18:02:43.179 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:02:43.180 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 18:02:43.180 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 18:02:43.181 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 18:02:43.182 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 18:02:43.183 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 18:02:43.184 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 18:02:43.185 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 18:02:43.185 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 18:02:43.186 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 18:02:43.187 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 18:02:43.188 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 18:02:43.192 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 18:02:43.193 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 18:02:43.194 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 18:02:43.195 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 18:02:43.196 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 18:02:43.197 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 18:02:43.198 +08:00 [DBG] 缓存缺失: T:System.Runtime.CompilerServices.CompilerLoweringPreserveAttribute
+2026-06-28 18:02:43.198 +08:00 [DBG] 缓存缺失: M:System.Runtime.CompilerServices.CompilerLoweringPreserveAttribute.#ctor
+2026-06-28 18:02:43.199 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 18:02:43.200 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 18:02:43.201 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 18:02:43.202 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 18:02:43.202 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 18:02:43.203 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 18:02:43.204 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 18:02:43.208 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 18:02:43.209 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 18:02:43.210 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 18:02:43.211 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 18:02:43.212 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 231/332
+2026-06-28 18:02:43.213 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 232/332
+2026-06-28 18:02:43.213 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 233/332
+2026-06-28 18:02:43.214 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 234/332
+2026-06-28 18:02:43.214 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 235/332
+2026-06-28 18:02:43.214 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 236/332
+2026-06-28 18:02:43.215 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 237/332
+2026-06-28 18:02:43.215 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 238/332
+2026-06-28 18:02:43.215 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 239/332
+2026-06-28 18:02:43.215 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 240/332
+2026-06-28 18:02:43.215 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 241/332
+2026-06-28 18:02:43.216 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 242/332
+2026-06-28 18:02:43.216 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 243/332
+2026-06-28 18:02:43.216 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 244/332
+2026-06-28 18:02:43.216 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 245/332
+2026-06-28 18:02:43.216 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 18:02:47.813 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 246/332
+2026-06-28 18:02:47.813 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 247/332
+2026-06-28 18:02:48.358 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 248/332
+2026-06-28 18:02:48.416 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 249/332
+2026-06-28 18:02:49.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 250/332
+2026-06-28 18:02:49.343 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 251/332
+2026-06-28 18:02:49.361 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 252/332
+2026-06-28 18:02:49.444 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 253/332
+2026-06-28 18:02:49.447 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 254/332
+2026-06-28 18:02:49.748 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 255/332
+2026-06-28 18:02:49.798 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 256/332
+2026-06-28 18:02:49.853 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 257/332
+2026-06-28 18:02:49.875 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 258/332
+2026-06-28 18:02:49.993 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 259/332
+2026-06-28 18:02:50.077 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 260/332
+2026-06-28 18:02:50.158 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 261/332
+2026-06-28 18:02:50.263 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 262/332
+2026-06-28 18:02:50.292 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 263/332
+2026-06-28 18:02:50.365 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 264/332
+2026-06-28 18:02:50.410 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 265/332
+2026-06-28 18:02:50.467 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 266/332
+2026-06-28 18:02:50.468 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 267/332
+2026-06-28 18:02:50.877 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 268/332
+2026-06-28 18:02:50.877 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 269/332
+2026-06-28 18:02:51.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 270/332
+2026-06-28 18:02:51.082 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 271/332
+2026-06-28 18:02:51.391 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 272/332
+2026-06-28 18:02:51.800 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 273/332
+2026-06-28 18:02:51.821 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 274/332
+2026-06-28 18:02:51.901 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 275/332
+2026-06-28 18:02:52.031 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 276/332
+2026-06-28 18:02:52.618 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 277/332
+2026-06-28 18:02:52.721 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 278/332
+2026-06-28 18:02:52.721 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 279/332
+2026-06-28 18:02:52.742 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 280/332
+2026-06-28 18:02:52.926 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 281/332
+2026-06-28 18:02:52.926 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 282/332
+2026-06-28 18:02:53.043 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 283/332
+2026-06-28 18:02:53.336 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 284/332
+2026-06-28 18:02:53.336 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 285/332
+2026-06-28 18:02:53.564 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 286/332
+2026-06-28 18:02:53.946 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 287/332
+2026-06-28 18:02:53.995 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 288/332
+2026-06-28 18:02:54.301 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 289/332
+2026-06-28 18:02:54.459 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 290/332
+2026-06-28 18:02:54.906 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 291/332
+2026-06-28 18:02:54.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 292/332
+2026-06-28 18:02:55.002 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 293/332
+2026-06-28 18:02:55.482 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 294/332
+2026-06-28 18:02:55.584 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 295/332
+2026-06-28 18:02:55.687 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 296/332
+2026-06-28 18:02:55.687 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 297/332
+2026-06-28 18:02:55.698 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 298/332
+2026-06-28 18:02:56.018 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 299/332
+2026-06-28 18:02:57.175 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 300/332
+2026-06-28 18:02:57.223 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 301/332
+2026-06-28 18:02:57.784 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 302/332
+2026-06-28 18:02:58.681 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 303/332
+2026-06-28 18:02:59.168 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 304/332
+2026-06-28 18:02:59.578 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 305/332
+2026-06-28 18:03:00.030 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 306/332
+2026-06-28 18:03:00.036 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 307/332
+2026-06-28 18:03:00.129 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 308/332
+2026-06-28 18:03:00.519 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 309/332
+2026-06-28 18:03:01.527 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 310/332
+2026-06-28 18:03:02.859 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 311/332
+2026-06-28 18:03:03.805 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 312/332
+2026-06-28 18:03:04.512 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 313/332
+2026-06-28 18:03:05.214 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 314/332
+2026-06-28 18:03:05.219 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 315/332
+2026-06-28 18:03:06.337 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 316/332
+2026-06-28 18:03:09.869 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 317/332
+2026-06-28 18:03:16.782 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 318/332
+2026-06-28 18:03:16.827 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 319/332
+2026-06-28 18:03:17.707 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 320/332
+2026-06-28 18:03:21.493 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 321/332
+2026-06-28 18:03:22.528 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 322/332
+2026-06-28 18:03:24.161 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 323/332
+2026-06-28 18:03:28.048 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 324/332
+2026-06-28 18:03:31.120 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 325/332
+2026-06-28 18:03:33.182 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 326/332
+2026-06-28 18:03:33.984 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 327/332
+2026-06-28 18:03:35.418 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 328/332
+2026-06-28 18:03:37.773 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml 进度: 329/332

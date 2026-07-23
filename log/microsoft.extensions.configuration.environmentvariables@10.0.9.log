@@ -1,0 +1,118 @@
+2026-06-28 19:45:11.378 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:11.379 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:11.380 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:11.381 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:11.383 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:11.404 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider
+2026-06-28 19:45:11.404 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.#ctor
+2026-06-28 19:45:11.405 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.#ctor(System.String)
+2026-06-28 19:45:11.409 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.Load
+2026-06-28 19:45:11.410 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider.ToString
+2026-06-28 19:45:11.411 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource
+2026-06-28 19:45:11.411 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource.Prefix
+2026-06-28 19:45:11.412 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 19:45:11.412 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions
+2026-06-28 19:45:11.412 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 19:45:11.413 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)
+2026-06-28 19:45:11.413 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationSource})
+2026-06-28 19:45:15.986 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 1/12
+2026-06-28 19:45:16.082 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 2/12
+2026-06-28 19:45:17.444 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 3/12
+2026-06-28 19:45:18.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 4/12
+2026-06-28 19:45:18.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 5/12
+2026-06-28 19:45:20.428 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 6/12
+2026-06-28 19:45:21.139 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 7/12
+2026-06-28 19:45:21.311 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 8/12
+2026-06-28 19:45:22.227 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 9/12
+2026-06-28 19:45:23.143 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 10/12
+2026-06-28 19:45:26.014 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 11/12
+2026-06-28 19:45:39.469 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 12/12
+2026-06-28 19:45:39.469 +08:00 [INF] 文件完成，本文件翻译 12 条，累计输入 2950 tokens，输出 11944 tokens，估算费用 0.03 元
+2026-06-28 19:45:39.472 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.configuration.environmentvariables\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Configuration.EnvironmentVariables.xml
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 1/50
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 2/50
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 3/50
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 4/50
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 5/50
+2026-06-28 19:45:39.501 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 6/50
+2026-06-28 19:45:39.502 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 7/50
+2026-06-28 19:45:39.503 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 8/50
+2026-06-28 19:45:39.503 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 9/50
+2026-06-28 19:45:39.503 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 10/50
+2026-06-28 19:45:39.503 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 11/50
+2026-06-28 19:45:39.503 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 12/50
+2026-06-28 19:45:39.503 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 19:45:39.504 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 19:45:39.504 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 19:45:39.505 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 19:45:39.505 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 19:45:39.505 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 19:45:39.505 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 19:45:39.506 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 19:45:39.506 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 19:45:39.507 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 19:45:39.507 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 19:45:39.507 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 19:45:39.511 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 19:45:39.512 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 19:45:39.512 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 19:45:39.512 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 19:45:39.513 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 19:45:39.514 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 19:45:39.515 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 19:45:39.515 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 19:45:39.517 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 19:45:39.517 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 19:45:39.518 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 19:45:39.518 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 19:45:39.519 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 19:45:39.519 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 19:45:39.519 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 19:45:39.519 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 19:45:39.520 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 19:45:39.520 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 19:45:39.520 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 19:45:39.520 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 19:45:39.521 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 19:45:39.522 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 19:45:39.522 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 19:45:39.522 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 19:45:39.523 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 19:45:39.523 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 19:45:44.163 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 13/50
+2026-06-28 19:45:44.447 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 14/50
+2026-06-28 19:45:44.673 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 15/50
+2026-06-28 19:45:44.800 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 16/50
+2026-06-28 19:45:45.165 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 17/50
+2026-06-28 19:45:45.483 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 18/50
+2026-06-28 19:45:45.678 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 19/50
+2026-06-28 19:45:46.395 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 20/50
+2026-06-28 19:45:47.418 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 21/50
+2026-06-28 19:45:47.981 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 22/50
+2026-06-28 19:45:48.289 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 23/50
+2026-06-28 19:45:48.665 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 24/50
+2026-06-28 19:45:49.285 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 25/50
+2026-06-28 19:45:49.779 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 26/50
+2026-06-28 19:45:49.999 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 27/50
+2026-06-28 19:45:51.134 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 28/50
+2026-06-28 19:45:51.514 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 29/50
+2026-06-28 19:45:51.717 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 30/50
+2026-06-28 19:45:52.046 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 31/50
+2026-06-28 19:45:53.581 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 32/50
+2026-06-28 19:45:53.868 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 33/50
+2026-06-28 19:45:53.973 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 34/50
+2026-06-28 19:45:55.937 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 35/50
+2026-06-28 19:45:57.151 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 36/50
+2026-06-28 19:45:59.303 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 37/50
+2026-06-28 19:45:59.303 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 38/50
+2026-06-28 19:45:59.654 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 39/50
+2026-06-28 19:46:00.216 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 40/50
+2026-06-28 19:46:05.646 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 41/50
+2026-06-28 19:46:09.023 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 42/50
+2026-06-28 19:46:09.846 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 43/50
+2026-06-28 19:46:11.619 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 44/50
+2026-06-28 19:46:11.998 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 45/50
+2026-06-28 19:46:17.015 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 46/50
+2026-06-28 19:46:28.474 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 47/50
+2026-06-28 19:46:28.490 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 48/50
+2026-06-28 19:46:34.832 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.EnvironmentVariables.xml 进度: 49/50

@@ -1,0 +1,147 @@
+2026-06-28 19:44:09.771 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 19:44:09.773 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 19:44:09.774 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 19:44:09.776 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 19:44:09.777 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 19:44:09.800 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions
+2026-06-28 19:44:09.800 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String[])
+2026-06-28 19:44:09.801 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String[],System.Collections.Generic.IDictionary{System.String,System.String})
+2026-06-28 19:44:09.801 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource})
+2026-06-28 19:44:09.801 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider
+2026-06-28 19:44:09.802 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IDictionary{System.String,System.String})
+2026-06-28 19:44:09.802 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Args
+2026-06-28 19:44:09.802 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationProvider.Load
+2026-06-28 19:44:09.802 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource
+2026-06-28 19:44:09.803 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.SwitchMappings
+2026-06-28 19:44:09.803 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Args
+2026-06-28 19:44:09.804 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 19:44:09.807 +08:00 [DBG] 缓存缺失: P:System.SR.Error_DuplicatedKeyInSwitchMappings
+2026-06-28 19:44:09.808 +08:00 [DBG] 缓存缺失: P:System.SR.Error_InvalidSwitchMapping
+2026-06-28 19:44:09.809 +08:00 [DBG] 缓存缺失: P:System.SR.Error_ShortSwitchNotDefined
+2026-06-28 19:44:12.832 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 1/15
+2026-06-28 19:44:14.165 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 2/15
+2026-06-28 19:44:14.826 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 3/15
+2026-06-28 19:44:15.320 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 4/15
+2026-06-28 19:44:18.636 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 5/15
+2026-06-28 19:44:19.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 6/15
+2026-06-28 19:44:21.425 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 7/15
+2026-06-28 19:44:23.448 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 8/15
+2026-06-28 19:44:27.545 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 9/15
+2026-06-28 19:44:35.844 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 10/15
+2026-06-28 19:44:43.010 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 11/15
+2026-06-28 19:44:47.047 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 12/15
+2026-06-28 19:44:53.349 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 13/15
+2026-06-28 20:02:57.052 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:02:57.054 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:02:57.057 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:02:57.058 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:02:57.059 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:02:57.065 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 1/15
+2026-06-28 20:02:57.065 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLineConfigurationExtensions.AddCommandLine(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String[])
+2026-06-28 20:02:57.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 2/15
+2026-06-28 20:02:57.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 3/15
+2026-06-28 20:02:57.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 4/15
+2026-06-28 20:02:57.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 5/15
+2026-06-28 20:02:57.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 6/15
+2026-06-28 20:02:57.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 7/15
+2026-06-28 20:02:57.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 8/15
+2026-06-28 20:02:57.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 9/15
+2026-06-28 20:02:57.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 10/15
+2026-06-28 20:02:57.068 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Configuration.CommandLine.CommandLineConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+2026-06-28 20:02:57.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 11/15
+2026-06-28 20:02:57.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 12/15
+2026-06-28 20:02:57.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 13/15
+2026-06-28 20:03:08.373 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 14/15
+2026-06-28 20:03:08.959 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 15/15
+2026-06-28 20:03:08.959 +08:00 [INF] 文件完成，本文件翻译 2 条，累计输入 1072 tokens，输出 2541 tokens，估算费用 0.01 元
+2026-06-28 20:03:08.964 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.configuration.commandline\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Configuration.CommandLine.xml
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 1/53
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 2/53
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 3/53
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 4/53
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 5/53
+2026-06-28 20:03:08.965 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 6/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 7/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 8/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 9/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 10/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 11/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 12/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 13/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 14/53
+2026-06-28 20:03:08.967 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 15/53
+2026-06-28 20:03:08.967 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 20:03:08.968 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 20:03:08.968 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 20:03:08.969 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 20:03:08.969 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 20:03:08.969 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 20:03:08.969 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 20:03:08.970 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 20:03:08.971 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 20:03:08.974 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 20:03:08.974 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 20:03:08.975 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 20:03:08.975 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 20:03:08.976 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 20:03:08.976 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 20:03:08.976 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 20:03:08.977 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:03:08.977 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 20:03:08.978 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 20:03:08.979 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 20:03:08.980 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 20:03:08.980 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 20:03:08.980 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 20:03:08.981 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 20:03:08.981 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 20:03:08.981 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 20:03:08.982 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 20:03:08.982 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 20:03:08.982 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 20:03:08.983 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 20:03:08.983 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 20:03:08.983 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 20:03:08.984 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 20:03:08.984 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 20:03:08.984 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 20:03:08.984 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 20:03:08.985 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 20:03:08.985 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 20:03:13.032 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 16/53
+2026-06-28 20:03:13.149 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 17/53
+2026-06-28 20:03:13.547 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 18/53
+2026-06-28 20:03:13.880 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 19/53
+2026-06-28 20:03:14.157 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 20/53
+2026-06-28 20:03:14.257 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 21/53
+2026-06-28 20:03:14.258 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 22/53
+2026-06-28 20:03:14.480 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 23/53
+2026-06-28 20:03:14.563 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 24/53
+2026-06-28 20:03:14.869 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 25/53
+2026-06-28 20:03:15.278 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 26/53
+2026-06-28 20:03:15.586 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 27/53
+2026-06-28 20:03:15.691 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 28/53
+2026-06-28 20:03:15.691 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 29/53
+2026-06-28 20:03:15.893 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 30/53
+2026-06-28 20:03:15.899 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 31/53
+2026-06-28 20:03:16.408 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 32/53
+2026-06-28 20:03:17.124 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 33/53
+2026-06-28 20:03:17.944 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 34/53
+2026-06-28 20:03:18.150 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 35/53
+2026-06-28 20:03:18.899 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 36/53
+2026-06-28 20:03:20.708 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 37/53
+2026-06-28 20:03:21.015 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 38/53
+2026-06-28 20:03:22.475 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 39/53
+2026-06-28 20:03:22.959 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 40/53
+2026-06-28 20:03:24.698 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 41/53
+2026-06-28 20:03:26.442 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 42/53
+2026-06-28 20:03:31.252 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 43/53
+2026-06-28 20:03:31.364 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 44/53
+2026-06-28 20:03:36.375 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 45/53
+2026-06-28 20:03:37.642 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 46/53
+2026-06-28 20:03:38.420 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 47/53
+2026-06-28 20:03:40.370 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 48/53
+2026-06-28 20:03:45.383 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 49/53
+2026-06-28 20:03:47.847 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 50/53
+2026-06-28 20:03:52.043 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 51/53
+2026-06-28 20:04:01.666 +08:00 [INF] lib/net462/Microsoft.Extensions.Configuration.CommandLine.xml 进度: 52/53

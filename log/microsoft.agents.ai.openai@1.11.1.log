@@ -1,0 +1,447 @@
+2026-06-28 18:50:39.678 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:50:39.713 +08:00 [INF] 正在提取文件: lib/net472/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:50:39.722 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:50:39.724 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:50:39.726 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:50:40.044 +08:00 [DBG] 缓存缺失: T:Microsoft.Shared.Diagnostics.Throw
+2026-06-28 18:50:40.178 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)
+2026-06-28 18:50:40.179 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrMemberNull``2(``0,``1,System.String,System.String)
+2026-06-28 18:50:40.181 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfMemberNull``2(``0,``1,System.String,System.String)
+2026-06-28 18:50:40.184 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrWhitespace(System.String,System.String)
+2026-06-28 18:50:40.185 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty(System.String,System.String)
+2026-06-28 18:50:40.186 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfBufferTooSmall(System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.187 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange``1(``0,System.String)
+2026-06-28 18:50:40.188 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)
+2026-06-28 18:50:40.189 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)
+2026-06-28 18:50:40.189 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String,System.String)
+2026-06-28 18:50:40.190 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String)
+2026-06-28 18:50:40.191 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.String)
+2026-06-28 18:50:40.192 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentOutOfRangeException(System.String,System.Object,System.String)
+2026-06-28 18:50:40.192 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String)
+2026-06-28 18:50:40.193 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentException(System.String,System.String,System.Exception)
+2026-06-28 18:50:40.194 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String)
+2026-06-28 18:50:40.194 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.InvalidOperationException(System.String,System.Exception)
+2026-06-28 18:50:40.195 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.196 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.201 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.202 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.202 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)
+2026-06-28 18:50:40.203 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int32,System.String)
+2026-06-28 18:50:40.204 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt32,System.UInt32,System.String)
+2026-06-28 18:50:40.205 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt32,System.UInt32,System.String)
+2026-06-28 18:50:40.206 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt32,System.UInt32,System.String)
+2026-06-28 18:50:40.206 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt32,System.UInt32,System.String)
+2026-06-28 18:50:40.207 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt32,System.UInt32,System.UInt32,System.String)
+2026-06-28 18:50:40.208 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt32,System.String)
+2026-06-28 18:50:40.208 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Int64,System.Int64,System.String)
+2026-06-28 18:50:40.209 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Int64,System.Int64,System.String)
+2026-06-28 18:50:40.210 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Int64,System.Int64,System.String)
+2026-06-28 18:50:40.211 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Int64,System.Int64,System.String)
+2026-06-28 18:50:40.211 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Int64,System.Int64,System.Int64,System.String)
+2026-06-28 18:50:40.213 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Int64,System.String)
+2026-06-28 18:50:40.218 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.UInt64,System.UInt64,System.String)
+2026-06-28 18:50:40.225 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.UInt64,System.UInt64,System.String)
+2026-06-28 18:50:40.226 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.UInt64,System.UInt64,System.String)
+2026-06-28 18:50:40.227 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.UInt64,System.UInt64,System.String)
+2026-06-28 18:50:40.228 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)
+2026-06-28 18:50:40.229 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.UInt64,System.String)
+2026-06-28 18:50:40.230 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThan(System.Double,System.Double,System.String)
+2026-06-28 18:50:40.234 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThan(System.Double,System.Double,System.String)
+2026-06-28 18:50:40.235 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfLessThanOrEqual(System.Double,System.Double,System.String)
+2026-06-28 18:50:40.236 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfGreaterThanOrEqual(System.Double,System.Double,System.String)
+2026-06-28 18:50:40.238 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)
+2026-06-28 18:50:40.239 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfZero(System.Double,System.String)
+2026-06-28 18:50:40.240 +08:00 [DBG] 缓存缺失: T:Microsoft.Shared.DiagnosticIds.DiagnosticIds
+2026-06-28 18:50:40.241 +08:00 [DBG] 缓存缺失: T:Microsoft.Shared.DiagnosticIds.DiagnosticIds.Experiments
+2026-06-28 18:50:40.243 +08:00 [DBG] 缓存缺失: P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Status
+2026-06-28 18:50:40.244 +08:00 [DBG] 缓存缺失: P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.ReasonPhrase
+2026-06-28 18:50:40.245 +08:00 [DBG] 缓存缺失: P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.ContentStream
+2026-06-28 18:50:40.246 +08:00 [DBG] 缓存缺失: P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Content
+2026-06-28 18:50:40.247 +08:00 [DBG] 缓存缺失: P:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.HeadersCore
+2026-06-28 18:50:40.252 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.BufferContent(System.Threading.CancellationToken)
+2026-06-28 18:50:40.253 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.BufferContentAsync(System.Threading.CancellationToken)
+2026-06-28 18:50:40.254 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.OpenAI.StreamingUpdatePipelineResponse.Dispose
+2026-06-28 18:50:40.254 +08:00 [DBG] 缓存缺失: T:Microsoft.Agents.AI.AgentResponseExtensions
+2026-06-28 18:50:40.255 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIChatCompletion(Microsoft.Agents.AI.AgentResponse)
+2026-06-28 18:50:40.257 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AgentResponseExtensions.AsOpenAIResponse(Microsoft.Agents.AI.AgentResponse)
+2026-06-28 18:50:40.258 +08:00 [DBG] 缓存缺失: T:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions
+2026-06-28 18:50:40.259 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:50:40.260 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:50:40.261 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Responses.ResponseItem},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:50:40.262 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Responses.ResponseItem},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:50:40.263 +08:00 [DBG] 缓存缺失: T:OpenAI.Chat.OpenAIChatClientExtensions
+2026-06-28 18:50:40.268 +08:00 [DBG] 缓存缺失: M:OpenAI.Chat.OpenAIChatClientExtensions.AsAIAgent(OpenAI.Chat.ChatClient,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Extensions.AI.AITool},System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)
+2026-06-28 18:50:40.269 +08:00 [DBG] 缓存缺失: M:OpenAI.Chat.OpenAIChatClientExtensions.AsAIAgent(OpenAI.Chat.ChatClient,Microsoft.Agents.AI.ChatClientAgentOptions,System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)
+2026-06-28 18:50:40.270 +08:00 [DBG] 缓存缺失: T:OpenAI.Responses.OpenAIResponseClientExtensions
+2026-06-28 18:50:40.271 +08:00 [DBG] 缓存缺失: M:OpenAI.Responses.OpenAIResponseClientExtensions.AsAIAgent(OpenAI.Responses.ResponsesClient,System.String,System.String,System.String,System.String,System.Collections.Generic.IList{Microsoft.Extensions.AI.AITool},System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)
+2026-06-28 18:50:40.272 +08:00 [DBG] 缓存缺失: M:OpenAI.Responses.OpenAIResponseClientExtensions.AsAIAgent(OpenAI.Responses.ResponsesClient,Microsoft.Agents.AI.ChatClientAgentOptions,System.String,System.Func{Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.IChatClient},Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)
+2026-06-28 18:50:40.277 +08:00 [DBG] 缓存缺失: M:OpenAI.Responses.OpenAIResponseClientExtensions.AsIChatClientWithStoredOutputDisabled(OpenAI.Responses.ResponsesClient,System.String,System.Boolean)
+2026-06-28 18:50:45.821 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 1/73
+2026-06-28 18:50:45.823 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 2/73
+2026-06-28 18:50:45.962 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 3/73
+2026-06-28 18:50:46.486 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 4/73
+2026-06-28 18:50:47.094 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 5/73
+2026-06-28 18:50:47.192 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 6/73
+2026-06-28 18:50:47.282 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 7/73
+2026-06-28 18:50:47.728 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 8/73
+2026-06-28 18:50:47.901 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 9/73
+2026-06-28 18:50:48.125 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 10/73
+2026-06-28 18:50:48.201 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 11/73
+2026-06-28 18:50:49.023 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 12/73
+2026-06-28 18:50:49.269 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 13/73
+2026-06-28 18:50:49.958 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 14/73
+2026-06-28 18:50:50.285 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 15/73
+2026-06-28 18:50:50.456 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 16/73
+2026-06-28 18:50:50.469 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 17/73
+2026-06-28 18:50:50.810 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 18/73
+2026-06-28 18:50:50.903 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 19/73
+2026-06-28 18:50:50.913 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 20/73
+2026-06-28 18:50:50.968 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 21/73
+2026-06-28 18:50:51.069 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 22/73
+2026-06-28 18:50:51.172 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 23/73
+2026-06-28 18:50:51.505 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 24/73
+2026-06-28 18:50:51.585 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 25/73
+2026-06-28 18:50:51.684 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 26/73
+2026-06-28 18:50:51.888 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 27/73
+2026-06-28 18:50:51.991 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 28/73
+2026-06-28 18:50:53.169 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 29/73
+2026-06-28 18:50:53.425 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 30/73
+2026-06-28 18:50:55.924 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 31/73
+2026-06-28 18:50:56.701 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 32/73
+2026-06-28 18:50:56.804 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 33/73
+2026-06-28 18:50:57.738 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 34/73
+2026-06-28 18:50:58.034 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 35/73
+2026-06-28 18:50:59.278 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 36/73
+2026-06-28 18:50:59.671 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 37/73
+2026-06-28 18:50:59.671 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 38/73
+2026-06-28 18:51:00.080 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 39/73
+2026-06-28 18:51:01.419 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 40/73
+2026-06-28 18:51:01.666 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 41/73
+2026-06-28 18:51:01.756 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 42/73
+2026-06-28 18:51:03.567 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 43/73
+2026-06-28 18:51:04.688 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 44/73
+2026-06-28 18:51:05.712 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 45/73
+2026-06-28 18:51:05.960 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 46/73
+2026-06-28 18:51:06.135 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 47/73
+2026-06-28 18:51:07.044 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 48/73
+2026-06-28 18:51:07.885 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 49/73
+2026-06-28 18:51:07.969 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 50/73
+2026-06-28 18:51:11.856 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 51/73
+2026-06-28 18:51:12.574 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 52/73
+2026-06-28 18:51:12.718 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 53/73
+2026-06-28 18:51:13.495 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 54/73
+2026-06-28 18:51:14.008 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 55/73
+2026-06-28 18:51:17.806 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 56/73
+2026-06-28 18:51:18.236 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 57/73
+2026-06-28 18:51:19.844 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 58/73
+2026-06-28 18:51:22.820 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 59/73
+2026-06-28 18:51:26.295 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 60/73
+2026-06-28 18:51:27.220 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 61/73
+2026-06-28 18:51:27.838 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 62/73
+2026-06-28 18:51:28.791 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 63/73
+2026-06-28 18:51:30.187 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 64/73
+2026-06-28 18:51:35.011 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 65/73
+2026-06-28 18:51:35.159 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 66/73
+2026-06-28 18:51:36.759 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 67/73
+2026-06-28 18:52:55.979 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:52:55.996 +08:00 [INF] 正在提取文件: lib/net472/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:52:55.997 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:52:55.998 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:52:55.998 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:52:56.214 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 1/73
+2026-06-28 18:52:56.235 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfNull``1(``0,System.String)
+2026-06-28 18:52:56.350 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 2/73
+2026-06-28 18:52:56.351 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 3/73
+2026-06-28 18:52:56.352 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 4/73
+2026-06-28 18:52:56.357 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 5/73
+2026-06-28 18:52:56.358 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 6/73
+2026-06-28 18:52:56.359 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 7/73
+2026-06-28 18:52:56.360 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 8/73
+2026-06-28 18:52:56.361 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.ArgumentNullException(System.String)
+2026-06-28 18:52:56.364 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 9/73
+2026-06-28 18:52:56.364 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 10/73
+2026-06-28 18:52:56.365 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 11/73
+2026-06-28 18:52:56.366 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 12/73
+2026-06-28 18:52:56.367 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 13/73
+2026-06-28 18:52:56.368 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 14/73
+2026-06-28 18:52:56.369 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 15/73
+2026-06-28 18:52:56.374 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 16/73
+2026-06-28 18:52:56.375 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 17/73
+2026-06-28 18:52:56.377 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 18/73
+2026-06-28 18:52:56.378 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 19/73
+2026-06-28 18:52:56.379 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 20/73
+2026-06-28 18:52:56.380 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 21/73
+2026-06-28 18:52:56.381 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 22/73
+2026-06-28 18:52:56.382 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 23/73
+2026-06-28 18:52:56.383 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 24/73
+2026-06-28 18:52:56.384 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 25/73
+2026-06-28 18:52:56.385 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 26/73
+2026-06-28 18:52:56.386 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 27/73
+2026-06-28 18:52:56.389 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 28/73
+2026-06-28 18:52:56.391 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 29/73
+2026-06-28 18:52:56.392 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 30/73
+2026-06-28 18:52:56.393 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 31/73
+2026-06-28 18:52:56.394 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 32/73
+2026-06-28 18:52:56.395 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 33/73
+2026-06-28 18:52:56.396 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 34/73
+2026-06-28 18:52:56.397 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 35/73
+2026-06-28 18:52:56.397 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 36/73
+2026-06-28 18:52:56.398 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 37/73
+2026-06-28 18:52:56.399 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 38/73
+2026-06-28 18:52:56.399 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.UInt64,System.UInt64,System.UInt64,System.String)
+2026-06-28 18:52:56.400 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 39/73
+2026-06-28 18:52:56.401 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 40/73
+2026-06-28 18:52:56.402 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 41/73
+2026-06-28 18:52:56.402 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 42/73
+2026-06-28 18:52:56.407 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 43/73
+2026-06-28 18:52:56.408 +08:00 [DBG] 缓存缺失: M:Microsoft.Shared.Diagnostics.Throw.IfOutOfRange(System.Double,System.Double,System.Double,System.String)
+2026-06-28 18:52:56.409 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 44/73
+2026-06-28 18:52:56.410 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 45/73
+2026-06-28 18:52:56.411 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 46/73
+2026-06-28 18:52:56.411 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 47/73
+2026-06-28 18:52:56.412 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 48/73
+2026-06-28 18:52:56.413 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 49/73
+2026-06-28 18:52:56.413 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 50/73
+2026-06-28 18:52:56.414 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 51/73
+2026-06-28 18:52:56.414 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 52/73
+2026-06-28 18:52:56.415 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 53/73
+2026-06-28 18:52:56.415 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 54/73
+2026-06-28 18:52:56.416 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 55/73
+2026-06-28 18:52:56.416 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 56/73
+2026-06-28 18:52:56.417 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 57/73
+2026-06-28 18:52:56.418 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 58/73
+2026-06-28 18:52:56.418 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 59/73
+2026-06-28 18:52:56.419 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:52:56.424 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Responses.ResponseItem},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:52:56.426 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 60/73
+2026-06-28 18:52:56.428 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 61/73
+2026-06-28 18:52:56.428 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 62/73
+2026-06-28 18:52:56.429 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 63/73
+2026-06-28 18:52:56.430 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 64/73
+2026-06-28 18:52:56.431 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 65/73
+2026-06-28 18:52:56.432 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 66/73
+2026-06-28 18:52:56.432 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 67/73
+2026-06-28 18:53:04.987 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 68/73
+2026-06-28 18:53:22.530 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 69/73
+2026-06-28 18:53:23.442 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 70/73
+2026-06-28 18:53:29.219 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 71/73
+2026-06-28 18:53:53.878 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 72/73
+2026-06-28 18:54:41.160 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:54:41.174 +08:00 [INF] 正在提取文件: lib/net472/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:54:41.177 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:54:41.178 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:54:41.179 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:54:41.411 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 1/73
+2026-06-28 18:54:41.415 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 2/73
+2026-06-28 18:54:41.416 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 3/73
+2026-06-28 18:54:41.416 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 4/73
+2026-06-28 18:54:41.417 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 5/73
+2026-06-28 18:54:41.417 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 6/73
+2026-06-28 18:54:41.418 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 7/73
+2026-06-28 18:54:41.418 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 8/73
+2026-06-28 18:54:41.419 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 9/73
+2026-06-28 18:54:41.419 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 10/73
+2026-06-28 18:54:41.420 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 11/73
+2026-06-28 18:54:41.420 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 12/73
+2026-06-28 18:54:41.420 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 13/73
+2026-06-28 18:54:41.421 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 14/73
+2026-06-28 18:54:41.421 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 15/73
+2026-06-28 18:54:41.422 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 16/73
+2026-06-28 18:54:41.422 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 17/73
+2026-06-28 18:54:41.423 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 18/73
+2026-06-28 18:54:41.423 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 19/73
+2026-06-28 18:54:41.424 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 20/73
+2026-06-28 18:54:41.424 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 21/73
+2026-06-28 18:54:41.427 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 22/73
+2026-06-28 18:54:41.428 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 23/73
+2026-06-28 18:54:41.429 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 24/73
+2026-06-28 18:54:41.429 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 25/73
+2026-06-28 18:54:41.430 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 26/73
+2026-06-28 18:54:41.430 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 27/73
+2026-06-28 18:54:41.431 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 28/73
+2026-06-28 18:54:41.431 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 29/73
+2026-06-28 18:54:41.432 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 30/73
+2026-06-28 18:54:41.432 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 31/73
+2026-06-28 18:54:41.433 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 32/73
+2026-06-28 18:54:41.433 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 33/73
+2026-06-28 18:54:41.434 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 34/73
+2026-06-28 18:54:41.434 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 35/73
+2026-06-28 18:54:41.435 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 36/73
+2026-06-28 18:54:41.435 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 37/73
+2026-06-28 18:54:41.435 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 38/73
+2026-06-28 18:54:41.436 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 39/73
+2026-06-28 18:54:41.436 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 40/73
+2026-06-28 18:54:41.437 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 41/73
+2026-06-28 18:54:41.437 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 42/73
+2026-06-28 18:54:41.438 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 43/73
+2026-06-28 18:54:41.438 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 44/73
+2026-06-28 18:54:41.439 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 45/73
+2026-06-28 18:54:41.439 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 46/73
+2026-06-28 18:54:41.439 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 47/73
+2026-06-28 18:54:41.440 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 48/73
+2026-06-28 18:54:41.440 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 49/73
+2026-06-28 18:54:41.441 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 50/73
+2026-06-28 18:54:41.444 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 51/73
+2026-06-28 18:54:41.444 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 52/73
+2026-06-28 18:54:41.445 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 53/73
+2026-06-28 18:54:41.446 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 54/73
+2026-06-28 18:54:41.447 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 55/73
+2026-06-28 18:54:41.447 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 56/73
+2026-06-28 18:54:41.448 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 57/73
+2026-06-28 18:54:41.449 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 58/73
+2026-06-28 18:54:41.449 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 59/73
+2026-06-28 18:54:41.450 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 60/73
+2026-06-28 18:54:41.450 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 61/73
+2026-06-28 18:54:41.451 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 62/73
+2026-06-28 18:54:41.452 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 63/73
+2026-06-28 18:54:41.474 +08:00 [DBG] 缓存缺失: M:Microsoft.Agents.AI.AIAgentWithOpenAIExtensions.RunStreamingAsync(Microsoft.Agents.AI.AIAgent,System.Collections.Generic.IEnumerable{OpenAI.Chat.ChatMessage},Microsoft.Agents.AI.AgentSession,Microsoft.Agents.AI.AgentRunOptions,System.Threading.CancellationToken)
+2026-06-28 18:54:41.587 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 64/73
+2026-06-28 18:54:41.587 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 65/73
+2026-06-28 18:54:41.588 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 66/73
+2026-06-28 18:54:41.588 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 67/73
+2026-06-28 18:54:41.589 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 68/73
+2026-06-28 18:54:41.589 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 69/73
+2026-06-28 18:54:41.590 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 70/73
+2026-06-28 18:54:41.591 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 71/73
+2026-06-28 18:54:41.593 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 72/73
+2026-06-28 18:55:00.522 +08:00 [INF] lib/net10.0/Microsoft.Agents.AI.OpenAI.xml 进度: 73/73
+2026-06-28 18:55:00.522 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 723 tokens，输出 2206 tokens，估算费用 0.01 元
+2026-06-28 18:55:00.528 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.agents.ai.openai\1.11.1\lib\net10.0\zh-Hans\Microsoft.Agents.AI.OpenAI.xml
+2026-06-28 18:55:00.551 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 18:55:00.553 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 18:55:00.554 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 18:55:00.555 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 18:55:00.556 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 18:55:00.557 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:55:00.558 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 18:55:00.562 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 18:55:00.564 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:55:00.565 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 18:55:00.567 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 18:55:00.567 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 18:55:00.568 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 18:55:00.569 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 18:55:00.570 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 18:55:00.571 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 18:55:00.572 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 18:55:00.573 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 18:55:00.574 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 18:55:00.578 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 18:55:00.579 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 18:55:00.580 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 18:55:00.582 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 18:55:00.583 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 18:55:00.584 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 18:55:00.584 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 18:55:00.585 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.ExperimentalAttribute
+2026-06-28 18:55:00.586 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.#ctor(System.String)
+2026-06-28 18:55:00.587 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.DiagnosticId
+2026-06-28 18:55:00.588 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.ExperimentalAttribute.UrlFormat
+2026-06-28 18:55:00.589 +08:00 [DBG] 缓存缺失: T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute
+2026-06-28 18:55:00.590 +08:00 [DBG] 缓存缺失: M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)
+2026-06-28 18:55:00.595 +08:00 [DBG] 缓存缺失: P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName
+2026-06-28 18:55:00.596 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 1/106
+2026-06-28 18:55:00.596 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 2/106
+2026-06-28 18:55:00.597 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 3/106
+2026-06-28 18:55:00.597 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 4/106
+2026-06-28 18:55:00.597 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 5/106
+2026-06-28 18:55:00.597 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 6/106
+2026-06-28 18:55:00.597 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 7/106
+2026-06-28 18:55:00.598 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 8/106
+2026-06-28 18:55:00.598 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 9/106
+2026-06-28 18:55:00.598 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 10/106
+2026-06-28 18:55:00.598 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 11/106
+2026-06-28 18:55:00.598 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 12/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 13/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 14/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 15/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 16/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 17/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 18/106
+2026-06-28 18:55:00.599 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 19/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 20/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 21/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 22/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 23/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 24/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 25/106
+2026-06-28 18:55:00.600 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 26/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 27/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 28/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 29/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 30/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 31/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 32/106
+2026-06-28 18:55:00.601 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 33/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 34/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 35/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 36/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 37/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 38/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 39/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 40/106
+2026-06-28 18:55:00.602 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 41/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 42/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 43/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 44/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 45/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 46/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 47/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 48/106
+2026-06-28 18:55:00.603 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 49/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 50/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 51/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 52/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 53/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 54/106
+2026-06-28 18:55:00.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 55/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 56/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 57/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 58/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 59/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 60/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 61/106
+2026-06-28 18:55:00.605 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 62/106
+2026-06-28 18:55:00.606 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 63/106
+2026-06-28 18:55:00.606 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 64/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 65/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 66/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 67/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 68/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 69/106
+2026-06-28 18:55:00.607 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 70/106
+2026-06-28 18:55:00.608 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 71/106
+2026-06-28 18:55:00.608 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 72/106
+2026-06-28 18:55:00.608 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 73/106
+2026-06-28 18:55:04.638 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 74/106
+2026-06-28 18:55:05.068 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 75/106
+2026-06-28 18:55:05.737 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 76/106
+2026-06-28 18:55:05.945 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 77/106
+2026-06-28 18:55:06.099 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 78/106
+2026-06-28 18:55:06.456 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 79/106
+2026-06-28 18:55:07.585 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 80/106
+2026-06-28 18:55:08.196 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 81/106
+2026-06-28 18:55:08.400 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 82/106
+2026-06-28 18:55:08.604 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 83/106
+2026-06-28 18:55:08.707 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 84/106
+2026-06-28 18:55:08.723 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 85/106
+2026-06-28 18:55:09.117 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 86/106
+2026-06-28 18:55:09.219 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 87/106
+2026-06-28 18:55:10.178 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 88/106
+2026-06-28 18:55:10.243 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 89/106
+2026-06-28 18:55:11.063 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 90/106
+2026-06-28 18:55:11.313 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 91/106
+2026-06-28 18:55:11.368 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 92/106
+2026-06-28 18:55:11.472 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 93/106
+2026-06-28 18:55:11.881 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 94/106
+2026-06-28 18:55:13.013 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 95/106
+2026-06-28 18:55:13.465 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 96/106
+2026-06-28 18:55:13.621 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 97/106
+2026-06-28 18:55:15.466 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 98/106
+2026-06-28 18:55:16.613 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 99/106
+2026-06-28 18:55:17.947 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 100/106
+2026-06-28 18:55:18.380 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 101/106
+2026-06-28 18:55:22.122 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 102/106
+2026-06-28 18:55:31.693 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 103/106
+2026-06-28 18:55:40.271 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 104/106
+2026-06-28 18:55:42.509 +08:00 [INF] lib/net472/Microsoft.Agents.AI.OpenAI.xml 进度: 105/106

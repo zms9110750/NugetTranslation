@@ -1,0 +1,1337 @@
+2026-06-28 17:25:17.570 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:25:17.571 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:25:17.571 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:25:17.572 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:25:17.574 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:25:17.606 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.CancellationChangeToken
+2026-06-28 17:25:17.607 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.CancellationChangeToken.#ctor(System.Threading.CancellationToken)
+2026-06-28 17:25:17.608 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.CancellationChangeToken.ActiveChangeCallbacks
+2026-06-28 17:25:17.609 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.CancellationChangeToken.HasChanged
+2026-06-28 17:25:17.610 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.CancellationChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)
+2026-06-28 17:25:17.610 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.ChangeToken
+2026-06-28 17:25:17.611 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.ChangeToken.OnChange(System.Func{Microsoft.Extensions.Primitives.IChangeToken},System.Action)
+2026-06-28 17:25:17.611 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.ChangeToken.OnChange``1(System.Func{Microsoft.Extensions.Primitives.IChangeToken},System.Action{``0},``0)
+2026-06-28 17:25:17.611 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.CompositeChangeToken
+2026-06-28 17:25:17.611 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.CompositeChangeToken.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.Primitives.IChangeToken})
+2026-06-28 17:25:17.612 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.CompositeChangeToken.ChangeTokens
+2026-06-28 17:25:17.612 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.CompositeChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)
+2026-06-28 17:25:17.612 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.CompositeChangeToken.HasChanged
+2026-06-28 17:25:17.613 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.CompositeChangeToken.ActiveChangeCallbacks
+2026-06-28 17:25:17.613 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.Extensions
+2026-06-28 17:25:17.613 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.Extensions.Append(System.Text.StringBuilder,Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.613 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.IChangeToken
+2026-06-28 17:25:17.614 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged
+2026-06-28 17:25:17.614 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.IChangeToken.ActiveChangeCallbacks
+2026-06-28 17:25:17.614 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.IChangeToken.RegisterChangeCallback(System.Action{System.Object},System.Object)
+2026-06-28 17:25:17.614 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.InplaceStringBuilder
+2026-06-28 17:25:17.615 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.#ctor(System.Int32)
+2026-06-28 17:25:17.615 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.InplaceStringBuilder.Capacity
+2026-06-28 17:25:17.615 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.String)
+2026-06-28 17:25:17.616 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.616 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.String,System.Int32,System.Int32)
+2026-06-28 17:25:17.616 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.Append(System.Char)
+2026-06-28 17:25:17.617 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.InplaceStringBuilder.ToString
+2026-06-28 17:25:17.617 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringSegment
+2026-06-28 17:25:17.617 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.Primitives.StringSegment.Empty
+2026-06-28 17:25:17.617 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.#ctor(System.String)
+2026-06-28 17:25:17.618 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.#ctor(System.String,System.Int32,System.Int32)
+2026-06-28 17:25:17.618 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.Buffer
+2026-06-28 17:25:17.618 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.Offset
+2026-06-28 17:25:17.619 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.Length
+2026-06-28 17:25:17.619 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.Value
+2026-06-28 17:25:17.619 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.HasValue
+2026-06-28 17:25:17.619 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegment.Item(System.Int32)
+2026-06-28 17:25:17.620 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.AsSpan
+2026-06-28 17:25:17.620 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.AsSpan(System.Int32)
+2026-06-28 17:25:17.620 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.AsSpan(System.Int32,System.Int32)
+2026-06-28 17:25:17.621 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.AsMemory
+2026-06-28 17:25:17.621 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Compare(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)
+2026-06-28 17:25:17.621 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.Object)
+2026-06-28 17:25:17.621 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.622 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)
+2026-06-28 17:25:17.622 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment,System.StringComparison)
+2026-06-28 17:25:17.622 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.String)
+2026-06-28 17:25:17.623 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Equals(System.String,System.StringComparison)
+2026-06-28 17:25:17.623 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.GetHashCode
+2026-06-28 17:25:17.624 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Equality(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.625 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Inequality(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.626 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(System.String)~Microsoft.Extensions.Primitives.StringSegment
+2026-06-28 17:25:17.627 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlySpan{System.Char}
+2026-06-28 17:25:17.627 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlyMemory{System.Char}
+2026-06-28 17:25:17.628 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.StartsWith(System.String,System.StringComparison)
+2026-06-28 17:25:17.628 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.EndsWith(System.String,System.StringComparison)
+2026-06-28 17:25:17.628 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Substring(System.Int32)
+2026-06-28 17:25:17.629 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Substring(System.Int32,System.Int32)
+2026-06-28 17:25:17.629 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Subsegment(System.Int32)
+2026-06-28 17:25:17.629 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Subsegment(System.Int32,System.Int32)
+2026-06-28 17:25:17.630 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char,System.Int32,System.Int32)
+2026-06-28 17:25:17.630 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char,System.Int32)
+2026-06-28 17:25:17.630 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOf(System.Char)
+2026-06-28 17:25:17.630 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[],System.Int32,System.Int32)
+2026-06-28 17:25:17.631 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[],System.Int32)
+2026-06-28 17:25:17.631 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IndexOfAny(System.Char[])
+2026-06-28 17:25:17.631 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.LastIndexOf(System.Char)
+2026-06-28 17:25:17.631 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Trim
+2026-06-28 17:25:17.632 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.TrimStart
+2026-06-28 17:25:17.632 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.TrimEnd
+2026-06-28 17:25:17.632 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Split(System.Char[])
+2026-06-28 17:25:17.633 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.IsNullOrEmpty(Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.633 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.ToString
+2026-06-28 17:25:17.633 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringSegmentComparer
+2026-06-28 17:25:17.633 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegmentComparer.Ordinal
+2026-06-28 17:25:17.634 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringSegmentComparer.OrdinalIgnoreCase
+2026-06-28 17:25:17.634 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegmentComparer.Compare(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.634 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegmentComparer.Equals(Microsoft.Extensions.Primitives.StringSegment,Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.634 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegmentComparer.GetHashCode(Microsoft.Extensions.Primitives.StringSegment)
+2026-06-28 17:25:17.635 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringTokenizer
+2026-06-28 17:25:17.635 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.#ctor(System.String,System.Char[])
+2026-06-28 17:25:17.635 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.#ctor(Microsoft.Extensions.Primitives.StringSegment,System.Char[])
+2026-06-28 17:25:17.636 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.GetEnumerator
+2026-06-28 17:25:17.636 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator
+2026-06-28 17:25:17.637 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.#ctor(Microsoft.Extensions.Primitives.StringTokenizer@)
+2026-06-28 17:25:17.637 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Current
+2026-06-28 17:25:17.637 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Dispose
+2026-06-28 17:25:17.637 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.MoveNext
+2026-06-28 17:25:17.638 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringTokenizer.Enumerator.Reset
+2026-06-28 17:25:17.638 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringValues
+2026-06-28 17:25:17.638 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.Primitives.StringValues.Empty
+2026-06-28 17:25:17.638 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.#ctor(System.String)
+2026-06-28 17:25:17.638 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.#ctor(System.String[])
+2026-06-28 17:25:17.639 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(System.String)~Microsoft.Extensions.Primitives.StringValues
+2026-06-28 17:25:17.640 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(System.String[])~Microsoft.Extensions.Primitives.StringValues
+2026-06-28 17:25:17.640 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(Microsoft.Extensions.Primitives.StringValues)~System.String
+2026-06-28 17:25:17.641 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Implicit(Microsoft.Extensions.Primitives.StringValues)~System.String[]
+2026-06-28 17:25:17.641 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringValues.Count
+2026-06-28 17:25:17.642 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IList{System#String}#Item(System.Int32)
+2026-06-28 17:25:17.642 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringValues.Item(System.Int32)
+2026-06-28 17:25:17.642 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.ToString
+2026-06-28 17:25:17.643 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.ToArray
+2026-06-28 17:25:17.643 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IList{System#String}#IndexOf(System.String)
+2026-06-28 17:25:17.643 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#ICollection{System#String}#Contains(System.String)
+2026-06-28 17:25:17.644 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#ICollection{System#String}#CopyTo(System.String[],System.Int32)
+2026-06-28 17:25:17.644 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.GetEnumerator
+2026-06-28 17:25:17.645 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#IEnumerable{System#String}#GetEnumerator
+2026-06-28 17:25:17.645 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#IEnumerable#GetEnumerator
+2026-06-28 17:25:17.646 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.IsNullOrEmpty(Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.646 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Concat(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.646 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Concat(Microsoft.Extensions.Primitives.StringValues@,System.String)
+2026-06-28 17:25:17.655 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Concat(System.String,Microsoft.Extensions.Primitives.StringValues@)
+2026-06-28 17:25:17.656 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.656 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.656 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.656 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.656 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.657 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String)
+2026-06-28 17:25:17.662 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String)
+2026-06-28 17:25:17.662 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[],Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.662 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String[])
+2026-06-28 17:25:17.663 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[])
+2026-06-28 17:25:17.663 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.String)
+2026-06-28 17:25:17.663 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.String)
+2026-06-28 17:25:17.663 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.String,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.664 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.String,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.664 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.String[])
+2026-06-28 17:25:17.664 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.String[])
+2026-06-28 17:25:17.664 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.String[],Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.665 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.String[],Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.665 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(Microsoft.Extensions.Primitives.StringValues,System.Object)
+2026-06-28 17:25:17.665 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.Object)
+2026-06-28 17:25:17.665 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Equality(System.Object,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.665 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.Object,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.Object)
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.GetHashCode
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.Primitives.StringValues.Enumerator
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Enumerator.#ctor(Microsoft.Extensions.Primitives.StringValues@)
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Enumerator.MoveNext
+2026-06-28 17:25:17.666 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.Primitives.StringValues.Enumerator.Current
+2026-06-28 17:25:17.667 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Enumerator.Dispose
+2026-06-28 17:25:17.667 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Internal.ChangeCallbackRegistrar.UnsafeRegisterChangeCallback``1(System.Action{System.Object},System.Object,System.Threading.CancellationToken,System.Action{``0},``0)
+2026-06-28 17:25:17.667 +08:00 [DBG] 缓存缺失: P:System.SR.Argument_InvalidOffsetLength
+2026-06-28 17:25:17.667 +08:00 [DBG] 缓存缺失: P:System.SR.Argument_InvalidOffsetLengthStringSegment
+2026-06-28 17:25:17.667 +08:00 [DBG] 缓存缺失: P:System.SR.Capacity_CannotChangeAfterWriteStarted
+2026-06-28 17:25:17.668 +08:00 [DBG] 缓存缺失: P:System.SR.Capacity_NotEnough
+2026-06-28 17:25:17.668 +08:00 [DBG] 缓存缺失: P:System.SR.Capacity_NotUsedEntirely
+2026-06-28 17:25:21.616 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 1/148
+2026-06-28 17:25:21.937 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 2/148
+2026-06-28 17:25:22.354 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 3/148
+2026-06-28 17:25:22.451 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 4/148
+2026-06-28 17:25:22.494 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 5/148
+2026-06-28 17:25:22.546 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 6/148
+2026-06-28 17:25:22.688 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 7/148
+2026-06-28 17:25:22.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 8/148
+2026-06-28 17:25:22.801 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 9/148
+2026-06-28 17:25:22.880 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 10/148
+2026-06-28 17:25:23.172 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 11/148
+2026-06-28 17:25:23.246 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 12/148
+2026-06-28 17:25:23.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 13/148
+2026-06-28 17:25:23.334 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 14/148
+2026-06-28 17:25:23.404 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 15/148
+2026-06-28 17:25:23.557 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 16/148
+2026-06-28 17:25:23.628 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 17/148
+2026-06-28 17:25:23.743 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 18/148
+2026-06-28 17:25:23.938 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 19/148
+2026-06-28 17:25:23.989 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 20/148
+2026-06-28 17:25:24.020 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 21/148
+2026-06-28 17:25:24.037 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 22/148
+2026-06-28 17:25:24.360 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 23/148
+2026-06-28 17:25:24.516 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 24/148
+2026-06-28 17:25:24.550 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 25/148
+2026-06-28 17:25:24.578 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 26/148
+2026-06-28 17:25:24.749 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 27/148
+2026-06-28 17:25:25.232 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 28/148
+2026-06-28 17:25:25.350 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 29/148
+2026-06-28 17:25:25.472 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 30/148
+2026-06-28 17:25:25.499 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 31/148
+2026-06-28 17:25:25.614 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 32/148
+2026-06-28 17:25:25.639 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 33/148
+2026-06-28 17:25:25.663 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 34/148
+2026-06-28 17:25:25.763 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 35/148
+2026-06-28 17:25:25.893 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 36/148
+2026-06-28 17:25:25.905 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 37/148
+2026-06-28 17:25:26.140 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 38/148
+2026-06-28 17:25:26.308 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 39/148
+2026-06-28 17:25:26.328 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 40/148
+2026-06-28 17:25:26.348 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 41/148
+2026-06-28 17:25:26.411 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 42/148
+2026-06-28 17:25:26.423 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 43/148
+2026-06-28 17:25:26.477 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 44/148
+2026-06-28 17:25:26.511 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 45/148
+2026-06-28 17:25:26.554 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 46/148
+2026-06-28 17:25:26.621 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 47/148
+2026-06-28 17:25:26.727 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 48/148
+2026-06-28 17:25:26.923 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 49/148
+2026-06-28 17:25:26.926 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 50/148
+2026-06-28 17:25:27.008 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 51/148
+2026-06-28 17:25:27.130 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 52/148
+2026-06-28 17:25:27.504 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 53/148
+2026-06-28 17:25:27.504 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 54/148
+2026-06-28 17:25:27.545 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 55/148
+2026-06-28 17:25:27.602 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 56/148
+2026-06-28 17:25:27.741 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 57/148
+2026-06-28 17:25:28.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 58/148
+2026-06-28 17:25:28.572 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 59/148
+2026-06-28 17:25:28.611 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 60/148
+2026-06-28 17:25:28.690 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 61/148
+2026-06-28 17:25:29.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 62/148
+2026-06-28 17:25:29.207 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 63/148
+2026-06-28 17:25:29.273 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 64/148
+2026-06-28 17:25:29.286 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 65/148
+2026-06-28 17:25:29.376 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 66/148
+2026-06-28 17:25:29.604 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 67/148
+2026-06-28 17:25:29.806 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 68/148
+2026-06-28 17:25:29.855 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 69/148
+2026-06-28 17:25:30.169 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 70/148
+2026-06-28 17:25:30.456 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 71/148
+2026-06-28 17:25:30.721 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 72/148
+2026-06-28 17:25:30.861 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 73/148
+2026-06-28 17:25:31.028 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 74/148
+2026-06-28 17:25:31.065 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 75/148
+2026-06-28 17:25:31.438 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 76/148
+2026-06-28 17:25:31.718 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 77/148
+2026-06-28 17:25:31.730 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 78/148
+2026-06-28 17:25:32.110 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 79/148
+2026-06-28 17:25:32.257 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 80/148
+2026-06-28 17:25:32.447 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 81/148
+2026-06-28 17:25:32.470 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 82/148
+2026-06-28 17:25:32.620 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 83/148
+2026-06-28 17:25:32.696 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 84/148
+2026-06-28 17:25:32.701 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 85/148
+2026-06-28 17:25:33.785 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 86/148
+2026-06-28 17:25:33.905 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 87/148
+2026-06-28 17:25:34.160 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 88/148
+2026-06-28 17:25:34.398 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 89/148
+2026-06-28 17:25:34.529 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 90/148
+2026-06-28 17:25:34.803 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 91/148
+2026-06-28 17:25:34.944 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 92/148
+2026-06-28 17:25:35.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 93/148
+2026-06-28 17:25:36.385 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 94/148
+2026-06-28 17:25:36.457 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 95/148
+2026-06-28 17:25:36.519 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 96/148
+2026-06-28 17:25:36.672 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 97/148
+2026-06-28 17:25:36.716 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 98/148
+2026-06-28 17:25:36.850 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 99/148
+2026-06-28 17:25:37.413 +08:00 [INF] 已处理 100 条翻译，累计输入 27023 tokens，输出 100826 tokens，估算费用 0.23 元
+2026-06-28 17:25:37.413 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 100/148
+2026-06-28 17:25:37.465 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 101/148
+2026-06-28 17:25:37.806 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 102/148
+2026-06-28 17:25:38.197 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 103/148
+2026-06-28 17:25:39.146 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 104/148
+2026-06-28 17:25:39.466 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 105/148
+2026-06-28 17:25:40.678 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 106/148
+2026-06-28 17:25:41.278 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 107/148
+2026-06-28 17:25:41.588 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 108/148
+2026-06-28 17:25:41.793 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 109/148
+2026-06-28 17:25:42.497 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 110/148
+2026-06-28 17:25:43.245 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 111/148
+2026-06-28 17:25:44.861 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 112/148
+2026-06-28 17:25:44.921 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 113/148
+2026-06-28 17:25:46.297 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 114/148
+2026-06-28 17:25:47.862 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 115/148
+2026-06-28 17:25:47.880 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 116/148
+2026-06-28 17:25:50.106 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 117/148
+2026-06-28 17:25:50.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 118/148
+2026-06-28 17:25:50.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 119/148
+2026-06-28 17:25:50.949 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 120/148
+2026-06-28 17:25:52.533 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 121/148
+2026-06-28 17:25:52.755 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 122/148
+2026-06-28 17:25:52.824 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 123/148
+2026-06-28 17:25:53.695 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 124/148
+2026-06-28 17:25:53.728 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 125/148
+2026-06-28 17:25:54.003 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 126/148
+2026-06-28 17:25:54.131 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 127/148
+2026-06-28 17:26:00.206 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 128/148
+2026-06-28 17:26:01.041 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 129/148
+2026-06-28 17:26:02.200 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 130/148
+2026-06-28 17:26:04.864 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 131/148
+2026-06-28 17:26:05.624 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 132/148
+2026-06-28 17:26:06.282 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 133/148
+2026-06-28 17:26:06.583 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 134/148
+2026-06-28 17:26:06.774 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 135/148
+2026-06-28 17:26:09.634 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 136/148
+2026-06-28 17:26:14.946 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 137/148
+2026-06-28 17:26:15.659 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 138/148
+2026-06-28 17:46:35.028 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:46:35.028 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:46:35.029 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:46:35.032 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:46:35.033 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 17:46:35.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 1/148
+2026-06-28 17:46:35.045 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.CancellationChangeToken.#ctor(System.Threading.CancellationToken)
+2026-06-28 17:46:35.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 2/148
+2026-06-28 17:46:35.045 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 3/148
+2026-06-28 17:46:35.046 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 4/148
+2026-06-28 17:46:35.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 5/148
+2026-06-28 17:46:35.049 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 6/148
+2026-06-28 17:46:35.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 7/148
+2026-06-28 17:46:35.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 8/148
+2026-06-28 17:46:35.050 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 9/148
+2026-06-28 17:46:35.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 10/148
+2026-06-28 17:46:35.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 11/148
+2026-06-28 17:46:35.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 12/148
+2026-06-28 17:46:35.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 13/148
+2026-06-28 17:46:35.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 14/148
+2026-06-28 17:46:35.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 15/148
+2026-06-28 17:46:35.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 16/148
+2026-06-28 17:46:35.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 17/148
+2026-06-28 17:46:35.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 18/148
+2026-06-28 17:46:35.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 19/148
+2026-06-28 17:46:35.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 20/148
+2026-06-28 17:46:35.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 21/148
+2026-06-28 17:46:35.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 22/148
+2026-06-28 17:46:35.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 23/148
+2026-06-28 17:46:35.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 24/148
+2026-06-28 17:46:35.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 25/148
+2026-06-28 17:46:35.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 26/148
+2026-06-28 17:46:35.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 27/148
+2026-06-28 17:46:35.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 28/148
+2026-06-28 17:46:35.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 29/148
+2026-06-28 17:46:35.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 30/148
+2026-06-28 17:46:35.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 31/148
+2026-06-28 17:46:35.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 32/148
+2026-06-28 17:46:35.055 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 33/148
+2026-06-28 17:46:35.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 34/148
+2026-06-28 17:46:35.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 35/148
+2026-06-28 17:46:35.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 36/148
+2026-06-28 17:46:35.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 37/148
+2026-06-28 17:46:35.056 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 38/148
+2026-06-28 17:46:35.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 39/148
+2026-06-28 17:46:35.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 40/148
+2026-06-28 17:46:35.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 41/148
+2026-06-28 17:46:35.057 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 42/148
+2026-06-28 17:46:35.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 43/148
+2026-06-28 17:46:35.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 44/148
+2026-06-28 17:46:35.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 45/148
+2026-06-28 17:46:35.058 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 46/148
+2026-06-28 17:46:35.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 47/148
+2026-06-28 17:46:35.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 48/148
+2026-06-28 17:46:35.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 49/148
+2026-06-28 17:46:35.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 50/148
+2026-06-28 17:46:35.059 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 51/148
+2026-06-28 17:46:35.060 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 52/148
+2026-06-28 17:46:35.060 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 53/148
+2026-06-28 17:46:35.060 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlyMemory{System.Char}
+2026-06-28 17:46:35.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 54/148
+2026-06-28 17:46:35.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 55/148
+2026-06-28 17:46:35.061 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.Substring(System.Int32)
+2026-06-28 17:46:35.062 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 56/148
+2026-06-28 17:46:35.062 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 57/148
+2026-06-28 17:46:35.062 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 58/148
+2026-06-28 17:46:35.063 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 59/148
+2026-06-28 17:46:35.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 60/148
+2026-06-28 17:46:35.066 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 61/148
+2026-06-28 17:46:35.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 62/148
+2026-06-28 17:46:35.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 63/148
+2026-06-28 17:46:35.067 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 64/148
+2026-06-28 17:46:35.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 65/148
+2026-06-28 17:46:35.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 66/148
+2026-06-28 17:46:35.068 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 67/148
+2026-06-28 17:46:35.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 68/148
+2026-06-28 17:46:35.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 69/148
+2026-06-28 17:46:35.069 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 70/148
+2026-06-28 17:46:35.069 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.ToString
+2026-06-28 17:46:35.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 71/148
+2026-06-28 17:46:35.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 72/148
+2026-06-28 17:46:35.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 73/148
+2026-06-28 17:46:35.070 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 74/148
+2026-06-28 17:46:35.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 75/148
+2026-06-28 17:46:35.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 76/148
+2026-06-28 17:46:35.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 77/148
+2026-06-28 17:46:35.071 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 78/148
+2026-06-28 17:46:35.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 79/148
+2026-06-28 17:46:35.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 80/148
+2026-06-28 17:46:35.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 81/148
+2026-06-28 17:46:35.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 82/148
+2026-06-28 17:46:35.072 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 83/148
+2026-06-28 17:46:35.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 84/148
+2026-06-28 17:46:35.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 85/148
+2026-06-28 17:46:35.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 86/148
+2026-06-28 17:46:35.073 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 87/148
+2026-06-28 17:46:35.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 88/148
+2026-06-28 17:46:35.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 89/148
+2026-06-28 17:46:35.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 90/148
+2026-06-28 17:46:35.074 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 91/148
+2026-06-28 17:46:35.075 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 92/148
+2026-06-28 17:46:35.075 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 93/148
+2026-06-28 17:46:35.075 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 94/148
+2026-06-28 17:46:35.075 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 95/148
+2026-06-28 17:46:35.076 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 96/148
+2026-06-28 17:46:35.076 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 97/148
+2026-06-28 17:46:35.076 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 98/148
+2026-06-28 17:46:35.076 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 99/148
+2026-06-28 17:46:35.077 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 100/148
+2026-06-28 17:46:35.077 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 101/148
+2026-06-28 17:46:35.077 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.System#Collections#Generic#ICollection{System#String}#CopyTo(System.String[],System.Int32)
+2026-06-28 17:46:35.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 102/148
+2026-06-28 17:46:35.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 103/148
+2026-06-28 17:46:35.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 104/148
+2026-06-28 17:46:35.079 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 105/148
+2026-06-28 17:46:35.082 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 106/148
+2026-06-28 17:46:35.083 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 107/148
+2026-06-28 17:46:35.083 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 108/148
+2026-06-28 17:46:35.084 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 109/148
+2026-06-28 17:46:35.084 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 110/148
+2026-06-28 17:46:35.084 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 111/148
+2026-06-28 17:46:35.085 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 112/148
+2026-06-28 17:46:35.085 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 113/148
+2026-06-28 17:46:35.085 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 114/148
+2026-06-28 17:46:35.085 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 115/148
+2026-06-28 17:46:35.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 116/148
+2026-06-28 17:46:35.086 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(Microsoft.Extensions.Primitives.StringValues,System.String[])
+2026-06-28 17:46:35.086 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.Equals(System.String[])
+2026-06-28 17:46:35.087 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 117/148
+2026-06-28 17:46:35.087 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 118/148
+2026-06-28 17:46:35.088 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 119/148
+2026-06-28 17:46:35.088 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(System.String,Microsoft.Extensions.Primitives.StringValues)
+2026-06-28 17:46:35.088 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 120/148
+2026-06-28 17:46:35.088 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringValues.op_Inequality(Microsoft.Extensions.Primitives.StringValues,System.String[])
+2026-06-28 17:46:35.089 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 121/148
+2026-06-28 17:46:35.089 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 122/148
+2026-06-28 17:46:35.089 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 123/148
+2026-06-28 17:46:35.090 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 124/148
+2026-06-28 17:46:35.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 125/148
+2026-06-28 17:46:35.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 126/148
+2026-06-28 17:46:35.094 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 127/148
+2026-06-28 17:46:35.094 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 128/148
+2026-06-28 17:46:35.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 129/148
+2026-06-28 17:46:35.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 130/148
+2026-06-28 17:46:35.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 131/148
+2026-06-28 17:46:35.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 132/148
+2026-06-28 17:46:35.096 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 133/148
+2026-06-28 17:46:35.096 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Internal.ChangeCallbackRegistrar.UnsafeRegisterChangeCallback``1(System.Action{System.Object},System.Object,System.Threading.CancellationToken,System.Action{``0},``0)
+2026-06-28 17:46:35.100 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 134/148
+2026-06-28 17:46:35.100 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 135/148
+2026-06-28 17:46:35.100 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 136/148
+2026-06-28 17:46:35.101 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 137/148
+2026-06-28 17:46:35.101 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 138/148
+2026-06-28 17:46:43.116 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 139/148
+2026-06-28 17:46:48.333 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 140/148
+2026-06-28 17:46:48.535 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 141/148
+2026-06-28 17:46:49.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 142/148
+2026-06-28 17:46:50.302 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 143/148
+2026-06-28 17:47:00.822 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 144/148
+2026-06-28 17:47:10.267 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 145/148
+2026-06-28 17:47:23.651 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 146/148
+2026-06-28 17:47:30.109 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 147/148
+2026-06-28 18:03:44.680 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 18:03:44.681 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.Primitives.xml
+2026-06-28 18:03:44.682 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 18:03:44.682 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 18:03:44.682 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.Primitives.xml
+2026-06-28 18:03:44.696 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 1/148
+2026-06-28 18:03:44.696 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 2/148
+2026-06-28 18:03:44.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 3/148
+2026-06-28 18:03:44.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 4/148
+2026-06-28 18:03:44.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 5/148
+2026-06-28 18:03:44.697 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 6/148
+2026-06-28 18:03:44.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 7/148
+2026-06-28 18:03:44.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 8/148
+2026-06-28 18:03:44.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 9/148
+2026-06-28 18:03:44.698 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 10/148
+2026-06-28 18:03:44.699 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 11/148
+2026-06-28 18:03:44.699 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 12/148
+2026-06-28 18:03:44.699 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 13/148
+2026-06-28 18:03:44.699 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 14/148
+2026-06-28 18:03:44.700 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 15/148
+2026-06-28 18:03:44.700 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 16/148
+2026-06-28 18:03:44.700 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 17/148
+2026-06-28 18:03:44.700 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 18/148
+2026-06-28 18:03:44.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 19/148
+2026-06-28 18:03:44.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 20/148
+2026-06-28 18:03:44.704 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 21/148
+2026-06-28 18:03:44.704 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 22/148
+2026-06-28 18:03:44.704 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 23/148
+2026-06-28 18:03:44.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 24/148
+2026-06-28 18:03:44.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 25/148
+2026-06-28 18:03:44.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 26/148
+2026-06-28 18:03:44.705 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 27/148
+2026-06-28 18:03:44.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 28/148
+2026-06-28 18:03:44.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 29/148
+2026-06-28 18:03:44.706 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 30/148
+2026-06-28 18:03:44.707 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 31/148
+2026-06-28 18:03:44.707 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 32/148
+2026-06-28 18:03:44.707 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 33/148
+2026-06-28 18:03:44.708 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 34/148
+2026-06-28 18:03:44.709 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 35/148
+2026-06-28 18:03:44.710 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 36/148
+2026-06-28 18:03:44.711 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 37/148
+2026-06-28 18:03:44.711 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 38/148
+2026-06-28 18:03:44.712 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 39/148
+2026-06-28 18:03:44.712 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 40/148
+2026-06-28 18:03:44.712 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 41/148
+2026-06-28 18:03:44.713 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 42/148
+2026-06-28 18:03:44.713 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 43/148
+2026-06-28 18:03:44.713 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 44/148
+2026-06-28 18:03:44.714 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 45/148
+2026-06-28 18:03:44.714 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 46/148
+2026-06-28 18:03:44.714 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 47/148
+2026-06-28 18:03:44.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 48/148
+2026-06-28 18:03:44.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 49/148
+2026-06-28 18:03:44.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 50/148
+2026-06-28 18:03:44.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 51/148
+2026-06-28 18:03:44.716 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 52/148
+2026-06-28 18:03:44.716 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 53/148
+2026-06-28 18:03:44.716 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 54/148
+2026-06-28 18:03:44.717 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.Primitives.StringSegment.op_Implicit(Microsoft.Extensions.Primitives.StringSegment)~System.ReadOnlyMemory{System.Char}
+2026-06-28 18:03:44.717 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 55/148
+2026-06-28 18:03:44.718 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 56/148
+2026-06-28 18:03:44.718 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 57/148
+2026-06-28 18:03:44.718 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 58/148
+2026-06-28 18:03:44.719 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 59/148
+2026-06-28 18:03:44.719 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 60/148
+2026-06-28 18:03:44.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 61/148
+2026-06-28 18:03:44.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 62/148
+2026-06-28 18:03:44.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 63/148
+2026-06-28 18:03:44.720 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 64/148
+2026-06-28 18:03:44.721 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 65/148
+2026-06-28 18:03:44.721 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 66/148
+2026-06-28 18:03:44.721 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 67/148
+2026-06-28 18:03:44.722 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 68/148
+2026-06-28 18:03:44.722 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 69/148
+2026-06-28 18:03:44.722 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 70/148
+2026-06-28 18:03:44.722 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 71/148
+2026-06-28 18:03:44.723 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 72/148
+2026-06-28 18:03:44.723 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 73/148
+2026-06-28 18:03:44.723 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 74/148
+2026-06-28 18:03:44.723 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 75/148
+2026-06-28 18:03:44.724 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 76/148
+2026-06-28 18:03:44.724 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 77/148
+2026-06-28 18:03:44.726 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 78/148
+2026-06-28 18:03:44.727 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 79/148
+2026-06-28 18:03:44.728 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 80/148
+2026-06-28 18:03:44.728 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 81/148
+2026-06-28 18:03:44.728 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 82/148
+2026-06-28 18:03:44.729 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 83/148
+2026-06-28 18:03:44.729 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 84/148
+2026-06-28 18:03:44.729 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 85/148
+2026-06-28 18:03:44.730 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 86/148
+2026-06-28 18:03:44.730 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 87/148
+2026-06-28 18:03:44.730 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 88/148
+2026-06-28 18:03:44.730 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 89/148
+2026-06-28 18:03:44.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 90/148
+2026-06-28 18:03:44.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 91/148
+2026-06-28 18:03:44.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 92/148
+2026-06-28 18:03:44.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 93/148
+2026-06-28 18:03:44.732 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 94/148
+2026-06-28 18:03:44.732 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 95/148
+2026-06-28 18:03:44.732 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 96/148
+2026-06-28 18:03:44.733 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 97/148
+2026-06-28 18:03:44.733 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 98/148
+2026-06-28 18:03:44.733 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 99/148
+2026-06-28 18:03:44.733 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 100/148
+2026-06-28 18:03:44.734 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 101/148
+2026-06-28 18:03:44.734 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 102/148
+2026-06-28 18:03:44.734 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 103/148
+2026-06-28 18:03:44.735 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 104/148
+2026-06-28 18:03:44.735 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 105/148
+2026-06-28 18:03:44.736 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 106/148
+2026-06-28 18:03:44.736 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 107/148
+2026-06-28 18:03:44.736 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 108/148
+2026-06-28 18:03:44.736 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 109/148
+2026-06-28 18:03:44.737 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 110/148
+2026-06-28 18:03:44.737 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 111/148
+2026-06-28 18:03:44.737 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 112/148
+2026-06-28 18:03:44.738 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 113/148
+2026-06-28 18:03:44.738 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 114/148
+2026-06-28 18:03:44.738 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 115/148
+2026-06-28 18:03:44.738 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 116/148
+2026-06-28 18:03:44.739 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 117/148
+2026-06-28 18:03:44.739 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 118/148
+2026-06-28 18:03:44.739 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 119/148
+2026-06-28 18:03:44.740 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 120/148
+2026-06-28 18:03:44.740 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 121/148
+2026-06-28 18:03:44.740 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 122/148
+2026-06-28 18:03:44.741 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 123/148
+2026-06-28 18:03:44.742 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 124/148
+2026-06-28 18:03:44.743 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 125/148
+2026-06-28 18:03:44.744 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 126/148
+2026-06-28 18:03:44.745 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 127/148
+2026-06-28 18:03:44.745 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 128/148
+2026-06-28 18:03:44.745 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 129/148
+2026-06-28 18:03:44.746 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 130/148
+2026-06-28 18:03:44.746 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 131/148
+2026-06-28 18:03:44.746 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 132/148
+2026-06-28 18:03:44.747 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 133/148
+2026-06-28 18:03:44.747 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 134/148
+2026-06-28 18:03:44.747 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 135/148
+2026-06-28 18:03:44.748 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 136/148
+2026-06-28 18:03:44.748 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 137/148
+2026-06-28 18:03:44.748 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 138/148
+2026-06-28 18:03:44.748 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 139/148
+2026-06-28 18:03:44.751 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 140/148
+2026-06-28 18:03:44.751 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 141/148
+2026-06-28 18:03:44.751 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 142/148
+2026-06-28 18:03:44.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 143/148
+2026-06-28 18:03:44.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 144/148
+2026-06-28 18:03:44.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 145/148
+2026-06-28 18:03:44.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 146/148
+2026-06-28 18:03:44.752 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 147/148
+2026-06-28 18:04:08.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.Primitives.xml 进度: 148/148
+2026-06-28 18:04:08.339 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 292 tokens，输出 2236 tokens，估算费用 0.00 元
+2026-06-28 18:04:08.341 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.primitives\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.Primitives.xml
+2026-06-28 18:04:08.345 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 1/191
+2026-06-28 18:04:08.345 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 2/191
+2026-06-28 18:04:08.345 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 3/191
+2026-06-28 18:04:08.346 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 4/191
+2026-06-28 18:04:08.346 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 5/191
+2026-06-28 18:04:08.346 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 6/191
+2026-06-28 18:04:08.346 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 7/191
+2026-06-28 18:04:08.346 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 8/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 9/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 10/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 11/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 12/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 13/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 14/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 15/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 16/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 17/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 18/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 19/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 20/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 21/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 22/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 23/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 24/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 25/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 26/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 27/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 28/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 29/191
+2026-06-28 18:04:08.349 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 30/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 31/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 32/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 33/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 34/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 35/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 36/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 37/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 38/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 39/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 40/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 41/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 42/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 43/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 44/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 45/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 46/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 47/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 48/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 49/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 50/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 51/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 52/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 53/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 54/191
+2026-06-28 18:04:08.350 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 55/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 56/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 57/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 58/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 59/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 60/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 61/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 62/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 63/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 64/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 65/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 66/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 67/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 68/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 69/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 70/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 71/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 72/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 73/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 74/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 75/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 76/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 77/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 78/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 79/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 80/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 81/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 82/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 83/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 84/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 85/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 86/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 87/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 88/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 89/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 90/191
+2026-06-28 18:04:08.351 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 91/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 92/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 93/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 94/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 95/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 96/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 97/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 98/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 99/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 100/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 101/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 102/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 103/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 104/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 105/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 106/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 107/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 108/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 109/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 110/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 111/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 112/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 113/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 114/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 115/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 116/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 117/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 118/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 119/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 120/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 121/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 122/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 123/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 124/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 125/191
+2026-06-28 18:04:08.352 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 126/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 127/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 128/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 129/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 130/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 131/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 132/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 133/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 134/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 135/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 136/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 137/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 138/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 139/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 140/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 141/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 142/191
+2026-06-28 18:04:08.353 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 143/191
+2026-06-28 18:04:08.353 +08:00 [DBG] 缓存缺失: M:System.Text.ValueStringBuilder.GetPinnableReference
+2026-06-28 18:04:08.354 +08:00 [DBG] 缓存缺失: M:System.Text.ValueStringBuilder.GetPinnableReference(System.Boolean)
+2026-06-28 18:04:08.354 +08:00 [DBG] 缓存缺失: P:System.Text.ValueStringBuilder.RawChars
+2026-06-28 18:04:08.354 +08:00 [DBG] 缓存缺失: M:System.Text.ValueStringBuilder.AsSpan(System.Boolean)
+2026-06-28 18:04:08.355 +08:00 [DBG] 缓存缺失: M:System.Text.ValueStringBuilder.Grow(System.Int32)
+2026-06-28 18:04:08.355 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 144/191
+2026-06-28 18:04:08.355 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 145/191
+2026-06-28 18:04:08.355 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 146/191
+2026-06-28 18:04:08.355 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 147/191
+2026-06-28 18:04:08.355 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 148/191
+2026-06-28 18:04:08.355 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-28 18:04:08.355 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-28 18:04:08.356 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-28 18:04:08.356 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-28 18:04:08.356 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-28 18:04:08.356 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-28 18:04:08.357 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-28 18:04:08.357 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-28 18:04:08.357 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-28 18:04:08.358 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-28 18:04:08.358 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-28 18:04:08.358 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-28 18:04:08.359 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-28 18:04:08.359 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-28 18:04:08.361 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-28 18:04:08.362 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-28 18:04:08.362 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:04:08.364 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-28 18:04:08.364 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-28 18:04:08.365 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-28 18:04:08.365 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-28 18:04:08.366 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-28 18:04:08.366 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-28 18:04:08.367 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-28 18:04:08.367 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-28 18:04:08.368 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-28 18:04:08.368 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-28 18:04:08.369 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-28 18:04:08.369 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-28 18:04:08.370 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-28 18:04:08.371 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-28 18:04:08.371 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-28 18:04:08.374 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-28 18:04:08.379 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-28 18:04:08.380 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-28 18:04:08.380 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-28 18:04:08.381 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-28 18:04:08.382 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-28 18:04:12.797 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 149/191
+2026-06-28 18:04:13.204 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 150/191
+2026-06-28 18:04:13.214 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 151/191
+2026-06-28 18:04:13.308 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 152/191
+2026-06-28 18:04:13.413 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 153/191
+2026-06-28 18:04:13.546 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 154/191
+2026-06-28 18:04:13.622 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 155/191
+2026-06-28 18:04:13.718 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 156/191
+2026-06-28 18:04:13.952 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 157/191
+2026-06-28 18:04:14.637 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 158/191
+2026-06-28 18:04:14.648 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 159/191
+2026-06-28 18:04:14.658 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 160/191
+2026-06-28 18:04:16.842 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 161/191
+2026-06-28 18:04:16.890 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 162/191
+2026-06-28 18:04:16.993 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 163/191
+2026-06-28 18:04:17.242 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 164/191
+2026-06-28 18:04:17.814 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 165/191
+2026-06-28 18:04:17.829 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 166/191
+2026-06-28 18:04:18.221 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 167/191
+2026-06-28 18:04:18.425 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 168/191
+2026-06-28 18:04:18.436 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 169/191
+2026-06-28 18:04:18.456 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 170/191
+2026-06-28 18:04:18.660 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 171/191
+2026-06-28 18:04:18.732 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 172/191
+2026-06-28 18:04:19.246 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 173/191
+2026-06-28 18:04:19.246 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 174/191
+2026-06-28 18:04:19.452 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 175/191
+2026-06-28 18:04:19.556 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 176/191
+2026-06-28 18:04:19.655 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 177/191
+2026-06-28 18:04:20.374 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 178/191
+2026-06-28 18:04:21.916 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 179/191
+2026-06-28 18:04:22.752 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 180/191
+2026-06-28 18:04:22.829 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 181/191
+2026-06-28 18:04:22.932 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 182/191
+2026-06-28 18:04:24.607 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 183/191
+2026-06-28 18:04:26.518 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 184/191
+2026-06-28 18:04:26.560 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 185/191
+2026-06-28 18:04:27.028 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 186/191
+2026-06-28 18:04:27.642 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 187/191
+2026-06-28 18:04:31.866 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 188/191
+2026-06-28 18:04:36.861 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 189/191
+2026-06-28 18:04:39.140 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 190/191
+2026-06-28 18:04:50.323 +08:00 [INF] lib/net462/Microsoft.Extensions.Primitives.xml 进度: 191/191
+2026-06-28 18:04:50.323 +08:00 [INF] 文件完成，本文件翻译 43 条，累计输入 9650 tokens，输出 41624 tokens，估算费用 0.09 元
+2026-06-28 18:04:50.325 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.primitives\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.Primitives.xml
+2026-06-28 18:04:50.327 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 1/148
+2026-06-28 18:04:50.327 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 2/148
+2026-06-28 18:04:50.332 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 3/148
+2026-06-28 18:04:50.332 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 4/148
+2026-06-28 18:04:50.333 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 5/148
+2026-06-28 18:04:50.333 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 6/148
+2026-06-28 18:04:50.333 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 7/148
+2026-06-28 18:04:50.333 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 8/148
+2026-06-28 18:04:50.333 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 9/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 10/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 11/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 12/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 13/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 14/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 15/148
+2026-06-28 18:04:50.334 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 16/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 17/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 18/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 19/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 20/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 21/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 22/148
+2026-06-28 18:04:50.335 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 23/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 24/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 25/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 26/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 27/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 28/148
+2026-06-28 18:04:50.336 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 29/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 30/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 31/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 32/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 33/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 34/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 35/148
+2026-06-28 18:04:50.337 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 36/148
+2026-06-28 18:04:50.338 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 37/148
+2026-06-28 18:04:50.338 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 38/148
+2026-06-28 18:04:50.338 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 39/148
+2026-06-28 18:04:50.338 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 40/148
+2026-06-28 18:04:50.339 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 41/148
+2026-06-28 18:04:50.339 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 42/148
+2026-06-28 18:04:50.339 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 43/148
+2026-06-28 18:04:50.339 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 44/148
+2026-06-28 18:04:50.339 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 45/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 46/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 47/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 48/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 49/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 50/148
+2026-06-28 18:04:50.340 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 51/148
+2026-06-28 18:04:50.341 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 52/148
+2026-06-28 18:04:50.341 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 53/148
+2026-06-28 18:04:50.341 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 54/148
+2026-06-28 18:04:50.341 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 55/148
+2026-06-28 18:04:50.341 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 56/148
+2026-06-28 18:04:50.342 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 57/148
+2026-06-28 18:04:50.342 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 58/148
+2026-06-28 18:04:50.342 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 59/148
+2026-06-28 18:04:50.342 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 60/148
+2026-06-28 18:04:50.343 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 61/148
+2026-06-28 18:04:50.343 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 62/148
+2026-06-28 18:04:50.343 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 63/148
+2026-06-28 18:04:50.343 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 64/148
+2026-06-28 18:04:50.344 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 65/148
+2026-06-28 18:04:50.344 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 66/148
+2026-06-28 18:04:50.346 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 67/148
+2026-06-28 18:04:50.347 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 68/148
+2026-06-28 18:04:50.347 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 69/148
+2026-06-28 18:04:50.348 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 70/148
+2026-06-28 18:04:50.348 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 71/148
+2026-06-28 18:04:50.348 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 72/148
+2026-06-28 18:04:50.348 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 73/148
+2026-06-28 18:04:50.349 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 74/148
+2026-06-28 18:04:50.349 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 75/148
+2026-06-28 18:04:50.349 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 76/148
+2026-06-28 18:04:50.349 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 77/148
+2026-06-28 18:04:50.350 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 78/148
+2026-06-28 18:04:50.350 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 79/148
+2026-06-28 18:04:50.350 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 80/148
+2026-06-28 18:04:50.350 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 81/148
+2026-06-28 18:04:50.351 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 82/148
+2026-06-28 18:04:50.351 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 83/148
+2026-06-28 18:04:50.351 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 84/148
+2026-06-28 18:04:50.351 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 85/148
+2026-06-28 18:04:50.351 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 86/148
+2026-06-28 18:04:50.352 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 87/148
+2026-06-28 18:04:50.352 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 88/148
+2026-06-28 18:04:50.352 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 89/148
+2026-06-28 18:04:50.352 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 90/148
+2026-06-28 18:04:50.353 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 91/148
+2026-06-28 18:04:50.353 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 92/148
+2026-06-28 18:04:50.353 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 93/148
+2026-06-28 18:04:50.353 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 94/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 95/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 96/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 97/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 98/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 99/148
+2026-06-28 18:04:50.354 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 100/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 101/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 102/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 103/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 104/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 105/148
+2026-06-28 18:04:50.355 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 106/148
+2026-06-28 18:04:50.356 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 107/148
+2026-06-28 18:04:50.356 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 108/148
+2026-06-28 18:04:50.356 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 109/148
+2026-06-28 18:04:50.356 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 110/148
+2026-06-28 18:04:50.357 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 111/148
+2026-06-28 18:04:50.357 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 112/148
+2026-06-28 18:04:50.357 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 113/148
+2026-06-28 18:04:50.357 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 114/148
+2026-06-28 18:04:50.357 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 115/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 116/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 117/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 118/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 119/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 120/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 121/148
+2026-06-28 18:04:50.358 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 122/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 123/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 124/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 125/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 126/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 127/148
+2026-06-28 18:04:50.359 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 128/148
+2026-06-28 18:04:50.360 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 129/148
+2026-06-28 18:04:50.360 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 130/148
+2026-06-28 18:04:50.360 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 131/148
+2026-06-28 18:04:50.360 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 132/148
+2026-06-28 18:04:50.360 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 133/148
+2026-06-28 18:04:50.361 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 134/148
+2026-06-28 18:04:50.361 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 135/148
+2026-06-28 18:04:50.362 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 136/148
+2026-06-28 18:04:50.363 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 137/148
+2026-06-28 18:04:50.363 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 138/148
+2026-06-28 18:04:50.364 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 139/148
+2026-06-28 18:04:50.364 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 140/148
+2026-06-28 18:04:50.364 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 141/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 142/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 143/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 144/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 145/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 146/148
+2026-06-28 18:04:50.365 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 147/148
+2026-06-28 18:04:50.366 +08:00 [INF] lib/net8.0/Microsoft.Extensions.Primitives.xml 进度: 148/148
+2026-06-28 18:04:50.367 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.primitives\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.Primitives.xml
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 1/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 2/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 3/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 4/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 5/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 6/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 7/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 8/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 9/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 10/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 11/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 12/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 13/148
+2026-06-28 18:04:50.371 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 14/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 15/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 16/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 17/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 18/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 19/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 20/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 21/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 22/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 23/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 24/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 25/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 26/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 27/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 28/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 29/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 30/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 31/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 32/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 33/148
+2026-06-28 18:04:50.372 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 34/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 35/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 36/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 37/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 38/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 39/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 40/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 41/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 42/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 43/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 44/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 45/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 46/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 47/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 48/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 49/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 50/148
+2026-06-28 18:04:50.373 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 51/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 52/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 53/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 54/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 55/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 56/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 57/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 58/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 59/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 60/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 61/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 62/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 63/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 64/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 65/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 66/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 67/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 68/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 69/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 70/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 71/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 72/148
+2026-06-28 18:04:50.374 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 73/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 74/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 75/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 76/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 77/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 78/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 79/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 80/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 81/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 82/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 83/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 84/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 85/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 86/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 87/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 88/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 89/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 90/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 91/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 92/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 93/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 94/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 95/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 96/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 97/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 98/148
+2026-06-28 18:04:50.375 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 99/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 100/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 101/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 102/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 103/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 104/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 105/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 106/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 107/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 108/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 109/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 110/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 111/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 112/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 113/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 114/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 115/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 116/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 117/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 118/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 119/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 120/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 121/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 122/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 123/148
+2026-06-28 18:04:50.376 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 124/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 125/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 126/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 127/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 128/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 129/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 130/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 131/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 132/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 133/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 134/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 135/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 136/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 137/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 138/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 139/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 140/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 141/148
+2026-06-28 18:04:50.377 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 142/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 143/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 144/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 145/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 146/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 147/148
+2026-06-28 18:04:50.378 +08:00 [INF] lib/net9.0/Microsoft.Extensions.Primitives.xml 进度: 148/148
+2026-06-28 18:04:50.381 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.primitives\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.Primitives.xml
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 1/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 2/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 3/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 4/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 5/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 6/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 7/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 8/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 9/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 10/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 11/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 12/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 13/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 14/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 15/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 16/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 17/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 18/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 19/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 20/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 21/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 22/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 23/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 24/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 25/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 26/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 27/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 28/191
+2026-06-28 18:04:50.383 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 29/191
+2026-06-28 18:04:50.388 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 30/191
+2026-06-28 18:04:50.388 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 31/191
+2026-06-28 18:04:50.388 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 32/191
+2026-06-28 18:04:50.388 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 33/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 34/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 35/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 36/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 37/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 38/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 39/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 40/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 41/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 42/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 43/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 44/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 45/191
+2026-06-28 18:04:50.389 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 46/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 47/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 48/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 49/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 50/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 51/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 52/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 53/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 54/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 55/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 56/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 57/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 58/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 59/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 60/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 61/191
+2026-06-28 18:04:50.390 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 62/191
+2026-06-28 18:04:50.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 63/191
+2026-06-28 18:04:50.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 64/191
+2026-06-28 18:04:50.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 65/191
+2026-06-28 18:04:50.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 66/191
+2026-06-28 18:04:50.401 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 67/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 68/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 69/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 70/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 71/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 72/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 73/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 74/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 75/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 76/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 77/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 78/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 79/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 80/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 81/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 82/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 83/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 84/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 85/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 86/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 87/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 88/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 89/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 90/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 91/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 92/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 93/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 94/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 95/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 96/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 97/191
+2026-06-28 18:04:50.402 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 98/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 99/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 100/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 101/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 102/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 103/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 104/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 105/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 106/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 107/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 108/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 109/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 110/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 111/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 112/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 113/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 114/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 115/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 116/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 117/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 118/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 119/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 120/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 121/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 122/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 123/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 124/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 125/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 126/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 127/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 128/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 129/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 130/191
+2026-06-28 18:04:50.403 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 131/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 132/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 133/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 134/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 135/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 136/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 137/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 138/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 139/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 140/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 141/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 142/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 143/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 144/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 145/191
+2026-06-28 18:04:50.404 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 146/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 147/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 148/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 149/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 150/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 151/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 152/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 153/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 154/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 155/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 156/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 157/191
+2026-06-28 18:04:50.405 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 158/191
+2026-06-28 18:04:50.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 159/191
+2026-06-28 18:04:50.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 160/191
+2026-06-28 18:04:50.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 161/191
+2026-06-28 18:04:50.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 162/191
+2026-06-28 18:04:50.406 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 163/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 164/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 165/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 166/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 167/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 168/191
+2026-06-28 18:04:50.407 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 169/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 170/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 171/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 172/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 173/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 174/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 175/191
+2026-06-28 18:04:50.408 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 176/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 177/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 178/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 179/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 180/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 181/191
+2026-06-28 18:04:50.409 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 182/191
+2026-06-28 18:04:50.410 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 183/191
+2026-06-28 18:04:50.410 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 184/191
+2026-06-28 18:04:50.410 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 185/191
+2026-06-28 18:04:50.410 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 186/191
+2026-06-28 18:04:50.410 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 187/191
+2026-06-28 18:04:50.411 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 188/191
+2026-06-28 18:04:50.411 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 189/191
+2026-06-28 18:04:50.412 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 190/191
+2026-06-28 18:04:50.413 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.Primitives.xml 进度: 191/191
+2026-06-28 18:04:50.415 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.primitives\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.Primitives.xml
+2026-06-28 18:04:50.415 +08:00 [INF] ===== 包 microsoft.extensions.primitives 完成 =====

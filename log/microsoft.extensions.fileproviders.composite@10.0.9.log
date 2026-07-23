@@ -1,0 +1,1505 @@
+2026-06-28 19:50:10.494 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 19:50:10.496 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 19:50:10.497 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 19:50:10.498 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 19:50:10.499 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 19:50:10.518 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents
+2026-06-28 19:50:10.518 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.#ctor(System.Collections.Generic.IList{Microsoft.Extensions.FileProviders.IFileProvider},System.String)
+2026-06-28 19:50:10.519 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator
+2026-06-28 19:50:10.519 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.Exists
+2026-06-28 19:50:10.523 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.FileProviders.CompositeFileProvider
+2026-06-28 19:50:10.523 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.#ctor(Microsoft.Extensions.FileProviders.IFileProvider[])
+2026-06-28 19:50:10.523 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.FileProviders.IFileProvider})
+2026-06-28 19:50:10.523 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetFileInfo(System.String)
+2026-06-28 19:50:10.524 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetDirectoryContents(System.String)
+2026-06-28 19:50:10.524 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.Watch(System.String)
+2026-06-28 19:50:10.524 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.FileProviders.CompositeFileProvider.FileProviders
+2026-06-28 19:50:18.111 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-28 19:50:18.980 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-28 19:50:19.502 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-28 19:50:19.510 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-28 19:50:20.117 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-28 19:50:21.261 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-28 19:50:25.774 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-28 19:50:29.849 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-28 19:50:31.935 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-28 20:10:51.967 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 20:10:51.968 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 20:10:51.969 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 20:10:51.970 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 20:10:51.971 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-28 20:10:51.985 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-28 20:10:51.985 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.#ctor(System.Collections.Generic.IList{Microsoft.Extensions.FileProviders.IFileProvider},System.String)
+2026-06-28 20:10:51.986 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-28 20:10:51.986 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-28 20:10:51.986 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-28 20:10:51.987 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-28 20:10:51.987 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-28 20:10:51.987 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-28 20:10:51.987 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetDirectoryContents(System.String)
+2026-06-28 20:10:51.988 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-28 20:10:51.988 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-28 20:11:11.650 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:23:54.085 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:23:54.086 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:23:54.086 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:23:54.088 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:23:54.090 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:23:54.094 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:23:54.094 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:23:54.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:23:54.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:23:54.095 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:23:54.096 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:23:54.096 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:23:54.096 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:23:54.096 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.FileProviders.CompositeFileProvider.GetDirectoryContents(System.String)
+2026-06-29 14:23:54.099 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:23:54.099 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:23:55.943 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 64293.54ms
+2026-06-29 14:23:57.481 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 65853.90ms
+2026-06-29 14:23:57.970 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 66343.86ms
+2026-06-29 14:24:20.545 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 88913.52ms
+2026-06-29 14:24:26.187 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 32090.74ms
+2026-06-29 14:24:26.192 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:24:26.192 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 321 tokens，输出 3610 tokens，估算费用 0.01 元
+2026-06-29 14:24:26.193 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:24:26.194 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 14:24:26.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 14:24:26.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 14:24:26.195 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 14:24:26.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 14:24:26.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 14:24:26.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 14:24:26.196 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 14:24:26.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 14:24:26.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 14:24:26.197 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 14:24:26.197 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.LibraryImportAttribute
+2026-06-29 14:24:26.198 +08:00 [DBG] 缓存缺失: M:System.Runtime.InteropServices.LibraryImportAttribute.#ctor(System.String)
+2026-06-29 14:24:26.200 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.LibraryName
+2026-06-29 14:24:26.200 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.EntryPoint
+2026-06-29 14:24:26.201 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshalling
+2026-06-29 14:24:26.201 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.StringMarshallingCustomType
+2026-06-29 14:24:26.201 +08:00 [DBG] 缓存缺失: P:System.Runtime.InteropServices.LibraryImportAttribute.SetLastError
+2026-06-29 14:24:26.202 +08:00 [DBG] 缓存缺失: T:System.Runtime.InteropServices.StringMarshalling
+2026-06-29 14:24:26.202 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Custom
+2026-06-29 14:24:26.203 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf8
+2026-06-29 14:24:26.203 +08:00 [DBG] 缓存缺失: F:System.Runtime.InteropServices.StringMarshalling.Utf16
+2026-06-29 14:24:26.204 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.AllowNullAttribute
+2026-06-29 14:24:26.204 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+2026-06-29 14:24:26.204 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+2026-06-29 14:24:26.206 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullAttribute
+2026-06-29 14:24:26.207 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+2026-06-29 14:24:26.207 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)
+2026-06-29 14:24:26.208 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue
+2026-06-29 14:24:26.209 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+2026-06-29 14:24:26.210 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)
+2026-06-29 14:24:26.211 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue
+2026-06-29 14:24:26.212 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+2026-06-29 14:24:26.215 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)
+2026-06-29 14:24:26.215 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName
+2026-06-29 14:24:26.216 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+2026-06-29 14:24:26.216 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+2026-06-29 14:24:26.217 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)
+2026-06-29 14:24:26.217 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue
+2026-06-29 14:24:26.217 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+2026-06-29 14:24:26.218 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)
+2026-06-29 14:24:26.218 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])
+2026-06-29 14:24:26.218 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members
+2026-06-29 14:24:26.218 +08:00 [DBG] 缓存缺失: T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+2026-06-29 14:24:26.219 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)
+2026-06-29 14:24:26.219 +08:00 [DBG] 缓存缺失: M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])
+2026-06-29 14:24:26.219 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue
+2026-06-29 14:24:26.219 +08:00 [DBG] 缓存缺失: P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members
+2026-06-29 14:24:26.220 +08:00 [DBG] 缓存缺失: T:System.ExceptionPolyfills
+2026-06-29 14:24:30.027 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 3818.46ms
+2026-06-29 14:24:30.027 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 14:24:30.785 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 4582.80ms
+2026-06-29 14:24:30.786 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 14:24:30.847 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 4631.47ms
+2026-06-29 14:24:30.850 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 14:24:30.946 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 4742.80ms
+2026-06-29 14:24:30.947 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 14:24:31.048 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 4847.96ms
+2026-06-29 14:24:31.048 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 14:24:31.148 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 4936.79ms
+2026-06-29 14:24:31.148 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 14:24:31.602 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 5401.77ms
+2026-06-29 14:24:31.603 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 14:24:31.690 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 5472.81ms
+2026-06-29 14:24:31.690 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 14:24:32.118 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 100469.80ms
+2026-06-29 14:24:32.308 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 6100.47ms
+2026-06-29 14:24:32.308 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 14:24:32.388 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 6188.77ms
+2026-06-29 14:24:32.390 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 14:24:32.409 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 6190.80ms
+2026-06-29 14:24:32.410 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 14:24:32.411 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 6194.21ms
+2026-06-29 14:24:32.412 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 14:24:32.598 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 6394.43ms
+2026-06-29 14:24:32.598 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 14:24:33.298 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 7079.68ms
+2026-06-29 14:24:33.298 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 14:24:33.303 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 7087.77ms
+2026-06-29 14:24:33.303 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 14:24:33.527 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 7320.94ms
+2026-06-29 14:24:33.528 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 14:24:33.818 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 7604.73ms
+2026-06-29 14:24:33.819 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 14:24:34.649 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 8430.06ms
+2026-06-29 14:24:34.650 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 14:24:34.664 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 8448.05ms
+2026-06-29 14:24:34.665 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 14:24:35.079 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 8872.19ms
+2026-06-29 14:24:35.079 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 14:24:35.176 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 8971.81ms
+2026-06-29 14:24:35.176 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 14:24:36.681 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 10470.79ms
+2026-06-29 14:24:36.682 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 14:24:36.928 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 10709.57ms
+2026-06-29 14:24:36.929 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 14:24:37.235 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 11037.40ms
+2026-06-29 14:24:37.245 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 14:24:37.503 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 11293.84ms
+2026-06-29 14:24:37.504 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 14:24:38.769 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 12551.79ms
+2026-06-29 14:24:38.769 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 14:24:39.486 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 13283.00ms
+2026-06-29 14:24:39.487 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 14:24:42.235 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 16015.97ms
+2026-06-29 14:24:42.236 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 14:24:43.230 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 17028.59ms
+2026-06-29 14:24:43.231 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 14:24:43.654 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 17435.20ms
+2026-06-29 14:24:43.655 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 14:24:43.744 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 17539.19ms
+2026-06-29 14:24:43.745 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 14:24:45.586 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 19368.29ms
+2026-06-29 14:24:45.587 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 14:24:50.910 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 24692.62ms
+2026-06-29 14:24:50.911 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 14:24:54.187 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 27967.32ms
+2026-06-29 14:24:54.187 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 14:24:54.432 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 28217.09ms
+2026-06-29 14:24:54.432 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 14:24:58.700 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 32502.63ms
+2026-06-29 14:24:58.701 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 14:24:58.834 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 32632.72ms
+2026-06-29 14:24:58.836 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 14:25:00.843 +08:00 [DBG] [OpenAI] chat deepseek-v4-flash，耗时 34641.25ms
+2026-06-29 14:25:00.843 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 14:25:00.843 +08:00 [INF] 文件完成，本文件翻译 38 条，累计输入 8441 tokens，输出 41477 tokens，估算费用 0.09 元
+2026-06-29 14:25:00.845 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:25:00.845 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:25:00.846 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:25:00.846 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:25:00.846 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:25:00.846 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:25:00.847 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:25:00.847 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:25:00.847 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:25:00.847 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:25:00.848 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:25:00.848 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:25:00.852 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:25:00.853 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:25:00.854 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 14:25:00.855 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 14:25:00.856 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 14:25:00.859 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 14:25:00.859 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 14:25:00.859 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 14:25:00.860 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 14:25:00.860 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 14:25:00.860 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 14:25:00.861 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 14:25:00.862 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 14:25:00.862 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 14:25:00.862 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 14:25:00.862 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 14:25:00.862 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 14:25:00.863 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 14:25:00.864 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 14:25:00.865 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 14:25:00.866 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 14:25:00.866 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 14:25:00.867 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 14:25:00.867 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 14:25:00.867 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 14:25:00.867 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 14:25:00.867 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 14:25:00.868 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 14:25:00.868 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 14:25:00.868 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 14:25:00.868 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 14:25:00.869 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:25:00.869 +08:00 [INF] ===== 包 microsoft.extensions.fileproviders.composite 完成 =====
+2026-06-29 14:25:03.312 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:26:03.328 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: 'The operation has timed out.', Handled: 'false', Attempt: '0', Execution Time: 60015.9113ms
+System.TimeoutException: The operation has timed out.
+   at NugetTranslation.Translator.<>c__DisplayClass0_3.<<Run>b__5>d.MoveNext() in C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\src\NugetTranslation\Translator.cs:line 145
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+2026-06-29 14:26:03.328 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: 'The operation has timed out.', Execution Time: 60016.3339ms
+System.TimeoutException: The operation has timed out.
+   at NugetTranslation.Translator.<>c__DisplayClass0_3.<<Run>b__5>d.MoveNext() in C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\src\NugetTranslation\Translator.cs:line 145
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+2026-06-29 14:58:09.044 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.044 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.045 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.045 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.047 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:58:09.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:58:09.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:58:09.051 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:58:09.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:58:09.052 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:58:09.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:58:09.053 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:58:09.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:58:09.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:58:09.054 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:58:09.054 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 14:58:09.055 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 14:58:09.056 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 14:58:09.057 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 14:58:09.058 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 14:58:09.058 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 14:58:09.058 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 14:58:09.058 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 14:58:09.058 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 14:58:09.059 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 14:58:09.060 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 14:58:09.060 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 14:58:09.060 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 14:58:09.060 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 14:58:09.060 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 14:58:09.061 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 14:58:09.062 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 14:58:09.064 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:58:09.065 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:58:09.066 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 14:58:09.066 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 14:58:09.067 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 14:58:09.067 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 14:58:09.067 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 14:58:09.067 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 14:58:09.067 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 14:58:09.067 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 14:58:09.068 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 14:58:09.069 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 14:58:09.069 +08:00 [INF] ===== 包 microsoft.extensions.fileproviders.composite 完成 =====
+2026-06-29 14:58:10.176 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.347 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetDirectoryContents(System.String)">
+    <summary>
+    枚举给定路径中的目录（如果存在）。此文件提供程序使用平面目录结构。基础命名空间下的所有内容都被视为一个目录。
+    </summary>
+    <param name="subpath">标识目录的路径</param>
+    <returns>
+    目录的内容。调用方必须检查 Exists 属性。如果没有找到与 <paramref name="subpath" /> 匹配的资源，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" />。
+    </returns>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 20170.2906ms
+2026-06-29 14:58:30.347 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:Microsoft.Extensions.FileProviders.EmbeddedFileProvider.GetDirectoryContents(System.String)">
+    <summary>
+    枚举给定路径中的目录（如果存在）。此文件提供程序使用平面目录结构。基础命名空间下的所有内容都被视为一个目录。
+    </summary>
+    <param name="subpath">标识目录的路径</param>
+    <returns>
+    目录的内容。调用方必须检查 Exists 属性。如果没有找到与 <paramref name="subpath" /> 匹配的资源，则为 <see cref="T:Microsoft.Extensions.FileProviders.NotFoundDirectoryContents" />。
+    </returns>
+</member>', Execution Time: 20170.6824ms
+2026-06-29 14:58:30.354 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.355 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.355 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.355 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.355 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.355 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.356 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.356 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.356 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.357 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.357 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.357 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.357 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.357 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.358 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.358 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.358 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.359 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.359 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.359 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.359 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.359 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.360 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.360 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.360 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.360 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.361 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.361 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.361 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.361 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.362 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.362 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.362 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.362 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.363 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.363 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.365 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.366 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.366 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.367 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.367 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.367 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.368 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.368 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.368 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.368 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.369 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.369 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.369 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.369 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.370 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.370 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.370 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.370 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.371 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.371 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.371 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.371 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.371 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.372 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.372 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.372 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.372 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.372 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.373 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.373 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.373 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.373 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.373 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.374 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.374 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.374 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.374 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:30.375 +08:00 [DBG] Resilience pipeline executing. Source: '(null)/(null)', Operation Key: 'null'
+2026-06-29 14:58:34.249 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members">
+            <summary>获取字段或属性成员名称。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 3875.4106ms
+2026-06-29 14:58:34.249 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members">
+            <summary>获取字段或属性成员名称。</summary>
+        </member>', Execution Time: 3875.5477ms
+2026-06-29 14:58:34.884 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>指定即使相应的类型不允许，也允许将 null 作为输入。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 4514.5035ms
+2026-06-29 14:58:34.884 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>指定即使相应的类型不允许，也允许将 null 作为输入。</summary>
+        </member>', Execution Time: 4514.5613ms
+2026-06-29 14:58:35.159 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>指定如果关联的布尔参数传递了指定的值，则该方法将不返回。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 4786.8919ms
+2026-06-29 14:58:35.159 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>指定如果关联的布尔参数传递了指定的值，则该方法将不返回。</summary>
+        </member>', Execution Time: 4786.9415ms
+2026-06-29 14:58:35.600 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>获取关联的参数名。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5228.6009ms
+2026-06-29 14:58:35.600 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>获取关联的参数名。</summary>
+        </member>', Execution Time: 5228.6616ms
+2026-06-29 14:58:35.666 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods">
+            <summary>
+            指定所有非公共方法。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5300.0109ms
+2026-06-29 14:58:35.666 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods">
+            <summary>
+            指定所有非公共方法。
+            </summary>
+        </member>', Execution Time: 5300.2792ms
+2026-06-29 14:58:35.870 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields">
+            <summary>
+            指定所有非公共字段。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5503.3747ms
+2026-06-29 14:58:35.870 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicFields">
+            <summary>
+            指定所有非公共字段。
+            </summary>
+        </member>', Execution Time: 5503.4407ms
+2026-06-29 14:58:35.973 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes">
+            <summary>
+            指定所有公共嵌套类型。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5605.9128ms
+2026-06-29 14:58:35.973 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicNestedTypes">
+            <summary>
+            指定所有公共嵌套类型。
+            </summary>
+        </member>', Execution Time: 5605.9666ms
+2026-06-29 14:58:36.177 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope">
+            <summary>
+            获取或设置与该特性相关的代码的作用域。
+            </summary>
+            <remarks>
+            Scope 属性是一个可选参数，用于指定该特性相关的元数据作用域。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5820.0886ms
+2026-06-29 14:58:36.177 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope">
+            <summary>
+            获取或设置与该特性相关的代码的作用域。
+            </summary>
+            <remarks>
+            Scope 属性是一个可选参数，用于指定该特性相关的元数据作用域。
+            </remarks>
+        </member>', Execution Time: 5820.1523ms
+2026-06-29 14:58:36.177 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors">
+            <summary>
+            指定所有公共构造函数。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 5814.5669ms
+2026-06-29 14:58:36.178 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors">
+            <summary>
+            指定所有公共构造函数。
+            </summary>
+        </member>', Execution Time: 5814.7884ms
+2026-06-29 14:58:36.587 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message">
+            <summary>
+            获取包含动态代码使用情况信息的消息。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 6232.3219ms
+2026-06-29 14:58:36.587 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Message">
+            <summary>
+            获取包含动态代码使用情况信息的消息。
+            </summary>
+        </member>', Execution Time: 6232.3622ms
+2026-06-29 14:58:36.903 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties">
+    <summary>
+    指定所有公共属性。
+    </summary>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 6535.703ms
+2026-06-29 14:58:36.903 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute">
+            <summary>指定该方法或属性将确保列出的字段和属性成员具有非 null 值。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 6530.5505ms
+2026-06-29 14:58:36.903 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties">
+    <summary>
+    指定所有公共属性。
+    </summary>
+</member>', Execution Time: 6535.7668ms
+2026-06-29 14:58:36.903 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute">
+            <summary>指定该方法或属性将确保列出的字段和属性成员具有非 null 值。</summary>
+        </member>', Execution Time: 6530.6242ms
+2026-06-29 14:58:36.934 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors">
+            <summary>
+            指定所有非公共构造函数。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 6570.4173ms
+2026-06-29 14:58:36.934 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicConstructors">
+            <summary>
+            指定所有非公共构造函数。
+            </summary>
+        </member>', Execution Time: 6570.4978ms
+2026-06-29 14:58:37.202 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes">
+            <summary>
+            指定所有非公共嵌套类型。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 6834.1625ms
+2026-06-29 14:58:37.202 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicNestedTypes">
+            <summary>
+            指定所有非公共嵌套类型。
+            </summary>
+        </member>', Execution Time: 6834.2238ms
+2026-06-29 14:58:37.344 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>指定如果命名参数不为 null，则输出不为 null。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 6972.3948ms
+2026-06-29 14:58:37.344 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+    <summary>获取返回值条件。</summary>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 6973.2808ms
+2026-06-29 14:58:37.344 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>指定如果命名参数不为 null，则输出不为 null。</summary>
+        </member>', Execution Time: 6972.4447ms
+2026-06-29 14:58:37.344 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+    <summary>获取返回值条件。</summary>
+</member>', Execution Time: 6973.3505ms
+2026-06-29 14:58:37.406 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>获取返回值的条件。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7035.0141ms
+2026-06-29 14:58:37.406 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>获取返回值的条件。</summary>
+        </member>', Execution Time: 7035.0708ms
+2026-06-29 14:58:37.715 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)">
+            <summary>
+            使用指定 <see cref="T:System.Type"/> 上的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberTypes">依赖的成员类型。</param>
+            <param name="type">包含指定成员的 <see cref="T:System.Type"/>。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7355.379ms
+2026-06-29 14:58:37.715 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.Type)">
+            <summary>
+            使用指定 <see cref="T:System.Type"/> 上的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberTypes">依赖的成员类型。</param>
+            <param name="type">包含指定成员的 <see cref="T:System.Type"/>。</param>
+        </member>', Execution Time: 7355.577ms
+2026-06-29 14:58:37.715 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All">
+            <summary>
+            指定所有成员。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7345.8924ms
+2026-06-29 14:58:37.715 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.All">
+            <summary>
+            指定所有成员。
+            </summary>
+        </member>', Execution Time: 7346.0077ms
+2026-06-29 14:58:37.816 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)">
+            <summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+            </summary>
+            <param name="message">
+            包含有关未引用代码使用情况的消息。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7460.8401ms
+2026-06-29 14:58:37.816 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.#ctor(System.String)">
+            <summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute" /> 类的新实例。
+            </summary>
+            <param name="message">
+            包含有关未引用代码使用情况的消息。
+            </param>
+        </member>', Execution Time: 7460.898ms
+2026-06-29 14:58:38.123 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue">
+            <summary>获取返回值条件。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7749.0718ms
+2026-06-29 14:58:38.123 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue">
+            <summary>获取返回值条件。</summary>
+        </member>', Execution Time: 7749.119ms
+2026-06-29 14:58:38.328 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>指定即使相应类型允许，也不允许将 null 作为输入。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 7958.4903ms
+2026-06-29 14:58:38.328 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>指定即使相应类型允许，也不允许将 null 作为输入。</summary>
+        </member>', Execution Time: 7958.5685ms
+2026-06-29 14:58:38.430 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members">
+            <summary>获取字段或属性成员名称。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8055.807ms
+2026-06-29 14:58:38.430 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members">
+            <summary>获取字段或属性成员名称。</summary>
+        </member>', Execution Time: 8055.8728ms
+2026-06-29 14:58:38.573 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition">
+            <summary>
+            获取或设置依赖项适用的条件，例如"DEBUG"。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8211.7189ms
+2026-06-29 14:58:38.573 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition">
+            <summary>
+            获取或设置依赖项适用的条件，例如"DEBUG"。
+            </summary>
+        </member>', Execution Time: 8211.7727ms
+2026-06-29 14:58:38.662 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor">
+            <summary>
+            指定默认的无参数公共构造函数。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8299.5381ms
+2026-06-29 14:58:38.662 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicParameterlessConstructor">
+            <summary>
+            指定默认的无参数公共构造函数。
+            </summary>
+        </member>', Execution Time: 8299.5869ms
+2026-06-29 14:58:39.250 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents">
+            <summary>
+            指定所有公共事件。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8882.0044ms
+2026-06-29 14:58:39.250 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)">
+            <summary>
+            使用调用方同一类型上指定成员签名的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例进行初始化。
+            </summary>
+            <param name="memberSignature">所依赖的成员的签名。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8891.5712ms
+2026-06-29 14:58:39.250 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicEvents">
+            <summary>
+            指定所有公共事件。
+            </summary>
+        </member>', Execution Time: 8882.0589ms
+2026-06-29 14:58:39.250 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String)">
+            <summary>
+            使用调用方同一类型上指定成员签名的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例进行初始化。
+            </summary>
+            <param name="memberSignature">所依赖的成员的签名。</param>
+        </member>', Execution Time: 8891.6349ms
+2026-06-29 14:58:39.276 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url">
+            <summary>
+            获取或设置一个可选 URL，该 URL 包含有关该方法的更多信息、需要未引用代码的原因以及使用者可用的处理选项。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 8919.6944ms
+2026-06-29 14:58:39.276 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Url">
+            <summary>
+            获取或设置一个可选 URL，该 URL 包含有关该方法的更多信息、需要未引用代码的原因以及使用者可用的处理选项。
+            </summary>
+        </member>', Execution Time: 8919.747ms
+2026-06-29 14:58:40.171 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields">
+            <summary>
+            指定所有公共字段。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 9804.7152ms
+2026-06-29 14:58:40.171 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])">
+            <summary>使用指定的返回值条件和字段及属性成员列表初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param>
+            <param name="members">
+            承诺不为 null 的字段和属性成员列表。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 9797.1774ms
+2026-06-29 14:58:40.171 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicFields">
+            <summary>
+            指定所有公共字段。
+            </summary>
+        </member>', Execution Time: 9804.772ms
+2026-06-29 14:58:40.171 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])">
+            <summary>使用指定的返回值条件和字段及属性成员列表初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param>
+            <param name="members">
+            承诺不为 null 的字段和属性成员列表。
+            </param>
+        </member>', Execution Time: 9797.2228ms
+2026-06-29 14:58:40.786 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)">
+            <summary>
+            使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberTypes">动态访问的成员类型。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 10424.1681ms
+2026-06-29 14:58:40.786 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)">
+            <summary>
+            使用指定的成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberTypes">动态访问的成员类型。</param>
+        </member>', Execution Time: 10424.2257ms
+2026-06-29 14:58:41.029 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的参数值初始化特性。</summary>
+            <param name="parameterValue">
+            条件参数值。如果传递给关联参数的参数与此值匹配，则诊断工具将视方法之后的代码为不可达。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 10656.781ms
+2026-06-29 14:58:41.029 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的参数值初始化特性。</summary>
+            <param name="parameterValue">
+            条件参数值。如果传递给关联参数的参数与此值匹配，则诊断工具将视方法之后的代码为不可达。
+            </param>
+        </member>', Execution Time: 10656.8321ms
+2026-06-29 14:58:41.912 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>应用于在任何情况下都不会返回的方法。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 11540.3389ms
+2026-06-29 14:58:41.912 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+    <summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许，参数也不会为 null。</summary>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 11541.5426ms
+2026-06-29 14:58:41.912 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>应用于在任何情况下都不会返回的方法。</summary>
+        </member>', Execution Time: 11540.3913ms
+2026-06-29 14:58:41.912 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+    <summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue" /> 时，即使相应类型允许，参数也不会为 null。</summary>
+</member>', Execution Time: 11541.6082ms
+2026-06-29 14:58:41.961 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes">
+            <summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定了动态访问的成员类型。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 11599.6648ms
+2026-06-29 14:58:41.961 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute.MemberTypes">
+            <summary>
+            获取 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />，它指定了动态访问的成员类型。
+            </summary>
+        </member>', Execution Time: 11599.7185ms
+2026-06-29 14:58:42.219 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)">
+            <summary>
+            使用指定成员签名（位于某类型上）初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberSignature">依赖的成员签名。</param>
+            <param name="type">包含 <paramref name="memberSignature" /> 的 <see cref="T:System.Type" />。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 11860.0959ms
+2026-06-29 14:58:42.219 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.Type)">
+            <summary>
+            使用指定成员签名（位于某类型上）初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+            </summary>
+            <param name="memberSignature">依赖的成员签名。</param>
+            <param name="type">包含 <paramref name="memberSignature" /> 的 <see cref="T:System.Type" />。</param>
+        </member>', Execution Time: 11860.1591ms
+2026-06-29 14:58:42.768 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None">
+            <summary>
+            指定无成员。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 12405.8778ms
+2026-06-29 14:58:42.768 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None">
+            <summary>
+            指定无成员。
+            </summary>
+        </member>', Execution Time: 12405.9327ms
+2026-06-29 14:58:43.254 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute">
+            <summary>指定当返回指定的返回值条件时，方法或属性将确保列出的字段和属性成员不为 null。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 12879.9303ms
+2026-06-29 14:58:43.254 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute">
+            <summary>指定当返回指定的返回值条件时，方法或属性将确保列出的字段和属性成员不为 null。</summary>
+        </member>', Execution Time: 12879.9873ms
+2026-06-29 14:58:43.450 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url">
+            <summary>
+            获取或设置一个可选的 URL，其中包含有关该方法的更多信息、为什么需要动态代码以及使用者有哪些选项可以处理它。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 13094.7529ms
+2026-06-29 14:58:43.450 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.Url">
+            <summary>
+            获取或设置一个可选的 URL，其中包含有关该方法的更多信息、为什么需要动态代码以及使用者有哪些选项可以处理它。
+            </summary>
+        </member>', Execution Time: 13094.8863ms
+2026-06-29 14:58:43.784 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName">
+    <summary>
+    获取包含指定成员的类型全名。
+    </summary>
+    <remarks>
+    如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定为使用者类型。
+    </remarks>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 13423.2487ms
+2026-06-29 14:58:43.784 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName">
+    <summary>
+    获取包含指定成员的类型全名。
+    </summary>
+    <remarks>
+    如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定为使用者类型。
+    </remarks>
+</member>', Execution Time: 13423.3177ms
+2026-06-29 14:58:44.267 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>指定即使相应类型允许为空，输出也不会为 null。指定调用返回时输入参数不为 null。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 13897.3267ms
+2026-06-29 14:58:44.267 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>指定即使相应类型允许为空，输出也不会为 null。指定调用返回时输入参数不为 null。</summary>
+        </member>', Execution Time: 13897.3762ms
+2026-06-29 14:58:44.882 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods">
+            <summary>
+            指定所有公共方法。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 14517.4306ms
+2026-06-29 14:58:44.882 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods">
+            <summary>
+            指定所有公共方法。
+            </summary>
+        </member>', Execution Time: 14517.6845ms
+2026-06-29 14:58:45.393 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents">
+            <summary>
+            指定所有非公共事件。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 15024.8927ms
+2026-06-29 14:58:45.393 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicEvents">
+            <summary>
+            指定所有非公共事件。
+            </summary>
+        </member>', Execution Time: 15024.9503ms
+2026-06-29 14:58:45.700 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>指定即使对应的类型禁止为 null，输出也可能为 null。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 15330.8226ms
+2026-06-29 14:58:45.701 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>指定即使对应的类型禁止为 null，输出也可能为 null。</summary>
+        </member>', Execution Time: 15330.899ms
+2026-06-29 14:58:45.813 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type">
+            <summary>
+            获取包含指定成员的 <see cref="T:System.Type" />。
+            </summary>
+            <remarks>
+            如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定使用方的类型。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 15453.0023ms
+2026-06-29 14:58:45.813 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type">
+            <summary>
+            获取包含指定成员的 <see cref="T:System.Type" />。
+            </summary>
+            <remarks>
+            如果既未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" /> 也未指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" />，则假定使用方的类型。
+            </remarks>
+        </member>', Execution Time: 15453.0595ms
+2026-06-29 14:58:46.008 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature">
+            <summary>
+                获取所依赖成员的签名。
+            </summary>
+            <remarks>
+                要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效的字符串，要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能两者同时成立。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 15648.0905ms
+2026-06-29 14:58:46.008 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature">
+            <summary>
+                获取所依赖成员的签名。
+            </summary>
+            <remarks>
+                要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效的字符串，要么 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能两者同时成立。
+            </remarks>
+        </member>', Execution Time: 15648.1444ms
+2026-06-29 14:58:46.250 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])">
+            <summary>使用字段和属性成员的列表初始化特性。</summary>
+            <param name="members">承诺不为 null 的字段和属性成员的列表。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 15877.094ms
+2026-06-29 14:58:46.250 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])">
+            <summary>使用字段和属性成员的列表初始化特性。</summary>
+            <param name="members">承诺不为 null 的字段和属性成员的列表。</param>
+        </member>', Execution Time: 15877.1482ms
+2026-06-29 14:58:46.520 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes">
+            <summary>
+            获取指定所依赖成员类型的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能同时满足这两个条件。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 16160.3778ms
+2026-06-29 14:58:46.520 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes">
+            <summary>
+            获取指定所依赖成员类型的 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes" />。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" /> 必须是有效字符串，或者 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" /> 不得等于 <see cref="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.None" />，但不能同时满足这两个条件。
+            </remarks>
+        </member>', Execution Time: 16160.4327ms
+2026-06-29 14:58:46.761 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)">
+            <summary>初始化包含字段或属性成员的属性。</summary>
+            <param name="member">
+            确保不为null的字段或属性成员。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 16388.1204ms
+2026-06-29 14:58:46.761 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)">
+            <summary>初始化包含字段或属性成员的属性。</summary>
+            <param name="member">
+            确保不为null的字段或属性成员。
+            </param>
+        </member>', Execution Time: 16388.1762ms
+2026-06-29 14:58:48.261 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties">
+            <summary>
+            指定所有非公共属性。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 17893.1076ms
+2026-06-29 14:58:48.261 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties">
+            <summary>
+            指定所有非公共属性。
+            </summary>
+        </member>', Execution Time: 17893.1543ms
+2026-06-29 14:58:48.300 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)">
+            <summary>使用指定的返回值条件和字段或属性成员初始化该特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param>
+            <param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 17926.3822ms
+2026-06-29 14:58:48.300 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)">
+            <summary>使用指定的返回值条件和字段或属性成员初始化该特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联参数将不为 null。
+            </param>
+            <param name="member">
+            承诺不为 null 的字段或属性成员。
+            </param>
+        </member>', Execution Time: 17926.4406ms
+2026-06-29 14:58:50.718 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target">
+    <summary>
+    获取或设置一个完全限定路径，该路径表示该特性的目标。
+    </summary>
+    <remarks>
+    <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是一个可选参数，用于标识该特性的分析目标。示例值为 "System.IO.Stream.ctor():System.Void"。由于它是完全限定的，因此可能很长，特别是对于参数等目标。分析工具用户界面应能够自动对参数进行格式化。
+    </remarks>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 20360.8112ms
+2026-06-29 14:58:50.718 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target">
+    <summary>
+    获取或设置一个完全限定路径，该路径表示该特性的目标。
+    </summary>
+    <remarks>
+    <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" /> 属性是一个可选参数，用于标识该特性的分析目标。示例值为 "System.IO.Stream.ctor():System.Void"。由于它是完全限定的，因此可能很长，特别是对于参数等目标。分析工具用户界面应能够自动对参数进行格式化。
+    </remarks>
+</member>', Execution Time: 20360.8713ms
+2026-06-29 14:58:50.966 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute">
+            <summary>
+            声明一个成员对另一个成员的依赖。
+            </summary>
+            <remarks>
+            这可用于通知工具链一个依赖关系，该依赖关系仅从元数据和IL中不明确，例如通过反射依赖的成员。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 20608.0553ms
+2026-06-29 14:58:50.966 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute">
+            <summary>
+            声明一个成员对另一个成员的依赖。
+            </summary>
+            <remarks>
+            这可用于通知工具链一个依赖关系，该依赖关系仅从元数据和IL中不明确，例如通过反射依赖的成员。
+            </remarks>
+        </member>', Execution Time: 20608.1752ms
+2026-06-29 14:58:51.025 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>使用关联的参数名称初始化属性。</summary>
+            <param name="parameterName">
+            关联的参数名称。如果为指定参数传递的参数为非 null，则输出为非 null。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 20653.5759ms
+2026-06-29 14:58:51.025 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>使用关联的参数名称初始化属性。</summary>
+            <param name="parameterName">
+            关联的参数名称。如果为指定参数传递的参数为非 null，则输出为非 null。
+            </param>
+        </member>', Execution Time: 20653.6249ms
+2026-06-29 14:58:51.653 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message">
+            <summary>
+            获取包含未引用代码使用情况的消息。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 21297.5797ms
+2026-06-29 14:58:51.653 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute.Message">
+            <summary>
+            获取包含未引用代码使用情况的消息。
+            </summary>
+        </member>', Execution Time: 21297.6351ms
+2026-06-29 14:58:51.742 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的返回值条件初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为 null。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 21371.8543ms
+2026-06-29 14:58:51.742 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的返回值条件初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数可能为 null。
+            </param>
+        </member>', Execution Time: 21371.9173ms
+2026-06-29 14:58:52.590 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)">
+    <summary>
+    使用程序集中类型上成员的指定签名，初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+    </summary>
+    <param name="memberSignature">所依赖的成员的签名。</param>
+    <param name="typeName">包含指定成员的类型的全名。</param>
+    <param name="assemblyName">包含指定成员的类型的程序集名称。</param>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 22230.6391ms
+2026-06-29 14:58:52.590 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.String,System.String,System.String)">
+    <summary>
+    使用程序集中类型上成员的指定签名，初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类的新实例。
+    </summary>
+    <param name="memberSignature">所依赖的成员的签名。</param>
+    <param name="typeName">包含指定成员的类型的全名。</param>
+    <param name="assemblyName">包含指定成员的类型的程序集名称。</param>
+</member>', Execution Time: 22230.691ms
+2026-06-29 14:58:53.428 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute">
+  <summary>指示指定方法需要在运行时生成新代码的能力，例如通过 <see cref="N:System.Reflection" />。</summary>
+  <remarks>这使得工具能够理解在提前编译时哪些方法是不安全的调用。</remarks>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 23073.1673ms
+2026-06-29 14:58:53.428 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute">
+  <summary>指示指定方法需要在运行时生成新代码的能力，例如通过 <see cref="N:System.Reflection" />。</summary>
+  <remarks>这使得工具能够理解在提前编译时哪些方法是不安全的调用。</remarks>
+</member>', Execution Time: 23073.218ms
+2026-06-29 14:58:53.995 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces">
+            <summary>
+            指定该类型实现的所有接口。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 23626.773ms
+2026-06-29 14:58:53.996 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="F:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.Interfaces">
+            <summary>
+            指定该类型实现的所有接口。
+            </summary>
+        </member>', Execution Time: 23626.8232ms
+2026-06-29 14:58:54.609 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category">
+            <summary>
+            获取标识属性分类的类别。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述消息抑制属性所适用的工具或工具分析类别。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 24252.6695ms
+2026-06-29 14:58:54.610 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category">
+            <summary>
+            获取标识属性分类的类别。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 属性描述消息抑制属性所适用的工具或工具分析类别。
+            </remarks>
+        </member>', Execution Time: 24252.726ms
+2026-06-29 14:58:55.251 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>获取条件参数值。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 24878.1556ms
+2026-06-29 14:58:55.251 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>获取条件参数值。</summary>
+        </member>', Execution Time: 24878.1999ms
+2026-06-29 14:58:58.731 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的新实例，
+            指定工具类别和分析规则标识符。
+            </summary>
+            <param name="category">属性的类别。</param>
+            <param name="checkId">特性所应用的分析规则的标识符。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 28374.6667ms
+2026-06-29 14:58:58.731 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化 <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 类的新实例，
+            指定工具类别和分析规则标识符。
+            </summary>
+            <param name="category">属性的类别。</param>
+            <param name="checkId">特性所应用的分析规则的标识符。</param>
+        </member>', Execution Time: 28374.9273ms
+2026-06-29 14:58:59.251 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute">
+  <summary>
+    指示指定的方法需要动态访问未静态引用的代码，例如通过 <see cref="N:System.Reflection" />。
+  </summary>
+  <remarks>
+    这使得工具能够在从应用程序中删除未引用的代码时，了解哪些方法是不安全调用的。
+  </remarks>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 28896.1689ms
+2026-06-29 14:58:59.251 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.RequiresUnreferencedCodeAttribute">
+  <summary>
+    指示指定的方法需要动态访问未静态引用的代码，例如通过 <see cref="N:System.Reflection" />。
+  </summary>
+  <remarks>
+    这使得工具能够在从应用程序中删除未引用的代码时，了解哪些方法是不安全调用的。
+  </remarks>
+</member>', Execution Time: 28896.2274ms
+2026-06-29 14:59:00.985 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 30615.2239ms
+2026-06-29 14:59:00.985 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>指定当方法返回 <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue" /> 时，即使对应的类型不允许，参数也可能为 null。</summary>
+        </member>', Execution Time: 30615.2732ms
+2026-06-29 14:59:02.086 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId">
+            <summary>
+            获取要抑制的分析工具规则标识符。
+            </summary>
+            <remarks>
+            将 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" /> 属性串联起来，构成唯一的检查标识符。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 31728.6787ms
+2026-06-29 14:59:02.086 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId">
+            <summary>
+            获取要抑制的分析工具规则标识符。
+            </summary>
+            <remarks>
+            将 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" /> 和 <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" /> 属性串联起来，构成唯一的检查标识符。
+            </remarks>
+        </member>', Execution Time: 31728.7328ms
+2026-06-29 14:59:16.040 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification">
+            <summary>
+            获取或设置取消代码分析消息的理由。
+            </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 45681.889ms
+2026-06-29 14:59:16.040 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification">
+            <summary>
+            获取或设置取消代码分析消息的理由。
+            </summary>
+        </member>', Execution Time: 45681.9633ms
+2026-06-29 14:59:16.050 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute">
+            <summary>
+            禁止报告特定的规则冲突，允许在单个代码项目上进行多次禁止。
+            </summary>
+            <remarks>
+            <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 与
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" /> 不同，因为它没有
+            <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 45693.5232ms
+2026-06-29 14:59:16.050 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute">
+            <summary>
+            禁止报告特定的规则冲突，允许在单个代码项目上进行多次禁止。
+            </summary>
+            <remarks>
+            <see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 与
+            <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" /> 不同，因为它没有
+            <see cref="T:System.Diagnostics.ConditionalAttribute" />。因此它始终保留在编译的程序集中。
+            </remarks>
+        </member>', Execution Time: 45693.6765ms
+2026-06-29 14:59:16.542 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的返回值条件初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 46170.8065ms
+2026-06-29 14:59:16.542 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>使用指定的返回值条件初始化特性。</summary>
+            <param name="returnValue">
+            返回值条件。如果方法返回此值，则关联的参数将不为 null。
+            </param>
+        </member>', Execution Time: 46170.8576ms
+2026-06-29 14:59:20.108 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes">
+             <summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有 <see cref="T:System.FlagsAttribute" /> 属性，允许对其成员值进行按位组合。
+             </summary>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 49745.9734ms
+2026-06-29 14:59:20.108 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes">
+             <summary>
+             指定动态访问的成员类型。
+            
+             此枚举具有 <see cref="T:System.FlagsAttribute" /> 属性，允许对其成员值进行按位组合。
+             </summary>
+        </member>', Execution Time: 49746.0303ms
+2026-06-29 14:59:39.974 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName">
+            <summary>
+            获取指定类型的程序集名称。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" /> 仅在指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" /> 时有效。
+            </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 69613.2408ms
+2026-06-29 14:59:39.974 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName">
+            <summary>
+            获取指定类型的程序集名称。
+            </summary>
+            <remarks>
+            <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" /> 仅在指定 <see cref="P:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" /> 时有效。
+            </remarks>
+        </member>', Execution Time: 69613.2996ms
+2026-06-29 14:59:53.695 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)">
+            <summary>
+            使用程序集中类型的指定成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类
+            的新实例。
+            </summary>
+            <param name="memberTypes">所依赖的成员类型。</param>
+            <param name="typeName">包含指定成员的类型的完整名称。</param>
+            <param name="assemblyName">包含指定成员类型的程序集名称。</param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 83335.0132ms
+2026-06-29 14:59:53.695 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.#ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes,System.String,System.String)">
+            <summary>
+            使用程序集中类型的指定成员类型初始化 <see cref="T:System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute" /> 类
+            的新实例。
+            </summary>
+            <param name="memberTypes">所依赖的成员类型。</param>
+            <param name="typeName">包含指定成员的类型的完整名称。</param>
+            <param name="assemblyName">包含指定成员类型的程序集名称。</param>
+        </member>', Execution Time: 83335.0897ms
+2026-06-29 14:59:54.924 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute">
+             <summary>
+             指示指定 <see cref="T:System.Type" /> 上的某些成员被动态访问，
+             例如通过 <see cref="N:System.Reflection" />。
+             </summary>
+             <remarks>
+             这允许工具了解在程序执行期间哪些成员正在被访问。
+             
+             此属性对类型为 <see cref="T:System.Type" /> 或 <see cref="T:System.String" /> 的成员有效。
+             
+             当此属性应用于类型为 <see cref="T:System.String" /> 的位置时，假定该字符串表示完全限定的类型名称。
+             
+             当此属性应用于类、接口或结构时，指定的成员可以在从对该类、接口或结构的实例调用 <see cref="M:System.Object.GetType" /> 返回的 <see cref="T:System.Type" /> 实例上动态访问。
+             
+             如果该属性应用于方法，它将被视为特殊情况，意味着该属性应应用于方法的"this"参数。因此，该属性应仅用于可分配给 System.Type（或 string，但方法不会在那里使用它）的类型上的实例方法。
+             </remarks>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 84562.8266ms
+2026-06-29 14:59:54.924 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="T:System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute">
+             <summary>
+             指示指定 <see cref="T:System.Type" /> 上的某些成员被动态访问，
+             例如通过 <see cref="N:System.Reflection" />。
+             </summary>
+             <remarks>
+             这允许工具了解在程序执行期间哪些成员正在被访问。
+             
+             此属性对类型为 <see cref="T:System.Type" /> 或 <see cref="T:System.String" /> 的成员有效。
+             
+             当此属性应用于类型为 <see cref="T:System.String" /> 的位置时，假定该字符串表示完全限定的类型名称。
+             
+             当此属性应用于类、接口或结构时，指定的成员可以在从对该类、接口或结构的实例调用 <see cref="M:System.Object.GetType" /> 返回的 <see cref="T:System.Type" /> 实例上动态访问。
+             
+             如果该属性应用于方法，它将被视为特殊情况，意味着该属性应应用于方法的"this"参数。因此，该属性应仅用于可分配给 System.Type（或 string，但方法不会在那里使用它）的类型上的实例方法。
+             </remarks>
+        </member>', Execution Time: 84562.8834ms
+2026-06-29 14:59:55.129 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)">
+            <summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute" /> 
+            类的新实例。
+            </summary>
+            <param name="message">
+            包含有关动态代码使用情况的消息。
+            </param>
+        </member>', Handled: 'false', Attempt: '0', Execution Time: 84774.0192ms
+2026-06-29 14:59:55.129 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="M:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute.#ctor(System.String)">
+            <summary>
+            使用指定的消息初始化 <see cref="T:System.Diagnostics.CodeAnalysis.RequiresDynamicCodeAttribute" /> 
+            类的新实例。
+            </summary>
+            <param name="message">
+            包含有关动态代码使用情况的消息。
+            </param>
+        </member>', Execution Time: 84774.0654ms
+2026-06-29 15:01:19.773 +08:00 [INF] Execution attempt. Source: '(null)/(null)/Retry', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId">
+    <summary>
+        获取或设置一个可选参数，用于扩展排除条件。
+    </summary>
+    <remarks>
+        <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定当文本元数据目标不够精确时的额外排除条件。
+        例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，但可能需要只抑制方法中某个会导致规则冲突的语句的违规，而不是方法中的所有语句。
+    </remarks>
+</member>', Handled: 'false', Attempt: '0', Execution Time: 170712.3148ms
+2026-06-29 15:01:19.773 +08:00 [DBG] Resilience pipeline executed. Source: '(null)/(null)', Operation Key: 'null', Result: '<member name="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId">
+    <summary>
+        获取或设置一个可选参数，用于扩展排除条件。
+    </summary>
+    <remarks>
+        <see cref="P:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" /> 属性是一个可选参数，用于指定当文本元数据目标不够精确时的额外排除条件。
+        例如，<see cref="T:System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute" /> 不能应用于方法内部，但可能需要只抑制方法中某个会导致规则冲突的语句的违规，而不是方法中的所有语句。
+    </remarks>
+</member>', Execution Time: 170712.373ms
+2026-06-29 15:31:08.262 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.263 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.263 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.264 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.264 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 15:31:08.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 15:31:08.268 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 15:31:08.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 15:31:08.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 15:31:08.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 15:31:08.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 15:31:08.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 15:31:08.270 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 15:31:08.270 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 15:31:08.270 +08:00 [INF] lib/net10.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 15:31:08.272 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 15:31:08.274 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 15:31:08.275 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 15:31:08.275 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 15:31:08.275 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 15:31:08.275 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 15:31:08.275 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 15:31:08.276 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 15:31:08.277 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 15:31:08.278 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 15:31:08.278 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 15:31:08.278 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 15:31:08.278 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 15:31:08.278 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 15:31:08.279 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 15:31:08.280 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 15:31:08.281 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 15:31:08.281 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 15:31:08.281 +08:00 [INF] lib/net462/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 15:31:08.281 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 15:31:08.282 +08:00 [INF] lib/net8.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 15:31:08.282 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/11
+2026-06-29 15:31:08.283 +08:00 [INF] lib/net9.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/11
+2026-06-29 15:31:08.283 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 1/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 2/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 3/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 4/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 5/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 6/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 7/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 8/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 9/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 10/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 11/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 12/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 13/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 14/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 15/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 16/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 17/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 18/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 19/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 20/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 21/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 22/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 23/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 24/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 25/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 26/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 27/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 28/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 29/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 30/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 31/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 32/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 33/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 34/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 35/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 36/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 37/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 38/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 39/49
+2026-06-29 15:31:08.284 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 40/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 41/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 42/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 43/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 44/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 45/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 46/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 47/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 48/49
+2026-06-29 15:31:08.285 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml 进度: 49/49
+2026-06-29 15:31:08.285 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.fileproviders.composite\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.FileProviders.Composite.xml
+2026-06-29 15:31:08.285 +08:00 [INF] ===== 包 microsoft.extensions.fileproviders.composite 完成 =====

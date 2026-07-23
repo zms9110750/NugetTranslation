@@ -1,0 +1,39 @@
+2026-07-23 12:35:56.382 +08:00 [INF] ZiggyCreatures.FusionCache@2.6.0 缺失 877 条数据，预测为 0.129M token
+2026-07-23 12:35:56.406 +08:00 [INF] ZiggyCreatures.FusionCache@2.5.0 缺失 864 条数据，预测为 0.127M token
+2026-07-23 12:35:56.382 +08:00 [INF] ZiggyCreatures.FusionCache@2.4.0 缺失 825 条数据，预测为 0.122M token
+2026-07-23 12:36:02.330 +08:00 [INF] 当前完成 100/877，消耗token:命中 0.004M，输入 0.020M：输出 0.011M
+2026-07-23 12:36:02.393 +08:00 [INF] 当前完成 100/864，消耗token:命中 0.005M，输入 0.017M：输出 0.009M
+2026-07-23 12:36:02.425 +08:00 [INF] 当前完成 100/825，消耗token:命中 0.004M，输入 0.018M：输出 0.010M
+2026-07-23 12:36:03.438 +08:00 [INF] 当前完成 200/877，消耗token:命中 0.012M，输入 0.039M：输出 0.026M
+2026-07-23 12:36:03.488 +08:00 [INF] 当前完成 200/864，消耗token:命中 0.012M，输入 0.038M：输出 0.026M
+2026-07-23 12:36:03.558 +08:00 [INF] 当前完成 200/825，消耗token:命中 0.011M，输入 0.042M：输出 0.030M
+2026-07-23 12:36:04.735 +08:00 [INF] 当前完成 300/877，消耗token:命中 0.023M，输入 0.058M：输出 0.045M
+2026-07-23 12:36:04.796 +08:00 [INF] 当前完成 300/864，消耗token:命中 0.023M，输入 0.055M：输出 0.043M
+2026-07-23 12:36:04.913 +08:00 [INF] 当前完成 300/825，消耗token:命中 0.021M，输入 0.070M：输出 0.054M
+2026-07-23 12:36:05.881 +08:00 [INF] 当前完成 400/877，消耗token:命中 0.032M，输入 0.081M：输出 0.072M
+2026-07-23 12:36:05.990 +08:00 [INF] 当前完成 400/864，消耗token:命中 0.036M，输入 0.069M：输出 0.059M
+2026-07-23 12:36:06.111 +08:00 [INF] 当前完成 400/825，消耗token:命中 0.032M，输入 0.104M：输出 0.080M
+2026-07-23 12:36:07.149 +08:00 [INF] 当前完成 500/877，消耗token:命中 0.043M，输入 0.095M：输出 0.089M
+2026-07-23 12:36:07.247 +08:00 [INF] 当前完成 500/864，消耗token:命中 0.048M，输入 0.082M：输出 0.073M
+2026-07-23 12:36:07.399 +08:00 [INF] 当前完成 500/825，消耗token:命中 0.040M，输入 0.149M：输出 0.116M
+2026-07-23 12:36:08.284 +08:00 [INF] 当前完成 600/877，消耗token:命中 0.051M，输入 0.107M：输出 0.106M
+2026-07-23 12:36:08.416 +08:00 [INF] 当前完成 600/864，消耗token:命中 0.060M，输入 0.089M：输出 0.080M
+2026-07-23 12:36:08.767 +08:00 [INF] 当前完成 600/825，消耗token:命中 0.045M，输入 0.196M：输出 0.158M
+2026-07-23 12:36:09.561 +08:00 [INF] 当前完成 700/877，消耗token:命中 0.061M，输入 0.123M：输出 0.131M
+2026-07-23 12:36:09.728 +08:00 [INF] 当前完成 700/864，消耗token:命中 0.073M，输入 0.097M：输出 0.089M
+2026-07-23 12:36:10.224 +08:00 [INF] 当前完成 700/825，消耗token:命中 0.051M，输入 0.244M：输出 0.211M
+2026-07-23 12:36:12.085 +08:00 [INF] 当前完成 800/877，消耗token:命中 0.073M，输入 0.132M：输出 0.148M
+2026-07-23 12:36:12.649 +08:00 [INF] 当前完成 800/864，消耗token:命中 0.086M，输入 0.111M：输出 0.106M
+2026-07-23 12:36:17.006 +08:00 [INF] 当前完成 800/825，消耗token:命中 0.060M，输入 0.299M：输出 0.287M
+2026-07-23 12:37:32.759 +08:00 [INF] ZiggyCreatures.FusionCache 翻译完成，输入 0.165M tok，输出 0.135M tok，命中 0.099M tok
+2026-07-23 12:37:32.761 +08:00 [INF] ZiggyCreatures.FusionCache 翻译完成，输入 0.152M tok，输出 0.203M tok，命中 0.083M tok
+2026-07-23 12:37:32.761 +08:00 [INF] ZiggyCreatures.FusionCache 翻译完成，输入 0.320M tok，输出 0.305M tok，命中 0.065M tok
+2026-07-23 12:37:33.063 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.6.0\lib\net8.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.130 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.6.0\lib\net9.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.134 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.4.0\lib\net8.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.174 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.5.0\lib\net8.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.228 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.6.0\lib\netstandard2.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.228 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.4.0\lib\net9.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.247 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.5.0\lib\net9.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.318 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.4.0\lib\netstandard2.0\zh-Hans\ZiggyCreatures.FusionCache.xml
+2026-07-23 12:37:33.339 +08:00 [INF] 已写出: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\ziggycreatures.fusioncache\2.5.0\lib\netstandard2.0\zh-Hans\ZiggyCreatures.FusionCache.xml

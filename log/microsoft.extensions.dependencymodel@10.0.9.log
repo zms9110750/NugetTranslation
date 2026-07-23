@@ -1,0 +1,907 @@
+2026-06-28 19:13:43.438 +08:00 [INF] 正在提取文件: lib/net10.0/Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:13:43.440 +08:00 [INF] 正在提取文件: lib/net462/Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:13:43.444 +08:00 [INF] 正在提取文件: lib/net8.0/Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:13:43.445 +08:00 [INF] 正在提取文件: lib/net9.0/Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:13:43.447 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:13:43.494 +08:00 [DBG] 缓存缺失: T:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner
+2026-06-28 19:13:43.494 +08:00 [DBG] 缓存缺失: M:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.Add(System.Int32)
+2026-06-28 19:13:43.495 +08:00 [DBG] 缓存缺失: M:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.Add(System.Object)
+2026-06-28 19:13:43.495 +08:00 [DBG] 缓存缺失: M:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.Add(System.String)
+2026-06-28 19:13:43.496 +08:00 [DBG] 缓存缺失: M:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.Add``1(``0,System.Collections.Generic.IEqualityComparer{``0})
+2026-06-28 19:13:43.496 +08:00 [DBG] 缓存缺失: M:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.Start
+2026-06-28 19:13:43.496 +08:00 [DBG] 缓存缺失: P:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner.CombinedHash
+2026-06-28 19:13:43.497 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.CompilationLibrary
+2026-06-28 19:13:43.498 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.CompilationLibrary.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean,System.String,System.String)
+2026-06-28 19:13:43.501 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.CompilationLibrary.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean)
+2026-06-28 19:13:43.501 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.CompilationLibrary.ResolveReferencePaths
+2026-06-28 19:13:43.502 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.CompilationLibrary.ResolveReferencePaths(Microsoft.Extensions.DependencyModel.Resolution.ICompilationAssemblyResolver[])
+2026-06-28 19:13:43.502 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationLibrary.Assemblies
+2026-06-28 19:13:43.502 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.CompilationOptions
+2026-06-28 19:13:43.502 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.CompilationOptions.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+2026-06-28 19:13:43.503 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.AllowUnsafe
+2026-06-28 19:13:43.503 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.DebugType
+2026-06-28 19:13:43.503 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.Default
+2026-06-28 19:13:43.503 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.Defines
+2026-06-28 19:13:43.504 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.DelaySign
+2026-06-28 19:13:43.504 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.EmitEntryPoint
+2026-06-28 19:13:43.504 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.GenerateXmlDocumentation
+2026-06-28 19:13:43.504 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.KeyFile
+2026-06-28 19:13:43.505 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.LanguageVersion
+2026-06-28 19:13:43.505 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.Optimize
+2026-06-28 19:13:43.505 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.Platform
+2026-06-28 19:13:43.505 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.PublicSign
+2026-06-28 19:13:43.506 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.CompilationOptions.WarningsAsErrors
+2026-06-28 19:13:43.506 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Dependency
+2026-06-28 19:13:43.506 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Dependency.#ctor(System.String,System.String)
+2026-06-28 19:13:43.507 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Dependency.Equals(Microsoft.Extensions.DependencyModel.Dependency)
+2026-06-28 19:13:43.507 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Dependency.Equals(System.Object)
+2026-06-28 19:13:43.507 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Dependency.GetHashCode
+2026-06-28 19:13:43.510 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Dependency.Name
+2026-06-28 19:13:43.511 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Dependency.Version
+2026-06-28 19:13:43.511 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.DependencyContext
+2026-06-28 19:13:43.512 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContext.#ctor(Microsoft.Extensions.DependencyModel.TargetInfo,Microsoft.Extensions.DependencyModel.CompilationOptions,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.CompilationLibrary},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.RuntimeLibrary},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.RuntimeFallbacks})
+2026-06-28 19:13:43.512 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContext.Load(System.Reflection.Assembly)
+2026-06-28 19:13:43.512 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContext.Merge(Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.513 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions
+2026-06-28 19:13:43.513 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries
+2026-06-28 19:13:43.514 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.Default
+2026-06-28 19:13:43.514 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.RuntimeGraph
+2026-06-28 19:13:43.514 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.RuntimeLibraries
+2026-06-28 19:13:43.515 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContext.Target
+2026-06-28 19:13:43.515 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.DependencyContextExtensions
+2026-06-28 19:13:43.515 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultAssemblyNames(Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.515 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultAssemblyNames(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.516 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultNativeAssets(Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.516 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultNativeAssets(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.516 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultNativeRuntimeFileAssets(Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.517 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetDefaultNativeRuntimeFileAssets(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext)
+2026-06-28 19:13:43.517 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeAssemblyNames(Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.517 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeAssemblyNames(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.517 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeNativeAssets(Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.518 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeNativeAssets(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.518 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeNativeRuntimeFileAssets(Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.518 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextExtensions.GetRuntimeNativeRuntimeFileAssets(Microsoft.Extensions.DependencyModel.RuntimeLibrary,Microsoft.Extensions.DependencyModel.DependencyContext,System.String)
+2026-06-28 19:13:43.518 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.DependencyContextJsonReader
+2026-06-28 19:13:43.519 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextJsonReader.#ctor
+2026-06-28 19:13:43.519 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextJsonReader.Dispose
+2026-06-28 19:13:43.519 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextJsonReader.Dispose(System.Boolean)
+2026-06-28 19:13:43.519 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextJsonReader.Read(System.IO.Stream)
+2026-06-28 19:13:43.520 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.DependencyContextLoader
+2026-06-28 19:13:43.520 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextLoader.#ctor
+2026-06-28 19:13:43.520 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextLoader.Load(System.Reflection.Assembly)
+2026-06-28 19:13:43.521 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.DependencyContextLoader.Default
+2026-06-28 19:13:43.521 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.DependencyContextWriter
+2026-06-28 19:13:43.521 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextWriter.#ctor
+2026-06-28 19:13:43.521 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.DependencyContextWriter.Write(Microsoft.Extensions.DependencyModel.DependencyContext,System.IO.Stream)
+2026-06-28 19:13:43.522 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.IDependencyContextReader
+2026-06-28 19:13:43.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.IDependencyContextReader.Read(System.IO.Stream)
+2026-06-28 19:13:43.522 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Library
+2026-06-28 19:13:43.522 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Library.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean,System.String,System.String,System.String)
+2026-06-28 19:13:43.523 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Library.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean,System.String,System.String)
+2026-06-28 19:13:43.527 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Library.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean)
+2026-06-28 19:13:43.528 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Dependencies
+2026-06-28 19:13:43.528 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Hash
+2026-06-28 19:13:43.529 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.HashPath
+2026-06-28 19:13:43.530 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Name
+2026-06-28 19:13:43.530 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Path
+2026-06-28 19:13:43.531 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.RuntimeStoreManifestName
+2026-06-28 19:13:43.532 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Serviceable
+2026-06-28 19:13:43.533 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Type
+2026-06-28 19:13:43.533 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.Library.Version
+2026-06-28 19:13:43.534 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.AppBaseCompilationAssemblyResolver
+2026-06-28 19:13:43.534 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.AppBaseCompilationAssemblyResolver.#ctor
+2026-06-28 19:13:43.535 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.AppBaseCompilationAssemblyResolver.#ctor(System.String)
+2026-06-28 19:13:43.535 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.AppBaseCompilationAssemblyResolver.TryResolveAssemblyPaths(Microsoft.Extensions.DependencyModel.CompilationLibrary,System.Collections.Generic.List{System.String})
+2026-06-28 19:13:43.536 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.CompositeCompilationAssemblyResolver
+2026-06-28 19:13:43.536 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.CompositeCompilationAssemblyResolver.#ctor(Microsoft.Extensions.DependencyModel.Resolution.ICompilationAssemblyResolver[])
+2026-06-28 19:13:43.537 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.CompositeCompilationAssemblyResolver.TryResolveAssemblyPaths(Microsoft.Extensions.DependencyModel.CompilationLibrary,System.Collections.Generic.List{System.String})
+2026-06-28 19:13:43.538 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.DotNetReferenceAssembliesPathResolver
+2026-06-28 19:13:43.538 +08:00 [DBG] 缓存缺失: F:Microsoft.Extensions.DependencyModel.Resolution.DotNetReferenceAssembliesPathResolver.DotNetReferenceAssembliesPathEnv
+2026-06-28 19:13:43.539 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.DotNetReferenceAssembliesPathResolver.#ctor
+2026-06-28 19:13:43.540 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.DotNetReferenceAssembliesPathResolver.Resolve
+2026-06-28 19:13:43.543 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.ICompilationAssemblyResolver
+2026-06-28 19:13:43.544 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.ICompilationAssemblyResolver.TryResolveAssemblyPaths(Microsoft.Extensions.DependencyModel.CompilationLibrary,System.Collections.Generic.List{System.String})
+2026-06-28 19:13:43.545 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.PackageCompilationAssemblyResolver
+2026-06-28 19:13:43.545 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.PackageCompilationAssemblyResolver.#ctor
+2026-06-28 19:13:43.546 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.PackageCompilationAssemblyResolver.#ctor(System.String)
+2026-06-28 19:13:43.547 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.PackageCompilationAssemblyResolver.TryResolveAssemblyPaths(Microsoft.Extensions.DependencyModel.CompilationLibrary,System.Collections.Generic.List{System.String})
+2026-06-28 19:13:43.547 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.Resolution.ReferenceAssemblyPathResolver
+2026-06-28 19:13:43.548 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.ReferenceAssemblyPathResolver.#ctor
+2026-06-28 19:13:43.549 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.ReferenceAssemblyPathResolver.#ctor(System.String,System.String[])
+2026-06-28 19:13:43.549 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.Resolution.ReferenceAssemblyPathResolver.TryResolveAssemblyPaths(Microsoft.Extensions.DependencyModel.CompilationLibrary,System.Collections.Generic.List{System.String})
+2026-06-28 19:13:43.550 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.ResourceAssembly
+2026-06-28 19:13:43.550 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.ResourceAssembly.#ctor(System.String,System.String,System.String)
+2026-06-28 19:13:43.551 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.ResourceAssembly.#ctor(System.String,System.String)
+2026-06-28 19:13:43.551 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.ResourceAssembly.Locale
+2026-06-28 19:13:43.552 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.ResourceAssembly.LocalPath
+2026-06-28 19:13:43.557 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.ResourceAssembly.Path
+2026-06-28 19:13:43.558 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.RuntimeAssembly
+2026-06-28 19:13:43.561 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeAssembly.#ctor(System.String,System.String)
+2026-06-28 19:13:43.561 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeAssembly.Create(System.String)
+2026-06-28 19:13:43.562 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeAssembly.Name
+2026-06-28 19:13:43.562 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeAssembly.Path
+2026-06-28 19:13:43.562 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup
+2026-06-28 19:13:43.563 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.RuntimeFile})
+2026-06-28 19:13:43.563 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+2026-06-28 19:13:43.565 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.#ctor(System.String,System.String[])
+2026-06-28 19:13:43.565 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.AssetPaths
+2026-06-28 19:13:43.566 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.Runtime
+2026-06-28 19:13:43.566 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeAssetGroup.RuntimeFiles
+2026-06-28 19:13:43.567 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.RuntimeFallbacks
+2026-06-28 19:13:43.567 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeFallbacks.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+2026-06-28 19:13:43.568 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeFallbacks.#ctor(System.String,System.String[])
+2026-06-28 19:13:43.569 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFallbacks.Fallbacks
+2026-06-28 19:13:43.569 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFallbacks.Runtime
+2026-06-28 19:13:43.570 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.RuntimeFile
+2026-06-28 19:13:43.571 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeFile.#ctor(System.String,System.String,System.String,System.String)
+2026-06-28 19:13:43.571 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeFile.#ctor(System.String,System.String,System.String)
+2026-06-28 19:13:43.572 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFile.AssemblyVersion
+2026-06-28 19:13:43.572 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFile.FileVersion
+2026-06-28 19:13:43.572 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFile.LocalPath
+2026-06-28 19:13:43.573 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeFile.Path
+2026-06-28 19:13:43.573 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.RuntimeLibrary
+2026-06-28 19:13:43.578 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeLibrary.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.ResourceAssembly},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean,System.String,System.String,System.String)
+2026-06-28 19:13:43.578 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeLibrary.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.ResourceAssembly},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean,System.String,System.String)
+2026-06-28 19:13:43.579 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.RuntimeLibrary.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.DependencyModel.RuntimeAssetGroup},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.ResourceAssembly},System.Collections.Generic.IEnumerable{Microsoft.Extensions.DependencyModel.Dependency},System.Boolean)
+2026-06-28 19:13:43.580 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeLibrary.NativeLibraryGroups
+2026-06-28 19:13:43.581 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeLibrary.ResourceAssemblies
+2026-06-28 19:13:43.582 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.RuntimeLibrary.RuntimeAssemblyGroups
+2026-06-28 19:13:43.582 +08:00 [DBG] 缓存缺失: T:Microsoft.Extensions.DependencyModel.TargetInfo
+2026-06-28 19:13:43.583 +08:00 [DBG] 缓存缺失: M:Microsoft.Extensions.DependencyModel.TargetInfo.#ctor(System.String,System.String,System.String,System.Boolean)
+2026-06-28 19:13:43.584 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.TargetInfo.Framework
+2026-06-28 19:13:43.584 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.TargetInfo.IsPortable
+2026-06-28 19:13:43.585 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.TargetInfo.Runtime
+2026-06-28 19:13:43.585 +08:00 [DBG] 缓存缺失: P:Microsoft.Extensions.DependencyModel.TargetInfo.RuntimeSignature
+2026-06-28 19:13:48.160 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 1/149
+2026-06-28 19:13:48.178 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 2/149
+2026-06-28 19:13:48.451 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 3/149
+2026-06-28 19:13:48.657 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 4/149
+2026-06-28 19:13:48.776 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 5/149
+2026-06-28 19:13:49.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 6/149
+2026-06-28 19:13:49.271 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 7/149
+2026-06-28 19:13:49.271 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 8/149
+2026-06-28 19:13:49.294 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 9/149
+2026-06-28 19:13:49.515 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 10/149
+2026-06-28 19:13:49.582 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 11/149
+2026-06-28 19:13:49.607 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 12/149
+2026-06-28 19:13:49.721 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 13/149
+2026-06-28 19:13:49.832 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 14/149
+2026-06-28 19:13:49.988 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 15/149
+2026-06-28 19:13:50.093 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 16/149
+2026-06-28 19:13:50.094 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 17/149
+2026-06-28 19:13:50.116 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 18/149
+2026-06-28 19:13:50.298 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 19/149
+2026-06-28 19:13:50.313 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 20/149
+2026-06-28 19:13:50.397 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 21/149
+2026-06-28 19:13:50.408 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 22/149
+2026-06-28 19:13:50.499 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 23/149
+2026-06-28 19:13:50.500 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 24/149
+2026-06-28 19:13:50.506 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 25/149
+2026-06-28 19:13:50.602 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 26/149
+2026-06-28 19:13:50.622 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 27/149
+2026-06-28 19:13:50.813 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 28/149
+2026-06-28 19:13:51.020 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 29/149
+2026-06-28 19:13:51.114 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 30/149
+2026-06-28 19:13:51.155 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 31/149
+2026-06-28 19:13:51.216 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 32/149
+2026-06-28 19:13:51.250 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 33/149
+2026-06-28 19:13:51.258 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 34/149
+2026-06-28 19:13:51.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 35/149
+2026-06-28 19:13:51.319 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 36/149
+2026-06-28 19:13:51.528 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 37/149
+2026-06-28 19:13:51.528 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 38/149
+2026-06-28 19:13:51.528 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 39/149
+2026-06-28 19:13:51.549 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 40/149
+2026-06-28 19:13:51.549 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 41/149
+2026-06-28 19:13:51.628 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 42/149
+2026-06-28 19:13:51.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 43/149
+2026-06-28 19:13:51.731 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 44/149
+2026-06-28 19:13:51.771 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 45/149
+2026-06-28 19:13:51.830 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 46/149
+2026-06-28 19:13:51.948 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 47/149
+2026-06-28 19:13:51.962 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 48/149
+2026-06-28 19:13:52.044 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 49/149
+2026-06-28 19:13:52.083 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 50/149
+2026-06-28 19:13:52.139 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 51/149
+2026-06-28 19:13:52.244 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 52/149
+2026-06-28 19:13:52.362 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 53/149
+2026-06-28 19:13:52.366 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 54/149
+2026-06-28 19:13:52.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 55/149
+2026-06-28 19:13:52.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 56/149
+2026-06-28 19:13:52.549 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 57/149
+2026-06-28 19:13:52.767 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 58/149
+2026-06-28 19:13:52.767 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 59/149
+2026-06-28 19:13:52.767 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 60/149
+2026-06-28 19:13:52.767 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 61/149
+2026-06-28 19:13:52.855 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 62/149
+2026-06-28 19:13:53.061 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 63/149
+2026-06-28 19:13:53.065 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 64/149
+2026-06-28 19:13:53.162 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 65/149
+2026-06-28 19:13:53.162 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 66/149
+2026-06-28 19:13:53.169 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 67/149
+2026-06-28 19:13:53.203 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 68/149
+2026-06-28 19:13:53.264 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 69/149
+2026-06-28 19:13:53.368 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 70/149
+2026-06-28 19:13:53.369 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 71/149
+2026-06-28 19:13:53.469 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 72/149
+2026-06-28 19:13:53.591 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 73/149
+2026-06-28 19:13:53.614 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 74/149
+2026-06-28 19:13:53.618 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 75/149
+2026-06-28 19:13:53.784 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 76/149
+2026-06-28 19:13:54.028 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 77/149
+2026-06-28 19:13:54.028 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 78/149
+2026-06-28 19:13:54.086 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 79/149
+2026-06-28 19:13:54.205 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 80/149
+2026-06-28 19:13:54.288 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 81/149
+2026-06-28 19:13:54.391 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 82/149
+2026-06-28 19:13:54.497 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 83/149
+2026-06-28 19:13:54.535 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 84/149
+2026-06-28 19:13:54.703 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 85/149
+2026-06-28 19:13:54.711 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 86/149
+2026-06-28 19:13:54.800 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 87/149
+2026-06-28 19:13:55.107 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 88/149
+2026-06-28 19:13:55.211 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 89/149
+2026-06-28 19:13:55.212 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 90/149
+2026-06-28 19:13:55.212 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 91/149
+2026-06-28 19:13:55.236 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 92/149
+2026-06-28 19:13:55.527 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 93/149
+2026-06-28 19:13:55.634 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 94/149
+2026-06-28 19:13:55.636 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 95/149
+2026-06-28 19:13:55.846 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 96/149
+2026-06-28 19:13:55.864 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 97/149
+2026-06-28 19:13:55.928 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 98/149
+2026-06-28 19:13:55.928 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 99/149
+2026-06-28 19:13:55.934 +08:00 [INF] 已处理 100 条翻译，累计输入 19093 tokens，输出 55597 tokens，估算费用 0.13 元
+2026-06-28 19:13:55.935 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 100/149
+2026-06-28 19:13:56.030 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 101/149
+2026-06-28 19:13:56.132 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 102/149
+2026-06-28 19:13:56.238 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 103/149
+2026-06-28 19:13:56.339 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 104/149
+2026-06-28 19:13:56.578 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 105/149
+2026-06-28 19:13:56.746 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 106/149
+2026-06-28 19:13:56.891 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 107/149
+2026-06-28 19:13:57.081 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 108/149
+2026-06-28 19:13:57.361 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 109/149
+2026-06-28 19:13:57.367 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 110/149
+2026-06-28 19:13:57.463 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 111/149
+2026-06-28 19:13:57.685 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 112/149
+2026-06-28 19:13:57.873 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 113/149
+2026-06-28 19:13:57.921 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 114/149
+2026-06-28 19:13:58.078 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 115/149
+2026-06-28 19:13:58.397 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 116/149
+2026-06-28 19:13:58.695 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 117/149
+2026-06-28 19:13:58.737 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 118/149
+2026-06-28 19:13:59.128 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 119/149
+2026-06-28 19:13:59.715 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 120/149
+2026-06-28 19:13:59.961 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 121/149
+2026-06-28 19:14:00.269 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 122/149
+2026-06-28 19:14:00.445 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 123/149
+2026-06-28 19:14:00.536 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 124/149
+2026-06-28 19:14:00.536 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 125/149
+2026-06-28 19:14:00.641 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 126/149
+2026-06-28 19:14:00.648 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 127/149
+2026-06-28 19:14:01.562 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 128/149
+2026-06-28 19:14:01.869 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 129/149
+2026-06-28 19:14:01.895 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 130/149
+2026-06-28 19:14:02.278 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 131/149
+2026-06-28 19:14:02.787 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 132/149
+2026-06-28 19:14:03.402 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 133/149
+2026-06-28 19:14:03.915 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 134/149
+2026-06-28 19:14:04.257 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 135/149
+2026-06-28 19:14:04.648 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 136/149
+2026-06-28 19:14:05.382 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 137/149
+2026-06-28 19:14:09.562 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 138/149
+2026-06-28 19:14:09.779 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 139/149
+2026-06-28 19:14:10.163 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 140/149
+2026-06-28 19:14:10.272 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 141/149
+2026-06-28 19:14:10.291 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 142/149
+2026-06-28 19:14:10.386 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 143/149
+2026-06-28 19:14:11.495 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 144/149
+2026-06-28 19:14:11.696 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 145/149
+2026-06-28 19:14:17.229 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 146/149
+2026-06-28 19:14:24.088 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 147/149
+2026-06-28 19:14:41.397 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 148/149
+2026-06-28 19:14:41.914 +08:00 [INF] lib/net10.0/Microsoft.Extensions.DependencyModel.xml 进度: 149/149
+2026-06-28 19:14:41.914 +08:00 [INF] 文件完成，本文件翻译 149 条，累计输入 32122 tokens，输出 136270 tokens，估算费用 0.30 元
+2026-06-28 19:14:41.917 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencymodel\10.0.9\lib\net10.0\zh-Hans\Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:14:41.947 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 1/149
+2026-06-28 19:14:41.948 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 2/149
+2026-06-28 19:14:41.948 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 3/149
+2026-06-28 19:14:41.949 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 4/149
+2026-06-28 19:14:41.949 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 5/149
+2026-06-28 19:14:41.949 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 6/149
+2026-06-28 19:14:41.949 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 7/149
+2026-06-28 19:14:41.950 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 8/149
+2026-06-28 19:14:41.950 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 9/149
+2026-06-28 19:14:41.950 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 10/149
+2026-06-28 19:14:41.950 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 11/149
+2026-06-28 19:14:41.950 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 12/149
+2026-06-28 19:14:41.951 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 13/149
+2026-06-28 19:14:41.951 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 14/149
+2026-06-28 19:14:41.951 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 15/149
+2026-06-28 19:14:41.951 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 16/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 17/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 18/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 19/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 20/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 21/149
+2026-06-28 19:14:41.952 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 22/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 23/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 24/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 25/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 26/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 27/149
+2026-06-28 19:14:41.953 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 28/149
+2026-06-28 19:14:41.954 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 29/149
+2026-06-28 19:14:41.954 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 30/149
+2026-06-28 19:14:41.954 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 31/149
+2026-06-28 19:14:41.954 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 32/149
+2026-06-28 19:14:41.954 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 33/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 34/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 35/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 36/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 37/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 38/149
+2026-06-28 19:14:41.955 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 39/149
+2026-06-28 19:14:41.956 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 40/149
+2026-06-28 19:14:41.956 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 41/149
+2026-06-28 19:14:41.956 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 42/149
+2026-06-28 19:14:41.956 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 43/149
+2026-06-28 19:14:41.956 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 44/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 45/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 46/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 47/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 48/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 49/149
+2026-06-28 19:14:41.957 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 50/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 51/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 52/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 53/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 54/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 55/149
+2026-06-28 19:14:41.958 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 56/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 57/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 58/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 59/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 60/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 61/149
+2026-06-28 19:14:41.959 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 62/149
+2026-06-28 19:14:41.960 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 63/149
+2026-06-28 19:14:41.960 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 64/149
+2026-06-28 19:14:41.963 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 65/149
+2026-06-28 19:14:41.963 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 66/149
+2026-06-28 19:14:41.963 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 67/149
+2026-06-28 19:14:41.964 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 68/149
+2026-06-28 19:14:41.964 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 69/149
+2026-06-28 19:14:41.964 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 70/149
+2026-06-28 19:14:41.964 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 71/149
+2026-06-28 19:14:41.965 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 72/149
+2026-06-28 19:14:41.965 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 73/149
+2026-06-28 19:14:41.965 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 74/149
+2026-06-28 19:14:41.965 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 75/149
+2026-06-28 19:14:41.966 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 76/149
+2026-06-28 19:14:41.966 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 77/149
+2026-06-28 19:14:41.966 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 78/149
+2026-06-28 19:14:41.966 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 79/149
+2026-06-28 19:14:41.967 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 80/149
+2026-06-28 19:14:41.967 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 81/149
+2026-06-28 19:14:41.967 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 82/149
+2026-06-28 19:14:41.967 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 83/149
+2026-06-28 19:14:41.968 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 84/149
+2026-06-28 19:14:41.968 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 85/149
+2026-06-28 19:14:41.968 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 86/149
+2026-06-28 19:14:41.968 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 87/149
+2026-06-28 19:14:41.968 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 88/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 89/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 90/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 91/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 92/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 93/149
+2026-06-28 19:14:41.969 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 94/149
+2026-06-28 19:14:41.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 95/149
+2026-06-28 19:14:41.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 96/149
+2026-06-28 19:14:41.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 97/149
+2026-06-28 19:14:41.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 98/149
+2026-06-28 19:14:41.970 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 99/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 100/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 101/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 102/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 103/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 104/149
+2026-06-28 19:14:41.971 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 105/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 106/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 107/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 108/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 109/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 110/149
+2026-06-28 19:14:41.972 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 111/149
+2026-06-28 19:14:41.973 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 112/149
+2026-06-28 19:14:41.973 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 113/149
+2026-06-28 19:14:41.973 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 114/149
+2026-06-28 19:14:41.973 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 115/149
+2026-06-28 19:14:41.973 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 116/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 117/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 118/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 119/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 120/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 121/149
+2026-06-28 19:14:41.974 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 122/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 123/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 124/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 125/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 126/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 127/149
+2026-06-28 19:14:41.975 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 128/149
+2026-06-28 19:14:41.976 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 129/149
+2026-06-28 19:14:41.976 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 130/149
+2026-06-28 19:14:41.976 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 131/149
+2026-06-28 19:14:41.976 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 132/149
+2026-06-28 19:14:41.977 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 133/149
+2026-06-28 19:14:41.979 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 134/149
+2026-06-28 19:14:41.980 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 135/149
+2026-06-28 19:14:41.980 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 136/149
+2026-06-28 19:14:41.980 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 137/149
+2026-06-28 19:14:41.981 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 138/149
+2026-06-28 19:14:41.981 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 139/149
+2026-06-28 19:14:41.981 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 140/149
+2026-06-28 19:14:41.982 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 141/149
+2026-06-28 19:14:41.982 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 142/149
+2026-06-28 19:14:41.982 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 143/149
+2026-06-28 19:14:41.983 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 144/149
+2026-06-28 19:14:41.983 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 145/149
+2026-06-28 19:14:41.983 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 146/149
+2026-06-28 19:14:41.983 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 147/149
+2026-06-28 19:14:41.986 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 148/149
+2026-06-28 19:14:41.986 +08:00 [INF] lib/net462/Microsoft.Extensions.DependencyModel.xml 进度: 149/149
+2026-06-28 19:14:41.988 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencymodel\10.0.9\lib\net462\zh-Hans\Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 1/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 2/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 3/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 4/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 5/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 6/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 7/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 8/149
+2026-06-28 19:14:41.989 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 9/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 10/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 11/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 12/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 13/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 14/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 15/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 16/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 17/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 18/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 19/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 20/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 21/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 22/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 23/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 24/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 25/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 26/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 27/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 28/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 29/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 30/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 31/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 32/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 33/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 34/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 35/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 36/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 37/149
+2026-06-28 19:14:41.990 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 38/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 39/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 40/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 41/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 42/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 43/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 44/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 45/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 46/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 47/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 48/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 49/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 50/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 51/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 52/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 53/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 54/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 55/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 56/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 57/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 58/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 59/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 60/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 61/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 62/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 63/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 64/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 65/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 66/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 67/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 68/149
+2026-06-28 19:14:41.991 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 69/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 70/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 71/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 72/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 73/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 74/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 75/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 76/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 77/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 78/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 79/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 80/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 81/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 82/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 83/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 84/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 85/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 86/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 87/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 88/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 89/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 90/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 91/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 92/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 93/149
+2026-06-28 19:14:41.992 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 94/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 95/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 96/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 97/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 98/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 99/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 100/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 101/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 102/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 103/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 104/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 105/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 106/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 107/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 108/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 109/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 110/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 111/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 112/149
+2026-06-28 19:14:41.993 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 113/149
+2026-06-28 19:14:41.994 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 114/149
+2026-06-28 19:14:41.994 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 115/149
+2026-06-28 19:14:41.994 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 116/149
+2026-06-28 19:14:41.994 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 117/149
+2026-06-28 19:14:41.995 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 118/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 119/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 120/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 121/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 122/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 123/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 124/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 125/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 126/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 127/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 128/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 129/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 130/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 131/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 132/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 133/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 134/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 135/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 136/149
+2026-06-28 19:14:41.996 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 137/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 138/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 139/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 140/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 141/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 142/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 143/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 144/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 145/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 146/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 147/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 148/149
+2026-06-28 19:14:41.997 +08:00 [INF] lib/net8.0/Microsoft.Extensions.DependencyModel.xml 进度: 149/149
+2026-06-28 19:14:41.999 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencymodel\10.0.9\lib\net8.0\zh-Hans\Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 1/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 2/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 3/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 4/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 5/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 6/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 7/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 8/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 9/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 10/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 11/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 12/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 13/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 14/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 15/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 16/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 17/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 18/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 19/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 20/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 21/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 22/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 23/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 24/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 25/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 26/149
+2026-06-28 19:14:42.001 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 27/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 28/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 29/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 30/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 31/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 32/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 33/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 34/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 35/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 36/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 37/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 38/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 39/149
+2026-06-28 19:14:42.002 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 40/149
+2026-06-28 19:14:42.005 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 41/149
+2026-06-28 19:14:42.005 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 42/149
+2026-06-28 19:14:42.005 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 43/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 44/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 45/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 46/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 47/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 48/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 49/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 50/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 51/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 52/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 53/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 54/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 55/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 56/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 57/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 58/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 59/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 60/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 61/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 62/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 63/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 64/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 65/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 66/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 67/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 68/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 69/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 70/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 71/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 72/149
+2026-06-28 19:14:42.006 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 73/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 74/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 75/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 76/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 77/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 78/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 79/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 80/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 81/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 82/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 83/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 84/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 85/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 86/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 87/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 88/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 89/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 90/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 91/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 92/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 93/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 94/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 95/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 96/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 97/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 98/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 99/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 100/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 101/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 102/149
+2026-06-28 19:14:42.007 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 103/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 104/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 105/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 106/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 107/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 108/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 109/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 110/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 111/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 112/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 113/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 114/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 115/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 116/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 117/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 118/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 119/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 120/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 121/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 122/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 123/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 124/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 125/149
+2026-06-28 19:14:42.008 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 126/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 127/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 128/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 129/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 130/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 131/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 132/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 133/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 134/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 135/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 136/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 137/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 138/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 139/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 140/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 141/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 142/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 143/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 144/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 145/149
+2026-06-28 19:14:42.009 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 146/149
+2026-06-28 19:14:42.010 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 147/149
+2026-06-28 19:14:42.010 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 148/149
+2026-06-28 19:14:42.010 +08:00 [INF] lib/net9.0/Microsoft.Extensions.DependencyModel.xml 进度: 149/149
+2026-06-28 19:14:42.015 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencymodel\10.0.9\lib\net9.0\zh-Hans\Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:14:42.016 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 1/149
+2026-06-28 19:14:42.016 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 2/149
+2026-06-28 19:14:42.016 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 3/149
+2026-06-28 19:14:42.016 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 4/149
+2026-06-28 19:14:42.016 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 5/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 6/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 7/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 8/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 9/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 10/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 11/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 12/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 13/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 14/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 15/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 16/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 17/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 18/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 19/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 20/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 21/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 22/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 23/149
+2026-06-28 19:14:42.017 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 24/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 25/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 26/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 27/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 28/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 29/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 30/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 31/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 32/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 33/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 34/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 35/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 36/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 37/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 38/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 39/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 40/149
+2026-06-28 19:14:42.018 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 41/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 42/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 43/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 44/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 45/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 46/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 47/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 48/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 49/149
+2026-06-28 19:14:42.019 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 50/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 51/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 52/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 53/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 54/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 55/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 56/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 57/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 58/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 59/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 60/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 61/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 62/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 63/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 64/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 65/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 66/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 67/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 68/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 69/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 70/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 71/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 72/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 73/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 74/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 75/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 76/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 77/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 78/149
+2026-06-28 19:14:42.020 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 79/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 80/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 81/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 82/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 83/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 84/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 85/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 86/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 87/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 88/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 89/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 90/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 91/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 92/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 93/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 94/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 95/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 96/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 97/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 98/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 99/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 100/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 101/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 102/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 103/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 104/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 105/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 106/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 107/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 108/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 109/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 110/149
+2026-06-28 19:14:42.021 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 111/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 112/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 113/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 114/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 115/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 116/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 117/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 118/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 119/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 120/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 121/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 122/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 123/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 124/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 125/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 126/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 127/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 128/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 129/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 130/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 131/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 132/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 133/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 134/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 135/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 136/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 137/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 138/149
+2026-06-28 19:14:42.022 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 139/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 140/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 141/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 142/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 143/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 144/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 145/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 146/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 147/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 148/149
+2026-06-28 19:14:42.023 +08:00 [INF] lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml 进度: 149/149
+2026-06-28 19:14:42.024 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\microsoft.extensions.dependencymodel\10.0.9\lib\netstandard2.0\zh-Hans\Microsoft.Extensions.DependencyModel.xml
+2026-06-28 19:14:42.024 +08:00 [INF] ===== 包 microsoft.extensions.dependencymodel 完成 =====

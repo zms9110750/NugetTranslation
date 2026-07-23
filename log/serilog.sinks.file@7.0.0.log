@@ -1,0 +1,395 @@
+2026-06-28 17:31:07.433 +08:00 [INF] 正在提取文件: lib/net462/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.435 +08:00 [INF] 正在提取文件: lib/net471/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.436 +08:00 [INF] 正在提取文件: lib/net6.0/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.436 +08:00 [INF] 正在提取文件: lib/net8.0/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.437 +08:00 [INF] 正在提取文件: lib/net9.0/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.438 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Serilog.Sinks.File.xml
+2026-06-28 17:31:07.459 +08:00 [DBG] 缓存缺失: T:Serilog.FileLoggerConfigurationExtensions
+2026-06-28 17:31:07.461 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,System.String,Serilog.Events.LogEventLevel,System.String,System.IFormatProvider,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan})
+2026-06-28 17:31:07.461 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan})
+2026-06-28 17:31:07.461 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,System.String,Serilog.Events.LogEventLevel,System.String,System.IFormatProvider,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan},Serilog.RollingInterval,System.Boolean,System.Nullable{System.Int32},System.Text.Encoding)
+2026-06-28 17:31:07.462 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan},Serilog.RollingInterval,System.Boolean,System.Nullable{System.Int32},System.Text.Encoding)
+2026-06-28 17:31:07.462 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,System.String,Serilog.Events.LogEventLevel,System.String,System.IFormatProvider,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan},Serilog.RollingInterval,System.Boolean,System.Nullable{System.Int32},System.Text.Encoding,Serilog.Sinks.File.FileLifecycleHooks,System.Nullable{System.TimeSpan})
+2026-06-28 17:31:07.463 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan},Serilog.RollingInterval,System.Boolean,System.Nullable{System.Int32},System.Text.Encoding,Serilog.Sinks.File.FileLifecycleHooks,System.Nullable{System.TimeSpan})
+2026-06-28 17:31:07.463 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerAuditSinkConfiguration,System.String,Serilog.Events.LogEventLevel,System.String,System.IFormatProvider,Serilog.Core.LoggingLevelSwitch)
+2026-06-28 17:31:07.464 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerAuditSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch)
+2026-06-28 17:31:07.464 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerAuditSinkConfiguration,System.String,Serilog.Events.LogEventLevel,System.String,System.IFormatProvider,Serilog.Core.LoggingLevelSwitch,System.Text.Encoding,Serilog.Sinks.File.FileLifecycleHooks)
+2026-06-28 17:31:07.465 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerAuditSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,Serilog.Core.LoggingLevelSwitch,System.Text.Encoding,Serilog.Sinks.File.FileLifecycleHooks)
+2026-06-28 17:31:07.465 +08:00 [DBG] 缓存缺失: T:Serilog.RollingInterval
+2026-06-28 17:31:07.466 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Infinite
+2026-06-28 17:31:07.466 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Year
+2026-06-28 17:31:07.466 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Month
+2026-06-28 17:31:07.466 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Day
+2026-06-28 17:31:07.467 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Hour
+2026-06-28 17:31:07.467 +08:00 [DBG] 缓存缺失: F:Serilog.RollingInterval.Minute
+2026-06-28 17:31:07.467 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.FileLifecycleHooks
+2026-06-28 17:31:07.468 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileLifecycleHooks.OnFileOpened(System.String,System.IO.Stream,System.Text.Encoding)
+2026-06-28 17:31:07.468 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileLifecycleHooks.OnFileOpened(System.IO.Stream,System.Text.Encoding)
+2026-06-28 17:31:07.468 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileLifecycleHooks.OnFileDeleting(System.String)
+2026-06-28 17:31:07.469 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileLifecycleHooks.Then(Serilog.Sinks.File.FileLifecycleHooks)
+2026-06-28 17:31:07.469 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.FileSink
+2026-06-28 17:31:07.469 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileSink.#ctor(System.String,Serilog.Formatting.ITextFormatter,System.Nullable{System.Int64},System.Text.Encoding,System.Boolean)
+2026-06-28 17:31:07.470 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileSink.Emit(Serilog.Events.LogEvent)
+2026-06-28 17:31:07.470 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileSink.Dispose
+2026-06-28 17:31:07.470 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.FileSink.FlushToDisk
+2026-06-28 17:31:07.470 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.IFileSink
+2026-06-28 17:31:07.471 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.IFlushableFileSink
+2026-06-28 17:31:07.471 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.IFlushableFileSink.FlushToDisk
+2026-06-28 17:31:07.471 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.NullSink
+2026-06-28 17:31:07.471 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.PeriodicFlushToDiskSink
+2026-06-28 17:31:07.472 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.PeriodicFlushToDiskSink.#ctor(Serilog.Core.ILogEventSink,System.TimeSpan)
+2026-06-28 17:31:07.472 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.PeriodicFlushToDiskSink.Emit(Serilog.Events.LogEvent)
+2026-06-28 17:31:07.474 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.PeriodicFlushToDiskSink.Dispose
+2026-06-28 17:31:07.475 +08:00 [DBG] 缓存缺失: T:Serilog.Sinks.File.SharedFileSink
+2026-06-28 17:31:07.476 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.SharedFileSink.#ctor(System.String,Serilog.Formatting.ITextFormatter,System.Nullable{System.Int64},System.Text.Encoding)
+2026-06-28 17:31:07.476 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.SharedFileSink.Emit(Serilog.Events.LogEvent)
+2026-06-28 17:31:07.477 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.SharedFileSink.Dispose
+2026-06-28 17:31:07.477 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.SharedFileSink.FlushToDisk
+2026-06-28 17:31:11.397 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 17:31:12.060 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 17:31:12.436 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 17:31:12.486 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 17:31:12.691 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 17:31:13.175 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 17:31:14.036 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 17:31:14.127 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 17:31:14.906 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 17:31:15.298 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 17:31:15.636 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 17:31:15.853 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 17:31:16.026 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 17:31:16.202 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 17:31:16.797 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 17:31:17.009 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 17:31:17.646 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 17:31:18.067 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 17:31:20.401 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 17:31:21.413 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 17:31:22.115 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 17:31:22.510 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 17:31:24.100 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 17:31:25.677 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 17:31:26.293 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 17:31:27.075 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 17:31:27.106 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 17:31:28.220 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 17:31:29.400 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 17:31:31.415 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 17:31:32.761 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 17:31:33.686 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 17:31:35.048 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 17:31:39.806 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 17:31:40.601 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 17:31:58.030 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 17:32:06.256 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 17:32:06.529 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 17:48:35.243 +08:00 [INF] 正在提取文件: lib/net462/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.244 +08:00 [INF] 正在提取文件: lib/net471/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.245 +08:00 [INF] 正在提取文件: lib/net6.0/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.245 +08:00 [INF] 正在提取文件: lib/net8.0/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.246 +08:00 [INF] 正在提取文件: lib/net9.0/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.246 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Serilog.Sinks.File.xml
+2026-06-28 17:48:35.257 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 17:48:35.257 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 17:48:35.257 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan})
+2026-06-28 17:48:35.258 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 17:48:35.258 +08:00 [DBG] 缓存缺失: M:Serilog.FileLoggerConfigurationExtensions.File(Serilog.Configuration.LoggerSinkConfiguration,Serilog.Formatting.ITextFormatter,System.String,Serilog.Events.LogEventLevel,System.Nullable{System.Int64},Serilog.Core.LoggingLevelSwitch,System.Boolean,System.Boolean,System.Nullable{System.TimeSpan},Serilog.RollingInterval,System.Boolean,System.Nullable{System.Int32},System.Text.Encoding)
+2026-06-28 17:48:35.259 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 17:48:35.259 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 17:48:35.259 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 17:48:35.259 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 17:48:35.259 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 17:48:35.260 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 17:48:35.261 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 17:48:35.262 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 17:48:35.263 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 17:48:35.263 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 17:48:35.263 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 17:48:35.263 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 17:48:35.263 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.PeriodicFlushToDiskSink.#ctor(Serilog.Core.ILogEventSink,System.TimeSpan)
+2026-06-28 17:48:35.264 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 17:48:35.264 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 17:48:35.264 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 17:48:35.265 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 17:48:35.265 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 17:48:35.265 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 17:48:35.265 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 17:49:00.627 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 17:49:12.701 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:05.948 +08:00 [INF] 正在提取文件: lib/net462/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.949 +08:00 [INF] 正在提取文件: lib/net471/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.950 +08:00 [INF] 正在提取文件: lib/net6.0/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.951 +08:00 [INF] 正在提取文件: lib/net8.0/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.951 +08:00 [INF] 正在提取文件: lib/net9.0/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.952 +08:00 [INF] 正在提取文件: lib/netstandard2.0/Serilog.Sinks.File.xml
+2026-06-28 18:05:05.956 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:05.956 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:05.958 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:05.958 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:05.959 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:05.959 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:05.960 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:05.960 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:05.960 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:05.961 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:05.964 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:05.964 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:05.965 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:05.966 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:05.966 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:05.967 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:05.967 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:05.967 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:05.967 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:05.968 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:05.968 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:05.969 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:05.969 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:05.969 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:05.970 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:05.970 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:05.970 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:05.971 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:05.971 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:05.971 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:05.971 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:05.972 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:05.972 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:05.972 +08:00 [DBG] 缓存缺失: M:Serilog.Sinks.File.PeriodicFlushToDiskSink.#ctor(Serilog.Core.ILogEventSink,System.TimeSpan)
+2026-06-28 18:05:05.973 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:05.973 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:05.973 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:05.974 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:05.974 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:05.974 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:05.974 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.523 +08:00 [INF] lib/net462/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.524 +08:00 [INF] 文件完成，本文件翻译 1 条，累计输入 341 tokens，输出 1027 tokens，估算费用 0.00 元
+2026-06-28 18:05:16.525 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\net462\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.526 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:16.526 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:16.526 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:16.526 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:16.527 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:16.528 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:16.529 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:16.529 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:16.530 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:16.530 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:16.530 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:16.545 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:16.545 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:16.545 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:16.545 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:16.546 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:16.547 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:16.547 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:16.547 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:16.547 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:16.547 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:16.548 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:16.548 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.548 +08:00 [INF] lib/net471/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.549 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\net471\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.550 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:16.551 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:16.552 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:16.553 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:16.553 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.553 +08:00 [INF] lib/net6.0/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.554 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\net6.0\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.555 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:16.555 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:16.555 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:16.555 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:16.555 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:16.557 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:16.557 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:16.558 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.559 +08:00 [INF] lib/net8.0/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.560 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\net8.0\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:16.562 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:16.563 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:16.564 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:16.565 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.566 +08:00 [INF] lib/net9.0/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.567 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\net9.0\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.568 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 1/41
+2026-06-28 18:05:16.568 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 2/41
+2026-06-28 18:05:16.568 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 3/41
+2026-06-28 18:05:16.568 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 4/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 5/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 6/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 7/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 8/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 9/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 10/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 11/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 12/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 13/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 14/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 15/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 16/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 17/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 18/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 19/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 20/41
+2026-06-28 18:05:16.569 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 21/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 22/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 23/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 24/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 25/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 26/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 27/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 28/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 29/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 30/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 31/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 32/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 33/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 34/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 35/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 36/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 37/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 38/41
+2026-06-28 18:05:16.570 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 39/41
+2026-06-28 18:05:16.571 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 40/41
+2026-06-28 18:05:16.571 +08:00 [INF] lib/netstandard2.0/Serilog.Sinks.File.xml 进度: 41/41
+2026-06-28 18:05:16.572 +08:00 [INF] 完成文件: C:\Users\16229\source\OpenSourceLibrary\NugetTranslation\packages\serilog.sinks.file\7.0.0\lib\netstandard2.0\zh-Hans\Serilog.Sinks.File.xml
+2026-06-28 18:05:16.572 +08:00 [INF] ===== 包 serilog.sinks.file 完成 =====
