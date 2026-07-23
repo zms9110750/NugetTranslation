@@ -211,8 +211,10 @@ PublishScripts/
 *.nuget.targets
 # My project output directory cannot be ignored
 !packages/*
+!src/NugetTranslation/packages/*
 # log/ 是翻译运行时日志，需跟踪
 !log/
+!src/NugetTranslation/log/
 
 
 # Microsoft Azure Build Output
