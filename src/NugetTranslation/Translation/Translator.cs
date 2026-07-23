@@ -34,10 +34,7 @@ internal sealed class Translator
         var result = new ParseResult(original);
 
         // —— 创建 agent ——
-        var tool = AIFunctionFactory.Create(
-            (string translatedText) => result.TrySet(translatedText),
-            name: "ValidateTranslation",
-            description: "验证 AI 的翻译结果是否符合 XML 格式，name 属性是否正确");
+        var tool = AIFunctionFactory.Create(result.ValidateTranslation);
 
         var agent = new ChatClientAgent(
             _chatClient.AsIChatClient(),
@@ -52,8 +49,8 @@ internal sealed class Translator
             tools: [tool]);
 
         // 中间件：检测 ParseResult.Translated 是否被设置。
-        // TrySet 返回 null（验证通过）→ Translated 非 null → ctx.Terminate 终止对话。
-        // TrySet 返回 string（验证失败）→ AI 在工具结果中看到错误 → 自行重试翻译。
+        // ValidateTranslation 返回 null（验证通过）→ Translated 非 null → ctx.Terminate 终止对话。
+        // ValidateTranslation 返回 string（验证失败）→ AI 在工具结果中看到错误 → 自行重试翻译。
         var builder = new AIAgentBuilder(agent);
         builder.Use(async (inner, ctx, next, ct2) =>
         {
@@ -119,7 +116,7 @@ internal sealed class Translator
         }
 
         /// <summary>验证并设置翻译结果。成功返回 null，失败返回错误消息字符串。</summary>
-        public string? TrySet([Description("AI 生成的翻译后 XML 文本")] string raw)
+        public string? ValidateTranslation([Description("AI 生成的翻译后 XML 文本")] string raw)
         {
             // 去除 markdown fence（断言正则，直接取 Value）
             var match = FenceRegex.Match(raw);
