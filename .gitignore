@@ -211,6 +211,9 @@ PublishScripts/
 *.nuget.targets
 # My project output directory cannot be ignored
 !packages/*
+cache/
+/logs/
+**/[Ll]og/
 
 
 # Microsoft Azure Build Output
