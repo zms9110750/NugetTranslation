@@ -47,7 +47,14 @@ internal sealed class PackageProcessor
                 var key = member.ToString();
                 var maybe = await cache.TryGetAsync<string>(key);
                 if (!maybe.HasValue)
+                {
                     missingSet.Add(key);
+                }
+                else
+                {
+                    _cacheHitTokens += _tokenizer.CountTokens(key,
+                        considerPreTokenization: true, considerNormalization: true);
+                }
             }
         }
 
@@ -102,21 +109,19 @@ internal sealed class PackageProcessor
         }
     }
 
-    /// <summary>翻译一条 member，并发安全。</summary>
+    /// <summary>翻译一条 member，并发安全。预检已保证缓存未命中，直接走翻译路径。</summary>
     private async Task TranslateOneAsync(string key, IFusionCache cache, SemaphoreSlim semaphore)
     {
         await semaphore.WaitAsync();
         try
         {
             var nameAttr = XElement.Parse(key).Attribute("name")?.Value ?? "";
-            bool wasCached = true;
 
             try
             {
                 await cache.GetOrSetAsync(key,
                     async ct =>
                     {
-                        wasCached = false;
                         var result = await _translator.TranslateMemberAsync(key, readme: null, ct);
                         var usage = _translator.LastUsage;
                         if (usage is not null)
@@ -137,13 +142,6 @@ internal sealed class PackageProcessor
             }
 
             var processed = Interlocked.Increment(ref _done);
-
-            if (wasCached)
-            {
-                var savedTokens = _tokenizer.CountTokens(key,
-                    considerPreTokenization: true, considerNormalization: true);
-                Interlocked.Add(ref _cacheHitTokens, savedTokens);
-            }
 
             if (processed % 100 == 0)
             {

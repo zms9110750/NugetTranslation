@@ -8,7 +8,7 @@ var root = Root.Create();
 var parseResult = root.Parse(args);
 
 // === 决定工作目录 ===
-var flags = parseResult.GetValue(Root.Flags);
+var flags = parseResult.GetValue(Root.Profile);
 string? baseDir = null;
 
 if (!string.IsNullOrEmpty(flags))

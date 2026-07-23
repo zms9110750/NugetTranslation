@@ -34,7 +34,8 @@ internal sealed class Translator
         var result = new ParseResult(original);
 
         // —— 创建 agent ——
-        var tool = AIFunctionFactory.Create(result.TrySet,
+        var tool = AIFunctionFactory.Create(
+            (string translatedText) => result.TrySet(translatedText),
             name: "ValidateTranslation",
             description: "验证 AI 的翻译结果是否符合 XML 格式，name 属性是否正确");
 
@@ -50,7 +51,9 @@ internal sealed class Translator
             name: "Translator",
             tools: [tool]);
 
-        // 中间件：工具返回 null（成功）→ 终止对话；返回 string（错误）→ AI 在工具结果中看到并重试
+        // 中间件：检测 ParseResult.Translated 是否被设置。
+        // TrySet 返回 null（验证通过）→ Translated 非 null → ctx.Terminate 终止对话。
+        // TrySet 返回 string（验证失败）→ AI 在工具结果中看到错误 → 自行重试翻译。
         var builder = new AIAgentBuilder(agent);
         builder.Use(async (inner, ctx, next, ct2) =>
         {
@@ -68,10 +71,8 @@ internal sealed class Translator
         if (!string.IsNullOrEmpty(readme))
         {
             messages.Add(new ChatMessage(ChatRole.User,
-                [
-                    new TextContent($"这是包的 Readme，帮助了解上下文：\n{readme}"),
-                    new TextContent($"这是你要翻译的内容：\n{memberXml}")
-                ]));
+                [new TextContent(
+                    $"这是包的 Readme，帮助了解上下文：\n{readme}\n\n这是你要翻译的内容：\n{memberXml}")]));
         }
         else
         {

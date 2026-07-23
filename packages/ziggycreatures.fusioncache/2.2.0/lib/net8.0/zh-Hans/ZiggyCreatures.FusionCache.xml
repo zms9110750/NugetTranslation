@@ -79,7 +79,7 @@
             将背板消息序列化为字节数组。
             </summary>
   <param name="message">要序列化的背板消息。</param>
-  <returns>消息作为字节数组返回。</returns>
+  <returns></returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.Backplane.BackplaneMessage.FromByteArray(System.Byte[])">
   <summary>
             将字节数组反序列化为背板消息。
@@ -538,8 +538,6 @@
   <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCache.DefaultEntryOptions">
   <inheritdoc />
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCache.DefaultEntryOptionsProvider">
-  <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.CreateEntryOptions(System.Action{ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions},System.Nullable{System.TimeSpan})">
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.SetupSerializer(ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer)">
@@ -562,18 +560,17 @@
   <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCache.Backplane">
   <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.SetupDistributedLocker(ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.RemoveDistributedLocker">
-  <inheritdoc />
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCache.HasDistributedLocker">
-  <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCache.Events">
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.AddPlugin(ZiggyCreatures.Caching.Fusion.Plugins.IFusionCachePlugin)">
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.RemovePlugin(ZiggyCreatures.Caching.Fusion.Plugins.IFusionCachePlugin)">
   <inheritdoc />
+</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.Dispose(System.Boolean)">
+  <summary>
+            释放 FusionCache 管理的所有资源。
+            </summary>
+  <param name="disposing">指示是否正在进行释放操作。</param>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCache.Dispose">
   <summary>
     释放由 FusionCache 管理的所有资源。
@@ -667,17 +664,10 @@
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
   <param name="cacheKeyPrefix">要使用的缓存键前缀。</param>
   <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithCacheKeyPrefixByCacheName(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
-  <summary>
-            指定使用缓存键前缀，由 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheName" /> 和 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.CacheKeyPrefixSeparator" /> 分隔符组成。
-            <br /><br /><strong>示例</strong>：如果 CacheName 为"MyCache"，分隔符为":"，则 CacheKeyPrefix 将为"MyCache:"，这样后续调用 cache.GetOrDefault("Product/123") 实际上会在缓存键"MyCache:Product/123"上工作。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithCacheKeyPrefix(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
-            指定使用缓存键前缀，由 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheName" /> 和 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.CacheKeyPrefixSeparator" /> 分隔符组成。
-            <br /><br /><strong>示例</strong>：如果 CacheName 为 "MyCache"，分隔符为 ":"，则 CacheKeyPrefix 将为 "MyCache:"，这样后续对 cache.GetOrDefault("Product/123") 的调用实际上将在缓存键 "MyCache:Product/123" 上工作。
+            指定使用缓存键前缀，由 CacheName 和 ":" 分隔符组成。
+            <br /><br /><strong>示例</strong>：如果 CacheName 是 "MyCache"，则 CacheKeyPrefix 将是 "MyCache:"，这样后续调用 cache.GetOrDefault("Product/123") 实际上会操作缓存键 "MyCache:Product/123"。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
   <returns>
@@ -892,58 +882,6 @@
   <param name="factory">用于创建内存锁的工厂，可访问 <see cref="T:System.IServiceProvider" />。</param>
   <returns>
     <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithRegisteredDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
-  <summary>
-            构建器将在 DI 容器中查找已注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 服务并使用它，如果找不到则会抛出异常。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithRegisteredKeyedDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Object)">
-  <summary>
-            生成器将在 DI 容器中查找已注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 键控服务并使用它，如果找不到则会抛出异常。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <param name="serviceKey">要使用的键控服务键。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithRegisteredKeyedDistributedLockerByCacheName(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
-  <summary>
-            构建器将查找在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 键控服务（以 CacheName 作为 serviceKey），并使用它，如果找不到则会抛出异常。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.TryWithRegisteredDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
-  <summary>
-            指示构建器是否应尝试查找并使用在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 服务。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.TryWithRegisteredKeyedDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Object)">
-  <summary>
-            指示生成器是否应尝试查找并使用在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 键控服务。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <param name="serviceKey">要使用的键控服务键。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.TryWithRegisteredKeyedDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
-  <summary>
-            指示构建器是否应尝试查找并使用在DI容器中注册的<see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" />键控服务（以CacheName作为serviceKey）。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
-  <param name="builder">要操作的<see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回<see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker)">
-  <summary>
-            指定要使用的自定义 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 实例。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <param name="distributedLocker">要使用的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 实例。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithDistributedLocker(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Func{System.IServiceProvider,ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker})">
-  <summary>
-            指定一个自定义的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 工厂以供使用。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
-  <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <param name="factory">用于创建分布式锁的工厂，可访问 <see cref="T:System.IServiceProvider" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链接其他调用。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithRegisteredSerializer(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
             指示构建器是否应尝试查找并使用在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" /> 服务。
@@ -1084,11 +1022,11 @@
   <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链接其他调用。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithDistributedCache(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Func{System.IServiceProvider,Microsoft.Extensions.Caching.Distributed.IDistributedCache},ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer)">
   <summary>
-            指定要使用的自定义 <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> 工厂。
+            指定要使用的自定义 <see cref="T:ZiggyCreatures.Caching.Fusion.Backplane.IFusionCacheBackplane" /> 工厂。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /></summary>
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <param name="factory">用于创建分布式缓存的工厂，可访问 <see cref="T:System.IServiceProvider" />。</param>
-  <param name="serializer">要使用的 <see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" /> 实例，或 <see langword="null" /> 以保留在另一个调用中指定的实例。</param>
+  <param name="factory">用于创建后台板的工厂，可访问 <see cref="T:System.IServiceProvider" />。</param>
+  <param name="serializer">要使用的 <see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" /> 实例，或 <see langword="null" /> 以保留在另一次调用中指定的实例。</param>
   <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithoutDistributedCache(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
@@ -1222,23 +1160,23 @@
   <returns>返回<see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链接其他调用。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.AsHybridCache(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
-            将此 FusionCache 实例也注册为 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务，这样即使您需要依赖 Microsoft 自己的混合缓存抽象，也可以使用它。
+            也将此 FusionCache 实例注册为 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务，以便即使在需要依赖 Microsoft 自己的混合缓存抽象时也可以使用它。
             </summary>
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
+  <returns></returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.AsKeyedHybridCache(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Object)">
   <summary>
-            同时将此 FusionCache 实例注册为键控的 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务，以便即使在需要依赖微软自家的混合缓存抽象时，甚至使用 [FromKeyedServices] 属性时，也能使用它。
+            将此 FusionCache 实例也注册为键控 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务，以便在您需要依赖 Microsoft 自己的混合缓存抽象时，甚至在使用 [FromKeyedServices] 属性时，也可以使用它。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
   <param name="serviceKey">要使用的键控服务键。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
+  <returns></returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.AsKeyedHybridCacheByCacheName(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
-            也将此 FusionCache 实例注册为键控的 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务（以 CacheName 作为 serviceKey），以便即使在您需要依赖 Microsoft 自己的混合缓存抽象时，甚至在使用 [FromKeyedServices] 属性时，也可以使用它。
+            也将此 FusionCache 实例注册为键控 <see cref="T:Microsoft.Extensions.Caching.Hybrid.HybridCache" /> 服务（以 CacheName 作为 serviceKey），以便在需要依赖 Microsoft 自己的混合缓存抽象时，甚至在使用 [FromKeyedServices] 特性时也能使用它。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/DependencyInjection.md" /><br /><br /><strong>文档：</strong><see href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services" /></summary>
   <param name="builder">要操作的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
+  <returns></returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithPostSetup(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder,System.Action{System.IServiceProvider,ZiggyCreatures.Caching.Fusion.IFusionCache})">
   <summary>
             指定一个自定义的后设置操作，该操作将在 FusionCache 实例创建之后、返回给调用方之前被调用。
@@ -1274,10 +1212,10 @@
   <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheBuilderExtMethods.WithNullImplementation(ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder)">
   <summary>
-            不使用默认实现（<see cref="T:ZiggyCreatures.Caching.Fusion.FusionCache" />），而是使用空实现（<see cref="T:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache" />）。
+            不使用默认实现（<see cref="T:ZiggyCreatures.Caching.Fusion.FusionCache" />），而是使用空实现（<see cref="T:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache" />）。"/&gt;
             </summary>
   <param name="builder"></param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder" />，以便可以链式调用其他方法。</returns>
+  <returns></returns>
   <exception cref="T:System.ArgumentNullException"></exception>
 </member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheDiagnostics">
   <summary>
@@ -1368,10 +1306,6 @@
   <summary>
             尝试在工厂执行期间获取内存锁时应用的超时时间。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.DistributedLockTimeout">
-  <summary>
-            在工厂执行期间尝试获取分布式锁时要应用的超时时间。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.JitterMaxDuration">
   <summary>
             以随机方式添加到正常 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.Duration" /> 的最大额外持续时间，以实现更多变的过期时间。
@@ -1422,10 +1356,6 @@
   <summary>
             启用已命中合成超时（软超时和硬超时）的工厂在后台完成并更新缓存中的新值。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Timeouts.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.MemoryCacheDuration">
-  <summary>
-            内存缓存的特定持续时间。如果未设置，将使用 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.Duration" />。
-            <br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.DistributedCacheDuration">
   <summary>
     分布式缓存的特定持续时间（如果有）。如果未设置，则使用 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.Duration" />。
@@ -1528,10 +1458,6 @@
             通过使用提供的<see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" />，启用从缓存返回的值的自动克隆。
             <br></br><strong>注意：</strong>如果未设置<see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" />，或者返回的值无法（反）序列化，将抛出异常。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/AutoClone.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SkipDistributedLocker">
-  <summary>
-            获取或设置一个值，指示是否在操作期间绕过分布式锁定机制。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.ToString">
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.GetJitterDurationMs">
@@ -1564,12 +1490,6 @@
     <br /><strong>注意：</strong> 过期时间并非字面意义上的“无限”，而是设置为 <see cref="F:System.DateTimeOffset.MaxValue" />，也就是 9999 年 12 月 31 日。如果真有那么一天到来，而你遇到了问题，欢迎随时联系我 ;-)
     <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
   <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SetMemoryCacheDuration(System.Nullable{System.TimeSpan})">
-  <summary>
-            将 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.MemoryCacheDuration" /> 设置为指定的 <see cref="T:System.TimeSpan" /> 值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <param name="duration">要设置的持续时间。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" /> 以便可以链式调用其他方法。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SetDistributedCacheDuration(System.Nullable{System.TimeSpan})">
   <summary>
             将 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.DistributedCacheDuration" /> 设置为指定的 <see cref="T:System.TimeSpan" /> 值。
@@ -1739,13 +1659,6 @@
     <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SkipMemoryCacheWrite" /> 选项的值。</param>
   <returns>
     <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />，以便可以链式调用其他方法。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SetSkipDistributedLocker(System.Boolean)">
-  <summary>
-            设置 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SkipDistributedLocker" /> 选项。
-            <br /><br /><strong>DOCS:</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /><br /><strong>DOCS:</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <param name="skip">
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SkipDistributedLocker" /> 选项的值。</param>
-  <returns>返回 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />，以便可以链式调用其他方法。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.SetAutoClone(System.Boolean)">
   <summary>
             设置 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.EnableAutoClone" /> 选项。
@@ -1759,36 +1672,6 @@
             </summary>
   <param name="duration">一个自定义的 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.Duration" />，如果指定，将覆盖当前的值。</param>
   <returns>新创建的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" /> 对象。</returns>
-</member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProvider">
-  <summary>
-            一个基于键获取 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" /> 的提供程序。
-            <br /><br />
-            ⚠️ <strong>重要提示：</strong> 在你的 GetEntryOptions() 实现中，请仔细设置 canMutate out 参数，以指示返回的对象是否可以修改。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProvider.GetEntryOptions(ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProviderContext,System.String,System.Boolean@)">
-  <summary>
-            根据键提供条目选项，可以通过返回新实例或返回对现有实例的引用（以提高性能）。
-            <br /><br />
-            ⚠️ <strong>重要提示：</strong>请仔细设置 <paramref name="canMutate" /> 输出参数，以指示返回的对象是否可以变更。
-            </summary>
-  <param name="ctx">上下文，包含支持功能。</param>
-  <param name="key">缓存键。</param>
-  <param name="canMutate">一个输出参数，指示返回的对象是否可以变更。</param>
-  <returns>条目选项。</returns>
-</member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProviderContext">
-  <summary>
-            传递给 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultEntryOptionsProvider" /> 的上下文，用于根据缓存键获取默认的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProviderContext.#ctor(ZiggyCreatures.Caching.Fusion.IFusionCache)">
-  <summary>
-            创建一个新的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProviderContext" /> 实例。
-            </summary>
-  <param name="cache">对相关 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 实例的引用。</param>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptionsProviderContext.DuplicateDefaultEntryOptions">
-  <summary>
-            复制 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultEntryOptions" /> 以允许后续自定义。
-            </summary>
-  <returns>一个 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" /> 实例。</returns>
 </member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheExtMethods">
   <summary>
             一组扩展方法，为任何 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 实例和其他常见对象添加一些常用的重载。
@@ -1803,8 +1686,6 @@
             返回默认的 FusionCache 实例，即 CacheName 等于 <see cref="F:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultCacheName" /> 的实例，如果未找到则返回 <see langword="null" />。
             </summary>
   <returns>默认的 FusionCache 实例。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheExtMethods.CreateEntryOptions(ZiggyCreatures.Caching.Fusion.IFusionCache,System.String,System.Action{ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions},System.Nullable{System.TimeSpan})">
-  <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheExtMethods.GetOrSetAsync``1(ZiggyCreatures.Caching.Fusion.IFusionCache,System.String,``0,System.TimeSpan,System.Threading.CancellationToken)">
   <summary>
             在缓存中获取指定 <paramref name="key" /> 的类型为 <typeparamref name="TValue" /> 的值：如果不存在，则根据提供的 <paramref name="duration" /> 保存 <paramref name="defaultValue" />。
@@ -2755,16 +2636,6 @@
         <br />
         它包含各种内容，例如在工厂执行期间可修改的条目选项（请参阅自适应缓存）、LastModified/Etag（请参阅条件刷新）以及一些有用的方法。
         <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/AdaptiveCaching.md" /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/ConditionalRefresh.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheFactoryExecutionContext`1.Key">
-  <summary>
-            处理后的缓存键：它可以包含可选的加工内容（例如：请参阅 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheKeyPrefix" />）。
-            <br /><br /><strong>示例：</strong>如果 CacheKeyPrefix 为 "MyPrefix:"，且传递给 GetOrSet 调用的键为 "MyKey"，则 Key 的值将为 "MyPrefix:MyKey"。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheFactoryExecutionContext`1.OriginalKey">
-  <summary>
-            传递给 GetOrSet 调用的原始缓存键：它不会包含任何可选的处理（例如：请参阅 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheKeyPrefix" />）。
-            <br /><br /><strong>示例：</strong>如果 CacheKeyPrefix 为 "MyPrefix:"，且传递给 GetOrSet 调用的键为 "MyKey"，则 OriginalKey 的值为 "MyKey"，不应用 CacheKeyPrefix。
-            </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheFactoryExecutionContext`1.Options">
   <summary>
     当前使用的选项：可以修改它们以实现自适应缓存。
@@ -2793,10 +2664,6 @@
   <summary>
             指示缓存值是否有 LastModified 值。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/ConditionalRefresh.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheFactoryExecutionContext`1.StaleTags">
-  <summary>
-            与过期条目相关的可选标签集。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheFactoryExecutionContext`1.Tags">
   <summary>
             与条目相关的可选标签集：可用于通过标签同时移除/过期多个条目。
@@ -2859,10 +2726,6 @@
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheGlobalDefaults.EntryOptionsAllowTimedOutFactoryBackgroundCompletion">
   <summary>
             全局默认 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.AllowTimedOutFactoryBackgroundCompletion" />。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheGlobalDefaults.EntryOptionsMemoryCacheDuration">
-  <summary>
-            全局默认的 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.MemoryCacheDuration" />。
             </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheGlobalDefaults.EntryOptionsDistributedCacheDuration">
   <summary>
@@ -2952,130 +2815,18 @@
   <summary>
             全局默认的 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.EnableAutoClone" />。
             </summary>
-</member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings">
-  <summary>
-    表示 FusionCache 用于处理缓存键、标签等的内部字符串。
-    <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultCacheKeyPrefixSeparator">
-  <summary>
-            默认值，用于 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.CacheKeyPrefixSeparator" />。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/NamedCaches.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultTagCacheKeyPrefix">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.TagCacheKeyPrefix" /> 的默认值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultClearRemoveTag">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.ClearRemoveTag" /> 的默认值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultClearExpireTag">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.ClearExpireTag" /> 的默认值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultDistributedCacheWireFormatSeparator">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DistributedCacheWireFormatSeparator" /> 的默认值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheLevels.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultBackplaneWireFormatSeparator">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.BackplaneWireFormatSeparator" /> 的默认值。
-      <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Backplane.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultBackplaneChannelNameSeparator">
-  <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.BackplaneChannelNameSeparator" /> 的默认值。
-            <br /><br /><strong>文档:</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Backplane.md" /></summary>
-</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DefaultDistributedLockerLockNameSuffix">
-  <summary>
-            针对 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DistributedLockerLockNameSuffix" /> 的默认值。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /></summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.#ctor">
-  <summary>
-    创建一个新的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings" /> 对象实例。
-    </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.CacheKeyPrefixSeparator">
-  <summary>
-            当 FusionCache 被指示通过缓存名称设置 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheKeyPrefix" /> 时，它会将 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheName" /> 和此分隔符组合在一起。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/NamedCaches.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.TagCacheKeyPrefix">
-  <summary>
-    用于与标签相关条目的缓存键前缀。
-    <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.ClearRemoveTag">
-  <summary>
-            用于表示 Clear(false) 的特殊标签，意为"移除全部"。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Clear.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.ClearExpireTag">
-  <summary>
-            用于表示 Clear(true) 的特殊标签，意为"过期全部"。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Clear.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DistributedCacheWireFormatSeparator">
-  <summary>
-            用于分布式缓存线路格式的线路格式版本分隔符，在缓存键处理中使用。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheLevels.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.BackplaneWireFormatSeparator">
-  <summary>
-            用于通道名称的后台传输格式版本分隔符。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Backplane.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.BackplaneChannelNameSeparator">
-  <summary>
-            后背板通道名称的分隔符。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Backplane.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.DistributedLockerLockNameSuffix">
-  <summary>
-            用于分布式锁定器的锁定名称的后缀。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/CacheStampede.md" /></summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.SetToSafeStrings(System.Char,System.Char)">
-  <summary>
-            设置 FusionCache 使用的内部字符串，使其仅使用有限的常用「安全」字符子集：
-            <br />
-            - 拉丁字母数字字符（a-zA-Z0-9）
-            <br />
-            - 首选「分隔符」（默认为 "-"）
-            <br />
-            - 首选「特殊字符」（默认为 "_"）
-            <br /><br />
-            要查看最终结果，只需调用 <see cref="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.GetAll" />。
-            <br /><br /><strong>注意：</strong>如果需要，分隔符和特殊字符可以相同。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <param name="separator">首选的分隔符。</param>
-  <param name="specialChar">首选的特殊字符。</param>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.SetToDefaultStrings">
-  <summary>
-            将 FusionCache 使用的内部字符串重置为默认值。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.GetAll">
-  <summary>
-            获取 FusionCache 当前配置中使用的所有内部字符串的列表（通常用于调试目的）。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <returns>包含所有当前配置的内部字符串的字符串数组。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings.Duplicate">
-  <summary>
-            通过复制当前对象的所有选项来创建一个新的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings" /> 对象。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <returns>新创建的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInternalStrings" /> 对象。</returns>
-</member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException">
-  <summary>
-            当分布式缓存发生错误时抛出的通用异常：InnerException包含原始异常。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException.#ctor">
-  <summary>
-            初始化 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException" /> 类的新实例。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException.#ctor(System.String)">
-  <summary>初始化 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException" /> 类的新实例，其中包含指定的错误信息。</summary>
-  <param name="message">描述错误的信息。</param>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException.#ctor(System.String,System.Exception)">
-  <summary>使用指定的错误消息和对导致此异常的内部异常的引用来初始化 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheInvalidOptionsException" /> 类的新实例。</summary>
-  <param name="message">解释异常原因的错误消息。</param>
-  <param name="innerException">导致当前异常的异常。如果 innerException 参数不为空引用（在 Visual Basic 中为 Nothing），则会在处理内部异常的 catch 块中引发当前异常。</param>
 </member><member name="T:ZiggyCreatures.Caching.Fusion.FusionCacheOptions">
   <summary>
     表示整个 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 实例的所有可用选项。
     <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
 </member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultCacheName">
   <summary>
-    <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheName" /> 的默认值（以及相应的 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.CacheName" />）。
+    <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.CacheName" /> 的默认值。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/NamedCaches.md" /></summary>
+</member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheKeyPrefixSeparator">
+  <summary>
+            当未指定特定的 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheKeyPrefix" /> 时，在 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.CacheName" /> 之后使用的缓存键前缀分隔符。
+            <br /><br /><strong>文档:</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/NamedCaches.md" /></summary>
 </member><member name="F:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DistributedCacheWireFormatVersion">
   <summary>
             分布式缓存线路格式的版本标识符，用于缓存键处理。
@@ -3105,22 +2856,11 @@
   <summary>
             缓存的实例 ID：在多节点场景中，它用于在不同节点之间对同一逻辑缓存进行底层标识；该值会被自动设置为一个随机值。
             </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.InternalStrings">
-  <summary>
-            FusionCache 用于处理缓存键、标签等的内部字符串。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
-  <exception cref="T:System.ArgumentNullException">当尝试将此属性设置为 <see langword="null" /> 时抛出。</exception>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultEntryOptions">
   <summary>
             当未指定任何选项时使用的默认 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />，也是复制选项时的起始点。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
   <exception cref="T:System.ArgumentNullException">如果尝试将此属性设置为 <see langword="null" />，则会引发此异常。</exception>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultEntryOptionsProvider">
-  <summary>
-            指定一种自定义逻辑，用于根据缓存键提供默认的 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />。
-            <br />
-            如果未设置，或者它返回 <see langword="null" />，则将改用 <see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.DefaultEntryOptions" />。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Options.md" /></summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.TagsDefaultEntryOptions">
   <summary>
             默认 <see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />，在未指定任何选项时用于标签过期数据，并作为复制选项时的起始点。
@@ -3254,16 +2994,6 @@
             如果设置为 <see langword="true" />，将禁用整个标签系统，即 RemoveByTag 和 Clear 都将被禁用。
             <br /><strong>注意：</strong>这可能会带来一点性能提升，但如果你尝试调用任何与标签相关的方法，将会抛出 <see cref="T:System.InvalidOperationException" />。
             <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Tagging.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.IgnoreTimeoutsWhenDebugging">
-  <summary>
-            如果设置为 <see langword="true" />，则在调试时忽略超时，即当有调试器附加时（通过 <see cref="P:System.Diagnostics.Debugger.IsAttached" /> 检查）。
-            <br />
-            支持所有可用的超时：工厂超时（软 + 硬）、分布式缓存超时（软 + 硬）、锁定超时等。
-            <br /><br /><strong>文档：</strong><see href="https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/Timeouts.md" /></summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.EnableBestPracticesAdvisor">
-  <summary>
-    如果设置为 <see langword="true" />，将检查常见最佳实践，若未遵循，则会记录一些警告。
-    </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.FusionCacheOptions.IncoherentOptionsNormalizationLogLevel">
   <summary>
             指定当某些选项的值不一致并已通过规范化修复时使用的 <see cref="T:Microsoft.Extensions.Logging.LogLevel" />，例如当 FailSafeMaxDuration 低于 Duration 时，将改用 Duration。
@@ -3354,10 +3084,6 @@
 </member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptions">
   <summary>
             默认选项集，当未提供任何选项时使用，或作为使用流畅 API 创建新选项的起点。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptionsProvider">
-  <summary>
-            基于缓存键的条目选项的可选提供程序。
             </summary>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.CreateEntryOptions(System.Action{ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions},System.Nullable{System.TimeSpan})">
   <summary>
@@ -3484,46 +3210,22 @@
   <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.ExpireAsync(System.String,ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions,System.Threading.CancellationToken)">
   <summary>
-            使指定 <paramref name="key" /> 的缓存条目过期。
-            <br />
-            过期一个条目意味着：
-            <br />
-            - 在 L1（内存缓存）中，它被<strong>逻辑上</strong>移除，但<strong>物理上</strong>保留作为回退（仅在明确请求时）
-            <br />
-            - 在 L2（分布式缓存）中，如果有的话，该条目总是被物理移除
+            使指定 <paramref name="key" /> 的缓存条目过期：这可能意味着过期（如果在保存条目时启用了故障安全保护）或移除（如果在保存条目时未启用故障安全保护），所有操作均自动进行。
             <br /><br />
-            如何在后续调用中明确表示我们可以接受获取过期值？
-            <br />
-            很简单，在条目选项（<see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />）中，我们只需这样做：
-            <br />
-            - 对于只读方法，如 TryGet 和 GetOrDefault，我们可以执行 SetAllowStaleOnReadOnly(true)
-            <br />
-            - 对于读写方法，如 GetOrSet，我们可以执行 SetFailSafe(true)
+            在分布式缓存（如果有）中，该条目将始终被有效移除。
             </summary>
   <param name="key">标识缓存中条目的缓存键。</param>
-  <param name="options">此操作需遵循的选项。如果传递 null，将使用 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptions" />。</param>
+  <param name="options">在此操作期间要遵循的选项。如果传递 null，则将使用 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptions" />。</param>
   <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
   <returns>一个 <see cref="T:System.Threading.Tasks.ValueTask" />，用于等待操作完成。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.Expire(System.String,ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions,System.Threading.CancellationToken)">
   <summary>
-            使指定 <paramref name="key" /> 的缓存条目过期。
-            <br />
-            使条目过期意味着：
-            <br />
-            - 在 L1（内存缓存）中，它在<strong>逻辑</strong>上被移除，而<strong>物理</strong>上仍保留作为回退（仅在明确请求时）
-            <br />
-            - 在 L2（分布式缓存）中（如果有），该条目始终被物理移除
+            使指定<paramref name="key" />的缓存条目过期：这可能意味着过期（如果在保存条目时启用了故障安全）或移除（如果在保存条目时未启用故障安全），所有这些都会自动处理。
             <br /><br />
-            如何在后来的调用中明确表示我们可以接受获取过期的值？
-            <br />
-            很简单，在条目选项（<see cref="T:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions" />）中，我们只需这样做：
-            <br />
-            - 对于只读方法（如 TryGet 和 GetOrDefault），可以调用 SetAllowStaleOnReadOnly(true)
-            <br />
-            - 对于读写方法（如 GetOrSet），可以调用 SetFailSafe(true)
+            在分布式缓存（如果有）中，该条目将始终被有效移除。
             </summary>
-  <param name="key">用于标识缓存中条目的缓存键。</param>
-  <param name="options">此操作期间要遵循的选项。如果传递 null，将使用 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptions" />。</param>
+  <param name="key">标识缓存中条目的缓存键。</param>
+  <param name="options">在此操作期间要遵守的选项。如果传递 null，将使用 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCache.DefaultEntryOptions" />。</param>
   <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.RemoveByTagAsync(System.String,ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions,System.Threading.CancellationToken)">
   <summary>
@@ -3627,21 +3329,6 @@
   <summary>
             返回当前的背板（如果有的话）。
             </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.SetupDistributedLocker(ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker)">
-  <summary>
-            通过提供一个 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" />，设置分布式锁存器以在多个节点间获得缓存雪崩保护。
-            </summary>
-  <param name="distributedLocker">要使用的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 实例。</param>
-  <returns>返回同一个 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 实例，可通过流畅的 API 方式使用。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.IFusionCache.RemoveDistributedLocker">
-  <summary>
-            移除分布式锁定器。
-            </summary>
-  <returns>返回相同的 <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 实例，可用于流畅的 API 方式。</returns>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCache.HasDistributedLocker">
-  <summary>
-            获取是否配置了分布式锁定器。
-            </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCache.Events">
   <summary>
             此FusionCache实例的所有事件处理中心。
@@ -3703,12 +3390,6 @@
   <summary>
     指示构建器是否应使用指定的 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.CacheKeyPrefix" />，并覆盖选项中已配置的前缀。
     </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.AddCacheKeyPrefixSeparator">
-  <summary>
-            指示是否应向 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.CacheKeyPrefix" /> 添加分隔符。
-            <br />
-            通常，当用户指定前缀时，分隔符被视为已包含；而当用户要求使用 <see cref="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.CacheName" /> 作为前缀时，则需要额外添加分隔符。
-            </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.CacheKeyPrefix">
   <summary>
             一个前缀，每次调用时都会添加到每个缓存键之前：在使用多个命名缓存时，这会很有用。
@@ -3766,26 +3447,6 @@
   <summary>
     如果未指定或未在 DI 容器中找到内存锁定器（<see cref="T:ZiggyCreatures.Caching.Fusion.Locking.IFusionCacheMemoryLocker" /> 的实例），则抛出 <see cref="T:System.InvalidOperationException" />。
     </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.UseRegisteredDistributedLocker">
-  <summary>
-            指示生成器是否应尝试查找并使用在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 服务。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.DistributedLockerServiceKey">
-  <summary>
-            用于分布式锁定的键控服务密钥。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.DistributedLocker">
-  <summary>
-            要使用的特定 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 实例。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.DistributedLockerFactory">
-  <summary>
-            一个用于创建 <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 实例的工厂。
-            </summary>
-</member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.ThrowIfMissingDistributedLocker">
-  <summary>
-            如果未指定或在 DI 容器中未找到分布式锁定器（<see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 的实例），则抛出 <see cref="T:System.InvalidOperationException" />。
-            </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.IFusionCacheBuilder.UseRegisteredSerializer">
   <summary>
             指示构建器是否应尝试查找并使用在 DI 容器中注册的 <see cref="T:ZiggyCreatures.Caching.Fusion.Serialization.IFusionCacheSerializer" /> 服务。
@@ -3924,6 +3585,11 @@
   <returns>缓冲区作为字节数组返回。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.ArrayPoolBufferWriter.GetSpan(System.Int32)">
   <inheritdoc />
+</member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.ArrayPoolBufferWriter.Dispose(System.Boolean)">
+  <summary>
+            将缓冲区归还给池。
+            </summary>
+  <param name="disposing">如果为 true，则同时释放托管资源和非托管资源；如果为 false，则仅释放非托管资源。</param>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.ArrayPoolBufferWriter.Dispose">
   <inheritdoc />
 </member><member name="T:ZiggyCreatures.Caching.Fusion.Internals.ArrayPoolWritableStream">
@@ -4096,7 +3762,7 @@
   <returns>值。</returns>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.IFusionCacheEntry.SetValue``1(``0)">
   <summary>
-            设置条目中的值。
+            在条目中设置值。
             </summary>
   <typeparam name="TValue">值的类型。</typeparam>
   <param name="value">值。</param>
@@ -4106,9 +3772,9 @@
             </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.Internals.IFusionCacheEntry.LogicalExpirationTimestamp">
   <summary>
-            调用方请求的条目预期过期时间（以刻度为单位），也用于在不同节点之间实现“对齐”的过期时间。
+            调用者请求的条目预期过期时间，也用于在不同节点之间实现“对齐”的过期。
             <br />
-            当启用故障安全时，条目以更长的持续时间进行缓存（<see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.FailSafeMaxDuration" />），以便在出现问题时可用作回退值：此时，LogicalExpiration 用于检查值是否过时，而不是简单地让其在缓存中过期而丢失。
+            当启用故障安全时，条目会以更长的持续时间（<see cref="P:ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions.FailSafeMaxDuration" />）进行缓存，以便在出现问题时用作回退值：此时，LogicalExpiration 用于检查值是否已过时，而不是简单地让它在缓存中过期从而丢失它。
             </summary>
 </member><member name="P:ZiggyCreatures.Caching.Fusion.Internals.IFusionCacheEntry.Tags">
   <summary>
@@ -4153,6 +3819,26 @@
   <param name="timedOutTaskProcessor">一个 lambda，用于处理表示最终超时操作的任务。</param>
   <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
   <returns>要等待的生成的 <see cref="T:System.Threading.Tasks.Task" /></returns>
+</member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.RunUtils.RunAsyncFuncWithTimeout``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.TimeSpan,System.Boolean,System.Action{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">
+  <summary>
+            同步运行一个异步函数，并设置超时时间以及一些附加选项。
+            </summary>
+  <typeparam name="TResult"></typeparam>
+  <param name="asyncFunc">要执行的异步函数。</param>
+  <param name="timeout">要应用的超时时间。</param>
+  <param name="cancelIfTimeout">指示在超时情况下是否应取消该操作。</param>
+  <param name="timedOutTaskProcessor">一个 lambda 表达式，用于处理表示最终超时函数的任务。</param>
+  <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
+  <returns>异步函数返回的值</returns>
+</member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.RunUtils.RunAsyncActionWithTimeout(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.TimeSpan,System.Boolean,System.Action{System.Threading.Tasks.Task},System.Threading.CancellationToken)">
+  <summary>
+            使用超时和一些附加选项同步运行异步操作。
+            </summary>
+  <param name="asyncAction">要执行的异步操作。</param>
+  <param name="timeout">要应用的超时时间。</param>
+  <param name="cancelIfTimeout">指示在超时情况下是否应取消操作。</param>
+  <param name="timedOutTaskProcessor">用于处理表示最终超时操作的任务的 lambda 表达式。</param>
+  <param name="token">用于取消操作的可选 <see cref="T:System.Threading.CancellationToken" />。</param>
 </member><member name="M:ZiggyCreatures.Caching.Fusion.Internals.RunUtils.RunSyncFuncWithTimeout``1(System.Func{System.Threading.CancellationToken,``0},System.TimeSpan,System.Boolean,System.Action{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">
   <summary>
             使用超时和一些附加选项同步运行一个同步函数。
@@ -4228,60 +3914,6 @@
   <param name="isStateChanged">指示断路器是否已通过此操作闭合。</param>
   <returns>
     <see langword="true" /> 如果断路器已闭合（无论是之前已闭合还是通过此操作已闭合），则为 <see langword="true" />；否则为 <see langword="false" />。</returns>
-</member><member name="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker">
-  <summary>
-            一个 FusionCache 组件，用于以高度优化的方式处理获取和释放分布式锁。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker.AcquireLockAsync(System.String,System.String,System.String,System.String,System.String,System.TimeSpan,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <summary>
-            获取一个通用锁，用于同步对同一缓存键进行操作的多个工厂，并返回该锁。
-            </summary>
-  <param name="cacheName">FusionCache 实例的 CacheName。</param>
-  <param name="cacheInstanceId">FusionCache 实例的 InstanceId。</param>
-  <param name="operationId">唯一标识高级缓存操作的操作 ID。</param>
-  <param name="key">要获取锁的键。</param>
-  <param name="lockName">锁名称。</param>
-  <param name="timeout">锁获取的可选超时时间。</param>
-  <param name="logger">要使用的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />（如果有）。</param>
-  <returns>获取的通用锁对象，在临界区结束后释放。</returns>
-  <param name="token">一个可选的 <see cref="T:System.Threading.CancellationToken" />，用于取消操作。</param>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker.AcquireLock(System.String,System.String,System.String,System.String,System.String,System.TimeSpan,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <summary>
-            获取一个通用锁，用于同步对同一缓存键进行操作的多个工厂，并返回该锁。
-            </summary>
-  <param name="cacheName">FusionCache 实例的名称。</param>
-  <param name="cacheInstanceId">FusionCache 实例的 InstanceId。</param>
-  <param name="operationId">唯一标识高级缓存操作的操作 ID。</param>
-  <param name="key">要获取锁的键。</param>
-  <param name="lockName">锁名称。</param>
-  <param name="timeout">获取锁的可选超时时间。</param>
-  <param name="logger">要使用的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />（如果有的话）。</param>
-  <param name="token">用于取消操作的可选 <see cref="T:System.Threading.CancellationToken" />。</param>
-  <returns>获取的通用锁对象，在临界区结束后释放。</returns>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker.ReleaseLockAsync(System.String,System.String,System.String,System.String,System.String,System.Object,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <summary>
-            释放通用锁对象。
-            </summary>
-  <param name="cacheName">FusionCache 实例的名称。</param>
-  <param name="cacheInstanceId">FusionCache 实例的 InstanceId。</param>
-  <param name="operationId">用于唯一标识高级缓存操作的操作 ID。</param>
-  <param name="key">要获取锁的键。</param>
-  <param name="lockName">锁名称。</param>
-  <param name="lockObj">要释放的通用锁对象。</param>
-  <param name="logger">要使用的 <see cref="T:Microsoft.Extensions.Logging.ILogger" />（如果有的话）。</param>
-  <param name="token">用于取消操作的可选 <see cref="T:System.Threading.CancellationToken" />。</param>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker.ReleaseLock(System.String,System.String,System.String,System.String,System.String,System.Object,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <summary>
-            释放通用锁对象。
-            </summary>
-  <param name="cacheName">FusionCache实例的名称。</param>
-  <param name="cacheInstanceId">FusionCache实例的InstanceId。</param>
-  <param name="operationId">唯一标识高级缓存操作的操作ID。</param>
-  <param name="key">要为其获取锁的键。</param>
-  <param name="lockName">锁名称。</param>
-  <param name="lockObj">要释放的通用锁对象。</param>
-  <param name="logger">要使用的<see cref="T:Microsoft.Extensions.Logging.ILogger" />（如果有的话）。</param>
-  <param name="token">用于取消操作的可选<see cref="T:System.Threading.CancellationToken" />。</param>
 </member><member name="T:ZiggyCreatures.Caching.Fusion.Locking.ExperimentalMemoryLocker">
   <summary>
     <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.IFusionCacheMemoryLocker" /> 的标准实现。
@@ -4486,20 +4118,6 @@
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedCache.SetAsync(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions,System.Threading.CancellationToken)">
   <inheritdoc />
-</member><member name="T:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker">
-  <summary>
-    <see cref="T:ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker" /> 的一个实现，它实现了空对象模式，意味着它不执行任何操作。可以将其视为一种透传实现。
-            </summary>
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker.AcquireLock(System.String,System.String,System.String,System.String,System.String,System.TimeSpan,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker.AcquireLockAsync(System.String,System.String,System.String,System.String,System.String,System.TimeSpan,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker.ReleaseLock(System.String,System.String,System.String,System.String,System.String,System.Object,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker.ReleaseLockAsync(System.String,System.String,System.String,System.String,System.String,System.Object,Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullDistributedLocker.Dispose">
-  <inheritdoc />
 </member><member name="T:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache">
   <summary>
     <see cref="T:ZiggyCreatures.Caching.Fusion.IFusionCache" /> 的一个实现，它实现了空对象模式，意味着它不执行任何操作。可以将其视为一种透传实现。
@@ -4514,8 +4132,6 @@
 </member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.InstanceId">
   <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.DefaultEntryOptions">
-  <inheritdoc />
-</member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.DefaultEntryOptionsProvider">
   <inheritdoc />
 </member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.CreateEntryOptions(System.Action{ZiggyCreatures.Caching.Fusion.FusionCacheEntryOptions},System.Nullable{System.TimeSpan})">
   <inheritdoc />
@@ -4576,12 +4192,6 @@
 </member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.RemoveBackplane">
   <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.HasBackplane">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.SetupDistributedLocker(ZiggyCreatures.Caching.Fusion.Locking.Distributed.IFusionCacheDistributedLocker)">
-  <inheritdoc />
-</member><member name="M:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.RemoveDistributedLocker">
-  <inheritdoc />
-</member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.HasDistributedLocker">
   <inheritdoc />
 </member><member name="P:ZiggyCreatures.Caching.Fusion.NullObjects.NullFusionCache.Events">
   <inheritdoc />

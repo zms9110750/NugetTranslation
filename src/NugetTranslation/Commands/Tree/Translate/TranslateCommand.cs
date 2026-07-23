@@ -32,17 +32,17 @@ internal static class TranslateCommand
     {
         var code = ctx.GetValue(Root.Code)!;
         var rawSpecs = ctx.GetValue(PackArg);
-        var flags = ctx.GetValue(Root.Flags);
+        var flags = ctx.GetValue(Root.Profile);
 
         if (rawSpecs is null || rawSpecs.Length == 0)
         {
-            Console.Error.WriteLine("需要 pack");
+            Console.Error.WriteLine("错误：需要包名参数。用法: translate <包名>@<版本>，如 Newtonsoft.Json@13.0.3");
             return;
         }
 
         var config = ConfigLoader.Instance ?? throw new InvalidOperationException("配置未加载");
         var profile = flags is not null ? config[flags] : null;
-        var ai = profile?.Ai ?? throw new InvalidOperationException("AI 配置未找到");
+        var ai = profile?.Ai ?? throw new InvalidOperationException($"错误：未找到 profile \"{flags}\" 的 AI 配置。请检查 appsettings.json。");
         ai.EnsureResolved();
 
         var chatClient = new ChatClient(
@@ -56,15 +56,17 @@ internal static class TranslateCommand
 
         var packages = await ParseSpecsAsync(rawSpecs, findResource, cacheContext);
 
+        var logLevel = profile?.LogLevel ?? Serilog.Events.LogEventLevel.Information;
         Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
             .WriteTo.Console()
-            .MinimumLevel.Information()
+            .MinimumLevel.Is(logLevel)
             .CreateLogger();
 
         var services = new ServiceCollection();
         services.AddSingleton(new Translator(chatClient, code));
         services.AddSingleton(NullLogger.Instance);
+        services.AddTransient<PackageProcessor>();
 
         var cacheDir = Path.GetFullPath(Path.Combine("..", "cache", code));
         Directory.CreateDirectory(cacheDir);
@@ -73,44 +75,34 @@ internal static class TranslateCommand
 
         using var sp = services.BuildServiceProvider();
 
-        // 收集所有 (包, 版本) 对，并发下载
-        var allPairs = packages
-            .SelectMany(kv => kv.Value.Select(v => (PackageId: kv.Key, Version: v)))
-            .ToList();
-
-        var downloadSemaphore = new SemaphoreSlim(50, 50);
-
-        async Task ProcessOneAsync(string packageId, NuGetVersion version)
+        // 按版本顺序执行：预检 → 翻译 → 产出 XML，一个版本完成再下一个
+        foreach (var (id, versions) in packages)
         {
-            Console.WriteLine($"===== 翻译: {packageId}@{version} =====");
-
-            try
+            foreach (var ver in versions)
             {
-                Log.Logger = new LoggerConfiguration()
-                    .Enrich.FromLogContext()
-                    .WriteTo.Console()
-                    .WriteTo.File(Path.Combine("../log", $"{packageId.ToLower()}@{version}.log"), buffered: false)
-                    .MinimumLevel.Information()
-                    .CreateLogger();
+                Console.WriteLine($"===== 翻译: {id}@{ver} =====");
 
-                await downloadSemaphore.WaitAsync();
-                ZipArchive zip;
-                try { zip = await DownloadPackageAsync(packageId, version, findResource, cacheContext); }
-                finally { downloadSemaphore.Release(); }
+                try
+                {
+                    Log.Logger = new LoggerConfiguration()
+                        .Enrich.FromLogContext()
+                        .WriteTo.Console()
+                        .WriteTo.File(Path.Combine("../log", $"{id.ToLower()}@{ver}.log"), buffered: false)
+                        .MinimumLevel.Is(logLevel)
+                        .CreateLogger();
 
-                var processor = sp.GetRequiredService<PackageProcessor>();
-                await processor.ProcessAsync(packageId, version, zip, code);
+                    var zip = await DownloadPackageAsync(id, ver, findResource, cacheContext);
+                    var processor = sp.GetRequiredService<PackageProcessor>();
+                    await processor.ProcessAsync(id, ver, zip, code);
 
-                Console.WriteLine($"  OK {packageId}@{version}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"  NG {packageId}@{version}: {ex.GetType().Name}: {ex.Message}");
+                    Console.WriteLine($"  OK {id}@{ver}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"  NG {id}@{ver}: {ex.GetType().Name}: {ex.Message}");
+                }
             }
         }
-
-        var tasks = allPairs.Select(p => ProcessOneAsync(p.PackageId, p.Version));
-        await Task.WhenAll(tasks);
     }
 
     static async Task<Dictionary<string, HashSet<NuGetVersion>>> ParseSpecsAsync(string[] rawSpecs, FindPackageByIdResource findResource, SourceCacheContext cacheContext)
@@ -190,10 +182,9 @@ internal static class TranslateCommand
         using var sha256 = SHA256.Create();
         byte[] HashStream(Stream s)
         {
-            var pos = s.Position;
-            var h = sha256.ComputeHash(s);
-            s.Position = pos;
-            return h;
+            using var ms = new MemoryStream();
+            s.CopyTo(ms);
+            return sha256.ComputeHash(ms.ToArray());
         }
 
         foreach (var entry in zip.Entries)

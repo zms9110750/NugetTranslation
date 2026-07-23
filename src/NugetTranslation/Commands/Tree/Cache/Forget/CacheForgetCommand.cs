@@ -23,7 +23,7 @@ internal static class CacheForgetCommand
 
         if (items is null || items.Length == 0)
         {
-            Console.Error.WriteLine("需要 pack-name");
+            Console.Error.WriteLine("错误：需要 member 参数。用法: cache forget <包名>@<member名>，如 Newtonsoft.Json@M:JsonConvert.SerializeObject");
             return;
         }
 

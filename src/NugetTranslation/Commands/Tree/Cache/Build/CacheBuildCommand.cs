@@ -24,7 +24,7 @@ internal static class CacheBuildCommand
 
         if (packs is null || packs.Length == 0)
         {
-            Console.Error.WriteLine("需要 pack");
+            Console.Error.WriteLine("错误：需要包名参数。用法: cache build <包名>，如 Newtonsoft.Json");
             return;
         }
 

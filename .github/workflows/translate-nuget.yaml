@@ -32,7 +32,7 @@ jobs:
           APIKEY: ${{ secrets.APIKEY }}
           ENDPOINT: ${{ vars.ENDPOINT }}
           MODEL: ${{ vars.MODEL }}
-        run: dotnet run -c Release -- compat --packageId "${{ inputs.packageId }}" --packageVersion "${{ inputs.version }}" --Language "${{ inputs.language }}"
+        run: dotnet run -c Release -- "${{ inputs.language }}" --profile github translate "${{ inputs.packageId }}@${{ inputs.version }}"
       
       - name: Commit and push
         run: |
