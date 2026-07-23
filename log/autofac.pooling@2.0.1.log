@@ -1,0 +1,300 @@
+2026-07-23 18:03:36.844 +08:00 [INF] Autofac.Pooling@2.0.1 缺失 74 条数据，预测为 0.011M token
+2026-07-23 18:03:38.735 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor(System.Int32)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.735 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledComponent.OnReturnToPool]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.735 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.Equals(System.Object)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.735 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolGetActivatorResources]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.740 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.Culture]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.740 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceContext`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.741 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolService]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.741 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledRegistrationPolicy`1.Return(`0)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.743 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Execute(Autofac.Core.Resolving.Pipeline.ResolveRequestContext,System.Action{Autofac.Core.Resolving.Pipeline.ResolveRequestContext})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.743 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.743 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.AutofacPooledObjectPolicy`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.743 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.744 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Return(`0)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.747 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.#ctor(Autofac.Core.Service,Autofac.ILifetimeScope,Autofac.Pooling.IPooledRegistrationPolicy{`0})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.750 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.#ctor(Autofac.Core.Service,System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{`0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.753 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.Dispose]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.840 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolActivator`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.875 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0},System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.876 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Create]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.881 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceTracker`1.Instance]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.886 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolGetActivator`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.896 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceTracker`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},`0)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.898 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.#ctor(Autofac.Pooling.PoolService)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.906 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.909 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.913 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.914 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.Description]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.914 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.Culture]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.914 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.GetHashCode]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.915 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.Culture]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.915 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.ResourceManager]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.916 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.923 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceContext`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},Autofac.Pooling.IPooledRegistrationPolicy{`0})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.923 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolService.Description]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.974 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceTracker`1.Dispose]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:38.982 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.#ctor(Autofac.Core.IComponentRegistration)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.002 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.002 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.ResourceManager]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.005 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.OnReleaseNotSupported]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.008 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.022 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Return(`0)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.029 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.RequiresCallbackContainer]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.032 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.ResourceManager]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.032 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.PolicyMustReturnInstance]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.034 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.037 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.IPooledComponent]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.039 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensions.DefaultPolicyFactory`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.041 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolServiceResources]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.041 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32,System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.043 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.MaximumRetained]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.076 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.079 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.089 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.089 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.092 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.IPooledRegistrationPolicy`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.105 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.147 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Object[])]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.149 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.183 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolActivator`1.LimitType]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.184 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.Equals(Autofac.Pooling.PoolService)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.192 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.CannotUseProvidedInstances]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.195 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensions]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.199 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.Dispose]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.200 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.213 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceContext`1.Pool]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.214 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceUnpackMiddleware`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.217 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledLifetime]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.218 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivator`1.LimitType]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.218 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Phase]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.218 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.220 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceTracker`1]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.225 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceContext`1.Dispose]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.232 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceContext`1.Policy]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.400 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensionsResources]: HTTP 401 (authentication_error: invalid_request_error)
+
+Authentication Fails, Your api key: test is invalid
+2026-07-23 18:03:39.400 +08:00 [INF] Autofac.Pooling 翻译完成，输入 0.000M tok，输出 0.000M tok，命中 0.000M tok
+2026-07-23 18:21:55.803 +08:00 [INF] Autofac.Pooling@2.0.1 缺失 74 条数据，预测为 0.011M token
+2026-07-23 18:21:58.598 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivator`1.LimitType]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.598 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.DefaultPooledRegistrationPolicy`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.620 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.#ctor(Autofac.Pooling.PoolService)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.628 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.IPooledRegistrationPolicy`1.MaximumRetained]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.631 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceContext`1.Policy]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.652 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.#ctor(Autofac.Core.IComponentRegistration)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.653 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Create]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.662 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.Equals(System.Object)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.669 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.IPooledRegistrationPolicy`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.673 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledRegistrationPolicy`1.Return(`0)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.676 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceContext`1.Dispose]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.678 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolService]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.687 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceTracker`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},`0)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.700 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.ResourceManager]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.713 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.739 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.Culture]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.800 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolGetActivatorResources]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.820 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.836 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.846 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledComponent.OnGetFromPool(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.858 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.858 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.ResourceManager]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.862 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.CannotUseProvidedInstances]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.872 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.MaximumRetained]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.889 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledComponent.OnReturnToPool]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.895 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.#ctor(Autofac.Core.Service,Autofac.ILifetimeScope,Autofac.Pooling.IPooledRegistrationPolicy{`0})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.895 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.RequiresCallbackContainer]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.896 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.900 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.903 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceContext`1.Pool]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.903 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolServiceResources]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.906 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.Dispose]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.906 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.920 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:58.949 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensions]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.072 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider},System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.103 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolActivator`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.105 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.AutofacPooledObjectPolicy`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.111 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}},System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.117 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.ResourceManager]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.141 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensions.DefaultPolicyFactory`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.213 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceTracker`1.Dispose]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.317 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.Equals(Autofac.Pooling.PoolService)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.367 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Execute(Autofac.Core.Resolving.Pipeline.ResolveRequestContext,System.Action{Autofac.Core.Resolving.Pipeline.ResolveRequestContext})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.475 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.PolicyMustReturnInstance]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.503 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor(System.Int32)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.521 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.Description]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.558 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceContext`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.632 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceTracker`1.Instance]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.640 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.#ctor(Autofac.Core.Service,System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{`0}},System.Func{Autofac.IComponentContext,Microsoft.Extensions.ObjectPool.ObjectPoolProvider})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.643 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceTracker`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.774 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolActivator`1.Dispose]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.777 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolGetActivator`1.ConfigurePipeline(Autofac.Core.IComponentRegistryServices,Autofac.Core.Resolving.Pipeline.IResolvePipelineBuilder)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.803 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PoolService.GetHashCode]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.831 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.PooledInstanceContext`1.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{`0},Autofac.Pooling.IPooledRegistrationPolicy{`0})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.866 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolServiceResources.Culture]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.903 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledInstanceUnpackMiddleware`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.903 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.IPooledRegistrationPolicy`1.Get(Autofac.IComponentContext,System.Collections.Generic.IEnumerable{Autofac.Core.Parameter},System.Func{`0})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:21:59.975 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.AutofacPooledObjectPolicy`1.Return(`0)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.072 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32,System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.108 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.Return(`0)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.185 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.RegistrationExtensionsResources.OnReleaseNotSupported]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.305 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PooledInstanceUnpackMiddleware`1.Phase]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.372 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Int32)]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.606 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.IPooledComponent]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:00.737 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolActivator`1.LimitType]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:01.279 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolService.Description]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:02.117 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.DefaultPooledRegistrationPolicy`1.#ctor]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:02.397 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerMatchingLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},Autofac.Pooling.IPooledRegistrationPolicy{``0},System.Object[])]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:03.364 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.RegistrationExtensionsResources]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:13.482 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PoolGetActivator`1]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:13.570 +08:00 [ERR] 翻译失败 [M:Autofac.Pooling.RegistrationExtensions.PooledInstancePerLifetimeScope``3(Autofac.Builder.IRegistrationBuilder{``0,``1,``2},System.Func{Autofac.IComponentContext,Autofac.Pooling.IPooledRegistrationPolicy{``0}})]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:13.833 +08:00 [ERR] 翻译失败 [P:Autofac.Pooling.PoolGetActivatorResources.Culture]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:13.975 +08:00 [ERR] 翻译失败 [T:Autofac.Pooling.PooledLifetime]: Retry failed after 4 tries. (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.) (The SSL connection could not be established, see inner exception.)
+2026-07-23 18:22:13.976 +08:00 [INF] Autofac.Pooling 翻译完成，输入 0.000M tok，输出 0.000M tok，命中 0.000M tok
